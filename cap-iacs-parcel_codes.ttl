@@ -1,0 +1,1114 @@
+@prefix cap-iacs-parcel: <http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-parcel#> .
+@prefix dct:   <http://purl.org/dc/terms/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix cap-iacs-parcelcode: <http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-parcel/code#> .
+
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-parcel/code#DataQualityMeasureValueStructureValue/matrix>
+        a                cap-iacs-parcel:DataQualityMeasureValueStructureValue ;
+        rdfs:label       "Matrix"@en ;
+        skos:definition  "--Name--\r\nMatrix\r\n\r\n--Definition--\r\nRectangular array of numbers (ISO/TS 19129:2009).\r\n\r\n--Description--\r\nThis structure is used to provide the misclassification matrix DQM."@en ;
+        skos:inScheme    cap-iacs-parcelcode:DataQualityMeasureValueStructureValue .
+
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-parcel/code#TestTypeMtsValue/schemaMapping>
+        a                cap-iacs-parcel:TestTypeMtsValue ;
+        rdfs:label       "Schema mapping"@en ;
+        skos:definition  "--Name--\r\nSchema mapping\r\n\r\n-- Definition --\r\nDefinition of mapping rules  from the national / regional eligibility profile to the LCM.\r\n\r\n-- Description-- \r\nThe mapping rules shall be defined for all elements (feature types, code lists, enumerations)  rendering the elements of the source schema (eligibility profile) with the corresponding elements of the LCM. \r\n\r\nEach feature type of the national / regional eligibility profile can be mapped to one or more feature types of the LCM. This mapping rule has to be unambiguous.\r\n\r\nNOTE . This is a basic test case."@en ;
+        skos:inScheme    cap-iacs-parcelcode:TestTypeMtsValue .
+
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-parcel/code#EcologicalFocusAreaEquivalentPracticeTypeValue/ecologicalSetAside>
+        a                cap-iacs-parcel:EcologicalFocusAreaEquivalentPracticeTypeValue ;
+        rdfs:label       "Ecological set-aside"@en ;
+        skos:definition  "--Name--\r\nEcological set aside\r\n\r\n-- Definition --\r\nValue listed in print III of Annex IX of Regulation (EU) No 1307/2013.\r\n\r\n\r\n-- Description --\r\nItem description."@en ;
+        skos:inScheme    cap-iacs-parcelcode:EcologicalFocusAreaEquivalentPracticeTypeValue .
+
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-parcel/code#ContaminationTypeValue/crosscuttingNonAgriculturalLc>
+        a                cap-iacs-parcel:ContaminationTypeValue ;
+        rdfs:label       "Crosscutting non agricultural land cover"@en ;
+        skos:definition  "--Name--\r\nCross cutting non-agricultural land\r\n\r\n-- Definition --\r\nIneligible land cover type crosscutting the item under inspection.\r\n\r\n-- Description --\r\nIneligible LC type (e.g. road, a water body, etc.) that causes discontinuity of agricultural land within a reference parcel.\r\n\r\nNOTE: This value is applicable in LPIS that follow the cadastral parcel or topographic block design."@en ;
+        skos:inScheme    cap-iacs-parcelcode:ContaminationTypeValue .
+
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-parcel/code#EcologicalFocusAreaTypeValue/areasWithCatchCropsOrGreenCover>
+        a                cap-iacs-parcel:EcologicalFocusAreaTypeValue ;
+        rdfs:label       "Areas with catch crops or green cover"@en ;
+        skos:definition  "--Name--\r\nAreas with Catch crops or green cover\r\n\r\n-- Definition --\r\nEcological focus area type as defined by Art. 46(2) of (EU) R 1307/2013.\r\n\r\n-- Description --\r\nAreas with catch crops or green cover established by the planting and germination of seeds, subject to the application of weighting factors referred to in paragraph 3 of this Article.\r\n\r\nAreas under catch crops or green cover shall include:\r\n- areas established pursuant to the requirements under SMR 1;\r\n- other areas  on the condition that they were established by sowing a mixture of crop species or by under-sowing grass in the main crop. \r\n\r\nNOTE: MS shall establish set up specific rules, including the list of mixtures of crop species to be used and the period for the sowing  and may establish additional conditions notably with regard to production methods. The period to be set by Member States shall not extend after 1 October."@en ;
+        skos:inScheme    cap-iacs-parcelcode:EcologicalFocusAreaTypeValue .
+
+cap-iacs-parcelcode:DataQualityMeasureTypeIuiCcValue
+        a                skos:ConceptScheme ;
+        rdfs:label       "IUI CC data quality measure type list"@en ;
+        dct:isFormatOf   cap-iacs-parcel:DataQualityMeasureTypeIuiCcValue ;
+        skos:definition  "--Name--\r\nClassification Correctness DQM value\r\n\r\n-- Definition --\r\nData quality measure describing the correctness of classification of the feature type.\r\n\r\n-- Description --\r\nThe classification shall be performed according to the types defined in the eligibility profile. This DQM is applicable for evaluating the classification correctness of agricultural land(s) and the landscape feature(s) present in the item under inspection.  \r\n\r\nNOTE: This is a new quality measure from ETS v 6.0 on."@en .
+
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-parcel/code#DataQualityMeasureTypeEtsValue/numberOfLargeAreaNonConformingItems>
+        a                cap-iacs-parcel:DataQualityMeasureTypeEtsValue ;
+        rdfs:label       "Number of area >0,1 ha non-conforming items"@en ;
+        skos:definition  "--Name--\r\nNumber of large area non-conformities\r\n\r\n-- Definition --\r\nNumber of non-conforming inspected items (N2) with area >0,1 ha within the ETS sample.\r\n\r\n-- Description --\r\nCount of items with itemConformance (area)=FALSE value. \r\n  \r\nMeasure identifier: L_NANC_B\r\nName: Number of area non-conforming items\r\nAlias: Item area non conformity number\r\nElement name: Conceptual consistency\r\nBasic measure: Error count\r\nValue type: Number\r\nValue Structure: n.a."@en ;
+        skos:inScheme    cap-iacs-parcelcode:DataQualityMeasureTypeEtsValue .
+
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-parcel/code#AgriculturalAreaTypeValue/permanentGrassland>
+        a                cap-iacs-parcel:AgriculturalAreaTypeValue ;
+        rdfs:label       "Permanent grassland"@en ;
+        skos:definition  "--Name--\r\nPermanent grassland\r\n\r\n-- Definition --\r\nPermanent grassland and permanent pasture (together referred to as \"permanent grassland\") means land used to grow grasses or other herbaceous forage naturally (self-seeded) or through cultivation (sown) and that has not been included in the crop rotation of the holding for five years or more; it may include other species such as shrubs and/or trees which can be grazed provided that the grasses and other herbaceous forage remain predominant as well as, where Member States so decide, land which can be grazed and which forms part of established local practices where grasses and other herbaceous forage are traditionally not predominant in grazing areas. [Art. 4(1)(g) 0f (EU) R No 1307/2013]."@en ;
+        skos:inScheme    cap-iacs-parcelcode:AgriculturalAreaTypeValue .
+
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-parcel/code#DataQualityMeasureTypeEfaValue/numberOfIncompatibleDesign>
+        a                cap-iacs-parcel:DataQualityMeasureTypeEfaValue ;
+        rdfs:label       "Number of incompatible design"@en ;
+        skos:definition  "--Name--\r\nNumber of incompatible design\r\n\r\n-- Definition --\r\nThis is a placeholder only; currently not to be implemented.\r\n\r\nAbundance of incompatible design instances within the sample as technical cause for critical defects and non conformances.\r\n\r\n--Description --\r\nOccurrences of incompatibelDesign value assigned to the items under inspection within the sample."@en ;
+        skos:inScheme    cap-iacs-parcelcode:DataQualityMeasureTypeEfaValue .
+
+cap-iacs-parcelcode:EcologicalFocusAreaEquivalentPracticeTypeValue
+        a                skos:ConceptScheme ;
+        rdfs:label       "List of EFA equivalent practices"@en ;
+        dct:isFormatOf   cap-iacs-parcel:EcologicalFocusAreaEquivalentPracticeTypeValue ;
+        skos:definition  "--Name--\r\nEFA equivalent practice type\r\n\r\n-- Definition --\r\nEquivalent practices with EFAs which are listed  in print III of Annex IX of Regulation (EU) No 1307/2013.\r\n\r\n-- Description --\r\nThe specific AECM reason has to be linked to the EFA type."@en .
+
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-parcel/code#EcologicalFocusAreaTypeValue/stripsOfEligibleHectaresAlongForestEdgesWithProduction>
+        a                cap-iacs-parcel:EcologicalFocusAreaTypeValue ;
+        rdfs:label       "Strips of eligible hectares along forest edges with production"@en ;
+        skos:definition  "--Name--\r\nStrips of eligible hectares with production\r\n\r\n-- Definition --\r\nEcological focus area type as defined by Art. 46(2) of (EU) R 1307/2013\r\n\r\n-- Description --\r\nStrips of eligible hectares along forest edges with production.\r\n\r\nNOTE: width shall be defined by the MS within the limits\r\n- minimum shall not be below 1 meter\r\n- maximum width shall be 10 meters."@en ;
+        skos:inScheme    cap-iacs-parcelcode:EcologicalFocusAreaTypeValue .
+
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-parcel/code#DataQualityMeasureTypeEfaValue/numberOfMissedUpdate>
+        a                cap-iacs-parcel:DataQualityMeasureTypeEfaValue ;
+        rdfs:label       "Number of missed updates"@en ;
+        skos:definition  "--Name--\r\nNumber of missed updates\r\n\r\n-- Definition --\r\nThis is a placeholder only; currently not to be implemented.\r\n\r\nAbundance of missed updates within the sample as technical cause for critical defects and non conformances.\r\n\r\n--Description --\r\nOccurrences of missedUpdate value assigned to the items under inspection within the sample."@en ;
+        skos:inScheme    cap-iacs-parcelcode:DataQualityMeasureTypeEfaValue .
+
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-parcel/code#EcologicalFocusAreaTypeValue/stripsOfEligibleHectaresAlongForestEdgesWithoutProduction>
+        a                cap-iacs-parcel:EcologicalFocusAreaTypeValue ;
+        rdfs:label       "Strips of eligible hectares along forest edges without production"@en ;
+        skos:definition  "--Name--\r\nStrips of eligible hectares without production\r\n\r\n-- Definition --\r\nEcological focus area type as defined by Art. 46(2) of (EU) R 1307/2013\r\n\r\n-- Description --\r\nStrips of eligible hectares along forest edges without production. \r\n\r\nNOTE 1: by way of derogation from the no production requirement, grazing or cutting may be allowed, provided the strip remains distinguishable from adjacent agricultural land. \r\n\r\nNOTE 2: width shall be defined by the MS within the limits\r\n- minimum shall not be below 1 meter\r\n- maximum width shall be 10 meters."@en ;
+        skos:inScheme    cap-iacs-parcelcode:EcologicalFocusAreaTypeValue .
+
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-parcel/code#DataQualityMeasureNameValue/classificationCorrectness>
+        a                cap-iacs-parcel:DataQualityMeasureNameValue ;
+        rdfs:label       "I_CC"@en ;
+        skos:definition  "-- Description --\r\nFor definition and description see the corresponding value in DataQualityMeasureTypeIuiValue code list."@en ;
+        skos:inScheme    cap-iacs-parcelcode:DataQualityMeasureNameValue .
+
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-parcel/code#CriticalDefectTypeValue/incompleteBlock>
+        a                cap-iacs-parcel:CriticalDefectTypeValue ;
+        rdfs:label       "Incomplete block"@en ;
+        skos:definition  "--Name--\r\nIncomplete block\r\n\r\n-- Definition --\r\nProduction block, where Land use / land cover counter-indicates the presence of a true stable physical boundary of the block. [Wikicap]\r\n\r\n-- Description --\r\nNOTE:  This types is applicable for physical and topographic block systems only."@en ;
+        skos:inScheme    cap-iacs-parcelcode:CriticalDefectTypeValue .
+
+cap-iacs-parcelcode:DataQualityMeasureTypeEtsValue
+        a                skos:ConceptScheme ;
+        rdfs:label       "DTS data quality measure type list"@en ;
+        dct:isFormatOf   cap-iacs-parcel:DataQualityMeasureTypeEtsValue ;
+        skos:definition  "--Name--\r\nData quality measure types applicable for ETS sample\r\n\r\n-- Definition --\r\nData quality measures applicable for LPIS quality assessment process at sample level.\r\n\r\n--Description--\r\nBy exclusion of misclassification  matrix the elements of the code list are user defined data quality measures to assess quality of the ETS sample. Misclassification matrix comes directly from ISO 19157:2013."@en .
+
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-parcel/code#AcceptanceNumberValue/10>
+        a                cap-iacs-parcel:AcceptanceNumberValue ;
+        rdfs:label       "10"@en ;
+        skos:definition  "--Name--\r\n10\r\n\r\n-- Definition --\r\nAcceptance number value 10.\r\n\r\n-- Description --\r\nISO2859-2: Sampling procedures for inspection by attributes, Part 2: Sampling plans indexed by limiting quality (LQ) for isolated lot inspection."@en ;
+        skos:inScheme    cap-iacs-parcelcode:AcceptanceNumberValue .
+
+cap-iacs-parcelcode:HomogeneityTypeValue
+        a                skos:ConceptScheme ;
+        rdfs:label       "List of homogeneity type"@en ;
+        dct:isFormatOf   cap-iacs-parcel:HomogeneityTypeValue ;
+        skos:definition  "--Name--\r\nHomogeneity type value\r\n\r\n-- Definition --\r\nCode list of homogeneity types for single and homogenous geographical areas with similar agricultural and environmental conditions as referred to Art. 46(1) of (EU) R 639/2014.\r\n\r\n-- Description --\r\nIt is a code list managed by the Commission Services, therefore is not extensible by the MS/regions."@en .
+
+cap-iacs-parcelcode:DataQualityMeasureTypeIuiEfaValue
+        a                skos:ConceptScheme ;
+        rdfs:label       "IUI EFA data quality measure type list"@en ;
+        dct:isFormatOf   cap-iacs-parcel:DataQualityMeasureTypeIuiEfaValue ;
+        skos:definition  "--Name--\r\nData quality measure types applicable to EFA items\r\n\r\n-- Definition --\r\nThis is a placeholder only; currently not to be implemented.\r\n\r\n-- Description --\r\nData quality measure type list for items under inspection.\r\nNOTE. Full description of each value must be provided in DQM_Measure."@en .
+
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-parcel/code#DataQualityMeasureNameValue/lpisAreaUnderestimates>
+        a                cap-iacs-parcel:DataQualityMeasureNameValue ;
+        rdfs:label       "L_AUE"@en ;
+        skos:definition  "-- Description --\r\nFor definition and description see the corresponding value in DataQualityMeasureTypeEtsValue code list."@en ;
+        skos:inScheme    cap-iacs-parcelcode:DataQualityMeasureNameValue .
+
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-parcel/code#EcologicalFocusAreaTypeValue/landscapeFeatureFieldMargin>
+        a                cap-iacs-parcel:EcologicalFocusAreaTypeValue ;
+        rdfs:label       "Landscape feature, field margin"@en ;
+        skos:definition  "--Name--\r\nLF field margine\r\n\r\n-- Definition --\r\nEcological focus area type as defined by Art. 46(2) of (EU) R 1307/2013.\r\n\r\n-- Description --\r\nLandscape feature, field margin with a width between 1 and 20 meters, on which there shall be no agricultural production.   [Art. 45(3)(e) of (EU) R No  639/2014].\r\n\r\nNOTE1:  MS may establish a lower maximum width.\r\n\r\nNOTE 2: When this type of LF is protected under SMR 3, MS may specify other width based on  national requirements."@en ;
+        skos:inScheme    cap-iacs-parcelcode:EcologicalFocusAreaTypeValue .
+
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-parcel/code#DataQualityMeasureTypeEtsValue/cumulativeRateOfMissedUpdates>
+        a                cap-iacs-parcel:DataQualityMeasureTypeEtsValue ;
+        rdfs:label       "10207 LPIS_RP_CMC"@en ;
+        skos:definition  "--Name--\r\nCumulative rate of missed updates\r\n\r\n-- Definition --\r\nRate of undetected anomalies (changes of the land) since the last update of LPIS.\r\n\r\n-- Description --\r\nRatio of the abundance of missedUpdates to the number of inspected items calculated for each year and summed up starting from the year of last update (refresh).\r\n\r\nMeasure identifier: L_CRMU\r\nName: Cumulative rate of missed updates\r\nAlias:  Missed updated accumulation\r\nElement name: Non-quantitative attribute correctness\r\nBasic measure: Error rate\r\nValue type: Real. The value shall be expressed in %.\r\nValue Structure: n.a.\r\n\r\nNOTE. Previouslynamed QE6, 10207 LPIS_RP_CMC"@en ;
+        skos:inScheme    cap-iacs-parcelcode:DataQualityMeasureTypeEtsValue .
+
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-parcel/code#ProRataCategoryValue/grassland90>
+        a                cap-iacs-parcel:ProRataCategoryValue ;
+        rdfs:label       "Grassland 90 percent"@en ;
+        skos:definition  "--Name--\r\nGrassland 90 percent \r\n\r\n-- Definition --\r\nGrassland with 90 percent eligibility.\r\n\r\n-- Description --\r\nNOTE. If eligibility is above 90% then full eligibility applies (no pro rata)."@en ;
+        skos:inScheme    cap-iacs-parcelcode:ProRataCategoryValue .
+
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-parcel/code#DataQualityMeasureTypeEtsValue/numberOfCriticalDefects>
+        a                cap-iacs-parcel:DataQualityMeasureTypeEtsValue ;
+        rdfs:label       "LPIS Critical Defects"@en ;
+        skos:definition  "--Name--\r\nNumber of critical defects\r\n\r\n-- Definition --\r\nNumber of all critical defects (M) found in course of inspection.\r\n\r\n--Description --\r\nThe scope of this data quality measure is the critical defect property (instances of critical defects) occurring  in course of inspection,\r\n\r\nMeasure identifier: L_NCD\r\nName: LPIS number of critical defects\r\nAlias: LPIS critical defects\r\nElement name: Conceptual consistency\r\nBasic measure: Error count\r\nValue type: Number\r\nValue Structure: n.a.\r\n\r\nNOTE. Previously named as 10205 LPIS_RP_CRA"@en ;
+        skos:inScheme    cap-iacs-parcelcode:DataQualityMeasureTypeEtsValue .
+
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-parcel/code#DataQualityMeasureTypeEfaValue/areaCorrectnessDistribution>
+        a                cap-iacs-parcel:DataQualityMeasureTypeEfaValue ;
+        rdfs:label       "Area correctness distribution"@en ;
+        skos:definition  "--Name--\r\n\r\n-- Definition --\r\nThis is a placeholder only; currently not to be implemented.\r\nStatistical distribution of  relative area correctness  values.\r\n\r\n-- Description --\r\nthe population of relativeAreaCorrectness values defined for the following intervals: [-50%,<], [-50,-20%], [-20,-12%], [-12,-8%;], [-8,-4%,], [-4,-2%], [-2, 0%], [0, 2%], [2, 4%], [4, 8%], [8, 12%], [12, 20%], [20, 50%], [<50%]\r\nNOTE. DQM_Measure.DQM_ValueStructure=Table"@en ;
+        skos:inScheme    cap-iacs-parcelcode:DataQualityMeasureTypeEfaValue .
+
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-parcel/code#AgriculturalAreaTypeValue/permanentCrop>
+        a                cap-iacs-parcel:AgriculturalAreaTypeValue ;
+        rdfs:label       "Permanent crop"@en ;
+        skos:definition  "--Name--\r\nPermanent crop\r\n\r\n-- Definition --\r\nNon-rotational crops other than permanent grassland and permanent pasture that occupy the land for five years or more and yield repeated harvests, including nurseries and short rotation coppice. [Art. 4 (1)(g) of (EU) R No 1307/2013]."@en ;
+        skos:inScheme    cap-iacs-parcelcode:AgriculturalAreaTypeValue .
+
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-parcel/code#EcologicalFocusAreaTypeValue/areasWithShortRotationCoppice>
+        a                cap-iacs-parcel:EcologicalFocusAreaTypeValue ;
+        rdfs:label       "Areas with short rotation coppice"@en ;
+        skos:definition  "--Name--\r\nAreas with short rotation coppice\r\n\r\n-- Definition --\r\nEcological focus area type as defined by Art. 46(2) of (EU) R 1307/2013.\r\n\r\n-- Description --\r\nAreas with short rotation coppice  with no use of mineral fertiliser and/or plant protection products.\r\n\r\nNOTE:  MS shall establish:\r\n- a list of species that can be used for this purpose, by selecting from the list established pursuant to Article 4(2)(c) of R (EU) No 1307/2013;\r\n- the requirements as regards the use of mineral fertilisers and plant protection products, keeping in mind the objective of this particular form of ecological focus areas in particular to safeguard and improve biodiversity."@en ;
+        skos:inScheme    cap-iacs-parcelcode:EcologicalFocusAreaTypeValue .
+
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-parcel/code#AcceptanceNumberValue/18>
+        a                cap-iacs-parcel:AcceptanceNumberValue ;
+        rdfs:label       "18"@en ;
+        skos:definition  "--Name--\r\n18\r\n\r\n-- Definition --\r\nAcceptance number value 18.\r\n\r\n-- Description --\r\nValue defined in ISO 2859-2:1985."@en ;
+        skos:inScheme    cap-iacs-parcelcode:AcceptanceNumberValue .
+
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-parcel/code#DataQualityMeasureTypeEtsValue/lpisAreaPrecisionConformance>
+        a                cap-iacs-parcel:DataQualityMeasureTypeEtsValue ;
+        rdfs:label       "Over- and underestimate conformance"@en ;
+        skos:definition  "--Name--\r\nLPIS area precision conformance\r\n\r\n-- Definition --\r\nAssessment of the severity of area under-and overestimates as required by Eu 640/2014 Art. 6.1(b).\r\n\r\n-- Description --\r\nConformance statement on the severity of area under and overestimates.\r\nConformity thresholds: LIB>=-2%, UIB<=2%.\r\n\r\nMeasure identifier: L_APCON\r\nName: LPIS area precision conformance\r\nAlias:  LPIS area over- and underestimate conformance\r\nElement name: Conceptual consistency\r\nBasic measure: Error indicator\r\nValue type: Boolean\r\nValue Structure: n.a.\r\n\r\nNOTE. Previously known as part of QE1B or 10201_2 LPIS_RP_MEA_B"@en ;
+        skos:inScheme    cap-iacs-parcelcode:DataQualityMeasureTypeEtsValue .
+
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-parcel/code#DataQualityMeasureNameValue/numberOfLargeAreaNonConformingItems>
+        a                cap-iacs-parcel:DataQualityMeasureNameValue ;
+        rdfs:label       "L_NANC_B"@en ;
+        skos:definition  "-- Description --\r\nFor definition and description see the corresponding value in DataQualityMeasureTypeEtsValue code list."@en ;
+        skos:inScheme    cap-iacs-parcelcode:DataQualityMeasureNameValue .
+
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-parcel/code#EcologicalFocusAreaTypeValue/terraces>
+        a                cap-iacs-parcel:EcologicalFocusAreaTypeValue ;
+        rdfs:label       "Terraces"@en ;
+        skos:definition  "--Name--\r\nTerraces\r\n\r\n-- Definition --\r\nEcological focus area type as defined by Art. 46(2) of (EU) R 1307/2013\r\n\r\n-- Description --\r\nTerraces shall be terraces that:\r\n-are protected under GAEC 7 as referred to in Annex II to Regulation (EU) No 640/2014;\r\n-other terraces established based on criteria defined by MS. \r\nCriteria may include minimum height based on national or regional specificities."@en ;
+        skos:inScheme    cap-iacs-parcelcode:EcologicalFocusAreaTypeValue .
+
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-parcel/code#EcologicalFocusAreaEquivalentPracticeTypeValue/keepingArablePeatyOrWetSoilsUnderGrass>
+        a                cap-iacs-parcel:EcologicalFocusAreaEquivalentPracticeTypeValue ;
+        rdfs:label       "Keeping arable peaty or wet soils under grass"@en ;
+        skos:definition  "--Name--\r\nKeeping arable peaty or wet soils under grass\r\n\r\n-- Definition --\r\nValue listed in print III of Annex IX of Regulation (EU) No 1307/2013.\r\n\r\n-- Description --\r\nItem description."@en ;
+        skos:inScheme    cap-iacs-parcelcode:EcologicalFocusAreaEquivalentPracticeTypeValue .
+
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-parcel/code#CriticalDefectTypeEfaValue/invalidGeometry>
+        a                cap-iacs-parcel:CriticalDefectTypeEfaValue ;
+        rdfs:label       "Invalid geometry"@en ;
+        skos:definition  "--Name--\r\nInvalid geometry\r\n\r\n-- Definition --\r\nThis is a placeholder only; currently not to be implemented.\r\n\r\n-- Description --\r\nOther geometry than the choice of the MS/Region has been used."@en ;
+        skos:inScheme    cap-iacs-parcelcode:CriticalDefectTypeEfaValue .
+
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-parcel/code#DataQualityMeasureTypeEfaValue/relativeAreaCorrectness>
+        a                cap-iacs-parcel:DataQualityMeasureTypeEfaValue ;
+        rdfs:label       "Relative area correctness"@en ;
+        skos:definition  "--Name--\r\nEFA relative  area correctness\r\n\r\n--Definition --\r\nThis is a placeholder only; currently not to be implemented.\r\n\r\nRatio of the total area  observed  in course of EFA to the sum of EFA areas of  the corresponding  items. \r\n\r\n-- Description --\r\nThe ratio shall be expressed in percentages."@en ;
+        skos:inScheme    cap-iacs-parcelcode:DataQualityMeasureTypeEfaValue .
+
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-parcel/code#DataQualityMeasureNameValue/lpisRelativeAreaConformance>
+        a                cap-iacs-parcel:DataQualityMeasureNameValue ;
+        rdfs:label       "L_RACON"@en ;
+        skos:definition  "-- Description --\r\nFor definition and description see the corresponding value in DataQualoityMeasureTypeEtsValue code list."@en ;
+        skos:inScheme    cap-iacs-parcelcode:DataQualityMeasureNameValue .
+
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-parcel/code#SkippingReasonTypeValue/missingImageCoverage>
+        a                cap-iacs-parcel:SkippingReasonTypeValue ;
+        rdfs:label       "Parcel not covered by image"@en ;
+        skos:definition  "--Name--\r\nMissing image coverage\r\n\r\n-- Definition --\r\nIncomplete othroimagery coverage.\r\n\r\n-- Description --\r\nParcel is partially or full not covered by orhtoimagery.\r\n\r\nNOTE 1: When an MS/Region opts for pure field observations and measurements, this reason is incompatible with the this method. Therefore this value should be deleted from the eligibility profile.\r\n\r\nNOTE 2: In DTS 5.3 the  value was: parcelIsPartiallyOrFullyNotCoveredByImage. The coresponding recommended coded value was T2.\r\n\r\nNOTE 3: With the introduction of dedicated LPIS QA image acquisition, applicability should become rare."@en ;
+        skos:inScheme    cap-iacs-parcelcode:SkippingReasonTypeValue .
+
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-parcel/code#EcologicalFocusAreaEquivalentPracticeTypeValue/productionOnArableLandWithoutFertilizersOrPlantProtection>
+        a                cap-iacs-parcel:EcologicalFocusAreaEquivalentPracticeTypeValue ;
+        rdfs:label       "Production on arable land without fertilizers or plant protection products (for 2 years with different crops)"@en ;
+        skos:definition  "--Name--\r\nProduction on arable land without fertilizers of plant protection\r\n\r\n-- Definition --\r\nValue listed in print III of Annex IX of Regulation (EU) No 1307/2013.\r\n\r\n-- Description --\r\nItem description."@en ;
+        skos:inScheme    cap-iacs-parcelcode:EcologicalFocusAreaEquivalentPracticeTypeValue .
+
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-parcel/code#InspectionMethodValue/capi>
+        a                cap-iacs-parcel:InspectionMethodValue ;
+        rdfs:label       "Computer assisted photo interpretation"@en ;
+        skos:definition  "--Name--\r\nComputer assisted photo interpretation (CAPI)\r\n\r\n-- Definition --\r\nComputer assisted photo interpretation method of inspection.\r\n\r\n-- Description --\r\nAll observations and measurements are performed on the basis of orthtoimagery using suitable GIS software."@en ;
+        skos:inScheme    cap-iacs-parcelcode:InspectionMethodValue .
+
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-parcel/code#AgriculturalAreaTypeValue/arableLand>
+        a                cap-iacs-parcel:AgriculturalAreaTypeValue ;
+        rdfs:label       "Arable land"@en ;
+        skos:definition  "--Name--\r\nArable land\r\n\r\n-- Definition --\r\nLand cultivated for crop production or areas available for crop production but lying fallow, including areas set aside in accordance with Articles 22, 23 and 24 of Regulation (EC) No 1257/1999, with Article 39 of Regulation (EC) No 1698/2005 and with Article 28 of Regulation (EU) No 1305/2013, irrespective of whether or not that land is under greenhouses or under fixed or mobile cover."@en ;
+        skos:inScheme    cap-iacs-parcelcode:AgriculturalAreaTypeValue .
+
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-parcel/code#EcologicalFocusAreaEquivalentPracticeTypeValue/patchesManagedForWildlifeOrSpecificFauna>
+        a                cap-iacs-parcel:EcologicalFocusAreaEquivalentPracticeTypeValue ;
+        rdfs:label       "Patches managed for wildlife or specific fauna"@en ;
+        skos:definition  "--Name--\r\nPatches managed for wildlife or specific fauna\r\n\r\n-- Definition --\r\nValue listed in print III of Annex IX of Regulation (EU) No 1307/2013.\r\n\r\n-- Description --\r\nItem description."@en ;
+        skos:inScheme    cap-iacs-parcelcode:EcologicalFocusAreaEquivalentPracticeTypeValue .
+
+cap-iacs-parcelcode:InspectionMethodValue
+        a                skos:ConceptScheme ;
+        rdfs:label       "List of inspection methods"@en ;
+        dct:isFormatOf   cap-iacs-parcel:InspectionMethodValue ;
+        skos:definition  "--Name--\r\nInspection method  value\r\n\r\n-- Definition --\r\nData collection methods applicable for LPISQA.\r\n\r\n-- Description --\r\nMS/Regions shall chose on of the following methods:\r\n- field survey,\r\n- computer assisted photo interpretation (CAPI)\r\n- combined CAPI and field measurements."@en .
+
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-parcel/code#EcologicalFocusAreaEquivalentPracticeTypeValue/managementOfLandscapeFeatures>
+        a                cap-iacs-parcel:EcologicalFocusAreaEquivalentPracticeTypeValue ;
+        rdfs:label       "Management of landscape features"@en ;
+        skos:definition  "--Name--\r\nManagement of landscape features\r\n\r\n-- Definition --\r\nValue listed in print III of Annex IX of Regulation (EU) No 1307/2013.\r\n\r\n-- Description --\r\nItem description."@en ;
+        skos:inScheme    cap-iacs-parcelcode:EcologicalFocusAreaEquivalentPracticeTypeValue .
+
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-parcel/code#LandscapeFeatureValueType/landscapeFeaturePonds>
+        a                cap-iacs-parcel:LandscapeFeatureValueType ;
+        rdfs:label       "Landscape feature, ponds"@en ;
+        skos:definition  "--Name--\r\nPonds\r\n\r\n-- Definition --\r\nPonds in the agricultural area that are traditionally part of good agriculture cropping or utilization practices.\r\n\r\n-- Description --\r\nPonds may become an EFA element when their area is up to a maximum of 0.1 ha. Reservoirs made of concrete or plastic shall not be considered ecological focus area;   [Art. 45(3)(f) of (EU) R No 639/2014].\r\n\r\nNOTE 1: MS may set a minimum size for ponds and they may decide that a strip with riparian vegetation along the water with a width of up to 10 meters is included in the size of the pond. They may establish criteria to ensure that ponds are of natural value, taking into account the role that natural ponds play for wildlife the conservation of habitats and species.\r\n\r\nNOTE 2: When this type of LF is protected under GAEC 7 MS may specify other area  for ponds based on national requirements."@en ;
+        skos:inScheme    cap-iacs-parcelcode:LandscapeFeatureValueType .
+
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-parcel/code#DataQualityMeasureTypeEfaValue/numberOfErroneousProcessing>
+        a                cap-iacs-parcel:DataQualityMeasureTypeEfaValue ;
+        rdfs:label       "Number of erroneous processing "@en ;
+        skos:definition  "--Name--\r\nNumber of erroneous processing\r\n\r\n-- Definition --\r\nThis is a placeholder only; currently not to be implemented.\r\n\r\nAbundance of processing errors within the sample as technical cause for critical defects and non conformances.\r\n\r\n--Description --\r\nOccurrences of processingErrors value assigned to the items under inspection  within the sample."@en ;
+        skos:inScheme    cap-iacs-parcelcode:DataQualityMeasureTypeEfaValue .
+
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-parcel/code#DataQualityMeasureNameValue/conformityClass1>
+        a                cap-iacs-parcel:DataQualityMeasureNameValue ;
+        rdfs:label       "L_CLASS1"@en ;
+        skos:definition  "-- Description --\r\nFor definition and description see the corresponding value in DataQualityMeasureTypeEtsValue code list."@en ;
+        skos:inScheme    cap-iacs-parcelcode:DataQualityMeasureNameValue .
+
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-parcel/code#TestTypeMtsValue/valueAndConstraint>
+        a                cap-iacs-parcel:TestTypeMtsValue ;
+        rdfs:label       "Value and constraint"@en ;
+        skos:definition  "--Name--\r\nValue and constraint\r\n\r\n--Definition --\r\nRange or restricted range of values that a property can take.\r\n\r\n-- Description --\r\nConstraints are set on value type, values, and association rules in the LCM. Some of them are conditional.\r\n\r\nNOTE 1. Unit of measure test is a specific constraint set in order to verify whether area values are expressed in the units specified in the LCM.\r\n\r\nNOTE 2. This is a capability test case."@en ;
+        skos:inScheme    cap-iacs-parcelcode:TestTypeMtsValue .
+
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-parcel/code#LandscapeFeatureValueType/landscapeFeatureHedgesAndWoodedStrips>
+        a                cap-iacs-parcel:LandscapeFeatureValueType ;
+        rdfs:label       "Landscape features: Hedges/wooded strips"@en ;
+        skos:definition  "--Name--\r\nHedges and wooded strips\r\n\r\n-- Definition --\r\nHedges and wooded strips in the agricultural area that are traditionally part of good agriculture cropping or utilization practices.\r\n\r\n-- Description --\r\nThese LF may become EFA when their width does not exceed 10 meters. [Art. 45(3)(a) of (EU) R No 639/2014]\r\n\r\nNOTE 1: When such LF are protected under GAEC 7, SMR 2 and SMR 3, MS may specify an other width based on national/regional requirements.\r\n\r\nNOTE 2: This LF, when stable in time, need to be identified in the LPIS in view of checking their retention during OTSC. This identification of cross compliance Landscape Features can be done e.g. by alpha-numerical information (or by delineation) associated to the parcel."@en ;
+        skos:inScheme    cap-iacs-parcelcode:LandscapeFeatureValueType .
+
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-parcel/code#DataQualityMeasureTypeEtsValue/conformityClass2>
+        a                cap-iacs-parcel:DataQualityMeasureTypeEtsValue ;
+        rdfs:label       "Second Conformnace Class"@en ;
+        skos:definition  "--Name--\r\nConformity to class 2\r\n\r\n-- Definition --\r\nConformance class as defined in Article 6 (1) of EU 640/2014.\r\n\r\n-- Description --\r\nIt is the aggregated quality measure of the conformance results of QE4, QE5 and QE6.  In order to pass, each composing element must pass the test.\r\nSince at the moment no conformance for QE4 and QE5 are defined, the value of this element coincides with the values of QE6.\r\n\r\nMeasure identifier: L_CLASS2\r\nName: Conformity with class 2\r\nAlias: Second conformance class\r\nElement name: Conceptual consistency\r\nBasic measure: Error indicator\r\nValue type: Boolean\r\nValue Structure: n.a."@en ;
+        skos:inScheme    cap-iacs-parcelcode:DataQualityMeasureTypeEtsValue .
+
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-parcel/code#DataQualityMeasureTypeEtsValue/misclassificationMatrix>
+        a                cap-iacs-parcel:DataQualityMeasureTypeEtsValue ;
+        rdfs:label       "Misclassification matrix"@en ;
+        skos:definition  "--Name--\r\nMisclassification matrix\r\n\r\n-- Definition --\r\nMisclassification matrix comparing the assignment of LC types registered in LPIS to the LC types observed in course of inspection.\r\n\r\n-- Description --\r\nAll land cover types (both agricultural land and landscape feature) enter in the evaluation process. \r\n\r\nMeasure identifier: L_MCM\r\nName: LPIS misclassification matrix\r\nAlias: LC confusion matrix\r\nElement name: Classification correctness\r\nBasic measure: n.a.\r\nValue type: Measure\r\nValue Structure:  Matrix\r\n\r\nNOTE 1: Classifying one pro-rata grassland type to another pro-rata class is considered as a misclassification instance.\r\n\r\nNOTE 2: This is an indicative measure for self-evaluation, which is not required by regulation EU 640/2014.\r\n\r\nNOTE 3: This is a DQM directly taken from IOS 19157:2013 (see table D.65)."@en ;
+        skos:inScheme    cap-iacs-parcelcode:DataQualityMeasureTypeEtsValue .
+
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-parcel/code#DataQualityMeasureNameValue/cummulativeRateOfMissedUpdates>
+        a                cap-iacs-parcel:DataQualityMeasureNameValue ;
+        rdfs:label       "L_CRMU"@en ;
+        skos:definition  "-- Description --\r\nFor definition and description see the corresponding value in DataQualityMeasureTypeEtsValue code list."@en ;
+        skos:inScheme    cap-iacs-parcelcode:DataQualityMeasureNameValue .
+
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-parcel/code#DataQualityMeasureNameValue/itemCriticalDefectConformance>
+        a                cap-iacs-parcel:DataQualityMeasureNameValue ;
+        rdfs:label       "I_CDCON"@en ;
+        skos:definition  "-- Description --\r\nFor definition and description see the corresponding value in DataQualityMeasureTypeIuiValue code list."@en ;
+        skos:inScheme    cap-iacs-parcelcode:DataQualityMeasureNameValue .
+
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-parcel/code#SkippingReasonTypeValue/missingGeometry>
+        a                cap-iacs-parcel:SkippingReasonTypeValue ;
+        rdfs:label       "Parcel geometry missing"@en ;
+        skos:definition  "--Name--\r\nMissing geometry\r\n\r\n-- Definition --\r\nIncomplete vector dataset that obstructs the inspection process.\r\n\r\n-- Description --\r\nGeometric representation of the item under is not available.\r\n\r\nNOTE: In DTS 5.3 the  value was: parcelGeometryIsNotAvailable. The coresponding\r\nrecommended coded value was T5."@en ;
+        skos:inScheme    cap-iacs-parcelcode:SkippingReasonTypeValue .
+
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-parcel/code#EcologicalFocusAreaTypeValue/landscapeFeaturePonds>
+        a                cap-iacs-parcel:EcologicalFocusAreaTypeValue ;
+        rdfs:label       "Landscape feature, ponds"@en ;
+        skos:definition  "--Name--\r\nLF ponds\r\n\r\n-- Definition --\r\nEcological focus area type as defined by Art. 46(2) of (EU) R 1307/2013.\r\n\r\n-- Description --\r\nLandscape feature, ponds of up to a maximum of 0.1 ha. Reservoirs made of concrete or plastic shall not be considered ecological focus area;   [Art. 45(3)(f) of (EU) R No 639/2014].\r\n\r\nNOTE 1: MS may set a minimum size for ponds and they may decide that a strip with riparian vegetation along the water with a width of up to 10 meters is included in the size of the pond. They may establish criteria to ensure that ponds are of natural value, taking into account the role that natural ponds play for wildlife the conservation of habitats and species.\r\n\r\nNOTE 2: When this type of LF is protected under GAEC 7 MS may specify other area  for ponds based on national requirements."@en ;
+        skos:inScheme    cap-iacs-parcelcode:EcologicalFocusAreaTypeValue .
+
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-parcel/code#HomogeneityTypeValue/semiNaturalArea>
+        a                cap-iacs-parcel:HomogeneityTypeValue ;
+        rdfs:label       "Semi-natural area"@en ;
+        skos:definition  "--Name--\r\nSemi-natural area\r\n\r\n-- Definition --\r\nSemi natural area type according to objective criteria\r\n\r\n-- Description --\r\nNatural area types with human impact that further delimits homogeneity. \r\n\r\nNOTE: the applicable values of semi natural area hall be documented in the eligibility profile of the MS/regions, and have to be described in a document dully cited or inserted in the information system.\r\n\r\nEXAMPLE:  http://inspire.ec.europa.eu/applicationschema/ provides the list of INSPIRE  data themes (applications schemas) that may be used for selecting homogeneity criteria."@en ;
+        skos:inScheme    cap-iacs-parcelcode:HomogeneityTypeValue .
+
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-parcel/code#CriticalDefectTypeEfaValue/invalidConversionParameter>
+        a                cap-iacs-parcel:CriticalDefectTypeEfaValue ;
+        rdfs:label       "Invalid conversion parameter"@en ;
+        skos:definition  "--Name--\r\nInvalid conversion parameter\r\n\r\n-- Definition --\r\nThis is a placeholder only; currently not to be implemented.\r\n\r\n-- Description --\r\nError in selection of the conversion parameter."@en ;
+        skos:inScheme    cap-iacs-parcelcode:CriticalDefectTypeEfaValue .
+
+cap-iacs-parcelcode:ProRataCategoryValue
+        a                skos:ConceptScheme ;
+        rdfs:label       "List of pro rata category values"@en ;
+        dct:isFormatOf   cap-iacs-parcel:ProRataCategoryValue ;
+        skos:definition  "--Name--\r\nPro-rata category value\r\n\r\n-- Definition --\r\nPro rata categories represent groups of land cover classes that share an eligibility rate.\r\n\r\n-- Description --\r\nCategories are predefined by MS/Regions. The code list can be extended."@en .
+
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-parcel/code#DataQualityMeasureValueStructureValue/table>
+        a                cap-iacs-parcel:DataQualityMeasureValueStructureValue ;
+        rdfs:label       "Table"@en ;
+        skos:definition  "--Name--\r\nTable\r\n\r\n--Definition--\r\nAn arrangement of data in which each item may be identified by means of arguments or keys (ISO/IEC 2382-4:1999).\r\n\r\n-Description--\r\nThis structure can be used for providing QE2b values."@en ;
+        skos:inScheme    cap-iacs-parcelcode:DataQualityMeasureValueStructureValue .
+
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-parcel/code#SkippingReasonTypeValue/notPersistentIdentifier>
+        a                cap-iacs-parcel:SkippingReasonTypeValue ;
+        rdfs:label       "Not persistent referenceParcelId"@en ;
+        skos:definition  "--Name--\r\nNot persistent identifier\r\n\r\n-- Definition --\r\nUnambiguous  identification of the item of inspection is impossible due to the discrepancy between the position of the reference parcel feature type and the reality observed on the imagery or terrain.\r\n\r\n-- Description --\r\nThis problem is caused by re-using identifiers due to the unclear life cycle rules  of the feature type corresponding to the item under inspection (e.g. reference parcel). Transaction  like merging, splitting, or incorporating new agricultural land in an existing RP.\r\n\r\nNOTE 1: It is recommended to assign a new unique identifier whenever  a major transaction takes place.\r\n\r\nNOTE 2: In DTS 5.3 the  value was: referenceParcelIdFoundNotPersistentInLpisA3. The coresponding recommended coded value was A3."@en ;
+        skos:inScheme    cap-iacs-parcelcode:SkippingReasonTypeValue .
+
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-parcel/code#LotSizeValue/150001to500000>
+        a                cap-iacs-parcel:LotSizeValue ;
+        rdfs:label       "From 150001 to 500000"@en ;
+        skos:definition  "--Name--\r\n-- Definition --\r\nLot size range from 150001 to 500000.\r\n\r\n-- Description --\r\nRange category according to ISO 2859-2:1985."@en ;
+        skos:inScheme    cap-iacs-parcelcode:LotSizeValue .
+
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-parcel/code#DataQualityMeasureTypeEtsValue/lpisAreaOverestimates>
+        a                cap-iacs-parcel:DataQualityMeasureTypeEtsValue ;
+        rdfs:label       "LPIS lower interval boundary"@en ;
+        skos:definition  "--Name--\r\nLPIS area overestimates\r\n\r\n-- Definition --\r\nOne-sided probability boundary of the rate of the eligible hectares that indicate overestimations found in respect to the total number of eligible hectares currently recorded in the LPIS.\r\n\r\n--Description --\r\nTechnical definition: Lower Interval Boundary (LIB)\r\nCalculation method: LIB=OER-1,6449xOERxstdev(OER)\r\n\r\nMeasure identifier: L_AOE\r\nName: LPIS area overestimates\r\nAlias: LPIS lower interval boundary\r\nElement name: Quantitative attribute accuracy\r\nBasic measure: LE 98\r\nValue type: Measure\r\nValue Structure: n.a.\r\n\r\nNOTE. Previously it was known as part of 10201_2 LPIS_RP_MEA_B"@en ;
+        skos:inScheme    cap-iacs-parcelcode:DataQualityMeasureTypeEtsValue .
+
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-parcel/code#EcologicalFocusAreaTypeValue/landscapeFeatureGroupOfTrees>
+        a                cap-iacs-parcel:EcologicalFocusAreaTypeValue ;
+        rdfs:label       "Landscape feature, group of trees/Field copses"@en ;
+        skos:definition  "--Name--\r\nLF Group of trees\r\n\r\n-- Definition --\r\nEcological focus area type as defined by Art. 46(2) of (EU) R 1307/2013.\r\n\r\n-- Description --\r\nLandscape feature, group of trees, where trees are connected by overlapping crown cover, and field copses of maximum 0.3 ha in both cases.   [Art. 45(3)(d) of (EU) R No 639/2014]."@en ;
+        skos:inScheme    cap-iacs-parcelcode:EcologicalFocusAreaTypeValue .
+
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-parcel/code#CriticalDefectTypeValue/invalidCommonRpBoundary>
+        a                cap-iacs-parcel:CriticalDefectTypeValue ;
+        rdfs:label       "Invalid common reference parcel boundary"@en ;
+        skos:definition  "--Name--\r\nInvalid common RP boundary\r\n\r\n-- Definition --\r\nLocation of common boundaries that cannot be derived from surrounding land cover / land use elements. [Wikicap] \r\n\r\n-- Description --\r\nNOTE:  This types is applicable for physical and topographic block systems only."@en ;
+        skos:inScheme    cap-iacs-parcelcode:CriticalDefectTypeValue .
+
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-parcel/code#DataQualityMeasureNameValue/lpisCriticalDefectConfromance>
+        a                cap-iacs-parcel:DataQualityMeasureNameValue ;
+        rdfs:label       "L_CDCON"@en ;
+        skos:definition  "-- Description --\r\nFor definition and description see the corresponding value in DataQualityMeasureTypeEtsValue code list."@en ;
+        skos:inScheme    cap-iacs-parcelcode:DataQualityMeasureNameValue .
+
+cap-iacs-parcelcode:AgriculturalAreaTypeValue
+        a                skos:ConceptScheme ;
+        rdfs:label       "List of agricultural area type values"@en ;
+        dct:isFormatOf   cap-iacs-parcel:AgriculturalAreaTypeValue ;
+        skos:definition  "--Name--\r\nAgricultural area type value\r\n\r\n-- Definition --\r\nTypes of agricultural area.\r\n\r\n-- Description --\r\nList of agricultural area type values.  QAF: Eligibility profile value.\r\n\r\nNOTE 1:  According to DSCG/2014/33  arableLand, permanentCrop and permanetGrassland are the minimum level of details of land cover types needed for distinction of agricultural area.\r\n\r\nNOTE 2:  sensitivePermanetGrassland type to be protected under greening  is required by Art.5(2)(d) of Regulation (EU) No 640/2014.\r\n\r\nNOTE 3: This code list can be extended with narrower categories replacing the listed broader code list values. \r\n\r\n \r\n\r\nNOTE 4: For the purposes of ETS MS/Region may use the same code list applied in IACS, or a generalised one. For the purposes of ETS the generalised code list is sufficient.\r\nWhen detailed  (crop level) agricultural area types are used, in course of MTS the mapping to the general categories listed in the LCM has to be given.\r\n\r\nEXAMPLE: Sensitive permanent grassland may be replaced by any sub-category (narrower value) referred to in Art. 41 of (EU) R 639/2014."@en .
+
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-parcel/code#LimitingQualityValue/2.00>
+        a                cap-iacs-parcel:LimitingQualityValue ;
+        rdfs:label       "2.00"@en ;
+        skos:definition  "--Name--\r\n2.00\r\n\r\n-- Definition --\r\nLimiting quality value LQ=2,0\r\n\r\n-- Description --\r\nValue defined by ISO 2859-2:1985. This value is applicable for assessment of critical defects. It expresses and indexes a quality expectation of 1% error rate or better."@en ;
+        skos:inScheme    cap-iacs-parcelcode:LimitingQualityValue .
+
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-parcel/code#SkippingReasonTypeValue/insufficientImageQuality>
+        a                cap-iacs-parcel:SkippingReasonTypeValue ;
+        rdfs:label       "Impossible interpretation"@en ;
+        skos:definition  "--Name--\r\nInsufficient image quality\r\n\r\n-- Definition --\r\nInsufficient image quality obstructing the process of inspection bz the method of CAPI.\r\n\r\n-- Description --\r\nInterpretation of the inspected item is not possible with the given orthoimagery.\r\n\r\nNOTE 1: When an MS/Region opts for pure field observations and measurements, this reason is incompatible with the this method. Therefore this value should be deleted from the eligibility profile.\r\n\r\nNOTE 2: In DTS 5.3 the value wasluiInterpretationImpossibleWithGivenOrthoimageC4. The corresponding coded value was C4."@en ;
+        skos:inScheme    cap-iacs-parcelcode:SkippingReasonTypeValue .
+
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-parcel/code#EcologicalFocusAreaTypeValue/afforestedAreas>
+        a                cap-iacs-parcel:EcologicalFocusAreaTypeValue ;
+        rdfs:label       "Afforested areas"@en ;
+        skos:definition  "--Name--\r\nAfforested areas\r\n\r\n-- Definition --\r\nEcological focus area type as defined by Art. 46(2) of (EU) R 1307/2013.\r\n\r\n-- Description --\r\nAfforested areas referred to in point (b)(ii) of Article 32(2) of (EU) R 1307/2013."@en ;
+        skos:inScheme    cap-iacs-parcelcode:EcologicalFocusAreaTypeValue .
+
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-parcel/code#DataQualityMeasureTypeIuiValue/itemContaminationConformance>
+        a                cap-iacs-parcel:DataQualityMeasureTypeIuiValue ;
+        rdfs:label       "Contamination conformance"@en ;
+        skos:definition  "--Name--\r\nItem contamination conformance\r\n\r\n-- Definition --\r\nConformance statement on the value of contaminations.\r\n\r\n-- Description --\r\nThe item is conforming when t is contamination free, or the contaminations found are waivered. \r\n\r\nMeasure identifier: I_CCON\r\nName: Item contamination conformance\r\nAlias: Parcel contamination conformance\r\nElement name: Domain consistency\r\nBasic measure: Error indicator\r\nValue type: Boolean\r\nValue Structure: n.a."@en ;
+        skos:inScheme    cap-iacs-parcelcode:DataQualityMeasureTypeIuiValue .
+
+cap-iacs-parcelcode:SkippingReasonTypeValue
+        a                skos:ConceptScheme ;
+        rdfs:label       "Skipping reason type value"@en ;
+        dct:isFormatOf   cap-iacs-parcel:SkippingReasonTypeValue ;
+        skos:definition  "--Name--\r\nSkipping reason value type\r\n\r\n-- Definition --\r\nList  of reasons that do not allow the inspection of a given item under inspection.\r\n\r\n-- Description --\r\nObjective reasons for skipping  an item under inspection.\r\n\r\nNOTE: This code list is managed by DG JRC. MS/Regions are not allowed to extend it."@en .
+
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-parcel/code#DataQualityMeasureValueStructureValue/bag>
+        a                cap-iacs-parcel:DataQualityMeasureValueStructureValue ;
+        rdfs:label       "Bag"@en ;
+        skos:definition  "--Name--\r\nBag\r\n\r\n--Definition--\r\nFinite, unordered collection of related items (objects or values) that may be repeated (ISO 19107:2003).\r\n\r\n--Description--\r\nNOTE: Currently, this type is not being used in LPISQA."@en ;
+        skos:inScheme    cap-iacs-parcelcode:DataQualityMeasureValueStructureValue .
+
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-parcel/code#CriticalDefectTypeValue/invalidRpPerimeter>
+        a                cap-iacs-parcel:CriticalDefectTypeValue ;
+        rdfs:label       "Invalid RP perimeter"@en ;
+        skos:definition  "--Name--\r\nInvalid RP perimeter\r\n\r\n-- Definition --\r\nSpatial representation on RP boundary which does not correspond to the observable ground truth.\r\n\r\n-- Description --\r\nRP with invalid perimeter is represented by a completely virtual polygon geometry that crosses through both agricultural land and non-agricultural land covers.\r\n\r\nNOTE: It is applicable only for reference parcels that cannot be measured."@en ;
+        skos:inScheme    cap-iacs-parcelcode:CriticalDefectTypeValue .
+
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-parcel/code#TechnicalReasonValue/processingError>
+        a                cap-iacs-parcel:TechnicalReasonValue ;
+        rdfs:label       "Processing error"@en ;
+        skos:definition  "--Name--\r\nProcessing error\r\n\r\n-- Definition --\r\nErrors due to the incorrectly applied data processing methodology.\r\n\r\n-- Description --\r\nDeviations from the true values because of the deviations from the processing methodology."@en ;
+        skos:inScheme    cap-iacs-parcelcode:TechnicalReasonValue .
+
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-parcel/code#DataQualityMeasureNameValue/numberOfCriticalDefects>
+        a                cap-iacs-parcel:DataQualityMeasureNameValue ;
+        rdfs:label       "L_NCD"@en ;
+        skos:definition  "-- Description --\r\nFor definition and description see the corresponding value in DataQualityMeasureTypeEtsValue code list."@en ;
+        skos:inScheme    cap-iacs-parcelcode:DataQualityMeasureNameValue .
+
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-parcel/code#LotSizeValue/35001to150000>
+        a                cap-iacs-parcel:LotSizeValue ;
+        rdfs:label       "From 35001 to 150000"@en ;
+        skos:definition  "--Name--\r\n-- Definition --\r\nLot size range from 35001 to 150000.\r\n\r\n-- Description --\r\nRange category according to ISO 2859-2:1985."@en ;
+        skos:inScheme    cap-iacs-parcelcode:LotSizeValue .
+
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-parcel/code#DataQualityMeasureNameValue/lpisItemConformance>
+        a                cap-iacs-parcel:DataQualityMeasureNameValue ;
+        rdfs:label       "L_ICON"@en ;
+        skos:definition  "-- Description --\r\nFor definition and description see the corresponding value in DataQualityMeasureTypeEtsValue code list."@en ;
+        skos:inScheme    cap-iacs-parcelcode:DataQualityMeasureNameValue .
+
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-parcel/code#DataQualityMeasureTypeIuiEfaValue/efaClassificationCorrectness>
+        a                cap-iacs-parcel:DataQualityMeasureTypeIuiEfaValue ;
+        rdfs:label       "EFA classification correctness"@en ;
+        skos:definition  "--Name--\r\nEFA classification correctness\r\n\r\n- Definition --\r\nThis is a placeholder only; currently not to be implemented.\r\n\r\nThematic classification correctness. The assignment of an item to a certain class can either be correct or incorrect. [ISO 19157].\r\n\r\n-- Description --\r\nThematic classification correctness applied to the EFA.\r\nNOTE. Must have separate DQM_Measure description."@en ;
+        skos:inScheme    cap-iacs-parcelcode:DataQualityMeasureTypeIuiEfaValue .
+
+cap-iacs-parcelcode:EcologicalFocusAreaTypeValue
+        a                skos:ConceptScheme ;
+        rdfs:label       "List of ecological focuse areas"@en ;
+        dct:isFormatOf   cap-iacs-parcel:EcologicalFocusAreaTypeValue ;
+        skos:definition  "--Name--\r\nEcological focus area type value\r\n\r\n-- Definition --\r\nTypes of EFA as listed in Art. 46(2) of (EU) R 1307/2013.\r\n\r\n-- Description --\r\nMS shall decide that one or more values of this code list  are considered to be ecological focus area.\r\n\r\nNOTE 1: Member States may decide to limit the selection of landscape features to those under GAEC 7, SMR 2 or SMR 3  as referred to in Annex II to Regulation (EU) No 640/2013 and/or to one or more of those listed in point (a) to (h) of the first subparagraph, where duly justified. Should it be the case, the code list of EFA types have to be modifie accordingly.\r\n\r\nNOTE 2: The extension of this code list shall be documented in the eligibility profile of the MS/region. It is recommended to use  a register / registry service to publish the extended values and their definitions.\r\n\r\nNOTE 3: Landscape features shall be:\r\n-at the disposal of the farmer;\r\n-shall be those that are protected under GAEC 7, SMR 2 or SMR 3 as referred to in Annex II to Regulation (EU) No 640/2014."@en .
+
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-parcel/code#AgriculturalAreaTypeValue/permanentGrasslandSensitive>
+        a                cap-iacs-parcel:AgriculturalAreaTypeValue ;
+        rdfs:label       "Permanent grassland sensitive"@en ;
+        skos:definition  "--Name--\r\nSensitive permanent grassland\r\n\r\n-- Definition --\r\nPermanent grassland designated as sensitive as referred to in Art. 41 of (EU) R 639/2014.\r\n\r\n-- Description --\r\nSensitiveness may be designated on the basis of:\r\n- covering organic soils with a high percentage of organic carbon, such as peat land or wetlands;\r\n- hosting habitats listed in Annex I to Directive 92/43/EEC or protected under national legislation;\r\n- hosting plant species listed in Annex II to Directive 92/43/EEC or protected under national legislation;\r\n- being of significant importance for wild bird species listed in Annex I to Directive 2009/147/EC;\r\n- being of significant importance for wild animal species protected under Directive 92/43/EEC or protected under national legislation;\r\n- covering permanent grassland of high nature value as defined by objective criteria to be established by the MS;\r\n- covering soils with a high risk of erosion;\r\n- being located in a sensitive area designated within the river basin management plans pursuant to Directive 2000/60/EC;\r\n- the decision of the MS;\r\n- re-conversion as referred to in Art. 42 of (EU) R 639/2014.\r\n\r\nNOTE: This type includes grasslands covered by Directives 92/43/EEC or 2009/147/EC, including in peat and wetlands situated in these areas [Art. 45(1) of (EU) R 1307/2013."@en ;
+        skos:inScheme    cap-iacs-parcelcode:AgriculturalAreaTypeValue .
+
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-parcel/code#DataQualityMeasureNameValue/lpisAreaOverestimates>
+        a                cap-iacs-parcel:DataQualityMeasureNameValue ;
+        rdfs:label       "L_AOE"@en ;
+        skos:definition  "-- Description --\r\nFor definition and description see the corresponding value in DataQualityMeasureTypeEtsValue code list."@en ;
+        skos:inScheme    cap-iacs-parcelcode:DataQualityMeasureNameValue .
+
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-parcel/code#TechnicalReasonValue/incompleteProcessing>
+        a                cap-iacs-parcel:TechnicalReasonValue ;
+        rdfs:label       "Incomplete processing"@en ;
+        skos:definition  "--Name--\r\nIncomplete processing\r\n\r\n-- Definition --\r\nErrors due to omitted information.\r\n\r\n-- Description --\r\nThe completeness of data is not full because of missing items (attributes, values, features). Some steps of the standard workflow have been not been foreseen (at system level), or have been omitted at item level. In  both cases this non-conformity is manifested at instance level."@en ;
+        skos:inScheme    cap-iacs-parcelcode:TechnicalReasonValue .
+
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-parcel/code#DataQualityMeasureNameValue/areaConformance>
+        a                cap-iacs-parcel:DataQualityMeasureNameValue ;
+        rdfs:label       "I_ACON"@en ;
+        skos:definition  "-- Description --\r\nFor definition and description see the corresponding value in DataQualityMeasureTypeIuiValue code list."@en ;
+        skos:inScheme    cap-iacs-parcelcode:DataQualityMeasureNameValue .
+
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-parcel/code#CriticalDefectTypeEfaValue/notConnectedToArable>
+        a                cap-iacs-parcel:CriticalDefectTypeEfaValue ;
+        rdfs:label       "Not connected to arable land"@en ;
+        skos:definition  "--Name--\r\nNot connected to arable land\r\n\r\n-- Definition --\r\nThis is a placeholder only; currently not to be implemented.\r\n\r\n--Description --\r\nNot connected to arable land."@en ;
+        skos:inScheme    cap-iacs-parcelcode:CriticalDefectTypeEfaValue .
+
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-parcel/code#SkippingReasonTypeValue/inspectedInAggregation>
+        a                cap-iacs-parcel:SkippingReasonTypeValue ;
+        rdfs:label       "Parcel already Inspected in aggregation"@en ;
+        skos:definition  "--Name--\r\nInspected in aggregation\r\n\r\n-- Definition --\r\nParcel already Inspected as part of an aggregation item.\r\n\r\n-- Description --\r\nIf pre selected parcel has previously entered in to an aggregation then this parcel shall not be inspected again.\r\n\r\nNOTE. This value is applicable if only the parcel aggregation method has been adapted."@en ;
+        skos:inScheme    cap-iacs-parcelcode:SkippingReasonTypeValue .
+
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-parcel/code#TechnicalReasonValue/missedUpdate>
+        a                cap-iacs-parcel:TechnicalReasonValue ;
+        rdfs:label       "Missed update"@en ;
+        skos:definition  "--Name--\r\nMissed update\r\n\r\n-- Definition --\r\nMissed update.\r\n\r\n-- Description --\r\nChanges of the underlying land (real world objects) that  have not been applied in the data. Data do not reflect the current state of real world objects. Non-conformity manifests at instance level."@en ;
+        skos:inScheme    cap-iacs-parcelcode:TechnicalReasonValue .
+
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-parcel/code#EcologicalFocusAreaTypeValue/landscapeFeatureDitches>
+        a                cap-iacs-parcel:EcologicalFocusAreaTypeValue ;
+        rdfs:label       "Landscape feature, ditches"@en ;
+        skos:definition  "--Name--\r\nLF ditches\r\n\r\n-- Definition --\r\nEcological focus area type as defined by Art. 46(2) of (EU) R 1307/2013.\r\n\r\n-- Description --\r\nLandscape feature, ditches with a maximum width of 6 meters, including open watercourses for the purpose of irrigation or drainage. Channels with walls of concrete shall not be considered ecological focus area.   [Art. 45(3)(g) of (EU) R No  639/2014].\r\n\r\nNOTE : When this type of LF is protected under SMR 3, MS may specify other width based on  national requirements."@en ;
+        skos:inScheme    cap-iacs-parcelcode:EcologicalFocusAreaTypeValue .
+
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-parcel/code#DataQualityMeasureValueStructureValue/coverage>
+        a                cap-iacs-parcel:DataQualityMeasureValueStructureValue ;
+        rdfs:label       "Coverage"@en ;
+        skos:definition  "--Name--\r\nCoverage\r\n\r\n--Definition--\r\nFeature that acts as a function to return values from its range for any direct position within its spatial, temporal or spatiotemporal domain (ISO 19123:2005).\r\n\r\n--Description--\r\nNOTE: Currently, this type is not being used in LPISQA."@en ;
+        skos:inScheme    cap-iacs-parcelcode:DataQualityMeasureValueStructureValue .
+
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-parcel/code#DataQualityMeasureTypeIuiValue/itemCriticalDefectConformance>
+        a                cap-iacs-parcel:DataQualityMeasureTypeIuiValue ;
+        rdfs:label       "Critical defect conformance"@en ;
+        skos:definition  "--Name--\r\nCritical defect conformance\r\n\r\n--Definition --\r\nConformance statement based on the detection of critical defect conditions.\r\n\r\n-- Description --\r\nThe item under inspection is conforming when no critical defect occurs (i.e. the multiplicity of the association role from ItemUnderInspection to CriticalDefect is zero).\r\n\r\nMeasure identifier: I_CDCON\r\nName: Item critical defect conformance\r\nAlias: Critical defect conformance\r\nElement name: Domain consistency\r\nValue type: Boolean\r\nValue Structure: n.a."@en ;
+        skos:inScheme    cap-iacs-parcelcode:DataQualityMeasureTypeIuiValue .
+
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-parcel/code#LandscapeFeatureValueType/landscapeFeatureDitches>
+        a                cap-iacs-parcel:LandscapeFeatureValueType ;
+        rdfs:label       "Landscape feature, ditches"@en ;
+        skos:definition  "--Name--\r\nDitches\r\n\r\n-- Definition --\r\nDitches in the agricultural area that are traditionally part of good agriculture cropping or utilization practices.\r\n\r\n-- Description --\r\nDitches may become an EFA element when their width does not exceeds 6 meters. Ditches also include open watercourses for the purpose of irrigation or drainage. Channels with walls of concrete shall not be considered ecological focus area. [Art. 45(3)(g) of (EU) R No  639/2014].\r\n\r\nNOTE : When this type of LF is protected under SMR 3, MS may specify other width based on  national requirements."@en ;
+        skos:inScheme    cap-iacs-parcelcode:LandscapeFeatureValueType .
+
+cap-iacs-parcelcode:DataQualityMeasureTypeIuiValue
+        a                skos:ConceptScheme ;
+        rdfs:label       "IUI data quality measure type list"@en ;
+        dct:isFormatOf   cap-iacs-parcel:DataQualityMeasureTypeIuiValue ;
+        skos:definition  "--Name--\r\nData quality measure types applicable to items under inspection\r\n\r\n-- Definition --\r\nList of data quality measure types applicable for inspecting items of reference parcels.\r\n\r\n-- Description --\r\nThese user defined data quality measures are used to assess the quality of reference parcels in terms of area measurement accuracy and thematic classification correctness."@en .
+
+cap-iacs-parcelcode:LotSizeValue
+        a                skos:ConceptScheme ;
+        rdfs:label       "List of possible lot size range values"@en ;
+        dct:isFormatOf   cap-iacs-parcel:LotSizeValue ;
+        skos:definition  "--Name--\r\nLot size value\r\n\r\n-- Definition --\r\nList of possible lot size range values. according to ISO 2859-2:1985.\r\n\r\n-- Description --\r\nThe ranges are defined in ISO 2859-2:1985 Sampling procedures for inspection by attributes, Part 2: Sampling plans indexed by limiting quality (LQ) for isolated lot inspection."@en .
+
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-parcel/code#DataQualityMeasureTypeIuiValue/relativeAreaCorrectness>
+        a                cap-iacs-parcel:DataQualityMeasureTypeIuiValue ;
+        rdfs:label       "Relative area correctness"@en ;
+        skos:definition  "--Name--\r\nRelative area correctness\r\n\r\n-- Definition --\r\nAbility of the reference area to quantify the area of all eligible land cover types present in the inspected item. \r\n\r\n-- Description --\r\nMeasure identifier: I_RAC\r\nName: Relative area correctness\r\nAlias: Relative area accuracy\r\nElement name: Relative or internal accuracy\r\nBasic measure: Error rate\r\nValue type: Measure. Result output shall be provided in %.\r\nValue Structure: n.a.\r\n\r\nNOTE. Previously named: 10101 RP_MEA."@en ;
+        skos:inScheme    cap-iacs-parcelcode:DataQualityMeasureTypeIuiValue .
+
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-parcel/code#DataQualityMeasureNameValue/numberOfAreaNonConformingItems>
+        a                cap-iacs-parcel:DataQualityMeasureNameValue ;
+        rdfs:label       "L_NANC_A"@en ;
+        skos:definition  "-- Description --\r\nFor definition and description see the corresponding value in DataQualityMeasureTypeEtsValue code list."@en ;
+        skos:inScheme    cap-iacs-parcelcode:DataQualityMeasureNameValue .
+
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-parcel/code#EcologicalFocusAreaTypeValue/landscapeFeatureOtherProtectedByGaecSmr>
+        a                cap-iacs-parcel:EcologicalFocusAreaTypeValue ;
+        rdfs:label       "Landscape feature, other features not listed in this code list but protected under GAEC7, SMR 2 or SMR 3"@en ;
+        skos:definition  "--Name--\r\nOther LF protected by GAEC or SMR.\r\n\r\n-- Definition --\r\nEcological focus area type as defined by Art. 46(2) of (EU) R 1307/2013.\r\n\r\n-- Description --\r\nLandscape feature, other features not listed in this code list but protected under GAEC7, SMR 2 or SMR 3.   [Art. 45(3)(a) of (EU) R No  639/2014].\r\n\r\nNOTE 3: When this type of LF is protected under GAEC 7 SMR 2 and SMR  3, MS may specify other width based on  national requirements [DSCG/2014/31]."@en ;
+        skos:inScheme    cap-iacs-parcelcode:EcologicalFocusAreaTypeValue .
+
+cap-iacs-parcelcode:CriticalDefectTypeValue
+        a                skos:ConceptScheme ;
+        rdfs:label       "Critical defect type value"@en ;
+        dct:isFormatOf   cap-iacs-parcel:CriticalDefectTypeValue ;
+        skos:definition  "--Name--\r\nCritical defect type value\r\n\r\n-- Definition --\r\nList of critical defect type values.\r\n\r\n-- Description --\r\nList of error types leading to obstruction of usability of the item under inspection (critical defect)."@en .
+
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-parcel/code#CriticalDefectTypeValue/multiParcel>
+        a                cap-iacs-parcel:CriticalDefectTypeValue ;
+        rdfs:label       "Multi-parcel"@en ;
+        skos:definition  "--Name--\r\nMulti-parcel\r\n\r\n-- Definition --\r\nMulti-parcel is a block that amalgamates ten or more clearly distinct parcels.\r\n\r\n-- Description --\r\nAccording to the internal rules of the given LPIS the contained units of agriculture land should have been processed separately.\r\n\r\nNOTE: This value is applicable to production and topographic blocks only."@en ;
+        skos:inScheme    cap-iacs-parcelcode:CriticalDefectTypeValue .
+
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-parcel/code#EcologicalFocusAreaEquivalentPracticeTypeValue/conversionOfArableLandIntoPermanentGrasslandExtensivelyUsed>
+        a                cap-iacs-parcel:EcologicalFocusAreaEquivalentPracticeTypeValue ;
+        rdfs:label       "Conversion of arable land into permanent grassland extensively used"@en ;
+        skos:definition  "--Name--\r\nConversion of arable land into extensively used permanent grassland\r\n\r\n-- Definition --\r\nValue listed in print III of Annex IX of Regulation (EU) No 1307/2013.\r\n\r\n-- Description --\r\nItem description."@en ;
+        skos:inScheme    cap-iacs-parcelcode:EcologicalFocusAreaEquivalentPracticeTypeValue .
+
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-parcel/code#DataQualityMeasureTypeIuiCcValue/classificationCorrectness>
+        a                cap-iacs-parcel:DataQualityMeasureTypeIuiCcValue ;
+        rdfs:label       "Classification correctness"@en ;
+        skos:definition  "--Name--\r\nClassification correctness\r\n\r\n-- Definition --\r\nThematic classification correctness as defined in ISO 19157:2013.\r\n\r\n-- Description --\r\nThematic classification correctness applied to the land cover class.\r\n\r\nEXAMPLE:  A MS has defined Hedge landscape feature and Line of trees landscape feature. Attributing an instance of hedge to line of trees class is a classification error.\r\n\r\nNOTE 1. The correct classification and quantification of the land cover types (arable/PC) is directly used for assessing the exemption for the green payments (EFA, crop diversification)\r\n\r\nNOTE 2. The correct classification of the grassland is relevant because it acts as a threshold fors crop diversification. Certain types of grassland (pro-rata or not) are subject to specific requirements and therefore need to be distinguished (thus recorded).  In general, such detailed inspection triggers a better understanding of the pro-rata behaviour in the LPIS.\r\nNOTE 3. Each pro-rata type shall be regarded as a separate land cover class For example permanent grassland of 50% is one class, and permanent grassland  90%  is another class. Therefore classifying an instance of permanent grassland of 50% to class permanent grassland  90%  a  is a classification error (like in the example above with the hedge and line of trees)."@en ;
+        skos:inScheme    cap-iacs-parcelcode:DataQualityMeasureTypeIuiCcValue .
+
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-parcel/code#EcologicalFocusAreaTypeValue/landscapeFeatureIsolatedTree>
+        a                cap-iacs-parcel:EcologicalFocusAreaTypeValue ;
+        rdfs:label       "Landscape feature, isolated tree"@en ;
+        skos:definition  "--Name--\r\nLF isolated tree\r\n\r\n-- Definition --\r\nEcological focus area type as defined by Art. 46(2) of (EU) R 1307/2013.\r\n\r\n-- Description --\r\nLandscape feature, isolated tree with a crown diameter of minimum 4 meters.  [Art. 45(3)(b) of (EU) R No 639/2014].\r\n\r\nNOTE 1: Member States may include trees recognised by them as valuable landscape features with a crown diameter below 4 meters.\r\n\r\nNOTE 2: When stable in time, this LF needs to be identified in the LPIS in view of checking their retention during OTSC. This identification of cross compliance Landscape Features can be done e.g. by alpha-numerical information (or by delineation) associated to the parcel."@en ;
+        skos:inScheme    cap-iacs-parcelcode:EcologicalFocusAreaTypeValue .
+
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-parcel/code#EcologicalFocusAreaTypeValue/bufferStrips>
+        a                cap-iacs-parcel:EcologicalFocusAreaTypeValue ;
+        rdfs:label       "Buffer strips"@en ;
+        skos:definition  "--Name--\r\nBuffer strips\r\n\r\n-- Definition --\r\nEcological focus area type as defined by Art. 46(2) of (EU) R 1307/2013.\r\n\r\n-- Description --\r\nBuffer strips, including buffer strips covered by permanent grassland, provided that these are distinct from adjacent eligible agricultural area [Art. 46(2) (d) of (EU) R 1307/2013].\r\n\r\nNOTE 1: Buffer strips shall include the buffer strips:\r\n- along water courses required under GAEC 1, SMR 1 or SMR 10 as referred to in Annex II to Regulation (EU) No 640/2014;\r\n- other buffer strips defined by MS. minimum width that shall not be below 1 meter.\r\n\r\nNOTE 2: Buffer strips shall be located on or adjacent to an arable field with their long edges parallel to the edge of a water course or water body.\r\n\r\nNOTE 3:  Along water courses, buffer strips may include strips with riparian vegetation with a width of up to 10 meters with no agricultural production. (By way of derogation MS may allow grazing or cutting, provided that the buffer strip remains distinguishable from adjacent agricultural land)."@en ;
+        skos:inScheme    cap-iacs-parcelcode:EcologicalFocusAreaTypeValue .
+
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-parcel/code#DataQualityMeasureTypeEtsValue/lpisAreaUnderestimates>
+        a                cap-iacs-parcel:DataQualityMeasureTypeEtsValue ;
+        rdfs:label       "LPIS upper interval boundary"@en ;
+        skos:definition  "--Name--\r\nLPIS area underestimates\r\n\r\n-- Definition --\r\nOne-sided probability boundary of the rate if the eligible hectares that indicate underestimation found in respect to the total number of eligible hectares currently recorded in the LPIS . \r\n\r\n-- Description --\r\nTechnical definition: Upper Interval Boundary\r\nCalculation method: UIB=UER-1,6449xUERxstdev(UER)\r\n\r\nMeasure identifier: L_AUE\r\nName: LPIS area underestimates\r\nAlias: LPIS upper interval boundary\r\nElement name: Quantitative attribute accuracy\r\nDefinition: LE98\r\nValue type: Measure\r\nValue Structure: n.a.\r\n\r\nNOTE. Previously named as 10201_2 LPIS_RP_MEA_B"@en ;
+        skos:inScheme    cap-iacs-parcelcode:DataQualityMeasureTypeEtsValue .
+
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-parcel/code#AgriculturalAreaTypeValue/permanentGrasslandElp>
+        a                cap-iacs-parcel:AgriculturalAreaTypeValue ;
+        rdfs:label       "Permanent grassland established under local practices"@en ;
+        skos:definition  "--Name--\r\nPermanent grassland under established  local practices\r\n\r\n-- Definition --\r\nPermanent grassland under established local practices as referred to in Art.4(1)(h) of R (EU) No 1307/2013. \r\n\r\n-- Description --\r\nLand which can be grazed and which forms part of established local practices where grasses and other herbaceous forage are traditionally not predominant in grazing areas.\r\n\r\nNOTE: According to DSCG/2014/33  these areas should be added and identified in LPIS."@en ;
+        skos:inScheme    cap-iacs-parcelcode:AgriculturalAreaTypeValue .
+
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-parcel/code#EcologicalFocusAreaTypeValue/areasWithNitrogenFixingCrops>
+        a                cap-iacs-parcel:EcologicalFocusAreaTypeValue ;
+        rdfs:label       "Areas with nitrogen fixing crops"@en ;
+        skos:definition  "--Name--\r\nAreas with nitrogen fixing crop\r\n\r\n-- Definition --\r\nEcological focus area type as defined by Art. 46(2) of (EU) R 1307/2013.\r\n\r\n-- Description --\r\nAreas with nitrogen fixing crops.\r\n\r\nNOTE: A list of nitrogen-fixing crops shall be established by the MS [Art. 45(10) (EU) R No 637/2014]."@en ;
+        skos:inScheme    cap-iacs-parcelcode:EcologicalFocusAreaTypeValue .
+
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-parcel/code#DataQualityMeasureNameValue/lpisRelativeAreaCorrectness>
+        a                cap-iacs-parcel:DataQualityMeasureNameValue ;
+        rdfs:label       "L_RAC"@en ;
+        skos:definition  "-- Description --\r\nFor definition and description see the corresponding value in DataQualityMeasureTypeEtsValue code list."@en ;
+        skos:inScheme    cap-iacs-parcelcode:DataQualityMeasureNameValue .
+
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-parcel/code#DataQualityMeasureTypeEtsValue/numberOfAreaNonConformingItems>
+        a                cap-iacs-parcel:DataQualityMeasureTypeEtsValue ;
+        rdfs:label       "Number of area non-conforming items"@en ;
+        skos:definition  "--Name--\r\nNumber of area non-conformities\r\n\r\n-- Definition --\r\nNumber of area non-conforming inspected items (N1) within the ETS sample.\r\n\r\n-- Description --\r\nCount of items with itemConformance (area)=FALSE value.  \r\n\r\nMeasure identifier: L_NANC_A\r\nName: Number of area non-conforming items\r\nAlias: Item area non conformity number\r\nElement name: Conceptual consistency\r\nBasic measure: Error count\r\nValue type: Number\r\nValue Structure: n.a."@en ;
+        skos:inScheme    cap-iacs-parcelcode:DataQualityMeasureTypeEtsValue .
+
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-parcel/code#TestTypeMtsValue/valueType>
+        a                cap-iacs-parcel:TestTypeMtsValue ;
+        rdfs:label       "Value type"@en ;
+        skos:definition  "--Name--\r\nValue type\r\n\r\n--Definition --\r\nType of the value that a specific attribute can take.\r\n\r\n-- Description --\r\nValue types can be specified using one of the following methods:\r\n- selecting types of from the conceptual schema language and reference schemas (standards, INSPIRE)\r\n- Data type specified in reference schemas or in the LCM\r\n- Enumeration\r\n- Code list\r\n\r\nNOTE 1. for extensible code lists other values than specified in it can be introduced in the eligibility profile. The extended values shall not have semantic clashes with those values, specified in the LCM. When extension with \"narrower\" values is allowed, the an new value should be a semantic restriction of the parent value. For example \"permanent crop\" can be extended with \"citrus tree\".\r\n\r\nNOTE 2. This is a capability test case."@en ;
+        skos:inScheme    cap-iacs-parcelcode:TestTypeMtsValue .
+
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-parcel/code#DataQualityMeasureValueStructureValue/sequence>
+        a                cap-iacs-parcel:DataQualityMeasureValueStructureValue ;
+        rdfs:label       "Sequence"@en ;
+        skos:definition  "--Name--\r\nSequence\r\n\r\n--Definition--\r\nFinite, ordered collection of related items (objects or values) that may be repeated (ISO 19107:2003).\r\n\r\n--Description--\r\nThis structure can be used for providing QE2b values."@en ;
+        skos:inScheme    cap-iacs-parcelcode:DataQualityMeasureValueStructureValue .
+
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-parcel/code#CriticalDefectTypeEfaValue/invalidWeightingParameter>
+        a                cap-iacs-parcel:CriticalDefectTypeEfaValue ;
+        rdfs:label       "Invalid weighting parameter"@en ;
+        skos:definition  "--Name--\r\nInvalid weighting parameter\r\n\r\n-- Definition --\r\nThis is a placeholder only; currently not to be implemented.\r\n\r\n-- Description --\r\nError in selecting the weighting parameter."@en ;
+        skos:inScheme    cap-iacs-parcelcode:CriticalDefectTypeEfaValue .
+
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-parcel/code#DataQualityMeasureNameValue/conformityClass2>
+        a                cap-iacs-parcel:DataQualityMeasureNameValue ;
+        rdfs:label       "L_CLASS2"@en ;
+        skos:definition  "-- Description --\r\nFor definition and description see the corresponding value in DataQualoityMeasureTypeEtsValue code list."@en ;
+        skos:inScheme    cap-iacs-parcelcode:DataQualityMeasureNameValue .
+
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-parcel/code>
+        a       owl:Ontology ;
+        rdfs:label       "Identification system for agricultural parcels code lists"@en ;
+        owl:versionIRI   "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-base/code/3.0" ;
+        owl:versionInfo  "3.0" ;
+        dct:creator [ schema:affiliation [ foaf:name "PSNC" ] ;
+                      rdfs:seeAlso <http://orcid.org/0000-0003-4289-4922> ;
+                      foaf:name "Raul Palma"
+                    ] ;
+        dct:title "JRC IACS - Identification System for Agricultural Parcels Code Lists"@en ;
+        dct:description "Ontology of the identification system for agricultural parcels code lists used in IACS, generated from the transformation of the corresponding JRC application schema"@en ;
+        dct:source "JRC IACS application schema. https://doi.org/10.1016/j.landusepol.2016.05.023"@en ;
+        dct:rights "This ontology is distributed under Creative Commons Attribution 4.0 License - http://creativecommons.org/licenses/by/4.0"@en .
+
+cap-iacs-parcelcode:ContaminationTypeValue
+        a                skos:ConceptScheme ;
+        rdfs:label       "Contamination type value list"@en ;
+        dct:isFormatOf   cap-iacs-parcel:ContaminationTypeValue ;
+        skos:definition  "--Name--\r\nContamination type value\r\n\r\n-- Definition --\r\nList of contamination type values.\r\n\r\n-- Description --\r\nNOTE: the code list is centrally managed by the Commission services and cannot be extended by MS/Regions."@en .
+
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-parcel/code#DataQualityMeasureTypeEfaValue/numberOfIncompleteProcessing>
+        a                cap-iacs-parcel:DataQualityMeasureTypeEfaValue ;
+        rdfs:label       "Number of incomplete processing"@en ;
+        skos:definition  "--Name--\r\nNumber of incomplete processing\r\n\r\n-- Definition --\r\nThis is a placeholder only; currently not to be implemented.\r\n\r\nAbundance of incomplete processing instances within the sample as technical cause for critical defects and non conformances.\r\n\r\n--Description --\r\nOccurrences of incompleteProcessing value assigned to the items under inspection within the sample."@en ;
+        skos:inScheme    cap-iacs-parcelcode:DataQualityMeasureTypeEfaValue .
+
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-parcel/code#SkippingReasonTypeValue/forceMajeure>
+        a                cap-iacs-parcel:SkippingReasonTypeValue ;
+        rdfs:label       "Force Majeure"@en ;
+        skos:definition  "--Name--\r\nForce majeure\r\n\r\n-- Definition --\r\nFailure to inspect the item of inspection due to force majeure circumstances observed on the item of inspection. \r\n\r\n-- Description --\r\nEXAMPLES of force majeure: flood,  snow cover, fires, landslides, other natural hazards.\r\n\r\nNOTE: In DTS 5.3 the  value was forceMajeureCircumstancesObservedOnLuiF1. The coresponding coded value was F1."@en ;
+        skos:inScheme    cap-iacs-parcelcode:SkippingReasonTypeValue .
+
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-parcel/code#TechnicalReasonValue/incompatibleDesign>
+        a                cap-iacs-parcel:TechnicalReasonValue ;
+        rdfs:label       "Incompatible design"@en ;
+        skos:definition  "--Name--\r\nIncompatible design\r\n\r\n-- Definition --\r\nIncompatible design.\r\n\r\n-- Description --\r\nNone of the other causes can be assigned. Item under inspection does not follow the conceptual schema of the national/regional eligibility profile and/or the methodology for delineation. An instance classified to a feature type does not follow the semantics of the type."@en ;
+        skos:inScheme    cap-iacs-parcelcode:TechnicalReasonValue .
+
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-parcel/code#SampleSizeValue/200>
+        a                cap-iacs-parcel:SampleSizeValue ;
+        rdfs:label       "200"@en ;
+        skos:definition  "--Name--\r\n200\r\n\r\n-- Definition --\r\nSample size value (population) applicable in LPISQA for parcel measurements.\r\n\r\n-- Description --\r\nValue selected on the basis of lot size and LQ=12,5 from ISO 2859-2:1985"@en ;
+        skos:inScheme    cap-iacs-parcelcode:SampleSizeValue .
+
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-parcel/code#DataQualityMeasureNameValue/areaCorrectnessDistribution>
+        a                cap-iacs-parcel:DataQualityMeasureNameValue ;
+        rdfs:label       "L_ACD"@en ;
+        skos:definition  "-- Description --\r\nFor definition and description see the corresponding value in DataQualityMeasureTypeEtsValue code list."@en ;
+        skos:inScheme    cap-iacs-parcelcode:DataQualityMeasureNameValue .
+
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-parcel/code#LimitingQualityValue/12.50>
+        a                cap-iacs-parcel:LimitingQualityValue ;
+        rdfs:label       "12.50"@en ;
+        skos:definition  "--Name--\r\n12.50\r\n\r\n-- Definition --\r\nLimiting quality value LQ=12,50.\r\n\r\n-- Description --\r\nValue defined by ISO 2859-2:1985. This value is applicable for all assessments (area and contamination conformity, item conformity) by exclusion of critical defect conformity. It expresses and indexes a quality expectation of 5% error rate or better."@en ;
+        skos:inScheme    cap-iacs-parcelcode:LimitingQualityValue .
+
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-parcel/code#DataQualityMeasureTypeEfaValue/cummulativeNumberOfMissedUpdates>
+        a                cap-iacs-parcel:DataQualityMeasureTypeEfaValue ;
+        rdfs:label       "Cummulative number of missed updates"@en ;
+        skos:definition  "--Name--\r\nCumulative number of missed updates\r\n\r\n-- Definition --\r\nThis is a placeholder only; currently not to be implemented.\r\n\r\nRate of undetected anomalies (changes of the land) since the last update of EFA.\r\n\r\n-- Description --\r\nRatio of the abundance of missedUpdates to the number of inspected items calculated for each year and summed up starting from the year of last update."@en ;
+        skos:inScheme    cap-iacs-parcelcode:DataQualityMeasureTypeEfaValue .
+
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-parcel/code#DataQualityMeasureTypeIuiValue/areaConformance>
+        a                cap-iacs-parcel:DataQualityMeasureTypeIuiValue ;
+        rdfs:label       "Area conformance"@en ;
+        skos:definition  "--Name--\r\nArea conformance\r\n\r\n--Definition --\r\nConformance statement based on the value of relative area correctness. \r\n\r\n-- Description --\r\nThe conformance thresholds are area dependent:\r\n- area >5000 sq.m. : 97,00% - 103,00% conforming;\r\n- 2000 sq.m.<area<5000 sq.m.: 95% - 105% conforming;\r\n- area<2000 sq.m.: 93%-107% conforming.\r\n\r\nMeasure identifier: I_ACON\r\nName: Item area conformance\r\nAlias: Parcel area conformance\r\nElement name: Domain consistency\r\nBasic measure: Error indicator\r\nValue type: Boolean\r\nValue Structure: n.a.\r\n\r\nNOTE. Previously  it was part of RP conformance - code list for conformance level."@en ;
+        skos:inScheme    cap-iacs-parcelcode:DataQualityMeasureTypeIuiValue .
+
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-parcel/code#EcologicalFocusAreaTypeValue/hectaresOfArgoForestry>
+        a                cap-iacs-parcel:EcologicalFocusAreaTypeValue ;
+        rdfs:label       "Hectares of agro-forestry"@en ;
+        skos:definition  "--Name--\r\nHectares of agro-forestry\r\n\r\n-- Definition --\r\nEcological focus area type as defined by Art. 46(2) of (EU) R 1307/2013\r\n\r\n-- Description --\r\nHectares of agro-forestry\r\n- are those that receive, or have received, support under Article 44 of Regulation (EC) No 1698/2005 and/or Article 23 of Regulation (EU) No 1305/2013\r\n- shall be arable land eligible for the basic payment scheme or the single area payment scheme  for which support under Article 44 of Regulation (EC) No 1698/2005 or Article 23 of Regulation (EU) No 1305/2013 was or is granted."@en ;
+        skos:inScheme    cap-iacs-parcelcode:EcologicalFocusAreaTypeValue .
+
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-parcel/code#DataQualityMeasureNameValue/relativeAreaCorrectness>
+        a                cap-iacs-parcel:DataQualityMeasureNameValue ;
+        rdfs:label       "I_RAC"@en ;
+        skos:definition  "-- Description --\r\nFor definition and description see the corresponding value in DataQualityMeasureTypeIuiValue code list."@en ;
+        skos:inScheme    cap-iacs-parcelcode:DataQualityMeasureNameValue .
+
+cap-iacs-parcelcode:DataQualityMeasureTypeEfaValue
+        a                skos:ConceptScheme ;
+        rdfs:label       "EFA data quality measure type list"@en ;
+        dct:isFormatOf   cap-iacs-parcel:DataQualityMeasureTypeEfaValue ;
+        skos:definition  "--Name--\r\nData quality measure types applicable to the EFA inspection sample\r\n\r\n-- Definition --\r\nThis is a placeholder only; currently not to be implemented.\r\n\r\n-- Description --\r\nData quality measure type list for EFA sample. \r\nNOTE. Full description of each value must be provided in DQM_Measure."@en .
+
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-parcel/code#TechnicalReasonValue/missedUpgrade>
+        a                cap-iacs-parcel:TechnicalReasonValue ;
+        rdfs:label       "Missed upgrade"@en ;
+        skos:definition  "--Name--\r\nMissed upgrade\r\n\r\n-- Definition --\r\nMissed upgrade.\r\n\r\n-- Description --\r\nChanges in the legal acts have not been introduced in the data model. Presentation of data does not follow the prescribed requirements / conceptual model and /or the current national / regional eligibility profile. This brings systematic error in the dataset. Non-conformity manifests at the level of the feature / data types (all instances belonging to the type concerned)."@en ;
+        skos:inScheme    cap-iacs-parcelcode:TechnicalReasonValue .
+
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-parcel/code#DataQualityMeasureTypeEtsValue/lpisRelativeAreaCorrectness>
+        a                cap-iacs-parcel:DataQualityMeasureTypeEtsValue ;
+        rdfs:label       "LPIS maximum eligible area correctness"@en ;
+        skos:definition  "--Name--\r\nLPIS relative area correctness\r\n\r\n--Definition --\r\nRatio of the total observed area in course of ETS to the sum of reference area of the corresponding parcels.\r\n\r\n-- Description --\r\nMeasure identifier: L_RAC\r\nName: LPIS relative area correctness\r\nAlias: LPIS maximum eligible area correctness\r\nElement name: Relative or internal accuracy\r\nBasic measure: Error rate\r\nValue type: Measure. The ratio shall be expressed in percentages.\r\nValue Structure: n.a.\r\n\r\nNOTE. Previously named: 10201 LPIS_RP_MEA"@en ;
+        skos:inScheme    cap-iacs-parcelcode:DataQualityMeasureTypeEtsValue .
+
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-parcel/code#HomogeneityTypeValue/soilType>
+        a                cap-iacs-parcel:HomogeneityTypeValue ;
+        rdfs:label       "Soil type"@en ;
+        skos:definition  "--Name--\r\nSoil type\r\n\r\n-- Definition --\r\nSoil type according to a well-established classification system.\r\n\r\n-- Description --\r\nThe classification system shall be described or referred with a citation.\r\n\r\nNOTE: the applicable values of soil type shall be documented in the eligibility profile of the MS/regions, or have to be described in a document dully cited or inserted in the information system.\r\n\r\nEXAMPLE:  http://inspire.ec.europa.eu/codelist/ \r\nINSPIRE code list  registry comprising Soil data theme."@en ;
+        skos:inScheme    cap-iacs-parcelcode:HomogeneityTypeValue .
+
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-parcel/code#DataQualityMeasureTypeEfaValue/numberOfMissedUpgrades>
+        a                cap-iacs-parcel:DataQualityMeasureTypeEfaValue ;
+        rdfs:label       "Number of missed upgrades"@en ;
+        skos:definition  "--Name--\r\nNumber of Missed upgrades\r\n\r\n-- Definition --\r\nThis is a placeholder only; currently not to be implemented.\r\n\r\nAbundance of missed upgrades within the sample as technical cause for critical defects and non conformances.\r\n\r\n--Description --\r\nOccurrences of missedUpgrade value assigned to the items under inspection within the sample."@en ;
+        skos:inScheme    cap-iacs-parcelcode:DataQualityMeasureTypeEfaValue .
+
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-parcel/code#SampleSizeValue/500>
+        a                cap-iacs-parcel:SampleSizeValue ;
+        rdfs:label       "500"@en ;
+        skos:definition  "--Name--\r\n500\r\n\r\n-- Definition --\r\nSample size applicable for LPIS inspection, when the lot size is smaller than or equal to 150000.\r\n\r\n-- Description --\r\nSample population corresponding to LQ=2,0 from ISO 2859-2:1985."@en ;
+        skos:inScheme    cap-iacs-parcelcode:SampleSizeValue .
+
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-parcel/code#TestTypeMtsValue/extendedCodeList>
+        a                cap-iacs-parcel:TestTypeMtsValue ;
+        rdfs:label       "Extended code list"@en ;
+        skos:definition  "--Name--\r\nExtended code list\r\n\r\n-- Definition --\r\nSemantic analysis of the  extended elements of the code lists managed by the authorities of the MS /regions.  \r\n\r\n--Description --\r\nA semantic comparison of the extended code list values have to establish the relation between the extended values and the values included in the LCM. \r\nWhen \"narrower\" extensions are allowed the new values can restrict the semantic meaning of a value within the same code list of the LCM. The mapping between the original and extended value shall be provided.\r\nWhen \"any\" extension is allowed that extended values must avoid semantic clashes with the values already defined in the LCM .\r\n\r\nNOTE 1. When \"any\" extension is allowed, \"narrower\" code list elements can be introduced too.\r\n\r\nNOTE 2. When notification about the extension to the Commission applies, consistency between the schema and the notification shall be preserved. \r\n\r\nNOTE 3. This is a capability test case."@en ;
+        skos:inScheme    cap-iacs-parcelcode:TestTypeMtsValue .
+
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-parcel/code#DataQualityMeasureNameValue/itemConformance>
+        a                cap-iacs-parcel:DataQualityMeasureNameValue ;
+        rdfs:label       "I_CON"@en ;
+        skos:definition  "-- Description --\r\nFor definition and description see the corresponding value in DataQualityMeasureTypeIuiValue code list."@en ;
+        skos:inScheme    cap-iacs-parcelcode:DataQualityMeasureNameValue .
+
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-parcel/code#LandscapeFeatureValueType/landscapeFeatureIsolatedTree>
+        a                cap-iacs-parcel:LandscapeFeatureValueType ;
+        rdfs:label       "Landscape feature, isolated tree"@en ;
+        skos:definition  "--Name--\r\nIsolated tree\r\n\r\n-- Definition --\r\nIsolated tree in the agricultural area that is traditionally part of good agriculture cropping or utilization practices.\r\n\r\n-- Description --\r\nSuch LF may become an EFA element when its crown diameter is of minimum 4 meters. [Art. 45(3)(b) of (EU) R No 639/2014].\r\n\r\nNOTE 1: Member States may include trees designated by them as valuable landscape features with a crown diameter below 4 meters.\r\n\r\nNOTE 2: When stable in time, this LF needs to be identified in the LPIS in view of checking their retention during OTSC. This identification of cross compliance Landscape Features can be done e.g. by alpha-numerical information (or by delineation) associated to the parcel"@en ;
+        skos:inScheme    cap-iacs-parcelcode:LandscapeFeatureValueType .
+
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-parcel/code#CriticalDefectTypeValue/multiSurface>
+        a                cap-iacs-parcel:CriticalDefectTypeValue ;
+        rdfs:label       "Multi-surface"@en ;
+        skos:definition  "--Name--\r\nMulti-surface\r\n\r\n-- Definition --\r\nInvalid geometry type (multi -surface, GM_Multisurface) for an inspected item.\r\n\r\n-- Description --\r\nThe parcel that carries one identifier consists of two or more disjoint surface units.\r\n\r\nNOTE 1: This value is not applicable, when the parcel aggregation methodology is used.\r\n\r\nNOTE 2: Previous name was multiPolygon."@en ;
+        skos:inScheme    cap-iacs-parcelcode:CriticalDefectTypeValue .
+
+cap-iacs-parcelcode:DataQualityMeasureNameValue
+        a                skos:ConceptScheme ;
+        rdfs:label       "ETS data quality measure name list"@en ;
+        dct:isFormatOf   cap-iacs-parcel:DataQualityMeasureNameValue ;
+        skos:definition  "--Name--\r\nData quality measure name value\r\n\r\n-- Definition --\r\nData quality measures applicable for LPIS quality assessment process.\r\n\r\n-- Description --\r\nThis is the unified code list of all DQM applied at item and sample level."@en .
+
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-parcel/code#DataQualityMeasureTypeEfaValue/numberOfAreaNonConformity>
+        a                cap-iacs-parcel:DataQualityMeasureTypeEfaValue ;
+        rdfs:label       "Number of area non-conformity"@en ;
+        skos:definition  "--Name--\r\nNumber of area non-conformities\r\n\r\n-- Definition --\r\nThis is a placeholder only; currently not to be implemented.\r\n\r\nNumber of non conforming inspected items within the ETS sample.\r\n\r\n-- Description --\r\nCount of items with itemConformance=FALSE value."@en ;
+        skos:inScheme    cap-iacs-parcelcode:DataQualityMeasureTypeEfaValue .
+
+cap-iacs-parcelcode:TestTypeMtsValue
+        a                skos:ConceptScheme ;
+        rdfs:label       "MTS test type value list"@en ;
+        dct:isFormatOf   cap-iacs-parcel:TestTypeMtsValue ;
+        skos:definition  "--Name--\r\nMTS  test type values\r\n\r\n--Definition--\r\nAbstract test cases applicable in model based testing for LPISQA.\r\n\r\n--Description--\r\nThese abstract test cases are applicable for conformance testing of the eligibility profile in general. They should  be further specified  in the executable test cases according to the implementation choices of the MS/Regions."@en .
+
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-parcel/code#DataQualityMeasureNameValue/lpisAreaPrecisionConformance>
+        a                cap-iacs-parcel:DataQualityMeasureNameValue ;
+        rdfs:label       "L_APCON"@en ;
+        skos:definition  "-- Description --\r\nFor definition and description see the corresponding value in DataQualityMeasureTypeEtsValue code list."@en ;
+        skos:inScheme    cap-iacs-parcelcode:DataQualityMeasureNameValue .
+
+cap-iacs-parcelcode:DataQualityMeasureValueStructureValue
+        a                skos:ConceptScheme ;
+        rdfs:label       "Data quality measure value structure value list"@en ;
+        dct:isFormatOf   cap-iacs-parcel:DataQualityMeasureValueStructureValue ;
+        skos:definition  "--Name--\r\nData quality Measure value structure\r\n\r\n--Definition--\r\nStructure used for presenting multiple values of DQ results.\r\n\r\n--Description--\r\nA result may consist of multiple values. In such cases, the result shall be structured using the value structure as given in C.3.3 of ISO 19157:2013. \r\n\r\nEXAMPLE: The results for misclassification shall be given as a matrix."@en .
+
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-parcel/code#LandscapeFeatureValueType/landscapeFeatureFieldMargin>
+        a                cap-iacs-parcel:LandscapeFeatureValueType ;
+        rdfs:label       "Landscape feature, field margin"@en ;
+        skos:definition  "--Name--\r\nField margin\r\n\r\n-- Definition --\r\nField margin in the agricultural area that is traditionally part of good agriculture cropping or utilization practices.\r\n\r\n-- Description --\r\nField margin may become an EFA element when its width is between 1 and 20 meters. There shall be no agricultural production on it. [Art. 45(3)(e) of (EU) R No  639/2014].\r\n\r\nNOTE 1. MS may establish a lower maximum width.\r\n\r\nNOTE 2. When this type of LF is protected under SMR 3, MS may specify other width based on national requirements."@en ;
+        skos:inScheme    cap-iacs-parcelcode:LandscapeFeatureValueType .
+
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-parcel/code#EcologicalFocusAreaTypeValue/landscapeFeatureTraditionalStoneWalls>
+        a                cap-iacs-parcel:EcologicalFocusAreaTypeValue ;
+        rdfs:label       "Landscape feature traditional stone walls"@en ;
+        skos:definition  "--Name--\r\nLF traditional walls\r\n\r\n-- Definition --\r\nEcological focus area type as defined by Art. 46(2) of (EU) R 1307/2013.\r\n\r\n-- Description --\r\nLandscape feature traditional stone walls.   [Art. 45(3)(a) of (EU) R No  639/2014].\r\n\r\nNOTE: Member States shall establish minimum criteria based on national or regional specificities, including limits to the dimensions of height and width.\r\n\r\nNOTE 2: When this type of LF is protected under SMR 3, MS may specify other width based on  national requirements."@en ;
+        skos:inScheme    cap-iacs-parcelcode:EcologicalFocusAreaTypeValue .
+
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-parcel/code#EcologicalFocusAreaTypeValue/landscapeFeatureTreesInLine>
+        a                cap-iacs-parcel:EcologicalFocusAreaTypeValue ;
+        rdfs:label       "Landscape feature, trees in line"@en ;
+        skos:definition  "--Name--\r\nLF trees in line\r\n\r\n-- Definition --\r\nEcological focus area type as defined by Art. 46(2) of (EU) R 1307/2013.\r\n\r\n-- Description --\r\nLandscape feature, trees in line  trees in line with a crown diameter of minimum 4 meters. The space between the crowns shall not exceed 5 meters. [Art. 45(3)(c) of (EU) R No  639/2014].\r\n\r\nNOTE 1: Member States may include trees recognised by them as valuable landscape features with a crown diameter below 4 meters.\r\n\r\nNOTE 2: When this type of LF is protected under GAEC 7, SMR 3, MS may specify other width based on national requirements."@en ;
+        skos:inScheme    cap-iacs-parcelcode:EcologicalFocusAreaTypeValue .
+
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-parcel/code#SampleSizeValue/800>
+        a                cap-iacs-parcel:SampleSizeValue ;
+        rdfs:label       "800"@en ;
+        skos:definition  "--Name--\r\n800\r\n\r\n-- Definition --\r\nSample size applicable for LPIS inspection, when the lot size is bigger than 150000, but is smaller than or equal to 500000.\r\n\r\n-- Description --\r\nSample population corresponding to LQ=2,0 from ISO 2859-2:1985."@en ;
+        skos:inScheme    cap-iacs-parcelcode:SampleSizeValue .
+
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-parcel/code#TestTypeMtsValue/attributeAndAssociationCompleteness>
+        a                cap-iacs-parcel:TestTypeMtsValue ;
+        rdfs:label       "Attribute and association"@en ;
+        skos:definition  "--Name--\r\nAttribute and association completeness\r\n\r\n--Definition --\r\nCompleteness of the eligibility profile  in terms of attributes and associations  as compared to the LCM. Eventual omissions trigger fail verdict in the corresponding tests.\r\n\r\n-- Description --\r\nAll attributes and association roles defined in the LCM are mandatory.  When feature types of the eligibility profile include more attributes than defined in the LCM, this does not influence conformity. However, the definition of these attributes should not semantically clash with the definitions of those, already defined in the LCM. Omitted attributes/association rules found in course of testing triggers fail verdict in this test.\r\n\r\nNOTE 1. From semantic and UML points of view attributes and associations are equivalent. Both describe the properties of the related class (feature type, or data type).\r\n\r\nNOTE 2. Zero (0) multiplicity describes a natural state (semantic property) of the attribute/association. Therefore it should not be interpreted as indicator of optional implementation.\r\n\r\nNOTE 3. Zero (0) multiplicity of abstract only concepts (no corresponding tangible entities in the real world) means that within a smaller their use is not required. EXAMPLE: identifiers  may not be required for specific uses.\r\n\r\nNOTE 4. This is a capability test case."@en ;
+        skos:inScheme    cap-iacs-parcelcode:TestTypeMtsValue .
+
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-parcel/code#DataQualityMeasureTypeEtsValue/areaCorrectnessDistribution>
+        a                cap-iacs-parcel:DataQualityMeasureTypeEtsValue ;
+        rdfs:label       "QE2b"@en ;
+        skos:definition  "--Name--\r\nArea correctness distribution\r\n\r\n-- Definition --\r\nStatistical distribution of relative area correctness values.\r\n\r\n-- Description --\r\nThe population of relativeAreaCorrectness values defined for the following intervals: \r\n- [-50%,<], (-50,-20%], (-20,-12%], (-12,-8%;], (-8,-4%,], (-4,-2%],  (-2, 0%], (0, 2%], (2, 4%], (4, 8%], (8, 12%], (12, 20%], (20, 50%], (<50%]\r\n\r\nMeasure identifier: L_ACD\r\nName: Area correctness distribution\r\nAlias: QE2b\r\nElement name: Relatives or internal accuracy\r\nValue type: Measure\r\nValue Structure: sequence (table)\r\n\r\nNOTE 1: Previously named as  10203 LPIS_RP_SEA\r\n\r\nNOTE 2: DQM_Measure.DQM_ValueStructure=Sequence (previously was Table)."@en ;
+        skos:inScheme    cap-iacs-parcelcode:DataQualityMeasureTypeEtsValue .
+
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-parcel/code#AcceptanceNumberValue/5>
+        a                cap-iacs-parcel:AcceptanceNumberValue ;
+        rdfs:label       "5"@en ;
+        skos:definition  "--Name--\r\n5\r\n\r\n-- Definition --\r\nAcceptance number value 5.\r\n\r\n-- Description --\r\nValue defined in ISO 2859-2:1985."@en ;
+        skos:inScheme    cap-iacs-parcelcode:AcceptanceNumberValue .
+
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-parcel/code#TestTypeMtsValue/encoding>
+        a                cap-iacs-parcel:TestTypeMtsValue ;
+        rdfs:label       "Encoding"@en ;
+        skos:definition  "--Name--\r\nEncoding\r\n\r\n--Definition --\r\nEncoding applicable for data exchange within LPISQA.\r\n\r\n-- Description --\r\nThe xml/gml schema should follow the standard specified by DG JRC. \r\n\r\nNOTE. This is a capability test case."@en ;
+        skos:inScheme    cap-iacs-parcelcode:TestTypeMtsValue .
+
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-parcel/code#CriticalDefectTypeValue/totalAbsenceOfAgriculturalLand>
+        a                cap-iacs-parcel:CriticalDefectTypeValue ;
+        rdfs:label       "Total absence of agricultural land"@en ;
+        skos:definition  "--Name--\r\nTotal absence of agricultural land\r\n\r\n-- Definition --\r\nItem under inspection with total absence of agricultural land.\r\n\r\n--Description --\r\nItem under inspection, which does not contain any instance of agricultural land cover type listed in the eligibility profile.\r\n\r\nNOTE: Stand-alone eligible landscape feature (without agricultural land) within the item of inspection does not vindicate critical defect."@en ;
+        skos:inScheme    cap-iacs-parcelcode:CriticalDefectTypeValue .
+
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-parcel/code#LandscapeFeatureValueType/landscapeFeatureTraditionalStoneWalls>
+        a                cap-iacs-parcel:LandscapeFeatureValueType ;
+        rdfs:label       "Landscape feature traditional stone walls"@en ;
+        skos:definition  "---Name--\r\nTraditional stone walls\r\n\r\n-- Definition --\r\nTraditional stone walls in the agricultural area that are part of good agriculture cropping or utilization practices.\r\n\r\n-- Description --\r\nTraditional stone walls may become and EFA element. [Art. 45(3)(a) of (EU) R No 639/2014].\r\n\r\nNOTE 1. Member States shall establish minimum criteria based on national or regional specificities, including limits to the dimensions of height and width.\r\n\r\nNOTE 2. When this type of LF is protected under SMR 3, MS may specify other width based on  national requirements."@en ;
+        skos:inScheme    cap-iacs-parcelcode:LandscapeFeatureValueType .
+
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-parcel/code#ContaminationTypeValue/artificialSealedSurface>
+        a                cap-iacs-parcel:ContaminationTypeValue ;
+        rdfs:label       "Artificial sealed surface"@en ;
+        skos:definition  "--Name--\r\nArtificial sealed surface\r\n\r\n-- Definition --\r\nSealed surface of man-made origin.\r\n\r\n-- Description --\r\nAny artificial surface such as roads, houses, other constructions."@en ;
+        skos:inScheme    cap-iacs-parcelcode:ContaminationTypeValue .
+
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-parcel/code#SampleSizeValue/1250>
+        a                cap-iacs-parcel:SampleSizeValue ;
+        rdfs:label       "1250"@en ;
+        skos:definition  "--Name--\r\n1250\r\n\r\n-- Definition --\r\nSample size applicable for LPIS inspection, when the lot size is bigger than 500000.\r\n\r\n-- Description --\r\nSample population corresponding to LQ=2,0 from ISO 2859-2:1985."@en ;
+        skos:inScheme    cap-iacs-parcelcode:SampleSizeValue .
+
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-parcel/code#LandscapeFeatureValueType/landscapeFeatureOtherProtectedByGaecSmr>
+        a                cap-iacs-parcel:LandscapeFeatureValueType ;
+        rdfs:label       "Landscape feature, other features not listed in this code list but protected under GAEC7, SMR 2 or SMR 3"@en ;
+        skos:definition  "--Name--\r\nOther LF protected by GAEC or SMR.\r\n\r\n-- Definition --\r\nOther LF protected by GAEC or SMR in the agricultural area that are part of good agriculture cropping or utilization practices.\r\n\r\n-- Description --\r\nLandscape feature, other features not listed in this code list but protected under GAEC7, SMR 2 or SMR 3 may become an EFA eleemnt. [Art. 45(3)(a) of (EU) R No  639/2014].\r\n\r\nNOTE. When this type of LF is protected under GAEC 7 SMR 2 and SMR 3, MS shall provide semanic description and specification of properties (e.g. width)."@en ;
+        skos:inScheme    cap-iacs-parcelcode:LandscapeFeatureValueType .
+
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-parcel/code#SkippingReasonTypeValue/cloudsOrHaze>
+        a                cap-iacs-parcel:SkippingReasonTypeValue ;
+        rdfs:label       "Clouds or haze"@en ;
+        skos:definition  "--Name--\r\nClouds or haze\r\n\r\n-- Definition --\r\nInsufficient image quality due to meteorological conditions.\r\n\r\n-- Description --\r\nParcel partially or fully covered by clouds or haze.\r\n\r\nNOTE 1: When an MS/Region opts for pure field observations and measurements, this reason is incompatible with the this method. Therefore this value should be deleted from the eligibility profile.\r\n\r\nNOTE 2: In DTS 5.3 the  value was: parcelIsPartiallyOrFullyCoveredByCloudsOrHaze. The coresponding recommended coded value was T4.\r\n\r\nNOTE 3: With the introduction of dedicated LPIS QA image acquisition, applicability should become rare."@en ;
+        skos:inScheme    cap-iacs-parcelcode:SkippingReasonTypeValue .
+
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-parcel/code#InspectionMethodValue/combinedCapiAndFieldSurvey>
+        a                cap-iacs-parcel:InspectionMethodValue ;
+        rdfs:label       "Combined CAPI and field survey"@en ;
+        skos:definition  "--Name--\r\nCombined CAPI and filed survey\r\n\r\n-- Definition --\r\nCombined method of inspection using CAPI and field survey.\r\n\r\n-- Description --\r\nThe default inspection method is CAPI. In case when the measurement of the item is not feasible, or unambiguous classification of land cover is not possible, field visit shall be performed. Therefore there are three options: \r\n1. Combined CAPI supported by land cover detection and area measurement in the field,\r\n2. Combined CAPI supported by land cover detection only in the field,\r\n3. Combined CAPI supported by area measurement only in the field.\r\n\r\nNOTE: At this method the \"False\" value of the feasibilityForMeasurement attribute of ETSItemUnderInspection feature type can be very rarely assigned, only if the measurement is not feasible in the field (force major)."@en ;
+        skos:inScheme    cap-iacs-parcelcode:InspectionMethodValue .
+
+cap-iacs-parcelcode:CriticalDefectTypeEfaValue
+        a                skos:ConceptScheme ;
+        rdfs:label       "Critical defect type value"@en ;
+        dct:isFormatOf   cap-iacs-parcel:CriticalDefectTypeEfaValue ;
+        skos:definition  "--Name--\r\nEFA critical defect type\r\n\r\n-- Definition --\r\nThis is a placeholder only; currently not to be implemented.\r\n\r\n-- Description --\r\nList of error types leading to obstruction of usability of the item under inspection (critical defect)."@en .
+
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-parcel/code#DataQualityMeasureTypeEtsValue/conformityClass1>
+        a                cap-iacs-parcel:DataQualityMeasureTypeEtsValue ;
+        rdfs:label       "First conformance class"@en ;
+        skos:definition  "--Name--\r\nConformity to class 1\r\n\r\n-- Definition --\r\nConformance class as defined in Article 6 (1) of EU 640/2014.\r\n\r\n-- Description --\r\nIt is the aggregated quality measure of the conformance results of QE1, QE2, and QE3.  In order to pass, each composing element shall be conforming.\r\n\r\nMeasure identifier: L_CLASS1\r\nName: Conformity with class 1\r\nAlias: First conformance class\r\nElement name: Conceptual consistency\r\nBasic measure: Error indicator\r\nValue type: Boolean\r\nValue Structure: n.a."@en ;
+        skos:inScheme    cap-iacs-parcelcode:DataQualityMeasureTypeEtsValue .
+
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-parcel/code#DataQualityMeasureTypeIuiEfaValue/efaRelativeAreaConformance>
+        a                cap-iacs-parcel:DataQualityMeasureTypeIuiEfaValue ;
+        rdfs:label       "EFA relative area conformance"@en ;
+        skos:definition  "--Name--\r\nEFA relative area correctness\r\n\r\n-- Definition --\r\nThis is a placeholder only; currently not to be implemented.\r\n\r\nConformance statement applicable on the value of relative area correctness.\r\n\r\n-- Description --\r\nThe conformance thresholds are area dependent.\r\nNOTE. Must have separate DQM_Measure description."@en ;
+        skos:inScheme    cap-iacs-parcelcode:DataQualityMeasureTypeIuiEfaValue .
+
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-parcel/code#DataQualityMeasureTypeEtsValue/lpisCriticalDefectConformance>
+        a                cap-iacs-parcel:DataQualityMeasureTypeEtsValue ;
+        rdfs:label       "QE3"@en ;
+        skos:definition  "--Name--\r\nLPIS critical defect conformance\r\n\r\n-- Definition --\r\nAchievement of the acceptance number prescribed for critical defects for the given lot. \r\n\r\n-- Description --\r\nFor conformance the number of critical defects shall not exceed the value of criticalDefectAcceptanceNumber selected in function of the lot size and LQ=2,0.\r\n\r\nMeasure identifier: L_CDCON\r\nName: LPIS critical defect conformance\r\nAlias: QE3\r\nElement name: Conceptual consistency\r\nBasic measure: Error indicator\r\nValue type: Boolean\r\nValue Structure: n.a.\r\n\r\nNOTE. Previously named QE4,10205 LPIS_RP_CRA."@en ;
+        skos:inScheme    cap-iacs-parcelcode:DataQualityMeasureTypeEtsValue .
+
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-parcel/code#EcologicalFocusAreaEquivalentPracticeTypeValue/bufferZonesForHighNatureValueAreasNatura2000OrSimilar>
+        a                cap-iacs-parcel:EcologicalFocusAreaEquivalentPracticeTypeValue ;
+        rdfs:label       "Buffer zones for high nature value areas ( Natura 2000 or similar)"@en ;
+        skos:definition  "--Name--\r\nBuffer zones for high nature value areas\r\n\r\n-- Definition --\r\nValue listed in print III of Annex IX of Regulation (EU) No 1307/2013.\r\n\r\n-- Description --\r\nNatura 2000 or similar."@en ;
+        skos:inScheme    cap-iacs-parcelcode:EcologicalFocusAreaEquivalentPracticeTypeValue .
+
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-parcel/code#LandscapeFeatureValueType/landscapeFeatureTtreesInLine>
+        a                cap-iacs-parcel:LandscapeFeatureValueType ;
+        rdfs:label       "Landscape feature, trees in line"@en ;
+        skos:definition  "--Name--\r\nTrees in line\r\n\r\n-- Definition --\r\nTrees in line in the agricultural area that are traditionally part of good agriculture cropping or utilization practices \r\n\r\n-- Description --\r\nThey may become an EFA element when the crown diameter is minimum 4 meters. The space between the crowns shall not exceed 5 meters. [Art. 45(3)(c) of (EU) R No  639/2014].\r\n\r\nNOTE 1: Member States may include trees recognised by them as valuable landscape features with a crown diameter below 4 meters.\r\n\r\nNOTE 2: When this type of LF is protected under GAEC 7, SMR 3, MS may specify other width based on national requirements.."@en ;
+        skos:inScheme    cap-iacs-parcelcode:LandscapeFeatureValueType .
+
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-parcel/code#InspectionMethodValue/fieldSurvey>
+        a                cap-iacs-parcel:InspectionMethodValue ;
+        rdfs:label       "Field survey"@en ;
+        skos:definition  "--Name--\r\nField survey\r\n\r\n-- Definition --\r\nObservations and measurements necessary for inspection are performed exclusively in the field.\r\n\r\n-- Description --\r\nMeasurements can be performed by any means listed in the common technical specifications (e.g. GNSS, total station, etc.)\r\n\r\nNOTE: In ETS 5.3 the value used to be field inspection."@en ;
+        skos:inScheme    cap-iacs-parcelcode:InspectionMethodValue .
+
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-parcel/code#TestTypeMtsValue/featureTypeCompleteness>
+        a                cap-iacs-parcel:TestTypeMtsValue ;
+        rdfs:label       "Feature type completeness"@en ;
+        skos:definition  "--Name--\r\nFeature type completeness\r\n\r\n--Definition --\r\nCompleteness of the eligibility profile  in terms of feature types as compared to the LCM.\r\n\r\n-- Description --\r\nAll feature type included in the LCM shall be present in the eligibility profile. No one to one relationship  between the corresponding feature types is required. However, rules for schema mapping shall be unambiguous. \r\n\r\nNOTE 1. As best practice, EC services recommend the following solutions:\r\n- one to one mapping between the feature types of the eligibility profile and the LCM\r\n- A feature type in the eligibility profile is a specialisation of a feature type in the LCM.\r\n\r\nNOTE 2. This is a capability test case."@en ;
+        skos:inScheme    cap-iacs-parcelcode:TestTypeMtsValue .
+
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-parcel/code#ProRataCategoryValue/grassland50>
+        a                cap-iacs-parcel:ProRataCategoryValue ;
+        rdfs:label       "Grassland 50 percent"@en ;
+        skos:definition  "--Name--\r\nGrassland 50 percent\r\n\r\n-- Definition --\r\nGrassland  with 50 percent eligibility.\r\n\r\n-- Description --\r\nNOTE. If the rate of eligibility drops below 50%, a careful analysis of the standard deviation of the class RC assessment is due. Below 50% eligibility grasslands should only be in the eligibility profile when the class is very specific and if the scattering of its ineligible features produces a low standard deviation of the RC. Indeed, a 10% standard deviation on 45% eligibility indicates that nearly a quarter of the agricultural land is deemed uncertain."@en ;
+        skos:inScheme    cap-iacs-parcelcode:ProRataCategoryValue .
+
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-parcel/code#TestTypeMtsValue/multiplicity>
+        a                cap-iacs-parcel:TestTypeMtsValue ;
+        rdfs:label       "Multiplicity"@en ;
+        skos:definition  "--Name--\r\nMultiplicity\r\n\r\n--Definition --\r\nNumber of currencies of a property (attribute or association).\r\n\r\n-- Description --\r\nNumber of occurrences shall be exactly those that is specified in the LCM;\r\n- 0: no value appears for the property \r\n- 1: only one value can be provided\r\n-1..*: one or more value may be provided\r\n\r\nNOTE 1. Multiplicities for attributes are indicated after the value type in [brackets]. If No brackets appear the specified multiplicity is 1.\r\n\r\nNOTE 2. Multiplicity for association appears at the ends of the connectors representing the association role. Multiplicity rules shall be read in the direction of navigability (direction of \"arrows\").\r\n\r\nNOTE 3. This is a capability test case."@en ;
+        skos:inScheme    cap-iacs-parcelcode:TestTypeMtsValue .
+
+cap-iacs-parcelcode:SampleSizeValue
+        a                skos:ConceptScheme ;
+        rdfs:label       "List of possible sample size values"@en ;
+        dct:isFormatOf   cap-iacs-parcel:SampleSizeValue ;
+        skos:definition  "--Name--\r\nSample size value\r\n\r\n-- Definition --\r\nList of sample size values applicable for LPISQA.\r\n\r\n-- Description --\r\nThe sample size is selected as function of the lot size and the limiting quality defined in  ISO 2859-2:1985 (Sampling procedures for inspection by attributes, Part 2: Sampling plans indexed by limiting quality (LQ) for isolated lot inspection)."@en .
+
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-parcel/code#EcologicalFocusAreaTypeValue/landscapeFeaturesHedgesWoodedStrips>
+        a                cap-iacs-parcel:EcologicalFocusAreaTypeValue ;
+        rdfs:label       "Landscape features: Hedges/wooded strips"@en ;
+        skos:definition  "--Name--\r\nLF hedges and wooded strips\r\n\r\n-- Definition --\r\nEcological focus area type as defined by Art. 46(2) of (EU) R 1307/2013\r\n\r\n-- Description --\r\nLandscape features: Hedges/wooded strips with a width of up to 10 meters [Art. 45(3)(a) of (EU) R No 639/2014]\r\n\r\nNOTE 1: When  such LF are protected under GAEC 7, SMR 2 and SMR 3, MS may specify other width based on national requirements.\r\n\r\nNOTE 2: This LF, when stable in time, need to be identified in the LPIS in view of checking their retention during OTSC. This identification of cross compliance Landscape Features can be done e.g. by alpha-numerical information (or by delineation) associated to the parcel."@en ;
+        skos:inScheme    cap-iacs-parcelcode:EcologicalFocusAreaTypeValue .
+
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-parcel/code#LotSizeValue/>500000>
+        a                cap-iacs-parcel:LotSizeValue ;
+        rdfs:label       "More then 500000"@en ;
+        skos:definition  "--Name--\r\n-- Definition --\r\nLot size range from 500000 up.\r\n\r\n-- Description --\r\nRange category according to ISO 2859-2:1985."@en ;
+        skos:inScheme    cap-iacs-parcelcode:LotSizeValue .
+
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-parcel/code#HomogeneityTypeValue/elevation>
+        a                cap-iacs-parcel:HomogeneityTypeValue ;
+        rdfs:label       "Elevation"@en ;
+        skos:definition  "--Name--\r\nElevation\r\n\r\n-- Definition --\r\nHomogeneity criteria established on elevation values.\r\n\r\n-- Description --\r\nCriteria that can be derived using digital elevation models for land surface.\r\n\r\nNOTE: the criteria have to be documented in the eligibility profile of the MS/regions, or have to be described in a document dully cited or inserted in the information system."@en ;
+        skos:inScheme    cap-iacs-parcelcode:HomogeneityTypeValue .
+
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-parcel/code#DataQualityMeasureTypeEfaValue/numberOfCriticalDefects>
+        a                cap-iacs-parcel:DataQualityMeasureTypeEfaValue ;
+        rdfs:label       "Number of critical defects"@en ;
+        skos:definition  "--Name--\r\nNumber of critical defects\r\n\r\n-- Definition --\r\nThis is a placeholder only; currently not to be implemented.\r\n\r\nNumber of all critical defects found in course of inspection.\r\n\r\n--Description --\r\nThe scope of this data quality measure is the critical defect property occurring  in course of inspection."@en ;
+        skos:inScheme    cap-iacs-parcelcode:DataQualityMeasureTypeEfaValue .
+
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-parcel/code#DataQualityMeasureTypeIuiValue/itemConformance>
+        a                cap-iacs-parcel:DataQualityMeasureTypeIuiValue ;
+        rdfs:label       "Parcel conformance"@en ;
+        skos:definition  "--Name--\r\nItem conformance\r\n\r\n-- Definition --\r\nConformance statement on the item under inspection.\r\n\r\n-- Description --\r\nThe item under inspection is conforming when no associated feature type is misclassified, it is contamination free or the contaminations found are waivered, and it is conforming in terms of area. The values of classificationCorrectness, waivered and areaConformance shall be true.\r\nNOTE: since the conformance in term of critical defect is evaluated separately, the scope of this measure does not contain critical defects. \r\n\r\nMeasure identifier: I_CON\r\nName: Item conformance\r\nAlias: Parcel conformance\r\nElement name: Domain consistency\r\nBasic measure: Error indicator\r\nValue type: Boolean\r\nValue Structure: n.a."@en ;
+        skos:inScheme    cap-iacs-parcelcode:DataQualityMeasureTypeIuiValue .
+
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-parcel/code#DataQualityMeasureTypeEtsValue/lpisAreaAccuracyConformance>
+        a                cap-iacs-parcel:DataQualityMeasureTypeEtsValue ;
+        rdfs:label       "QE1 confromance"@en ;
+        skos:definition  "--Name--\r\nLPIS area accuracy conformance\r\n\r\n-- Definition --\r\nAssessment of correct quantification of the maximum eligible area according to EU 640/2014 Art. 6.1(a). \r\n\r\n-- Description --\r\nConformance statement on area quantification. The threshold is +/- 2%.\r\n\r\nMeasure identifier: L_RACON\r\nName: LPIS area accuracy correctness\r\nAlias: QE1 conformance\r\nElement name: Conceptual consistency\r\nBasic measure: Error indicator\r\nValue type: Boolean\r\nValue Structure: n.a.\r\n\r\nNOTE. Previously named: QE 1A"@en ;
+        skos:inScheme    cap-iacs-parcelcode:DataQualityMeasureTypeEtsValue .
+
+cap-iacs-parcelcode:LimitingQualityValue
+        a                skos:ConceptScheme ;
+        rdfs:label       "List of possible limiting quality values"@en ;
+        dct:isFormatOf   cap-iacs-parcel:LimitingQualityValue ;
+        skos:definition  "--Name--\r\nLimiting quality value\r\n\r\n-- Definition --\r\nList of limiting quality values applicable in LPISQA.\r\n\r\n-- Description --\r\nLimiting quality values are defined by ISO 2859-2:1985."@en .
+
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-parcel/code#DataQualityMeasureValueStructureValue/set>
+        a                cap-iacs-parcel:DataQualityMeasureValueStructureValue ;
+        rdfs:label       "Set"@en ;
+        skos:definition  "--Name--\r\nSet\r\n\r\n--Definition--\r\nUnordered collection of related items (objects or values) with no repetition (ISO 19107:2003).\r\n\r\n--Description--\r\nNOTE: Currently, this type is not being used in LPISQA."@en ;
+        skos:inScheme    cap-iacs-parcelcode:DataQualityMeasureValueStructureValue .
+
+cap-iacs-parcelcode:LandscapeFeatureValueType
+        a                skos:ConceptScheme ;
+        rdfs:label       "List of landscape features"@en ;
+        dct:isFormatOf   cap-iacs-parcel:LandscapeFeatureValueType ;
+        skos:definition  "--Name--\r\nLandscape feature value type\r\n\r\n-- Definition --\r\nTypes of landscape features.\r\n\r\n-- Description --\r\nMS shall decide that one or more values of this code list  are considered to be landscape feature. The code list can be extended."@en .
+
+cap-iacs-parcelcode:TechnicalReasonValue
+        a                skos:ConceptScheme ;
+        rdfs:label       "List of possible technical reason values"@en ;
+        dct:isFormatOf   cap-iacs-parcel:TechnicalReasonValue ;
+        skos:definition  "--Name--\r\nTechnical reason value\r\n\r\n--Definition --\r\nList of the technical reasons.\r\n\r\n--Description--\r\nList of the causes leading to non-conformance of items under inspection."@en .
+
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-parcel/code#EcologicalFocusAreaEquivalentPracticeTypeValue/uncultivatedBufferStripsAndFieldMargins>
+        a                cap-iacs-parcel:EcologicalFocusAreaEquivalentPracticeTypeValue ;
+        rdfs:label       "Uncultivated buffer strips and field margins"@en ;
+        skos:definition  "--Name--\r\nUncultivated buffer strips and field margins\r\n\r\n-- Definition --\r\nValue listed in print III of Annex IX of Regulation (EU) No 1307/2013.\r\n\r\n-- Description --\r\nItem description."@en ;
+        skos:inScheme    cap-iacs-parcelcode:EcologicalFocusAreaEquivalentPracticeTypeValue .
+
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-parcel/code#DataQualityMeasureNameValue/areaDifferenceCorrectness>
+        a                cap-iacs-parcel:DataQualityMeasureNameValue ;
+        rdfs:label       "I_ADC"@en ;
+        skos:definition  "-- Description --\r\nFor definition and description see the corresponding value in DataQualityMeasureTypeIuiValue code list."@en ;
+        skos:inScheme    cap-iacs-parcelcode:DataQualityMeasureNameValue .
+
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-parcel/code#SkippingReasonTypeValue/errorInScope>
+        a                cap-iacs-parcel:SkippingReasonTypeValue ;
+        rdfs:label       "Extra parcel due to error in the scope"@en ;
+        skos:definition  "--Name--\r\nError in scope\r\n\r\n-- Definition --\r\nSystematic error in the scope of the population that has not been discovered at the moment of submitting the LPIS population for sampling.\r\n\r\n-- Description --\r\nThe population submitted is complete, but it contains extra parcels that are not subject to inspection due to an erroneous query that can be easily reproduced/verified.\r\n\r\nNOTE: In DTS 5.3 the value was erroneousScopingS1. The corresponding coded value was S1."@en ;
+        skos:inScheme    cap-iacs-parcelcode:SkippingReasonTypeValue .
+
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-parcel/code#HomogeneityTypeValue/naturalArea>
+        a                cap-iacs-parcel:HomogeneityTypeValue ;
+        rdfs:label       "Natural area"@en ;
+        skos:definition  "--Name--\r\nNatural area\r\n\r\n-- Definition --\r\nNatural area type according to objective criteria\r\n\r\n-- Description --\r\nNatural area types shall be defined based on objective criteria, for example:\r\n-bio-geographical regions,\r\n-habitats and biotopes,\r\n-species distribution,\r\n-climate zones,\r\n-homogeneous geology,\r\n-natural risk zones,\r\n-protected sites (Natura 2000),\r\n-river basin management, etc.\r\n\r\nNOTE: the applicable values of natural area hall be documented in the eligibility profile of the MS/regions, and have to be described in a document dully cited or inserted in the information system.\r\n\r\nEXAMPLE:  http://inspire.ec.europa.eu/applicationschema/ provides the list of INSPIRE  data themes (applications schemas) that may be used for selecting homogeneity criteria."@en ;
+        skos:inScheme    cap-iacs-parcelcode:HomogeneityTypeValue .
+
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-parcel/code#DataQualityMeasureTypeIuiValue/areaDifferenceCorrectness>
+        a                cap-iacs-parcel:DataQualityMeasureTypeIuiValue ;
+        rdfs:label       "Area difference correctness"@en ;
+        skos:definition  "--Name--\r\nArea difference correctness\r\n\r\n-- Definition --\r\nDifference between eligible recorded area and observed area.\r\n\r\n-- Description --\r\nMeasure identifier: I_ADC\r\nName: Area difference correctness\r\nAlias: Area difference accuracy\r\nElement name: Relative  or internal accuracy\r\nValue type: Measure\r\nValue Structure: n.a.\r\n\r\nNOTE 1: This measure is applicable for parcels >10000 sq.m.\r\n\r\nNOTE 2: Previously named: RP conformance (area purity) v2, 10102 RP_CNF."@en ;
+        skos:inScheme    cap-iacs-parcelcode:DataQualityMeasureTypeIuiValue .
+
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-parcel/code#CriticalDefectTypeEfaValue/totalAbsanceOfEligibleTypes>
+        a                cap-iacs-parcel:CriticalDefectTypeEfaValue ;
+        rdfs:label       "Total absance of eligible types"@en ;
+        skos:definition  "--Name--\r\nTotal absence of eligible types\r\n\r\n-- Definition --\r\nThis is a placeholder only; currently not to be implemented.\r\n\r\n-- Description --\r\nTotal absence of eligible types."@en ;
+        skos:inScheme    cap-iacs-parcelcode:CriticalDefectTypeEfaValue .
+
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-parcel/code#DataQualityMeasureTypeEtsValue/lpisItemConformance>
+        a                cap-iacs-parcel:DataQualityMeasureTypeEtsValue ;
+        rdfs:label       "QE2a"@en ;
+        skos:definition  "--Name--\r\nLPIS item conformnace\r\n\r\n-- Definition --\r\nAchievement of the value of the acceptance number prescribed for the area based quality measures.\r\n\r\n-- Description --\r\nConformance statement whether the number of non-conforming item has exceeded the acceptance number.\r\n  \r\nMeasure identifier: L_ICON\r\nName: LPIS item conformance\r\nAlias: QE2a\r\nElement name: Conceptual consistency\r\nBasic measure: Error indicator\r\nValue type: Boolean\r\nValue Structure: n.a.\r\n\r\nNOTE. Previously known as number of non-conforming reference parcels in LPIS, or 10202 LPIS_RP_NEA"@en ;
+        skos:inScheme    cap-iacs-parcelcode:DataQualityMeasureTypeEtsValue .
+
+cap-iacs-parcelcode:AcceptanceNumberValue
+        a                skos:ConceptScheme ;
+        rdfs:label       "List of possible acceptance values"@en ;
+        dct:isFormatOf   cap-iacs-parcel:AcceptanceNumberValue ;
+        skos:definition  "--Name--\r\nAcceptance number value\r\n\r\n-- Definition --\r\nList of possible acceptance values.\r\n\r\n-- Description --\r\nAcceptance values are selected based on the sample size and the limiting quality values defined in ISO 2859-2:1985 Sampling procedures for inspection by attributes, Part 2: Sampling plans indexed by limiting quality (LQ) for isolated lot inspection."@en .
+
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-parcel/code#TestTypeMtsValue/schemaDefinition>
+        a                cap-iacs-parcel:TestTypeMtsValue ;
+        rdfs:label       "Schema definition"@en ;
+        skos:definition  "--Name--\r\nSchema definition test\r\n\r\n--Definition--\r\nCompleteness of the documentation of the eligibility profile.\r\n\r\n--Description--\r\nAll implementation choices (differences of the eligibility profile as compared to the LCM) shall be thoroughly  documented. In particular, extended code lists, and constraints  shall be clearly documented and communicated to various actors (OTSC inspectors, auditors, EC services).\r\n\r\nNOTE: This is a basic test case."@en ;
+        skos:inScheme    cap-iacs-parcelcode:TestTypeMtsValue .
+
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-parcel/code#EcologicalFocusAreaTypeValue/landLyingFallow>
+        a                cap-iacs-parcel:EcologicalFocusAreaTypeValue ;
+        rdfs:label       "Land lying fallow"@en ;
+        skos:definition  "--Name--\r\nLand laying fallow\r\n\r\n-- Definition --\r\nLand laying fallow for application of ecological focus area type selected under Art. 46(2) of (EU) R 1307/2013.\r\n\r\n-- Description --\r\nOn land lying fallow there shall be no agricultural production. By way of derogation from Article 4(1)(h) of ( EU) R No 639/2014, land lying fallow for the purpose of fulfilling the ecological focus area  for more than five years shall remain arable land."@en ;
+        skos:inScheme    cap-iacs-parcelcode:EcologicalFocusAreaTypeValue .
+
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-parcel/code#DataQualityMeasureNameValue/misclassificationMatrix>
+        a                cap-iacs-parcel:DataQualityMeasureNameValue ;
+        rdfs:label       "L_MCM"@en ;
+        skos:definition  "-- Description --\r\nFor definition and description see the corresponding value in DataQualoityMeasureTypeEtsValue code list."@en ;
+        skos:inScheme    cap-iacs-parcelcode:DataQualityMeasureNameValue .
+
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-parcel/code#LandscapeFeatureValueType/landscapeFeatureGroupOfTrees>
+        a                cap-iacs-parcel:LandscapeFeatureValueType ;
+        rdfs:label       "Landscape feature, group of trees/Field copses"@en ;
+        skos:definition  "--Name--\r\nGroup of trees\r\n\r\n-- Definition --\r\nGroup of trees in the agricultural area that is traditionally part of good agriculture cropping or utilization practices \r\n\r\n-- Description --\r\nGroup of trees may become an EFA element where trees are connected by overlapping crown cover, and field copses of maximum 0.3 ha in both cases. [Art. 45(3)(d) of (EU) R No 639/2014]."@en ;
+        skos:inScheme    cap-iacs-parcelcode:LandscapeFeatureValueType .

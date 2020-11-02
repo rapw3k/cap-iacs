@@ -1,0 +1,594 @@
+@prefix cap-iacs-control: <http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix gsp:   <http://www.opengis.net/ont/geosparql#> .
+@prefix cap-iacs-aid: <http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix om:    <http://www.ontology-of-units-of-measure.org/resource/om-2/> .
+@prefix cap-iacs-base: <http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-base#> .
+
+cap-iacs-control:determinedEntitlementArea
+        a                owl:DatatypeProperty ;
+        rdfs:label       "Entitlements determined"@en ;
+        rdfs:range       om:Measure ;
+        skos:definition  "-- Definition --\r\nEntitlement area determined.\r\n-- Description --\r\nAlphanumerical value. Mandatory for SPS only. Subject for enabling of entitlements (Area) on all area declared."@en .
+
+cap-iacs-control:onTheSpotCheckDate
+        a                owl:DatatypeProperty ;
+        rdfs:label       "On-the-spot check date"@en ;
+        rdfs:range       xsd:dateTime ;
+        skos:definition  "On-the-spot check date\r\n\r\nDate of when on-the-spot check was performed.\r\n\r\nNOTE 1\r\nAccording to Art. 59(4) of R 1306/2013 and Art. 26(1) of R 809/2014 when appropriate agricultural aid and rural development support shall be carried out at the same time.\r\n\r\nNOTE 2\r\nOn-the-spot checks should be carried out in the calendar year in which the relevant aid applications and payment claims have been submitted [Preamble (71) of R 809/2014].\r\n\r\nNOTE 3\r\nWhere certain eligibility criteria, commitments and other obligations can only be checked during a specific time period, the on-the-spot checks may require additional visits at a later date [Art. 26(4) of R 809/2014]."@en .
+
+cap-iacs-control:animalSchemeMeasureConformance
+        a                owl:ObjectProperty ;
+        rdfs:label       "Evidence received from other services, bodies or organisations to verify the compliance with the eligibility commitments"@en ;
+        rdfs:range       cap-iacs-base:ConformanceStatementValue ;
+        skos:definition  "-- Definition --\r\nEvidence received from other services, bodies or organisations to verify the compliance with the eligibility commitments.\r\n-- Description --\r\nIn respect of animal aid schemes and animal-related support measures, Member States may, where appropriate, make use of evidence received from other services, bodies or organisations to verify the compliance with the eligibility criteria, commitments and other obligations, provided that the service, body or organisation in question is operating to a standard sufficient to control such compliance.\r\nNOTE. If conformanceStatementAnimalSchemeMeasure = 1, then nonStructuredEvidenceDocument<>Null and or nonStructuredEvidenceCitation<>Null."@en .
+
+cap-iacs-control:riskType
+        a                owl:ObjectProperty ;
+        rdfs:range       cap-iacs-control:RiskTypeValue ;
+        skos:definition  "Risk type\r\n\r\nType of the risk established by the competent authority for which the application has been selected for on-the-spot check.\r\n\r\nThe competent authority should establish the risk factors targeting the areas where the risk of errors is the highest. To ensure relevant and efficient risk analysis, the effectiveness of the risk criteria should be assessed and updated on an annual basis taking into account the relevance of each risk criterion, comparing the results of randomly and risk-based selected samples, the specific situation in the Member States and the nature of the non-compliance (Preamble (30) of R (EU) No 809/2014)\r\n\r\nNOTE\r\nAccording to Art. 34(6) of Regulation (EU) No 809/2014 the competent authority shall keep records of the reasons for the selection of each beneficiary for an on-the-spot check. The inspector carrying out the on-the-spot check shall be informed accordingly prior to the commencement of the on-the-spot check."@en .
+
+cap-iacs-control:SamplingStratum
+        a                owl:Class ;
+        rdfs:subClassOf  gsp:Feature ;
+        rdfs:subClassOf  [ a                   owl:Restriction ;
+                           owl:minCardinality  "1"^^xsd:nonNegativeInteger ;
+                           owl:onProperty      cap-iacs-control:samplingStrategyType
+                         ] ;
+        rdfs:subClassOf  [ a                   owl:Restriction ;
+                           owl:maxCardinality  "2"^^xsd:nonNegativeInteger ;
+                           owl:onProperty      cap-iacs-control:samplingStrategyType
+                         ] ;
+        rdfs:subClassOf  [ a                   owl:Restriction ;
+                           owl:maxCardinality  "1"^^xsd:nonNegativeInteger ;
+                           owl:onProperty      cap-iacs-control:samplingStratumName
+                         ] ;
+        rdfs:subClassOf  [ a                   owl:Restriction ;
+                           owl:maxCardinality  "1"^^xsd:nonNegativeInteger ;
+                           owl:onProperty      cap-iacs-control:samplingStrategyCitation
+                         ] ;
+        rdfs:subClassOf  [ a                   owl:Restriction ;
+                           owl:maxCardinality  "2"^^xsd:nonNegativeInteger ;
+                           owl:onProperty      cap-iacs-control:suplementaryControlRate
+                         ] ;
+        rdfs:subClassOf  [ a                   owl:Restriction ;
+                           owl:minCardinality  "1"^^xsd:nonNegativeInteger ;
+                           owl:onProperty      cap-iacs-control:detailsOfApplications
+                         ] ;
+        rdfs:subClassOf  [ a                   owl:Restriction ;
+                           owl:maxCardinality  "1"^^xsd:nonNegativeInteger ;
+                           owl:onProperty      cap-iacs-control:samplingStrategyDescription
+                         ] ;
+        rdfs:subClassOf  [ a                owl:Restriction ;
+                           owl:cardinality  "1"^^xsd:nonNegativeInteger ;
+                           owl:onProperty   cap-iacs-control:metadata
+                         ] ;
+        rdfs:subClassOf  [ a                owl:Restriction ;
+                           owl:cardinality  "1"^^xsd:nonNegativeInteger ;
+                           owl:onProperty   cap-iacs-control:samplingStratumId
+                         ] ;
+        skos:definition  "Sampling stratum\r\n\r\nThe control sample in respect of the on-the-spot checks of the area-related aid schemes should be made on the basis of a stratified sampling method in order to keep the administrative burden in proportion and the number of beneficiaries to be checked on-the-spot to a reasonable level [Preamble (30) of R  (EU) No 809/2014].\r\n\r\nNOTE 1\r\nSampling stratum can be applied both to random and risk based sampling.\r\n\r\nNOTE 2\r\nControl zones for CwRS can be regarded as strata (data clusters) based on geographic location. Such zones can be selected randomly or based on risk analysis.\r\n\r\nNOTE 3\r\nA sample may consist of one (unique) or more stratum."@en .
+
+cap-iacs-control:suplementaryControlRate
+        a                owl:DatatypeProperty ;
+        rdfs:range       xsd:integer ;
+        skos:definition  "Supplementary control rate\r\n\r\nThe control rates prescribed by Art. 30 and Art.31 of Regulation (EU) 809/2014 should be increased in two cases:\r\n\r\n1. In sense of Art. 31(3) of R (EU) 809/2014 when instances of EFA are not included in LPIS, the control rate for the following green payments have to be increased by 5 % for the following beneficiaries:\r\n\t- beneficiaries required to observe greening practices\r\n\t- beneficiaries observing greening by using national/regional certification schemes\r\n\t- beneficiaries participating in collective implementation\r\n\t- beneficiaries participating in regional implementation\r\n\r\n2. In sense of Art. 35 of R(EU) 809/2014  when the OTSC reveal any significant non-compliance in a (part of a) region or a specific aid scheme or support measure."@en .
+
+cap-iacs-control:ControlRateGroupAnimalAidSchemaValue
+        a                owl:Class ;
+        rdfs:label       "List of control rate groups for animal aid schemas"@en ;
+        rdfs:subClassOf  skos:Concept ;
+        skos:definition  "Control Rate Group Animal Aid Scheme Value\r\n\r\nList of control rate groups for animal aid schemas.\r\n\r\nNOTE\r\nCurrently placeholder only."@en .
+
+cap-iacs-control:surveyDetailsForMeasurements
+        a           owl:ObjectProperty ;
+        rdfs:range  cap-iacs-control:InspectorsSurvey .
+
+cap-iacs-control:administrativeCheckDetailsForCrossCheck
+        a           owl:ObjectProperty ;
+        rdfs:range  cap-iacs-control:CrossCheck .
+
+cap-iacs-control:InspectorsSurvey
+        a                owl:Class ;
+        rdfs:label       "Surveys of the inspectors"@en ;
+        rdfs:subClassOf  gsp:Feature ;
+        rdfs:subClassOf  [ a                   owl:Restriction ;
+                           owl:minCardinality  "1"^^xsd:nonNegativeInteger ;
+                           owl:onProperty      cap-iacs-control:surveyDetailsForMeasurements
+                         ] ;
+        rdfs:subClassOf  [ a                owl:Restriction ;
+                           owl:cardinality  "1"^^xsd:nonNegativeInteger ;
+                           owl:onProperty   cap-iacs-control:inspectorsMeasurementId
+                         ] ;
+        rdfs:subClassOf  [ a                   owl:Restriction ;
+                           owl:maxCardinality  "1"^^xsd:nonNegativeInteger ;
+                           owl:onProperty      cap-iacs-control:estimatedAccuracy
+                         ] ;
+        rdfs:subClassOf  [ a                owl:Restriction ;
+                           owl:cardinality  "1"^^xsd:nonNegativeInteger ;
+                           owl:onProperty   cap-iacs-control:surveyMethodType
+                         ] ;
+        rdfs:subClassOf  [ a                owl:Restriction ;
+                           owl:cardinality  "1"^^xsd:nonNegativeInteger ;
+                           owl:onProperty   cap-iacs-control:inspectorsSurveyObjectType
+                         ] ;
+        rdfs:subClassOf  [ a                owl:Restriction ;
+                           owl:cardinality  "1"^^xsd:nonNegativeInteger ;
+                           owl:onProperty   cap-iacs-control:measurementsWithinSurveyDetails
+                         ] ;
+        rdfs:subClassOf  [ a                owl:Restriction ;
+                           owl:cardinality  "1"^^xsd:nonNegativeInteger ;
+                           owl:onProperty   cap-iacs-control:geometry
+                         ] ;
+        rdfs:subClassOf  [ a                   owl:Restriction ;
+                           owl:maxCardinality  "1"^^xsd:nonNegativeInteger ;
+                           owl:onProperty      cap-iacs-control:observedPerimeter
+                         ] ;
+        skos:definition  "Inspectors Survey\r\n\r\nFeature type that stores the properties of inspectors' survey (observations and measurements.)"@en .
+
+cap-iacs-control:otscSamplingPlan
+        a                owl:ObjectProperty ;
+        rdfs:range       cap-iacs-base:SupplementaryDocument ;
+        skos:definition  "OTSC sampling plan\r\n\r\nArt.(72)(2) of R (EU) 1306/2013 requires the MS to draw up a sampling plan of agricultural holdings and/or beneficiaries for the purpose of OTSC."@en .
+
+cap-iacs-control:inspectorsMeasurementId
+        a                owl:DatatypeProperty ;
+        rdfs:label       "Unique thematic ID of inspector's survey"@en ;
+        rdfs:range       xsd:string ;
+        skos:definition  "Inspectors Measurement ID\r\n\r\nUnique thematic ID of inspectors' measurement within a survey. It is a thematic identifier at national level, generally the full national code of the inspector's measurement within a survey.\r\n\r\nNOTE\r\nObject (real world phenomena) description. It may be the code of object measured."@en .
+
+cap-iacs-control:SampleTypeValue
+        a                owl:Class ;
+        rdfs:subClassOf  skos:Concept ;
+        skos:definition  "Sample Type value\r\n\r\nThe sample type property shall be attributed to each sampled item (application). One item can be sampled to one or more payment/support schemes. \r\n\r\nNOTE\r\nThe categories of sample type values have to support the traceability of the sampling cascade. This is the reason for distinguishing the initial and the top-up samples for BPS/SAPS."@en .
+
+cap-iacs-control:samplingStratumId
+        a                owl:DatatypeProperty ;
+        rdfs:range       xsd:string ;
+        skos:definition  "Sampling stratum ID\r\n\r\nUnique thematic identifier (full national code) of the sampling stratum."@en .
+
+cap-iacs-control:CrossCheck
+        a                owl:Class ;
+        rdfs:label       "Cross-checks"@en ;
+        rdfs:subClassOf  gsp:Feature ;
+        rdfs:subClassOf  [ a                owl:Restriction ;
+                           owl:cardinality  "1"^^xsd:nonNegativeInteger ;
+                           owl:onProperty   cap-iacs-control:conformanceStatement
+                         ] ;
+        rdfs:subClassOf  [ a                owl:Restriction ;
+                           owl:cardinality  "1"^^xsd:nonNegativeInteger ;
+                           owl:onProperty   cap-iacs-control:crossCheckType
+                         ] ;
+        rdfs:subClassOf  [ a                owl:Restriction ;
+                           owl:cardinality  "1"^^xsd:nonNegativeInteger ;
+                           owl:onProperty   cap-iacs-control:determinedEntitlementArea
+                         ] ;
+        rdfs:subClassOf  [ a                owl:Restriction ;
+                           owl:cardinality  "1"^^xsd:nonNegativeInteger ;
+                           owl:onProperty   cap-iacs-control:determinedArea
+                         ] ;
+        rdfs:subClassOf  [ a                owl:Restriction ;
+                           owl:cardinality  "1"^^xsd:nonNegativeInteger ;
+                           owl:onProperty   cap-iacs-control:detailsOfCrossChecksForAdministrativeCheck
+                         ] ;
+        skos:definition  "-- Definition --\r\nCross-checks.\r\n-- Description --\r\nWhere appropriate, the administrative checks shall include cross-checks."@en .
+
+cap-iacs-control:RiskTypeValue
+        a                owl:Class ;
+        rdfs:subClassOf  skos:Concept ;
+        skos:definition  "Risk type value\r\n\r\nPreamble (33) of R (EU) 809/2014 requires that the competent authority should establish the risk factors targeting the areas where the risk of errors is the highest.\r\n\r\nNOTE\r\nRisk criteria should be assessed and updated on an annual basis taking into account the relevance of each risk criterion, comparing the results of randomly and risk-based selected samples, the specific situation in the Member States and the nature of the non-compliance."@en .
+
+cap-iacs-control:otscItemDetailsWithinTheSample
+        a           owl:ObjectProperty ;
+        rdfs:range  cap-iacs-control:OtscItem .
+
+cap-iacs-control:samplingStrategyType
+        a                owl:ObjectProperty ;
+        rdfs:range       cap-iacs-control:SamplingStrategyTypeValue ;
+        skos:definition  "Sampling Strategy Type\r\n\r\nRandom or risk based selection in sense of Preamble (68) and Art. 34(5) of R 809/2014.\r\n\r\nSome possible narrower values are listed in the SamplingStrategyTypeValue code list. Specifying narrower categories of risk based and random sampling is justified to provide input for the OTSC report and risk analysis in the next campaign year."@en .
+
+cap-iacs-control:measurementsWithinSurveyDetails
+        a           owl:ObjectProperty ;
+        rdfs:range  cap-iacs-control:InspectorsSurvey .
+
+cap-iacs-control:OtscItem
+        a                owl:Class ;
+        rdfs:label       "Sample"@en ;
+        rdfs:subClassOf  gsp:Feature ;
+        rdfs:subClassOf  [ a                   owl:Restriction ;
+                           owl:maxCardinality  "1"^^xsd:nonNegativeInteger ;
+                           owl:onProperty      cap-iacs-control:otscItemDetailsForReconversion
+                         ] ;
+        rdfs:subClassOf  [ a                owl:Restriction ;
+                           owl:cardinality  "1"^^xsd:nonNegativeInteger ;
+                           owl:onProperty   cap-iacs-control:detailsOfOtscItems
+                         ] ;
+        rdfs:subClassOf  [ a                   owl:Restriction ;
+                           owl:minCardinality  "1"^^xsd:nonNegativeInteger ;
+                           owl:onProperty      cap-iacs-control:sampleDetailsForOtscItem
+                         ] ;
+        rdfs:subClassOf  [ a                   owl:Restriction ;
+                           owl:minCardinality  "1"^^xsd:nonNegativeInteger ;
+                           owl:onProperty      cap-iacs-control:itemDetailsForOnTheSpotChecks
+                         ] ;
+        rdfs:subClassOf  [ a                owl:Restriction ;
+                           owl:cardinality  "1"^^xsd:nonNegativeInteger ;
+                           owl:onProperty   cap-iacs-control:subjectOfMultipleVisits
+                         ] ;
+        rdfs:subClassOf  [ a                owl:Restriction ;
+                           owl:cardinality  "1"^^xsd:nonNegativeInteger ;
+                           owl:onProperty   cap-iacs-control:itemDetailsForAdministrativeCheck
+                         ] ;
+        skos:definition  "OTSC item\r\n\r\nApplication sampled for on-the-spot check of one or more support or payment scheme.\r\n\r\nNOTE\r\nApplications or applicants found not to be admissible or not eligible for payment at the time of submission or after administrative checks shall not form part of the control population [Art. 34(1) of R (EU) 809/2014]."@en .
+
+cap-iacs-control:onTheSpotCheckDetailsForCrossCheck
+        a           owl:ObjectProperty ;
+        rdfs:range  cap-iacs-control:CrossCheck .
+
+cap-iacs-control:observedPerimeter
+        a                owl:DatatypeProperty ;
+        rdfs:label       "Perimeter observed after on-the-spot check"@en ;
+        rdfs:range       om:Measure ;
+        skos:definition  "Observed perimeter\r\n\r\nPerimeter observed as results from the on-the-spot check measurement.\r\n\r\nNOTE\r\nArea perimeter calculated based on the coordinates of the boundary points. Polygon (GM_Surface) perimeter (may be used for tolerance calculation)."@en .
+
+cap-iacs-control:nonStructuredEvidenceCitation
+        a                owl:ObjectProperty ;
+        rdfs:label       "Non-structured evidence - citation"@en ;
+        rdfs:range       cap-iacs-base:SupplementaryDocumentCitation ;
+        skos:definition  "-- Definition --\r\nAny citation that supports the administrative check.\r\n-- Description --\r\nIn respect of animal aid schemes and animal-related support measures, Member States may, where appropriate, make use of evidence received from other services, bodies or organisations to verify the compliance with the eligibility criteria, commitments and other obligations, provided that the service, body or organisation in question is operating to a standard sufficient to control such compliance.\r\nNOTE. If the aid application or payment claim is complete and submitted within the relevant time-limit and, where applicable, the supporting documents (that prove eligibility) must be submitted."@en .
+
+cap-iacs-control:eligibilityCriteriaFulfilled
+        a                owl:ObjectProperty ;
+        rdfs:label       "Final entitlement area determined after all administrative checks"@en ;
+        rdfs:range       cap-iacs-base:ConformanceStatementValue ;
+        skos:definition  "-- Definition --\r\nFinal entitlement area determined after all administrative checks.\r\n-- Description --\r\nIf AdministrativeCheck.determinedEntitlementArea<>Application.declaredEntitlementArea Then\r\nAdministrativeCheck.determinedEntitlementArea = AdministrativeCheck.determinedEntitlementArea Else\r\nAdministrativeCheck.determinedEntitlementArea = Application.declaredEntitlementArea\r\nEndIf\r\n\r\nNOTE. Mandatory for SPS only. Subject for enabling of entitlements (Area) on all area declared (declaredEntitlementArea <=declaredArea)."@en .
+
+cap-iacs-control:OtscSample
+        a                owl:Class ;
+        rdfs:subClassOf  gsp:Feature ;
+        rdfs:subClassOf  [ a                owl:Restriction ;
+                           owl:cardinality  "1"^^xsd:nonNegativeInteger ;
+                           owl:onProperty   cap-iacs-control:otscSamplingPlan
+                         ] ;
+        rdfs:subClassOf  [ a                   owl:Restriction ;
+                           owl:minCardinality  "1"^^xsd:nonNegativeInteger ;
+                           owl:onProperty      cap-iacs-control:otscItemDetailsWithinTheSample
+                         ] ;
+        rdfs:subClassOf  [ a                   owl:Restriction ;
+                           owl:maxCardinality  "1"^^xsd:nonNegativeInteger ;
+                           owl:onProperty      cap-iacs-control:maximumRiskBasedSampleSize
+                         ] ;
+        rdfs:subClassOf  [ a                owl:Restriction ;
+                           owl:cardinality  "1"^^xsd:nonNegativeInteger ;
+                           owl:onProperty   cap-iacs-control:controlRateType
+                         ] ;
+        rdfs:subClassOf  [ a                owl:Restriction ;
+                           owl:cardinality  "1"^^xsd:nonNegativeInteger ;
+                           owl:onProperty   cap-iacs-control:metadata
+                         ] ;
+        rdfs:subClassOf  [ a                owl:Restriction ;
+                           owl:cardinality  "1"^^xsd:nonNegativeInteger ;
+                           owl:onProperty   cap-iacs-control:otscReport
+                         ] ;
+        rdfs:subClassOf  [ a                owl:Restriction ;
+                           owl:cardinality  "1"^^xsd:nonNegativeInteger ;
+                           owl:onProperty   cap-iacs-control:minimumSampleSize
+                         ] ;
+        rdfs:subClassOf  [ a                   owl:Restriction ;
+                           owl:maxCardinality  "1"^^xsd:nonNegativeInteger ;
+                           owl:onProperty      cap-iacs-control:minimumRiskBasedSampleSize
+                         ] ;
+        rdfs:subClassOf  [ a                   owl:Restriction ;
+                           owl:minCardinality  "1"^^xsd:nonNegativeInteger ;
+                           owl:onProperty      cap-iacs-control:otscSampleDetailsforStratum
+                         ] ;
+        skos:definition  "OTSC sample\r\n\r\nSample from the entire population of applicants drawn by the authority responsible for the on-the-spot checks [Art. 59 (2) of R 1306/2013].\r\n\r\nNOTE 1\r\nIn respect of certain rural development measures the on-the-spot check should cover also non-agricultural land. \r\n\r\nNOTE 2\r\nIn the interests of facilitating the implementation of the integrated system, it should be permitted to limit the actual measurement of the agricultural parcels to a random sample of 50 % of the agricultural parcels declared [Preamble 38 of R 809/2014]."@en .
+
+cap-iacs-control:surveyMethodType
+        a                owl:ObjectProperty ;
+        rdfs:label       "Type of survey"@en ;
+        rdfs:range       cap-iacs-control:SurveyMethodValue ;
+        skos:definition  "Survey method type\r\n\r\nList of survey types in sense of Art. 74(3) of R 1306/2013.\r\nMember States may use remote sensing and field measurements comprising Global Navigation Satellite System (GNSS) techniques as a means of carrying out on-the-spot checks on agricultural parcels."@en .
+
+cap-iacs-control:samplingStrategyCitation
+        a                owl:ObjectProperty ;
+        rdfs:range       owl:Class ;
+        skos:definition  "Sampling strategy citation\r\n\r\nReference to the description of a well-established sampling strategy/method.\r\n\r\nNOTE\r\nCitation can be void, when detailed description of the method is documented as property of the stratum."@en .
+
+cap-iacs-control:detailsOfApplications
+        a           owl:ObjectProperty ;
+        rdfs:range  cap-iacs-aid:Application .
+
+cap-iacs-control:detailsOfOtscItems
+        a           owl:ObjectProperty ;
+        rdfs:range  cap-iacs-aid:Application .
+
+cap-iacs-control:minimumSampleSize
+        a                owl:DatatypeProperty ;
+        rdfs:range       xsd:integer ;
+        skos:definition  "Minimum sample size\r\n\r\nPopulation belonging to the sample selected according to the control rate.\r\n\r\nNOTE\r\nWhile the control rate is given in%, the minimum sample size indicates the minimal number of items in the sample. In case of systematic sampling the correctness of the minimum sample size has to be verified at the final deadline for applications."@en .
+
+cap-iacs-control:nonStructuredEvidenceDocument
+        a                owl:ObjectProperty ;
+        rdfs:label       "Non-structured evidence - document"@en ;
+        rdfs:range       cap-iacs-base:SupplementaryDocument ;
+        skos:definition  "-- Definition --\r\nAny document that supports the administrative check.\r\n-- Description --\r\nIn respect of animal aid schemes and animal-related support measures, Member States may, where appropriate, make use of evidence received from other services, bodies or organisations to verify the compliance with the eligibility criteria, commitments and other obligations, provided that the service, body or organisation in question is operating to a standard sufficient to control such compliance.\r\nNOTE. If the aid application or payment claim is complete and submitted within the relevant time-limit and, where applicable, the supporting documents (that prove eligibility) must be submitted."@en .
+
+cap-iacs-control:otscReport
+        a                owl:ObjectProperty ;
+        rdfs:range       cap-iacs-base:SupplementaryDocument ;
+        skos:definition  "OTSC report\r\n\r\nAccording to Art. 24(3) of R 809/2014 the results of the [...OTSC] shall be assessed to establish whether any problems encountered could in general entail a risk for other similar operations, beneficiaries or other bodies. The assessment shall also identify the causes of such situations, any further examination which may be required and necessary corrective and preventive actions. This analysis is an important input for risk analysis of the next campaign year."@en .
+
+cap-iacs-control:crossCheckType
+        a                owl:ObjectProperty ;
+        rdfs:label       "Cross-check type"@en ;
+        rdfs:range       cap-iacs-control:CrossCheckTypeValue ;
+        skos:definition  "-- Definition --\r\nCross-check type.\r\n-- Description --\r\nCross-check type."@en .
+
+cap-iacs-control:estimatedAccuracy
+        a                owl:DatatypeProperty ;
+        rdfs:label       "Estimated absolute positional accuracy "@en ;
+        rdfs:range       xsd:double ;
+        skos:definition  "Estimated Positional Accuracy\r\n\r\nEstimated absolute positional accuracy of the object measured in the used coordinate reference system. Absolute positional accuracy is the mean value of the positional uncertainties for a set of positions, where the positional uncertainties are the distance between a measured position and what is considered as the corresponding true position. This mean value may come from quality measures on a homogeneous population of objects measured or from an estimation based on the knowledge of the production processes and of their accuracy."@en .
+
+cap-iacs-control:conformanceStatement
+        a                owl:ObjectProperty ;
+        rdfs:label       "On the spot check conformance statement"@en ;
+        rdfs:range       cap-iacs-base:ConformanceStatementValue ;
+        skos:definition  "Conformance statement\r\n\r\nVerdict based on the outcome of the on-the-spot check whether the rules, eligibility criteria, commitments and other obligations relating to the conditions for the granting of support have been met.\r\n\r\nOn-the-spot checks shall verify the accuracy of the data declared by the beneficiary against underlying documents. This includes a verification that the payment claims submitted by the beneficiary are supported by accounting or other documents, including, where necessary, a check on the accuracy of the data in the payment claim on the basis of data or commercial documents held by third parties. On-the-spot checks shall verify that the use or intended use of the operation is consistent with the use described in the application for support and for which the support was granted. Except in exceptional circumstances, duly recorded and explained by the competent authorities, on-the-spot checks shall include a visit to the place where the operation is implemented or, if the operation is intangible, to the operation promoter. \r\n\t\r\nEXAMPLE.\r\nAid application or payment claim shall be rejected if the beneficiary or his representative prevents an on-the-spot check from being carried out, except in cases of force majeure or in exceptional circumstances. In this case (if it is not force majeure or exceptional circumstance)"@en .
+
+cap-iacs-control:onTheSpotCheckAnnouncementDate
+        a                owl:DatatypeProperty ;
+        rdfs:label       "On-the-spot check announcement date"@en ;
+        rdfs:range       xsd:dateTime ;
+        skos:definition  "On-the-spot check announcement date.\r\n\r\nDate of when on-the-spot check was announced.\r\n\r\nNOTE 1\r\nImportant timing: not more than 14 days (area related support schemes) and 48 hours for (animal-aid) [Art. 25 of R 809/2014].\r\n\r\nNOTE 2\r\nWhere the competent authority has [...] given notice to the beneficiary of its intention to carry out an on-the-spot check amendments in applications shall not be authorised [Art. 15(3) of R 809/2014]."@en .
+
+cap-iacs-control:ControlRateGroupRuralDevelopmentMeasureValue
+        a                owl:Class ;
+        rdfs:label       "List of control rate groups for rural development measures"@en ;
+        rdfs:subClassOf  skos:Concept ;
+        skos:definition  "Control Rate Group Rural Development Measure Value\r\n\r\nList of control rate groups for rural development measures.\r\n\r\nNOTE. Currently placeholder only."@en .
+
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control>
+        a                owl:Ontology ;
+        rdfs:label       "Integrated control system"@en ;
+        owl:imports      <https://github.com/HajoRijgersberg/OM/raw/master/om-2.0.rdf> , <http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid> , <http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-base> , <http://www.opengis.net/ont/geosparql> ;
+        owl:versionIRI   "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/3.0" ;
+        owl:versionInfo  "3.0" ;
+        skos:definition  "-- Name --\r\nIntegrated control system\r\n\r\n-- Definition --\r\nThis package is a placeholder for the Application schema of Integrated control system.\r\n\r\n-- Description --\r\nThe contents of an «ApplicationSchema» package exported as a GML Application Schema file."@en ;
+        dct:creator [ schema:affiliation [ foaf:name "PSNC" ] ;
+                      rdfs:seeAlso <http://orcid.org/0000-0003-4289-4922> ;
+                      foaf:name "Raul Palma"
+                    ] ;
+        dct:title "JRC IACS - Integrated Control System Ontology"@en ;
+        dct:description "Ontology of the integrated control system used in IACS, generated from the transformation of the corresponding JRC application schema"@en ;
+        dct:source "JRC IACS application schema. https://doi.org/10.1016/j.landusepol.2016.05.023"@en ;
+        dct:rights "This ontology is distributed under Creative Commons Attribution 4.0 License - http://creativecommons.org/licenses/by/4.0"@en .
+
+cap-iacs-control:inspectorsSurveyObjectType
+        a                owl:ObjectProperty ;
+        rdfs:label       "Feature type controlled"@en ;
+        rdfs:range       cap-iacs-control:InspectorsSurveyObjectTypeValue ;
+        skos:definition  "Inspectors Survey Object Type Value\r\n\r\nTypes of real world objects observed/measured by inspector."@en .
+
+cap-iacs-control:OnTheSpotCheck
+        a                owl:Class ;
+        rdfs:label       "On-the-spot check"@en ;
+        rdfs:subClassOf  gsp:Feature ;
+        rdfs:subClassOf  [ a                owl:Restriction ;
+                           owl:cardinality  "1"^^xsd:nonNegativeInteger ;
+                           owl:onProperty   cap-iacs-control:conformanceStatement
+                         ] ;
+        rdfs:subClassOf  [ a                   owl:Restriction ;
+                           owl:minCardinality  "1"^^xsd:nonNegativeInteger ;
+                           owl:onProperty      cap-iacs-control:onTheSpotCheckDate
+                         ] ;
+        rdfs:subClassOf  [ a                owl:Restriction ;
+                           owl:cardinality  "1"^^xsd:nonNegativeInteger ;
+                           owl:onProperty   cap-iacs-control:onTheSpotCheckDetailsForCrossCheck
+                         ] ;
+        rdfs:subClassOf  [ a                owl:Restriction ;
+                           owl:cardinality  "1"^^xsd:nonNegativeInteger ;
+                           owl:onProperty   cap-iacs-control:reportSent
+                         ] ;
+        rdfs:subClassOf  [ a                owl:Restriction ;
+                           owl:cardinality  "1"^^xsd:nonNegativeInteger ;
+                           owl:onProperty   cap-iacs-control:onTheSpotCheckAnnouncementDate
+                         ] ;
+        rdfs:subClassOf  [ a                owl:Restriction ;
+                           owl:cardinality  "1"^^xsd:nonNegativeInteger ;
+                           owl:onProperty   cap-iacs-control:controlReport
+                         ] ;
+        skos:definition  "On-the-spot check\r\n\r\nChecks organised by a MS/Region supplementing the systematic administrative checks [Art. 59(1) of R 1306/2013].\r\n\r\nNOTE 1\r\nMember States shall organise on-the-spot checks on approved operations using an appropriate sampling basis. Those checks shall, to the extent possible, be carried out before the final payment is made for an operation. \r\n\r\nNOTE 2\r\nThe inspectors undertaking the on-the-spot check shall not have been involved in administrative checks of the same operation.\r\n\r\nNOTE 3\r\nThis feature type does not describe the on-the-spot check carried out by the Commission"@en .
+
+cap-iacs-control:ControlRateTypeValue
+        a                owl:Class ;
+        rdfs:label       "List of control rate groups for greening"@en ;
+        rdfs:subClassOf  skos:Concept ;
+        skos:definition  "Control rate type value\r\n\r\nList of applicable control rate values as prescribed by Art. 30, 31, 36(2) and 36(6) of R 809/2014.\r\n\r\nNOTE\r\nThis code list currently does not contain values for rural development measures (Art. 32) and animal aid schemes (Art. 33 of R 809/2014)."@en .
+
+cap-iacs-control:InspectorsSurveyObjectTypeValue
+        a                owl:Class ;
+        rdfs:label       "List of feature types"@en ;
+        rdfs:subClassOf  skos:Concept ;
+        skos:definition  "Inspectors survey type value\r\n\r\nList of possible real objects measured by an inspector.\r\n\r\nNOTE\r\nList may be extended or subtracted depending on how MS organizing on-the-spot check process."@en .
+
+cap-iacs-control:otscSampleDetailsforStratum
+        a           owl:ObjectProperty ;
+        rdfs:range  cap-iacs-control:SamplingStratum .
+
+cap-iacs-control:detailsOfCrossCheckForOnTheSpotChecks
+        a           owl:ObjectProperty ;
+        rdfs:range  cap-iacs-control:OnTheSpotCheck .
+
+cap-iacs-control:longTermCommitmentsConformance
+        a                owl:ObjectProperty ;
+        rdfs:label       "There is compliance with long-term commitments, where appropriate"@en ;
+        rdfs:range       cap-iacs-base:ConformanceStatementValue ;
+        skos:definition  "-- Definition --\r\nThere is compliance with long-term commitments, where appropriate.\r\n-- Description --\r\nThe administrative checks referred to in Article 74 of Regulation (EU) No 1306/2013, including cross-checks, shall permit the detection of non-compliances, in particular the automated detection using computerised means. The checks shall cover all elements that are possible and appropriate to control by means of administrative checks. They shall ensure that: there is compliance with long-term commitments, where appropriate."@en .
+
+cap-iacs-control:itemDetailsForAdministrativeCheck
+        a           owl:ObjectProperty ;
+        rdfs:range  cap-iacs-control:AdministrativeCheck .
+
+cap-iacs-control:sampleDetailsForOtscItem
+        a           owl:ObjectProperty ;
+        rdfs:range  cap-iacs-control:OtscSample .
+
+cap-iacs-control:determinedArea
+        a                owl:DatatypeProperty ;
+        rdfs:label       "Final area determined after all administrative checks"@en ;
+        rdfs:range       om:Measure ;
+        skos:definition  "-- Definition --\r\nFinal area determined after all administrative checks.\r\n-- Description --\r\nIf AdministrativeCheck.determinedArea<>Application.declaredArea Then\r\nAdministrativeCheck.determinedArea = AdministrativeCheck.determinedArea Else\r\nAdministrativeCheck.determinedArea = Application.declaredArea\r\nEndIf"@en .
+
+cap-iacs-control:samplingStrategyDescription
+        a                owl:DatatypeProperty ;
+        rdfs:range       xsd:string ;
+        skos:definition  "Sampling strategy description\r\n\r\nDetailed description of the sampling strategy.\r\n\r\nNOTE\r\nWhen the applied sampling strategy cannot be linked to any source that can be cited, the description has to be provided as property of the stratum."@en .
+
+cap-iacs-control:metadata
+        a                owl:ObjectProperty ;
+        rdfs:range       cap-iacs-base:FeatureLevelMetadata ;
+        skos:definition  "Metadata\r\n\r\nFeature level metadata of the sample.\r\n\r\nNOTE 1\r\nThe content of feature level metadata is specified in the Base types application schema.\r\n\r\nNOTE 2\r\nPartial selection of the control sample is possible before the application periods ends. For traceability of such selection, the life cycle information has to be updated at each partial selection.\r\n\r\nUpdate: FeatureLevelMetadata.beginLifespanVersion AND FeatureLevelMetadata.endLifespanVersion"@en .
+
+cap-iacs-control:geometry
+        a                owl:ObjectProperty ;
+        rdfs:label       "Geometry of survey and or measurement"@en ;
+        rdfs:range       gsp:Geometry ;
+        skos:definition  "Geometry\r\n\r\nGeometry of survey and or measurement. It is a representation by coordinates of the geographical dimension/position of the farmer's survey and or measurement (within survey)."@en .
+
+cap-iacs-control:paymentClaimCompletnessStatement
+        a                owl:ObjectProperty ;
+        rdfs:label       "The aid application or payment claim is complete"@en ;
+        rdfs:range       cap-iacs-base:ConformanceStatementValue ;
+        skos:definition  "-- Definition --\r\nThe aid application or payment claim is complete.\r\n-- Description --\r\nThe administrative checks referred to in Article 74 of Regulation (EU) No 1306/2013, including cross-checks, shall permit the detection of non-compliances, in particular the automated detection using computerised means. The checks shall cover all elements that are possible and appropriate to control by means of administrative checks. They shall ensure that: the aid application or payment claim is complete and submitted within the relevant time-limit and, where applicable, that supporting documents have been submitted and that they prove eligibility."@en .
+
+cap-iacs-control:controlReport
+        a                owl:ObjectProperty ;
+        rdfs:label       "Control report document"@en ;
+        rdfs:range       cap-iacs-base:SupplementaryDocument ;
+        skos:definition  "Control report\r\n\r\nReport mandated by Art. 59(3) of R 1306/2013.\r\n\r\nArt. 41(1) of R 809/2014 regulates the content of the report for the area based payments:\r\n\t- (a) aid schemes or support measures, the aid applications or payment claims checked;\r\n\t- (b) the persons present;\r\n\t- (c) the agricultural parcels checked, the agricultural parcels measured including, where applicable, the result of the measurements per measured agricultural parcel and the measuring methods used;\r\n\t- (d) where applicable, the results of the measurement of non-agricultural land for which support under rural development measures is being claimed and the measuring methods used;\r\n\t- (e) whether notice of the check was given to the beneficiary and, if so, the period of prior notice;\r\n\t- (f) indications of any specific control measures to be carried out in the context of individual aid schemes or support schemes;\r\n\t- (g) indication of any further control measures carried out;\r\n\t- (h) indication of any non-compliance found that could require cross-notification in view of other aid schemes, support measures and/or cross-compliance;\r\n\t- (i) indication of any non-compliance found that could require follow-up during the following years.\r\n\r\nArt.53(1) of R (EU) 809/2014 regulates the content of the report for livestock OTSC:\r\n\t- (a) the measures and applications or payment claims checked;\r\n\t- (b) the persons present;\r\n\t- (c) whether notice was given to the beneficiary of the visit and, if so, the period of prior notice;\r\n\t- (d) the results of the checks and, where applicable, any particular observations;\r\n\t- (e) any further control measures to be carried out [EN 31.7.2014 Official Journal of the European Union L 227/111].\r\n\r\nNOTE\r\nWhen OTSC is carried out by means of remote sensing Member States are allowed to provide the report only where the check reveals non-compliance [Preamble (41) of R 809/2014] .\r\n\r\nIssue\r\nHow this provision complies with Art. 59(3) of R 1306/2013?"@en .
+
+cap-iacs-control:detailsOfCrossChecksForAdministrativeCheck
+        a           owl:ObjectProperty ;
+        rdfs:range  cap-iacs-control:AdministrativeCheck .
+
+cap-iacs-control:noDoubleFinancing
+        a                owl:ObjectProperty ;
+        rdfs:label       "There is no double financing through other Union schemes"@en ;
+        rdfs:range       cap-iacs-base:ConformanceStatementValue ;
+        skos:definition  "-- Definition --\r\nThere is no double financing through other Union schemes.\r\n-- Description --\r\nThe administrative checks referred to in Article 74 of Regulation (EU) No 1306/2013, including cross-checks, shall permit the detection of non-compliances, in particular the automated detection using computerised means. The checks shall cover all elements that are possible and appropriate to control by means of administrative checks. They shall ensure that: there is no double financing through other Union schemes."@en .
+
+cap-iacs-control:maximumRiskBasedSampleSize
+        a                owl:DatatypeProperty ;
+        rdfs:range       xsd:integer ;
+        skos:definition  "Maximum risk based sample size\r\n\r\nTheoretical maximum population of the sample size selected on risk basis.\r\n\r\nNOTE 1\r\nThis property has to be recorded for green payments only. The risk based population should stay between the indicated minimum and maximum.\r\n\r\nNOTE 2\r\nThe maximum population of the risk based size of a sample has to be calculated as product of the control rate and the associated risk based part.\r\n\r\nEXAMPLE:\r\nFor green payments the maximum risk based part is 80 % out of the 5% control population; i.e. 4% all together."@en .
+
+cap-iacs-control:AdministrativeCheck
+        a                owl:Class ;
+        rdfs:label       "AdministrativeCheck"@en ;
+        rdfs:subClassOf  gsp:Feature ;
+        rdfs:subClassOf  [ a                   owl:Restriction ;
+                           owl:maxCardinality  "1"^^xsd:nonNegativeInteger ;
+                           owl:onProperty      cap-iacs-control:longTermCommitmentsConformance
+                         ] ;
+        rdfs:subClassOf  [ a                owl:Restriction ;
+                           owl:cardinality  "1"^^xsd:nonNegativeInteger ;
+                           owl:onProperty   cap-iacs-control:eligibilityCriteriaFulfilled
+                         ] ;
+        rdfs:subClassOf  [ a                   owl:Restriction ;
+                           owl:minCardinality  "1"^^xsd:nonNegativeInteger ;
+                           owl:onProperty      cap-iacs-control:administrativeCheckDetailsForCrossCheck
+                         ] ;
+        rdfs:subClassOf  [ a                owl:Restriction ;
+                           owl:cardinality  "1"^^xsd:nonNegativeInteger ;
+                           owl:onProperty   cap-iacs-control:determinedArea
+                         ] ;
+        rdfs:subClassOf  [ a                owl:Restriction ;
+                           owl:cardinality  "1"^^xsd:nonNegativeInteger ;
+                           owl:onProperty   cap-iacs-control:paymentClaimCompletnessStatement
+                         ] ;
+        rdfs:subClassOf  [ a                owl:Restriction ;
+                           owl:cardinality  "1"^^xsd:nonNegativeInteger ;
+                           owl:onProperty   cap-iacs-control:administrativeCheckDetailsForApplication
+                         ] ;
+        rdfs:subClassOf  [ a                owl:Restriction ;
+                           owl:cardinality  "1"^^xsd:nonNegativeInteger ;
+                           owl:onProperty   cap-iacs-control:noDoubleFinancing
+                         ] ;
+        rdfs:subClassOf  [ a                   owl:Restriction ;
+                           owl:maxCardinality  "1"^^xsd:nonNegativeInteger ;
+                           owl:onProperty      cap-iacs-control:animalSchemeMeasureConformance
+                         ] ;
+        skos:definition  "-- Definition --\r\nAdministrative check.\r\n-- Description --\r\nAdministrative check of application. All applications are subject to administrative check.\r\n\r\n\r\nExamples of administrative checks:\r\n\t- Advisory services, farm management and farm relief services [Art.(55) of R 8069/2014]\r\n\t- Quality schemes for agricultural products, and foodstuffs [Art.(56) of R 8069/2014]\r\n\t- Farm and business development [Art.(57) of R 8069/2014]\r\n\r\nNOTE\r\nTo simplify the cross-compliance on-the-spot checks and to make better use of existing control capacities, it is possible, when the effectiveness of the checks is at least equal to that achieved when the on-the-spot checks are to be carried out, to replace checks at farm level by administrative checks [Preamble (750) R 809/2014]."@en .
+
+cap-iacs-control:minimumRiskBasedSampleSize
+        a                owl:DatatypeProperty ;
+        rdfs:range       xsd:integer ;
+        skos:definition  "Minimum risk based sample size\r\n\r\nTheoretical minimum population of the sample size selected on risk basis.\r\n\r\nNOTE 1\r\nThis property has to be recorded for green payments only. The risk based population should stay between the indicated minimum and maximum.\r\n\r\nNOTE 2\r\nThe minimum population of the risk based size of a sample has to be calculated as product of the control rate and the associated risk based part.\r\n\r\nEXAMPLE:\r\nFor green payments the minimum risk based part is 75 % out of the 5% control population; i.e. 3,75% all together."@en .
+
+cap-iacs-control:SurveyMethodValue
+        a                owl:Class ;
+        rdfs:label       "List of survey types"@en ;
+        rdfs:subClassOf  skos:Concept ;
+        skos:definition  "Survey method value\r\n\r\nList of survey method types in sense of Art. 74(3) of R 1306/2013."@en .
+
+cap-iacs-control:administrativeCheckDetailsForApplication
+        a           owl:ObjectProperty ;
+        rdfs:range  cap-iacs-aid:Application .
+
+cap-iacs-control:CrossCheckTypeValue
+        a                owl:Class ;
+        rdfs:label       "List of on the cross-check types"@en ;
+        rdfs:subClassOf  skos:Concept ;
+        skos:definition  "-- Definition --\r\nList of cross-check types.\r\n-- Description --\r\nList of cross-check types."@en .
+
+cap-iacs-control:controlRateType
+        a                owl:ObjectProperty ;
+        rdfs:range       cap-iacs-control:ControlRateTypeValue ;
+        skos:definition  "Control rate type\r\n\r\nControl rate types as prescribed by Art. 30, 31, 36(2) and 36(6) of R 809/2014."@en .
+
+cap-iacs-control:otscItemDetailsForReconversion
+        a           owl:ObjectProperty ;
+        rdfs:range  cap-iacs-aid:ReconvertingObligation .
+
+cap-iacs-control:onTheSpotCheckDetailsForInspectors
+        a           owl:ObjectProperty ;
+        rdfs:range  cap-iacs-control:InspectorsSurvey .
+
+cap-iacs-control:SamplingStrategyTypeValue
+        a                owl:Class ;
+        rdfs:label       "List of sampling strategy types"@en ;
+        rdfs:subClassOf  skos:Concept ;
+        skos:definition  "Sampling Strategy Type Value\r\n\r\nList of sampling strategy types.\r\n\r\nIn accordance with Preamble (34) of R 809/2014 sampling should comprise a random part in order to obtain a representative error rate and a risk based part for the following Payment/support schemes:\r\n\t- greening payment\r\n\t- animal aid schemes\r\n\t- rural development measure\r\n\r\nNOTE 1\r\nTo ensure a relevant and efficient risk analysis, the effectiveness of the risk analysis should be assessed and updated on an annual basis taking into account the relevance of each risk factor, comparing the results of randomly and risk-based selected samples and the specific situation [Preamble (68) and Art. 34(5) of R 809/2014].\r\n\r\nNOTE 2\r\nThe sampling method should be selected and documented by the competent authority of the MS/Region. The values of the code list can be extended.\r\n\r\nNOTE 3\r\nThe exemplary values of the code list in this application schema are taken from DSCG/2014/32 guideline and best statistical practices."@en .
+
+cap-iacs-control:subjectOfMultipleVisits
+        a                owl:DatatypeProperty ;
+        rdfs:label       "Sampling strategy type"@en ;
+        rdfs:range       xsd:boolean ;
+        skos:definition  "Subject of Multiple Visits\r\n\r\nControlling some elements (especially certain types of EFA or agricultural practices) may require multiple visits; i.e. inspections at different periods of the year.\r\n\r\nNOTE\r\nMultiple visit can be also carried out with CwRS, using multitemporal images of the same scene"@en .
+
+cap-iacs-control:itemDetailsForOnTheSpotChecks
+        a           owl:ObjectProperty ;
+        rdfs:range  cap-iacs-control:OnTheSpotCheck .
+
+cap-iacs-control:OnTheSpotCheckTypeValue
+        a                owl:Class ;
+        rdfs:label       "List of on the spot check types"@en ;
+        rdfs:subClassOf  skos:Concept ;
+        skos:definition  "On-the-spot check type value\r\n\r\nList of on the spot check types. that describe the purpose of the control."@en .
+
+cap-iacs-control:samplingStratumName
+        a                owl:DatatypeProperty ;
+        rdfs:range       xsd:string ;
+        skos:definition  "Sampling Stratum Name\r\n\r\nName of the sampling stratum, which can be related to geographic position, control scheme, RS sensor, CwRS zone, etc.\r\n\r\nNOTE\r\nThe usage of this property is not mandatory."@en .
+
+cap-iacs-control:reportSent
+        a                owl:DatatypeProperty ;
+        rdfs:label       "Type of the on the spot check"@en ;
+        rdfs:range       xsd:dateTime ;
+        skos:definition  "Report sent\r\n\r\nIrrespective of the kind of on-the-spot check carried out, the beneficiary should receive a copy of the report if any non-compliance is found [Recital (41) of R (EU) 809/2014]."@en .

@@ -1,0 +1,684 @@
+@prefix cap-iacs-parcel: <http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-parcel#> .
+@prefix cap-iacs-control: <http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix gsp:   <http://www.opengis.net/ont/geosparql#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix cap-iacs-aid: <http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix cap-iacs-beneficiery: <http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-beneficiery#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix om:    <http://www.ontology-of-units-of-measure.org/resource/om-2/> .
+@prefix cap-iacs-base: <http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-base#> .
+
+cap-iacs-aid:AgriculturalPracticeTypeValue
+        a                owl:Class ;
+        rdfs:label       "List of agricultural practices"@en ;
+        rdfs:subClassOf  skos:Concept ;
+        skos:definition  "Agricultural practice type value\r\n\r\nList agricultural practices beneficial for the climate and the environment as detailed in Chapter 3 of R 1307/2013."@en .
+
+cap-iacs-aid:AgriculturalParcel
+        a                owl:Class ;
+        rdfs:label       "Agricultural parcel"@en ;
+        rdfs:subClassOf  gsp:Feature ;
+        rdfs:subClassOf  [ a                   owl:Restriction ;
+                           owl:maxCardinality  "1"^^xsd:nonNegativeInteger ;
+                           owl:onProperty      cap-iacs-aid:specieCode
+                         ] ;
+        rdfs:subClassOf  [ a                   owl:Restriction ;
+                           owl:maxCardinality  "1"^^xsd:nonNegativeInteger ;
+                           owl:onProperty      cap-iacs-aid:geometry
+                         ] ;
+        rdfs:subClassOf  [ a                owl:Restriction ;
+                           owl:cardinality  "1"^^xsd:nonNegativeInteger ;
+                           owl:onProperty   cap-iacs-aid:declaredArea
+                         ] ;
+        rdfs:subClassOf  [ a                   owl:Restriction ;
+                           owl:minCardinality  "1"^^xsd:nonNegativeInteger ;
+                           owl:onProperty      cap-iacs-aid:detailsOfAgriculturalParcelsForCrossCompliance
+                         ] ;
+        rdfs:subClassOf  [ a                   owl:Restriction ;
+                           owl:maxCardinality  "1"^^xsd:nonNegativeInteger ;
+                           owl:onProperty      cap-iacs-aid:varietalName
+                         ] ;
+        rdfs:subClassOf  [ a                owl:Restriction ;
+                           owl:cardinality  "1"^^xsd:nonNegativeInteger ;
+                           owl:onProperty   cap-iacs-aid:agriculturalParcelDetailsWithinCropGroupGreening
+                         ] ;
+        skos:definition  "-- Definition --\r\nAgricultural parcel.\r\n-- Description --\r\nAgricultural parcel within agricultural areas (and or reference parcels). Declared by farmer."@en .
+
+cap-iacs-aid:declaredEntitlementArea
+        a                owl:DatatypeProperty ;
+        rdfs:label       "Entitlements declared"@en ;
+        rdfs:range       om:Measure ;
+        skos:definition  "-- Definition --\r\nEntitlement area declared by one farmer within all holding sites.\r\n-- Description --\r\nAlphanumerical value. Mandatory for SPS only. Subject for enabling of entitlements (Area) on all area declared.\r\nNOTE. declaredEntitlementArea <=declaredArea."@en .
+
+cap-iacs-aid:crop  a     owl:ObjectProperty ;
+        rdfs:label       "Type of certain crop"@en ;
+        rdfs:range       cap-iacs-aid:CropValue ;
+        skos:definition  "-- Definition --\r\nType of certain crop.\r\n-- Description --\r\nType of certain (or single) crop. \r\nNOTE. If cropGroupTypeGreening = certainCrop, then crop must be defined."@en .
+
+cap-iacs-aid:crossComplianceRule
+        a                owl:ObjectProperty ;
+        rdfs:label       "Cross-compliance rule"@en ;
+        rdfs:range       cap-iacs-base:CrossComplianceRuleDescription ;
+        skos:definition  "-- Definition --\r\nCross-compliance rule description.\r\n\r\n-- Description --\r\nCross-compliance rule description. Declared by the farmer.\r\n\r\nNOTE. If there is no aid application these rules still are mandatory to observe."@en .
+
+cap-iacs-aid:intoSensitivePermanentGrassland
+        a                owl:DatatypeProperty ;
+        rdfs:range       xsd:boolean ;
+        skos:definition  "Into sensitive permanent grassland\r\n\r\nPossible values of reconverting obligation.\r\n\r\nNOTE\r\nIntoPermanentGrassland  and the IntoSensitivePermanentGrassland are mutually exclusive values."@en .
+
+cap-iacs-aid:applicationDetailsOfOtscItems
+        a           owl:ObjectProperty ;
+        rdfs:range  cap-iacs-control:OtscItem .
+
+cap-iacs-aid:cropGruopTypeAreaRelatedAidSchema
+        a                owl:ObjectProperty ;
+        rdfs:label       "Type of certain area related aid schema payment crop group"@en ;
+        rdfs:range       cap-iacs-aid:CropGroupTypeAreaRelatedSupportSchemaValue ;
+        skos:definition  "-- Definition --\r\nType of area related aid schema crop group.\r\n-- Description --\r\nType of area related aid schema payment crop group."@en .
+
+cap-iacs-aid:agriculturalEquivalentPracticeSubtype
+        a                owl:ObjectProperty ;
+        rdfs:label       "The type of equivalent agricultural practice"@en ;
+        rdfs:range       cap-iacs-aid:AgriculturalEquivalentPracticeSubtypeValue ;
+        skos:definition  "Agricultural equivalent practice type\r\n\r\nSubtypes of equivalent agricultural practices in sense of Art.43(3)(a) and (b) of R 1307/2013 .\r\n\r\nThe values are given in the AgriculturalEquivalentPracticeValue code list."@en .
+
+cap-iacs-aid:AgriculturalEquivalentPracticeRequirementValue
+        a                owl:Class ;
+        rdfs:label       "List of agricultural equivalent practices"@en ;
+        rdfs:subClassOf  skos:Concept ;
+        skos:definition  "Agricultural equivalent practice requirement value\r\n\r\nList of requirements qualifying agricultural practices as equivalent to the practices beneficial for the climate and the environment descibed in Chapter 3 of R 1307/2013.\r\nThe broad list of equivalent practices are included in Annex IX of R 1307/2013.\r\n\r\nThe equivalent practices go beyond the relevant mandatory standards established pursuant to Chapter I of Title VI of Regulation (EU) No 1306/2013, which aim to meet objectives relating to soil and water quality, biodiversity, landscape preservation, and climate change mitigation and adaptation. Those certification schemes may include the practices listed in Annex IX to this Regulation, the practices referred to in paragraph 2 of this Article, or a combination of those practices."@en .
+
+cap-iacs-aid:cropGroupGreeningDetailsInAidApplication
+        a           owl:ObjectProperty ;
+        rdfs:range  cap-iacs-aid:Application .
+
+cap-iacs-aid:nonStructuredEvidenceCitation
+        a                owl:ObjectProperty ;
+        rdfs:label       "Non-structured evidence - citation"@en ;
+        rdfs:range       cap-iacs-base:SupplementaryDocumentCitation ;
+        skos:definition  "-- Definition --\r\nAny citation that supports the application process.\r\n-- Description --\r\nURL."@en .
+
+cap-iacs-aid:AgriculturalPracticeRequirementValue
+        a                owl:Class ;
+        rdfs:subClassOf  skos:Concept ;
+        skos:definition  "Agricultural practice requirement value\r\n\r\nList of agricultural practice requirement values as defined in Art. (44) (1), (2),(3) and Art. 46 (4) of R (EU) 1307/2013."@en .
+
+cap-iacs-aid:declaredEcologicalFocusAreaFeatures
+        a                owl:DatatypeProperty ;
+        rdfs:label       "Ecological focus area features declared"@en ;
+        rdfs:range       xsd:integer ;
+        skos:definition  "-- Definition --\r\nEcological focus area features declared (or \"features in farm\").\r\n-- Description --\r\nEcological focus area features declared.  Ecological focus area features shall be used in order to determine the area of ecological focus area using conversion parameters (when necessary)."@en .
+
+cap-iacs-aid:CropGroupTypeAreaRelatedSupportSchemaValue
+        a                owl:Class ;
+        rdfs:label       "List of payment crop groups"@en ;
+        rdfs:subClassOf  skos:Concept ;
+        skos:definition  "-- Definition --\r\nList of payment crop groups.\r\n-- Description --\r\nList of crop groups related with area-related support schemas."@en .
+
+cap-iacs-aid:surveyDetailsForMeasurements
+        a           owl:ObjectProperty ;
+        rdfs:range  cap-iacs-aid:FarmersSurvey .
+
+cap-iacs-aid:crossComplianceRulesForLandscapeFeatures
+        a           owl:ObjectProperty ;
+        rdfs:range  cap-iacs-parcel:LandscapeFeature .
+
+cap-iacs-aid:CropGroupGreening
+        a                owl:Class ;
+        rdfs:label       "Payment crop group grreening"@en ;
+        rdfs:subClassOf  gsp:Feature ;
+        rdfs:subClassOf  [ a                owl:Restriction ;
+                           owl:cardinality  "1"^^xsd:nonNegativeInteger ;
+                           owl:onProperty   cap-iacs-aid:declaredArea
+                         ] ;
+        rdfs:subClassOf  [ a                   owl:Restriction ;
+                           owl:maxCardinality  "1"^^xsd:nonNegativeInteger ;
+                           owl:onProperty      cap-iacs-aid:crop
+                         ] ;
+        rdfs:subClassOf  [ a                owl:Restriction ;
+                           owl:cardinality  "1"^^xsd:nonNegativeInteger ;
+                           owl:onProperty   cap-iacs-aid:cropGruopTypeGreening
+                         ] ;
+        rdfs:subClassOf  [ a                owl:Restriction ;
+                           owl:cardinality  "1"^^xsd:nonNegativeInteger ;
+                           owl:onProperty   cap-iacs-aid:detailsOfCropGroupGreeningForPayment
+                         ] ;
+        rdfs:subClassOf  [ a                owl:Restriction ;
+                           owl:cardinality  "1"^^xsd:nonNegativeInteger ;
+                           owl:onProperty   cap-iacs-aid:cropGroupGreeningDetailsInAidApplication
+                         ] ;
+        skos:definition  "-- Definition --\r\nCrop group greening.\r\n-- Description --\r\nCrop groups (in the context of IACS). Auto defined and aggregated by administration from application entries."@en .
+
+cap-iacs-aid:collectiveImplementationDocument
+        a                owl:ObjectProperty ;
+        rdfs:label       "Non-structured evidence - document, provided with aid application"@en ;
+        rdfs:range       cap-iacs-base:SupplementaryDocument ;
+        skos:definition  "-- Definition --\r\nSupplementary document, legal basis contract or designation provided with aid application by farmer.\r\n-- Description --\r\nEXAMPLES: description, document, additional measurement data, etc."@en .
+
+cap-iacs-aid:detailsOfCropGroupAreaRelatedAidSchemaForPayment
+        a           owl:ObjectProperty ;
+        rdfs:range  cap-iacs-aid:Payment .
+
+cap-iacs-aid:EcologicalFocusAreaConverted
+        a                owl:Class ;
+        rdfs:label       "Converted ecological focus area"@en ;
+        rdfs:subClassOf  gsp:Feature ;
+        rdfs:subClassOf  [ a                owl:Restriction ;
+                           owl:cardinality  "1"^^xsd:nonNegativeInteger ;
+                           owl:onProperty   cap-iacs-aid:declaredEcologicalFocusAreaFeatures
+                         ] ;
+        rdfs:subClassOf  [ a                owl:Restriction ;
+                           owl:cardinality  "1"^^xsd:nonNegativeInteger ;
+                           owl:onProperty   cap-iacs-aid:ecologicalFocusAreaDetailsForConversion
+                         ] ;
+        rdfs:subClassOf  [ a                owl:Restriction ;
+                           owl:cardinality  "1"^^xsd:nonNegativeInteger ;
+                           owl:onProperty   cap-iacs-aid:ecologicalFocusAreaConvertedWithinApplication
+                         ] ;
+        skos:definition  "-- Definition --\r\nConverted ecological focus area within application.\r\n-- Description --\r\nEFA declared in application and converted using conversion parameters."@en .
+
+cap-iacs-aid:varietalName
+        a                owl:ObjectProperty ;
+        rdfs:label       "Varietal name"@en ;
+        rdfs:range       cap-iacs-base:VarietalNameValue ;
+        skos:definition  "-- Definition --\r\nVarietal name.\r\n-- Description --\r\nInformation referring to the variety within a specie. If MS asks Farmer to provide particular specie variety, then Farmer must provide it in his declaration. Varieties (cultures of any of the different genera defined in the botanical classification of crops) may be provided by maintainers (MS). \r\nNOTE. Common catalogue of varieties of agricultural plant species. Fifth supplement to the 29th complete edition (2011/C 168 A/01).\r\nNOTE. Common catalogue of varieties of vegetable species. 32nd complete edition (2013/C 312 A/01).\r\nNOTE. Only when: agriculturalAreaType=arableLand."@en .
+
+cap-iacs-aid:detailsOfCrossComplianceForOnTheSpotCheck
+        a           owl:ObjectProperty ;
+        rdfs:range  cap-iacs-control:OnTheSpotCheck .
+
+cap-iacs-aid:applicationDetailsForAdministrativeChecks
+        a           owl:ObjectProperty ;
+        rdfs:range  cap-iacs-control:AdministrativeCheck .
+
+cap-iacs-aid:nonStructuredEvidenceDocument
+        a                owl:ObjectProperty ;
+        rdfs:label       "Non-structured evidence - document"@en ;
+        rdfs:range       cap-iacs-base:SupplementaryDocument ;
+        skos:definition  "-- Definition --\r\nAny record  that supports the application process.\r\n-- Description --\r\nEXAMPLES: description, sketch, photo, document, additional measurement data, etc."@en .
+
+cap-iacs-aid:submissionDate
+        a                owl:DatatypeProperty ;
+        rdfs:label       "Application submission date"@en ;
+        rdfs:range       xsd:date ;
+        skos:definition  "Submission date\r\n\r\nDate of when the application was submitted."@en .
+
+cap-iacs-aid:measurementsWithinSurveyDetails
+        a           owl:ObjectProperty ;
+        rdfs:range  cap-iacs-aid:FarmersSurvey .
+
+cap-iacs-aid:requiredEcologicalFocusArea
+        a                owl:DatatypeProperty ;
+        rdfs:label       "Ecological focus area required"@en ;
+        rdfs:range       om:Measure ;
+        skos:definition  "-- Definition --\r\nTotal ecological focus area required.\r\n-- Description --\r\nTotal ecological focus area required. \r\nNOTE. EFA required is 0,05*arableLand (declared) area."@en .
+
+cap-iacs-aid:ReconvertingObligation
+        a                owl:Class ;
+        rdfs:subClassOf  gsp:Feature ;
+        rdfs:subClassOf  [ a                owl:Restriction ;
+                           owl:cardinality  "1"^^xsd:nonNegativeInteger ;
+                           owl:onProperty   cap-iacs-aid:reconversionObligationDetails
+                         ] ;
+        rdfs:subClassOf  [ a                   owl:Restriction ;
+                           owl:maxCardinality  "1"^^xsd:nonNegativeInteger ;
+                           owl:onProperty      cap-iacs-aid:reconversionObliationDetails
+                         ] ;
+        rdfs:subClassOf  [ a                owl:Restriction ;
+                           owl:cardinality  "1"^^xsd:nonNegativeInteger ;
+                           owl:onProperty   cap-iacs-aid:intoSensitivePermanentGrassland
+                         ] ;
+        rdfs:subClassOf  [ a                owl:Restriction ;
+                           owl:cardinality  "1"^^xsd:nonNegativeInteger ;
+                           owl:onProperty   cap-iacs-aid:intoPermanentGrassland
+                         ] ;
+        rdfs:subClassOf  [ a                owl:Restriction ;
+                           owl:cardinality  "1"^^xsd:nonNegativeInteger ;
+                           owl:onProperty   cap-iacs-aid:metadata
+                         ] ;
+        skos:definition  "--Name--\r\nReconverting obligation\r\n\r\n--Definition--\r\nObligation to reconvert arable land into PG  according to the provisions of Art. 45(2) of R (EU) 1307/2014\r\n\r\n--Description--\r\nThe reconversion obligation compensates the decrease of PG  by more than 5 % compared to a reference ratio to be established by Member States in 2015\r\n\r\nNOTE\r\nThe land reconverted shall be considered as permanent grassland as of the first day of reconversion."@en .
+
+cap-iacs-aid:ecologicalFocusAreaDetailsForConversion
+        a           owl:ObjectProperty ;
+        rdfs:range  cap-iacs-parcel:ConversionParameter .
+
+cap-iacs-aid:detailsOfAgriculturalPracticesForOnTheSpotCheck
+        a           owl:ObjectProperty ;
+        rdfs:range  cap-iacs-control:OnTheSpotCheck .
+
+cap-iacs-aid:EcologicalFocusAreaTypeCollectiveValue
+        a                owl:Class ;
+        rdfs:label       "List of ecological focused areas for collective implementation"@en ;
+        rdfs:subClassOf  skos:Concept ;
+        skos:definition  "-- Definition --\r\nList of ecological focused areas for collective implementation.\r\n-- Description --\r\nList of feature (ecological focus areas) types based on Article 46(3) 1307/2013."@en .
+
+cap-iacs-aid:ecologicalFocusAreaCollective
+        a                owl:DatatypeProperty ;
+        rdfs:label       "Total area of ecological focus areas within collective implementation"@en ;
+        rdfs:range       om:Measure ;
+        skos:definition  "-- Definition --\r\nEcological focus area.\r\n-- Description --\r\nTotal area of ecological focus areas within collective implementation."@en .
+
+cap-iacs-aid:advance  a  owl:DatatypeProperty ;
+        rdfs:label       "Area calculated"@en ;
+        rdfs:range       om:Measure ;
+        skos:definition  "-- Definition --\r\nArea which is calculated and aid paid to farmer.\r\n-- Description --\r\nArea which is calculated and aid paid to farmer."@en .
+
+cap-iacs-aid:cropGroupAreaRelatedAidSchemaDetailsInAidApplication
+        a           owl:ObjectProperty ;
+        rdfs:range  cap-iacs-aid:Application .
+
+cap-iacs-aid:FarmersSurveyFeatureTypeValue
+        a                owl:Class ;
+        rdfs:label       "List of feature types"@en ;
+        rdfs:subClassOf  skos:Concept ;
+        skos:definition  "-- Definition --\r\nList of possible feature types measured and provided by farmer.\r\n-- Description --\r\nList of feature types possible to survey / measure by farmer. After these measured features are submitted (during application process) then authority (data custodians) may confirm or reject their reference data update (update based on farmer's survey and or measurement).\r\nNOTE. List may be extended or subtracted depending on how MS organizing reference data update process."@en .
+
+cap-iacs-aid:specieCode
+        a                owl:ObjectProperty ;
+        rdfs:label       "Vegetable or agricultural specie code"@en ;
+        rdfs:range       cap-iacs-base:SpecieCodeValue ;
+        skos:definition  "-- Definition --\r\nVegetable or agricultural specie code.\r\n-- Description --\r\nIf MS asks Farmer to provide particular specie, then Farmer must provide it in his declaration. \r\nNOTE. Common catalogue of varieties of agricultural plant species. Fifth supplement to the 29th complete edition (2011/C 168 A/01).\r\nNOTE. Common catalogue of varieties of vegetable species. 32nd complete edition (2013/C 312 A/01).\r\nNOTE. Only when: agriculturalAreaType=arableLand."@en .
+
+cap-iacs-aid:cropGruopTypeGreening
+        a                owl:ObjectProperty ;
+        rdfs:label       "Type of certain greening crop group"@en ;
+        rdfs:range       cap-iacs-aid:CropGroupTypeGreeningValue ;
+        skos:definition  "-- Definition --\r\nType of greening crop group.\r\n-- Description --\r\nType of greening crop group."@en .
+
+cap-iacs-aid:declaredEcologicalFocusArea
+        a                owl:DatatypeProperty ;
+        rdfs:label       "Ecological focus area declared"@en ;
+        rdfs:range       om:Measure ;
+        skos:definition  "-- Definition --\r\nTotal ecological focus area declared.\r\n-- Description --\r\nTotal ecological focus area declared after all factors are applied. Ecological focus area shall be determined using EFA conversion parameters (when necessary). \r\nNOTE. Sum of EcologicalFocusAreaDetermined.determinedEcologicalFocusArea and EcologicalFocusArea.EcologicalFocusArea (if conversion is not needed) within one application."@en .
+
+cap-iacs-aid:reconversionObligationDetails
+        a           owl:ObjectProperty ;
+        rdfs:range  cap-iacs-aid:Application .
+
+cap-iacs-aid:agriculturalParcelDetailsWithinCropGroupGreening
+        a           owl:ObjectProperty ;
+        rdfs:range  cap-iacs-aid:CropGroupGreening .
+
+cap-iacs-aid:CollectiveImplementation
+        a                owl:Class ;
+        rdfs:label       "Collective ecological focus area implementation"@en ;
+        rdfs:subClassOf  gsp:Feature ;
+        rdfs:subClassOf  [ a                owl:Restriction ;
+                           owl:cardinality  "1"^^xsd:nonNegativeInteger ;
+                           owl:onProperty   cap-iacs-aid:ecologicalFocusAreaCollective
+                         ] ;
+        rdfs:subClassOf  [ a                owl:Restriction ;
+                           owl:cardinality  "1"^^xsd:nonNegativeInteger ;
+                           owl:onProperty   cap-iacs-aid:ecologicalFocusAreaType
+                         ] ;
+        rdfs:subClassOf  [ a                   owl:Restriction ;
+                           owl:minCardinality  "1"^^xsd:nonNegativeInteger ;
+                           owl:onProperty      cap-iacs-aid:collectiveImplementationDetailsForEcologicalFocusAreas
+                         ] ;
+        skos:definition  "-- Definition --\r\nCollective ecological focus area implementation.\r\n-- Description --\r\nEcological focus area participating in collective implementation."@en .
+
+cap-iacs-aid:FarmersSurvey
+        a                owl:Class ;
+        rdfs:label       "Surveys of the farmers"@en ;
+        rdfs:subClassOf  gsp:Feature ;
+        rdfs:subClassOf  [ a                   owl:Restriction ;
+                           owl:minCardinality  "1"^^xsd:nonNegativeInteger ;
+                           owl:onProperty      cap-iacs-aid:surveyDetailsForMeasurements
+                         ] ;
+        rdfs:subClassOf  [ a                owl:Restriction ;
+                           owl:cardinality  "1"^^xsd:nonNegativeInteger ;
+                           owl:onProperty   cap-iacs-aid:geometry
+                         ] ;
+        rdfs:subClassOf  [ a                owl:Restriction ;
+                           owl:cardinality  "1"^^xsd:nonNegativeInteger ;
+                           owl:onProperty   cap-iacs-aid:geometrySource
+                         ] ;
+        rdfs:subClassOf  [ a                owl:Restriction ;
+                           owl:cardinality  "1"^^xsd:nonNegativeInteger ;
+                           owl:onProperty   cap-iacs-aid:farmersSurveyFeatureType
+                         ] ;
+        rdfs:subClassOf  [ a                owl:Restriction ;
+                           owl:cardinality  "1"^^xsd:nonNegativeInteger ;
+                           owl:onProperty   cap-iacs-aid:farmersMeasurementId
+                         ] ;
+        rdfs:subClassOf  [ a                   owl:Restriction ;
+                           owl:maxCardinality  "1"^^xsd:nonNegativeInteger ;
+                           owl:onProperty      cap-iacs-aid:estimatedAccuracy
+                         ] ;
+        rdfs:subClassOf  [ a                owl:Restriction ;
+                           owl:cardinality  "1"^^xsd:nonNegativeInteger ;
+                           owl:onProperty   cap-iacs-aid:measurementsWithinSurveyDetails
+                         ] ;
+        skos:definition  "-- Definition --\r\nSurvey and measurements.\r\n-- Description --\r\nSurveys and (measurements within surveys) of the farmer. Dedicated for upload to different parts of IACS."@en .
+
+cap-iacs-aid:AgriculturalPractice
+        a                owl:Class ;
+        rdfs:label       "Agricultural Practices"@en ;
+        rdfs:subClassOf  gsp:Feature ;
+        rdfs:subClassOf  [ a                owl:Restriction ;
+                           owl:cardinality  "1"^^xsd:nonNegativeInteger ;
+                           owl:onProperty   cap-iacs-aid:equivalentAgriculturalPracticeRequirement
+                         ] ;
+        rdfs:subClassOf  [ a                owl:Restriction ;
+                           owl:cardinality  "1"^^xsd:nonNegativeInteger ;
+                           owl:onProperty   cap-iacs-aid:agriculturalEquivalentPracticeSubtype
+                         ] ;
+        rdfs:subClassOf  [ a                owl:Restriction ;
+                           owl:cardinality  "1"^^xsd:nonNegativeInteger ;
+                           owl:onProperty   cap-iacs-aid:agriculturalEquivalentPracticeType
+                         ] ;
+        rdfs:subClassOf  [ a                   owl:Restriction ;
+                           owl:maxCardinality  "1"^^xsd:nonNegativeInteger ;
+                           owl:onProperty      cap-iacs-aid:agriculturalPracticeId
+                         ] ;
+        rdfs:subClassOf  [ a                owl:Restriction ;
+                           owl:cardinality  "1"^^xsd:nonNegativeInteger ;
+                           owl:onProperty   cap-iacs-aid:detailsOfAgriculturalPracticesForOnTheSpotCheck
+                         ] ;
+        skos:definition  "Agricultural Practice\r\n\r\nFarmers entitled to a payment under BPS/ SAPS shall observe, on all their eligible hectares within the meaning of Article 32(2) to (5), the agricultural practices beneficial for the climate and the environment."@en .
+
+cap-iacs-aid:applicationDetailsForReconversion
+        a           owl:ObjectProperty ;
+        rdfs:range  cap-iacs-aid:ReconvertingObligation .
+
+cap-iacs-aid:equivalentAgriculturalPracticeRequirement
+        a                owl:ObjectProperty ;
+        rdfs:label       "The subtype of equivalent agricultural practice, requirement"@en ;
+        rdfs:range       cap-iacs-aid:AgriculturalEquivalentPracticeRequirementValue ;
+        skos:definition  "Equivalent agricultural practice requirement\r\n\r\nRequirement against the equivalent agricultural practice as detailed in Annex IX of R 1307/2013.\r\n\r\nThe values of requirements are given in the AgriculturalEquivalentPracticeRequirementValue code list."@en .
+
+cap-iacs-aid:geometrySource
+        a                owl:ObjectProperty ;
+        rdfs:label       "Geometry source"@en ;
+        rdfs:range       cap-iacs-aid:GeometrySourceValue ;
+        skos:definition  "-- Definition --\r\nGeometry source.\r\n-- Description --\r\nSurvey or measurement geometry source."@en .
+
+cap-iacs-aid:ecologicalFocusAreaConvertedWithinApplication
+        a           owl:ObjectProperty ;
+        rdfs:range  cap-iacs-aid:Application .
+
+cap-iacs-aid:Payment  a  owl:Class ;
+        rdfs:label       "Payment"@en ;
+        rdfs:subClassOf  gsp:Feature ;
+        rdfs:subClassOf  [ a                owl:Restriction ;
+                           owl:cardinality  "1"^^xsd:nonNegativeInteger ;
+                           owl:onProperty   cap-iacs-aid:advance
+                         ] ;
+        rdfs:subClassOf  [ a                   owl:Restriction ;
+                           owl:maxCardinality  "11"^^xsd:nonNegativeInteger ;
+                           owl:onProperty      cap-iacs-aid:supportSchemaType
+                         ] ;
+        rdfs:subClassOf  [ a                   owl:Restriction ;
+                           owl:minCardinality  "1"^^xsd:nonNegativeInteger ;
+                           owl:onProperty      cap-iacs-aid:supportSchemaType
+                         ] ;
+        rdfs:subClassOf  [ a                owl:Restriction ;
+                           owl:cardinality  "1"^^xsd:nonNegativeInteger ;
+                           owl:onProperty   cap-iacs-aid:paymentDetailsForFarmer
+                         ] ;
+        rdfs:subClassOf  [ a                   owl:Restriction ;
+                           owl:minCardinality  "1"^^xsd:nonNegativeInteger ;
+                           owl:onProperty      cap-iacs-aid:paymentDetailsForAdministrativeChecks
+                         ] ;
+        skos:definition  "-- Definition --\r\nPayment.\r\n-- Description --\r\nOne payment, one application, one farmer. Place holder for payment schema specific attributes. Container of variables collected from: application (Declared), controls (Determined) and from RDMBS operators (Calculated)."@en .
+
+cap-iacs-aid:ecologicalFocusAreaType
+        a                owl:ObjectProperty ;
+        rdfs:label       "Type of ecological focus area for collective implementation"@en ;
+        rdfs:range       cap-iacs-aid:EcologicalFocusAreaTypeCollectiveValue ;
+        skos:definition  "-- Definition --\r\nType of ecological focus area for collective implementation.\r\n-- Description --\r\nNot all type of ecological focus area are suitable for collective implementation."@en .
+
+cap-iacs-aid:intoPermanentGrassland
+        a                owl:DatatypeProperty ;
+        rdfs:range       xsd:boolean ;
+        skos:definition  "Into permanent grassland\r\n\r\nPossible value of the reconverting obligation\r\n\r\nNOTE\r\nIntoPermanentGrassland  and the IntoSensitivePermanentGrassland are mutually exclusive values."@en .
+
+cap-iacs-aid:applicationsInTheStratum
+        a           owl:ObjectProperty ;
+        rdfs:range  cap-iacs-control:SamplingStratum .
+
+cap-iacs-aid:detailsOfCropGroupGreeningForPayment
+        a           owl:ObjectProperty ;
+        rdfs:range  cap-iacs-aid:Payment .
+
+cap-iacs-aid:CropValue
+        a                owl:Class ;
+        rdfs:label       "List of crops"@en ;
+        rdfs:subClassOf  skos:Concept ;
+        skos:definition  "Crop value\r\n\r\nList of  crops in sense of Art. 44(4) of R (EU) 809/2014  that is needed for checking crop diversification.\r\n\r\nNOTE\r\nRequired if cropGroupTypeGreening = certainCrop."@en .
+
+cap-iacs-aid:collectiveImplementationDetailsForEcologicalFocusAreas
+        a           owl:ObjectProperty ;
+        rdfs:range  cap-iacs-parcel:EcologicalFocusArea .
+
+cap-iacs-aid:supportSchemaType
+        a                owl:ObjectProperty ;
+        rdfs:label       "Support schema type"@en ;
+        rdfs:range       cap-iacs-base:SupportSchemeTypeValue ;
+        skos:definition  "-- Definition --\r\nSupport schema type.\r\n-- Description --\r\nSupport schema types (based on Annex I 1307/2013) used in application.\r\nNOTE. Currently in this model version only maximum 11 support schemas have data place holders."@en .
+
+cap-iacs-aid:farmersSurveyFeatureType
+        a                owl:ObjectProperty ;
+        rdfs:label       "Geometry source"@en ;
+        rdfs:range       cap-iacs-aid:FarmersSurveyFeatureTypeValue ;
+        skos:definition  "-- Definition --\r\nFeature type measured by farmer.\r\n-- Description --\r\nFeature type measured by farmer."@en .
+
+cap-iacs-aid:paymentDetailsForAdministrativeChecks
+        a           owl:ObjectProperty ;
+        rdfs:range  cap-iacs-control:AdministrativeCheck .
+
+cap-iacs-aid:CrossCompliance
+        a                owl:Class ;
+        rdfs:label       "Cross-compliance"@en ;
+        rdfs:subClassOf  gsp:Feature ;
+        rdfs:subClassOf  [ a                owl:Restriction ;
+                           owl:cardinality  "1"^^xsd:nonNegativeInteger ;
+                           owl:onProperty   cap-iacs-aid:crossComplianceRule
+                         ] ;
+        rdfs:subClassOf  [ a                   owl:Restriction ;
+                           owl:minCardinality  "1"^^xsd:nonNegativeInteger ;
+                           owl:onProperty      cap-iacs-aid:crossComplianceRulesForLandscapeFeatures
+                         ] ;
+        rdfs:subClassOf  [ a                owl:Restriction ;
+                           owl:cardinality  "1"^^xsd:nonNegativeInteger ;
+                           owl:onProperty   cap-iacs-aid:detailsOfCrossComplianceForOnTheSpotCheck
+                         ] ;
+        skos:definition  "-- Definition --\r\nCross-compliance data.\r\n-- Description --\r\nCross-compliance data."@en .
+
+cap-iacs-aid:Application
+        a                owl:Class ;
+        rdfs:label       "Application"@en ;
+        rdfs:subClassOf  gsp:Feature ;
+        rdfs:subClassOf  [ a                owl:Restriction ;
+                           owl:cardinality  "1"^^xsd:nonNegativeInteger ;
+                           owl:onProperty   cap-iacs-aid:submissionDate
+                         ] ;
+        rdfs:subClassOf  [ a                   owl:Restriction ;
+                           owl:maxCardinality  "1"^^xsd:nonNegativeInteger ;
+                           owl:onProperty      cap-iacs-aid:declaredEntitlementArea
+                         ] ;
+        rdfs:subClassOf  [ a                   owl:Restriction ;
+                           owl:minCardinality  "1"^^xsd:nonNegativeInteger ;
+                           owl:onProperty      cap-iacs-aid:applicationDetailsForAdministrativeChecks
+                         ] ;
+        rdfs:subClassOf  [ a                owl:Restriction ;
+                           owl:cardinality  "1"^^xsd:nonNegativeInteger ;
+                           owl:onProperty   cap-iacs-aid:declaredArea
+                         ] ;
+        rdfs:subClassOf  [ a                   owl:Restriction ;
+                           owl:maxCardinality  "1"^^xsd:nonNegativeInteger ;
+                           owl:onProperty      cap-iacs-aid:applicationDetailsOfOtscItems
+                         ] ;
+        rdfs:subClassOf  [ a                   owl:Restriction ;
+                           owl:minCardinality  "1"^^xsd:nonNegativeInteger ;
+                           owl:onProperty      cap-iacs-aid:applicationsInTheStratum
+                         ] ;
+        rdfs:subClassOf  [ a                   owl:Restriction ;
+                           owl:maxCardinality  "1"^^xsd:nonNegativeInteger ;
+                           owl:onProperty      cap-iacs-aid:applicationDetailsForReconversion
+                         ] ;
+        rdfs:subClassOf  [ a                owl:Restriction ;
+                           owl:cardinality  "1"^^xsd:nonNegativeInteger ;
+                           owl:onProperty   cap-iacs-aid:requiredEcologicalFocusArea
+                         ] ;
+        rdfs:subClassOf  [ a                owl:Restriction ;
+                           owl:cardinality  "1"^^xsd:nonNegativeInteger ;
+                           owl:onProperty   cap-iacs-aid:holdindSubmissionInAidApplicationDetails
+                         ] ;
+        rdfs:subClassOf  [ a                   owl:Restriction ;
+                           owl:minCardinality  "1"^^xsd:nonNegativeInteger ;
+                           owl:onProperty      cap-iacs-aid:supportSchemeType
+                         ] ;
+        rdfs:subClassOf  [ a                owl:Restriction ;
+                           owl:cardinality  "1"^^xsd:nonNegativeInteger ;
+                           owl:onProperty   cap-iacs-aid:declaredEcologicalFocusArea
+                         ] ;
+        rdfs:subClassOf  [ a                   owl:Restriction ;
+                           owl:maxCardinality  "1"^^xsd:nonNegativeInteger ;
+                           owl:onProperty      cap-iacs-aid:withdrawalDate
+                         ] ;
+        skos:definition  "Application\r\n\r\nDocumentation of this feature type will be provided in frame of development of the Applications and payment claims application schema.\r\n\r\nNOTE\r\nThis feature type is currently a draft."@en .
+
+cap-iacs-aid:supportSchemeType
+        a                owl:ObjectProperty ;
+        rdfs:label       "Support schema type"@en ;
+        rdfs:range       cap-iacs-base:SupportSchemeTypeValue ;
+        skos:definition  "-- Definition --\r\nSupport schema type.\r\n-- Description --\r\nSupport schema types (based on Annex I 1307/2013) used in application.\r\nNOTE. Currently in this model version only maximum 11 schemas have data place holders."@en .
+
+cap-iacs-aid:declaredArea
+        a                owl:DatatypeProperty ;
+        rdfs:label       "Area declared"@en ;
+        rdfs:range       om:Measure ;
+        skos:definition  "-- Definition --\r\nArea declared.\r\n-- Description --\r\nAs regards the area-related direct payment, each Member State shall determine the minimum size of agricultural parcels in respect of which an application may be made. However, the minimum size shall not exceed 0,3 ha."@en .
+
+cap-iacs-aid:agriculturalEquivalentPracticeType
+        a                owl:ObjectProperty ;
+        rdfs:label       "Type of equivalent agricultural practice"@en ;
+        rdfs:range       cap-iacs-aid:AgriculturalEquivalentPracticeTypeValue ;
+        skos:definition  "Agricultural equivalent practice type\r\n\r\nType of equivalent agricultural practice in sense of Art. 43(3) of R 1307/2013.\r\n\r\nThe values of equivalent practice types are given in the AgriculturalEquivalentPraciceType code list."@en .
+
+cap-iacs-aid:withdrawalDate
+        a                owl:DatatypeProperty ;
+        rdfs:label       "Application correction date"@en ;
+        rdfs:range       xsd:date ;
+        skos:definition  "Withdrawal date\r\n\r\nWhere the competent authority has not yet informed the beneficiary of any errors contained in the aid application or payment claim nor announced an on-the-spot check, beneficiaries should be entitled to withdraw their aid applications [Preamble (3)and Art 3(2) of R 809/2014 ."@en .
+
+cap-iacs-aid:metadata
+        a                owl:ObjectProperty ;
+        rdfs:range       cap-iacs-base:FeatureLevelMetadata ;
+        skos:definition  "Metadata\r\n\r\nFeature level metadata of the reconverting obligation. \r\n\r\nNOTE\r\nThis property brings the life cycle and the validity information of reconverting obligation, which also permits to register when the obligation was implemented by the farmer.  As soon as the reconversion happens, the life cycle of he obligation should end."@en .
+
+cap-iacs-aid:reconversionObliationDetails
+        a           owl:ObjectProperty ;
+        rdfs:range  cap-iacs-control:OtscItem .
+
+cap-iacs-aid:AgriculturalEquivalentPracticeSubtypeValue
+        a                owl:Class ;
+        rdfs:label       "List of agricultural equivalent subpractices"@en ;
+        rdfs:subClassOf  skos:Concept ;
+        skos:definition  "Agricultural equivalent practice subtype value\r\n\r\nBroad categories of agricultural equivalent practices beneficial for the climate and the environment as listed in Annex IX of R 1307/2013."@en .
+
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid>
+        a                owl:Ontology ;
+        rdfs:label       "Aid applications and payment claims"@en ;
+        owl:imports      <https://github.com/HajoRijgersberg/OM/raw/master/om-2.0.rdf> , <http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control> , <http://www.opengis.net/ont/geosparql> , <http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-beneficiery> , <http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-parcel> , <http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-base> ;
+        owl:versionIRI   "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid/3.0" ;
+        owl:versionInfo  "3.0" ;
+        skos:definition  "-- Name --\r\nAid applications and payment claims\r\n\r\n-- Definition --\r\nThis is a placeholder.\r\n\r\n-- Description --\r\nAid applications and payment claims system application schema.The contents of an «ApplicationSchema» package exported as a GML Application Schema file."@en ;
+        dct:creator [ schema:affiliation [ foaf:name "PSNC" ] ;
+                      rdfs:seeAlso <http://orcid.org/0000-0003-4289-4922> ;
+                      foaf:name "Raul Palma"
+                    ] ;
+        dct:title "JRC IACS - Aid Applications and Payment Claims Ontology"@en ;
+        dct:description "Ontology of the aid applications and payment claims used in IACS, generated from the transformation of the corresponding JRC application schema"@en ;
+        dct:source "JRC IACS application schema. https://doi.org/10.1016/j.landusepol.2016.05.023"@en ;
+        dct:rights "This ontology is distributed under Creative Commons Attribution 4.0 License - http://creativecommons.org/licenses/by/4.0"@en .
+
+cap-iacs-aid:farmersMeasurementId
+        a                owl:DatatypeProperty ;
+        rdfs:label       "Unique thematic ID of farmers survey"@en ;
+        rdfs:range       xsd:string ;
+        skos:definition  "-- Definition --\r\nUnique thematic ID of farmer's measurement within a survey.\r\n-- Description --\r\nThematic identifier at national level, generally the full national code of the farmer's  measurement within a survey.\r\nNOTE. Object (real world phenomena) description. It may be the code of object measured."@en .
+
+cap-iacs-aid:agriculturalPracticeRequirementType
+        a                owl:ObjectProperty ;
+        rdfs:label       "Type of agricultural practice"@en ;
+        rdfs:range       cap-iacs-aid:AgriculturalPracticeRequirementValue ;
+        skos:definition  "Agricultural practice requirement type\r\n\r\nThis property describes the agricultural practices required for minimum activity (Art. 4) and greening, or for exemption from greening according to  Art. (44) and 46 of R (EU) 1307/2013."@en .
+
+cap-iacs-aid:estimatedAccuracy
+        a                owl:DatatypeProperty ;
+        rdfs:label       "Estimated absolute positional accuracy "@en ;
+        rdfs:range       xsd:double ;
+        skos:definition  "-- Definition --\r\nEstimated absolute positional accuracy.\r\n-- Description --\r\nEstimated absolute positional accuracy of the object measured in the used coordinate reference system. Absolute positional accuracy is the mean value of the positional uncertainties for a set of positions, where the positional uncertainties are the distance between a measured position and what is considered as the corresponding true position. This mean value may come from quality measures on a homogeneous population of objects measured or from an estimation based on the knowledge of the production processes and of their accuracy."@en .
+
+cap-iacs-aid:GeometrySourceValue
+        a                owl:Class ;
+        rdfs:label       "List of geometry sources"@en ;
+        rdfs:subClassOf  skos:Concept ;
+        skos:definition  "-- Definition --\r\nList of geometry sources.\r\n-- Description --\r\nList of geometry sources."@en .
+
+cap-iacs-aid:collectiveImplementationDetailsForHoldingSites
+        a           owl:ObjectProperty ;
+        rdfs:range  cap-iacs-base:Site .
+
+cap-iacs-aid:detailsOfAgriculturalParcelsForCrossCompliance
+        a           owl:ObjectProperty ;
+        rdfs:range  cap-iacs-aid:CrossCompliance .
+
+cap-iacs-aid:paymentDetailsForFarmer
+        a           owl:ObjectProperty ;
+        rdfs:range  cap-iacs-beneficiery:Farmer .
+
+cap-iacs-aid:CropGroupTypeGreeningValue
+        a                owl:Class ;
+        rdfs:label       "List of payment crop groups"@en ;
+        rdfs:subClassOf  skos:Concept ;
+        skos:definition  "-- Definition --\r\nList of payment crop groups.\r\n-- Description --\r\nList of crop groups related with greening."@en .
+
+cap-iacs-aid:holdindSubmissionInAidApplicationDetails
+        a           owl:ObjectProperty ;
+        rdfs:range  cap-iacs-base:Holding .
+
+cap-iacs-aid:AgriculturalEquivalentPracticeTypeValue
+        a                owl:Class ;
+        rdfs:label       "List of agricultural equivalent practices requirements"@en ;
+        rdfs:subClassOf  skos:Concept ;
+        skos:definition  "Agricultural Equivalent Practice Type value\r\n\r\nValues of equivalent agricultural practice types in sense of Art. 43(3)(a) and (b) of R 1307/2013."@en .
+
+cap-iacs-aid:CropGroupAreaRelatedAidSchema
+        a                owl:Class ;
+        rdfs:label       "Payment crop group area related aid schema"@en ;
+        rdfs:subClassOf  gsp:Feature ;
+        rdfs:subClassOf  [ a                owl:Restriction ;
+                           owl:cardinality  "1"^^xsd:nonNegativeInteger ;
+                           owl:onProperty   cap-iacs-aid:declaredArea
+                         ] ;
+        rdfs:subClassOf  [ a                owl:Restriction ;
+                           owl:cardinality  "1"^^xsd:nonNegativeInteger ;
+                           owl:onProperty   cap-iacs-aid:cropGruopTypeAreaRelatedAidSchema
+                         ] ;
+        rdfs:subClassOf  [ a                owl:Restriction ;
+                           owl:cardinality  "1"^^xsd:nonNegativeInteger ;
+                           owl:onProperty   cap-iacs-aid:detailsOfCropGroupAreaRelatedAidSchemaForPayment
+                         ] ;
+        rdfs:subClassOf  [ a                owl:Restriction ;
+                           owl:cardinality  "1"^^xsd:nonNegativeInteger ;
+                           owl:onProperty   cap-iacs-aid:cropGroupAreaRelatedAidSchemaDetailsInAidApplication
+                         ] ;
+        skos:definition  "-- Definition --\r\nPayment crop group area related aid schema.\r\n-- Description --\r\nCrop groups (in the context of IACS). Automatically defined and agregated by administration using application entries. This is placeholder for all payment schemas (except \"greening\", which have different place holder named CropGroupGreening) and area-related support measures (area-related support measures - in current version of the model not implemented yet)."@en .
+
+cap-iacs-aid:agriculturalPracticeId
+        a                owl:DatatypeProperty ;
+        rdfs:label       "Unique thematic ID of agricultural practice"@en ;
+        rdfs:range       xsd:string ;
+        skos:definition  "Unique thematic ID of agricultural practice\r\n\r\nThematic identifier at national level, generally the full national code of the agricultural practice."@en .
+
+cap-iacs-aid:geometry
+        a                owl:ObjectProperty ;
+        rdfs:label       "Geometry of agricultural area"@en ;
+        rdfs:range       gsp:Geometry ;
+        skos:definition  "-- Definition --\r\nGeometry of agricultural parcel.\r\n-- Description --\r\nRepresentation of the geographical dimension/position of the agricultural parcel.\r\nNOTE. In case of GM_Point geometry - clementini point should be used."@en .

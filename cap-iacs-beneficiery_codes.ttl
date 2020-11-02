@@ -1,0 +1,52 @@
+@prefix dct:   <http://purl.org/dc/terms/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix cap-iacs-beneficiery: <http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-beneficiery#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix cap-iacs-beneficierycode: <http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-beneficiery/code#> .
+
+cap-iacs-beneficierycode:FarmerTypeValue
+        a                skos:ConceptScheme ;
+        rdfs:label       "List of farmer type values"@en ;
+        dct:isFormatOf   cap-iacs-beneficiery:FarmerTypeValue ;
+        skos:definition  "-- Definition --\r\nList of farmer type values.\r\n-- Description --\r\nList of possible farmer type values based on Actor model (Dynamic Model)."@en .
+
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-beneficiery/code#FarmerTypeValue/farmerActive>
+        a                cap-iacs-beneficiery:FarmerTypeValue ;
+        rdfs:label       "Active farmer"@en ;
+        skos:definition  "-- Definition --\r\nActive farmer.\r\n-- Description --\r\nItem description.\r\nNOTE 1. Item note.\r\nEXAMPLE 1. Item example."@en ;
+        skos:inScheme    cap-iacs-beneficierycode:FarmerTypeValue .
+
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-beneficiery/code#FarmerTypeValue/farmer>
+        a                cap-iacs-beneficiery:FarmerTypeValue ;
+        rdfs:label       "Farmer"@en ;
+        skos:definition  "-- Definition --\r\nFarmer.\r\n-- Description --\r\nItem description.\r\nNOTE 1. Item note.\r\nEXAMPLE 1. Item example."@en ;
+        skos:inScheme    cap-iacs-beneficierycode:FarmerTypeValue .
+
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-beneficiery/code#FarmerTypeValue/farmerActiveApplicant>
+        a                cap-iacs-beneficiery:FarmerTypeValue ;
+        rdfs:label       "Active farmer who is applicant"@en ;
+        skos:definition  "-- Definition --\r\nActive farmer who is applicant.\r\n-- Description --\r\nItem description.\r\nNOTE 1. Item note.\r\nEXAMPLE 1. Item example."@en ;
+        skos:inScheme    cap-iacs-beneficierycode:FarmerTypeValue .
+
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-beneficiery/code#FarmerTypeValue/farmerActiveApplicantBeneficiery>
+        a                cap-iacs-beneficiery:FarmerTypeValue ;
+        rdfs:label       "Active farmer who is applicant and beneficiery"@en ;
+        skos:definition  "-- Definition --\r\nActive farmer who is applicant and beneficiary.\r\n-- Description --\r\nActive farmer who is applicant and receiving the aid - beneficiary."@en ;
+        skos:inScheme    cap-iacs-beneficierycode:FarmerTypeValue .
+
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-beneficiery/code>
+        a       owl:Ontology ;
+        rdfs:label       "System to record the identity of each beneficiary code lists"@en ;
+        owl:versionIRI   "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-base/code/3.0" ;
+        owl:versionInfo  "3.0" ;
+        dct:creator [ schema:affiliation [ foaf:name "PSNC" ] ;
+                      rdfs:seeAlso <http://orcid.org/0000-0003-4289-4922> ;
+                      foaf:name "Raul Palma"
+                    ] ;
+        dct:title "JRC IACS - System to Record the Identity of Each Beneficiary Code Lists"@en ;
+        dct:description "Ontology of the system to record the identity of each beneficiary code lists used in IACS, generated from the transformation of the corresponding JRC application schema"@en ;
+        dct:source "JRC IACS application schema. https://doi.org/10.1016/j.landusepol.2016.05.023"@en ;
+        dct:rights "This ontology is distributed under Creative Commons Attribution 4.0 License - http://creativecommons.org/licenses/by/4.0"@en .

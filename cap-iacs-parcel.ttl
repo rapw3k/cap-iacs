@@ -1,0 +1,1642 @@
+@prefix cap-iacs-parcel: <http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-parcel#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix gsp:   <http://www.opengis.net/ont/geosparql#> .
+@prefix cap-iacs-aid: <http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix om:    <http://www.ontology-of-units-of-measure.org/resource/om-2/> .
+@prefix cap-iacs-base: <http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-base#> .
+
+cap-iacs-parcel:lpisLotSize
+        a                owl:DatatypeProperty ;
+        rdfs:label       "The size of LPIS lot"@en ;
+        rdfs:range       xsd:integer ;
+        skos:definition  "--Name--\r\nLPIS lot size\r\n\r\n-- Definition --\r\nNumber of items in a lot [ISO 2859-1:1999].\r\n\r\n-- Description --\r\nIt is the number of reference parcels within the LPIS lot."@en .
+
+cap-iacs-parcel:homogeneityTypeDocument
+        a                owl:ObjectProperty ;
+        rdfs:label       "Homogeinity type documenation"@en ;
+        rdfs:range       cap-iacs-base:SupplementaryDocument ;
+        skos:definition  "--Name--\r\nHomogeneity document\r\n\r\n-- Definition --\r\nDocument defining the homogeneity type.\r\n\r\n-- Description --\r\nDocument describing criteria for the homogeneity type applied for defining EFA regions.\r\n\r\nNOTE: When EFA regions are applied the homogeneity criterion shall be clarified either using a citation or by a supplementary document."@en .
+
+cap-iacs-parcel:ecologicalFocusArea
+        a                owl:DatatypeProperty ;
+        rdfs:label       "Area of ecological focus area"@en ;
+        rdfs:range       om:Measure ;
+        skos:definition  "--Name--\r\nEcological focus area\r\n\r\n-- Definition --\r\nOfficial area of EFA that can be accounted for fulfilling the obligation detailed in Art. 46(1) of (EU) R No 1307/2013.\r\n\r\n-- Description --\r\nThis is the area value after applying the eventual conversion and weighting factors (DSCG/2014/31).\r\n\r\nNOTE 1: According to DSCG/2014/31 \r\n- Established area: Area resulting from direct field measurement or from delineation using ortho imagery\r\n- Converted area: Virtual area of EFAs obtained when using the conversion factors of Annex II of Regulation (EU) No 639/2014.\r\n- Weighted area: Virtual area of EFAs obtained after multiplying the established area or the converted area by the weighting factor of Annex II of Regulation (EU) No 639/2014.\r\n\r\nNOTE 2: EFA area shall be given in ha."@en .
+
+cap-iacs-parcel:conversionParameterForDeterminationOfEcologicalFocusArea
+        a           owl:ObjectProperty ;
+        rdfs:range  cap-iacs-aid:EcologicalFocusAreaConverted .
+
+cap-iacs-parcel:CriticalDefect
+        a                owl:Class ;
+        rdfs:label       "Critical defect"@en ;
+        rdfs:subClassOf  gsp:Feature ;
+        rdfs:subClassOf  [ a                owl:Restriction ;
+                           owl:cardinality  "1"^^xsd:nonNegativeInteger ;
+                           owl:onProperty   cap-iacs-parcel:criticalDefectCause
+                         ] ;
+        rdfs:subClassOf  [ a                owl:Restriction ;
+                           owl:cardinality  "1"^^xsd:nonNegativeInteger ;
+                           owl:onProperty   cap-iacs-parcel:criticalDefectType
+                         ] ;
+        rdfs:subClassOf  [ a                   owl:Restriction ;
+                           owl:maxCardinality  "1"^^xsd:nonNegativeInteger ;
+                           owl:onProperty      cap-iacs-parcel:geometry
+                         ] ;
+        rdfs:subClassOf  [ a                owl:Restriction ;
+                           owl:cardinality  "1"^^xsd:nonNegativeInteger ;
+                           owl:onProperty   cap-iacs-parcel:itemCriticalDefectDetails
+                         ] ;
+        skos:definition  "--Name--\r\nCritical defect\r\n\r\n-- Definition --\r\nCritical defect is a non-conformance  that obstructs the use of the item under inspection regarding the unambiguous localization of agricultural parcels, or the unique identification for cross-checks (Wikicap).\r\n\r\n-- Description --\r\nThe usability of the RP can be obstructed by misclassification of the LC (no agricultural land present in the RP), by violating the design (semantic definition) if the LPIS or by processing errors within LPIS."@en .
+
+cap-iacs-parcel:efaItemUnderInspectionCompositionDetails
+        a           owl:ObjectProperty ;
+        rdfs:range  cap-iacs-parcel:EfaItemUnderInspection .
+
+cap-iacs-parcel:efaReport
+        a                owl:ObjectProperty ;
+        rdfs:label       "EFA report"@en ;
+        rdfs:range       cap-iacs-base:SupplementaryDocument ;
+        skos:definition  "--Name--\r\nEFA quality assessment report\r\n\r\n-- Definition --\r\nThis is a placeholder only; currently not to be implemented.\r\n\r\n-- Description --\r\nReport summarising the results of the EFA inspection, the quality elements and their evaluation."@en .
+
+cap-iacs-parcel:landCover
+        a                owl:ObjectProperty ;
+        rdfs:label       "Land cover"@en ;
+        rdfs:range       cap-iacs-parcel:AgriculturalAreaTypeValue ;
+        skos:definition  "--Name--\r\nLand cover\r\n\r\n--Definition--\r\nClassification of the LC according to the types defined in the eligibility profile.\r\n\r\n-- Description --\r\nIdentifiable instances of a land cover type listed in the eligibility profile located within the item under inspection. The value of this attribute has to be taken from the AgriculturalAreaValueType code list.\r\n\r\nNOTE. Land cover classes with different pro-rata coefficients constitute separate land cover classes."@en .
+
+cap-iacs-parcel:efaSampleDetailsForItemsUnderInspectionEfa
+        a           owl:ObjectProperty ;
+        rdfs:range  cap-iacs-parcel:EfaItemUnderInspection .
+
+cap-iacs-parcel:ContaminationTypeValue
+        a                owl:Class ;
+        rdfs:label       "Contamination type value list"@en ;
+        rdfs:subClassOf  skos:Concept ;
+        skos:definition  "--Name--\r\nContamination type value\r\n\r\n-- Definition --\r\nList of contamination type values.\r\n\r\n-- Description --\r\nNOTE: the code list is centrally managed by the Commission services and cannot be extended by MS/Regions."@en .
+
+cap-iacs-parcel:contaminationType
+        a                owl:ObjectProperty ;
+        rdfs:label       "Type of contamination"@en ;
+        rdfs:range       cap-iacs-parcel:ContaminationTypeValue ;
+        skos:definition  "--Name--\r\nContamination type\r\n\r\n-- Definition --\r\nClassification of contamination types.\r\n\r\n-- Description --\r\nContamination types are defined according to the ContaminationTypeValues code list."@en .
+
+cap-iacs-parcel:DataQualityMeasureTypeIuiEfaValue
+        a                owl:Class ;
+        rdfs:label       "IUI EFA data quality measure type list"@en ;
+        rdfs:subClassOf  skos:Concept ;
+        skos:definition  "--Name--\r\nData quality measure types applicable to EFA items\r\n\r\n-- Definition --\r\nThis is a placeholder only; currently not to be implemented.\r\n\r\n-- Description --\r\nData quality measure type list for items under inspection.\r\nNOTE. Full description of each value must be provided in DQM_Measure."@en .
+
+cap-iacs-parcel:etsItemUnderInspectionWithinEtsSampleDetails
+        a           owl:ObjectProperty ;
+        rdfs:range  cap-iacs-parcel:EtsSample .
+
+cap-iacs-parcel:homogeneityType
+        a                owl:ObjectProperty ;
+        rdfs:label       "Homogeneity type"@en ;
+        rdfs:range       cap-iacs-parcel:HomogeneityTypeValue ;
+        skos:definition  "--Name--\r\nHomogeneity type\r\n\r\n-- Definition --\r\nHomogeneity type for single and homogenous geographical areas with similar agricultural and environmental conditions as referred to Art. 46(1) of (EU) R 639/2014.\r\n\r\n-- Description --\r\nThe values of homogeneity type shall be taken from the centrally managed code list provided in LCM."@en .
+
+cap-iacs-parcel:elementlId
+        a                owl:DatatypeProperty ;
+        rdfs:label       "Unique thematic ID of SUT element"@en ;
+        rdfs:range       xsd:string ;
+        skos:definition  "--Name--\r\nElement identifier\r\n\r\n-- Definition --\r\nUnique thematic ID of SUT.\r\n\r\n-- Description --\r\nNation-wide unique alphanumerical thematic identification of SUT. It can be a unique name or a unique code of the eligibility profile."@en .
+
+cap-iacs-parcel:unit  a  owl:DatatypeProperty ;
+        rdfs:label       "Measurement unit"@en ;
+        rdfs:range       xsd:string ;
+        skos:definition  "--Name--\r\nUnit of measure\r\n\r\n-- Definition --\r\nUnits of measures applicable for conversion parameters\r\n\r\n-- Description --\r\nThe unit of measures of conversion parameters shall be define in such way that the product of the unit of measure used for EFA geometry and the conversion factor result in square meters.\r\n\r\nNOTE 1. For linear elements the unit of measure of conversion factor shall be meter.\r\n\r\nNOTE 2. For point element the unit of measure of conversion factor shall be square meter."@en .
+
+cap-iacs-parcel:LandscapeFeature
+        a                owl:Class ;
+        rdfs:label       "Landscape feature"@en ;
+        rdfs:subClassOf  gsp:Feature ;
+        rdfs:subClassOf  [ a                   owl:Restriction ;
+                           owl:maxCardinality  "1"^^xsd:nonNegativeInteger ;
+                           owl:onProperty      cap-iacs-parcel:landscapeFeatureArea
+                         ] ;
+        rdfs:subClassOf  [ a                   owl:Restriction ;
+                           owl:maxCardinality  "1"^^xsd:nonNegativeInteger ;
+                           owl:onProperty      cap-iacs-parcel:geometry
+                         ] ;
+        rdfs:subClassOf  [ a                owl:Restriction ;
+                           owl:cardinality  "1"^^xsd:nonNegativeInteger ;
+                           owl:onProperty   cap-iacs-parcel:landscapeFeatureType
+                         ] ;
+        rdfs:subClassOf  [ a                   owl:Restriction ;
+                           owl:maxCardinality  "1"^^xsd:nonNegativeInteger ;
+                           owl:onProperty      cap-iacs-parcel:landscapeFeatureForEcologicalFocusArea
+                         ] ;
+        rdfs:subClassOf  [ a                owl:Restriction ;
+                           owl:cardinality  "1"^^xsd:nonNegativeInteger ;
+                           owl:onProperty   cap-iacs-parcel:landscapeFeatureDetailsForCrossCompliance
+                         ] ;
+        skos:definition  "--Name--\r\nLandscape feature\r\n\r\n-- Definition--\r\nElements of the agricultural area that are traditionally part of good agriculture cropping or utilization practices [Regulation (EU) 640/2014 Art. 9(1)].\r\n\r\n-- Description --\r\nAny landscape feature subject to the requirements and standards listed in Annex II to Regulation (EU) No 1306/2013 which forms part of the total area of an agricultural parcel shall be considered part of the eligible area."@en .
+
+cap-iacs-parcel:weightingFactor
+        a                owl:DatatypeProperty ;
+        rdfs:label       "Weighting factor"@en ;
+        rdfs:range       xsd:double ;
+        skos:definition  "--Name--\r\nWeighting factor\r\n\r\n-- Definition --\r\nParameter in sense of Art. 43(3) of R (EU) 1307/2013  used for calculating the total hectares represented by the ecological focus area.\r\n\r\n-- Description --\r\nValues indicated in the weighting factor column of the table presented in Annex X of R (EU) 639/2014.\r\n\r\nNOTE 1\r\nWhen the weighting of less than 1 is applied, the use of the weighting factors set out in Annex X of Regulation (EU) 639/2014 shall be mandatory.\r\n\r\nNOTE 2\r\nRegulation (EU) No 1001/2014 has change the weighting factor for nitrogen fixing crops from 0,3 to 0,7."@en .
+
+cap-iacs-parcel:metadata
+        a                owl:ObjectProperty ;
+        rdfs:label       "Feature-level metadata"@en ;
+        rdfs:range       cap-iacs-base:FeatureLevelMetadata ;
+        skos:definition  "--Name--\r\nMetadata\r\n\r\n-- Definition --\r\nFeature-level metadata are attributes of a feature type that is used to store auxiliary information about the data record belonging to that type\r\n\r\n-- Description --\r\nFeature level metadata can include information about the life-cycle, status, data quality, usability, responsible entity, etc."@en .
+
+cap-iacs-parcel:SampleSizeValue
+        a                owl:Class ;
+        rdfs:label       "List of possible sample size values"@en ;
+        rdfs:subClassOf  skos:Concept ;
+        owl:oneOf        ( <http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-parcel/code#SampleSizeValue/1250> <http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-parcel/code#SampleSizeValue/200> <http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-parcel/code#SampleSizeValue/500> <http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-parcel/code#SampleSizeValue/800> ) ;
+        skos:definition  "--Name--\r\nSample size value\r\n\r\n-- Definition --\r\nList of sample size values applicable for LPISQA.\r\n\r\n-- Description --\r\nThe sample size is selected as function of the lot size and the limiting quality defined in  ISO 2859-2:1985 (Sampling procedures for inspection by attributes, Part 2: Sampling plans indexed by limiting quality (LQ) for isolated lot inspection)."@en .
+
+cap-iacs-parcel:collectiveImplementationDocument
+        a                owl:ObjectProperty ;
+        rdfs:label       "Non-structured evidence - document"@en ;
+        rdfs:range       cap-iacs-base:SupplementaryDocument ;
+        skos:definition  "--Name--\r\nCollective implementation document\r\n\r\n-- Definition --\r\nAny record proving that EFA is subject to collective implementation as referred to in Art. 46(6) of (EU) R 1307/2013.\r\n\r\n-- Description --\r\nIf subjectToCollectiveImplementation=TRUE then a document or a citation proving that EFA is subject to collective implementation must be provided.\r\n\r\nEXAMPLE:  Supporting document might be:\r\n- designation of authorities addressed to the farmer;\r\n- contract of participants, etc.\r\n\r\nNOTE: Farmers participating in the collective implementation shall conclude a written agreement that includes details on the internal arrangements of financial compensation and as regards the administrative penalties in case of non-compliance on the common ecological focus area. [Art. 47(4) of (EU) R No 639/2014]."@en .
+
+cap-iacs-parcel:limitingQuality
+        a                owl:ObjectProperty ;
+        rdfs:label       "Default value of limiting quality parameter"@en ;
+        rdfs:range       cap-iacs-parcel:LimitingQualityValue ;
+        skos:definition  "--Name--\r\nLimiting quality \r\n\r\n-- Definition --\r\nSampling parameter (index) necessary for the definition of the acceptance values as function of a given sample size. \r\n\r\n-- Description --\r\nLimiting quality value shall be taken from the  corresponding enumeration. LQ applied for critical defects shall be 2,00. For any other conformance result LQ shall be 12,50."@en .
+
+cap-iacs-parcel:AgriculturalLand
+        a                owl:Class ;
+        rdfs:label       "Agricultural land"@en ;
+        rdfs:subClassOf  gsp:Feature ;
+        rdfs:subClassOf  [ a                owl:Restriction ;
+                           owl:cardinality  "1"^^xsd:nonNegativeInteger ;
+                           owl:onProperty   cap-iacs-parcel:dataQualityMeasureDocumentation
+                         ] ;
+        rdfs:subClassOf  [ a                owl:Restriction ;
+                           owl:cardinality  "1"^^xsd:nonNegativeInteger ;
+                           owl:onProperty   cap-iacs-parcel:itemAgriculturalLandDetails
+                         ] ;
+        rdfs:subClassOf  [ a                   owl:Restriction ;
+                           owl:maxCardinality  "1"^^xsd:nonNegativeInteger ;
+                           owl:onProperty      cap-iacs-parcel:geometry
+                         ] ;
+        rdfs:subClassOf  [ a                owl:Restriction ;
+                           owl:cardinality  "1"^^xsd:nonNegativeInteger ;
+                           owl:onProperty   cap-iacs-parcel:landCover
+                         ] ;
+        rdfs:subClassOf  [ a                owl:Restriction ;
+                           owl:cardinality  "1"^^xsd:nonNegativeInteger ;
+                           owl:onProperty   cap-iacs-parcel:determinedArea
+                         ] ;
+        rdfs:subClassOf  [ a                owl:Restriction ;
+                           owl:cardinality  "1"^^xsd:nonNegativeInteger ;
+                           owl:onProperty   cap-iacs-parcel:dataQualityMeasureResult
+                         ] ;
+        rdfs:subClassOf  [ a                owl:Restriction ;
+                           owl:cardinality  "1"^^xsd:nonNegativeInteger ;
+                           owl:onProperty   cap-iacs-parcel:misclassificationCause
+                         ] ;
+        rdfs:subClassOf  [ a                owl:Restriction ;
+                           owl:cardinality  "1"^^xsd:nonNegativeInteger ;
+                           owl:onProperty   cap-iacs-parcel:dataQualityMeasureType
+                         ] ;
+        skos:definition  "--Name--\r\nAgricultural land\r\n\r\n-- Definition--\r\nInventory of agricultural area types within the item of inspection according to the eligibility profile of the MS /region.  \r\n\r\n-- Description--\r\nThe eligibility profile is based on land cover types defined by the MS / region."@en .
+
+cap-iacs-parcel:abstractTestType
+        a                owl:ObjectProperty ;
+        rdfs:label       "Type of test"@en ;
+        rdfs:range       cap-iacs-parcel:TestTypeMtsValue ;
+        skos:definition  "--Name--\r\nAbstract test type\r\n\r\n-- Definition --\r\nReference to the abstract test case for which the executable test case(s) is (are) performed.\r\n\r\n-- Description --\r\nThe values of this attribute shall come from the TestTypeMtsValue code list. To one abstract test case at least one executable test case shall correspond."@en .
+
+cap-iacs-parcel:AgriculturalArea
+        a                owl:Class ;
+        rdfs:label       "Agricultural area"@en ;
+        rdfs:subClassOf  gsp:Feature ;
+        rdfs:subClassOf  [ a                   owl:Restriction ;
+                           owl:maxCardinality  "1"^^xsd:nonNegativeInteger ;
+                           owl:onProperty      cap-iacs-parcel:permanentGrasslandProRata
+                         ] ;
+        rdfs:subClassOf  [ a                owl:Restriction ;
+                           owl:cardinality  "1"^^xsd:nonNegativeInteger ;
+                           owl:onProperty   cap-iacs-parcel:agriculturalArea
+                         ] ;
+        rdfs:subClassOf  [ a                owl:Restriction ;
+                           owl:cardinality  "1"^^xsd:nonNegativeInteger ;
+                           owl:onProperty   cap-iacs-parcel:agriculturalAreaType
+                         ] ;
+        rdfs:subClassOf  [ a                owl:Restriction ;
+                           owl:cardinality  "1"^^xsd:nonNegativeInteger ;
+                           owl:onProperty   cap-iacs-parcel:agriculturalAreaWithinReferenceParcel
+                         ] ;
+        skos:definition  "--Name--\r\nAgricultural area\r\n\r\n-- Definition --\r\n\"Agricultural area\" means any area taken up by arable land, permanent grassland and permanent pasture, or permanent crops. Art. 4(1)(e) of R 1307/2013.\r\n\r\n-- Description --\r\nAreas taken by these land cover types, or their subtypes (narrower categories) comprising designated landscape features and/or trees included in these areas [DSCG/2014/33].\r\n\r\nNOTE 1: The distinction between the different types of agricultural area should be done in two ways depending on the situation:\r\n- By alphanumerical recording of the types and the corresponding area values as attributes of the reference parcel (RP),\r\n- By delineation (assigning geometries to each type within the RP).\r\n\r\nNOTE 2: For calculating greening obligations the area of LF shall be accounted as part of the \"parent\"  land cover type (i.e. LC type where they are embedded in or are adjacent to). In case a designated landscape feature lays at the boundary of two LC types its area shall be subdivided.\r\n\r\nNOTE 3: The maximum width of eligible LF  is 2 m, unless the LF has been designated under Art. 9(2) of R (EU) No 640/2014 as subject of cross compliance, or unless the MS notified about eligibility to the Commission before 09/12/2009.  \r\n\r\nNOTE 4:  The provisions of Art. 9(1) of Regulation (EU) No 640/2014 cannot apply to permanent grassland with landscape features and trees where the MS has decided to apply Art. 10 of the same Regulation (pro-rata system). \r\n\r\nNOTE 5:  Non agricultural areas (not taken up with the allowed LC types) above 100 sq.m. shall be excluded by delineation.\r\n\r\nNOTE 6: It is not necessary to deduct the area of a non agricultural area LC type when it is smaller than 100 sq.m. However, in course of OTSC and LPIS QA,  when the cumulative area (per type) of such smaller features is more than 100 sq.m., the deduction shall be applied.\r\n\r\nNOTE 7: Woods (in parcels not declared as short rotation coppice) should be interpreted as areas within an agricultural parcel with tree-cover (including bushes, etc.) preventing growth of vegetative under-storey suitable for grazing and should thus be excluded from the eligible area of the RP [DSCG/2014/33]. \r\n\r\nNOTE 8: MS shall define the maximum tree density to be applied when assessing eligibility together with the characteristics of the trees. Grazable trees on permanent grasslands should not be counted. Groups of threes shall not be spread over the whole area, but shall be excluded if bigger than 100 sq.m..\r\n\r\nNOTE 9: Each pro-rata category shall correspond to separate LC type."@en .
+
+cap-iacs-parcel:mtsItemUnderInspectionDetailsForExecutableTestCase
+        a           owl:ObjectProperty ;
+        rdfs:range  cap-iacs-base:ExecutableTestCase .
+
+cap-iacs-parcel:declaredArea
+        a                owl:DatatypeProperty ;
+        rdfs:label       "Area declared"@en ;
+        rdfs:range       om:Measure ;
+        skos:definition  "--Name--\r\nDeclared area\r\n\r\n-- Definition --\r\nArea declared by the farmer for the given reference parcel for the assessment year.\r\n\r\n--Description--\r\nThe value of declared area is taken from the aid application register of IACS IACS for the assessment year.\r\n\r\nNOTE 1. In our conceptual model this is the value of areaDeclared attribute. \r\n\r\nNOTE 2. The area value shall be given in hectares."@en .
+
+cap-iacs-parcel:numberOfInspectedEfa
+        a                owl:DatatypeProperty ;
+        rdfs:label       "Number of inspected EFA"@en ;
+        rdfs:range       xsd:integer ;
+        skos:definition  "--Name--\r\nNumber of inspected EFA eleemnts\r\n\r\n-- Definition --\r\nThis is a placeholder only; currently not to be implemented.\r\n\r\n-- Description --\r\nNumber of EFA, for which inspection was feasible."@en .
+
+cap-iacs-parcel:totalDeclaredAreaMeasuredItems
+        a                owl:DatatypeProperty ;
+        rdfs:label       "Total declared area of measured items"@en ;
+        rdfs:range       om:Measure ;
+        skos:definition  "--Name--\r\nTotal declared area of measured items\r\n\r\n--Definition --\r\nTotal declared area of measured items within LPIS sample.\r\n\r\n--Description --\r\nSum of the declared areas recorded in LPIS for measured items."@en .
+
+cap-iacs-parcel:elementName
+        a                owl:DatatypeProperty ;
+        rdfs:label       "Element name"@en ;
+        rdfs:range       xsd:NCName ;
+        skos:definition  "--Name--\r\nElement name\r\n\r\n--Definition--\r\nName of the data quality element for which quality is reported.\r\n\r\n--Description--\r\n\r\nThe data quality elements corresponding to the data quality measures are listed in the description of the specific DQM."@en .
+
+cap-iacs-parcel:homogeneityTypeCitation
+        a                owl:ObjectProperty ;
+        rdfs:range       cap-iacs-base:SupplementaryDocumentCitation ;
+        skos:definition  "--Name--\r\nHomogeneity document citation\r\n\r\n-- Definition --\r\nCitation of the document defining the homogeneity type.\r\n\r\n-- Description --\r\nCitation of the document describing criteria for the homogeneity type applied for defining EFA regions.\r\n\r\nNOTE 1: SDI solutions (links to registry items) are preferred.\r\n\r\nNOTE 2: When EFA regions are applied the homogeneity criterion shall be clarified either using a citation or by a supplementary document."@en .
+
+cap-iacs-parcel:dataQualityMeasureResult
+        a                owl:DatatypeProperty ;
+        rdfs:label       "Result of data quality measure"@en ;
+        rdfs:range       xsd:string ;
+        skos:definition  "--Name--\r\nData quality measure result\r\n\r\n-- Definition --\r\nValue or values that describes the result of the quality assessment process.\r\n\r\n-- Description --\r\nThis value can be a quantitative result, a conformance result, or descriptive result."@en .
+
+cap-iacs-parcel:parcelAggregation
+        a                owl:DatatypeProperty ;
+        rdfs:label       "Parcel aggregation"@en ;
+        rdfs:range       xsd:boolean ;
+        skos:definition  "--Name--\r\nParcel aggregation\r\n\r\n-- Definition --\r\nSubstitution of the single parcel targeted for inspection by an inspection item formed by the aggregation of reference parcels that represent the extension of agricultural land covering this single parcel.\r\n\r\n-- Description --\r\nThis method is mostly relevant to the LPIS based on cadastral and agricultural parcels. When a boundary section of the RP  cannot be measures because it is invisible, the item under inspection shall be extended till the visible  boundaries of each LC types present in the parcel. All observations and measurement shall be performed for this extended parcel, which is, in fact, and aggregate of parcels. The IDs of parcels that enter in aggregation shall be noted in the ETS observation report.\r\n\r\nNOTE: Parcel aggregation is frequently applicable for LPIS based on cadastral or agricultural parcels, but must be considered by all designs."@en .
+
+cap-iacs-parcel:CriticalDefectTypeValue
+        a                owl:Class ;
+        rdfs:label       "Critical defect type value"@en ;
+        rdfs:subClassOf  skos:Concept ;
+        skos:definition  "--Name--\r\nCritical defect type value\r\n\r\n-- Definition --\r\nList of critical defect type values.\r\n\r\n-- Description --\r\nList of error types leading to obstruction of usability of the item under inspection (critical defect)."@en .
+
+cap-iacs-parcel:numberOfLargeMeasuredItems
+        a                owl:DatatypeProperty ;
+        rdfs:label       "Number of large measured items"@en ;
+        rdfs:range       xsd:integer ;
+        skos:definition  "--Name--\r\nNumber of large measured items\r\n\r\n--Definition --\r\nNumber of items under inspection  with surfaceArea>1000 m2, for which delineation of land cover was feasible.\r\n\r\n-- Description --\r\nThe items  under inspection can correspond to single or aggregated parcels. A set of aggregated parcels counts as 1."@en .
+
+cap-iacs-parcel:example
+        a                owl:ObjectProperty ;
+        rdfs:label       "Example"@en ;
+        rdfs:range       cap-iacs-parcel:DataQualityMeasureDescription ;
+        skos:definition  "--Name--\r\nExample\r\n\r\n--Definition--\r\nIllustration of the use of a data quality measure.\r\n\r\n--Description--\r\nThe Commission Services provides illustrations of the use for the DQM proposed for LPISQA.  When and MS/region opts for other than these DQM, examples shall be given (otherwise can be omitted)."@en .
+
+cap-iacs-parcel:dataQualityMeasureDescription
+        a                owl:ObjectProperty ;
+        rdfs:label       "Description of data quality measure"@en ;
+        rdfs:range       cap-iacs-parcel:DataQualityMeasure ;
+        skos:definition  "--Name--\r\nData quality measure description\r\n\r\n-- Definition --\r\nThis is a placeholder only; currently not to be implemented.\r\n\r\nDescription of particular data quality measure.\r\n\r\n-- Description --\r\nExtended description of data quality measure.\r\nNOTE. Depends on selected dataQualityMeasureType."@en .
+
+cap-iacs-parcel:totalReferenceAreaMeasuredItems
+        a                owl:DatatypeProperty ;
+        rdfs:label       "Total reference / recorded area"@en ;
+        rdfs:range       om:Measure ;
+        skos:definition  "--Name--\r\nTotal reference area of measured items\r\n\r\n--Definition --\r\nTotal reference  area of measured items as is recorded in LPIS.\r\n\r\n--Description --\r\nSum of the reference areas recorded in LPIS for each measured item under inspection."@en .
+
+cap-iacs-parcel:numberOfInspectedItems
+        a                owl:DatatypeProperty ;
+        rdfs:label       "Number of inspected items"@en ;
+        rdfs:range       xsd:integer ;
+        skos:definition  "--Name--\r\nNumber of inspected items\r\n\r\n-- Definition --\r\nNumber of items, for which inspection was feasible.\r\n\r\n-- Description --\r\nThe items can correspond to single or aggregated parcels. A set of aggregated parcels counts as 1. The need for aggregation is defined as function of feasibility for measurement. Once an aggregated item is being measured, that item shall be inspected in full.\r\n\r\nNOTE. Number of inspected parcels shall not be less than the SampleSizeValue corresponding to limiting quality LQ=2."@en .
+
+cap-iacs-parcel:misclasificationCause
+        a                owl:ObjectProperty ;
+        rdfs:label       "Technical reasons for misclassification"@en ;
+        rdfs:range       cap-iacs-parcel:TechnicalReasonValue ;
+        skos:definition  "--Name--\r\nMisclassification cause.\r\n\r\n-- Definition --\r\nTechnical reasons for misclassification.\r\n\r\n-- Description --\r\nReason for misclassification shall be taken from the TechnicalReasonValue code list.\r\n  \r\nNOTE. MisclassificationCause shall be given when value of LandscapeFeature.dataQualityMeasureResult is FALSE (in present release only if: LandscapeFeature.dataQualityMeasyreType=classificationCorrectness)."@en .
+
+cap-iacs-parcel:efaMissclassificationCause
+        a                owl:ObjectProperty ;
+        rdfs:label       "Technical reasons for non-conformance"@en ;
+        rdfs:range       cap-iacs-parcel:TechnicalReasonValue ;
+        skos:definition  "--Name--\r\nArea non-conformance cause.\r\n\r\n-- Definition --\r\nThis is a placeholder only; currently not to be implemented.\r\n\r\n-- Description --\r\nTechnical reasons for non-conformance."@en .
+
+cap-iacs-parcel:referenceArea
+        a                owl:DatatypeProperty ;
+        rdfs:label       "Maximum eligable area"@en ;
+        rdfs:range       om:Measure ;
+        skos:definition  "--Name--\r\nReference area\r\n\r\n-- Definition --\r\nValue for the quantification of area as referred to in Art. 5(3) of (EU) R 640/2014.\r\n\r\n-- Description --\r\nOfficially known area of reference  parcel in hectare, which corresponds to the maximum area, for which an application can be made.\r\n\r\nNOTE 1:  Reference area value shall be expressed in hectares.\r\n/* Value of referenceArea shall be given in hectars. */\r\ninv: self.referenceArea.uom.uomSymbol='ha'\r\n\r\nNOTE 2: Reference area equals to MEA under BPS/SAPS [DSCG/2014/33]. For other payments schemes (e.g. voluntary coupled support) other MEA values may apply. Currently Annex I of regulation 1307/2013 define 11 support schema types.\r\n\r\nNOTE 3: When no pro-rata applies , the reference area corresponds to the geometric area within the 2% stability margin.\r\n\r\nNOTE 4:  Area reductions are subject of applying pro-rata system, or applying the  100 sq.m  limit for cumulative area of ineligible features of the same type.\r\n\r\nNOTE 5: It is not necessary to deduct the area of a non agricultural area LC type when it is smaller than 100 sq.m.. However, in course of LPISQA or OTSC, when the cumulative area (per type) of such smaller features is more, the deduction shall be applied.\r\n\r\nNOTE 6: Pro-rata shall be applied to \"clean\", homogenous LC  (E.g. after all ineligible features are excluded)."@en .
+
+cap-iacs-parcel:Contamination
+        a                owl:Class ;
+        rdfs:label       "Contamination"@en ;
+        rdfs:subClassOf  gsp:Feature ;
+        rdfs:subClassOf  [ a                owl:Restriction ;
+                           owl:cardinality  "1"^^xsd:nonNegativeInteger ;
+                           owl:onProperty   cap-iacs-parcel:contaminationCause
+                         ] ;
+        rdfs:subClassOf  [ a                owl:Restriction ;
+                           owl:cardinality  "1"^^xsd:nonNegativeInteger ;
+                           owl:onProperty   cap-iacs-parcel:waivered
+                         ] ;
+        rdfs:subClassOf  [ a                owl:Restriction ;
+                           owl:cardinality  "1"^^xsd:nonNegativeInteger ;
+                           owl:onProperty   cap-iacs-parcel:geometry
+                         ] ;
+        rdfs:subClassOf  [ a                owl:Restriction ;
+                           owl:cardinality  "1"^^xsd:nonNegativeInteger ;
+                           owl:onProperty   cap-iacs-parcel:contaminationType
+                         ] ;
+        rdfs:subClassOf  [ a                owl:Restriction ;
+                           owl:cardinality  "1"^^xsd:nonNegativeInteger ;
+                           owl:onProperty   cap-iacs-parcel:itemContaminationDetails
+                         ] ;
+        skos:definition  "--Name--\r\nContamination\r\n\r\n-- Definition --\r\nUnaccounted non-agricultural land cover features partly or totally located inside the item under inspection (Wikicap).\r\n\r\n-- Description --\r\nInstances of LC types that are not included in the eligibility profile. The contaminations shall be classified according to the ContaminationTypeValue code list. A contamination indicates that there is an issue with the parcel that should be further assesses (triggers an anomaly and a potential update of the parcel).\r\n\r\nNOTE 1. Each contamination shall open an anomaly instance.\r\n\r\nNOTE2. Each detected contamination is instantiated as a separate non-conformity from ETS v6.0.\r\n\r\nNOTE 3. The concept of contamination is applicable only for those item under inspection that have \"true\" value of area conformity."@en .
+
+cap-iacs-parcel:dataQualityMeasureType
+        a                owl:ObjectProperty ;
+        rdfs:label       "Type of data quality measure"@en ;
+        rdfs:range       cap-iacs-parcel:DataQualityMeasureTypeIuiValue ;
+        skos:definition  "--Name--\r\nData quality measure type\r\n\r\n-- Definition --\r\nList of data quality measures applied in LPISQA.\r\n\r\n-- Description --\r\nData Quality measures shall be selected from DataQualityMeasureTypeIuiValue."@en .
+
+cap-iacs-parcel:CriticalDefectEfa
+        a                owl:Class ;
+        rdfs:label       "Critical defect"@en ;
+        rdfs:subClassOf  gsp:Feature ;
+        rdfs:subClassOf  [ a                   owl:Restriction ;
+                           owl:maxCardinality  "1"^^xsd:nonNegativeInteger ;
+                           owl:onProperty      cap-iacs-parcel:criticalDefectCause
+                         ] ;
+        rdfs:subClassOf  [ a                owl:Restriction ;
+                           owl:cardinality  "1"^^xsd:nonNegativeInteger ;
+                           owl:onProperty   cap-iacs-parcel:criticalDefectType
+                         ] ;
+        rdfs:subClassOf  [ a                   owl:Restriction ;
+                           owl:maxCardinality  "1"^^xsd:nonNegativeInteger ;
+                           owl:onProperty      cap-iacs-parcel:geometry
+                         ] ;
+        rdfs:subClassOf  [ a                owl:Restriction ;
+                           owl:cardinality  "1"^^xsd:nonNegativeInteger ;
+                           owl:onProperty   cap-iacs-parcel:itemUnderInspectionEfaCriticalDefectDetails
+                         ] ;
+        skos:definition  "--Name--\r\nCritical defect of EFA\r\n\r\n-- Definition --\r\nThis is a placeholder only; currently not to be implemented.\r\n\r\n-- Description --\r\nEFA critical defect."@en .
+
+cap-iacs-parcel:supportSchemaType
+        a                owl:ObjectProperty ;
+        rdfs:label       "Support schema type"@en ;
+        rdfs:range       cap-iacs-base:SupportSchemeTypeValue ;
+        skos:definition  "--Name--\r\nSupport schema type\r\n\r\n-- Definition --\r\nSupport schema type as defined in Annex I of Regulation  (EU) 1307/2013.\r\n\r\n-- Description --\r\nThe maximum eligible area for a given reference parcel (i.e. the reference area value) used for the automatic crosscheck of the farmer‘s application depends on the support scheme. It is necessary therefore to indicate the support scheme, for which a specific area value is valid.\r\n\r\nNOTE. Currently in this model version only maximum 11 schemas have placeholders."@en .
+
+cap-iacs-parcel:extendedDescription
+        a                owl:ObjectProperty ;
+        rdfs:label       "Cross-compliance rule description"@en ;
+        rdfs:range       owl:Class ;
+        skos:definition  "--Name--\r\nExtended description\r\n\r\n--Definition--\r\nIllustration that explains the use of the data quality measure.\r\n\r\n--Description--\r\nFor LPISQA, when applicable, illustrations are given by the Commission Services. In case when an MS/Region opts for using other quality assessment framework, when necessary illustrations may be provided."@en .
+
+cap-iacs-parcel:acceptanceNumber
+        a                owl:ObjectProperty ;
+        rdfs:label       "Acceptance value"@en ;
+        rdfs:range       cap-iacs-parcel:AcceptanceNumberValue ;
+        skos:definition  "--Name--\r\nAcceptance number\r\n\r\n-- Definition --\r\nIndicator that is used to determine the acceptability of the lot based on inspection by sampling.\r\n\r\n-- Description --\r\nIf the number of nonconforming items, or the total number of non-conformities, found in the sample is equal to or less than the acceptance number (Ac) specified in the plan, the lot shall be accepted [ISO 2859-2:1985]."@en .
+
+cap-iacs-parcel:DataQualityMeasureValueStructureValue
+        a                owl:Class ;
+        rdfs:label       "Data quality measure value structure value list"@en ;
+        rdfs:subClassOf  skos:Concept ;
+        skos:definition  "--Name--\r\nData quality Measure value structure\r\n\r\n--Definition--\r\nStructure used for presenting multiple values of DQ results.\r\n\r\n--Description--\r\nA result may consist of multiple values. In such cases, the result shall be structured using the value structure as given in C.3.3 of ISO 19157:2013. \r\n\r\nEXAMPLE: The results for misclassification shall be given as a matrix."@en .
+
+cap-iacs-parcel:nonStructuredEvidenceDocument
+        a                owl:ObjectProperty ;
+        rdfs:label       "Non-structured evidence - document"@en ;
+        rdfs:range       cap-iacs-base:SupplementaryDocument ;
+        skos:definition  "--Name--\r\nNon-structured evidence document\r\n\r\n-- Definition --\r\nAny record that supports  or documents the decisions made during the inspection process.\r\n\r\n-- Description --\r\nEXAMPLES: description, sketch, photo, document, additional measurement data, etc."@en .
+
+cap-iacs-parcel:itemUnderInspectionEfaCriticalDefectDetails
+        a           owl:ObjectProperty ;
+        rdfs:range  cap-iacs-parcel:EfaItemUnderInspection .
+
+cap-iacs-parcel:TestTypeMtsValue
+        a                owl:Class ;
+        rdfs:label       "MTS test type value list"@en ;
+        rdfs:subClassOf  skos:Concept ;
+        skos:definition  "--Name--\r\nMTS  test type values\r\n\r\n--Definition--\r\nAbstract test cases applicable in model based testing for LPISQA.\r\n\r\n--Description--\r\nThese abstract test cases are applicable for conformance testing of the eligibility profile in general. They should  be further specified  in the executable test cases according to the implementation choices of the MS/Regions."@en .
+
+cap-iacs-parcel:ordinalNumber
+        a                owl:DatatypeProperty ;
+        rdfs:label       "Sequential number of preselected reference parcel"@en ;
+        rdfs:range       xsd:integer ;
+        skos:definition  "--Name--\r\nOrdinal number\r\n\r\n-- Definition --\r\nSequential number of pre-selected reference parcel defining the order of inspection.\r\n\r\n-- Description --\r\nThe range of ordinal number is larger than the range of numbers of reference parcels to be inspected."@en .
+
+cap-iacs-parcel:collectiveImplementationCitation
+        a                owl:ObjectProperty ;
+        rdfs:label       "Non-structured evidence - citation"@en ;
+        rdfs:range       cap-iacs-base:SupplementaryDocument ;
+        skos:definition  "--Name--\r\nCollective implementation citation\r\n\r\n-- Definition --\r\nCitation proving that EFA is subject to collective implementation as referred to in Art. 46(6) of (EU) R 1307/2013.\r\n\r\n-- Description --\r\nIf subjectToCollectiveImplementation=TRUE then a document or a citation proving that EFA is subject to collective implementation must be provided.\r\n\r\nEXAMPLE: citation of the legal basis."@en .
+
+cap-iacs-parcel:observedArea
+        a                owl:DatatypeProperty ;
+        rdfs:label       "Area observed BPS/SPS area"@en ;
+        rdfs:range       om:Measure ;
+        skos:definition  "--Name--\r\nObserved area\r\n\r\n-- Definition --\r\nTotality of  the areas of all eligible land cover types within the parcel.\r\n\r\n-- Description --\r\nThis area value comprises the sum of areas of eligible agricultural land  and landscape features contained within the item under inspection. The minimum condition for assigning a value for this attribute is the existence of one eligible agricultural land cover type within the item under inspection.\r\n\r\nNOTE 1: By definition, a stand-alone LF (i.e. LF without agricultural land) does not constitute agricultural land. If a RP does not contain agricultural land, it is a critical defect.\r\n\r\nNOTE 2: The unit of meaurement shall be m2.\r\n/* Value of observedArea shall be given in square meters. */\r\ninv: self.observedArea.uom.uomSymbol='m2'"@en .
+
+cap-iacs-parcel:alias
+        a                owl:DatatypeProperty ;
+        rdfs:label       "Alias"@en ;
+        rdfs:range       xsd:string ;
+        skos:definition  "--Name--\r\nAlias\r\n\r\n--Definition--\r\nOther recognized name, an abbreviation or a short name for the same data quality measure\r\n\r\n-- Description--\r\nMnemonic name and the corresponding alias (if any) of DQM are given in the documentation of the as attributes of the DtsItemUnderInspection and DtsSample code lists."@en .
+
+cap-iacs-parcel:selectedReferenceParcelDetails
+        a           owl:ObjectProperty ;
+        rdfs:range  cap-iacs-parcel:PreselectedParcel .
+
+cap-iacs-parcel:EtsSample
+        a                owl:Class ;
+        rdfs:label       "ETS sample"@en ;
+        rdfs:subClassOf  gsp:Feature ;
+        rdfs:subClassOf  [ a                owl:Restriction ;
+                           owl:cardinality  "1"^^xsd:nonNegativeInteger ;
+                           owl:onProperty   cap-iacs-parcel:numberOfProcessingErrors
+                         ] ;
+        rdfs:subClassOf  [ a                owl:Restriction ;
+                           owl:cardinality  "1"^^xsd:nonNegativeInteger ;
+                           owl:onProperty   cap-iacs-parcel:totalDeclaredArea
+                         ] ;
+        rdfs:subClassOf  [ a                owl:Restriction ;
+                           owl:cardinality  "1"^^xsd:nonNegativeInteger ;
+                           owl:onProperty   cap-iacs-parcel:numberOfInspectedItems
+                         ] ;
+        rdfs:subClassOf  [ a                owl:Restriction ;
+                           owl:cardinality  "1"^^xsd:nonNegativeInteger ;
+                           owl:onProperty   cap-iacs-parcel:numberOfMeasuredItems
+                         ] ;
+        rdfs:subClassOf  [ a                   owl:Restriction ;
+                           owl:maxCardinality  "1"^^xsd:nonNegativeInteger ;
+                           owl:onProperty      cap-iacs-parcel:lpisRemedialActionPlan
+                         ] ;
+        rdfs:subClassOf  [ a                owl:Restriction ;
+                           owl:cardinality  "1"^^xsd:nonNegativeInteger ;
+                           owl:onProperty   cap-iacs-parcel:totalReferenceAreaMeasuredItems
+                         ] ;
+        rdfs:subClassOf  [ a                owl:Restriction ;
+                           owl:cardinality  "2"^^xsd:nonNegativeInteger ;
+                           owl:onProperty   cap-iacs-parcel:oversamplingParameter
+                         ] ;
+        rdfs:subClassOf  [ a                   owl:Restriction ;
+                           owl:minCardinality  "1"^^xsd:nonNegativeInteger ;
+                           owl:onProperty      cap-iacs-parcel:dataQualityMeasureDocumentation
+                         ] ;
+        rdfs:subClassOf  [ a                owl:Restriction ;
+                           owl:cardinality  "1"^^xsd:nonNegativeInteger ;
+                           owl:onProperty   cap-iacs-parcel:numberOfLargeMeasuredItems
+                         ] ;
+        rdfs:subClassOf  [ a                owl:Restriction ;
+                           owl:cardinality  "1"^^xsd:nonNegativeInteger ;
+                           owl:onProperty   cap-iacs-parcel:totalOverestimatedArea
+                         ] ;
+        rdfs:subClassOf  [ a                owl:Restriction ;
+                           owl:cardinality  "1"^^xsd:nonNegativeInteger ;
+                           owl:onProperty   cap-iacs-parcel:numberOfIncompatibleDesign
+                         ] ;
+        rdfs:subClassOf  [ a                owl:Restriction ;
+                           owl:cardinality  "1"^^xsd:nonNegativeInteger ;
+                           owl:onProperty   cap-iacs-parcel:numberOfIncompleteProcessing
+                         ] ;
+        rdfs:subClassOf  [ a                   owl:Restriction ;
+                           owl:minCardinality  "1"^^xsd:nonNegativeInteger ;
+                           owl:onProperty      cap-iacs-parcel:dataQualityMeasureResult
+                         ] ;
+        rdfs:subClassOf  [ a                owl:Restriction ;
+                           owl:cardinality  "1"^^xsd:nonNegativeInteger ;
+                           owl:onProperty   cap-iacs-parcel:etsReport
+                         ] ;
+        rdfs:subClassOf  [ a                owl:Restriction ;
+                           owl:cardinality  "1"^^xsd:nonNegativeInteger ;
+                           owl:onProperty   cap-iacs-parcel:totalUnderestimatedArea
+                         ] ;
+        rdfs:subClassOf  [ a                   owl:Restriction ;
+                           owl:minCardinality  "1"^^xsd:nonNegativeInteger ;
+                           owl:onProperty      cap-iacs-parcel:etsSampleDetailsForEtsItemsUnderInspection
+                         ] ;
+        rdfs:subClassOf  [ a                owl:Restriction ;
+                           owl:cardinality  "1"^^xsd:nonNegativeInteger ;
+                           owl:onProperty   cap-iacs-parcel:totalReferenceArea
+                         ] ;
+        rdfs:subClassOf  [ a                owl:Restriction ;
+                           owl:cardinality  "1"^^xsd:nonNegativeInteger ;
+                           owl:onProperty   cap-iacs-parcel:numberOfMissedUpgrades
+                         ] ;
+        rdfs:subClassOf  [ a                owl:Restriction ;
+                           owl:cardinality  "1"^^xsd:nonNegativeInteger ;
+                           owl:onProperty   cap-iacs-parcel:numberOfMissedUpdates
+                         ] ;
+        rdfs:subClassOf  [ a                owl:Restriction ;
+                           owl:cardinality  "1"^^xsd:nonNegativeInteger ;
+                           owl:onProperty   cap-iacs-parcel:declaredToRecordedArea
+                         ] ;
+        rdfs:subClassOf  [ a                owl:Restriction ;
+                           owl:cardinality  "1"^^xsd:nonNegativeInteger ;
+                           owl:onProperty   cap-iacs-parcel:totalDeclaredAreaMeasuredItems
+                         ] ;
+        rdfs:subClassOf  [ a                owl:Restriction ;
+                           owl:cardinality  "1"^^xsd:nonNegativeInteger ;
+                           owl:onProperty   cap-iacs-parcel:etsSampleDetailsForLpisLot
+                         ] ;
+        rdfs:subClassOf  [ a                   owl:Restriction ;
+                           owl:minCardinality  "1"^^xsd:nonNegativeInteger ;
+                           owl:onProperty      cap-iacs-parcel:dataQualityMeasureType
+                         ] ;
+        rdfs:subClassOf  [ a                owl:Restriction ;
+                           owl:cardinality  "1"^^xsd:nonNegativeInteger ;
+                           owl:onProperty   cap-iacs-parcel:conformingItemsArea
+                         ] ;
+        rdfs:subClassOf  [ a                owl:Restriction ;
+                           owl:cardinality  "1"^^xsd:nonNegativeInteger ;
+                           owl:onProperty   cap-iacs-parcel:declaredToRecordedAreaMeasuredItems
+                         ] ;
+        skos:definition  "--Name--\r\nETS sample\r\n\r\n-- Definition --\r\nSet of randomly selected parcel with ordered sequence.\r\n\r\n-- Description --\r\nThe inspection process follows the sequential order prescribed by DG JRC."@en .
+
+cap-iacs-parcel:ReferenceParcel
+        a                owl:Class ;
+        rdfs:label       "Reference parcel"@en ;
+        rdfs:subClassOf  gsp:Feature ;
+        rdfs:subClassOf  [ a                   owl:Restriction ;
+                           owl:minCardinality  "1"^^xsd:nonNegativeInteger ;
+                           owl:onProperty      cap-iacs-parcel:supportSchemaType
+                         ] ;
+        rdfs:subClassOf  [ a                   owl:Restriction ;
+                           owl:maxCardinality  "1"^^xsd:nonNegativeInteger ;
+                           owl:onProperty      cap-iacs-parcel:selectedReferenceParcelDetails
+                         ] ;
+        rdfs:subClassOf  [ a                   owl:Restriction ;
+                           owl:maxCardinality  "1"^^xsd:nonNegativeInteger ;
+                           owl:onProperty      cap-iacs-parcel:referenceParcelDetailsForAggregation
+                         ] ;
+        rdfs:subClassOf  [ a                owl:Restriction ;
+                           owl:cardinality  "1"^^xsd:nonNegativeInteger ;
+                           owl:onProperty   cap-iacs-parcel:referenceParcelsLotDetails
+                         ] ;
+        rdfs:subClassOf  [ a                   owl:Restriction ;
+                           owl:minCardinality  "1"^^xsd:nonNegativeInteger ;
+                           owl:onProperty      cap-iacs-parcel:referenceArea
+                         ] ;
+        rdfs:subClassOf  [ a                owl:Restriction ;
+                           owl:cardinality  "1"^^xsd:nonNegativeInteger ;
+                           owl:onProperty   cap-iacs-parcel:geometry
+                         ] ;
+        skos:definition  "--Name--\r\nReference parcel\r\n\r\n-- Definition --\r\nMeans a geographically delimited area retaining a unique identification as registered in the LPIS. a.k.a. identification system for agricultural parcels referred to in Article 70 of Regulation (EU) No 1306/2013. \r\n\r\n-- Description --\r\nBasic spatial unit for the administration and geographical localization of agricultural parcels. May contain one or more declared agricultural parcels in IACS and may be cultivated by one or more farmers (or producers association). Does not necessarily cover a territory nationwide, but overlaps are not allowed. \r\n\r\nNOTE.  Definition in the past. Reference parcel - a continuous area of agricultural land (production block) grouping together a number of neighboring agricultural parcels (production units) cultivated by one or more farmer(s) and delineated by most stable boundaries. Subtypes (used in the past): CadParcel, AgrParcel, FarBlock, PhyBlock, TopoBlock and MixedParcelType. It current model it is not implemented, since these concepts are not core elements of current IACS model."@en .
+
+cap-iacs-parcel:landscapeFeatureSelectionDetails
+        a           owl:ObjectProperty ;
+        rdfs:range  cap-iacs-parcel:LandscapeFeature .
+
+cap-iacs-parcel:ecologicalFocusAreasAggregationDetails
+        a           owl:ObjectProperty ;
+        rdfs:range  cap-iacs-parcel:EcologicalFocusArea .
+
+cap-iacs-parcel:EcologicalFocusAreaRegionMandatedArea
+        a                owl:Class ;
+        rdfs:label       "Mandated areas within region of ecological focus area"@en ;
+        rdfs:subClassOf  gsp:Feature ;
+        rdfs:subClassOf  [ a                owl:Restriction ;
+                           owl:cardinality  "1"^^xsd:nonNegativeInteger ;
+                           owl:onProperty   cap-iacs-parcel:percentage
+                         ] ;
+        rdfs:subClassOf  [ a                   owl:Restriction ;
+                           owl:maxCardinality  "1"^^xsd:nonNegativeInteger ;
+                           owl:onProperty      cap-iacs-parcel:geometry
+                         ] ;
+        rdfs:subClassOf  [ a                owl:Restriction ;
+                           owl:cardinality  "1"^^xsd:nonNegativeInteger ;
+                           owl:onProperty   cap-iacs-parcel:mandatedAreaId
+                         ] ;
+        rdfs:subClassOf  [ a                owl:Restriction ;
+                           owl:cardinality  "1"^^xsd:nonNegativeInteger ;
+                           owl:onProperty   cap-iacs-parcel:mandatedAreaWithinRegion
+                         ] ;
+        skos:definition  "--Name--\r\nEFA region mandated area\r\n\r\n-- Definition --\r\nMandated areas within regions of ecological focus area as referred to in Art. 46(5) and 46(6) of (EU) R 1307/2013.\r\n\r\n-- Description --\r\nMS shall designate the areas and the obligations of participating farmers or groups of farmers.\r\n\r\nNOTE:  The aim of the designation of areas and obligations shall be to underpin the implementation of Union policies on the environment, climate biodiversity, river basin management, and Natura 2000 network [Art. 47(2) of (EU) R No 639/2014] ."@en .
+
+cap-iacs-parcel:criticalDefectType
+        a                owl:ObjectProperty ;
+        rdfs:label       "Type of critical defect"@en ;
+        rdfs:range       cap-iacs-parcel:CriticalDefectTypeValue ;
+        skos:definition  "--Name--\r\nCritical defect type\r\n\r\n-- Definition --\r\nClassification of critical defect.\r\n\r\n-- Description --\r\nCritical defects are classified according to the categories defined in CriticalDefectTypeValue code list."@en .
+
+cap-iacs-parcel:recordedArea
+        a                owl:DatatypeProperty ;
+        rdfs:label       "Area recorded"@en ;
+        rdfs:range       om:Measure ;
+        skos:definition  "-- Name--\r\nArea recorded.\r\n\r\n-- Definition --\r\nThis is a placeholder only; currently not to be implemented.\r\n\r\n--Description--\r\nArea recorded."@en .
+
+cap-iacs-parcel:mandatedAreaWithinRegion
+        a           owl:ObjectProperty ;
+        rdfs:range  cap-iacs-parcel:EcologicalFocusAreaRegion .
+
+cap-iacs-parcel:inspectionMethod
+        a                owl:ObjectProperty ;
+        rdfs:label       "Inspection method"@en ;
+        rdfs:range       cap-iacs-parcel:InspectionMethodValue ;
+        skos:definition  "--Name--\r\nInspection method\r\n\r\n-- Definition --\r\nMethod applied for the quality assessment process.\r\n\r\n-- Description --\r\nThe value shall be selected from the InspecionMethodValue code list before the inspection starts. The selected method shall be applied to all inspected items. Changing the inspection method from item to item is forbidden.\r\n\r\nNOTE: MS/Region have the opportunity to change the inspection method from year to year. The selected method shall be reported together with the PointZeroState file."@en .
+
+cap-iacs-parcel:lotSize
+        a                owl:ObjectProperty ;
+        rdfs:label       "Lot size value"@en ;
+        rdfs:range       cap-iacs-parcel:LotSizeValue ;
+        skos:definition  "--Name--\r\nLot size\r\n\r\n-- Definition --\r\nNumber of items in a lot [ISO 2859-1:1999].\r\n\r\n-- Description --\r\nIt is the number of reference parcels within the LPIS lot."@en .
+
+cap-iacs-parcel:definition
+        a                owl:DatatypeProperty ;
+        rdfs:label       "Definition"@en ;
+        rdfs:range       xsd:string ;
+        skos:definition  "--Name--\r\nDefinition\r\n\r\n--Definition--\r\nDefinition of the fundamental concept for the data quality measure.\r\n\r\n--Description--\r\nWhenever possible, definitions are taken from the legal acts and the related guidelines of CAP and from standard technical vocabularies (ISO, INSPIRE, mainstream IT)."@en .
+
+cap-iacs-parcel:lpisLotDetailsForEfaSample
+        a           owl:ObjectProperty ;
+        rdfs:range  cap-iacs-parcel:EfaSample .
+
+cap-iacs-parcel:valueType
+        a                owl:DatatypeProperty ;
+        rdfs:label       "Value type"@en ;
+        rdfs:range       xsd:NCName ;
+        skos:definition  "--Name--\r\nValue type\r\n\r\n--Definition--\r\nValue type is the data type used for reporting the result of the measure. The data types defined in ISO/TS 19103:2005 shall be used. \r\n\r\n--Description--\r\nFor purposes of LPISQA the following data types are used:\r\n- Primitive types: CharacterString, Integer, Real, Boolean\r\n- Collections: Sequence, matrix\r\n\r\nNOTE: Section 7 of ISO/TS 19103:2005 provides and overview of the applicable core data types."@en .
+
+cap-iacs-parcel:feasibilityForInspection
+        a                owl:DatatypeProperty ;
+        rdfs:label       "Feasibility for inspection"@en ;
+        rdfs:range       xsd:boolean ;
+        skos:definition  "--Name--\r\nFeasibility for inspection\r\n\r\n-- Definition --\r\nCorrectness, completeness, and usability of input data  as well as physical conditions that allow observations necessary for quality assessment.\r\n\r\n-- Description --\r\nRegardless of the inspection methodology the input and source data should be correct and complete and no force major conditions should prevent the inspection process. In addition, for CAPI inspection feasibility for inspection  also depends on the usability and the  completeness of the orthoimagery coverage.  \r\n\r\nNOTE: When inspection is not feasible, the preventing reason shall be documented using the values of the SkippingReasonTypeValue code list."@en .
+
+cap-iacs-parcel:criticalDefectCause
+        a                owl:ObjectProperty ;
+        rdfs:label       "Cause of critical defect"@en ;
+        rdfs:range       cap-iacs-parcel:TechnicalReasonValue ;
+        skos:definition  "--Name--\r\nCritical defect cause\r\n\r\n-- Definition --\r\nTechnical reason that has presumably caused the critical defect.\r\n\r\n-- Description --\r\nTechnical reason shall be selected from theTechnicalReasonValue code list."@en .
+
+cap-iacs-parcel:landscapeFeatureForEcologicalFocusArea
+        a           owl:ObjectProperty ;
+        rdfs:range  cap-iacs-parcel:EcologicalFocusArea .
+
+cap-iacs-parcel:waivered
+        a                owl:DatatypeProperty ;
+        rdfs:label       "Waivered"@en ;
+        rdfs:range       xsd:boolean ;
+        skos:definition  "--Name--\r\nWaivered\r\n\r\n-- Definition --\r\nImmunity that vindicates a physical contamination to cause non-conformance of the item under inspection.\r\n\r\n-- Description --\r\nA waiver can be applied when the following conditions are met:\r\n- the usability of the parcel remains intact;\r\n- the deviation from the generic rule stems from the semantic definition of the LPIS;\r\n- the waiver has been created and approved before the inspection starts.\r\n\r\nEXAMPLE: A road crosscutting an RP in an LPIS based on topographic blocks or cadastral parcels can be waivered. NB: the area the road shall always be deducted from the reference area."@en .
+
+cap-iacs-parcel:efaSampleDetailsForLpisLot
+        a           owl:ObjectProperty ;
+        rdfs:range  cap-iacs-parcel:LpisLot .
+
+cap-iacs-parcel:criticalDefectEfaCompositionDetails
+        a           owl:ObjectProperty ;
+        rdfs:range  cap-iacs-parcel:CriticalDefectEfa .
+
+cap-iacs-parcel:declaredToRecordedArea
+        a                owl:DatatypeProperty ;
+        rdfs:label       "Ratio of total declared area to recorded in LPIS area"@en ;
+        rdfs:range       xsd:double ;
+        skos:definition  "--Name--\r\nDeclared to recorded area\r\n\r\n-- Definition --\r\nRatio of the total declared hectares with respect to the total number of eligible hectares recorded in LPIS.\r\n\r\n-- Description --\r\nThe scope of this data quality element are only items with areaConformance=TRUE value.\r\n\r\nNOTE. Previously known as QE5 V2, 10206 LPIS_RP_DCA V2"@en .
+
+cap-iacs-parcel:efaItemUnderInspectionWithinEfaSampleDetails
+        a           owl:ObjectProperty ;
+        rdfs:range  cap-iacs-parcel:EfaSample .
+
+cap-iacs-parcel:LandscapeFeatureUnderInspection
+        a                owl:Class ;
+        rdfs:label       "Landscape feature under inspection"@en ;
+        rdfs:subClassOf  gsp:Feature ;
+        rdfs:subClassOf  [ a                owl:Restriction ;
+                           owl:cardinality  "1"^^xsd:nonNegativeInteger ;
+                           owl:onProperty   cap-iacs-parcel:dataQualityMeasureResult
+                         ] ;
+        rdfs:subClassOf  [ a                owl:Restriction ;
+                           owl:cardinality  "1"^^xsd:nonNegativeInteger ;
+                           owl:onProperty   cap-iacs-parcel:landscapeFeatureSelectionDetails
+                         ] ;
+        rdfs:subClassOf  [ a                owl:Restriction ;
+                           owl:cardinality  "1"^^xsd:nonNegativeInteger ;
+                           owl:onProperty   cap-iacs-parcel:misclasificationCause
+                         ] ;
+        rdfs:subClassOf  [ a                owl:Restriction ;
+                           owl:cardinality  "1"^^xsd:nonNegativeInteger ;
+                           owl:onProperty   cap-iacs-parcel:dataQualityMeasureType
+                         ] ;
+        rdfs:subClassOf  [ a                owl:Restriction ;
+                           owl:cardinality  "1"^^xsd:nonNegativeInteger ;
+                           owl:onProperty   cap-iacs-parcel:landscapeFeatureType
+                         ] ;
+        rdfs:subClassOf  [ a                owl:Restriction ;
+                           owl:cardinality  "1"^^xsd:nonNegativeInteger ;
+                           owl:onProperty   cap-iacs-parcel:dataQualityMeasureDocumentation
+                         ] ;
+        rdfs:subClassOf  [ a                   owl:Restriction ;
+                           owl:maxCardinality  "1"^^xsd:nonNegativeInteger ;
+                           owl:onProperty      cap-iacs-parcel:landscapeFeatureAsEfaItemUnderInspectionDetails
+                         ] ;
+        skos:definition  "--Name--\r\nLandscape feature under inspection\r\n\r\n-- Description --\r\nElements of the agricultural area that are traditionally part of good agriculture cropping or utilization practices (EU 640/2014 Art. 9(1)).\r\n\r\n-- Description --\r\nThe applicable LF types (if any) shall be taken from the eligibility profile of the MS/Region."@en .
+
+cap-iacs-parcel:etsReport
+        a                owl:ObjectProperty ;
+        rdfs:label       "ETS report"@en ;
+        rdfs:range       cap-iacs-base:SupplementaryDocument ;
+        skos:definition  "--Name--\r\nETS report\r\n\r\n-- Definition --\r\nPresentation of the results of ETS .\r\n\r\n-- Description --\r\nReport summarizing the results of the ETS inspection, the quality elements and their evaluation."@en .
+
+cap-iacs-parcel:nonStructuredEvidenceCitation
+        a                owl:ObjectProperty ;
+        rdfs:label       "Non-structured evidence - citation"@en ;
+        rdfs:range       cap-iacs-base:SupplementaryDocumentCitation ;
+        skos:definition  "--Name--\r\nNon-structured evidence citation\r\n\r\n-- Definition --\r\nAny citation that supports the decisions made during the inspection process.\r\n\r\n-- Description --\r\nURI of services where the supporting document (ground photographs, documents, measurement results, etc.) are accessible."@en .
+
+cap-iacs-parcel:geometry
+        a                owl:ObjectProperty ;
+        rdfs:label       "Geometry of ecological focus area"@en ;
+        rdfs:range       gsp:Geometry ;
+        skos:definition  "--Name--\r\nGeometry\r\n\r\n-- Definition --\r\nGeometry of landscape feature.\r\n\r\n-- Description --\r\nRepresentation of the geographical dimension/position of the landscape feature. LF may be represented as , point, curve, or surface depending on the options allowed by Art 46(3) of (EU) R No 1307/2013 and the choice of the MS/region."@en .
+
+cap-iacs-parcel:itemCriticalDefectDetails
+        a           owl:ObjectProperty ;
+        rdfs:range  cap-iacs-parcel:EtsItemUnderInspection .
+
+cap-iacs-parcel:detailsOfPreselectedParcelForInspection
+        a           owl:ObjectProperty ;
+        rdfs:range  cap-iacs-parcel:EtsItemUnderInspection .
+
+cap-iacs-parcel:declaredToRecordedAreaMeasuredItems
+        a                owl:DatatypeProperty ;
+        rdfs:label       "Declared to IACS sample area"@en ;
+        rdfs:range       xsd:double ;
+        skos:definition  "--Name--\r\nDeclared to recorded area of measured items\r\n\r\n-- Definition --\r\nRatio of the declared area of the conforming sample to the corresponding area of measured items recorded in LPIS.\r\n\r\n-- Description --\r\nThe scope of this data quality element are only items with areaConformance=TRUE value.\r\n\r\nNOTE. Previously known as QE5 V1, 10206 LPIS_RP_DCA V1"@en .
+
+cap-iacs-parcel:DataQualityMeasureDescription
+        a                owl:Class ;
+        rdfs:label       "LPIS QAF DQM description"@en ;
+        rdfs:subClassOf  [ a                   owl:Restriction ;
+                           owl:maxCardinality  "1"^^xsd:nonNegativeInteger ;
+                           owl:onProperty      cap-iacs-parcel:extendedDescription
+                         ] ;
+        rdfs:subClassOf  [ a                owl:Restriction ;
+                           owl:cardinality  "1"^^xsd:nonNegativeInteger ;
+                           owl:onProperty   cap-iacs-parcel:textDescription
+                         ] ;
+        skos:definition  "--Name--\r\nData quality measure description\r\n\r\n--Definition--\r\nNarrative description of the data quality measure.\r\n\r\n--Description--\r\nThis element is part of the LPISQA conceptual model provided by the Commission Services. In case a MS/Region opts for using other quality assessment system, the description of DQM shall be given in the eligibility profile. Otherwise it can be omitted."@en .
+
+cap-iacs-parcel:detailsOfselectedEfaForInspection
+        a           owl:ObjectProperty ;
+        rdfs:range  cap-iacs-parcel:EfaItemUnderInspection .
+
+cap-iacs-parcel:CriticalDefectTypeEfaValue
+        a                owl:Class ;
+        rdfs:label       "Critical defect type value"@en ;
+        rdfs:subClassOf  skos:Concept ;
+        skos:definition  "--Name--\r\nEFA critical defect type\r\n\r\n-- Definition --\r\nThis is a placeholder only; currently not to be implemented.\r\n\r\n-- Description --\r\nList of error types leading to obstruction of usability of the item under inspection (critical defect)."@en .
+
+cap-iacs-parcel:observedEfaType
+        a                owl:ObjectProperty ;
+        rdfs:label       "EFA type observed"@en ;
+        rdfs:range       cap-iacs-parcel:EcologicalFocusAreaTypeValue ;
+        skos:definition  "-- Name--\r\nObserved EFA type \r\n\r\n-- Definition --\r\nThis is a placeholder only; currently not to be implemented."@en .
+
+cap-iacs-parcel:landscapeFeatureType
+        a                owl:ObjectProperty ;
+        rdfs:label       "Landscape feature type"@en ;
+        rdfs:range       cap-iacs-parcel:LandscapeFeatureValueType ;
+        skos:definition  "--Name--\r\nLandscape feature type\r\n\r\n-- Definition --\r\nLandscape feature type as listed in Art. 46(2) of (EU) R 1307/2013.\r\n\r\n-- Description --\r\nThe value of this attribute are taken from the LandcapeFeatureValueType code list of the eligibility profile."@en .
+
+cap-iacs-parcel:numberOfMeasuredItems
+        a                owl:DatatypeProperty ;
+        rdfs:label       "Number of measured items"@en ;
+        rdfs:range       xsd:integer ;
+        skos:definition  "--Name--\r\nNumber of measured items\r\n\r\n--Definition --\r\nNumber of items under inspection for which the delineation of land cover was feasible.\r\n\r\n-- Description --\r\nThe items under inspection can correspond to single or aggregated parcels. A set of aggregated parcels counts as 1 item.\r\n\r\nNOTE. Number of Measured parcels shall not be less than 200."@en .
+
+cap-iacs-parcel:ecologicalFocusAreaRegionDetailsForMandatedArea
+        a           owl:ObjectProperty ;
+        rdfs:range  cap-iacs-parcel:EcologicalFocusAreaRegionMandatedArea .
+
+cap-iacs-parcel:measureIdentifier
+        a                owl:ObjectProperty ;
+        rdfs:label       "Measure identifier"@en ;
+        rdfs:range       cap-iacs-parcel:DataQualityMeasureNameValue ;
+        skos:definition  "--Name--\r\nMeasure identifier\r\n\r\n--Definition --\r\nIdentifier uniquely identifying a DQM within a namespace.\r\n\r\n--Description--\r\nIdentifiers for data quality measures for LPISQA are listed in the description of the specific DQM."@en .
+
+cap-iacs-parcel:EcologicalFocusAreaTypeValue
+        a                owl:Class ;
+        rdfs:label       "List of ecological focuse areas"@en ;
+        rdfs:subClassOf  skos:Concept ;
+        skos:definition  "--Name--\r\nEcological focus area type value\r\n\r\n-- Definition --\r\nTypes of EFA as listed in Art. 46(2) of (EU) R 1307/2013.\r\n\r\n-- Description --\r\nMS shall decide that one or more values of this code list  are considered to be ecological focus area.\r\n\r\nNOTE 1: Member States may decide to limit the selection of landscape features to those under GAEC 7, SMR 2 or SMR 3  as referred to in Annex II to Regulation (EU) No 640/2013 and/or to one or more of those listed in point (a) to (h) of the first subparagraph, where duly justified. Should it be the case, the code list of EFA types have to be modifie accordingly.\r\n\r\nNOTE 2: The extension of this code list shall be documented in the eligibility profile of the MS/region. It is recommended to use  a register / registry service to publish the extended values and their definitions.\r\n\r\nNOTE 3: Landscape features shall be:\r\n-at the disposal of the farmer;\r\n-shall be those that are protected under GAEC 7, SMR 2 or SMR 3 as referred to in Annex II to Regulation (EU) No 640/2014."@en .
+
+cap-iacs-parcel:MtsItemUnderInspection
+        a                owl:Class ;
+        rdfs:label       "Item under inspection"@en ;
+        rdfs:subClassOf  gsp:Feature ;
+        rdfs:subClassOf  [ a                owl:Restriction ;
+                           owl:cardinality  "1"^^xsd:nonNegativeInteger ;
+                           owl:onProperty   cap-iacs-parcel:mtsReport
+                         ] ;
+        rdfs:subClassOf  [ a                owl:Restriction ;
+                           owl:cardinality  "1"^^xsd:nonNegativeInteger ;
+                           owl:onProperty   cap-iacs-parcel:executableTestResult
+                         ] ;
+        rdfs:subClassOf  [ a                   owl:Restriction ;
+                           owl:minCardinality  "1"^^xsd:nonNegativeInteger ;
+                           owl:onProperty      cap-iacs-parcel:abstractTestType
+                         ] ;
+        rdfs:subClassOf  [ a                owl:Restriction ;
+                           owl:cardinality  "1"^^xsd:nonNegativeInteger ;
+                           owl:onProperty   cap-iacs-parcel:elementlId
+                         ] ;
+        rdfs:subClassOf  [ a                   owl:Restriction ;
+                           owl:minCardinality  "1"^^xsd:nonNegativeInteger ;
+                           owl:onProperty      cap-iacs-parcel:mtsItemUnderInspectionDetailsForExecutableTestCase
+                         ] ;
+        skos:definition  "--Name--\r\nMTS item under inspection\r\n\r\n-- Definition--\r\nEligibility profile or their elements presented as System under Test (SUT) for conformance testing. [Adapted from ISO 19105:2000].\r\n\r\n-- Description --\r\nAs first step of LPISQA, the Model Test Suit (MTS ) of the eligibility profile has to be performed to assess conformance with the LCM. The initial MTS shall be run on the whole eligibility profile. When a specific element of the eligibility profile is upgraded, partial MTS can be performed following the ETS test cases that are relevant to that element."@en .
+
+cap-iacs-parcel:EcologicalFocusArea
+        a                owl:Class ;
+        rdfs:label       "Ecological focus area"@en ;
+        rdfs:subClassOf  gsp:Feature ;
+        rdfs:subClassOf  [ a                owl:Restriction ;
+                           owl:cardinality  "1"^^xsd:nonNegativeInteger ;
+                           owl:onProperty   cap-iacs-parcel:ecologicalFocusArea
+                         ] ;
+        rdfs:subClassOf  [ a                   owl:Restriction ;
+                           owl:maxCardinality  "1"^^xsd:nonNegativeInteger ;
+                           owl:onProperty      cap-iacs-parcel:detailsOfselectedEfaForInspection
+                         ] ;
+        rdfs:subClassOf  [ a                owl:Restriction ;
+                           owl:cardinality  "1"^^xsd:nonNegativeInteger ;
+                           owl:onProperty   cap-iacs-parcel:ecologicalFocusAreaType
+                         ] ;
+        rdfs:subClassOf  [ a                   owl:Restriction ;
+                           owl:maxCardinality  "1"^^xsd:nonNegativeInteger ;
+                           owl:onProperty      cap-iacs-parcel:ecologicalFocusAreaWithinCropGroupGreening
+                         ] ;
+        rdfs:subClassOf  [ a                owl:Restriction ;
+                           owl:cardinality  "1"^^xsd:nonNegativeInteger ;
+                           owl:onProperty   cap-iacs-parcel:subjectToCollectiveImplementation
+                         ] ;
+        rdfs:subClassOf  [ a                owl:Restriction ;
+                           owl:cardinality  "1"^^xsd:nonNegativeInteger ;
+                           owl:onProperty   cap-iacs-parcel:geometry
+                         ] ;
+        skos:definition  "--Name--\r\nEcological Focus Area\r\n\r\n-- Definition --\r\nEcological focus areas as referred to in Article 46 of R (EU) No1307/2013 and its Delegated Regulation (EU) No 639/2014.\r\n\r\n-- Description --\r\nAreas contributing to practices beneficial for the climate and the environment as referred to in Art. 43(2)(c) of (EU) R No 1307/2013.\r\n\r\nNOTE 1: This is the feature type that allows the creation of the EFA layer in sense of Art. 70(2) of (EU) R 1306/2013. \r\n\r\nNOTE 2: All instances of potential EFA that remain in place at least for 3 years shall be included [DSCG/2014/31]..\r\n\r\nNOTE 3: „Potentiality“ means implies that any EFA situated on holdings of farmers who are exempted (small farmers, organic farming) are is also subject of data collection (mapping) [DSCG/2014/31].\r\n\r\nNOTE 4: When an EFA instance (without altering the geometry ) that has been declared for three consecutive year with geospatial application, it should be regarded as permanent, thus within the scope of LPIS.\r\n\r\nNOTE 5: EFA instances established under equivalent agri-environmental-climate measures (AECM) are expected to last at least 5 years, therefore they should be regarded to be in scope of LPIS [DSCG/2014/31]."@en .
+
+cap-iacs-parcel:name  a  owl:DatatypeProperty ;
+        rdfs:label       "Name"@en ;
+        rdfs:range       xsd:string ;
+        skos:definition  "--Name--\r\nName\r\n\r\n--Definition--\r\nName of the data quality measure applied in LPISQA.\r\n\r\n-- Description--\r\nMnemonic names and the documentation of corresponding names of DQM are defined as attributes of the DtsItemUnderInspection and DtsSample code lists."@en .
+
+cap-iacs-parcel:referenceParcelWithinTheLotDetails
+        a           owl:ObjectProperty ;
+        rdfs:range  cap-iacs-parcel:ReferenceParcel .
+
+cap-iacs-parcel:criticalDefectAcceptanceNumber
+        a                owl:ObjectProperty ;
+        rdfs:label       "Critical defect acceptance number"@en ;
+        rdfs:range       cap-iacs-parcel:AcceptanceNumberValue ;
+        skos:definition  "--Name--\r\nAcceptance number for critical defects\r\n\r\n-- Definition --\r\nAcceptance number applicable for critical defect.\r\n\r\n-- Description --\r\nIf the number of nonconforming items for critical defects is equal or less than specified acceptance number, the total lot shall be accepted. \r\nNOTE. Acceptance number of items with critical defect shall correspond to limiting quality 2,00 specified in ISO 2859-2:1985"@en .
+
+cap-iacs-parcel:DataQualityMeasureNameValue
+        a                owl:Class ;
+        rdfs:label       "ETS data quality measure name list"@en ;
+        rdfs:subClassOf  skos:Concept ;
+        skos:definition  "--Name--\r\nData quality measure name value\r\n\r\n-- Definition --\r\nData quality measures applicable for LPIS quality assessment process.\r\n\r\n-- Description --\r\nThis is the unified code list of all DQM applied at item and sample level."@en .
+
+cap-iacs-parcel:recordedEfaType
+        a                owl:ObjectProperty ;
+        rdfs:label       "EFA type recorded"@en ;
+        rdfs:range       cap-iacs-parcel:EcologicalFocusAreaTypeValue ;
+        skos:definition  "-- Name--\r\nRecorded EFA type \r\n\r\n-- Definition --\r\nThis is a placeholder only; currently not to be implemented.\r\n\r\n-- Description --\r\nEFA type recorded."@en .
+
+cap-iacs-parcel:DataQualityMeasure
+        a                owl:Class ;
+        rdfs:label       "LPIS QAF DQM measure"@en ;
+        rdfs:subClassOf  [ a                   owl:Restriction ;
+                           owl:maxCardinality  "1"^^xsd:nonNegativeInteger ;
+                           owl:onProperty      cap-iacs-parcel:valueStructure
+                         ] ;
+        rdfs:subClassOf  [ a                owl:Restriction ;
+                           owl:cardinality  "1"^^xsd:nonNegativeInteger ;
+                           owl:onProperty   cap-iacs-parcel:valueType
+                         ] ;
+        rdfs:subClassOf  [ a                owl:Restriction ;
+                           owl:cardinality  "1"^^xsd:nonNegativeInteger ;
+                           owl:onProperty   cap-iacs-parcel:measureIdentifier
+                         ] ;
+        rdfs:subClassOf  [ a                owl:Restriction ;
+                           owl:cardinality  "1"^^xsd:nonNegativeInteger ;
+                           owl:onProperty   cap-iacs-parcel:name
+                         ] ;
+        rdfs:subClassOf  [ a                owl:Restriction ;
+                           owl:cardinality  "1"^^xsd:nonNegativeInteger ;
+                           owl:onProperty   cap-iacs-parcel:definition
+                         ] ;
+        rdfs:subClassOf  [ a                   owl:Restriction ;
+                           owl:maxCardinality  "1"^^xsd:nonNegativeInteger ;
+                           owl:onProperty      cap-iacs-parcel:description
+                         ] ;
+        rdfs:subClassOf  [ a                   owl:Restriction ;
+                           owl:minCardinality  "1"^^xsd:nonNegativeInteger ;
+                           owl:onProperty      cap-iacs-parcel:elementName
+                         ] ;
+        skos:definition  "--Name--\r\nData quality measure\r\n\r\n--Definition --\r\nData quality measure is a descriptor of a data quality element used for evaluating data quality.\r\n\r\n--Description --\r\nIn LPISQA specific data quality measures are used that are defined on the basis of data quality elements of ISO 19157:2013. The data quality measures are listed in the following code lists:\r\n- DataQualityMeasureTypeIuiValue (for items under inspection)\r\n- DataQualityMeasureTypeDTSValue (for LPIS as a whole)"@en .
+
+cap-iacs-parcel:efaRemedialActionPlan
+        a                owl:ObjectProperty ;
+        rdfs:label       "Remedial action plan"@en ;
+        rdfs:range       cap-iacs-base:SupplementaryDocument ;
+        skos:definition  "--Name--\r\nEFA remedial action plan\r\n\r\n--Definition--\r\nThis is a placeholder only; currently not to be implemented.\r\n\r\nReport describing measures and timescale of actions to be taken by the authority responsible for the maintenance of EFA.\r\n\r\n-- Description --\r\nThis additional to the EFA report shall be delivered when the EFA sample results to be non conforming for quality elements.   It shall also provide analysis of quality measures not evaluated by conformance results."@en .
+
+cap-iacs-parcel:totalReferenceArea
+        a                owl:DatatypeProperty ;
+        rdfs:label       "Total reference / recorded area"@en ;
+        rdfs:range       om:Measure ;
+        skos:definition  "--Name--\r\nTotal reference area\r\n\r\n--Definition --\r\nTotal reference area recorded in LPIS.\r\n\r\n--Description --\r\nSum of the reference areas of all RPs in LPIS."@en .
+
+cap-iacs-parcel:convertedArea
+        a                owl:DatatypeProperty ;
+        rdfs:label       "Area converted"@en ;
+        rdfs:range       om:Measure ;
+        skos:definition  "-- Name--\r\nConverted area \r\n\r\n-- Definition --\r\nThis is a placeholder only; currently not to be implemented."@en .
+
+cap-iacs-parcel:textDescription
+        a                owl:DatatypeProperty ;
+        rdfs:label       "Cross-compliance rule description"@en ;
+        rdfs:range       xsd:string ;
+        skos:definition  "--Name--\r\nText description\r\n\r\n--Definition--\r\nText description of the data quality measure.\r\n\r\n--Description--\r\nIn case and MS/Region opts for using other than LPISQA for assessing quality, the descriptions of DQM shall be given also in English."@en .
+
+cap-iacs-parcel:ecologicalFocusAreaType
+        a                owl:ObjectProperty ;
+        rdfs:label       "Ecological focus area type"@en ;
+        rdfs:range       cap-iacs-parcel:EcologicalFocusAreaTypeValue ;
+        skos:definition  "--Name--\r\nEcological focus area type\r\n\r\n-- Definition --\r\nEcological focus area type as listed in Art. 46(2) of (EU) R 1307/2013.\r\n\r\n-- Description --\r\nThe value of this attribute shall be taken from the EcologicalFocusAreaTypeValue code list."@en .
+
+cap-iacs-parcel:determinedArea
+        a                owl:DatatypeProperty ;
+        rdfs:label       "Area determined"@en ;
+        rdfs:range       om:Measure ;
+        skos:definition  "--Name--\r\nDetermined area\r\n\r\n-- Description --\r\nArea for which all eligibility criteria have been met.\r\n\r\n-- Description --\r\nArea calculated as product of the surface area and the eventual pro-rata coefficient. When pro-rata is not applied it equals to the surface area  directly taken from the representation geometry (from GM_Surface).\r\n\r\nNOTE: the area value shall be given in square meters.\r\n/* Value of determinedArea shall be given in square meters. */\r\ninv: self.determinedArea.uom.uomSymbol='m2'"@en .
+
+cap-iacs-parcel:conversionFactor
+        a                owl:DatatypeProperty ;
+        rdfs:label       "Conversion factor"@en ;
+        rdfs:range       xsd:double ;
+        skos:definition  "--Name--\r\nConversion factor\r\n\r\n-- Definition --\r\nParameter in sense of Art. 43(3) of R (EU) 1307/2013  used for calculating the total hectares represented by the ecological focus area.\r\n\r\n--Description--\r\nThe conversion factor is used by simplified geometric representation of EFA (point or curve) in order to arrive area values.\r\n\r\nNOTE\r\nConversion factor is not applicable when EFA are represented by surfaces (GM_Surface)."@en .
+
+cap-iacs-parcel:totalOverestimatedArea
+        a                owl:DatatypeProperty ;
+        rdfs:label       "Total overestimated area"@en ;
+        rdfs:range       om:Measure ;
+        skos:definition  "--Name--\r\nTotal overestimated area\r\n\r\n--Definition --\r\nTotal area of the items under inspection that have discrepancy equal or more than -3%.\r\n\r\n-- Description\r\nNOTE. Previously it was: parameter of 10102_2 LPIS_RP_MEA_B"@en .
+
+cap-iacs-parcel:ProRataCategoryValue
+        a                owl:Class ;
+        rdfs:label       "List of pro rata category values"@en ;
+        rdfs:subClassOf  skos:Concept ;
+        skos:definition  "--Name--\r\nPro-rata category value\r\n\r\n-- Definition --\r\nPro rata categories represent groups of land cover classes that share an eligibility rate.\r\n\r\n-- Description --\r\nCategories are predefined by MS/Regions. The code list can be extended."@en .
+
+cap-iacs-parcel:weightedArea
+        a                owl:DatatypeProperty ;
+        rdfs:label       "Area weighted"@en ;
+        rdfs:range       om:Measure ;
+        skos:definition  "-- Name--\r\nWeighted area \r\n\r\n-- Definition --\r\nThis is a placeholder only; currently not to be implemented."@en .
+
+cap-iacs-parcel:landscapeFeatureArea
+        a                owl:DatatypeProperty ;
+        rdfs:label       "Area of landscape feature"@en ;
+        rdfs:range       om:Measure ;
+        skos:definition  "--Name--\r\nLandscape feature area\r\n\r\n-- Definition --\r\nOfficial area of LF recorded in LPIS.\r\n\r\n--Description--\r\nThis are can be defined by measurement (delineation) or by numeric estimation.\r\n\r\nNOTE: Geometric representation and area  are mandatory when a LF becomes an EFA element."@en .
+
+cap-iacs-parcel:equivalentAecm
+        a                owl:ObjectProperty ;
+        rdfs:label       "Equivalinet practices"@en ;
+        rdfs:range       cap-iacs-parcel:EcologicalFocusAreaEquivalentPracticeTypeValue ;
+        skos:definition  "--Name--\r\nEquivalent EFA practice\r\n\r\n-- Definition --\r\nEquivalent practices with EFAs which are listed  in section III of Annex IX of Regulation (EU) No 1307/2013.\r\n\r\n-- Description --\r\nEFA equivalent practices include:\r\n-ecological set-aside;\r\n-buffer zones for high nature value areas ( Natura 2000 or similar);\r\n-uncultivated buffer strips and field margins;\r\n-patches managed for wildlife or specific fauna;\r\n-management of LF;\r\n-keeping arable peaty or wet soils under grass;\r\n-production on arable land without fertilizers or plant protection products (for 2 years with different crops);\r\n-conversion of arable land into permanent grassland extensively used.\r\n\r\nNOTE: The specific AECM reason has to be linked to the EFA type."@en .
+
+cap-iacs-parcel:LimitingQualityValue
+        a                owl:Class ;
+        rdfs:label       "List of possible limiting quality values"@en ;
+        rdfs:subClassOf  skos:Concept ;
+        owl:oneOf        ( <http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-parcel/code#LimitingQualityValue/12.50> <http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-parcel/code#LimitingQualityValue/2.00> ) ;
+        skos:definition  "--Name--\r\nLimiting quality value\r\n\r\n-- Definition --\r\nList of limiting quality values applicable in LPISQA.\r\n\r\n-- Description --\r\nLimiting quality values are defined by ISO 2859-2:1985."@en .
+
+cap-iacs-parcel:referenceParcelsLotDetails
+        a           owl:ObjectProperty ;
+        rdfs:range  cap-iacs-parcel:LpisLot .
+
+cap-iacs-parcel:itemAgriculturalLandDetails
+        a           owl:ObjectProperty ;
+        rdfs:range  cap-iacs-parcel:EtsItemUnderInspection .
+
+cap-iacs-parcel:misclassificationCause
+        a                owl:ObjectProperty ;
+        rdfs:label       "Technical reasons for misclassification"@en ;
+        rdfs:range       cap-iacs-parcel:TechnicalReasonValue ;
+        skos:definition  "--Name--\r\nMisclassification cause\r\n\r\n-- Definition --\r\nTechnical reasons for misclassification.\r\n\r\n-- Description --\r\nReason for misclassification shall be taken from the TechnicalReasonValue code list.\r\n  \r\nNOTE. MisclassificationCause shall be given when value of AgriculturalLand.dataQualityMeasureResult is FALSE (where AgriculturalLand.dataQualityMeasyreType=classificationCorrectness)."@en .
+
+cap-iacs-parcel:totalUnderestimatedArea
+        a                owl:DatatypeProperty ;
+        rdfs:label       "Total underestimated area"@en ;
+        rdfs:range       om:Measure ;
+        skos:definition  "--Name--\r\nTotal underestimated area\r\n\r\n--Definition --\r\nTotal area of the items under inspection that have a discrepancy equal or less than 3%.\r\n\r\n-- Description--\r\nNOTE. Previously it was: parameter of 10102_2 LPIS_RP_MEA_B."@en .
+
+cap-iacs-parcel:HomogeneityTypeValue
+        a                owl:Class ;
+        rdfs:label       "List of homogeneity type"@en ;
+        rdfs:subClassOf  skos:Concept ;
+        skos:definition  "--Name--\r\nHomogeneity type value\r\n\r\n-- Definition --\r\nCode list of homogeneity types for single and homogenous geographical areas with similar agricultural and environmental conditions as referred to Art. 46(1) of (EU) R 639/2014.\r\n\r\n-- Description --\r\nIt is a code list managed by the Commission Services, therefore is not extensible by the MS/regions."@en .
+
+cap-iacs-parcel:ecologicalFocusAreaWithinCropGroupGreening
+        a           owl:ObjectProperty ;
+        rdfs:range  cap-iacs-aid:CropGroupGreening .
+
+cap-iacs-parcel:lpisLotName
+        a                owl:DatatypeProperty ;
+        rdfs:label       "Unique name of LPIS lot"@en ;
+        rdfs:range       xsd:string ;
+        skos:definition  "--Name--\r\nLPIS lot name\r\n\r\n-- Definition --\r\nUnique name of LPIS lot.\r\n\r\n-- Description --\r\nThe name is defined by MS/Region."@en .
+
+cap-iacs-parcel:valueStructure
+        a                owl:ObjectProperty ;
+        rdfs:label       "Value structure"@en ;
+        rdfs:range       cap-iacs-parcel:DataQualityMeasureValueStructureValue ;
+        skos:definition  "--Name--\r\nValue structure\r\n\r\n--Definition--\r\nStructure for reporting a complex data quality result.\r\n\r\n--Description--\r\nThe applicable in LPISQA value structures are defined in ISO 19157:2013 in the DQM_ValueStructure code list."@en .
+
+cap-iacs-parcel:LimitingQualityParameter
+        a                owl:Class ;
+        rdfs:label       "Sampling schema parameter table"@en ;
+        rdfs:subClassOf  [ a                owl:Restriction ;
+                           owl:cardinality  "1"^^xsd:nonNegativeInteger ;
+                           owl:onProperty   cap-iacs-parcel:acceptanceNumber
+                         ] ;
+        rdfs:subClassOf  [ a                owl:Restriction ;
+                           owl:cardinality  "1"^^xsd:nonNegativeInteger ;
+                           owl:onProperty   cap-iacs-parcel:sampleSize
+                         ] ;
+        rdfs:subClassOf  [ a                owl:Restriction ;
+                           owl:cardinality  "1"^^xsd:nonNegativeInteger ;
+                           owl:onProperty   cap-iacs-parcel:lotSize
+                         ] ;
+        rdfs:subClassOf  [ a                owl:Restriction ;
+                           owl:cardinality  "1"^^xsd:nonNegativeInteger ;
+                           owl:onProperty   cap-iacs-parcel:limitingQuality
+                         ] ;
+        skos:definition  "--Name--\r\nLimiting quality parameter\r\n\r\n-- Definition --\r\nLimiting quality parameter as defined in the sampling schema parameter table of ISO 2859-2.\r\n\r\n-- Description --\r\nApplicable set  of values must be selected  by MS/Region based on the population size of their LPIS from ISO 2859-2:1985 (Sampling procedures for inspection by attributes, Part 2: Sampling plans indexed by limiting quality (LQ) for isolated lot inspection)."@en .
+
+cap-iacs-parcel:mandatedAreaId
+        a                owl:DatatypeProperty ;
+        rdfs:label       "Unique thematic ID of mandated area within region of ecological focus area"@en ;
+        rdfs:range       xsd:string ;
+        skos:definition  "--Name--\r\nMandated area ID\r\n\r\n-- Definition --\r\nUnique thematic ID of mandated area within region of ecological focus area.\r\n\r\n-- Description --\r\nNation-wide unique alphanumerical identification code of mandated area within region of ecological focus area."@en .
+
+cap-iacs-parcel:contaminationCause
+        a                owl:ObjectProperty ;
+        rdfs:label       "Cause of contamination"@en ;
+        rdfs:range       cap-iacs-parcel:TechnicalReasonValue ;
+        skos:definition  "--Name--\r\nContamination cause\r\n\r\n-- Definition --\r\nTechnical reason that has presumably caused  the contamination.\r\n\r\n-- Description --\r\nTechnical reason shall be selected from the TechnicalReasonValue code list.\r\n\r\nNOTE. Contamination cause shall be given when value of waivered is FALSE."@en .
+
+cap-iacs-parcel:parameterDescription
+        a                owl:ObjectProperty ;
+        rdfs:label       "Limiting quality parameter decription"@en ;
+        rdfs:range       cap-iacs-parcel:LimitingQualityParameter ;
+        skos:definition  "--Name--\r\nParameter desciption\r\n\r\n-- Definition --\r\nDescription of limiting quality parameter applicable to the LPIS lot.\r\n\r\n-- Description --\r\nSampling schema parameter used. ISO2859-2: Sampling procedures for inspection by attributes, Part 2: Sampling plans indexed by limiting quality (LQ) for isolated lot inspection. \r\n\r\nNOTE: Record set must be maintained by MS."@en .
+
+cap-iacs-parcel:SkippingReasonTypeValue
+        a                owl:Class ;
+        rdfs:label       "Skipping reason type value"@en ;
+        rdfs:subClassOf  skos:Concept ;
+        skos:definition  "--Name--\r\nSkipping reason value type\r\n\r\n-- Definition --\r\nList  of reasons that do not allow the inspection of a given item under inspection.\r\n\r\n-- Description --\r\nObjective reasons for skipping  an item under inspection.\r\n\r\nNOTE: This code list is managed by DG JRC. MS/Regions are not allowed to extend it."@en .
+
+cap-iacs-parcel:referenceParcelDetailsForAggregation
+        a           owl:ObjectProperty ;
+        rdfs:range  cap-iacs-parcel:EtsItemUnderInspection .
+
+cap-iacs-parcel:feasibilityForMeasurement
+        a                owl:DatatypeProperty ;
+        rdfs:label       "Feasibility for measurement"@en ;
+        rdfs:range       xsd:boolean ;
+        skos:definition  "--Name--\r\nFeasibility for measurement\r\n\r\n-- Definition --\r\nUsability (fitness for purpose) of the input vector and imagery data to quantify the area of each eligible land cover type present in the inspected item.\r\n\r\n-- Description --\r\nArea measurement of the item under inspection is feasible on imagery when its whole territory is free of cloud, haze and any other phenomenon that prevents the observation of its boundaries and interior.  The input vector data (LPIS) is fit for the purpose when it unambiguously defines the geometric extent of the item under inspection. In case of field measurements it comprises the necessary conditions for field measurement (unobscured visibility along the perimeter, absence of force major reason (e.g. land slide at a boundary section).\r\n\r\nNOTE 1. If measurement is not feasible (feasibilityForMeasurement=false) then only values for itemCriticalDefectConformance and ItemConformance DQM should be defined in dataQualityMeasureType.\r\n\r\nNOTE 2: In ETS 5.3 this measure was named 10101 RP_FSM."@en .
+
+cap-iacs-parcel:etsSampleDetailsForEtsItemsUnderInspection
+        a           owl:ObjectProperty ;
+        rdfs:range  cap-iacs-parcel:EtsItemUnderInspection .
+
+cap-iacs-parcel:areaNonConformanceCause
+        a                owl:ObjectProperty ;
+        rdfs:label       "Technical reasons for non-conformance"@en ;
+        rdfs:range       cap-iacs-parcel:TechnicalReasonValue ;
+        skos:definition  "--Name--\r\nArea non-conformance cause\r\n\r\n-- Definition --\r\nStatement of the technical cause(s) leading to non-conformance in terms of the observed area of the item under inspection.\r\n\r\n-- Description --\r\nThe technical reason shall be assigned from the following list:\r\n- missed  update\r\n- missed upgrade\r\n- incomplete processing\r\n- processing error\r\n- incompatible design\r\n\r\nNOTE: One or more technical reason value selected from the TechnicalReasonValue enumeration."@en .
+
+cap-iacs-parcel:mtsReport
+        a                owl:ObjectProperty ;
+        rdfs:label       "MTS report"@en ;
+        rdfs:range       cap-iacs-base:SupplementaryDocument ;
+        skos:definition  "--Name--\r\nMTS report\r\n\r\n-- Definition --\r\nDocumentation of the inspection process in form of standard report.\r\n\r\n-- Description --\r\nThe report shall contain the results of testing (according to the xml schemas), their analysis and an action plan to deal with non-conformities."@en .
+
+cap-iacs-parcel:description
+        a                owl:ObjectProperty ;
+        rdfs:label       "Description"@en ;
+        rdfs:range       cap-iacs-parcel:DataQualityMeasureDescription ;
+        skos:definition  "--Name--\r\nDescription\r\n\r\n--Definition--\r\nDescription of the data quality measure, including all formulae and/or illustrations needed to establish the result of applying the measure.\r\n\r\n--Description--\r\nWhen it serves understanding, description may include historic reference to the older versions of LCM or LPISQA."@en .
+
+cap-iacs-parcel:numberOfIncompleteProcessing
+        a                owl:DatatypeProperty ;
+        rdfs:label       "Number of incomplete processing"@en ;
+        rdfs:range       xsd:integer ;
+        skos:definition  "--Name--\r\nNumber of incomplete processing\r\n\r\n-- Definition --\r\nAbundance of incomplete processing instances within the sample as technical cause for critical defects and non-conformances.\r\n\r\n--Description --\r\nOccurrences of incompleteProcessing value assigned to the items under inspection within the sample. It comprises values of misclassificationCause, criticalDefectCasue, contaminationCause, and areaNonConformityCause. \r\nThe scope of this data quality element are the above listed properties. \r\n\r\nNOTE. Previously known as part of Abundance for the causes for occurrence of non-conforming reference parcels, or 10204 LPIS_RP_CEA."@en .
+
+cap-iacs-parcel:ecologicalFocusAreaRegionId
+        a                owl:DatatypeProperty ;
+        rdfs:label       "Unique thematic ID of ecological focus area ragion"@en ;
+        rdfs:range       xsd:string ;
+        skos:definition  "--Name--\r\nEFA region ID\r\n\r\n-- Definition --\r\nUnique thematic ID of ecological focus area region.\r\n\r\n-- Description --\r\nNation-wide unique alphanumerical identification code of ecological focus area region."@en .
+
+cap-iacs-parcel:LandscapeFeatureValueType
+        a                owl:Class ;
+        rdfs:label       "List of landscape features"@en ;
+        rdfs:subClassOf  skos:Concept ;
+        skos:definition  "--Name--\r\nLandscape feature value type\r\n\r\n-- Definition --\r\nTypes of landscape features.\r\n\r\n-- Description --\r\nMS shall decide that one or more values of this code list  are considered to be landscape feature. The code list can be extended."@en .
+
+cap-iacs-parcel:totalDeclaredArea
+        a                owl:DatatypeProperty ;
+        rdfs:label       "Total declared LPIS area"@en ;
+        rdfs:range       om:Measure ;
+        skos:definition  "--Name--\r\nTotal declared area\r\n\r\n--Definition --\r\nTotal declared area in LPIS.\r\n\r\n--Description --\r\nSum of the declared areas recorded in LPIS."@en .
+
+cap-iacs-parcel:TechnicalReasonValue
+        a                owl:Class ;
+        rdfs:label       "List of possible technical reason values"@en ;
+        rdfs:subClassOf  skos:Concept ;
+        skos:definition  "--Name--\r\nTechnical reason value\r\n\r\n--Definition --\r\nList of the technical reasons.\r\n\r\n--Description--\r\nList of the causes leading to non-conformance of items under inspection."@en .
+
+cap-iacs-parcel:InspectionMethodValue
+        a                owl:Class ;
+        rdfs:label       "List of inspection methods"@en ;
+        rdfs:subClassOf  skos:Concept ;
+        skos:definition  "--Name--\r\nInspection method  value\r\n\r\n-- Definition --\r\nData collection methods applicable for LPISQA.\r\n\r\n-- Description --\r\nMS/Regions shall chose on of the following methods:\r\n- field survey,\r\n- computer assisted photo interpretation (CAPI)\r\n- combined CAPI and field measurements."@en .
+
+cap-iacs-parcel:itemContaminationDetails
+        a           owl:ObjectProperty ;
+        rdfs:range  cap-iacs-parcel:EtsItemUnderInspection .
+
+cap-iacs-parcel:permanentGrasslandProRata
+        a                owl:ObjectProperty ;
+        rdfs:label       "Prorata applicable for permanent grassland only"@en ;
+        rdfs:range       cap-iacs-parcel:ProRataCategoryValue ;
+        skos:definition  "--Name--\r\nPermanent grassland pro-rata\r\n\r\n-- Definition --\r\nHomogeneous land cover type for which a fixed reduction coefficient based on the percentage of ineligible area is applied (Art. 10 of EU 640/2014).\r\n\r\n-- Description --\r\nPro-rata applicable for permanent grassland only."@en .
+
+cap-iacs-parcel:lpisRemedialActionPlan
+        a                owl:ObjectProperty ;
+        rdfs:label       "Remedial action plan"@en ;
+        rdfs:range       cap-iacs-base:SupplementaryDocument ;
+        skos:definition  "--Name--\r\nLPIS remedial action plan\r\n\r\n--Definition--\r\nReport describing measures and timescale of actions to be taken by the authority responsible for the maintenance of LPIS.\r\n\r\n-- Description --\r\nThis additional to the ETS report shall be delivered when the ETS sample results to be non-conforming for quality elements QE1, QE2, QE3, and QE6. It shall also provide analysis of quality measures not evaluated by conformance results."@en .
+
+cap-iacs-parcel:DataQualityMeasureTypeIuiValue
+        a                owl:Class ;
+        rdfs:label       "IUI data quality measure type list"@en ;
+        rdfs:subClassOf  skos:Concept ;
+        skos:definition  "--Name--\r\nData quality measure types applicable to items under inspection\r\n\r\n-- Definition --\r\nList of data quality measure types applicable for inspecting items of reference parcels.\r\n\r\n-- Description --\r\nThese user defined data quality measures are used to assess the quality of reference parcels in terms of area measurement accuracy and thematic classification correctness."@en .
+
+cap-iacs-parcel:LotSizeValue
+        a                owl:Class ;
+        rdfs:label       "List of possible lot size range values"@en ;
+        rdfs:subClassOf  skos:Concept ;
+        owl:oneOf        ( <http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-parcel/code#LotSizeValue/150001to500000> <http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-parcel/code#LotSizeValue/35001to150000> <http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-parcel/code#LotSizeValue/>500000> ) ;
+        skos:definition  "--Name--\r\nLot size value\r\n\r\n-- Definition --\r\nList of possible lot size range values. according to ISO 2859-2:1985.\r\n\r\n-- Description --\r\nThe ranges are defined in ISO 2859-2:1985 Sampling procedures for inspection by attributes, Part 2: Sampling plans indexed by limiting quality (LQ) for isolated lot inspection."@en .
+
+cap-iacs-parcel:EtsItemUnderInspection
+        a                owl:Class ;
+        rdfs:label       "Item under inspection"@en ;
+        rdfs:subClassOf  gsp:Feature ;
+        rdfs:subClassOf  [ a                   owl:Restriction ;
+                           owl:minCardinality  "1"^^xsd:nonNegativeInteger ;
+                           owl:onProperty      cap-iacs-parcel:dataQualityMeasureResult
+                         ] ;
+        rdfs:subClassOf  [ a                owl:Restriction ;
+                           owl:cardinality  "1"^^xsd:nonNegativeInteger ;
+                           owl:onProperty   cap-iacs-parcel:declaredArea
+                         ] ;
+        rdfs:subClassOf  [ a                owl:Restriction ;
+                           owl:cardinality  "1"^^xsd:nonNegativeInteger ;
+                           owl:onProperty   cap-iacs-parcel:observedArea
+                         ] ;
+        rdfs:subClassOf  [ a                owl:Restriction ;
+                           owl:cardinality  "1"^^xsd:nonNegativeInteger ;
+                           owl:onProperty   cap-iacs-parcel:feasibilityForMeasurement
+                         ] ;
+        rdfs:subClassOf  [ a                   owl:Restriction ;
+                           owl:minCardinality  "1"^^xsd:nonNegativeInteger ;
+                           owl:onProperty      cap-iacs-parcel:dataQualityMeasureDocumentation
+                         ] ;
+        rdfs:subClassOf  [ a                   owl:Restriction ;
+                           owl:minCardinality  "1"^^xsd:nonNegativeInteger ;
+                           owl:onProperty      cap-iacs-parcel:dataQualityMeasureType
+                         ] ;
+        rdfs:subClassOf  [ a                owl:Restriction ;
+                           owl:cardinality  "1"^^xsd:nonNegativeInteger ;
+                           owl:onProperty   cap-iacs-parcel:referenceArea
+                         ] ;
+        rdfs:subClassOf  [ a                owl:Restriction ;
+                           owl:cardinality  "1"^^xsd:nonNegativeInteger ;
+                           owl:onProperty   cap-iacs-parcel:etsItemUnderInspectionWithinEtsSampleDetails
+                         ] ;
+        rdfs:subClassOf  [ a                   owl:Restriction ;
+                           owl:maxCardinality  "1"^^xsd:nonNegativeInteger ;
+                           owl:onProperty      cap-iacs-parcel:areaNonConformanceCause
+                         ] ;
+        skos:definition  "--Name--\r\nETS item under inspection\r\n\r\n-- Definition--\r\nReference parcel or, where applicable, aggregation of reference parcels sampled for LPIS quality assessment process.\r\n\r\n-- Description --\r\nThe attributes of the instances of this feature type (except the reference parcel ID and the declared area) are defined in course of direct observations and measurements carried out according to the specifications of the given LPIS. The procedures to be followed are described in the Perform ETS use case of the LPIS dynamic model. The inspection methodology is based on observing the land cover types present in the RP.\r\n\r\nNOTE: Previously this  concept was called as land under inspection (LUI).  According to ISO 2859-2 \"item\" is the standard  term used for subjects of inspection. This approach also allows to extend the QA methodology for other objects (e.g. EFA elements)."@en .
+
+cap-iacs-parcel:conformingItemsArea
+        a                owl:DatatypeProperty ;
+        rdfs:label       "Conforming sample area"@en ;
+        rdfs:range       om:Measure ;
+        skos:definition  "--Name--\r\nArea of conforming items\r\n\r\n-- Definition --\r\nTotal area of items under inspection found conforming in terms of area values. \r\n\r\n--Description--\r\nSum of the observed area for all conforming items (single and aggregated)."@en .
+
+cap-iacs-parcel:agriculturalAreaDetailsForEcologicalFocusArea
+        a           owl:ObjectProperty ;
+        rdfs:range  cap-iacs-parcel:EcologicalFocusArea .
+
+cap-iacs-parcel:percentage
+        a                owl:DatatypeProperty ;
+        rdfs:label       "Percentage value"@en ;
+        rdfs:range       xsd:double ;
+        skos:definition  "--Name--\r\nPercentage\r\n\r\n-- Definition --\r\nWithin the defined regions, Member States shall designate the areas where up to half of the percentage points of the ecological focus area requirement has to be implemented."@en .
+
+cap-iacs-parcel:conversionDetailsForEfa
+        a           owl:ObjectProperty ;
+        rdfs:range  cap-iacs-parcel:EcologicalFocusArea .
+
+cap-iacs-parcel:AcceptanceNumberValue
+        a                owl:Class ;
+        rdfs:label       "List of possible acceptance values"@en ;
+        rdfs:subClassOf  skos:Concept ;
+        owl:oneOf        ( <http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-parcel/code#AcceptanceNumberValue/10> <http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-parcel/code#AcceptanceNumberValue/18> <http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-parcel/code#AcceptanceNumberValue/5> ) ;
+        skos:definition  "--Name--\r\nAcceptance number value\r\n\r\n-- Definition --\r\nList of possible acceptance values.\r\n\r\n-- Description --\r\nAcceptance values are selected based on the sample size and the limiting quality values defined in ISO 2859-2:1985 Sampling procedures for inspection by attributes, Part 2: Sampling plans indexed by limiting quality (LQ) for isolated lot inspection."@en .
+
+cap-iacs-parcel:numberOfMissedUpgrades
+        a                owl:DatatypeProperty ;
+        rdfs:label       "Number of missed upgrades"@en ;
+        rdfs:range       xsd:integer ;
+        skos:definition  "--Name--\r\nNumber of missed upgrades\r\n\r\n-- Definition --\r\nAbundance of missed upgrades within the sample as technical cause for critical defects and non-conformances.\r\n\r\n--Description --\r\nOccurrences of missedUpgrade value assigned to the items under inspection within the sample. It comprises values of misclassificationCause, criticalDefectCasue, contaminationCause, and areaNonConformityCause. \r\nThe scope of this data quality element are the above listed properties. \r\n\r\nNOTE. Previously known as part of Abundance for the causes for occurrence of non-conforming reference parcels, or 10204 LPIS_RP_CEA."@en .
+
+cap-iacs-parcel:dataQualityMeasureDocumentation
+        a                owl:ObjectProperty ;
+        rdfs:label       "Description of data quality measure"@en ;
+        rdfs:range       cap-iacs-parcel:DataQualityMeasure ;
+        skos:definition  "--Name--\r\nData quality measure documentation\r\n\r\n-- Definition --\r\nDescription of a particular data quality measure in terms of ISO 19157:2013. \r\n\r\n-- Description --\r\nDetailed description of data quality measure according to the profile of DQM_Measure data type derived from ISO 19157:2013."@en .
+
+cap-iacs-parcel:preselectedReferenceParcelWithinTheLotDetails
+        a           owl:ObjectProperty ;
+        rdfs:range  cap-iacs-parcel:LpisLot .
+
+cap-iacs-parcel:ConversionParameter
+        a                owl:Class ;
+        rdfs:label       "Conversion parameters for ecological focus area"@en ;
+        rdfs:subClassOf  gsp:Feature ;
+        rdfs:subClassOf  [ a                owl:Restriction ;
+                           owl:cardinality  "1"^^xsd:nonNegativeInteger ;
+                           owl:onProperty   cap-iacs-parcel:unit
+                         ] ;
+        rdfs:subClassOf  [ a                owl:Restriction ;
+                           owl:cardinality  "1"^^xsd:nonNegativeInteger ;
+                           owl:onProperty   cap-iacs-parcel:weightingFactor
+                         ] ;
+        rdfs:subClassOf  [ a                   owl:Restriction ;
+                           owl:maxCardinality  "1"^^xsd:nonNegativeInteger ;
+                           owl:onProperty      cap-iacs-parcel:conversionFactor
+                         ] ;
+        rdfs:subClassOf  [ a                   owl:Restriction ;
+                           owl:maxCardinality  "1"^^xsd:nonNegativeInteger ;
+                           owl:onProperty      cap-iacs-parcel:conversionParameterForDeterminationOfEcologicalFocusArea
+                         ] ;
+        skos:definition  "--Name--\r\nConversion parameter\r\n\r\n-- Definition --\r\nConversion and weighting factors  for calculating EFA  area referred to in Art 46(3) of (EU) R No 1307/2013.\r\n\r\n-- Description --\r\nConversion factors needed for calculating the converted area of EFA based on spatial representation with reduced dimensions (point, curve) and the weighting factor expressing the ecological weight of EFA."@en .
+
+cap-iacs-parcel:DataQualityMeasureTypeIuiCcValue
+        a                owl:Class ;
+        rdfs:label       "IUI CC data quality measure type list"@en ;
+        rdfs:subClassOf  skos:Concept ;
+        skos:definition  "--Name--\r\nClassification Correctness DQM value\r\n\r\n-- Definition --\r\nData quality measure describing the correctness of classification of the feature type.\r\n\r\n-- Description --\r\nThe classification shall be performed according to the types defined in the eligibility profile. This DQM is applicable for evaluating the classification correctness of agricultural land(s) and the landscape feature(s) present in the item under inspection.  \r\n\r\nNOTE: This is a new quality measure from ETS v 6.0 on."@en .
+
+cap-iacs-parcel:oversamplingParameter
+        a                owl:DatatypeProperty ;
+        rdfs:label       "Oversampling parameter"@en ;
+        rdfs:range       xsd:double ;
+        skos:definition  "--Name--\r\nOversampling parameter.\r\n\r\n-- Definition --\r\nExtent of oversampling due to the difference between acceptance numbers prescribed by the indexes LQ=2.00 and LQ=12.50.\r\n\r\n--Description --\r\nFor decisions based on LQ=12.50 the prescribed sample size is 200. However a number of items prescribed by LQ=2.00 is inspected and measured (oversampling). This parameter shows how the actual and sufficient population relate to one another.  \r\n\r\nEXAMPLE. The sample size for LQ=2.00 is 1250 items. They have been inspected. Out of these items 1115 have been measured. The oversampling parameter will be defined proportionally (1115/200=5,575). It means that out of the measured items 100 (5,575x18=100,35 truncated) can be non-conforming.\r\n\r\nNOTE: the prescribed sample size and acceptance number for LQ=2.00 test are NOT subject to proportional adaptation. I.e. only the first 500, 800 or 1250 inspected items are evaluated against an invariant acceptance number of 18."@en .
+
+cap-iacs-parcel:EfaItemUnderInspection
+        a                owl:Class ;
+        rdfs:label       "Preselected EFA"@en ;
+        rdfs:subClassOf  gsp:Feature ;
+        rdfs:subClassOf  [ a                   owl:Restriction ;
+                           owl:maxCardinality  "1"^^xsd:nonNegativeInteger ;
+                           owl:onProperty      cap-iacs-parcel:weightedArea
+                         ] ;
+        rdfs:subClassOf  [ a                owl:Restriction ;
+                           owl:cardinality  "1"^^xsd:nonNegativeInteger ;
+                           owl:onProperty   cap-iacs-parcel:recordedEfaType
+                         ] ;
+        rdfs:subClassOf  [ a                   owl:Restriction ;
+                           owl:minCardinality  "1"^^xsd:nonNegativeInteger ;
+                           owl:onProperty      cap-iacs-parcel:dataQualityMeasureType
+                         ] ;
+        rdfs:subClassOf  [ a                owl:Restriction ;
+                           owl:cardinality  "1"^^xsd:nonNegativeInteger ;
+                           owl:onProperty   cap-iacs-parcel:recordedArea
+                         ] ;
+        rdfs:subClassOf  [ a                owl:Restriction ;
+                           owl:cardinality  "1"^^xsd:nonNegativeInteger ;
+                           owl:onProperty   cap-iacs-parcel:efaItemUnderInspectionWithinEfaSampleDetails
+                         ] ;
+        rdfs:subClassOf  [ a                owl:Restriction ;
+                           owl:cardinality  "1"^^xsd:nonNegativeInteger ;
+                           owl:onProperty   cap-iacs-parcel:determinedArea
+                         ] ;
+        rdfs:subClassOf  [ a                owl:Restriction ;
+                           owl:cardinality  "1"^^xsd:nonNegativeInteger ;
+                           owl:onProperty   cap-iacs-parcel:observedEfaType
+                         ] ;
+        rdfs:subClassOf  [ a                   owl:Restriction ;
+                           owl:minCardinality  "1"^^xsd:nonNegativeInteger ;
+                           owl:onProperty      cap-iacs-parcel:dataQualityMeasureResult
+                         ] ;
+        rdfs:subClassOf  [ a                   owl:Restriction ;
+                           owl:maxCardinality  "1"^^xsd:nonNegativeInteger ;
+                           owl:onProperty      cap-iacs-parcel:efaMissclassificationCause
+                         ] ;
+        rdfs:subClassOf  [ a                   owl:Restriction ;
+                           owl:maxCardinality  "1"^^xsd:nonNegativeInteger ;
+                           owl:onProperty      cap-iacs-parcel:convertedArea
+                         ] ;
+        rdfs:subClassOf  [ a                   owl:Restriction ;
+                           owl:minCardinality  "1"^^xsd:nonNegativeInteger ;
+                           owl:onProperty      cap-iacs-parcel:dataQualityMeasureDocumentation
+                         ] ;
+        skos:definition  "--Name--\r\nEFA item under inspection\r\n\r\n-- Definition --\r\nThis is a placeholder only; currently not to be implemented.\r\n\r\n-- Description --\r\nVisible land  in the imagery or in the field that is supposed to represent the sampled EFA."@en .
+
+cap-iacs-parcel:PreselectedParcel
+        a                owl:Class ;
+        rdfs:label       "Preselected parcel"@en ;
+        rdfs:subClassOf  gsp:Feature ;
+        rdfs:subClassOf  [ a                owl:Restriction ;
+                           owl:cardinality  "1"^^xsd:nonNegativeInteger ;
+                           owl:onProperty   cap-iacs-parcel:ordinalNumber
+                         ] ;
+        rdfs:subClassOf  [ a                   owl:Restriction ;
+                           owl:maxCardinality  "1"^^xsd:nonNegativeInteger ;
+                           owl:onProperty      cap-iacs-parcel:skippingReasonType
+                         ] ;
+        rdfs:subClassOf  [ a                owl:Restriction ;
+                           owl:cardinality  "1"^^xsd:nonNegativeInteger ;
+                           owl:onProperty   cap-iacs-parcel:feasibilityForInspection
+                         ] ;
+        rdfs:subClassOf  [ a                   owl:Restriction ;
+                           owl:maxCardinality  "1"^^xsd:nonNegativeInteger ;
+                           owl:onProperty      cap-iacs-parcel:detailsOfPreselectedParcelForInspection
+                         ] ;
+        rdfs:subClassOf  [ a                owl:Restriction ;
+                           owl:cardinality  "1"^^xsd:nonNegativeInteger ;
+                           owl:onProperty   cap-iacs-parcel:preselectedReferenceParcelWithinTheLotDetails
+                         ] ;
+        skos:definition  "--Name--\r\nPre-selected parcel\r\n\r\n-- Definition --\r\nList of parcels produced in the sample pre-selection process performed by DG JRC in order to provide a preliminary sample of parcels for the executable test suit (ETS).\r\n\r\n-- Description --\r\nThe population of the pre-selected parcels is three times more than the sample size defined as function the total LPIS population and the limiting quality value LQ=2 in ISO 2859-2. The identifiers of randomly pre-selected parcels are provided to the MS in a strict order, which prescribes the sequence of the inspection process. As soon as the prescribed sample size is reached the inspection process is considered to be complete."@en .
+
+cap-iacs-parcel:DataQualityMeasureTypeEfaValue
+        a                owl:Class ;
+        rdfs:label       "EFA data quality measure type list"@en ;
+        rdfs:subClassOf  skos:Concept ;
+        skos:definition  "--Name--\r\nData quality measure types applicable to the EFA inspection sample\r\n\r\n-- Definition --\r\nThis is a placeholder only; currently not to be implemented.\r\n\r\n-- Description --\r\nData quality measure type list for EFA sample. \r\nNOTE. Full description of each value must be provided in DQM_Measure."@en .
+
+cap-iacs-parcel:skippingReasonType
+        a                owl:ObjectProperty ;
+        rdfs:label       "Skipping reason type"@en ;
+        rdfs:range       cap-iacs-parcel:SkippingReasonTypeValue ;
+        skos:definition  "--Name--\r\nSkipping reason type\r\n\r\n-- Definition --\r\nTechnical reasons that prevent the inspection of the given reference parcel.\r\n\r\n-- Description --\r\nTechnical reasons that do not allow the inspection of the given reference parcel. Required if feasibilityForInspection value is TRUE. The values shall be taken from the SkippingReasonTypeValue code list."@en .
+
+cap-iacs-parcel:agriculturalAreaType
+        a                owl:ObjectProperty ;
+        rdfs:label       "Agricultural area type"@en ;
+        rdfs:range       cap-iacs-parcel:AgriculturalAreaTypeValue ;
+        skos:definition  "--Name--\r\nAgricultural area type\r\n\r\n-- Definition --\r\nAgricultural area type.\r\n\r\n-- Description --\r\nAny area taken up by arable land, permanent grassland and permanent pasture, or permanent crops. 1307/2013 4(1)(e)."@en .
+
+cap-iacs-parcel:nonConformingItemAcceptanceNumber
+        a                owl:ObjectProperty ;
+        rdfs:label       "Non-conforming item acceptance number"@en ;
+        rdfs:range       cap-iacs-parcel:AcceptanceNumberValue ;
+        skos:definition  "--Name--\r\nAcceptance number for non-conforming items\r\n\r\n-- Definition --\r\nAcceptance number applicable for non-conforming items.\r\n\r\n-- Description --\r\nIf the number of non-conforming items is equal or less than specified acceptance number, the total  lot shall be accepted.\r\nNOTE. Acceptance number of non-conforming items shall correspond to limiting quality value 12.5 specified in ISO 2859-2:1985."@en .
+
+cap-iacs-parcel:DataQualityMeasureTypeEtsValue
+        a                owl:Class ;
+        rdfs:label       "DTS data quality measure type list"@en ;
+        rdfs:subClassOf  skos:Concept ;
+        skos:definition  "--Name--\r\nData quality measure types applicable for ETS sample\r\n\r\n-- Definition --\r\nData quality measures applicable for LPIS quality assessment process at sample level.\r\n\r\n--Description--\r\nBy exclusion of misclassification  matrix the elements of the code list are user defined data quality measures to assess quality of the ETS sample. Misclassification matrix comes directly from ISO 19157:2013."@en .
+
+cap-iacs-parcel:etsSampleDetailsForLpisLot
+        a           owl:ObjectProperty ;
+        rdfs:range  cap-iacs-parcel:LpisLot .
+
+cap-iacs-parcel:EcologicalFocusAreaEquivalentPracticeTypeValue
+        a                owl:Class ;
+        rdfs:label       "List of EFA equivalent practices"@en ;
+        rdfs:subClassOf  skos:Concept ;
+        skos:definition  "--Name--\r\nEFA equivalent practice type\r\n\r\n-- Definition --\r\nEquivalent practices with EFAs which are listed  in print III of Annex IX of Regulation (EU) No 1307/2013.\r\n\r\n-- Description --\r\nThe specific AECM reason has to be linked to the EFA type."@en .
+
+cap-iacs-parcel:EcologicalFocusAreaRegion
+        a                owl:Class ;
+        rdfs:label       "Region of ecological focus area"@en ;
+        rdfs:subClassOf  gsp:Feature ;
+        rdfs:subClassOf  [ a                   owl:Restriction ;
+                           owl:maxCardinality  "1"^^xsd:nonNegativeInteger ;
+                           owl:onProperty      cap-iacs-parcel:geometry
+                         ] ;
+        rdfs:subClassOf  [ a                   owl:Restriction ;
+                           owl:minCardinality  "1"^^xsd:nonNegativeInteger ;
+                           owl:onProperty      cap-iacs-parcel:ecologicalFocusAreaRegionDetailsForMandatedArea
+                         ] ;
+        rdfs:subClassOf  [ a                   owl:Restriction ;
+                           owl:minCardinality  "1"^^xsd:nonNegativeInteger ;
+                           owl:onProperty      cap-iacs-parcel:ecologicalFocusAreasAggregationDetails
+                         ] ;
+        rdfs:subClassOf  [ a                owl:Restriction ;
+                           owl:cardinality  "1"^^xsd:nonNegativeInteger ;
+                           owl:onProperty   cap-iacs-parcel:ecologicalFocusAreaRegionId
+                         ] ;
+        rdfs:subClassOf  [ a                   owl:Restriction ;
+                           owl:maxCardinality  "1"^^xsd:nonNegativeInteger ;
+                           owl:onProperty      cap-iacs-parcel:homogeneityTypeDocument
+                         ] ;
+        rdfs:subClassOf  [ a                   owl:Restriction ;
+                           owl:maxCardinality  "1"^^xsd:nonNegativeInteger ;
+                           owl:onProperty      cap-iacs-parcel:homogeneityTypeCitation
+                         ] ;
+        rdfs:subClassOf  [ a                owl:Restriction ;
+                           owl:cardinality  "1"^^xsd:nonNegativeInteger ;
+                           owl:onProperty   cap-iacs-parcel:homogeneityType
+                         ] ;
+        rdfs:subClassOf  [ a                owl:Restriction ;
+                           owl:cardinality  "1"^^xsd:nonNegativeInteger ;
+                           owl:onProperty   cap-iacs-parcel:metadata
+                         ] ;
+        skos:definition  "--Name--\r\nEFA region\r\n\r\n-- Definition --\r\nRegions for regional EFA implementation as referred to in Art. 46(5) of (EU) R No 1307/2013.\r\n\r\n-- Description --\r\nMember States may decide to implement up to half of the percentage points of EFA at regional level in order to obtain adjacent ecological focus areas. The regions to be defined shall consist of single and homogenous geographical areas with similar agricultural and environmental conditions. Ecological focus areas must be contiguous for regional implementation (and must be subject to collective implementation).\r\n\r\nNOTE\r\nMember States may decide to implement up to half of the percentage points of the ecological focus area referred to in paragraph 1 at regional level in order to obtain adjacent ecological focus areas."@en .
+
+cap-iacs-parcel:numberOfMissedUpdates
+        a                owl:DatatypeProperty ;
+        rdfs:label       "Number of missed updates"@en ;
+        rdfs:range       xsd:integer ;
+        skos:definition  "--Name--\r\nNumber of missed updates\r\n\r\n-- Definition --\r\nAbundance of missed updates within the sample as technical cause for critical defects and non-conformances.\r\n\r\n--Description --\r\nOccurrences of missedUpdate value assigned to the items under inspection within the sample. It comprises values of misclassificationCause, criticalDefectCasue, contaminationCause, and areaNonConformityCause.\r\nThe scope of this data quality element are the above listed properties. \r\n\r\nNOTE. Previously known as part of Abundance for the causes for occurrence of non-conforming reference parcels, or 10204 LPIS_RP_CEA."@en .
+
+cap-iacs-parcel:EfaSample
+        a                owl:Class ;
+        rdfs:label       "EFA sample"@en ;
+        rdfs:subClassOf  gsp:Feature ;
+        rdfs:subClassOf  [ a                   owl:Restriction ;
+                           owl:minCardinality  "1"^^xsd:nonNegativeInteger ;
+                           owl:onProperty      cap-iacs-parcel:dataQualityMeasureResult
+                         ] ;
+        rdfs:subClassOf  [ a                owl:Restriction ;
+                           owl:cardinality  "1"^^xsd:nonNegativeInteger ;
+                           owl:onProperty   cap-iacs-parcel:efaReport
+                         ] ;
+        rdfs:subClassOf  [ a                   owl:Restriction ;
+                           owl:minCardinality  "1"^^xsd:nonNegativeInteger ;
+                           owl:onProperty      cap-iacs-parcel:dataQualityMeasureDescription
+                         ] ;
+        rdfs:subClassOf  [ a                owl:Restriction ;
+                           owl:cardinality  "1"^^xsd:nonNegativeInteger ;
+                           owl:onProperty   cap-iacs-parcel:numberOfInspectedEfa
+                         ] ;
+        rdfs:subClassOf  [ a                owl:Restriction ;
+                           owl:cardinality  "1"^^xsd:nonNegativeInteger ;
+                           owl:onProperty   cap-iacs-parcel:efaSampleDetailsForLpisLot
+                         ] ;
+        rdfs:subClassOf  [ a                   owl:Restriction ;
+                           owl:minCardinality  "1"^^xsd:nonNegativeInteger ;
+                           owl:onProperty      cap-iacs-parcel:dataQualityMeasureType
+                         ] ;
+        rdfs:subClassOf  [ a                   owl:Restriction ;
+                           owl:maxCardinality  "1"^^xsd:nonNegativeInteger ;
+                           owl:onProperty      cap-iacs-parcel:efaRemedialActionPlan
+                         ] ;
+        rdfs:subClassOf  [ a                   owl:Restriction ;
+                           owl:minCardinality  "1"^^xsd:nonNegativeInteger ;
+                           owl:onProperty      cap-iacs-parcel:efaSampleDetailsForItemsUnderInspectionEfa
+                         ] ;
+        skos:definition  "--Name--\r\nEFA sample\r\n\r\n-- Definition --\r\nThis is a placeholder only; currently not to be implemented.\r\n\r\nSet of randomly selected EFA with ordered sequence."@en .
+
+cap-iacs-parcel:landscapeFeatureDetailsForCrossCompliance
+        a           owl:ObjectProperty ;
+        rdfs:range  cap-iacs-aid:CrossCompliance .
+
+cap-iacs-parcel:landscapeFeatureAsEfaItemUnderInspectionDetails
+        a           owl:ObjectProperty ;
+        rdfs:range  cap-iacs-parcel:EfaItemUnderInspection .
+
+cap-iacs-parcel:sampleSize
+        a                owl:ObjectProperty ;
+        rdfs:label       "Sample size value"@en ;
+        rdfs:range       cap-iacs-parcel:SampleSizeValue ;
+        skos:definition  "--Name--\r\nSample size\r\n\r\n-- Definition --\r\nNumber of items in the sample [ISO 2859-1:1999].\r\n\r\n-- Description --\r\nNumber of reference parcels sufficient for the purposes of LPISQA. Should be selected by the MS/Region as function of LQ and LPIS lot size."@en .
+
+cap-iacs-parcel:subjectToCollectiveImplementation
+        a                owl:DatatypeProperty ;
+        rdfs:label       "Subject to collective implementation"@en ;
+        rdfs:range       xsd:boolean ;
+        skos:definition  "--Name--\r\nSubject for collective implementation\r\n\r\n-- Definition --\r\nIndication whether the EFA instance is subject for collective implementation as referred to in Art. 46(6) of (EU) R 1307/2013.\r\n\r\n-- Description --\r\nCollective implementation is allowed when:\r\n- the holdings of farmers concerned are in close proximity;\r\n- the ecological focus areas concerned are contiguous.\r\nIn order to underpin the implementation of Union policies on the environment, climate and biodiversity, Member States may designate the areas on which collective implementation is possible and may impose further obligations upon farmers or groups of farmers participating in such collective implementation.\r\n\r\nNOTE: Aspect of collective implementation:\r\n- If EFA is fully situated within or adjacent to arable land within one application then EFA is not subject to collective implementation.\r\n- If EFA situated on or adjacent to arable land and covered by several applications - is subject to collective implementation.\r\n- If subjectToCollectiveImplementation = TRUE then EFA must be contiguous."@en .
+
+cap-iacs-parcel:AgriculturalAreaTypeValue
+        a                owl:Class ;
+        rdfs:label       "List of agricultural area type values"@en ;
+        rdfs:subClassOf  skos:Concept ;
+        skos:definition  "--Name--\r\nAgricultural area type value\r\n\r\n-- Definition --\r\nTypes of agricultural area.\r\n\r\n-- Description --\r\nList of agricultural area type values.  QAF: Eligibility profile value.\r\n\r\nNOTE 1:  According to DSCG/2014/33  arableLand, permanentCrop and permanetGrassland are the minimum level of details of land cover types needed for distinction of agricultural area.\r\n\r\nNOTE 2:  sensitivePermanetGrassland type to be protected under greening  is required by Art.5(2)(d) of Regulation (EU) No 640/2014.\r\n\r\nNOTE 3: This code list can be extended with narrower categories replacing the listed broader code list values. \r\n\r\n \r\n\r\nNOTE 4: For the purposes of ETS MS/Region may use the same code list applied in IACS, or a generalised one. For the purposes of ETS the generalised code list is sufficient.\r\nWhen detailed  (crop level) agricultural area types are used, in course of MTS the mapping to the general categories listed in the LCM has to be given.\r\n\r\nEXAMPLE: Sensitive permanent grassland may be replaced by any sub-category (narrower value) referred to in Art. 41 of (EU) R 639/2014."@en .
+
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-parcel>
+        a                owl:Ontology ;
+        rdfs:label       "Identification system for agricultural parcels"@en ;
+        owl:imports      <http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-base> , <https://github.com/HajoRijgersberg/OM/raw/master/om-2.0.rdf> , <http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid> , <http://www.opengis.net/ont/geosparql> ;
+        owl:versionIRI   "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-parcel/3.0" ;
+        owl:versionInfo  "3.0" ;
+        skos:definition  "-- Name --\r\nIdentification system for agricultural parcels\r\n\r\n-- Definition --\r\nApplication schema of Identification system for agricultural parcels.\r\n\r\n-- Description --\r\nThe contents of an «ApplicationSchema» package exported as a GML Application Schema file.\r\n\r\nNOTE. This subsystem of IACS is commonly named as Land PArcel Identification System. (LPIS)."@en ;
+        dct:creator [ schema:affiliation [ foaf:name "PSNC" ] ;
+                      rdfs:seeAlso <http://orcid.org/0000-0003-4289-4922> ;
+                      foaf:name "Raul Palma"
+                    ] ;
+        dct:title "JRC IACS - Identification System for Agricultural Parcels Ontology"@en ;
+        dct:description "Ontology of the identification system for agricultural parcels used in IACS, generated from the transformation of the corresponding JRC application schema"@en ;
+        dct:source "JRC IACS application schema. https://doi.org/10.1016/j.landusepol.2016.05.023"@en ;
+        dct:rights "This ontology is distributed under Creative Commons Attribution 4.0 License - http://creativecommons.org/licenses/by/4.0"@en .
+
+cap-iacs-parcel:numberOfIncompatibleDesign
+        a                owl:DatatypeProperty ;
+        rdfs:label       "Number of incompatible design"@en ;
+        rdfs:range       xsd:integer ;
+        skos:definition  "--Name--\r\nNumber of incompatible design\r\n\r\n-- Definition --\r\nAbundance of incompatible design instances within the sample as technical cause for critical defects and non-conformances.\r\n\r\n--Description --\r\nOccurrences of incompatibelDesign value assigned to the items under inspection within the sample. It comprises values of misclassificationCause, criticalDefectCasue, contaminationCause, and areaNonConformityCause.\r\nThe scope of this data quality element are the above listed properties. \r\n\r\nNOTE. Previously known as part of Abundance for the causes for occurrence of non-conforming reference parcels, or 10204 LPIS_RP_CEA."@en .
+
+cap-iacs-parcel:agriculturalArea
+        a                owl:DatatypeProperty ;
+        rdfs:label       "Agricultural area"@en ;
+        rdfs:range       om:Measure ;
+        skos:definition  "--Name--\r\nAgricultural area\r\n\r\n-- Definition --\r\nQuantification of agricultural area.\r\n\r\n-- Description --\r\nRegistered area value giving quantification of the area.\r\n\r\nNOTE: The are can be derived from geometric representation of the feature (if exists) or can be other alphanumerical recording [DSCG/2014/33]."@en .
+
+cap-iacs-parcel:agriculturalAreaWithinReferenceParcel
+        a           owl:ObjectProperty ;
+        rdfs:range  cap-iacs-parcel:ReferenceParcel .
+
+cap-iacs-parcel:executableTestResult
+        a                owl:ObjectProperty ;
+        rdfs:label       "Result of test"@en ;
+        rdfs:range       cap-iacs-base:TestVerdictValue ;
+        skos:definition  "--Name--\r\nExecutable test result\r\n\r\n-- Definition --\r\nVerdict on the outcome on the specific executable test case.\r\n\r\n-- Description --\r\nConformance result on the outcome of a specific ETS test case."@en .
+
+cap-iacs-parcel:LpisLot
+        a                owl:Class ;
+        rdfs:label       "LPIS lot"@en ;
+        rdfs:subClassOf  gsp:Feature ;
+        rdfs:subClassOf  [ a                owl:Restriction ;
+                           owl:cardinality  "1"^^xsd:nonNegativeInteger ;
+                           owl:onProperty   cap-iacs-parcel:lpisLotDetailsForEfaSample
+                         ] ;
+        rdfs:subClassOf  [ a                owl:Restriction ;
+                           owl:cardinality  "1"^^xsd:nonNegativeInteger ;
+                           owl:onProperty   cap-iacs-parcel:criticalDefectAcceptanceNumber
+                         ] ;
+        rdfs:subClassOf  [ a                   owl:Restriction ;
+                           owl:minCardinality  "1"^^xsd:nonNegativeInteger ;
+                           owl:onProperty      cap-iacs-parcel:referenceParcelWithinTheLotDetails
+                         ] ;
+        rdfs:subClassOf  [ a                owl:Restriction ;
+                           owl:cardinality  "1"^^xsd:nonNegativeInteger ;
+                           owl:onProperty   cap-iacs-parcel:inspectionMethod
+                         ] ;
+        rdfs:subClassOf  [ a                owl:Restriction ;
+                           owl:cardinality  "1"^^xsd:nonNegativeInteger ;
+                           owl:onProperty   cap-iacs-parcel:parameterDescription
+                         ] ;
+        rdfs:subClassOf  [ a                owl:Restriction ;
+                           owl:cardinality  "1"^^xsd:nonNegativeInteger ;
+                           owl:onProperty   cap-iacs-parcel:lpisLotSize
+                         ] ;
+        rdfs:subClassOf  [ a                owl:Restriction ;
+                           owl:cardinality  "1"^^xsd:nonNegativeInteger ;
+                           owl:onProperty   cap-iacs-parcel:metadata
+                         ] ;
+        rdfs:subClassOf  [ a                owl:Restriction ;
+                           owl:cardinality  "1"^^xsd:nonNegativeInteger ;
+                           owl:onProperty   cap-iacs-parcel:parcelAggregation
+                         ] ;
+        rdfs:subClassOf  [ a                owl:Restriction ;
+                           owl:cardinality  "1"^^xsd:nonNegativeInteger ;
+                           owl:onProperty   cap-iacs-parcel:nonConformingItemAcceptanceNumber
+                         ] ;
+        rdfs:subClassOf  [ a                owl:Restriction ;
+                           owl:cardinality  "1"^^xsd:nonNegativeInteger ;
+                           owl:onProperty   cap-iacs-parcel:lpisLotName
+                         ] ;
+        skos:definition  "--Name--\r\nLPIS lot\r\n\r\n-- Definition --\r\nDefinite number of reference parcels present in LPIS [adopted from ISO 2859-1:1999].\r\n\r\n-- Description --\r\nTotal population of reference parcels within the LPIS subject of LPISQA. It comprises all the RPs  that \r\n - were declared in the previous year and\r\n - which reference area does not equal to zero."@en .
+
+cap-iacs-parcel:numberOfProcessingErrors
+        a                owl:DatatypeProperty ;
+        rdfs:label       "Number of processing errors"@en ;
+        rdfs:range       xsd:integer ;
+        skos:definition  "--Name--\r\nNumber of processing errors\r\n\r\n-- Definition --\r\nAbundance of processing errors within the sample as technical cause for critical defects and non-conformances.\r\n\r\n--Description --\r\nOccurrences of processingErrors value assigned to the items under inspection within the sample. It comprises values of misclassificationCause, criticalDefectCasue, contaminationCause, and areaNonConformityCause.\r\nThe scope of this data quality element are the above listed properties.  \r\n\r\nNOTE. Previously known as part of Abundance for the causes for occurrence of non-conforming reference parcels, or 10204 LPIS_RP_CEA."@en .

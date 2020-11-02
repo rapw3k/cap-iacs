@@ -1,0 +1,96 @@
+@prefix cap-iacs-control: <http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix gsp:   <http://www.opengis.net/ont/geosparql#> .
+@prefix cap-iacs-aid: <http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix cap-iacs-beneficiery: <http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-beneficiery#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix cap-iacs-base: <http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-base#> .
+
+cap-iacs-beneficiery:farmerBirthDate
+        a                owl:DatatypeProperty ;
+        rdfs:label       "Birth date of farmer"@en ;
+        rdfs:range       xsd:date ;
+        skos:definition  "-- Definition --\r\nBirth date of farmer.\r\n-- Description --\r\nThe birth date of a farmer. Required for young farmer scheme."@en .
+
+cap-iacs-beneficiery:farmerQualification
+        a                owl:ObjectProperty ;
+        rdfs:label       "Farmer occupational skills and competence"@en ;
+        rdfs:range       cap-iacs-base:ConformanceStatementValue ;
+        skos:definition  "-- Definition --\r\nFarmer occupational skills and competence.\r\n-- Description --\r\nFarmer types created based on actor model.The occupational skills and competence  of a farmer. Required for young farmer scheme. Meet / do not meet requirements for competence of a farmer."@en .
+
+cap-iacs-beneficiery:farmerDescription
+        a                owl:ObjectProperty ;
+        rdfs:label       "Farmer address"@en ;
+        rdfs:range       foaf:Agent ;
+        skos:definition  "-- Definition --\r\nFarmer description.\r\n-- Description --\r\nDescription of responsible individual or organization (farmer).\r\nNOTE. role = pointOfContact."@en .
+
+cap-iacs-beneficiery:farmerDetailsForCollectiveImplementation
+        a           owl:ObjectProperty ;
+        rdfs:range  cap-iacs-aid:CollectiveImplementation .
+
+cap-iacs-beneficiery:FarmerTypeValue
+        a                owl:Class ;
+        rdfs:label       "List of farmer type values"@en ;
+        rdfs:subClassOf  skos:Concept ;
+        owl:oneOf        ( <http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-beneficiery/code#FarmerTypeValue/farmer> <http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-beneficiery/code#FarmerTypeValue/farmerActive> <http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-beneficiery/code#FarmerTypeValue/farmerActiveApplicant> <http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-beneficiery/code#FarmerTypeValue/farmerActiveApplicantBeneficiery> ) ;
+        skos:definition  "-- Definition --\r\nList of farmer type values.\r\n-- Description --\r\nList of possible farmer type values based on Actor model (Dynamic Model)."@en .
+
+cap-iacs-beneficiery:farmerType
+        a                owl:ObjectProperty ;
+        rdfs:label       "Farmer type"@en ;
+        rdfs:range       cap-iacs-beneficiery:FarmerTypeValue ;
+        skos:definition  "-- Definition --\r\nFarmer type.\r\n-- Description --\r\nFarmer types created based on actor model."@en .
+
+cap-iacs-beneficiery:Farmer
+        a                owl:Class ;
+        rdfs:label       "Farmer"@en ;
+        rdfs:subClassOf  gsp:Feature ;
+        rdfs:subClassOf  [ a                   owl:Restriction ;
+                           owl:maxCardinality  "10"^^xsd:nonNegativeInteger ;
+                           owl:onProperty      cap-iacs-beneficiery:farmerDetailsForCollectiveImplementation
+                         ] ;
+        rdfs:subClassOf  [ a                owl:Restriction ;
+                           owl:cardinality  "1"^^xsd:nonNegativeInteger ;
+                           owl:onProperty   cap-iacs-beneficiery:farmerType
+                         ] ;
+        rdfs:subClassOf  [ a                owl:Restriction ;
+                           owl:cardinality  "1"^^xsd:nonNegativeInteger ;
+                           owl:onProperty   cap-iacs-beneficiery:farmerQualification
+                         ] ;
+        rdfs:subClassOf  [ a                   owl:Restriction ;
+                           owl:maxCardinality  "1"^^xsd:nonNegativeInteger ;
+                           owl:onProperty      cap-iacs-beneficiery:farmerDescription
+                         ] ;
+        rdfs:subClassOf  [ a                   owl:Restriction ;
+                           owl:minCardinality  "2"^^xsd:nonNegativeInteger ;
+                           owl:onProperty      cap-iacs-beneficiery:farmerDetailsForCollectiveImplementation
+                         ] ;
+        rdfs:subClassOf  [ a                   owl:Restriction ;
+                           owl:maxCardinality  "1"^^xsd:nonNegativeInteger ;
+                           owl:onProperty      cap-iacs-beneficiery:farmerBirthDate
+                         ] ;
+        skos:definition  "-- Definition --\r\nFarmer.\r\n-- Description --\r\nFarmer is natural or legal person, or a group of natural or legal persons, regardless of the legal status granted to such group and its members by national law, whose holding is situated within the territorial scope of the Treaties, as defined in Article 52 TEU in conjunction with Articles 349 and 355 TFEU, and who exercises an agricultural activity. 1307/2013 4 (1)(a).\r\nNOTE. Main class of a single system to record the identity of each beneficiary of the support referred to in Article 67(2) who submits an aid application or a payment claim."@en .
+
+cap-iacs-beneficiery:farmerDetailsForOnTheSpotChecks
+        a           owl:ObjectProperty ;
+        rdfs:range  cap-iacs-control:OnTheSpotCheck .
+
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-beneficiery>
+        a                owl:Ontology ;
+        rdfs:label       "System to record the identity of each beneficiary"@en ;
+        owl:imports      <http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control> , <http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid> , <http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-base> , foaf: , <http://www.opengis.net/ont/geosparql> ;
+        owl:versionIRI   "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-beneficiery/3.0" ;
+        owl:versionInfo  "3.0" ;
+        skos:definition  "-- Name --\r\nSystem to record the identity of each beneficiary\r\n\r\n-- Definition --\r\nPlaceholder package for the Application schema for System to record the identity of each beneficiary.\r\n\r\n-- Description --\r\nThe contents of an «ApplicationSchema» package exported as a GML Application Schema file."@en ;
+        dct:creator [ schema:affiliation [ foaf:name "PSNC" ] ;
+                      rdfs:seeAlso <http://orcid.org/0000-0003-4289-4922> ;
+                      foaf:name "Raul Palma"
+                    ] ;
+        dct:title "JRC IACS - System to Record the Identity of Each Beneficiary Ontology"@en ;
+        dct:description "Ontology of the system to record the identity of each beneficiary used in IACS, generated from the transformation of the corresponding JRC application schema"@en ;
+        dct:source "JRC IACS application schema. https://doi.org/10.1016/j.landusepol.2016.05.023"@en ;
+        dct:rights "This ontology is distributed under Creative Commons Attribution 4.0 License - http://creativecommons.org/licenses/by/4.0"@en .

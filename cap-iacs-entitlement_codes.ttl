@@ -1,0 +1,70 @@
+@prefix dct:   <http://purl.org/dc/terms/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix cap-iacs-entitlementcode: <http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-entitlement/code#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix cap-iacs-entitlement: <http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-entitlement#> .
+
+cap-iacs-entitlementcode:OriginEntitlementObtainValue
+        a                skos:ConceptScheme ;
+        rdfs:label       "Obtain origin values"@en ;
+        dct:isFormatOf   cap-iacs-entitlement:OriginEntitlementObtainValue ;
+        skos:definition  "-- Definition --\r\nEntitlement obtain origin values.\r\n-- Description --\r\nList of possible entitlement obtain sources."@en .
+
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-entitlement/code#OriginEntitlementReserveValue/regional>
+        a                cap-iacs-entitlement:OriginEntitlementReserveValue ;
+        rdfs:label       "Regional"@en ;
+        skos:definition  "-- Definition --\r\nRegional.\r\n-- Description --\r\nItem description.\r\nNOTE 1. Item note.\r\nEXAMPLE 1. Item example."@en ;
+        skos:inScheme    cap-iacs-entitlementcode:OriginEntitlementReserveValue .
+
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-entitlement/code#OriginEntitlementReserveValue/national>
+        a                cap-iacs-entitlement:OriginEntitlementReserveValue ;
+        rdfs:label       "National"@en ;
+        skos:definition  "-- Definition --\r\nNational.\r\n-- Description --\r\nItem description.\r\nNOTE 1. Item note.\r\nEXAMPLE 1. Item example."@en ;
+        skos:inScheme    cap-iacs-entitlementcode:OriginEntitlementReserveValue .
+
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-entitlement/code#OriginEntitlementObtainValue/lease>
+        a                cap-iacs-entitlement:OriginEntitlementObtainValue ;
+        rdfs:label       "Lease"@en ;
+        skos:definition  "-- Definition --\r\nLease.\r\n-- Description --\r\nItem description.\r\nNOTE 1. Item note.\r\nEXAMPLE 1. Item example."@en ;
+        skos:inScheme    cap-iacs-entitlementcode:OriginEntitlementObtainValue .
+
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-entitlement/code#OriginEntitlementReserveValue/original>
+        a                cap-iacs-entitlement:OriginEntitlementReserveValue ;
+        rdfs:label       "Original"@en ;
+        skos:definition  "-- Definition --\r\nOriginal.\r\n-- Description --\r\nItem description.\r\nNOTE 1. Item note.\r\nEXAMPLE 1. Item example."@en ;
+        skos:inScheme    cap-iacs-entitlementcode:OriginEntitlementReserveValue .
+
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-entitlement/code#OriginEntitlementObtainValue/inheritance>
+        a                cap-iacs-entitlement:OriginEntitlementObtainValue ;
+        rdfs:label       "Inheritance"@en ;
+        skos:definition  "-- Definition --\r\nInheritance.\r\n-- Description --\r\nItem description.\r\nNOTE 1. Item note.\r\nEXAMPLE 1. Item example."@en ;
+        skos:inScheme    cap-iacs-entitlementcode:OriginEntitlementObtainValue .
+
+cap-iacs-entitlementcode:OriginEntitlementReserveValue
+        a                skos:ConceptScheme ;
+        rdfs:label       "Reserve origin values"@en ;
+        dct:isFormatOf   cap-iacs-entitlement:OriginEntitlementReserveValue ;
+        skos:definition  "-- Definition --\r\nEntitlement reserve origin values.\r\n-- Description --\r\nList of possible entitlement reserve sources."@en .
+
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-entitlement/code>
+        a       owl:Ontology ;
+        rdfs:label       "System for the identification and registration of payment entitlements code lists"@en ;
+        owl:versionIRI   "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-base/code/3.0" ;
+        owl:versionInfo  "3.0" ;
+        dct:creator [ schema:affiliation [ foaf:name "PSNC" ] ;
+                      rdfs:seeAlso <http://orcid.org/0000-0003-4289-4922> ;
+                      foaf:name "Raul Palma"
+                    ] ;
+        dct:title "JRC IACS - System for the Identification and Registration of Payment Entitlements Code Lists"@en ;
+        dct:description "Ontology of the system for the identification and registration of payment entitlements code lists used in IACS, generated from the transformation of the corresponding JRC application schema"@en ;
+        dct:source "JRC IACS application schema. https://doi.org/10.1016/j.landusepol.2016.05.023"@en ;
+        dct:rights "This ontology is distributed under Creative Commons Attribution 4.0 License - http://creativecommons.org/licenses/by/4.0"@en .
+
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-entitlement/code#OriginEntitlementObtainValue/purchase>
+        a                cap-iacs-entitlement:OriginEntitlementObtainValue ;
+        rdfs:label       "Purchase"@en ;
+        skos:definition  "-- Definition --\r\nPurchase.\r\n-- Description --\r\nItem description.\r\nNOTE 1. Item note.\r\nEXAMPLE 1. Item example."@en ;
+        skos:inScheme    cap-iacs-entitlementcode:OriginEntitlementObtainValue .

@@ -1,0 +1,531 @@
+@prefix dct:   <http://purl.org/dc/terms/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix cap-iacs-aid: <http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix cap-iacs-aidcode: <http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid/code#> .
+
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid/code#AgriculturalPracticeRequirementValue/atLeast75%OfArableCoveredByGrassesOrLandLyingFallow>
+        a                cap-iacs-aid:AgriculturalPracticeRequirementValue ;
+        skos:definition  "At 75 % of arable covered by grasses or land lying fallow \r\n\r\nWhen grasses or other herbaceous forage or land lying fallow cover more than 75 % of the arable land and the remaining area of other uses does not exceed 30 ha, R (EU) 1307/2013 allows the following exemptions:\r\n\t- According to Art. 41(3)(a) crop diversification\r\n\t- According to  Art. 46(4)(a) EFA\r\n\r\n\r\nNOTE \r\nFor EFA exemption, also cultivation of leguminous crops on more than 75% of the arable land qualifies for the exemption."@en ;
+        skos:inScheme    cap-iacs-aidcode:AgriculturalPracticeRequirementValue .
+
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid/code#AgriculturalEquivalentPracticeRequirementValue/grassOnArablePeatyOrWetSoil>
+        a                cap-iacs-aid:AgriculturalEquivalentPracticeRequirementValue ;
+        rdfs:label       "National or regional environmental certification schemes"@en ;
+        skos:definition  "Grass on arable peaty or wet soil\r\n\r\nEquivalent practice that may be used for fulfilling the percentage requirements for EFA set in Art. 46(1) of R 1307/2013.\r\n\r\nIt relates to keeping arable peaty or wet soils under grass (with no use of fertilisers and no use of plant protection products)."@en ;
+        skos:inScheme    cap-iacs-aidcode:AgriculturalEquivalentPracticeRequirementValue .
+
+cap-iacs-aidcode:EcologicalFocusAreaTypeCollectiveValue
+        a                skos:ConceptScheme ;
+        rdfs:label       "List of ecological focused areas for collective implementation"@en ;
+        dct:isFormatOf   cap-iacs-aid:EcologicalFocusAreaTypeCollectiveValue ;
+        skos:definition  "-- Definition --\r\nList of ecological focused areas for collective implementation.\r\n-- Description --\r\nList of feature (ecological focus areas) types based on Article 46(3) 1307/2013."@en .
+
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid/code#CropGroupTypeGreeningValue/permanentGrasslandEnvironmentallySensitive>
+        a                cap-iacs-aid:CropGroupTypeGreeningValue ;
+        rdfs:label       "Permanent grassland environmentally sensitive"@en ;
+        skos:definition  "--Name--\r\nPermanent grassland environmentally sensitive\r\n\r\n-- Definition --\r\nPermanent grasslands which are environmentally sensitive in areas covered by Directives 92/43/EEC or 2009/147/EC, including in peat and wetlands situated in these areas.\r\n\r\n-- Description --"@en ;
+        skos:inScheme    cap-iacs-aidcode:CropGroupTypeGreeningValue .
+
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid/code#AgriculturalEquivalentPracticeRequirementValue/pGAndExtensiveGrazing>
+        a                cap-iacs-aid:AgriculturalEquivalentPracticeRequirementValue ;
+        rdfs:label       "National or regional environmental certification schemes"@en ;
+        skos:definition  "PG and extensive grazing\r\n\r\nMaintenance of permanent grassland and following extensive grazing (timing, maximum stocking density)."@en ;
+        skos:inScheme    cap-iacs-aidcode:AgriculturalEquivalentPracticeRequirementValue .
+
+cap-iacs-aidcode:AgriculturalEquivalentPracticeRequirementValue
+        a                skos:ConceptScheme ;
+        rdfs:label       "List of agricultural equivalent practices"@en ;
+        dct:isFormatOf   cap-iacs-aid:AgriculturalEquivalentPracticeRequirementValue ;
+        skos:definition  "Agricultural equivalent practice requirement value\r\n\r\nList of requirements qualifying agricultural practices as equivalent to the practices beneficial for the climate and the environment descibed in Chapter 3 of R 1307/2013.\r\nThe broad list of equivalent practices are included in Annex IX of R 1307/2013.\r\n\r\nThe equivalent practices go beyond the relevant mandatory standards established pursuant to Chapter I of Title VI of Regulation (EU) No 1306/2013, which aim to meet objectives relating to soil and water quality, biodiversity, landscape preservation, and climate change mitigation and adaptation. Those certification schemes may include the practices listed in Annex IX to this Regulation, the practices referred to in paragraph 2 of this Article, or a combination of those practices."@en .
+
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid/code#AgriculturalEquivalentPracticeRequirementValue/ecologicalSetAside>
+        a                cap-iacs-aid:AgriculturalEquivalentPracticeRequirementValue ;
+        rdfs:label       "National or regional environmental certification schemes"@en ;
+        skos:definition  "Ecological set aside\r\n\r\nEquivalent practice that may be used for fulfilling the percentage requirements for EFA set in Art. 46(1) of R 1307/2013.\r\n\r\nNOTE\r\nThe requirement is currently 5% of arable land."@en ;
+        skos:inScheme    cap-iacs-aidcode:AgriculturalEquivalentPracticeRequirementValue .
+
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid/code#AgriculturalEquivalentPracticeRequirementValue/steepSlopeManagement>
+        a                cap-iacs-aid:AgriculturalEquivalentPracticeRequirementValue ;
+        rdfs:label       "National or regional environmental certification schemes"@en ;
+        skos:definition  "Steep slope management\r\n\r\nMaintenance of permanent grassland and appropriate management for steep slopes."@en ;
+        skos:inScheme    cap-iacs-aidcode:AgriculturalEquivalentPracticeRequirementValue .
+
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid/code#CropGroupTypeGreeningValue/permanentGrasslandRemaining>
+        a                cap-iacs-aid:CropGroupTypeGreeningValue ;
+        rdfs:label       "Permanent grassland remaining"@en ;
+        skos:definition  "-- Definition --\r\nPermanent grassland remaining.\r\n-- Description --\r\nRemaining areas declared as permanent grassland.\r\nNOTE. cg"@en ;
+        skos:inScheme    cap-iacs-aidcode:CropGroupTypeGreeningValue .
+
+cap-iacs-aidcode:GeometrySourceValue
+        a                skos:ConceptScheme ;
+        rdfs:label       "List of geometry sources"@en ;
+        dct:isFormatOf   cap-iacs-aid:GeometrySourceValue ;
+        skos:definition  "-- Definition --\r\nList of geometry sources.\r\n-- Description --\r\nList of geometry sources."@en .
+
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid/code#AgriculturalPracticeTypeValue/equivalentNationalOrRegionalCertificationScheme>
+        a                cap-iacs-aid:AgriculturalPracticeTypeValue ;
+        skos:definition  "National or regional certification scheme\r\n\r\nEquivalent practices that yield an equivalent or higher level of benefit for the climate and the environment [Art. 43(3)(b) of R 1307/2013]. \r\n\r\nThe practices are included in Annex IX of this regulation and the AgriculturalEquivalentPracticeTypeValue code list of the Aid applications and payment claims application schema."@en ;
+        skos:inScheme    cap-iacs-aidcode:AgriculturalPracticeTypeValue .
+
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid/code#AgriculturalEquivalentPracticeRequirementValue/fertiliserRegime>
+        a                cap-iacs-aid:AgriculturalEquivalentPracticeRequirementValue ;
+        rdfs:label       "National or regional environmental certification schemes"@en ;
+        skos:definition  "Fertiliser regime\r\n\r\nMaintenance of permanent grassland and following a fertiliser regime."@en ;
+        skos:inScheme    cap-iacs-aidcode:AgriculturalEquivalentPracticeRequirementValue .
+
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid/code#AgriculturalEquivalentPracticeRequirementValue/pGWithLfAndScrubControl>
+        a                cap-iacs-aid:AgriculturalEquivalentPracticeRequirementValue ;
+        rdfs:label       "National or regional environmental certification schemes"@en ;
+        skos:definition  "PG with LF and scrub control\r\n\r\nMaintenance of permanent grassland and maintenance of landscape features on permanent grassland and control of scrub."@en ;
+        skos:inScheme    cap-iacs-aidcode:AgriculturalEquivalentPracticeRequirementValue .
+
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid/code#EcologicalFocusAreaTypeCollectiveValue/landLyingFallow>
+        a                cap-iacs-aid:EcologicalFocusAreaTypeCollectiveValue ;
+        rdfs:label       "Land lying fallow"@en ;
+        skos:definition  "-- Definition --\r\nLand lying fallow.\r\n-- Description --\r\nLand lying fallow (per 1m2)."@en ;
+        skos:inScheme    cap-iacs-aidcode:EcologicalFocusAreaTypeCollectiveValue .
+
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid/code#EcologicalFocusAreaTypeCollectiveValue/landscapeFeaturesTraditionalStoneWalls>
+        a                cap-iacs-aid:EcologicalFocusAreaTypeCollectiveValue ;
+        rdfs:label       "Landscape features traditional stone walls"@en ;
+        skos:definition  "-- Definition --\r\nLandscape features traditional stone walls.\r\n-- Description --\r\nLandscape features: Traditional stone walls (per 1m)."@en ;
+        skos:inScheme    cap-iacs-aidcode:EcologicalFocusAreaTypeCollectiveValue .
+
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid/code#CropGroupTypeAreaRelatedSupportSchemaValue/anyOtherAreaRelatedAidSchemeOrSupportMeasure>
+        a                cap-iacs-aid:CropGroupTypeAreaRelatedSupportSchemaValue ;
+        rdfs:label       "Any other area-related aid scheme or support measure"@en ;
+        skos:definition  "-- Definition --\r\nAny other area-related aid scheme or support measure.\r\n-- Description --\r\nA group for each of the areas declared for the purpose of any other area-related aid scheme or support measure, for which a different rate of aid is applicable. \r\nNOTE. This is not area-related support measure."@en ;
+        skos:inScheme    cap-iacs-aidcode:CropGroupTypeAreaRelatedSupportSchemaValue .
+
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid/code#AgriculturalPracticeRequirementValue/50%OfArableNotDeclaredInPreviousYear>
+        a                cap-iacs-aid:AgriculturalPracticeRequirementValue ;
+        skos:definition  "50% of arable not declared in previous year\r\n\r\nAccording to Art.(3)(c) of R (EU) 1307/2013 beneficiaries do not need to follow crop diversification when\r\n\r\n\t- more than 50 % of the areas of arable land declared were not declared by the farmer in his aid application of the previous year\r\nAND\r\n\t- all arable land is being cultivated with a different crop compared to that of the previous calendar year\r\n\r\nNOTE\r\nThe second condition shall be verified on the basis of comparison of the geo- spatial aid applications"@en ;
+        skos:inScheme    cap-iacs-aidcode:AgriculturalPracticeRequirementValue .
+
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid/code#AgriculturalEquivalentPracticeRequirementValue/beneficialMultiannualSequenceOfCropRotation>
+        a                cap-iacs-aid:AgriculturalEquivalentPracticeRequirementValue ;
+        rdfs:label       "National or regional environmental certification schemes"@en ;
+        skos:definition  "Beneficial multi-annual sequence of crop rotation\r\n\r\nMore environmentally beneficial multi-annual sequence of crops and/or fallow is followed. In addition, three crops have to be present and the share of the main crop cannot exceed 75% of he agricultural area."@en ;
+        skos:inScheme    cap-iacs-aidcode:AgriculturalEquivalentPracticeRequirementValue .
+
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid/code#AgriculturalEquivalentPracticeRequirementValue/specificProductionRegime>
+        a                cap-iacs-aid:AgriculturalEquivalentPracticeRequirementValue ;
+        skos:definition  "Specific production regime\r\n\r\nEquivalent practice that may be used for fulfilling the percentage requirements for EFA set in Art. 46(1) of R 1307/2013.\r\n\r\nIt relates to production on arable land \r\n\t- with no use of fertiliser (mineral fertiliser and manure) and/or plant protection products,\r\n\t- not irrigated,\r\n\t- not sown with the same crop two years in a row and on a fixed place."@en ;
+        skos:inScheme    cap-iacs-aidcode:AgriculturalEquivalentPracticeRequirementValue .
+
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid/code#FarmersSurveyFeatureTypeValue/agriculturalArea>
+        a                cap-iacs-aid:FarmersSurveyFeatureTypeValue ;
+        rdfs:label       "Agricultural area"@en ;
+        skos:definition  "-- Definition --\r\nAgricultural area.\r\n-- Description --\r\nAgricultural area."@en ;
+        skos:inScheme    cap-iacs-aidcode:FarmersSurveyFeatureTypeValue .
+
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid/code>
+        a       owl:Ontology ;
+        rdfs:label       "Aid applications and payment claims code lists"@en ;
+        owl:versionIRI   "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid/code/3.0" ;
+        owl:versionInfo  "3.0" ;
+        dct:creator [ schema:affiliation [ foaf:name "PSNC" ] ;
+                      rdfs:seeAlso <http://orcid.org/0000-0003-4289-4922> ;
+                      foaf:name "Raul Palma"
+                    ] ;
+        dct:title "JRC IACS - Aid Applications and Payment Claims Code Lists"@en ;
+        dct:description "Ontology of the aid applications and payment claims code lists used in IACS, generated from the transformation of the corresponding JRC application schema"@en ;
+        dct:source "JRC IACS application schema. https://doi.org/10.1016/j.landusepol.2016.05.023"@en ;
+        dct:rights "This ontology is distributed under Creative Commons Attribution 4.0 License - http://creativecommons.org/licenses/by/4.0"@en .
+
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid/code#EcologicalFocusAreaTypeCollectiveValue/landscapeFeaturesFieldMargin>
+        a                cap-iacs-aid:EcologicalFocusAreaTypeCollectiveValue ;
+        rdfs:label       "Landscape features, field margin"@en ;
+        skos:definition  "-- Definition --\r\nLandscape features, field margin.\r\n-- Description --\r\nLandscape features: Field margin (per 1m)."@en ;
+        skos:inScheme    cap-iacs-aidcode:EcologicalFocusAreaTypeCollectiveValue .
+
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid/code#AgriculturalPracticeTypeValue/havingEcologicalFocusAreaOnTheAgriculturalArea>
+        a                cap-iacs-aid:AgriculturalPracticeTypeValue ;
+        rdfs:label       "Having ecological focus area on the agricultural area"@en ;
+        skos:definition  "Having ecological focus area on the agricultural area\r\n\r\nAgricultural practices beneficial for the climate and the environment [Art.43(2)(c) of R 1307/2013]."@en ;
+        skos:inScheme    cap-iacs-aidcode:AgriculturalPracticeTypeValue .
+
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid/code#EcologicalFocusAreaTypeCollectiveValue/landscapeFeaturesPonds>
+        a                cap-iacs-aid:EcologicalFocusAreaTypeCollectiveValue ;
+        rdfs:label       "Landscape features, ponds"@en ;
+        skos:definition  "-- Definition --\r\nLandscape features, ponds.\r\n-- Description --\r\nLandscape features: Ponds (per 1m2)."@en ;
+        skos:inScheme    cap-iacs-aidcode:EcologicalFocusAreaTypeCollectiveValue .
+
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid/code#GeometrySourceValue/delineatedByFarmer>
+        a                cap-iacs-aid:GeometrySourceValue ;
+        rdfs:label       "Delineated by farmer"@en ;
+        skos:definition  "-- Definition --\r\nDelineated by farmer.\r\n-- Description --\r\nDelineated by farmer / interactive entry using official data as a background."@en ;
+        skos:inScheme    cap-iacs-aidcode:GeometrySourceValue .
+
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid/code#EcologicalFocusAreaTypeCollectiveValue/landscapeFeaturesDitches>
+        a                cap-iacs-aid:EcologicalFocusAreaTypeCollectiveValue ;
+        rdfs:label       "Landscape features, ditches"@en ;
+        skos:definition  "-- Definition --\r\nLandscape features, ditches.\r\n-- Description --\r\nLandscape features: Ditches (per 1m)."@en ;
+        skos:inScheme    cap-iacs-aidcode:EcologicalFocusAreaTypeCollectiveValue .
+
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid/code#AgriculturalPracticeRequirementValue/minimumActivity>
+        a                cap-iacs-aid:AgriculturalPracticeRequirementValue ;
+        skos:definition  "Minimum Activity\r\n\r\nMinimum activity, defined by Member States, on agricultural areas naturally kept in a state suitable for grazing or cultivation [Art.(4)(1)(iii) of R (EU) 1307/2013]."@en ;
+        skos:inScheme    cap-iacs-aidcode:AgriculturalPracticeRequirementValue .
+
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid/code#CropGroupTypeGreeningValue/permanentPastureRemaining>
+        a                cap-iacs-aid:CropGroupTypeGreeningValue ;
+        rdfs:label       "Permanent pasture remaining"@en ;
+        skos:definition  "-- Definition --\r\nPermanent pasture remaining.\r\n-- Description --\r\nRemaining areas declared as permanent pasture.\r\nNOTE. cp"@en ;
+        skos:inScheme    cap-iacs-aidcode:CropGroupTypeGreeningValue .
+
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid/code#GeometrySourceValue/measuredByFarmer>
+        a                cap-iacs-aid:GeometrySourceValue ;
+        rdfs:label       "Measured by farmer"@en ;
+        skos:definition  "-- Definition --\r\nMeasured by farmer.\r\n-- Description --\r\nMeasured by farmer / uploaded by farmer."@en ;
+        skos:inScheme    cap-iacs-aidcode:GeometrySourceValue .
+
+cap-iacs-aidcode:AgriculturalEquivalentPracticeTypeValue
+        a                skos:ConceptScheme ;
+        rdfs:label       "List of agricultural equivalent practices requirements"@en ;
+        dct:isFormatOf   cap-iacs-aid:AgriculturalEquivalentPracticeTypeValue ;
+        skos:definition  "Agricultural Equivalent Practice Type value\r\n\r\nValues of equivalent agricultural practice types in sense of Art. 43(3)(a) and (b) of R 1307/2013."@en .
+
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid/code#AgriculturalEquivalentPracticeRequirementValue/atLeast4Crops>
+        a                cap-iacs-aid:AgriculturalEquivalentPracticeRequirementValue ;
+        rdfs:label       "National or regional environmental certification schemes"@en ;
+        skos:definition  "At least four crops\r\n\r\nAt least four crops present on the agricultural area. However, the main crop can cover maximum 75% of the area.\r\n\r\nIssue\r\nThis value is listed twice in Annex IX as part of crop diversification and part of crop rotation. Since the conditions are the same and the same practice should not be \"sold\" twice, this  duplication seems to be redundant."@en ;
+        skos:inScheme    cap-iacs-aidcode:AgriculturalEquivalentPracticeRequirementValue .
+
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid/code#CropValue/brassicaceaeSolanaceaeAndCucurbitaceaeCulture>
+        a                cap-iacs-aid:CropValue ;
+        rdfs:label       "Brassicaceae, Solanaceae, and Cucurbitaceae culture"@en ;
+        skos:definition  "Brassicaceae, Solanaceae and cucurbitaceae culture\r\n\r\nA culture of any of the species in the case of Brassicaceae, Solanaceae, and Cucurbitaceae"@en ;
+        skos:inScheme    cap-iacs-aidcode:CropValue .
+
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid/code#CropValue/cultureOfAnyOfTheDifferentGenera>
+        a                cap-iacs-aid:CropValue ;
+        rdfs:label       "Culture of any of the different genera"@en ;
+        skos:definition  "Culture of any different genera\r\n\r\nA culture of any of the different genera defined in the botanical classification of crops. \r\n\r\nNOTE\r\nWinter crop and spring crop shall be considered to be distinct crops even if they belong to the same genus."@en ;
+        skos:inScheme    cap-iacs-aidcode:CropValue .
+
+cap-iacs-aidcode:FarmersSurveyFeatureTypeValue
+        a                skos:ConceptScheme ;
+        rdfs:label       "List of feature types"@en ;
+        dct:isFormatOf   cap-iacs-aid:FarmersSurveyFeatureTypeValue ;
+        skos:definition  "-- Definition --\r\nList of possible feature types measured and provided by farmer.\r\n-- Description --\r\nList of feature types possible to survey / measure by farmer. After these measured features are submitted (during application process) then authority (data custodians) may confirm or reject their reference data update (update based on farmer's survey and or measurement).\r\nNOTE. List may be extended or subtracted depending on how MS organizing reference data update process."@en .
+
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid/code#EcologicalFocusAreaTypeCollectiveValue/landscapeFeaturesGroupOfTreesFieldCopses>
+        a                cap-iacs-aid:EcologicalFocusAreaTypeCollectiveValue ;
+        rdfs:label       "Landscape features, group of trees/Field copses"@en ;
+        skos:definition  "-- Definition --\r\nLandscape features, group of trees/Field copses.\r\n-- Description --\r\nLandscape features: Group of trees/Field copses (per 1m2)."@en ;
+        skos:inScheme    cap-iacs-aidcode:EcologicalFocusAreaTypeCollectiveValue .
+
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid/code#AgriculturalEquivalentPracticeRequirementValue/highNatureValueBufferZone>
+        a                cap-iacs-aid:AgriculturalEquivalentPracticeRequirementValue ;
+        rdfs:label       "National or regional environmental certification schemes"@en ;
+        skos:definition  "High nature value buffer zone\r\n\r\nEquivalent practice that may be used for fulfilling the percentage requirements for EFA set in Art. 46(1) of R 1307/2013.\r\n\r\nThe buffer zones are created for high nature value areas, Natura 2000 or other biodiversity protection sites, including along hedgerows and water courses."@en ;
+        skos:inScheme    cap-iacs-aidcode:AgriculturalEquivalentPracticeRequirementValue .
+
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid/code#AgriculturalEquivalentPracticeRequirementValue/wildlifeAreaManagement>
+        a                cap-iacs-aid:AgriculturalEquivalentPracticeRequirementValue ;
+        rdfs:label       "National or regional environmental certification schemes"@en ;
+        skos:definition  "Wildlife area management\r\n\r\nEquivalent practice that may be used for fulfilling the percentage requirements for EFA set in Art. 46(1) of R 1307/2013.\r\n\r\nBorders, in-field strips and patches managed for wildlife or specific fauna. It includes:\r\n\t- herbaceous border,\r\n\t- protection of nests,\r\n\t- wildflower strips,\r\n\t- local seed mix,\r\n\t- unharvested crops."@en ;
+        skos:inScheme    cap-iacs-aidcode:AgriculturalEquivalentPracticeRequirementValue .
+
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid/code#AgriculturalEquivalentPracticeRequirementValue/catchCrop>
+        a                cap-iacs-aid:AgriculturalEquivalentPracticeRequirementValue ;
+        rdfs:label       "National or regional environmental certification schemes"@en ;
+        skos:definition  "Catch crop\r\n\r\nPresence of catch crop.  In addition, three crops have to be present and the share of the main crop cannot exceed 75% of he agricultural area."@en ;
+        skos:inScheme    cap-iacs-aidcode:AgriculturalEquivalentPracticeRequirementValue .
+
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid/code#AgriculturalEquivalentPracticeRequirementValue/managementOfLf>
+        a                cap-iacs-aid:AgriculturalEquivalentPracticeRequirementValue ;
+        rdfs:label       "National or regional environmental certification schemes"@en ;
+        skos:definition  "Management of LF\r\n\r\nEquivalent practice that may be used for fulfilling the percentage requirements for EFA set in Art. 46(1) of R 1307/2013.\r\n\r\nThe management includes following rules for pruning, trimming, dates, methods, restoration of landscape features (trees, hedgerows, riparian woody vegetation, stone walls (terraces), ditches, ponds)."@en ;
+        skos:inScheme    cap-iacs-aidcode:AgriculturalEquivalentPracticeRequirementValue .
+
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid/code#AgriculturalEquivalentPracticeSubtypeValue/equivalentToEcologicalFocusArea>
+        a                cap-iacs-aid:AgriculturalEquivalentPracticeSubtypeValue ;
+        rdfs:label       "Practices equivalent with ecological focus area"@en ;
+        skos:definition  "Equivalent to Ecological Focus Area\r\n\r\nPractices equivalent to ecological focus area as listed in  III) of Annex IX of R 1307/2013:\r\n\t- Ecological set aside\r\n\t- Creation of \"buffer zones\" for high nature value areas\r\n\t-  Management of uncultivated buffer strips, patches and field margins \r\n\t- Borders, in-field strips and patches managed for wildlife or specific fauna\r\n\t- Management (pruning, trimming, dates, methods, restoration) of landscape features\r\n\t- Keeping arable peaty or wet soils under grass (with no use of fertilisers and no use of plant protection products)\r\n\t- Production on arable land with no use of fertiliser (mineral fertiliser and manure) and/or plant protection products, and not irrigated, not sown with the same crop two years in a row and on a fixed place\r\n\t- Conversion of arable land into permanent grassland extensively used"@en ;
+        skos:inScheme    cap-iacs-aidcode:AgriculturalEquivalentPracticeSubtypeValue .
+
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid/code#AgriculturalEquivalentPracticeRequirementValue/localOrTraditionalGrazingBreeds>
+        a                cap-iacs-aid:AgriculturalEquivalentPracticeRequirementValue ;
+        rdfs:label       "National or regional environmental certification schemes"@en ;
+        skos:definition  "Local or traditional grazing breeds\r\n\r\nMaintenance of permanent grassland and using local or traditional breeds for grazing the permanent grassland."@en ;
+        skos:inScheme    cap-iacs-aidcode:AgriculturalEquivalentPracticeRequirementValue .
+
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid/code#FarmersSurveyFeatureTypeValue/ecologicalFocusArea>
+        a                cap-iacs-aid:FarmersSurveyFeatureTypeValue ;
+        rdfs:label       "Ecological focus area"@en ;
+        skos:definition  "-- Definition --\r\nEcological focus area.\r\n-- Description --\r\nEcological focus area."@en ;
+        skos:inScheme    cap-iacs-aidcode:FarmersSurveyFeatureTypeValue .
+
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid/code#AgriculturalPracticeTypeValue/cropDiversification>
+        a                cap-iacs-aid:AgriculturalPracticeTypeValue ;
+        rdfs:label       "Crop diversification"@en ;
+        skos:definition  "Crop diversification\r\n\r\nAgricultural practices beneficial for the climate and the environment [Art.43(2)(a) of R 1307/2013]."@en ;
+        skos:inScheme    cap-iacs-aidcode:AgriculturalPracticeTypeValue .
+
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid/code#EcologicalFocusAreaTypeCollectiveValue/bufferStrips>
+        a                cap-iacs-aid:EcologicalFocusAreaTypeCollectiveValue ;
+        rdfs:label       "Buffer strips"@en ;
+        skos:definition  "-- Definition --\r\nBuffer strips.\r\n-- Description --\r\nBuffer strips (per 1m) also 1307. 46.2.d."@en ;
+        skos:inScheme    cap-iacs-aidcode:EcologicalFocusAreaTypeCollectiveValue .
+
+cap-iacs-aidcode:CropGroupTypeAreaRelatedSupportSchemaValue
+        a                skos:ConceptScheme ;
+        rdfs:label       "List of payment crop groups"@en ;
+        dct:isFormatOf   cap-iacs-aid:CropGroupTypeAreaRelatedSupportSchemaValue ;
+        skos:definition  "-- Definition --\r\nList of payment crop groups.\r\n-- Description --\r\nList of crop groups related with area-related support schemas."@en .
+
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid/code#AgriculturalEquivalentPracticeRequirementValue/pGWithGrassVarietiesOrSeedingRegime>
+        a                cap-iacs-aid:AgriculturalEquivalentPracticeRequirementValue ;
+        rdfs:label       "National or regional environmental certification schemes"@en ;
+        skos:definition  "PG with grass varieties or seeding regime\r\n\r\nMaintenance of permanent grassland  with specified grass varieties and/or seeding regime for renewal depending on the grassland type, with no destruction of high nature value."@en ;
+        skos:inScheme    cap-iacs-aidcode:AgriculturalEquivalentPracticeRequirementValue .
+
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid/code#AgriculturalPracticeRequirementValue/atLeast7%Efa>
+        a                cap-iacs-aid:AgriculturalPracticeRequirementValue ;
+        skos:definition  "At least 7% EFA\r\n\r\nIncreased 7 % of EFA mandatory for holdings with area more than 15 ha.\r\n\r\nNOTE\r\nAs this provision is subject to a legislative act of the European Parliament and of the Council this value currently is a placeholder."@en ;
+        skos:inScheme    cap-iacs-aidcode:AgriculturalPracticeRequirementValue .
+
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid/code#AgriculturalEquivalentPracticeTypeValue/equivalentAgriEnvironmentClimateRegulationCommitment>
+        a                cap-iacs-aid:AgriculturalEquivalentPracticeTypeValue ;
+        rdfs:label       "Requirement: there are at least four crops"@en ;
+        skos:definition  "Agri-Environment and Climate Regulation Commitment\r\n\r\nEquivalent practices that yield an equivalent or higher level of benefit for the climate and the environment [Art. 43(3)(a) of R 1307/2013]. \r\n\r\nThe applicable regulations are the following:\r\n\t- Article 39(2) of Regulation (EC) No 1698/2005 (minimum requirements for fertiliser and plant protection product use) \r\n\t- Article 28(2) of Regulation (EU) No 1305/2013"@en ;
+        skos:inScheme    cap-iacs-aidcode:AgriculturalEquivalentPracticeTypeValue .
+
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid/code#AgriculturalEquivalentPracticeRequirementValue/pesticideRestrictions>
+        a                cap-iacs-aid:AgriculturalEquivalentPracticeRequirementValue ;
+        rdfs:label       "National or regional environmental certification schemes"@en ;
+        skos:definition  "Pesticide Restrictions\r\n\r\nMaintenance of permanent grassland and following pesticide restrictions."@en ;
+        skos:inScheme    cap-iacs-aidcode:AgriculturalEquivalentPracticeRequirementValue .
+
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid/code#AgriculturalPracticeRequirementValue/atLeastThreeCrops>
+        a                cap-iacs-aid:AgriculturalPracticeRequirementValue ;
+        skos:definition  "At least three crops\r\n\r\nAccording to Art. 46(1) second paragraph the value can be assigned when\r\n\t- arable land more than 30 ha\r\n\t- not entirely cultivated with crops under water\r\n\t- main crop shall not cover more than 75 % of arable land\r\n\t- two main crops together shall not cover more than 95 % of arable land."@en ;
+        skos:inScheme    cap-iacs-aidcode:AgriculturalPracticeRequirementValue .
+
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid/code#AgriculturalEquivalentPracticeSubtypeValue/equivalentToMaintenanceOfPermanentGrassland>
+        a                cap-iacs-aid:AgriculturalEquivalentPracticeSubtypeValue ;
+        rdfs:label       "Practices equivalent to maintenance of permanent grassland: Management of meadows or pastures"@en ;
+        skos:definition  "Equivalent to maintenance of permanent grassland\r\n\r\nPractices equivalent to the maintenance of permanent grassland as listed in II) of Annex IX of R 1307/2013:\r\n\t- Management of meadows or pastures\r\n\t- Extensive grazing systems"@en ;
+        skos:inScheme    cap-iacs-aidcode:AgriculturalEquivalentPracticeSubtypeValue .
+
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid/code#AgriculturalEquivalentPracticeRequirementValue/moreAppropriateCropSelection>
+        a                cap-iacs-aid:AgriculturalEquivalentPracticeRequirementValue ;
+        rdfs:label       "National or regional environmental certification schemes"@en ;
+        skos:definition  "More appropriate crop selection\r\n\r\nMore appropriate selection of crops, such as, for example, leguminous, protein crops, crops not requiring irrigation or pesticide treatments, etc. In addition, three crops have to be present and the share of the main crop cannot exceed 75% of he agricultural area."@en ;
+        skos:inScheme    cap-iacs-aidcode:AgriculturalEquivalentPracticeRequirementValue .
+
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid/code#AgriculturalEquivalentPracticeRequirementValue/forageOrHayEvacuation>
+        a                cap-iacs-aid:AgriculturalEquivalentPracticeRequirementValue ;
+        rdfs:label       "National or regional environmental certification schemes"@en ;
+        skos:definition  "Forage or hay evacuation\r\n\r\nMaintenance of permanent grassland and evacuation of forage or hay."@en ;
+        skos:inScheme    cap-iacs-aidcode:AgriculturalEquivalentPracticeRequirementValue .
+
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid/code#AgriculturalEquivalentPracticeRequirementValue/specificCropVarieties>
+        a                cap-iacs-aid:AgriculturalEquivalentPracticeRequirementValue ;
+        rdfs:label       "National or regional environmental certification schemes"@en ;
+        skos:definition  "Specific crop varieties\r\n\r\nRegional varieties of old, traditional or endangered crop types are included on at least 5 % of the rotated area.  In addition, three crops have to be present and the share of the main crop cannot exceed 75% of he agricultural area."@en ;
+        skos:inScheme    cap-iacs-aidcode:AgriculturalEquivalentPracticeRequirementValue .
+
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid/code#GeometrySourceValue/confirmedByFarmer>
+        a                cap-iacs-aid:GeometrySourceValue ;
+        rdfs:label       "Confirmed by farmer"@en ;
+        skos:definition  "-- Definition --\r\nConfirmed by farmer.\r\n-- Description --\r\nConfirmed by farmer using predefined lists of data objects (from IACS)."@en ;
+        skos:inScheme    cap-iacs-aidcode:GeometrySourceValue .
+
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid/code#CropGroupTypeGreeningValue/ecologicalFocusArea>
+        a                cap-iacs-aid:CropGroupTypeGreeningValue ;
+        rdfs:label       "Ecological focus area"@en ;
+        skos:definition  "-- Definition --\r\nEcological focus area.\r\n-- Description --\r\nAreas declared as ecological focus area.\r\nNOTE. d"@en ;
+        skos:inScheme    cap-iacs-aidcode:CropGroupTypeGreeningValue .
+
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid/code#AgriculturalEquivalentPracticeRequirementValue/pGAndCuttingRegime>
+        a                cap-iacs-aid:AgriculturalEquivalentPracticeRequirementValue ;
+        rdfs:label       "National or regional environmental certification schemes"@en ;
+        skos:definition  "PG and cutting regime\r\n\r\nMaintenance of permanent grassland and following cutting regime or appropriate mowing (dates, methods, limits)."@en ;
+        skos:inScheme    cap-iacs-aidcode:AgriculturalEquivalentPracticeRequirementValue .
+
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid/code#AgriculturalPracticeRequirementValue/atLeast5%Efa>
+        a                cap-iacs-aid:AgriculturalPracticeRequirementValue ;
+        skos:definition  "At least 5% EFA\r\n\r\nAccording to Art.(46)(1) when arable land of a holding covers more than 15 hectares at least 5% of EFA shall be implemented."@en ;
+        skos:inScheme    cap-iacs-aidcode:AgriculturalPracticeRequirementValue .
+
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid/code#EcologicalFocusAreaTypeCollectiveValue/landscapeFeaturesTreesInLine>
+        a                cap-iacs-aid:EcologicalFocusAreaTypeCollectiveValue ;
+        rdfs:label       "Landscape features, trees in line"@en ;
+        skos:definition  "-- Definition --\r\nLandscape features, trees in line.\r\n-- Description --\r\nLandscape features: Trees in line (per 1m)."@en ;
+        skos:inScheme    cap-iacs-aidcode:EcologicalFocusAreaTypeCollectiveValue .
+
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid/code#CropGroupTypeAreaRelatedSupportSchemaValue/activationOfBpsOrSaps>
+        a                cap-iacs-aid:CropGroupTypeAreaRelatedSupportSchemaValue ;
+        rdfs:label       "Activation of BPS or SAPS"@en ;
+        skos:definition  "-- Definition --\r\nActivation of BPS or SAPS.\r\n-- Description --\r\nAreas declared for the purposes of activation of payment entitlements under the basic payment scheme or for the purpose of being granted the single area payment scheme."@en ;
+        skos:inScheme    cap-iacs-aidcode:CropGroupTypeAreaRelatedSupportSchemaValue .
+
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid/code#AgriculturalEquivalentPracticeRequirementValue/atLeast3CropsWithMainCrop<75%>
+        a                cap-iacs-aid:AgriculturalEquivalentPracticeRequirementValue ;
+        rdfs:label       "Commitments undertaken in accordance with agri-environment-climate"@en ;
+        skos:definition  "At least 3 crops with main crop less than 75%\r\n\r\nAt least three crops, the main crop covering less than the 75 % threshold"@en ;
+        skos:inScheme    cap-iacs-aidcode:AgriculturalEquivalentPracticeRequirementValue .
+
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid/code#EcologicalFocusAreaTypeCollectiveValue/landscapeFeaturesIsolatedTree>
+        a                cap-iacs-aid:EcologicalFocusAreaTypeCollectiveValue ;
+        rdfs:label       "Landscape features, isolated tree"@en ;
+        skos:definition  "-- Definition --\r\nLandscape features, isolated tree.\r\n-- Description --\r\nLandscape features: Isolated tree (per tree)."@en ;
+        skos:inScheme    cap-iacs-aidcode:EcologicalFocusAreaTypeCollectiveValue .
+
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid/code#AgriculturalPracticeTypeValue/maintainingExistingPermanentGrassland>
+        a                cap-iacs-aid:AgriculturalPracticeTypeValue ;
+        rdfs:label       "Maintaining existing permanent grassland"@en ;
+        skos:definition  "Maintaining existing permanent grassland\r\n\r\nAgricultural practices beneficial for the climate and the environment [Art.43(2)(b) of R 1307/2013]."@en ;
+        skos:inScheme    cap-iacs-aidcode:AgriculturalPracticeTypeValue .
+
+cap-iacs-aidcode:AgriculturalPracticeTypeValue
+        a                skos:ConceptScheme ;
+        rdfs:label       "List of agricultural practices"@en ;
+        dct:isFormatOf   cap-iacs-aid:AgriculturalPracticeTypeValue ;
+        skos:definition  "Agricultural practice type value\r\n\r\nList agricultural practices beneficial for the climate and the environment as detailed in Chapter 3 of R 1307/2013."@en .
+
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid/code#FarmersSurveyFeatureTypeValue/referenceArea>
+        a                cap-iacs-aid:FarmersSurveyFeatureTypeValue ;
+        rdfs:label       "Reference area"@en ;
+        skos:definition  "-- Definition --\r\nAgricultural area.\r\n-- Description --\r\nAgricultural area."@en ;
+        skos:inScheme    cap-iacs-aidcode:FarmersSurveyFeatureTypeValue .
+
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid/code#AgriculturalPracticeRequirementValue/northOf62ndParallel>
+        a                cap-iacs-aid:AgriculturalPracticeRequirementValue ;
+        skos:definition  "North of 62nd parallel\r\n\r\nAccording to Art.(3)(d) of R (EU) 1307/2013 beneficiaries have special crop diversification rules for holdings that are\r\n\t- situated in areas north of 62nd parallel or certain adjacent areas\r\nAND\r\n\t- arable land of such holdings covers more than 10 hectares, there shall be at least two crops on the arable land\r\n\t-  none of these crops shall cover more than 75 % of the arable land, unless the main crop is grasses or other herbaceous forage, or land lying fallow."@en ;
+        skos:inScheme    cap-iacs-aidcode:AgriculturalPracticeRequirementValue .
+
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid/code#AgriculturalEquivalentPracticeRequirementValue/uncultivatedBufferStripsAndFieldMargins>
+        a                cap-iacs-aid:AgriculturalEquivalentPracticeRequirementValue ;
+        rdfs:label       "National or regional environmental certification schemes"@en ;
+        skos:definition  "Uncultivated buffer strips and field margins\r\n\r\nEquivalent practice that may be used for fulfilling the percentage requirements for EFA set in Art. 46(1) of R 1307/2013.\r\n\r\nManagement of uncultivated buffer strips and field margins. It includes\r\n\t- cutting regime,\r\n\t- local or specified grass varieties and/or seeding regime,\r\n\t- re-seeding with regional varieties,\r\n\t- no use of pesticides,\r\n\t- no disposal of manure and/or mineral fertilisers,\r\n\t- no irrigation, \r\n\t- no soil sealing."@en ;
+        skos:inScheme    cap-iacs-aidcode:AgriculturalEquivalentPracticeRequirementValue .
+
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid/code#AgriculturalPracticeTypeValue/equivalentAgriEnvironmentClimateRegulationCommitment>
+        a                cap-iacs-aid:AgriculturalPracticeTypeValue ;
+        skos:definition  "Agri-Environment and Climate Regulation Commitment\r\n\r\nEquivalent practices that yield an equivalent or higher level of benefit for the climate and the environment [Art. 43(3)(a) of R 1307/2013]. \r\n\r\nThe applicable regulations are the following:\r\n\t- Article 39(2) of Regulation (EC) No 1698/2005 (minimum requirements for fertiliser and plant protection product use) \r\n\t- Article 28(2) of Regulation (EU) No 1305/2013"@en ;
+        skos:inScheme    cap-iacs-aidcode:AgriculturalPracticeTypeValue .
+
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid/code#AgriculturalEquivalentPracticeRequirementValue/winterSoilCover>
+        a                cap-iacs-aid:AgriculturalEquivalentPracticeRequirementValue ;
+        rdfs:label       "National or regional environmental certification schemes"@en ;
+        skos:definition  "Winter soil cover\r\n\r\nPresence of winter soil cover.  In addition, three crops have to be present and the share of the main crop cannot exceed 75% of he agricultural area."@en ;
+        skos:inScheme    cap-iacs-aidcode:AgriculturalEquivalentPracticeRequirementValue .
+
+cap-iacs-aidcode:AgriculturalPracticeRequirementValue
+        a                skos:ConceptScheme ;
+        dct:isFormatOf   cap-iacs-aid:AgriculturalPracticeRequirementValue ;
+        skos:definition  "Agricultural practice requirement value\r\n\r\nList of agricultural practice requirement values as defined in Art. (44) (1), (2),(3) and Art. 46 (4) of R (EU) 1307/2013."@en .
+
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid/code#CropGroupTypeAreaRelatedSupportSchemaValue/otherUses>
+        a                cap-iacs-aid:CropGroupTypeAreaRelatedSupportSchemaValue ;
+        rdfs:label       "Other uses"@en ;
+        skos:definition  "-- Definition --\r\nOther uses.\r\n-- Description --\r\nAreas declared under the heading other uses."@en ;
+        skos:inScheme    cap-iacs-aidcode:CropGroupTypeAreaRelatedSupportSchemaValue .
+
+cap-iacs-aidcode:AgriculturalEquivalentPracticeSubtypeValue
+        a                skos:ConceptScheme ;
+        rdfs:label       "List of agricultural equivalent subpractices"@en ;
+        dct:isFormatOf   cap-iacs-aid:AgriculturalEquivalentPracticeSubtypeValue ;
+        skos:definition  "Agricultural equivalent practice subtype value\r\n\r\nBroad categories of agricultural equivalent practices beneficial for the climate and the environment as listed in Annex IX of R 1307/2013."@en .
+
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid/code#CropValue/grassesOrOtherHerbaceousForage>
+        a                cap-iacs-aid:CropValue ;
+        rdfs:label       "Grasses or other herbaceous forage"@en ;
+        skos:definition  "Grasses or other herbaceous forage\r\n\r\n\"Grasses or other herbaceous forage\" means all herbaceous plants traditionally found in natural pastures or normally included in mixtures of seeds for pastures or meadows in the Member State, whether or not used for grazing animals. [R 1307/2013 4(1)(i)]"@en ;
+        skos:inScheme    cap-iacs-aidcode:CropValue .
+
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid/code#AgriculturalEquivalentPracticeSubtypeValue/equivalentToCropDiversification>
+        a                cap-iacs-aid:AgriculturalEquivalentPracticeSubtypeValue ;
+        rdfs:label       "Practices equivalent to crop diversification: Crop diversification"@en ;
+        skos:definition  "Equivalent to crop diversification\r\n\r\nPractices equivalent to crop diversification as listed in I) of Annex IX of R 1307/2013:\r\n\t- crop diversification(with different requirements)\r\n\t- crop rotation\r\n\t- winter soil cover\r\n\t- catch crop"@en ;
+        skos:inScheme    cap-iacs-aidcode:AgriculturalEquivalentPracticeSubtypeValue .
+
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid/code#FarmersSurveyFeatureTypeValue/agriculturalParcel>
+        a                cap-iacs-aid:FarmersSurveyFeatureTypeValue ;
+        rdfs:label       "Agricultural parcel"@en ;
+        skos:definition  "-- Definition --\r\nAgricultural parcel.\r\n-- Description --\r\nAgricultural parcel."@en ;
+        skos:inScheme    cap-iacs-aidcode:FarmersSurveyFeatureTypeValue .
+
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid/code#AgriculturalEquivalentPracticeRequirementValue/conversionIntoExtensivelyUsedPg>
+        a                cap-iacs-aid:AgriculturalEquivalentPracticeRequirementValue ;
+        rdfs:label       "National or regional environmental certification schemes"@en ;
+        skos:definition  "Conversion into extensively used PG\r\n\r\nEquivalent practice that may be used for fulfilling the percentage requirements for EFA set in Art. 46(1) of R 1307/2013.\r\n\r\nIt relates to conversion of arable land into permanent grassland extensively used."@en ;
+        skos:inScheme    cap-iacs-aidcode:AgriculturalEquivalentPracticeRequirementValue .
+
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid/code#AgriculturalEquivalentPracticeRequirementValue/shepherdingOrMountainPastoralism>
+        a                cap-iacs-aid:AgriculturalEquivalentPracticeRequirementValue ;
+        rdfs:label       "National or regional environmental certification schemes"@en ;
+        skos:definition  "Catch crop\r\n\r\nPresence of catch crop.  In addition, three crops have to be present and the share of the main crop cannot exceed 75% of he agricultural area."@en ;
+        skos:inScheme    cap-iacs-aidcode:AgriculturalEquivalentPracticeRequirementValue .
+
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid/code#EcologicalFocusAreaTypeCollectiveValue/landscapeFeaturesHedgesWoodedStrips>
+        a                cap-iacs-aid:EcologicalFocusAreaTypeCollectiveValue ;
+        rdfs:label       "Landscape features: Hedges/wooded strips"@en ;
+        skos:definition  "-- Definition --\r\nLandscape features: Hedges/wooded strips.\r\n-- Description --\r\nLandscape features: Hedges/wooded strips (per 1m)."@en ;
+        skos:inScheme    cap-iacs-aidcode:EcologicalFocusAreaTypeCollectiveValue .
+
+cap-iacs-aidcode:CropValue
+        a                skos:ConceptScheme ;
+        rdfs:label       "List of crops"@en ;
+        dct:isFormatOf   cap-iacs-aid:CropValue ;
+        skos:definition  "Crop value\r\n\r\nList of  crops in sense of Art. 44(4) of R (EU) 809/2014  that is needed for checking crop diversification.\r\n\r\nNOTE\r\nRequired if cropGroupTypeGreening = certainCrop."@en .
+
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid/code#EcologicalFocusAreaTypeCollectiveValue/afforestedAreas>
+        a                cap-iacs-aid:EcologicalFocusAreaTypeCollectiveValue ;
+        rdfs:label       "Afforested areas"@en ;
+        skos:definition  "-- Definition --\r\nAfforested areas.\r\n-- Description --\r\nAfforested areas as referred to in Article 32(2)(b)(ii) (per  m2)."@en ;
+        skos:inScheme    cap-iacs-aidcode:EcologicalFocusAreaTypeCollectiveValue .
+
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid/code#AgriculturalEquivalentPracticeTypeValue/equivalentNationalOrRegionalCertificationScheme>
+        a                cap-iacs-aid:AgriculturalEquivalentPracticeTypeValue ;
+        rdfs:label       "Requirement: lower maximum thresholds apply"@en ;
+        skos:definition  "National or regional certification scheme\r\n\r\nEquivalent practices that yield an equivalent or higher level of benefit for the climate and the environment [Art. 43(3)(b) of R 1307/2013]. \r\n\r\nThe details of practices together with the related requirements are included in Annex IX of this regulation and the AgriculturalEquivalentPracticeRequirementValue code list."@en ;
+        skos:inScheme    cap-iacs-aidcode:AgriculturalEquivalentPracticeTypeValue .
+
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid/code#CropValue/landLyingFallow>
+        a                cap-iacs-aid:CropValue ;
+        rdfs:label       "Land lying fallow"@en ;
+        skos:definition  "Land laying fallow"@en ;
+        skos:inScheme    cap-iacs-aidcode:CropValue .
+
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid/code#EcologicalFocusAreaTypeCollectiveValue/landscapeFeaturesOtherProtectedByGaecSmr>
+        a                cap-iacs-aid:EcologicalFocusAreaTypeCollectiveValue ;
+        rdfs:label       "Landscape features, other features not listed in this code list but protected under GAEC7, SMR 2 or SMR 3"@en ;
+        skos:definition  "-- Definition --\r\nLandscape features, other features not listed in this code list but protected under GAEC7, SMR 2 or SMR 3.\r\n-- Description --\r\nLandscape features: Other features not listed above but protected under GAEC7, SMR 2 or SMR 3 (per 1m2)."@en ;
+        skos:inScheme    cap-iacs-aidcode:EcologicalFocusAreaTypeCollectiveValue .
+
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid/code#AgriculturalPracticeRequirementValue/atLeastTwoCrops>
+        a                cap-iacs-aid:AgriculturalPracticeRequirementValue ;
+        skos:definition  "At least two crops\r\n\r\nAccording to Art. 46(1) first paragraph the value can be assigned when\r\n\t- arable land  is between 10 and 30 ha\r\n\t- not entirely cultivated with crops under water\r\n\t- main crop shall not cover more than 75 % of arable land."@en ;
+        skos:inScheme    cap-iacs-aidcode:AgriculturalPracticeRequirementValue .
+
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid/code#FarmersSurveyFeatureTypeValue/geospatialApplicationBoundary>
+        a                cap-iacs-aid:FarmersSurveyFeatureTypeValue ;
+        rdfs:label       "Geospatial application boundary"@en ;
+        skos:definition  "-- Definition --\r\nGeospatial application.\r\n-- Description --\r\nGeospatial application boundary."@en ;
+        skos:inScheme    cap-iacs-aidcode:FarmersSurveyFeatureTypeValue .
+
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid/code#CropGroupTypeGreeningValue/certainCrop>
+        a                cap-iacs-aid:CropGroupTypeGreeningValue ;
+        rdfs:label       "Certain crop"@en ;
+        skos:definition  "-- Definition --\r\nCertain crop.\r\n-- Description --\r\nEach group of areas declared as a certain crop.\r\nNOTE. a"@en ;
+        skos:inScheme    cap-iacs-aidcode:CropGroupTypeGreeningValue .
+
+cap-iacs-aidcode:CropGroupTypeGreeningValue
+        a                skos:ConceptScheme ;
+        rdfs:label       "List of payment crop groups"@en ;
+        dct:isFormatOf   cap-iacs-aid:CropGroupTypeGreeningValue ;
+        skos:definition  "-- Definition --\r\nList of payment crop groups.\r\n-- Description --\r\nList of crop groups related with greening."@en .
+
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid/code#AgriculturalPracticeRequirementValue/atLeast75%PermanentGrassland>
+        a                cap-iacs-aid:AgriculturalPracticeRequirementValue ;
+        skos:definition  "At least 75% permanent grassland\r\n\r\nWhen permanent grassland, other herbaceous forage or crops under water cover more than 75 % of the land and the remaining area of other uses does not exceed 30 ha, R (EU) 1307/2013 allows the following exemptions:\r\n\t- According to Art. 41(3)(b) crop diversification\r\n\t- According to  Art. 46(4)(b) EFA\r\n\r\nNOTE 1\r\nCombination of the above uses is allowed\r\n\r\nNOTE 2\r\nUnder water cultivation applies for the significant part of the year or the vegetative cycle."@en ;
+        skos:inScheme    cap-iacs-aidcode:AgriculturalPracticeRequirementValue .

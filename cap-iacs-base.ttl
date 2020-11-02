@@ -1,0 +1,1757 @@
+@prefix cap-iacs-parcel: <http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-parcel#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix gsp:   <http://www.opengis.net/ont/geosparql#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix cap-iacs-aid: <http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix cap-iacs-beneficiery: <http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-beneficiery#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix om:    <http://www.ontology-of-units-of-measure.org/resource/om-2/> .
+@prefix cap-iacs-base: <http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-base#> .
+
+cap-iacs-base:everyYearYears
+        a                owl:DatatypeProperty ;
+        rdfs:label       "Every year (s)"@en ;
+        rdfs:range       xsd:integer ;
+        skos:definition  "-- Definition --\r\nEvery year (s).\r\n-- Description --\r\nItem description."@en .
+
+cap-iacs-base:testMethod
+        a                owl:DatatypeProperty ;
+        rdfs:label       "Executable test case method"@en ;
+        rdfs:range       xsd:string ;
+        skos:definition  "--Name--\r\nTest method\r\n\r\n-- Definition --\r\nMethod applicable for the executable test case.\r\n\r\n-- Description --\r\nStep by step description of the testing process including the verdict criteria."@en .
+
+cap-iacs-base:templateDescription
+        a                owl:DatatypeProperty ;
+        rdfs:label       "Description of template"@en ;
+        rdfs:range       xsd:string ;
+        skos:definition  "-- Definition --\r\nNotification template description.\r\n-- Description --\r\nNotification template description."@en .
+
+cap-iacs-base:elementDepreciationRequired
+        a                owl:DatatypeProperty ;
+        rdfs:label       "Depreciation of present functionality"@en ;
+        rdfs:range       xsd:boolean ;
+        skos:definition  "--Name--\r\nElement depreciation required\r\n\r\n-- Definition --\r\nDepreciation of an element in the application schema is required for resolving the issue. \r\n\r\n-- Description --\r\nThe possibly affected elements are listed in the AffectedelementTypeValue code list."@en .
+
+cap-iacs-base:startDate
+        a                owl:DatatypeProperty ;
+        rdfs:label       "Notification start date"@en ;
+        rdfs:range       xsd:string ;
+        skos:definition  "-- Definition --\r\nNotification start date.\r\n-- Description --\r\nThe notification start date (valid)."@en .
+
+cap-iacs-base:detailsOfExecutableTestCasesForConformanceReport
+        a           owl:ObjectProperty ;
+        rdfs:range  cap-iacs-base:ConformanceTestReport .
+
+cap-iacs-base:AbstractTestCase
+        a                owl:Class ;
+        rdfs:label       "Abstract test case"@en ;
+        rdfs:subClassOf  gsp:Feature ;
+        rdfs:subClassOf  [ a                owl:Restriction ;
+                           owl:cardinality  "1"^^xsd:nonNegativeInteger ;
+                           owl:onProperty   cap-iacs-base:testMethod
+                         ] ;
+        rdfs:subClassOf  [ a                owl:Restriction ;
+                           owl:cardinality  "1"^^xsd:nonNegativeInteger ;
+                           owl:onProperty   cap-iacs-base:detailsOfAbstractTestCasesForConformanceReport
+                         ] ;
+        rdfs:subClassOf  [ a                   owl:Restriction ;
+                           owl:minCardinality  "1"^^xsd:nonNegativeInteger ;
+                           owl:onProperty      cap-iacs-base:detailsOfAbstractTestCaseForExecutableTestCases
+                         ] ;
+        rdfs:subClassOf  [ a                   owl:Restriction ;
+                           owl:maxCardinality  "1"^^xsd:nonNegativeInteger ;
+                           owl:onProperty      cap-iacs-base:testingType
+                         ] ;
+        rdfs:subClassOf  [ a                   owl:Restriction ;
+                           owl:minCardinality  "1"^^xsd:nonNegativeInteger ;
+                           owl:onProperty      cap-iacs-base:testPurpose
+                         ] ;
+        rdfs:subClassOf  [ a                owl:Restriction ;
+                           owl:cardinality  "1"^^xsd:nonNegativeInteger ;
+                           owl:onProperty   cap-iacs-base:testType
+                         ] ;
+        rdfs:subClassOf  [ a                owl:Restriction ;
+                           owl:cardinality  "1"^^xsd:nonNegativeInteger ;
+                           owl:onProperty   cap-iacs-base:testName
+                         ] ;
+        rdfs:subClassOf  [ a                   owl:Restriction ;
+                           owl:minCardinality  "1"^^xsd:nonNegativeInteger ;
+                           owl:onProperty      cap-iacs-base:reference
+                         ] ;
+        rdfs:subClassOf  [ a                   owl:Restriction ;
+                           owl:maxCardinality  "1"^^xsd:nonNegativeInteger ;
+                           owl:onProperty      cap-iacs-base:falsificationTest
+                         ] ;
+        skos:definition  "--Name--\r\nAbstract test case\r\n\r\n--Definition--\r\nGeneralized test for a particular requirement [ISO19105:2000].\r\n\r\n--Description--\r\nAn abstract test case is a formal basis for deriving executable test cases. One or more test purposes are encapsulated in an abstract test case. An abstract test case is independent of both the implementation and the values. It should be complete in the sense that it is sufficient to assign a test verdict unambiguously to each potentially observable test outcome (i.e. sequence of test events)."@en .
+
+cap-iacs-base:sunday  a  owl:DatatypeProperty ;
+        rdfs:label       "Sunday"@en ;
+        rdfs:range       xsd:boolean ;
+        skos:definition  "-- Definition --\r\nSunday.\r\n-- Description --\r\nItem description."@en .
+
+cap-iacs-base:everyWeekday
+        a                owl:DatatypeProperty ;
+        rdfs:label       "Every weekday"@en ;
+        rdfs:range       xsd:boolean ;
+        skos:definition  "-- Definition --\r\nEvery weekday.\r\n-- Description --\r\nItem description."@en .
+
+cap-iacs-base:requirementClass
+        a                owl:ObjectProperty ;
+        rdfs:label       "Conformance requirement class"@en ;
+        rdfs:range       cap-iacs-base:ConformanceRequirementClassValue ;
+        skos:definition  "--Name--\r\nRequirement class\r\n\r\n--Definition--\r\nClassification of requirements based on specific criteria.\r\n\r\n--Description--\r\nThe criteria may include functional requirements (what the system must be able to do) and generic non-functional requirements (performance, traceability, scalability, etc.)"@en .
+
+cap-iacs-base:friday  a  owl:DatatypeProperty ;
+        rdfs:label       "Friday"@en ;
+        rdfs:range       xsd:boolean ;
+        skos:definition  "-- Definition --\r\nFriday.\r\n-- Description --\r\nItem description."@en .
+
+cap-iacs-base:detailsOfANaturalPersonAsFarmer
+        a           owl:ObjectProperty ;
+        rdfs:range  cap-iacs-beneficiery:Farmer .
+
+cap-iacs-base:SpecieCodeValue
+        a                owl:Class ;
+        rdfs:label       "List of vegetable and agricultural plant species"@en ;
+        rdfs:subClassOf  skos:Concept ;
+        skos:definition  "-- Definition --\r\nList of vegetable and agricultural plant species (aggregate of a varieties). \r\n-- Description --\r\nA culture of any of the different genera defined in the botanical classification of crops. In this case code list consist of binomial names of species from the taxonomy of Linnaeus (classification for plants).\r\nNOTE. Common catalogue of varieties of agricultural plant species. Fifth supplement to the 29th complete edition (2011/C 168 A/01)\r\nList of agricultural species -A\r\nI. Beet\r\nII. Fodder plants\r\nIII. Oil and fibre plants    \r\nIV. Cereals\r\nV. Potatoes \r\nNOTE. Common catalogue of varieties of vegetable species. 32nd complete edition (2013/C 312 A/01)\r\nList of vegetable species - H"@en .
+
+cap-iacs-base:beginLifespanVersion
+        a                owl:DatatypeProperty ;
+        rdfs:label       "Begin lifespan version"@en ;
+        rdfs:range       xsd:dateTime ;
+        skos:definition  "-- Name--\r\nBegin life span version\r\n\r\n--Definition--\r\nSet of properties of an object/feature that describes the temporal characteristics of a version or the changes between versions. [Adapted from INSPIRE Generic Conceptual Model]\r\n\r\n-- Description --\r\nDate and time at which this version of the feature was inserted or changed in the dataset."@en .
+
+cap-iacs-base:ixit  a    owl:ObjectProperty ;
+        rdfs:label       "Implementation eXtra Information for testing provided by client"@en ;
+        rdfs:range       cap-iacs-base:SupplementaryDocument ;
+        skos:definition  "--Name--\r\nIXIT\r\n\r\n--Definition--\r\nImplementation eXtra Information for Testing provided by client.\r\n\r\n--Description--\r\nStatement containing all of the information related to the IUT and its corresponding SUT which will enable the testing laboratory to run an appropriate test suite against that IUT. Implementation eXtra Information for Testing provided by client to testing laboratory."@en .
+
+cap-iacs-base:optionsWhichHaveBeenImplemented
+        a           owl:ObjectProperty ;
+        rdfs:range  cap-iacs-base:ConformanceRequirement .
+
+cap-iacs-base:nonStructuredEvidenceCitation
+        a                owl:ObjectProperty ;
+        rdfs:label       "Non-structured evidence - citation"@en ;
+        rdfs:range       cap-iacs-base:SupplementaryDocumentCitation ;
+        skos:definition  "-- Definition --\r\nAny record that describes the cross-compliance rule.\r\n-- Description --\r\nURL."@en .
+
+cap-iacs-base:resultMts
+        a                owl:ObjectProperty ;
+        rdfs:label       "The result of model test suite"@en ;
+        rdfs:range       cap-iacs-base:ConformanceStatementValue ;
+        skos:definition  "--Name--\r\nMTS result\r\n\r\n-- Definition --\r\nConformance verdict on the result of the MTS.\r\n\r\n-- Description --\r\nThe MTS of the eligibility profile has to be run against the current LCM every time when\r\n- a change in the application schema of the eligibility profile has been made (because of the change of MS/Region approach),\r\n- a change in the LCM has been made (because of the change in the EU regulation)."@en .
+
+cap-iacs-base:NotificationGroupValue
+        a                owl:Class ;
+        rdfs:label       "List of notification groups."@en ;
+        rdfs:subClassOf  skos:Concept ;
+        skos:definition  "-- Definition --\r\nList of notification groups.\r\n-- Description --\r\nList of notification groups prescribed in legal documents.\r\nNOTE. Not finite number of notification groups. List may be extended by MS."@en .
+
+cap-iacs-base:recurrence
+        a                owl:ObjectProperty ;
+        rdfs:label       "Recurrence"@en ;
+        rdfs:range       cap-iacs-base:RecurenceValue ;
+        skos:definition  "-- Definition --\r\nRecurrence.\r\n-- Description --\r\nRecurrence of notification. \r\nNOTE. Only one recurrenceValue may be used for one notification pattern. After particular reccurenceValue is selected - respective notification pattern (daily, weekly, monthly or yearly) must be defined."@en .
+
+cap-iacs-base:WeekdayValue
+        a                owl:Class ;
+        rdfs:label       "List of weekday values"@en ;
+        rdfs:subClassOf  skos:Concept ;
+        owl:oneOf        ( <http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-base/code#WeekdayValue/friday> <http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-base/code#WeekdayValue/monday> <http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-base/code#WeekdayValue/saturday> <http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-base/code#WeekdayValue/sunday> <http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-base/code#WeekdayValue/thursday> <http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-base/code#WeekdayValue/tuesday> <http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-base/code#WeekdayValue/wednesday> ) ;
+        skos:definition  "-- Definition --\r\nList of possible weekdays.\r\n-- Description --\r\nList of possible weekdays."@en .
+
+cap-iacs-base:ExecutableTestCase
+        a                owl:Class ;
+        rdfs:label       "Executable test case"@en ;
+        rdfs:subClassOf  gsp:Feature ;
+        rdfs:subClassOf  [ a                owl:Restriction ;
+                           owl:cardinality  "1"^^xsd:nonNegativeInteger ;
+                           owl:onProperty   cap-iacs-base:detailsOfExecutableTestCasesForConformanceReport
+                         ] ;
+        rdfs:subClassOf  [ a                   owl:Restriction ;
+                           owl:maxCardinality  "1"^^xsd:nonNegativeInteger ;
+                           owl:onProperty      cap-iacs-base:testCaseId
+                         ] ;
+        rdfs:subClassOf  [ a                   owl:Restriction ;
+                           owl:minCardinality  "1"^^xsd:nonNegativeInteger ;
+                           owl:onProperty      cap-iacs-base:referenceAts
+                         ] ;
+        rdfs:subClassOf  [ a                owl:Restriction ;
+                           owl:cardinality  "1"^^xsd:nonNegativeInteger ;
+                           owl:onProperty   cap-iacs-base:testMethod
+                         ] ;
+        rdfs:subClassOf  [ a                owl:Restriction ;
+                           owl:cardinality  "1"^^xsd:nonNegativeInteger ;
+                           owl:onProperty   cap-iacs-base:testType
+                         ] ;
+        rdfs:subClassOf  [ a                owl:Restriction ;
+                           owl:cardinality  "1"^^xsd:nonNegativeInteger ;
+                           owl:onProperty   cap-iacs-base:testingDetailsForMtsItemUnderInspection
+                         ] ;
+        rdfs:subClassOf  [ a                   owl:Restriction ;
+                           owl:minCardinality  "1"^^xsd:nonNegativeInteger ;
+                           owl:onProperty      cap-iacs-base:parameterValue
+                         ] ;
+        rdfs:subClassOf  [ a                   owl:Restriction ;
+                           owl:minCardinality  "1"^^xsd:nonNegativeInteger ;
+                           owl:onProperty      cap-iacs-base:iutId
+                         ] ;
+        rdfs:subClassOf  [ a                   owl:Restriction ;
+                           owl:maxCardinality  "1"^^xsd:nonNegativeInteger ;
+                           owl:onProperty      cap-iacs-base:falsificationTest
+                         ] ;
+        rdfs:subClassOf  [ a                owl:Restriction ;
+                           owl:cardinality  "1"^^xsd:nonNegativeInteger ;
+                           owl:onProperty   cap-iacs-base:testName
+                         ] ;
+        rdfs:subClassOf  [ a                owl:Restriction ;
+                           owl:cardinality  "1"^^xsd:nonNegativeInteger ;
+                           owl:onProperty   cap-iacs-base:testingType
+                         ] ;
+        rdfs:subClassOf  [ a                   owl:Restriction ;
+                           owl:minCardinality  "1"^^xsd:nonNegativeInteger ;
+                           owl:onProperty      cap-iacs-base:testPurpose
+                         ] ;
+        skos:definition  "--Name--\r\nExecutable test case\r\n\r\n-- Definition --\r\nSpecific test of an implementation to meet particular requirements (ISO 19105:2000).\r\n\r\n-- Description --\r\nIn order to unambiguously define an executable test case it should be described with the attributes presented in this feature type.\r\n\r\nNOTE. An executable test is the instantiation of an abstract test case with specific values."@en .
+
+cap-iacs-base:correspondent
+        a                owl:ObjectProperty ;
+        rdfs:label       "Correspondents"@en ;
+        rdfs:range       cap-iacs-base:NotificationCorrespondent ;
+        skos:definition  "-- Definition --\r\nCorrespondents.\r\n-- Description --\r\nNotification senders and receivers."@en .
+
+cap-iacs-base:NotificationPatternMonthly
+        a                owl:Class ;
+        rdfs:label       "Notification pattern monthly"@en ;
+        rdfs:subClassOf  [ a                   owl:Restriction ;
+                           owl:maxCardinality  "1"^^xsd:nonNegativeInteger ;
+                           owl:onProperty      cap-iacs-base:rangeOfRecurrence
+                         ] ;
+        rdfs:subClassOf  [ a                owl:Restriction ;
+                           owl:cardinality  "1"^^xsd:nonNegativeInteger ;
+                           owl:onProperty   cap-iacs-base:bOfEveryMonthMonths
+                         ] ;
+        rdfs:subClassOf  [ a                   owl:Restriction ;
+                           owl:maxCardinality  "1"^^xsd:nonNegativeInteger ;
+                           owl:onProperty      cap-iacs-base:bWeekday
+                         ] ;
+        rdfs:subClassOf  [ a                   owl:Restriction ;
+                           owl:maxCardinality  "1"^^xsd:nonNegativeInteger ;
+                           owl:onProperty      cap-iacs-base:bThe
+                         ] ;
+        rdfs:subClassOf  [ a                owl:Restriction ;
+                           owl:cardinality  "1"^^xsd:nonNegativeInteger ;
+                           owl:onProperty   cap-iacs-base:aOfEveryMonthMonths
+                         ] ;
+        rdfs:subClassOf  [ a                   owl:Restriction ;
+                           owl:maxCardinality  "1"^^xsd:nonNegativeInteger ;
+                           owl:onProperty      cap-iacs-base:aOnDay
+                         ] ;
+        skos:definition  "-- Definition --\r\nNotification pattern monthly.\r\n-- Description --\r\nNotification pattern with monthly notification properties."@en .
+
+cap-iacs-base:farmStructureSurveyNumber
+        a                owl:ObjectProperty ;
+        rdfs:label       "Farm structure survey number"@en ;
+        rdfs:range       cap-iacs-base:FarmStructureSurveyNumberValue ;
+        skos:definition  "-- Definition --\r\nFarm structure survey number.\r\n-- Description --\r\n\"agregate code\" are mapped with farmStructureSurveyNumber.\r\nScope - LAND part only. Commision Regulation (EC) No 1200/2009 of 30 November 2009 implementing Regulation (EC) No 1166/2008 of the European Parliament and of the Council on farm structure surveys and the survey on agricultural production methods, as regards livestock unit coefficients and definitions of the characteristics (Text with EEA relevance)."@en .
+
+cap-iacs-base:ConformanceLevelValue
+        a                owl:Class ;
+        rdfs:label       "List of conformance level values"@en ;
+        rdfs:subClassOf  skos:Concept ;
+        skos:definition  "--Name--\r\nConformance level value\r\n\r\n-- Definition --\r\nList of conformance level values.\r\n\r\n-- Description --\r\nList of conformance level values. Any product claiming conformance with one of these levels shall pass all requirements described in the corresponding abstract test suite.\r\n\r\nNOTE. Requirements of a higher level contain all requirements of a lower level."@en .
+
+cap-iacs-base:OrdinalNumberValue
+        a                owl:Class ;
+        rdfs:label       "Ordinal number value list"@en ;
+        rdfs:subClassOf  skos:Concept ;
+        skos:definition  "-- Definition --\r\nOrdinal number value list.\r\n\r\n-- Description --\r\nList of possible ordinal number values used for date identification."@en .
+
+cap-iacs-base:FeatureLevelMetadata
+        a                owl:Class ;
+        rdfs:label       "Feature level metadata"@en ;
+        rdfs:subClassOf  [ a                owl:Restriction ;
+                           owl:cardinality  "1"^^xsd:nonNegativeInteger ;
+                           owl:onProperty   cap-iacs-base:beginLifespanVersion
+                         ] ;
+        rdfs:subClassOf  [ a                owl:Restriction ;
+                           owl:cardinality  "1"^^xsd:nonNegativeInteger ;
+                           owl:onProperty   cap-iacs-base:validFrom
+                         ] ;
+        rdfs:subClassOf  [ a                   owl:Restriction ;
+                           owl:maxCardinality  "1"^^xsd:nonNegativeInteger ;
+                           owl:onProperty      cap-iacs-base:iacsId
+                         ] ;
+        rdfs:subClassOf  [ a                   owl:Restriction ;
+                           owl:maxCardinality  "1"^^xsd:nonNegativeInteger ;
+                           owl:onProperty      cap-iacs-base:validTo
+                         ] ;
+        rdfs:subClassOf  [ a                   owl:Restriction ;
+                           owl:maxCardinality  "1"^^xsd:nonNegativeInteger ;
+                           owl:onProperty      cap-iacs-base:comment
+                         ] ;
+        rdfs:subClassOf  [ a                   owl:Restriction ;
+                           owl:maxCardinality  "1"^^xsd:nonNegativeInteger ;
+                           owl:onProperty      cap-iacs-base:statusDescription
+                         ] ;
+        rdfs:subClassOf  [ a                   owl:Restriction ;
+                           owl:maxCardinality  "1"^^xsd:nonNegativeInteger ;
+                           owl:onProperty      cap-iacs-base:endLifespanVersion
+                         ] ;
+        rdfs:subClassOf  [ a                owl:Restriction ;
+                           owl:cardinality  "1"^^xsd:nonNegativeInteger ;
+                           owl:onProperty   cap-iacs-base:statusType
+                         ] ;
+        skos:definition  "--Name-- \r\nFeature level metadata\r\n\r\n-- Definition --\r\nInformation describing spatial resources, making it possible to discover, inventory and use them.\r\n\r\n-- Description --\r\nFeature-level metadata are attributes of a feature type that is used to store auxiliary information about the data record belonging to that type. Feature level metadata can include information about the life-cycle, status, data quality, usability, responsible entity, etc.\r\n\r\nNOTE 1. The date of the beginLifespanVersion shall be earlier than the date of endLifespanVersion.\r\n/* If set, the date endLifespanVersion shall be later than beginLifespanVersion. */\r\ninv: self.endLifespanVersion .isAfter(self.beginLifespanVersion)\r\n\r\nNOTE 2. The value (date) of the validFrom attribute shall be earlier than the date of validTo attribute.\r\n\r\n/* If set, the date validTo shall be equal or later than validFrom. */\r\ninv: self.validTo .isEqual(self.validFrom) or self.validTo .isAfter(self.validFrom)\r\n\r\nNOTE 3. The new CAP legislation is applicable from 2015 onward.\r\ninv: campaignYear >= 2015"@en .
+
+cap-iacs-base:NaturalPerson
+        a                owl:Class ;
+        rdfs:label       "Natural person"@en ;
+        rdfs:subClassOf  gsp:Feature ;
+        rdfs:subClassOf  [ a                owl:Restriction ;
+                           owl:cardinality  "1"^^xsd:nonNegativeInteger ;
+                           owl:onProperty   cap-iacs-base:naturalPersonBirthDate
+                         ] ;
+        rdfs:subClassOf  [ a                   owl:Restriction ;
+                           owl:maxCardinality  "1"^^xsd:nonNegativeInteger ;
+                           owl:onProperty      cap-iacs-base:detailsOfANaturalPersonAsFarmer
+                         ] ;
+        skos:definition  "-- Definition --\r\nNatural person.\r\n-- Description --\r\nNOTE. Third party class of a single system to record the identity of each natural person."@en .
+
+cap-iacs-base:NotificationCorrespondent
+        a                owl:Class ;
+        rdfs:label       "Correspondents"@en ;
+        rdfs:subClassOf  [ a                owl:Restriction ;
+                           owl:cardinality  "1"^^xsd:nonNegativeInteger ;
+                           owl:onProperty   cap-iacs-base:sender
+                         ] ;
+        rdfs:subClassOf  [ a                owl:Restriction ;
+                           owl:cardinality  "1"^^xsd:nonNegativeInteger ;
+                           owl:onProperty   cap-iacs-base:recipient
+                         ] ;
+        rdfs:subClassOf  [ a                owl:Restriction ;
+                           owl:cardinality  "1"^^xsd:nonNegativeInteger ;
+                           owl:onProperty   cap-iacs-base:correspondentDescription
+                         ] ;
+        skos:definition  "-- Definition --\r\nCorrespondents.\r\n-- Description --\r\nNotification senders and receivers."@en .
+
+cap-iacs-base:form  a    owl:ObjectProperty ;
+        rdfs:label       "Presentation form"@en ;
+        rdfs:range       owl:Class ;
+        skos:definition  "--Name--\r\nForm\r\n\r\n-- Definition --\r\nPresentation form of the data.\r\n\r\n-- Description --\r\nValue to be taken from external code list of ISO 19115:2003.\r\n\r\nEXAMPLES: documentDigital, mapDigital, tableDigital, etc."@en .
+
+cap-iacs-base:siteArea
+        a                owl:DatatypeProperty ;
+        rdfs:label       "Site area"@en ;
+        rdfs:range       om:Measure ;
+        skos:definition  "-- Definition --\r\nSite area.\r\n-- Description --\r\nRegistered area value giving quantification of the area projected on the horizontal plane of the agricultural area. Digitized or GIS area. Area calculated based on the coordinates of the boundary points."@en .
+
+cap-iacs-base:holdingDescription
+        a                owl:ObjectProperty ;
+        rdfs:label       "Holding description"@en ;
+        rdfs:range       owl:Class ;
+        skos:definition  "-- Definition --\r\nHolding description.\r\n-- Description --\r\nAdditional information on an Holding, including its address, a contact, related parties and a free text description."@en .
+
+cap-iacs-base:detailsOfLegalPersonsAsPartOfLegalPerson
+        a           owl:ObjectProperty ;
+        rdfs:range  cap-iacs-base:LegalPerson .
+
+cap-iacs-base:MonthValue
+        a                owl:Class ;
+        rdfs:label       "List of month values"@en ;
+        rdfs:subClassOf  skos:Concept ;
+        owl:oneOf        ( <http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-base/code#MonthValue/april> <http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-base/code#MonthValue/august> <http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-base/code#MonthValue/december> <http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-base/code#MonthValue/february> <http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-base/code#MonthValue/january> <http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-base/code#MonthValue/july> <http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-base/code#MonthValue/june> <http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-base/code#MonthValue/march> <http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-base/code#MonthValue/may> <http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-base/code#MonthValue/november> <http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-base/code#MonthValue/october> <http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-base/code#MonthValue/september> ) ;
+        skos:definition  "-- Definition --\r\nList of months.\r\n-- Description --\r\nList of months."@en .
+
+cap-iacs-base:ixitDetailsForIcs
+        a           owl:ObjectProperty ;
+        rdfs:range  cap-iacs-base:ImplementationConformanceStatement .
+
+cap-iacs-base:NotificationPatternRangeOfRecurrence
+        a                owl:Class ;
+        rdfs:label       "Range of notification reccurence"@en ;
+        rdfs:subClassOf  [ a                   owl:Restriction ;
+                           owl:maxCardinality  "1"^^xsd:nonNegativeInteger ;
+                           owl:onProperty      cap-iacs-base:rangeEndBy
+                         ] ;
+        rdfs:subClassOf  [ a                   owl:Restriction ;
+                           owl:maxCardinality  "1"^^xsd:nonNegativeInteger ;
+                           owl:onProperty      cap-iacs-base:rangeEndAfterOccurencies
+                         ] ;
+        rdfs:subClassOf  [ a                owl:Restriction ;
+                           owl:cardinality  "1"^^xsd:nonNegativeInteger ;
+                           owl:onProperty   cap-iacs-base:rangeEndDate
+                         ] ;
+        rdfs:subClassOf  [ a                owl:Restriction ;
+                           owl:cardinality  "1"^^xsd:nonNegativeInteger ;
+                           owl:onProperty   cap-iacs-base:rangeStartDate
+                         ] ;
+        skos:definition  "-- Definition --\r\nRange of notification recurrence.\r\n-- Description --\r\nRange of notification recurrence."@en .
+
+cap-iacs-base:RecurenceValue
+        a                owl:Class ;
+        rdfs:label       "List of recurence values"@en ;
+        rdfs:subClassOf  skos:Concept ;
+        owl:oneOf        ( <http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-base/code#RecurenceValue/daily> <http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-base/code#RecurenceValue/monthly> <http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-base/code#RecurenceValue/noRecurrence> <http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-base/code#RecurenceValue/weekly> <http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-base/code#RecurenceValue/yearly> ) ;
+        skos:definition  "-- Definition --\r\nNotification recurrence value list.\r\n-- Description --\r\nList of possible notification recurrence values."@en .
+
+cap-iacs-base:testSuiteId
+        a                owl:DatatypeProperty ;
+        rdfs:label       "Unique ID of abstract test suite"@en ;
+        rdfs:range       xsd:string ;
+        skos:definition  "--Name--\r\nTest suite identifier\r\n\r\n-- Definition --\r\nUnique thematic ID of abstract test suite.\r\n\r\n-- Description --\r\nNation-wide unique alphanumerical thematic identification code of abstract test suite."@en .
+
+cap-iacs-base:recurrenceMonthly
+        a                owl:ObjectProperty ;
+        rdfs:label       "Recurrence monthly"@en ;
+        rdfs:range       cap-iacs-base:NotificationPatternMonthly ;
+        skos:definition  "-- Definition --\r\nRecurrence monthly.\r\n-- Description --\r\nRecurrence of notification.\r\nNOTE. Only if recurrence = monthly."@en .
+
+cap-iacs-base:FarmStructureSurveyNumberValue
+        a                owl:Class ;
+        rdfs:label       "List of farm structure survey numbers"@en ;
+        rdfs:subClassOf  skos:Concept ;
+        skos:definition  "-- Definition --\r\nList of farm structure survey numbers (aggregate of crop items).\r\n-- Desription --\r\nScope - LAND part only. Commision regulations (EC) No 1200/2009 of 30 November 2009 Implementing Regulation (EC) No 1166/2008 of the European Parliament and of the Council on farm structure surveys and the survey on agricultural production methods, as regards livestock unit coefficients and definitions of the characteristics (Text with EEA relevance)."@en .
+
+cap-iacs-base:varietalOrSpecieInformationForAgriculturalParcelWithinFarmerDeclaration
+        a           owl:ObjectProperty ;
+        rdfs:range  cap-iacs-aid:AgriculturalParcel .
+
+cap-iacs-base:detailsOfAbstractTestSuitesForConformanceRequirements
+        a           owl:ObjectProperty ;
+        rdfs:range  cap-iacs-base:ConformanceRequirement .
+
+cap-iacs-base:TestTypeValue
+        a                owl:Class ;
+        rdfs:label       "Test type value list"@en ;
+        rdfs:subClassOf  skos:Concept ;
+        skos:definition  "--Name--\r\nTest type value\r\n\r\n-- Definition --\r\nIndication whether a test belong to the basic or the capability test type.\r\n\r\n-- Description --\r\nA basic test is an initial test intended to identify clear cases of non-conformance. If the ATS identifies tests to be used as basic tests, they shall be used at the start of the conformance assessment process.\r\n\r\nCapability test is designed to determine whether an IUT conforms to a particular characteristic specified as requirements."@en .
+
+cap-iacs-base:VarietalNameValue
+        a                owl:Class ;
+        rdfs:label       "List of varietal names"@en ;
+        rdfs:subClassOf  skos:Concept ;
+        skos:definition  "-- Definition --\r\nList of varietal names within vegetable and agricultural plant species. \r\n-- Desription --\r\nCommon catalogue of varieties of agricultural plant species. Fifth supplement to the 29th complete edition (2011/C 168 A/01).\r\nCommon catalogue of varieties of vegetable species. 32nd complete edition (2013/C 312 A/01).\r\nThis codeList decided and maintained by MS.  Varietal names are MS specific.\r\nDictionary: http://ec.europa.eu/food/plant/propagation/catalogues/database/public/index.cfm?event=homepage\r\nNOTE. CODE LIST IS NOT FINISHED. ONLY SOME EXAMPLES ARE PROVIDED."@en .
+
+cap-iacs-base:saturday
+        a                owl:DatatypeProperty ;
+        rdfs:label       "Saturday"@en ;
+        rdfs:range       xsd:boolean ;
+        skos:definition  "-- Definition --\r\nSaturday.\r\n-- Description --\r\nItem description."@en .
+
+cap-iacs-base:subjectToCollectiveEfaImplementation
+        a                owl:DatatypeProperty ;
+        rdfs:label       "Administrative hierarchy level"@en ;
+        rdfs:range       xsd:boolean ;
+        skos:definition  "-- Definition --\r\nSubject for collective EFA implementation.\r\n-- Description --\r\nEXAMPLE. (Regarding municipality) If particular municipalityId and sum of siteArea =>80% of holdingArea then\r\nsubjectToCollectiveEfaImplementation = TRUE\r\nelse\r\nsubjectToCollectiveEfaImplementation = FALSE\r\nEXAMPLE. (Regarding distances between holdings/sites) if particular holdingId and dissolved siteId and siteArea =>80% of holdingArea then\r\nsubjectToCollectiveEfaImplementation = TRUE\r\nelse\r\nsubjectToCollectiveEfaImplementation = FALSE"@en .
+
+cap-iacs-base:nearSiteDistance
+        a                owl:DatatypeProperty ;
+        rdfs:label       "Distance to the site"@en ;
+        rdfs:range       om:Measure ;
+        skos:definition  "-- Definition --\r\nDistance to the site.\r\n-- Description --\r\nNearest euclidean distance between siteId to nearSiteId within the same HoldingId. It is required in case of collective EFA implementation.\r\nNOTE. Only distances up to 30 km shall be recorded."@en .
+
+cap-iacs-base:testCaseId
+        a                owl:DatatypeProperty ;
+        rdfs:label       "Unique ID of executable test case"@en ;
+        rdfs:range       xsd:string ;
+        skos:definition  "--Name--\r\nTest case identifier\r\n\r\n-- Definition --\r\nUnique thematic ID of executable test case.\r\n\r\n-- Description --\r\nNation-wide unique alphanumerical thematic identification code of executable test case (within an executable test suite)."@en .
+
+cap-iacs-base:detailsOfNaturalPersonsAsLegalPersons
+        a           owl:ObjectProperty ;
+        rdfs:range  cap-iacs-base:LegalPerson .
+
+cap-iacs-base:conformanceClass
+        a                owl:ObjectProperty ;
+        rdfs:label       "Conformance class"@en ;
+        rdfs:range       cap-iacs-base:ConformanceClassValue ;
+        skos:definition  "--Name--\r\nConformance class\r\n\r\n-- Definition --\r\nTo manage a set of options specific to a subset of requirements, (such as profiles), conformance classes may be provided [ISO 19105:2000].\r\n\r\n-- Description --\r\nConformance classes may be used to define different kinds of conformance requirements. Any product claiming conformance with one of these classes shall pass all requirements described in the corresponding abstract test suite.\r\n\r\nNOTE. Requirements of conformance classes may overlap, in which case, subparts of the abstract test suite  may be shared between different conformance classes."@en .
+
+cap-iacs-base:ConformanceStatementValue
+        a                owl:Class ;
+        rdfs:label       "List of conformance statement values"@en ;
+        rdfs:subClassOf  skos:Concept ;
+        owl:oneOf        ( <http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-base/code#ConformanceStatementValue/conforming> <http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-base/code#ConformanceStatementValue/nonConforming> ) ;
+        skos:definition  "--Name--\r\nConformance Statement Value\r\n\r\n-- Definition --\r\nEnumeration of conformance statement values.\r\n\r\n-- Description --\r\nList of possible conformance verdicts whether the subject of testing (e.g. SUT, schema element, source data, etc.) conforms to the specified rules."@en .
+
+cap-iacs-base:recurrenceWeekly
+        a                owl:ObjectProperty ;
+        rdfs:label       "Recurrence weekly"@en ;
+        rdfs:range       cap-iacs-base:NotificationPatternWeekly ;
+        skos:definition  "-- Definition --\r\nRecurrence weekly.\r\n-- Description --\r\nRecurrence of notification.\r\nNOTE. Only if recurrence = weekly."@en .
+
+cap-iacs-base:statusDescription
+        a                owl:DatatypeProperty ;
+        rdfs:label       "The description of the status"@en ;
+        rdfs:range       xsd:string ;
+        skos:definition  "--Name--\r\nStatus description\r\n\r\n-- Definition --\r\nNarrative description of the status.\r\n\r\n-- Description --\r\nAdditional text commonly used to display the extended description of status of object / feature."@en .
+
+cap-iacs-base:detailsOfConformanceRequirementsForIcs
+        a           owl:ObjectProperty ;
+        rdfs:range  cap-iacs-base:ImplementationConformanceStatement .
+
+cap-iacs-base:statusType
+        a                owl:ObjectProperty ;
+        rdfs:label       "Status type value"@en ;
+        rdfs:range       cap-iacs-base:StatusValue ;
+        skos:definition  "-- Name--\r\nStatus type \r\n\r\n--Definition--\r\nInformation about the life cycle status of the data or feature type.\r\n\r\n-- Description --\r\nValidity/update status of feature / object / schema, values depend on implementation choice. Status types included in the state machine diagram are applicable for new and existing object feature or schema (Dynamic model). \r\n\r\nNOTE. Values of this attributes are taken from the StatusValue code list."@en .
+
+cap-iacs-base:bWeekday
+        a                owl:ObjectProperty ;
+        rdfs:label       "The weekday"@en ;
+        rdfs:range       cap-iacs-base:WeekdayValue ;
+        skos:definition  "-- Definition --\r\nThe weekday.\r\n-- Description --\r\nNOTE. If option a are used, option b shall not be used."@en .
+
+cap-iacs-base:ConformanceRequirement
+        a                owl:Class ;
+        rdfs:label       "Conformance requirement"@en ;
+        rdfs:subClassOf  gsp:Feature ;
+        rdfs:subClassOf  [ a                owl:Restriction ;
+                           owl:cardinality  "1"^^xsd:nonNegativeInteger ;
+                           owl:onProperty   cap-iacs-base:requirementStatement
+                         ] ;
+        rdfs:subClassOf  [ a                owl:Restriction ;
+                           owl:cardinality  "1"^^xsd:nonNegativeInteger ;
+                           owl:onProperty   cap-iacs-base:requirementClass
+                         ] ;
+        rdfs:subClassOf  [ a                owl:Restriction ;
+                           owl:cardinality  "1"^^xsd:nonNegativeInteger ;
+                           owl:onProperty   cap-iacs-base:requirementDescription
+                         ] ;
+        rdfs:subClassOf  [ a                   owl:Restriction ;
+                           owl:minCardinality  "1"^^xsd:nonNegativeInteger ;
+                           owl:onProperty      cap-iacs-base:conformanceRequirementsForAbstractTestSuites
+                         ] ;
+        rdfs:subClassOf  [ a                owl:Restriction ;
+                           owl:cardinality  "1"^^xsd:nonNegativeInteger ;
+                           owl:onProperty   cap-iacs-base:detailsOfConformanceRequirementsForIcs
+                         ] ;
+        skos:definition  "--Name--\r\nConformance requirement\r\n\r\n-- Definition --\r\nRequirements to be fulfilled by the SUT in order to claim conformance to a specific conformance clause.\r\n\r\n-- Description --\r\nConformance requirement. The conformance requirements are stated in the conformance clause of each standard."@en .
+
+cap-iacs-base:NotificationTemplate
+        a                owl:Class ;
+        rdfs:label       "Notification template"@en ;
+        rdfs:subClassOf  [ a                owl:Restriction ;
+                           owl:cardinality  "1"^^xsd:nonNegativeInteger ;
+                           owl:onProperty   cap-iacs-base:templateDescription
+                         ] ;
+        skos:definition  "-- Definition --\r\nNotification document template.\r\n-- Description --\r\nNotification document templates used for creation of Notification."@en .
+
+cap-iacs-base:supplementaryData
+        a                owl:ObjectProperty ;
+        rdfs:label       "Selected data"@en ;
+        rdfs:range       cap-iacs-base:SupplementaryDocument ;
+        skos:definition  "--Name--\r\nSupplementary data\r\n\r\n-- Definition --\r\nReference to the data source evaluated as fit for update.\r\n\r\n-- Description --\r\nData selected for resolving an anomaly. It can be one or more dataset, imagery, measurement vectors, etc. They should be referred to in the documentation of the anomaly. The reference is provided as specified in the SupplementaryDocumentation data type of the BaseTypes application schema."@en .
+
+cap-iacs-base:CrossComplianceRuleValue
+        a                owl:Class ;
+        rdfs:label       "List of rules for cross-compliance"@en ;
+        rdfs:subClassOf  skos:Concept ;
+        skos:definition  "-- Definition --\r\nList of rules for cross-compliance\r\n-- Description --\r\nList of rules for cross-compliance. Rules for SMR and GAEC."@en .
+
+cap-iacs-base:clauseDescription
+        a                owl:DatatypeProperty ;
+        rdfs:label       "Description of conformance clause"@en ;
+        rdfs:range       xsd:string ;
+        skos:definition  "--Name--\r\nClause description\r\n\r\n-- Definition --\r\nDescription of conformance clause."@en .
+
+cap-iacs-base:detailsOfConformanceReportForIxit
+        a           owl:ObjectProperty ;
+        rdfs:range  cap-iacs-base:ImplementationExtraInformationForTesting .
+
+cap-iacs-base:sentDate
+        a                owl:DatatypeProperty ;
+        rdfs:label       "Notification sent date"@en ;
+        rdfs:range       xsd:date ;
+        skos:definition  "-- Definition --\r\nThe notification sent date.\r\n-- Description --\r\nThe notification sent date."@en .
+
+cap-iacs-base:CrossComplianceRuleDescription
+        a                owl:Class ;
+        rdfs:label       "Descriptions of cross-compliance rules"@en ;
+        rdfs:subClassOf  [ a                   owl:Restriction ;
+                           owl:minCardinality  "1"^^xsd:nonNegativeInteger ;
+                           owl:onProperty      cap-iacs-base:crossComplianceRuleDescription
+                         ] ;
+        rdfs:subClassOf  [ a                owl:Restriction ;
+                           owl:cardinality  "1"^^xsd:nonNegativeInteger ;
+                           owl:onProperty   cap-iacs-base:crossComplianceRule
+                         ] ;
+        skos:definition  "-- Definition --\r\nDescriptions of cross-compliance rules.\r\n-- Description --\r\nDescriptions of cross-compliance rules. Usually defined by Member States responsible parties.\r\nNOTE. https://marswiki.jrc.ec.europa.eu/gaec/index.php"@en .
+
+cap-iacs-base:monday  a  owl:DatatypeProperty ;
+        rdfs:label       "Monday"@en ;
+        rdfs:range       xsd:boolean ;
+        skos:definition  "-- Definition --\r\nMonday.\r\n-- Description --\r\nItem description."@en .
+
+cap-iacs-base:ImplementationConformanceStatement
+        a                owl:Class ;
+        rdfs:label       "Implementation conformance statement"@en ;
+        rdfs:subClassOf  gsp:Feature ;
+        rdfs:subClassOf  [ a                owl:Restriction ;
+                           owl:cardinality  "1"^^xsd:nonNegativeInteger ;
+                           owl:onProperty   cap-iacs-base:sutId
+                         ] ;
+        rdfs:subClassOf  [ a                   owl:Restriction ;
+                           owl:maxCardinality  "1"^^xsd:nonNegativeInteger ;
+                           owl:onProperty      cap-iacs-base:icsProforma
+                         ] ;
+        rdfs:subClassOf  [ a                owl:Restriction ;
+                           owl:cardinality  "1"^^xsd:nonNegativeInteger ;
+                           owl:onProperty   cap-iacs-base:ics
+                         ] ;
+        rdfs:subClassOf  [ a                   owl:Restriction ;
+                           owl:minCardinality  "1"^^xsd:nonNegativeInteger ;
+                           owl:onProperty      cap-iacs-base:optionsWhichHaveBeenImplemented
+                         ] ;
+        rdfs:subClassOf  [ a                owl:Restriction ;
+                           owl:cardinality  "1"^^xsd:nonNegativeInteger ;
+                           owl:onProperty   cap-iacs-base:metadata
+                         ] ;
+        skos:definition  "--Name--\r\nImplementation conformance statement\r\n\r\n--Definition--\r\nStatement of the options which have been implemented. \r\n\r\n--Description--\r\nThis will allow the implementation to be tested for conformance against the relevant requirements - and against those requirements only.\r\n\r\nNOTE. ICS gives information to the testing laboratory for the definition of the domain of testing."@en .
+
+cap-iacs-base:notificationGroup
+        a                owl:ObjectProperty ;
+        rdfs:label       "Notification group"@en ;
+        rdfs:range       cap-iacs-base:NotificationGroupValue ;
+        skos:definition  "-- Definition --\r\nNotification group.\r\n-- Description --\r\nNotification group to which notification pattern belongs."@en .
+
+cap-iacs-base:CommunityFarmStructureSurvey
+        a                owl:Class ;
+        rdfs:label       "Community farm structure survey, land part only"@en ;
+        rdfs:subClassOf  gsp:Feature ;
+        rdfs:subClassOf  [ a                owl:Restriction ;
+                           owl:cardinality  "1"^^xsd:nonNegativeInteger ;
+                           owl:onProperty   cap-iacs-base:farmStructureSurveyNumber
+                         ] ;
+        rdfs:subClassOf  [ a                owl:Restriction ;
+                           owl:cardinality  "1"^^xsd:nonNegativeInteger ;
+                           owl:onProperty   cap-iacs-base:cropItemCode
+                         ] ;
+        rdfs:subClassOf  [ a                   owl:Restriction ;
+                           owl:maxCardinality  "1"^^xsd:nonNegativeInteger ;
+                           owl:onProperty      cap-iacs-base:varietalOrSpecieInformationForAgriculturalParcelWithinFarmerDeclaration
+                         ] ;
+        rdfs:subClassOf  [ a                owl:Restriction ;
+                           owl:cardinality  "1"^^xsd:nonNegativeInteger ;
+                           owl:onProperty   cap-iacs-base:varietalName
+                         ] ;
+        skos:definition  "-- Definition --\r\nCommunity farm structure survey, land part only.\r\n-- Description --\r\nCommunity farm structure survey. Scope - LAND part only (Commision Regulation (EC) No 1200/2009 of 30 November 2009)\r\nMS shall create record set of this table themselves based on MS specific plant specie variety properties and within the scope of EU and national regulations. This table is dedicated for grouping and description of particular specie/variety.\r\nNOTE. This table may serve as parameter table. It is suggested to prepare record set for this table before declaration procedure starts (varietal names are MS specific). This record set then can be used to pre fill farmers application."@en .
+
+cap-iacs-base:requirementDescription
+        a                owl:DatatypeProperty ;
+        rdfs:label       "Description of conformance requirement"@en ;
+        rdfs:range       xsd:string ;
+        skos:definition  "--Name--\r\nRequirement desciption\r\n\r\n--Definition--\r\nDescription of conformance requirement."@en .
+
+cap-iacs-base:everyDayDays
+        a                owl:DatatypeProperty ;
+        rdfs:label       "Every day (s)"@en ;
+        rdfs:range       xsd:integer ;
+        skos:definition  "-- Definition --\r\nEvery day (s).\r\n-- Description --\r\nItem description."@en .
+
+cap-iacs-base:testName
+        a                owl:DatatypeProperty ;
+        rdfs:label       "Executable test case name"@en ;
+        rdfs:range       xsd:string ;
+        skos:definition  "--Name--\r\nTest name\r\n\r\n-- Definition --\r\nUnique (within the ETS) name of the executable test case."@en .
+
+cap-iacs-base:everyWeekWeeks
+        a                owl:DatatypeProperty ;
+        rdfs:label       "Every week (s)"@en ;
+        rdfs:range       xsd:integer ;
+        skos:definition  "-- Definition --\r\nEvery week (s).\r\n-- Description --\r\nItem description."@en .
+
+cap-iacs-base:NotificationPatternYearly
+        a                owl:Class ;
+        rdfs:label       "Notification pattern yearly"@en ;
+        rdfs:subClassOf  [ a                   owl:Restriction ;
+                           owl:maxCardinality  "1"^^xsd:nonNegativeInteger ;
+                           owl:onProperty      cap-iacs-base:bOfTheMonth
+                         ] ;
+        rdfs:subClassOf  [ a                   owl:Restriction ;
+                           owl:maxCardinality  "1"^^xsd:nonNegativeInteger ;
+                           owl:onProperty      cap-iacs-base:aOnMonth
+                         ] ;
+        rdfs:subClassOf  [ a                   owl:Restriction ;
+                           owl:maxCardinality  "1"^^xsd:nonNegativeInteger ;
+                           owl:onProperty      cap-iacs-base:aOnDay
+                         ] ;
+        rdfs:subClassOf  [ a                   owl:Restriction ;
+                           owl:maxCardinality  "1"^^xsd:nonNegativeInteger ;
+                           owl:onProperty      cap-iacs-base:bOnThe
+                         ] ;
+        rdfs:subClassOf  [ a                   owl:Restriction ;
+                           owl:maxCardinality  "1"^^xsd:nonNegativeInteger ;
+                           owl:onProperty      cap-iacs-base:bWeekday
+                         ] ;
+        rdfs:subClassOf  [ a                   owl:Restriction ;
+                           owl:maxCardinality  "1"^^xsd:nonNegativeInteger ;
+                           owl:onProperty      cap-iacs-base:rangeOfRecurrence
+                         ] ;
+        rdfs:subClassOf  [ a                owl:Restriction ;
+                           owl:cardinality  "1"^^xsd:nonNegativeInteger ;
+                           owl:onProperty   cap-iacs-base:everyYearYears
+                         ] ;
+        skos:definition  "-- Definition --\r\nNotification pattern yearly.\r\n-- Description --\r\nNotification pattern with yearly notification properties."@en .
+
+cap-iacs-base:correspondentDescription
+        a                owl:ObjectProperty ;
+        rdfs:label       "Correspondent description"@en ;
+        rdfs:range       foaf:Agent ;
+        skos:definition  "-- Definition --\r\nCorrespondent description.\r\n-- Description --\r\nIdentification of, and means of communication with, person(s) and organisations associated with the dataset."@en .
+
+cap-iacs-base:detailsOfAbstractTestCasesForConformanceReport
+        a           owl:ObjectProperty ;
+        rdfs:range  cap-iacs-base:ConformanceTestReport .
+
+cap-iacs-base:detailsOfConformanceClausesForConformanceRequirements
+        a           owl:ObjectProperty ;
+        rdfs:range  cap-iacs-base:ConformanceRequirement .
+
+cap-iacs-base:recurrenceYearly
+        a                owl:ObjectProperty ;
+        rdfs:label       "Recurrence yearly"@en ;
+        rdfs:range       cap-iacs-base:NotificationPatternYearly ;
+        skos:definition  "-- Definition --\r\nRecurrence yearly.\r\n-- Description --\r\nRecurrence of notification.\r\nNOTE. Only if recurrence = yearly."@en .
+
+cap-iacs-base:recurrenceDaily
+        a                owl:ObjectProperty ;
+        rdfs:label       "Recurrence daily"@en ;
+        rdfs:range       cap-iacs-base:NotificationPatternDaily ;
+        skos:definition  "-- Definition --\r\nRecurrence daily.\r\n-- Description --\r\nRecurrence of notification.\r\nNOTE. Only if recurrence = daily."@en .
+
+cap-iacs-base:rangeStartDate
+        a                owl:DatatypeProperty ;
+        rdfs:label       "Range start date"@en ;
+        rdfs:range       xsd:date ;
+        skos:definition  "-- Definition --\r\nRange start date.\r\n-- Description --\r\nItem description."@en .
+
+cap-iacs-base:iacsId  a  owl:DatatypeProperty ;
+        rdfs:label       "Universally unique identifier of object / feature"@en ;
+        rdfs:range       xsd:string ;
+        skos:definition  "--Name--\r\nIACS identifier\r\n\r\n-- Definition --\r\nUniversally unique identifier of object / feature.\r\n\r\n-- Description --\r\nAn object identifier (UUID as GlobalID) is a unique object identifier maintained by the responsible body. The identifier is an unique identifier of the object / feature within the IACS system, not an identifier of the real-world phenomenon. GlobalID is not GUID. \r\n\r\nNOTE 1. /* Value of iacsId shall be equal GlobalID (within CAP IACS). */\r\ninv: self.iacsId.Symbol='GlobalID'\r\n\r\nNOTE 2. In order to create iacsId it is possible to follow INSPIRE concept for the maintenance or URI."@en .
+
+cap-iacs-base:nearSiteId
+        a                owl:DatatypeProperty ;
+        rdfs:label       "Unique thematic ID of site to which distance are calculated"@en ;
+        rdfs:range       xsd:string ;
+        skos:definition  "-- Definition --\r\nUnique thematic ID of site to which distance are calculated.\r\n-- Description --\r\nNation-wide unique alphanumerical identification code of site within a holding. It is required in case of EFA implementation."@en .
+
+cap-iacs-base:TestVerdictValue
+        a                owl:Class ;
+        rdfs:label       "Test verdict value list"@en ;
+        rdfs:subClassOf  skos:Concept ;
+        skos:definition  "--Name--\r\nTest verdict value\r\n\r\n-- Definition --\r\nList of values describing test verdicts.\r\n\r\n-- Description --\r\nList of possible test verdict values according to ISO 19105:2000."@en .
+
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-base>
+        a                owl:Ontology ;
+        rdfs:label       "Base types"@en ;
+        owl:imports      <http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid> , foaf: , <http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-parcel> , <http://www.opengis.net/ont/geosparql> , <https://github.com/HajoRijgersberg/OM/raw/master/om-2.0.rdf> , <http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-beneficiery> ;
+        owl:versionIRI   "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-base/3.0" ;
+        owl:versionInfo  "3.0" ;
+        skos:definition  "-- Name --\r\nBase types \r\n\r\n-- Definition --\r\nApplication schema of the base types used in IACS.\r\n\r\n-- Description --\r\nSchema for base types and models used by multiple application schemas within the IACS model."@en ;
+        dct:creator [ schema:affiliation [ foaf:name "PSNC" ] ;
+                      rdfs:seeAlso <http://orcid.org/0000-0003-4289-4922> ;
+                      foaf:name "Raul Palma"
+                    ] ;
+        dct:title "JRC IACS - Base Types Ontology"@en ;
+        dct:description "Ontology of the base types used in IACS, generated from the transformation of the corresponding JRC application schema"@en ;
+        dct:source "JRC IACS application schema. https://doi.org/10.1016/j.landusepol.2016.05.023"@en ;
+        dct:rights "This ontology is distributed under Creative Commons Attribution 4.0 License - http://creativecommons.org/licenses/by/4.0"@en .
+
+cap-iacs-base:parameterValue
+        a                owl:DatatypeProperty ;
+        rdfs:label       "Parameter value"@en ;
+        rdfs:range       xsd:string ;
+        skos:definition  "--Name--\r\nParameter value\r\n\r\n-- Definition --\r\nValue of parameter(s) needed to perform the executable test.\r\n\r\n-- Description --\r\nExecutable test cases result from the instantiation of specific values for parameters in an abstract test case. Parameters are most frequently used in testing conformity with constraints. \r\n\r\nEXAMPLE. The width values of LF/EFA elements are parameters to be used in testing conceptual consistency through a constraint."@en .
+
+cap-iacs-base:aOnMonth
+        a                owl:ObjectProperty ;
+        rdfs:label       "On month"@en ;
+        rdfs:range       cap-iacs-base:MonthValue ;
+        skos:definition  "-- Definition --\r\nOn month.\r\n-- Description --\r\nNOTE. If option a are used, option b shall not be used."@en .
+
+cap-iacs-base:elementItroductionRequired
+        a                owl:DatatypeProperty ;
+        rdfs:label       "Introduction of new functionality"@en ;
+        rdfs:range       xsd:boolean ;
+        skos:definition  "--Name--\r\nElement introduction required\r\n\r\n-- Definition --\r\nIntroduction of a new element in the application schema is required for resolving the issue. \r\n\r\n-- Description --\r\nThe possibly affected elements are listed in the AffectedelementTypeValue code list."@en .
+
+cap-iacs-base:ixitDetailsForConformanceTestReport
+        a           owl:ObjectProperty ;
+        rdfs:range  cap-iacs-base:ConformanceTestReport .
+
+cap-iacs-base:document
+        a                owl:ObjectProperty ;
+        rdfs:label       "Template document"@en ;
+        rdfs:range       cap-iacs-base:SupplementaryDocument ;
+        skos:definition  "-- Definition --\r\nAny document used as template.\r\n-- Description --\r\nEXAMPLES: description, sketch, photo, document, additional measurement data, etc."@en .
+
+cap-iacs-base:SupportSchemeTypeValue
+        a                owl:Class ;
+        rdfs:label       "List of support schemas"@en ;
+        rdfs:subClassOf  skos:Concept ;
+        skos:definition  "Support scheme type value\r\n\r\nList of support schemes as defined in Regulation (EU) 1307/2013.\r\n\r\nNOTE\r\nPayment schema type list may be extended or shortened by MS."@en .
+
+cap-iacs-base:reference
+        a                owl:DatatypeProperty ;
+        rdfs:label       "Reference to specific parts of legislation or standards"@en ;
+        rdfs:range       xsd:string ;
+        skos:definition  "--Name--\r\nReference\r\n\r\n--Definition--\r\nReference to legislation or to standards.\r\n\r\n--Description--\r\n\r\nEXAMPLE. ISO191xx, Clause xx;"@en .
+
+cap-iacs-base:CauseOfAnomalyValue
+        a                owl:Class ;
+        rdfs:label       "Anomaly cause value list"@en ;
+        rdfs:subClassOf  skos:Concept ;
+        skos:definition  "--Name--\r\nCause of anomaly value\r\n\r\n-- Definition --\r\nCode list defining the values of the case of anomaly attribute.\r\n\r\n-- Description --\r\nList of possible anomaly causes used for documentation of an anomaly."@en .
+
+cap-iacs-base:testPurpose
+        a                owl:DatatypeProperty ;
+        rdfs:label       "Executable test case purpose"@en ;
+        rdfs:range       xsd:string ;
+        skos:definition  "--Name--\r\nTest purpose\r\n\r\n-- Definition --\r\nDescription of the purpose of the executable test.\r\n\r\n-- Description --\r\nIt should clarify what is being tested and why."@en .
+
+cap-iacs-base:physicalCapacity
+        a                owl:ObjectProperty ;
+        rdfs:label       "Capacity"@en ;
+        rdfs:range       owl:Class ;
+        skos:definition  "-- Definition --\r\nA quantification of an actual or potential ability to perform an activity, that typically does not change, does not change often, or does not change to a significant degree.\r\n-- Description --\r\nNOTE  Capacity could refer  to different concepts included on the legislation as “emission limits”, “capacity incineration”, “nominal capacity”, “objective estimation\"."@en .
+
+cap-iacs-base:abstractTestCaseVerdict
+        a                owl:ObjectProperty ;
+        rdfs:label       "Verdict assigned to abstract test case"@en ;
+        rdfs:range       cap-iacs-base:TestVerdictValue ;
+        skos:definition  "--Name--\r\nAbstract test case verdict\r\n\r\n--Definition--\r\nVerdict assigned to abstract test case.\r\n\r\n--Description--\r\nFirst part of report. Verdict assigned to an abstract test case."@en .
+
+cap-iacs-base:statusOfIssue
+        a                owl:ObjectProperty ;
+        rdfs:label       "Issue status"@en ;
+        rdfs:range       cap-iacs-base:StatusOfIssueValue ;
+        skos:definition  "--Name--\r\nStatus of issue\r\n\r\n-- Definition --\r\nStatus of the life -cycle of issue defined in terms of the related code list.\r\n\r\n-- Description --\r\nThe values of this attributes are taken from the StatusOfIssueValue code list. \r\n\r\nNOTE. This code list is shortened compared to the states listed in the State machine diagram."@en .
+
+cap-iacs-base:holdingStatus
+        a                owl:ObjectProperty ;
+        rdfs:label       "Holding status"@en ;
+        rdfs:range       owl:Class ;
+        skos:definition  "-- Definition --\r\nHolding status.\r\n-- Description --\r\nThe status of a facility with regards to its completion and use."@en .
+
+cap-iacs-base:NotificationPatternWeekly
+        a                owl:Class ;
+        rdfs:label       "Notification pattern weekly"@en ;
+        rdfs:subClassOf  [ a                owl:Restriction ;
+                           owl:cardinality  "1"^^xsd:nonNegativeInteger ;
+                           owl:onProperty   cap-iacs-base:tesday
+                         ] ;
+        rdfs:subClassOf  [ a                   owl:Restriction ;
+                           owl:maxCardinality  "1"^^xsd:nonNegativeInteger ;
+                           owl:onProperty      cap-iacs-base:rangeOfRecurrence
+                         ] ;
+        rdfs:subClassOf  [ a                owl:Restriction ;
+                           owl:cardinality  "1"^^xsd:nonNegativeInteger ;
+                           owl:onProperty   cap-iacs-base:monday
+                         ] ;
+        rdfs:subClassOf  [ a                owl:Restriction ;
+                           owl:cardinality  "1"^^xsd:nonNegativeInteger ;
+                           owl:onProperty   cap-iacs-base:thursday
+                         ] ;
+        rdfs:subClassOf  [ a                owl:Restriction ;
+                           owl:cardinality  "1"^^xsd:nonNegativeInteger ;
+                           owl:onProperty   cap-iacs-base:friday
+                         ] ;
+        rdfs:subClassOf  [ a                owl:Restriction ;
+                           owl:cardinality  "1"^^xsd:nonNegativeInteger ;
+                           owl:onProperty   cap-iacs-base:wednesday
+                         ] ;
+        rdfs:subClassOf  [ a                owl:Restriction ;
+                           owl:cardinality  "1"^^xsd:nonNegativeInteger ;
+                           owl:onProperty   cap-iacs-base:sunday
+                         ] ;
+        rdfs:subClassOf  [ a                owl:Restriction ;
+                           owl:cardinality  "1"^^xsd:nonNegativeInteger ;
+                           owl:onProperty   cap-iacs-base:everyWeekWeeks
+                         ] ;
+        rdfs:subClassOf  [ a                owl:Restriction ;
+                           owl:cardinality  "1"^^xsd:nonNegativeInteger ;
+                           owl:onProperty   cap-iacs-base:saturday
+                         ] ;
+        skos:definition  "-- Definition --\r\nNotification pattern weekly.\r\n-- Description --\r\nNotification pattern with weekly notification properties."@en .
+
+cap-iacs-base:detailsOfLegalPersonAsPartOfLegalPersons
+        a           owl:ObjectProperty ;
+        rdfs:range  cap-iacs-base:LegalPerson .
+
+cap-iacs-base:notificationPatternDescription
+        a                owl:DatatypeProperty ;
+        rdfs:label       "Notification pattern description"@en ;
+        rdfs:range       xsd:string ;
+        skos:definition  "-- Definition --\r\nNotification pattern description.\r\n-- Description --. \r\nNotification pattern description. Also legal basis of notification pattern can be described.\r\nEXAMPLE. ETS notification.\r\nEXAMPLE. Delegated act 1307 Art. 64 (c) (i)   by 15 December of each year, for the claim year concerned:the total number of farmers who have to apply at least one greening obligation referred to in Article 43(2) and (3) of Regulation (EU) No \r\n1307/2013 and the total number of hectares declared by such farmers."@en .
+
+cap-iacs-base:requirementStatement
+        a                owl:ObjectProperty ;
+        rdfs:label       "Conformance requirement statement"@en ;
+        rdfs:range       cap-iacs-base:ConformanceRequirementStatementValue ;
+        skos:definition  "--Name--\r\nRequirement statement\r\n\r\n--Definition--\r\nLogical unit expressing a distinct element of requirement.\r\n\r\n--Description--\r\nIn the CAP legislative framework, every logical unit (sentence) is potentially a requirement. This has been expressed in the requirement model."@en .
+
+cap-iacs-base:causeOfAnomaly
+        a                owl:ObjectProperty ;
+        rdfs:label       "Cause of anomaly"@en ;
+        rdfs:range       cap-iacs-base:CauseOfAnomalyValue ;
+        skos:definition  "--Name--\r\nCause of anomaly\r\n\r\n-- Definition --\r\nChange in the real world that causes a non-conformity.\r\n\r\n-- Description --\r\nThe values of this attribute have to be taken from the CauseOfAnomaly code list."@en .
+
+cap-iacs-base:conformanceClaim
+        a                owl:DatatypeProperty ;
+        rdfs:label       "Standard or legal act to which conformance are claimed."@en ;
+        rdfs:range       xsd:string ;
+        skos:definition  "--Name--\r\nConformance claim\r\n\r\n-- Definition --\r\nStandard or legal act to which conformance is claimed.\r\n\r\n-- Description --\r\nStandard or legal act (identifier) to which conformance is claimed."@en .
+
+cap-iacs-base:rangeEndDate
+        a                owl:DatatypeProperty ;
+        rdfs:label       "Do range have a range end date"@en ;
+        rdfs:range       xsd:boolean ;
+        skos:definition  "-- Definition --\r\nDo range have a range end date.\r\n-- Description --\r\nItem description."@en .
+
+cap-iacs-base:permission
+        a                owl:ObjectProperty ;
+        rdfs:label       "Permission"@en ;
+        rdfs:range       owl:Class ;
+        skos:definition  "-- Definition --\r\nOfficial Decision (formal consent) granting authorization to operate all or part of a Holding , subject to certain conditions which guarantee that the installation or parts of installations on the same site operated by the same operator complies with the requirements fixed by the law or standards. A permit may cover one or more functions and fix parameters of capacity. The term may be extended to other kind of certificates or documents of special relevance depending of the scope (e.g. ISO, EMAS, National Quality Standards, etc).\r\n-- Description --\r\nNOTE. This terms is referred in several legislative acts as “permit” , “authorization”, “development consent” or “exploration permit” among others.\r\nEXAMPLE.[written] decision by which the competent authority grants permission for collective EFA implementation."@en .
+
+cap-iacs-base:certificationBodyDescription
+        a                owl:DatatypeProperty ;
+        rdfs:label       "Certification body description"@en ;
+        rdfs:range       xsd:string ;
+        skos:definition  "--Name--\r\nCertification body description\r\n\r\n-- Description --\r\nA certification body establishes well defined criteria for issuing a certificate, and issues certificates based upon the test report produced by testing laboratories. A certification body should exist in each country which has a conformance testing service operating. Mutual recognition of test results is ensured by adoption of the same criteria by certification bodies worldwide. The function of the certification body may be performed by the accreditation body, in which case no separate certification body is necessary.\r\nIXIT typically provides the details on the organization and storage of concepts in the SUT as well as on the means\r\nof access to and modification of the SUT"@en .
+
+cap-iacs-base:naturalPersonBirthDate
+        a                owl:DatatypeProperty ;
+        rdfs:label       "Birth date of a natural person"@en ;
+        rdfs:range       xsd:date ;
+        skos:definition  "-- Definition --\r\nBirth date of the natural person.\r\n-- Description --\r\nBirth date of the natural person."@en .
+
+cap-iacs-base:supplementaryCitation
+        a                owl:ObjectProperty ;
+        rdfs:label       "Supplementary citation provided for resolution of issue"@en ;
+        rdfs:range       cap-iacs-base:SupplementaryDocumentCitation ;
+        skos:definition  "--Name--\r\nSupplementary citation\r\n\r\n- Definition --\r\nReference to the supplementary documentation provided for resolution of the issue."@en .
+
+cap-iacs-base:crossComplianceRule
+        a                owl:ObjectProperty ;
+        rdfs:label       "Rule of cross-compliance"@en ;
+        rdfs:range       cap-iacs-base:CrossComplianceRuleValue ;
+        skos:definition  "-- Definition --\r\nThe rules on cross-compliance.\r\n-- Description --\r\nThe rules on cross-compliance consist of the statutory management requirements under Union law and the standards for good agricultural and environmental condition of land established at national level."@en .
+
+cap-iacs-base:affectedElementType
+        a                owl:ObjectProperty ;
+        rdfs:label       "Type of affected model element"@en ;
+        rdfs:range       cap-iacs-base:AffectedElementTypeValue ;
+        skos:definition  "--Name--\r\nAffected element type\r\n\r\n-- Definition --\r\nList of types that can be affected by an issue.\r\n\r\n-- Description --\r\nThe types comprise application schema and any element of it as defined in the AffectedElelmentTypeValue code list."@en .
+
+cap-iacs-base:sutId  a   owl:DatatypeProperty ;
+        rdfs:label       "Unique ID of SUT"@en ;
+        rdfs:range       xsd:string ;
+        skos:definition  "--Name--\r\nSUT identifier\r\n\r\n--Definition--\r\nUnique thematic ID of the System Under Test (SUT) , to which the ICS belongs to.\r\n\r\n--Description--\r\nNation-wide unique alphanumerical thematic identification code of SUT (within IUT)."@en .
+
+cap-iacs-base:Notification
+        a                owl:Class ;
+        rdfs:label       "Notification"@en ;
+        rdfs:subClassOf  [ a                   owl:Restriction ;
+                           owl:maxCardinality  "1"^^xsd:nonNegativeInteger ;
+                           owl:onProperty      cap-iacs-base:sentDate
+                         ] ;
+        rdfs:subClassOf  [ a                owl:Restriction ;
+                           owl:cardinality  "1"^^xsd:nonNegativeInteger ;
+                           owl:onProperty   cap-iacs-base:pattern
+                         ] ;
+        rdfs:subClassOf  [ a                   owl:Restriction ;
+                           owl:minCardinality  "1"^^xsd:nonNegativeInteger ;
+                           owl:onProperty      cap-iacs-base:correspondent
+                         ] ;
+        rdfs:subClassOf  [ a                owl:Restriction ;
+                           owl:cardinality  "1"^^xsd:nonNegativeInteger ;
+                           owl:onProperty   cap-iacs-base:notificationDescription
+                         ] ;
+        skos:definition  "--Name--\r\nNotification\r\n\r\n-- Definition --\r\nNotification to the EC services required by the CAP regulations.\r\n\r\n-- Description --\r\nNotifications are used to communicate information between MS and EC."@en .
+
+cap-iacs-base:StatusOfAnomalyValue
+        a                owl:Class ;
+        rdfs:label       "Anomaly status value list"@en ;
+        rdfs:subClassOf  skos:Concept ;
+        skos:definition  "--Name--\r\nStatus of anomaly value\r\n\r\n-- Definition --\r\nCode list of possible anomaly status values.\r\n\r\n-- Description --\r\nList of possible anomaly status values used for documentation of anomaly in the information system.\r\n\r\nNOTE. Under information system IACS is understood. Most probably anomalies are registered in the Integrated control systems or in the quality assessment leaf of LPIS QA."@en .
+
+cap-iacs-base:NotificationPatternDaily
+        a                owl:Class ;
+        rdfs:label       "Notification pattern daily"@en ;
+        rdfs:subClassOf  [ a                   owl:Restriction ;
+                           owl:maxCardinality  "1"^^xsd:nonNegativeInteger ;
+                           owl:onProperty      cap-iacs-base:rangeOfRecurrence
+                         ] ;
+        rdfs:subClassOf  [ a                owl:Restriction ;
+                           owl:cardinality  "1"^^xsd:nonNegativeInteger ;
+                           owl:onProperty   cap-iacs-base:everyWeekday
+                         ] ;
+        rdfs:subClassOf  [ a                owl:Restriction ;
+                           owl:cardinality  "1"^^xsd:nonNegativeInteger ;
+                           owl:onProperty   cap-iacs-base:everyDayDays
+                         ] ;
+        skos:definition  "-- Definition --\r\nNotification pattern daily.\r\n-- Description --\r\nNotification pattern with daily notification properties."@en .
+
+cap-iacs-base:ConformanceRequirementStatementValue
+        a                owl:Class ;
+        rdfs:label       "List of conformance requirement statement values"@en ;
+        rdfs:subClassOf  skos:Concept ;
+        skos:definition  "--Name--\r\nConformance requirement statement value\r\n\r\n--Definition--\r\nList of conformance requirement statement values."@en .
+
+cap-iacs-base:activity
+        a                owl:ObjectProperty ;
+        rdfs:label       "Activity"@en ;
+        rdfs:range       owl:Class ;
+        skos:definition  "-- Definition --\r\nActivity on site.\r\n-- Description --\r\nThe whole area and all infrastructures included on it, covering the same or different  \"sites\", under the control  of an operator to perform  agricultural or aquaculture activities. The holding includes one specialisation of ActivityComplex, ie. Activity. the values of ActivityType are expressed conform the classification of the economic activity of the holding, according to the NACE rev. 2.0 coding. Holding is a thematic extension of the generic Class “Activity Complex” shared with other thematic areas describing entities related with Economical Activities (Legal Entity Class – Business).\r\nNOTE. Accessible at Eurostat repository from URL http://ec.europa.eu/eurostat/ramon/nomenclatures/index.cfm?TargetUrl=LST_CLS_DLD&StrNom=NACE_REV2&StrLanguageCode=EN&StrLayoutCode=HIERARCHIC. \r\nNOTE. At least one of the function attributes of the Holding spatial object shall be provided using the EconomicActivityNACEValue code list (for the activity attribute of the Function data type)."@en .
+
+cap-iacs-base:AffectedElementTypeValue
+        a                owl:Class ;
+        rdfs:label       "Affected element type value list"@en ;
+        rdfs:subClassOf  skos:Concept ;
+        skos:definition  "--Name--\r\nAffected element type value.\r\n\r\n-- Definition --\r\nApplication schema or its element that might be a subject of an issue.\r\n\r\n-- Description --\r\nList of possible affected elements that might be changed within the model."@en .
+
+cap-iacs-base:holdingSiteInCollectiveImplementation
+        a           owl:ObjectProperty ;
+        rdfs:range  cap-iacs-aid:CollectiveImplementation .
+
+cap-iacs-base:supplementaryDocumentation
+        a                owl:ObjectProperty ;
+        rdfs:label       "Supplementary documentation provided for resolution of issue"@en ;
+        rdfs:range       cap-iacs-base:SupplementaryDocument ;
+        skos:definition  "--Name--\r\nSupplementary documentation\r\n\r\n-- Definition --\r\nSupplementary documentation that supports resolving the issue.\r\n\r\n-- Description --\r\nSupplementary documents uploaded in the information system (LPIS)."@en .
+
+cap-iacs-base:varietalName
+        a                owl:ObjectProperty ;
+        rdfs:label       "Varietal name"@en ;
+        rdfs:range       cap-iacs-base:VarietalNameValue ;
+        skos:definition  "-- Definition --\r\nVarietal name.\r\n-- Description --\r\nInformation referring to the variety within a specie.\r\nVarieties (cultures of any of the different genera defined in the botanical classification of crops) may be provided by maintainers (MS) . \r\nCommon catalogue of varieties of agricultural plant species. Fifth supplement to the 29th complete edition (2011/C 168 A/01).\r\nCommon catalogue of varieties of vegetable species. 32nd complete edition (2013/C 312 A/01)."@en .
+
+cap-iacs-base:documentCitation
+        a                owl:ObjectProperty ;
+        rdfs:label       "Document citation"@en ;
+        rdfs:range       owl:Class ;
+        skos:definition  "--Name--\r\nDocument citation\r\n\r\n-- Definition --\r\nCitation to a resources providing additional information to understand primary data of the information system."@en .
+
+cap-iacs-base:data  a    owl:DatatypeProperty ;
+        rdfs:label       "Encoded data"@en ;
+        rdfs:range       xsd:string ;
+        skos:definition  "--Name--\r\nData\r\n\r\n-- Definition --\r\nEncoded external data stored in IACS.\r\n\r\n-- Description --\r\nStorage in various formats. \r\n\r\nNOTE. Generally - BLOB type. Implementation (SW  and/or RDBMS) specific."@en .
+
+cap-iacs-base:rangeEndBy
+        a                owl:DatatypeProperty ;
+        rdfs:label       "Range end by date"@en ;
+        rdfs:range       xsd:date ;
+        skos:definition  "-- Definition --\r\nRange end by date.\r\n-- Description --\r\nItem description.\r\nNOTE. If rangeEndDate=TRUE then rangeEndBy must be provided."@en .
+
+cap-iacs-base:bOfEveryMonthMonths
+        a                owl:DatatypeProperty ;
+        rdfs:label       "Of every every month (s)"@en ;
+        rdfs:range       xsd:integer ;
+        skos:definition  "-- Definition --\r\nEvery month (s).\r\n-- Description --\r\nItem description."@en .
+
+cap-iacs-base:format  a  owl:DatatypeProperty ;
+        rdfs:label       "Encoded data"@en ;
+        rdfs:range       xsd:string ;
+        skos:definition  "--Name--\r\nFormat\r\n\r\n-- Definition --\r\nEncoding specification of the data\r\n\r\n-- Description --\r\nFormat of encoded data. \r\n\r\nEXAMPLES: *.docx, *.xslx, *.png, *.pdf, *.txt, etc."@en .
+
+cap-iacs-base:metadata
+        a                owl:ObjectProperty ;
+        rdfs:label       "Feature-level metadata"@en ;
+        rdfs:range       cap-iacs-base:FeatureLevelMetadata ;
+        skos:definition  "-- Definition --\r\nFeature-level metadata.\r\n-- Description --\r\nFeature-level metadata is attributes on a feature and is used to store metadata about the feature."@en .
+
+cap-iacs-base:StatusValue
+        a                owl:Class ;
+        rdfs:label       "List of status values"@en ;
+        rdfs:subClassOf  skos:Concept ;
+        skos:definition  "-- Name--\r\nStatus value\r\n\r\n--Definition --\r\nCode list of possible status values.\r\n\r\n-- Description --\r\nList of status types based on state machine diagrams (Dynamic CAP model) for new and existing object features or schema. The values included in this code list are applicable both to introduction of a new object/feature or to processing a change request.\r\n\r\nNOTE. These are generic values applicable in IACS. These concepts have been reused in LPIS upgrade and LPIS update processes."@en .
+
+cap-iacs-base:executableTestCaseVerdict
+        a                owl:ObjectProperty ;
+        rdfs:label       "Verdict assigned to executable test case"@en ;
+        rdfs:range       cap-iacs-base:TestVerdictValue ;
+        skos:definition  "--Name--\r\nExecutable test case verdict\r\n\r\n--Definition--\r\nVerdict assigned to executable test case.\r\n\r\n--Description--\r\nSecond part of report. Verdict assigned to an executable test case."@en .
+
+cap-iacs-base:affectedElementId
+        a                owl:DatatypeProperty ;
+        rdfs:label       "Unique ID affected element"@en ;
+        rdfs:range       xsd:string ;
+        skos:definition  "--Name--\r\nAffected element identifier\r\n\r\n-- Definition --\r\nUnique ID affected element.\r\n\r\n-- Description --\r\nThe identifier may be of any type (name of the element, database ID, etc.) that  supports unique identification of the element.\r\n\r\nEXAMPLE. \r\n<incoming xmi:idref=\"EAID_4CA1870F_1938_4237_9B25_80D2CEE94129\"/>\r\n<outgoing xmi:idref=\"EAID_D2F12725_0118_4ca4_8E4D_FB9FD955C2CB\"/>"@en .
+
+cap-iacs-base:AbstractTestSuite
+        a                owl:Class ;
+        rdfs:label       "Abstract test suite"@en ;
+        rdfs:subClassOf  gsp:Feature ;
+        rdfs:subClassOf  [ a                owl:Restriction ;
+                           owl:cardinality  "1"^^xsd:nonNegativeInteger ;
+                           owl:onProperty   cap-iacs-base:testSuiteName
+                         ] ;
+        rdfs:subClassOf  [ a                owl:Restriction ;
+                           owl:cardinality  "1"^^xsd:nonNegativeInteger ;
+                           owl:onProperty   cap-iacs-base:testSuiteId
+                         ] ;
+        rdfs:subClassOf  [ a                   owl:Restriction ;
+                           owl:minCardinality  "1"^^xsd:nonNegativeInteger ;
+                           owl:onProperty      cap-iacs-base:detailsOfAbstractTestSuitesForConformanceRequirements
+                         ] ;
+        skos:definition  "-- Name--\r\nAbstract test suite\r\n\r\n-- Definition --\r\nAbstract test module specifying all the requirements to be satisfied for conformance [ISO19105:2000].\r\n\r\n-- Description --\r\nAbstract test suites are described (referred) in a conformance clause."@en .
+
+cap-iacs-base:aOfEveryMonthMonths
+        a                owl:DatatypeProperty ;
+        rdfs:label       "Of every every month (s)"@en ;
+        rdfs:range       xsd:integer ;
+        skos:definition  "-- Definition --\r\nEvery month (s).\r\n-- Description --\r\nItem description."@en .
+
+cap-iacs-base:thursday
+        a                owl:DatatypeProperty ;
+        rdfs:label       "Thursday"@en ;
+        rdfs:range       xsd:boolean ;
+        skos:definition  "-- Definition --\r\nThursday.\r\n-- Description --\r\nItem description."@en .
+
+cap-iacs-base:recipient
+        a                owl:DatatypeProperty ;
+        rdfs:label       "Correspondent is recepient"@en ;
+        rdfs:range       xsd:boolean ;
+        skos:definition  "-- Definition --\r\nRecipient.\r\n-- Description --\r\nCorrespondent as recipient."@en .
+
+cap-iacs-base:NotificationPattern
+        a                owl:Class ;
+        rdfs:label       "Notification pattern"@en ;
+        rdfs:subClassOf  [ a                   owl:Restriction ;
+                           owl:maxCardinality  "1"^^xsd:nonNegativeInteger ;
+                           owl:onProperty      cap-iacs-base:recurrenceYearly
+                         ] ;
+        rdfs:subClassOf  [ a                owl:Restriction ;
+                           owl:cardinality  "1"^^xsd:nonNegativeInteger ;
+                           owl:onProperty   cap-iacs-base:notificationPatternDescription
+                         ] ;
+        rdfs:subClassOf  [ a                owl:Restriction ;
+                           owl:cardinality  "1"^^xsd:nonNegativeInteger ;
+                           owl:onProperty   cap-iacs-base:recurrence
+                         ] ;
+        rdfs:subClassOf  [ a                owl:Restriction ;
+                           owl:cardinality  "1"^^xsd:nonNegativeInteger ;
+                           owl:onProperty   cap-iacs-base:notificationGroup
+                         ] ;
+        rdfs:subClassOf  [ a                owl:Restriction ;
+                           owl:cardinality  "1"^^xsd:nonNegativeInteger ;
+                           owl:onProperty   cap-iacs-base:startDate
+                         ] ;
+        rdfs:subClassOf  [ a                   owl:Restriction ;
+                           owl:maxCardinality  "1"^^xsd:nonNegativeInteger ;
+                           owl:onProperty      cap-iacs-base:recurrenceDaily
+                         ] ;
+        rdfs:subClassOf  [ a                   owl:Restriction ;
+                           owl:maxCardinality  "1"^^xsd:nonNegativeInteger ;
+                           owl:onProperty      cap-iacs-base:endDate
+                         ] ;
+        rdfs:subClassOf  [ a                   owl:Restriction ;
+                           owl:maxCardinality  "1"^^xsd:nonNegativeInteger ;
+                           owl:onProperty      cap-iacs-base:rangeOfRecurrence
+                         ] ;
+        rdfs:subClassOf  [ a                   owl:Restriction ;
+                           owl:maxCardinality  "1"^^xsd:nonNegativeInteger ;
+                           owl:onProperty      cap-iacs-base:recurrenceMonthly
+                         ] ;
+        rdfs:subClassOf  [ a                   owl:Restriction ;
+                           owl:maxCardinality  "1"^^xsd:nonNegativeInteger ;
+                           owl:onProperty      cap-iacs-base:recurrenceWeekly
+                         ] ;
+        skos:definition  "-- Definition --\r\nNotification pattern.\r\n-- Description --\r\nThe main placeholder of notification patterns."@en .
+
+cap-iacs-base:statusOfAnomaly
+        a                owl:ObjectProperty ;
+        rdfs:label       "Anomaly status"@en ;
+        rdfs:range       cap-iacs-base:StatusOfAnomalyValue ;
+        skos:definition  "--Name--\r\nStatus of anomaly \r\n\r\n-- Definition --\r\nStatus of the life -cycle of anomaly defined in terms of the related code list.\r\n\r\n-- Description --\r\nThe values of this attributes are taken from the StatusOfAnomaly code list. \r\n\r\nNOTE. This code list is a shortened one as compared to the states listed in the State machine diagram."@en .
+
+cap-iacs-base:LegalPerson
+        a                owl:Class ;
+        rdfs:label       "Legal person"@en ;
+        rdfs:subClassOf  gsp:Feature ;
+        rdfs:subClassOf  [ a                   owl:Restriction ;
+                           owl:maxCardinality  "1"^^xsd:nonNegativeInteger ;
+                           owl:onProperty      cap-iacs-base:detailsOfLegalPersonsAsPartOfLegalPerson
+                         ] ;
+        skos:definition  "-- Definition --\r\nLegal person.\r\n-- Description --\r\nNOTE. Third party class of a single system to record the identity of each legal person."@en .
+
+cap-iacs-base:wednesday
+        a                owl:DatatypeProperty ;
+        rdfs:label       "Wednesday"@en ;
+        rdfs:range       xsd:boolean ;
+        skos:definition  "-- Definition --\r\nWednesday.\r\n-- Description --\r\nItem description."@en .
+
+cap-iacs-base:ixitProforma
+        a                owl:ObjectProperty ;
+        rdfs:label       "IXIT pro forma"@en ;
+        rdfs:range       cap-iacs-base:SupplementaryDocument ;
+        skos:definition  "--Name--\r\nIXIT pro forma\r\n\r\n--Definition--\r\nQuestion/answer process initiated by the IXIT pro forma.\r\n\r\n--Description--\r\nIn order to test an implementation, the testing laboratory requires information relating to the IUT and the environment in which it will be tested. The client submitting the implementation for testing shall provide this information as an Implementation eXtra Information for Testing (IXIT)."@en .
+
+cap-iacs-base:SupplementaryDocument
+        a                owl:Class ;
+        rdfs:label       "Non structured evidence - documentation"@en ;
+        rdfs:subClassOf  [ a                owl:Restriction ;
+                           owl:cardinality  "1"^^xsd:nonNegativeInteger ;
+                           owl:onProperty   cap-iacs-base:form
+                         ] ;
+        rdfs:subClassOf  [ a                owl:Restriction ;
+                           owl:cardinality  "1"^^xsd:nonNegativeInteger ;
+                           owl:onProperty   cap-iacs-base:format
+                         ] ;
+        rdfs:subClassOf  [ a                owl:Restriction ;
+                           owl:cardinality  "1"^^xsd:nonNegativeInteger ;
+                           owl:onProperty   cap-iacs-base:data
+                         ] ;
+        skos:definition  "--Name--\r\nSupplementary document\r\n\r\n-- Definition --\r\nDescription of any record that supports the CAP processes.\r\n\r\n-- Description --\r\nData stored in RDBMS level (inline / not byReference).\r\n\r\nEXAMPLE: description, sketch, photo, document, additional measurement data, etc."@en .
+
+cap-iacs-base:nationalLevel
+        a                owl:ObjectProperty ;
+        rdfs:label       "Administrative hierarchy level"@en ;
+        rdfs:range       owl:Class ;
+        skos:definition  "-- Definition --\r\nAdministrative hierarchy level.\r\n-- Description --\r\nAdministrative hierarchy level value should be - 6thOrder."@en .
+
+cap-iacs-base:conformanceLog
+        a                owl:ObjectProperty ;
+        rdfs:label       "Results of the executable test cases, referencing to the conformance log"@en ;
+        rdfs:range       cap-iacs-base:SupplementaryDocument ;
+        skos:definition  "--Name--\r\nConformance log\r\n\r\n--Definition--\r\nResults of the executable test cases, referencing to the conformance log.\r\n\r\n--Description--\r\nSecond part of report. The second part shall document all of the results of the executable test cases, referencing to the conformance log which contains the observed test outcomes. It shall reference all necessary documents relating to the conduct of the conformance assessment process for that standard / legal document."@en .
+
+cap-iacs-base:aOnDay  a  owl:DatatypeProperty ;
+        rdfs:label       "On day"@en ;
+        rdfs:range       xsd:integer ;
+        skos:definition  "-- Definition --\r\nOn day.\r\n-- Description --\r\nNOTE. If option a are used, option b shall not be used."@en .
+
+cap-iacs-base:crossComplianceRuleDescription
+        a                owl:DatatypeProperty ;
+        rdfs:label       "Cross-compliance rule description"@en ;
+        rdfs:range       xsd:string ;
+        skos:definition  "-- Definition --\r\nCross-compliance rule description.\r\n-- Description --. \r\nDescriptions must be provided by Member States and communicated with EC via notifications."@en .
+
+cap-iacs-base:template
+        a                owl:ObjectProperty ;
+        rdfs:label       "Template used"@en ;
+        rdfs:range       cap-iacs-base:NotificationTemplate ;
+        skos:definition  "-- Definition --\r\nTemplate used in notification pattern.\r\n-- Description --\r\nNotification senders and receivers."@en .
+
+cap-iacs-base:iutId  a   owl:DatatypeProperty ;
+        rdfs:label       "Unique ID of implementation under test"@en ;
+        rdfs:range       xsd:string ;
+        skos:definition  "--Name--\r\nImplementation under test identifier\r\n\r\n-- Definition --\r\nUnique thematic ID of IUT for which executive test case is dedicated.\r\n\r\n-- Description --\r\nNation-wide unique alphanumerical thematic identification code of IUT. Executable test cases may be unique to each IUT."@en .
+
+cap-iacs-base:ics  a     owl:ObjectProperty ;
+        rdfs:label       "ICS"@en ;
+        rdfs:range       cap-iacs-base:SupplementaryDocument ;
+        skos:definition  "--Name--\r\nImplementation Conformance Statement\r\n\r\n--Definition--\r\nStatement of specification options that have been implemented. \r\n\r\n--Description--\r\nThe statement provides the testing laboratory with a better understanding of the SUT for use in the conformance assessment process and helps identify the boundaries of the domain testing."@en .
+
+cap-iacs-base:abstractTestModuleVerdict
+        a                owl:ObjectProperty ;
+        rdfs:label       "Verdict assigned to abstract test case"@en ;
+        rdfs:range       cap-iacs-base:TestVerdictValue ;
+        skos:definition  "--Name--\r\nAbstract test module verdict\r\n\r\n--Definition--\r\nVerdict assigned to abstract test module.\r\n\r\n--Description--\r\nFirst part of report. Verdict assigned to an abstract test module."@en .
+
+cap-iacs-base:ConformanceRequirementClassValue
+        a                owl:Class ;
+        rdfs:label       "List of conformance requirement class values"@en ;
+        rdfs:subClassOf  skos:Concept ;
+        skos:definition  "--Name--\r\nConformance requirement class value\r\n\r\n--Definition--\r\nList of conformance requirement class values."@en .
+
+cap-iacs-base:municipalityId
+        a                owl:DatatypeProperty ;
+        rdfs:label       "Unique thematic ID of the municipality"@en ;
+        rdfs:range       xsd:string ;
+        skos:definition  "-- Definition --\r\nUnique thematic ID of the municipality.\r\n-- Description --\r\nThematic identifier at national level, generally the full national code of the municipality. Holding is subject to collective EFA implementation if farmers of whom 80% of the holding are in the same municipality."@en .
+
+cap-iacs-base:implementationNotification
+        a                owl:ObjectProperty ;
+        rdfs:label       "Notification regarding implementation"@en ;
+        rdfs:range       cap-iacs-base:Notification ;
+        skos:definition  "--Name--\r\nImplementation notification\r\n\r\n--Definition--\r\nNotification to EC required by the regulations.\r\n\r\n-- Description --\r\nReport describing measures and timescale of actions to be taken by the authority responsible for the upgrade of IACS. Notification is required only when upgrade is subject to report."@en .
+
+cap-iacs-base:comment
+        a                owl:DatatypeProperty ;
+        rdfs:label       "Comment"@en ;
+        rdfs:range       xsd:string ;
+        skos:definition  "-- Name--\r\nComment\r\n\r\n-- Description --\r\nThe description of the object/feature. Text commonly used to display the extended description of particular feature. The description can be used in portrayal. Multilingual support (language substitution) can be also used."@en .
+
+cap-iacs-base:endLifespanVersion
+        a                owl:DatatypeProperty ;
+        rdfs:label       "End lifespan version"@en ;
+        rdfs:range       xsd:dateTime ;
+        skos:definition  "--Name --\r\nEnd life span version\r\n\r\n--Definition --\r\nSet of properties of an object/feature that describe the temporal characteristics of a version or the changes between versions [Adapted from INSPIRE Generic Conceptual Model]\r\n\r\n-- Description --\r\nDate and time at which this version of the feature was superseded or retired in the dataset."@en .
+
+cap-iacs-base:pattern
+        a                owl:ObjectProperty ;
+        rdfs:label       "Notification pattern"@en ;
+        rdfs:range       cap-iacs-base:NotificationPattern ;
+        skos:definition  "-- Definition --\r\nNotification pattern.\r\n-- Description --\r\nNotification pattern used to create notification."@en .
+
+cap-iacs-base:Anomaly
+        a                owl:Class ;
+        rdfs:label       "Anomaly"@en ;
+        rdfs:subClassOf  gsp:Feature ;
+        rdfs:subClassOf  [ a                   owl:Restriction ;
+                           owl:minCardinality  "1"^^xsd:nonNegativeInteger ;
+                           owl:onProperty      cap-iacs-base:referenceParcelId
+                         ] ;
+        rdfs:subClassOf  [ a                   owl:Restriction ;
+                           owl:minCardinality  "1"^^xsd:nonNegativeInteger ;
+                           owl:onProperty      cap-iacs-base:causeOfAnomaly
+                         ] ;
+        rdfs:subClassOf  [ a                owl:Restriction ;
+                           owl:cardinality  "1"^^xsd:nonNegativeInteger ;
+                           owl:onProperty   cap-iacs-base:statusOfAnomaly
+                         ] ;
+        rdfs:subClassOf  [ a                owl:Restriction ;
+                           owl:cardinality  "1"^^xsd:nonNegativeInteger ;
+                           owl:onProperty   cap-iacs-base:metadata
+                         ] ;
+        skos:definition  "--Name--\r\nAnomaly\r\n\r\n-- Definition --\r\nObserved non-conformity."@en .
+
+cap-iacs-base:rangeOfRecurrence
+        a                owl:ObjectProperty ;
+        rdfs:label       "Range of recurrence"@en ;
+        rdfs:range       cap-iacs-base:NotificationPatternRangeOfRecurrence ;
+        skos:definition  "-- Definition --\r\nRange of recurrence.\r\n-- Description --\r\nRecurrence of notification."@en .
+
+cap-iacs-base:repetitive
+        a                owl:DatatypeProperty ;
+        rdfs:label       "Notification is repetitive"@en ;
+        rdfs:range       xsd:boolean ;
+        skos:definition  "-- Definition --\r\nRepetitive notification.\r\n-- Description --\r\nRepetitive notification."@en .
+
+cap-iacs-base:ConformanceClause
+        a                owl:Class ;
+        rdfs:label       "Conformance clause"@en ;
+        rdfs:subClassOf  gsp:Feature ;
+        rdfs:subClassOf  [ a                owl:Restriction ;
+                           owl:cardinality  "1"^^xsd:nonNegativeInteger ;
+                           owl:onProperty   cap-iacs-base:conformanceClaim
+                         ] ;
+        rdfs:subClassOf  [ a                owl:Restriction ;
+                           owl:cardinality  "1"^^xsd:nonNegativeInteger ;
+                           owl:onProperty   cap-iacs-base:clauseDescription
+                         ] ;
+        rdfs:subClassOf  [ a                   owl:Restriction ;
+                           owl:minCardinality  "1"^^xsd:nonNegativeInteger ;
+                           owl:onProperty      cap-iacs-base:detailsOfConformanceClausesForConformanceRequirements
+                         ] ;
+        rdfs:subClassOf  [ a                owl:Restriction ;
+                           owl:cardinality  "1"^^xsd:nonNegativeInteger ;
+                           owl:onProperty   cap-iacs-base:metadata
+                         ] ;
+        skos:definition  "-- Name--\r\nConformance clause\r\n\r\n--Definition--\r\nClause defining what is necessary in order to meet the requirements of the standard [ISO19105:2000].\r\n\r\n-- Description --\r\nConformance clause serves as an entry point for conformance testing."@en .
+
+cap-iacs-base:Site  a    owl:Class ;
+        rdfs:label       "Site within holding"@en ;
+        rdfs:subClassOf  gsp:Feature ;
+        rdfs:subClassOf  [ a                   owl:Restriction ;
+                           owl:maxCardinality  "1"^^xsd:nonNegativeInteger ;
+                           owl:onProperty      cap-iacs-base:holdingSiteInCollectiveImplementation
+                         ] ;
+        rdfs:subClassOf  [ a                owl:Restriction ;
+                           owl:cardinality  "1"^^xsd:nonNegativeInteger ;
+                           owl:onProperty   cap-iacs-base:metadata
+                         ] ;
+        rdfs:subClassOf  [ a                   owl:Restriction ;
+                           owl:minCardinality  "1"^^xsd:nonNegativeInteger ;
+                           owl:onProperty      cap-iacs-base:activity
+                         ] ;
+        rdfs:subClassOf  [ a                   owl:Restriction ;
+                           owl:minCardinality  "1"^^xsd:nonNegativeInteger ;
+                           owl:onProperty      cap-iacs-base:nearSiteId
+                         ] ;
+        rdfs:subClassOf  [ a                   owl:Restriction ;
+                           owl:minCardinality  "1"^^xsd:nonNegativeInteger ;
+                           owl:onProperty      cap-iacs-base:nearSiteDistance
+                         ] ;
+        rdfs:subClassOf  [ a                   owl:Restriction ;
+                           owl:maxCardinality  "1"^^xsd:nonNegativeInteger ;
+                           owl:onProperty      cap-iacs-base:geometry
+                         ] ;
+        rdfs:subClassOf  [ a                owl:Restriction ;
+                           owl:cardinality  "1"^^xsd:nonNegativeInteger ;
+                           owl:onProperty   cap-iacs-base:siteArea
+                         ] ;
+        skos:definition  "-- Definition --\r\nSite within holding.\r\n-- Description --\r\nAll land  at a same or distinct geographic location under the management control of a holding covering activities, products and services. This includes all infrastructure, equipment and materials. The geometry of the site  must be a point or a surface. \r\nNOTE. The  site can be represented by a point or by a surface. The site can have only one geometry. Mulitpoint or multisurface is not allowed."@en .
+
+cap-iacs-base:validTo
+        a                owl:DatatypeProperty ;
+        rdfs:label       "Valid to date"@en ;
+        rdfs:range       xsd:dateTime ;
+        skos:definition  "--Name --\r\nValid to \r\n\r\n--Definition  --\r\nOfficial date and time at which the feature in situ (or legally) ceased (will cease) to be used."@en .
+
+cap-iacs-base:falsificationTest
+        a                owl:DatatypeProperty ;
+        rdfs:label       "Test case flaged as falsification test"@en ;
+        rdfs:range       xsd:boolean ;
+        skos:definition  "--Name--\r\nFalsification test\r\n\r\n-- Definition --\r\nIndication whether a falsification test was used in the testing process.\r\n\r\n-- Description --\r\nThe default testing method in LPISQA is verification test (prove that the SUT is correct). Falsification testing can only demonstrate non-conformance. Due to technical and economic reasons falsification testing can adopted as a test method for conformance testing."@en .
+
+cap-iacs-base:StatusOfIssueValue
+        a                owl:Class ;
+        rdfs:label       "Issue status value list"@en ;
+        rdfs:subClassOf  skos:Concept ;
+        skos:definition  "--Name--\r\nStatus of issue value\r\n\r\n-- Definition --\r\nCode list of possible issue status values.\r\n\r\n-- Description --\r\nList of possible issue status values used for documentation of anomaly in the LPIS."@en .
+
+cap-iacs-base:supplementaryDataAsAncillary
+        a                owl:DatatypeProperty ;
+        rdfs:label       "Supplementary data flaged as anciliary"@en ;
+        rdfs:range       xsd:boolean ;
+        skos:definition  "--Name--\r\nSupplementary data as ancillary\r\n\r\n-- Definition --\r\nProperty of those source data that do not fulfil the conformity requirements for visual inspection, but might still contribute to update processes.\r\n\r\n-- Description --\r\nTrue value is assigned to those non-conforming supplementary data that can be contribute to update process, but alone, do not allow complete processing.\r\nFalse value is assigned to those non-conforming supplementary data that cannot be used at all for update."@en .
+
+cap-iacs-base:referenceParcelId
+        a                owl:DatatypeProperty ;
+        rdfs:label       "Unique ID of reference parcel"@en ;
+        rdfs:range       xsd:string ;
+        skos:definition  "--Name--\r\nReference parcel ID\r\n\r\n-- Definition --\r\nUnique thematic ID of the affected reference parcel(s) where the anomaly has been observed.\r\n\r\n-- Description --\r\nThis parcel is the main subject of further investigation. With registering an anomaly the parcel concerned enters in another state of the life cycle (under evaluation).\r\n\r\nNOTE. An anomaly, for example erroneous boundary position, may affect more than the parcel that has been the subject of inspection. When this is the case, the neighbouring affected parcels need to get involved in the update process."@en .
+
+cap-iacs-base:includesAnimal
+        a                owl:ObjectProperty ;
+        rdfs:label       "Includes animal"@en ;
+        rdfs:range       owl:Class ;
+        skos:definition  "-- Definition --\r\nIncludes animal.\r\n-- Description --\r\nIncludes animal."@en .
+
+cap-iacs-base:ixitId  a  owl:DatatypeProperty ;
+        rdfs:label       "Unique thematic ID of IXIT provided by client"@en ;
+        rdfs:range       xsd:string ;
+        skos:definition  "--Name--\r\nIXIT identifier\r\n\r\n--Definition--\r\nUnique thematic ID of IXIT provided by client.\r\n\r\n-- Description --\r\nUnique thematic ID of IXIT provided by client (IXIT describing IUT)."@en .
+
+cap-iacs-base:citation
+        a                owl:ObjectProperty ;
+        rdfs:label       "Template document citation"@en ;
+        rdfs:range       cap-iacs-base:SupplementaryDocumentCitation ;
+        skos:definition  "-- Definition --\r\nTemplate document citation.\r\n-- Description --\r\nURL."@en .
+
+cap-iacs-base:CropItemCodeValue
+        a                owl:Class ;
+        rdfs:label       "List of crop items"@en ;
+        rdfs:subClassOf  skos:Concept ;
+        skos:definition  "-- Definition --\r\nList of crop items (aggregate of a species)\r\nEurostat Handbook for Annual Crop Statistics (Regulation 543/2009) (Revision 2013 – Presented in the WPM of the 12).\r\n-- Description --\r\nLand use of Agriculture Area in Use -L\r\nCereals and main crops - C"@en .
+
+cap-iacs-base:endDate
+        a                owl:DatatypeProperty ;
+        rdfs:label       "Notification end date"@en ;
+        rdfs:range       xsd:string ;
+        skos:definition  "-- Definition --\r\nNotification end date.\r\n-- Description --\r\nThe notification end date (valid)."@en .
+
+cap-iacs-base:detailsOfHoldingsForCrossCompliance
+        a           owl:ObjectProperty ;
+        rdfs:range  cap-iacs-aid:CrossCompliance .
+
+cap-iacs-base:ConformanceClassValue
+        a                owl:Class ;
+        rdfs:label       "List of conformance class values"@en ;
+        rdfs:subClassOf  skos:Concept ;
+        skos:definition  "--Name--\r\nConformance class value\r\n\r\n--Definition--\r\nList of conformance class values.\r\n\r\n--Description--\r\nAny product claiming conformance with one of these classes shall pass all requirements described in the corresponding abstract test suite.\r\n\r\nNOTE. Requirements of conformance classes may overlap in which case subparts of the abstract test suite may be shared between different conformance classes."@en .
+
+cap-iacs-base:legislation
+        a                owl:ObjectProperty ;
+        rdfs:label       "Legislation citation"@en ;
+        rdfs:range       owl:Class ;
+        skos:definition  "--Name--\r\nLegislation\r\n\r\n-- Definition --\r\nLegal reference of the cited document."@en .
+
+cap-iacs-base:ConformanceTestReport
+        a                owl:Class ;
+        rdfs:label       "Conformance test report"@en ;
+        rdfs:subClassOf  gsp:Feature ;
+        rdfs:subClassOf  [ a                owl:Restriction ;
+                           owl:cardinality  "1"^^xsd:nonNegativeInteger ;
+                           owl:onProperty   cap-iacs-base:conformanceLog
+                         ] ;
+        rdfs:subClassOf  [ a                   owl:Restriction ;
+                           owl:minCardinality  "1"^^xsd:nonNegativeInteger ;
+                           owl:onProperty      cap-iacs-base:executableTestCaseVerdict
+                         ] ;
+        rdfs:subClassOf  [ a                   owl:Restriction ;
+                           owl:minCardinality  "1"^^xsd:nonNegativeInteger ;
+                           owl:onProperty      cap-iacs-base:abstractTestModuleVerdict
+                         ] ;
+        rdfs:subClassOf  [ a                owl:Restriction ;
+                           owl:cardinality  "1"^^xsd:nonNegativeInteger ;
+                           owl:onProperty   cap-iacs-base:detailsOfConformanceReportForIxit
+                         ] ;
+        rdfs:subClassOf  [ a                owl:Restriction ;
+                           owl:cardinality  "1"^^xsd:nonNegativeInteger ;
+                           owl:onProperty   cap-iacs-base:metadata
+                         ] ;
+        skos:definition  "-- Name--\r\nConformance test report\r\n\r\n--Definition --\r\nSummary of the conformance to the standard as well as all the details of the testing that supports the given overall summary [ISO19105].\r\n\r\n-- Description --\r\nThe results of conformance testing shall be documented in a conformance test report. This report shall be in two parts: one summary and one with detailed information. A pro forma shall be used to produce each conformance test report. The first part shall be an overall summary of the conformance status of the IUT. It shall provide an overview of the verdicts that are assigned to the test cases executed in the conformance assessment process. The second part shall document all of the results of the executable test cases, referencing to the conformance log which contains the observed test outcomes. It shall reference all necessary documents relating to the conduct of the conformance assessment process for that standard."@en .
+
+cap-iacs-base:congruencyTest
+        a                owl:ObjectProperty ;
+        rdfs:label       "The result of congruency test"@en ;
+        rdfs:range       cap-iacs-base:ConformanceStatementValue ;
+        skos:definition  "--Name--\r\nCongruency test\r\n\r\n-- Definition --\r\nConformance statement in the result of the congruency test.\r\n\r\n-- Description --\r\n\"Congruent\" refers to a situation where two polygons (parcel representations) have the same shape and dimension. This condition is fulfilled when\r\n- the position of the two geometric representations coincide, or\r\n- there is no coincidence between the geometric representations, but the shape and the dimension is the same. In fact, in this cases there is a shift between the two geometries."@en .
+
+cap-iacs-base:detailsOfAbstractTestCaseForExecutableTestCases
+        a           owl:ObjectProperty ;
+        rdfs:range  cap-iacs-base:ExecutableTestCase .
+
+cap-iacs-base:conformanceRequirementsForAbstractTestSuites
+        a           owl:ObjectProperty ;
+        rdfs:range  cap-iacs-base:AbstractTestSuite .
+
+cap-iacs-base:notificationDescription
+        a                owl:DatatypeProperty ;
+        rdfs:label       "Notification description"@en ;
+        rdfs:range       xsd:string ;
+        skos:definition  "--Name--\r\nNotification description\r\n\r\n-- Definition --\r\nName and other content of the notification\r\n\r\n-- Description --\r\nIf the notification is related with particular record within IACS - then alphanumerical identification code (s) of particular object should be included in notification."@en .
+
+cap-iacs-base:rangeEndAfterOccurencies
+        a                owl:DatatypeProperty ;
+        rdfs:label       "Range end after occurrencies"@en ;
+        rdfs:range       xsd:integer ;
+        skos:definition  "-- Definition --\r\nRange end after occurrences.\r\n-- Description --\r\nItem description."@en .
+
+cap-iacs-base:holdingDetails
+        a           owl:ObjectProperty ;
+        rdfs:range  cap-iacs-beneficiery:Farmer .
+
+cap-iacs-base:repetitiveSentDate
+        a                owl:DatatypeProperty ;
+        rdfs:label       "repetitive notification sent date"@en ;
+        rdfs:range       xsd:date ;
+        skos:definition  "-- Definition --\r\nRepetitive notification sent date.\r\n-- Description --\r\nRepetitive notification sent date."@en .
+
+cap-iacs-base:nonStructuredEvidenceDocument
+        a                owl:ObjectProperty ;
+        rdfs:label       "Non-structured evidence - document"@en ;
+        rdfs:range       cap-iacs-base:SupplementaryDocument ;
+        skos:definition  "-- Definition --\r\nAny record that describes the cross-compliance rule.\r\n-- Description --\r\nEXAMPLES: description, sketch, photo, document, additional data, etc."@en .
+
+cap-iacs-base:testingType
+        a                owl:ObjectProperty ;
+        rdfs:label       "Testing type"@en ;
+        rdfs:range       cap-iacs-base:TestingTypeValue ;
+        skos:definition  "--Name--\r\nTesting type value\r\n\r\n-- Definition --\r\nIndication how the executable test case is being performed.\r\n\r\n-- Description --\r\nThe test types can be classified as automated and manual."@en .
+
+cap-iacs-base:geometry
+        a                owl:ObjectProperty ;
+        rdfs:label       "Geometry of site"@en ;
+        rdfs:range       gsp:Geometry ;
+        skos:definition  "-- Definition --\r\nGeometry of site. The geometry defining the extent or position of the site.\r\n-- Description --\r\nRepresentation of the geographical dimension/position of the site within a holding. The geometry must be a GM_surface, when it includes installations, plots or buildings with a polygon type geometry. In case the site only includes single object  with a point type geometry, the site can have a GM_point geometry.\r\nNOTE. In case of GM_Point geometry - clementini point should be used."@en .
+
+cap-iacs-base:bOfTheMonth
+        a                owl:ObjectProperty ;
+        rdfs:label       "Of the month"@en ;
+        rdfs:range       cap-iacs-base:MonthValue ;
+        skos:definition  "-- Definition --\r\nOf the month.\r\n-- Description --\r\nNOTE. If option a are used, option b shall not be used."@en .
+
+cap-iacs-base:controlBoardDescription
+        a                owl:DatatypeProperty ;
+        rdfs:label       "Control board description"@en ;
+        rdfs:range       xsd:string ;
+        skos:definition  "--Name--\r\nControl body description\r\n\r\n--Description--\r\nName of the competent authority or technical entity in charge controlling the testing laboratory."@en .
+
+cap-iacs-base:bOnThe  a  owl:ObjectProperty ;
+        rdfs:label       "The"@en ;
+        rdfs:range       cap-iacs-base:OrdinalNumberValue ;
+        skos:definition  "-- Definition --\r\nThe.\r\n-- Description --\r\nNOTE. If option a are used, option b shall not be used."@en .
+
+cap-iacs-base:conformanceLevel
+        a                owl:ObjectProperty ;
+        rdfs:label       "Conformance class"@en ;
+        rdfs:range       cap-iacs-base:ConformanceLevelValue ;
+        skos:definition  "--Name--\r\nConformance level\r\n\r\n-- Definition --\r\nA conformance level is a special kind of conformance class in which the requirements of a higher level contain all\r\nthe requirements of the lower levels [ISO 19105:2000]\r\n\r\n-- Description --\r\nIn LPISQA, two conformance classes that are at the same time conformance levels have been introduced. To be conforming to Class 2 all the requirements of Class 1 and Class two have to be fulfilled."@en .
+
+cap-iacs-base:Holding
+        a                owl:Class ;
+        rdfs:label       "Holding"@en ;
+        rdfs:subClassOf  gsp:Feature ;
+        rdfs:subClassOf  [ a                   owl:Restriction ;
+                           owl:maxCardinality  "1"^^xsd:nonNegativeInteger ;
+                           owl:onProperty      cap-iacs-base:holdingStatus
+                         ] ;
+        rdfs:subClassOf  [ a                owl:Restriction ;
+                           owl:cardinality  "1"^^xsd:nonNegativeInteger ;
+                           owl:onProperty   cap-iacs-base:municipalityId
+                         ] ;
+        rdfs:subClassOf  [ a                owl:Restriction ;
+                           owl:cardinality  "1"^^xsd:nonNegativeInteger ;
+                           owl:onProperty   cap-iacs-base:holdingDetails
+                         ] ;
+        rdfs:subClassOf  [ a                   owl:Restriction ;
+                           owl:maxCardinality  "1"^^xsd:nonNegativeInteger ;
+                           owl:onProperty      cap-iacs-base:holdingDescription
+                         ] ;
+        rdfs:subClassOf  [ a                owl:Restriction ;
+                           owl:cardinality  "1"^^xsd:nonNegativeInteger ;
+                           owl:onProperty   cap-iacs-base:nationalLevel
+                         ] ;
+        rdfs:subClassOf  [ a                owl:Restriction ;
+                           owl:cardinality  "1"^^xsd:nonNegativeInteger ;
+                           owl:onProperty   cap-iacs-base:holdingArea
+                         ] ;
+        rdfs:subClassOf  [ a                owl:Restriction ;
+                           owl:cardinality  "1"^^xsd:nonNegativeInteger ;
+                           owl:onProperty   cap-iacs-base:subjectToCollectiveEfaImplementation
+                         ] ;
+        skos:definition  "-- Definition --\r\nHolding\r\n-- Description --\r\nThe holding is whole area and all infrastructures included on it, covering the same or different  \"sites\", under the control  of an operator to perform agricultural or aquaculture activities. \r\nThe units (sites within holding) used for agricultural activities and managed by a farmer situated within the territory of the same Member State. 1307/2013 4(1)(b). Where an agricultural area of a holding is also used for non-agricultural activities, that area shall be considered to be used predominantly for agricultural activities provided that those agricultural activities can be exercised without being significantly hampered by the intensity, nature, duration and timing of the non-agricultural activities 1307/2013 32(3)(a). The total area of the holding consists of the utilised agricultural area (arable land, permanent grassland, permanent crops and kitchen gardens) and other land (unutilised agricultural land, wooded area and other land)."@en .
+
+cap-iacs-base:icsProforma
+        a                owl:ObjectProperty ;
+        rdfs:label       "ICS pro forma"@en ;
+        rdfs:range       cap-iacs-base:SupplementaryDocument ;
+        skos:definition  "--Name--\r\nICS pro forma\r\n\r\n--Definition--\r\nA questionnaire used as a framework to document SUT capabilities necessary to undertake conformance testing.  \r\n\r\n-Description--\r\n-The ICS may be generated using ICS pro forma. An ICS pro forma may be provided by the testing laboratory."@en .
+
+cap-iacs-base:TestingTypeValue
+        a                owl:Class ;
+        rdfs:label       "Testing type value list"@en ;
+        rdfs:subClassOf  skos:Concept ;
+        skos:definition  "--Name--\r\nTesting type value\r\n\r\n-- Definition --\r\nTesting type value list.\r\n\r\n-- Description --\r\nIn manual testing, the specified requirements are verified by a trained operator who follows the steps described in the test method.\r\nIn automated testing, specific software is used that operates on the computer readable schema of the eligibility profile."@en .
+
+cap-iacs-base:sender  a  owl:DatatypeProperty ;
+        rdfs:label       "Correspondent is sender"@en ;
+        rdfs:range       xsd:boolean ;
+        skos:definition  "-- Definition --\r\nSender.\r\n-- Description --\r\nCorrespondent as sender."@en .
+
+cap-iacs-base:ImplementationExtraInformationForTesting
+        a                owl:Class ;
+        rdfs:label       "Implementation eXtra Information for testing"@en ;
+        rdfs:subClassOf  gsp:Feature ;
+        rdfs:subClassOf  [ a                   owl:Restriction ;
+                           owl:maxCardinality  "1"^^xsd:nonNegativeInteger ;
+                           owl:onProperty      cap-iacs-base:certificationBodyDescription
+                         ] ;
+        rdfs:subClassOf  [ a                   owl:Restriction ;
+                           owl:maxCardinality  "1"^^xsd:nonNegativeInteger ;
+                           owl:onProperty      cap-iacs-base:ixitProforma
+                         ] ;
+        rdfs:subClassOf  [ a                owl:Restriction ;
+                           owl:cardinality  "1"^^xsd:nonNegativeInteger ;
+                           owl:onProperty   cap-iacs-base:ixit
+                         ] ;
+        rdfs:subClassOf  [ a                owl:Restriction ;
+                           owl:cardinality  "1"^^xsd:nonNegativeInteger ;
+                           owl:onProperty   cap-iacs-base:ixitId
+                         ] ;
+        rdfs:subClassOf  [ a                owl:Restriction ;
+                           owl:cardinality  "1"^^xsd:nonNegativeInteger ;
+                           owl:onProperty   cap-iacs-base:accreditationBodyDescription
+                         ] ;
+        rdfs:subClassOf  [ a                owl:Restriction ;
+                           owl:cardinality  "1"^^xsd:nonNegativeInteger ;
+                           owl:onProperty   cap-iacs-base:controlBoardDescription
+                         ] ;
+        rdfs:subClassOf  [ a                owl:Restriction ;
+                           owl:cardinality  "1"^^xsd:nonNegativeInteger ;
+                           owl:onProperty   cap-iacs-base:ixitDetailsForConformanceTestReport
+                         ] ;
+        rdfs:subClassOf  [ a                   owl:Restriction ;
+                           owl:minCardinality  "1"^^xsd:nonNegativeInteger ;
+                           owl:onProperty      cap-iacs-base:ixitDetailsForIcs
+                         ] ;
+        rdfs:subClassOf  [ a                owl:Restriction ;
+                           owl:cardinality  "1"^^xsd:nonNegativeInteger ;
+                           owl:onProperty   cap-iacs-base:iutId
+                         ] ;
+        skos:definition  "-- Definition --\r\nImplementation eXtra Information for testing.\r\n\r\n-- Description --\r\nStatement containing all of the information related to the IUT and its corresponding SUT which will enable the testing laboratory to run an appropriate test suite against that IUT (ISO19105). IXIT typically provides the details on the organization and storage of concepts in the SUT as well as on the means of access to and modification of the SUT.\r\nNOTE. IXIT gives information to testing laboratory on how to perform the testing."@en .
+
+cap-iacs-base:cropItemCode
+        a                owl:ObjectProperty ;
+        rdfs:label       "Crop item code"@en ;
+        rdfs:range       cap-iacs-base:CropItemCodeValue ;
+        skos:definition  "-- Definition --\r\nCrop item code.\r\n-- Description --\r\n\"Crop item code\" is a \"agregate code\" when mapped with farmStructureSurveyNumber. \r\nEurostat Handbook for Annual Crop Statistics (Regulation 543/2009) (Revision 2013 – Presented in the WPM of the 12)."@en .
+
+cap-iacs-base:tesday  a  owl:DatatypeProperty ;
+        rdfs:label       "Tuesday"@en ;
+        rdfs:range       xsd:boolean ;
+        skos:definition  "-- Definition --\r\nTuesday.\r\n-- Description --\r\nItem description."@en .
+
+cap-iacs-base:accreditationBodyDescription
+        a                owl:DatatypeProperty ;
+        rdfs:label       "Accreditation body description"@en ;
+        rdfs:range       xsd:string ;
+        skos:definition  "--Name--\r\nAccreditation body description\r\n\r\n--Description--\r\nAn accreditation body performs a formal process which ensures that a testing laboratory is competent to carry out specific types of tests. It covers the recognition of both the technical competence and the impartiality of a testing laboratory. Only the testing laboratories that are accredited are allowed to perform formal conformance testing."@en .
+
+cap-iacs-base:testSuiteName
+        a                owl:DatatypeProperty ;
+        rdfs:label       "Name of abstract test suite"@en ;
+        rdfs:range       xsd:string ;
+        skos:definition  "--Name--\r\nTest suite name\r\n\r\n-- Definition --\r\nName of abstract test suite."@en .
+
+cap-iacs-base:referenceAts
+        a                owl:DatatypeProperty ;
+        rdfs:label       "Reference to specific parts of abstract test suite"@en ;
+        rdfs:range       xsd:string ;
+        skos:definition  "--Name--\r\nReference ATS\r\n\r\n-- Definition --\r\nReference to the abstract test suite that constitutes the basis of the executable tests.\r\n\r\n-- Description --\r\nIt might be the name, URI, or URL to the parent ATS."@en .
+
+cap-iacs-base:validFrom
+        a                owl:DatatypeProperty ;
+        rdfs:label       "Valid from date"@en ;
+        rdfs:range       xsd:dateTime ;
+        skos:definition  "--Name--\r\nValid from\r\n\r\n-- Definition --\r\nOfficial date and time when the object / feature has been (will be) in situ or legally established."@en .
+
+cap-iacs-base:testingDetailsForMtsItemUnderInspection
+        a           owl:ObjectProperty ;
+        rdfs:range  cap-iacs-parcel:MtsItemUnderInspection .
+
+cap-iacs-base:bThe  a    owl:ObjectProperty ;
+        rdfs:label       "The"@en ;
+        rdfs:range       cap-iacs-base:OrdinalNumberValue ;
+        skos:definition  "-- Definition --\r\nThe.\r\n-- Description --\r\nNOTE. If option a are used, option b shall not be used."@en .
+
+cap-iacs-base:holdingArea
+        a                owl:DatatypeProperty ;
+        rdfs:label       "Holding area"@en ;
+        rdfs:range       om:Measure ;
+        skos:definition  "-- Definition --\r\nHolding area.\r\n-- Description --\r\nRegistered area value of the holding. \r\nEXAMPLE. Sum of all areas of sites within holding."@en .
+
+cap-iacs-base:SupplementaryDocumentCitation
+        a                owl:Class ;
+        rdfs:label       "Non structured evidence - citation"@en ;
+        rdfs:subClassOf  [ a                   owl:Restriction ;
+                           owl:maxCardinality  "1"^^xsd:nonNegativeInteger ;
+                           owl:onProperty      cap-iacs-base:legislation
+                         ] ;
+        rdfs:subClassOf  [ a                owl:Restriction ;
+                           owl:cardinality  "1"^^xsd:nonNegativeInteger ;
+                           owl:onProperty   cap-iacs-base:documentCitation
+                         ] ;
+        skos:definition  "--Name--\r\nDocument citation\r\n\r\n-- Definition --\r\nCitation of any document that supports the CAP processes.\r\n\r\n-- Description --\r\nCitation for unambiguous referencing to a document.\r\n\r\nEXAMPLE: URN, URL"@en .
+
+cap-iacs-base:testType
+        a                owl:ObjectProperty ;
+        rdfs:label       "Test type"@en ;
+        rdfs:range       cap-iacs-base:TestTypeValue ;
+        skos:definition  "--Name--\r\nTest type value\r\n\r\n-- Definition --\r\nIndication of the test type according to ISO 19105:2000.\r\n\r\n-- Description --\r\nThe test types  can be classified as basic and capability tests."@en .
+
+cap-iacs-base:UpgradeIssue
+        a                owl:Class ;
+        rdfs:label       "Upgrade issue"@en ;
+        rdfs:subClassOf  gsp:Feature ;
+        rdfs:subClassOf  [ a                owl:Restriction ;
+                           owl:cardinality  "1"^^xsd:nonNegativeInteger ;
+                           owl:onProperty   cap-iacs-base:elementDepreciationRequired
+                         ] ;
+        rdfs:subClassOf  [ a                owl:Restriction ;
+                           owl:cardinality  "1"^^xsd:nonNegativeInteger ;
+                           owl:onProperty   cap-iacs-base:elementItroductionRequired
+                         ] ;
+        rdfs:subClassOf  [ a                   owl:Restriction ;
+                           owl:minCardinality  "1"^^xsd:nonNegativeInteger ;
+                           owl:onProperty      cap-iacs-base:resultMts
+                         ] ;
+        rdfs:subClassOf  [ a                owl:Restriction ;
+                           owl:cardinality  "1"^^xsd:nonNegativeInteger ;
+                           owl:onProperty   cap-iacs-base:metadata
+                         ] ;
+        rdfs:subClassOf  [ a                owl:Restriction ;
+                           owl:cardinality  "1"^^xsd:nonNegativeInteger ;
+                           owl:onProperty   cap-iacs-base:statusOfIssue
+                         ] ;
+        rdfs:subClassOf  [ a                   owl:Restriction ;
+                           owl:minCardinality  "1"^^xsd:nonNegativeInteger ;
+                           owl:onProperty      cap-iacs-base:affectedElementId
+                         ] ;
+        rdfs:subClassOf  [ a                   owl:Restriction ;
+                           owl:minCardinality  "1"^^xsd:nonNegativeInteger ;
+                           owl:onProperty      cap-iacs-base:affectedElementType
+                         ] ;
+        skos:definition  "--Name--\r\nUpgrade issue\r\n\r\n-- Definition --\r\nChange request targeted at the conceptual model.\r\n\r\n-- Description --\r\nThe change request may target the application schema of the LCM or the eligibility profile of the MS/Region."@en .
