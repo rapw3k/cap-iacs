@@ -12,7 +12,7 @@
 <http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-animal>
         a                owl:Ontology ;
         rdfs:label       "System for identification and registration of animals"@en ;
-        owl:versionIRI   "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-animal/3.0" ;
+        owl:versionIRI   <http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-animal/3.0> ;
         owl:versionInfo  "3.0" ;
         skos:definition  "-- Name --\r\nSystem for identification and registration of animals\r\n\r\n-- Definition --\r\nThis package is a placeholder for the Application schema of System for identification and registration of animals.\r\n\r\n-- Description --\r\nThe contents of an «ApplicationSchema» package exported as a GML Application Schema file."@en ;
         dct:creator [ schema:affiliation [ foaf:name "PSNC" ] ;

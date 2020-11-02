@@ -1562,7 +1562,7 @@ cap-iacs-parcel:AgriculturalAreaTypeValue
         								 <https://github.com/HajoRijgersberg/OM/raw/master/om-2.0.rdf> , 
         								 <https://raw.githubusercontent.com/rapw3k/cap-iacs/main/cap-iacs-aid.ttl> , 
         								 <http://www.opengis.net/ont/geosparql> ;
-        owl:versionIRI   "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-parcel/3.0" ;
+        owl:versionIRI   <http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-parcel/3.0> ;
         owl:versionInfo  "3.0" ;
         skos:definition  "-- Name --\r\nIdentification system for agricultural parcels\r\n\r\n-- Definition --\r\nApplication schema of Identification system for agricultural parcels.\r\n\r\n-- Description --\r\nThe contents of an «ApplicationSchema» package exported as a GML Application Schema file.\r\n\r\nNOTE. This subsystem of IACS is commonly named as Land PArcel Identification System. (LPIS)."@en ;
         dct:creator [ schema:affiliation [ foaf:name "PSNC" ] ;

@@ -90,7 +90,7 @@ cap-iacs-beneficiery:farmerDetailsForOnTheSpotChecks
         								 <https://raw.githubusercontent.com/rapw3k/cap-iacs/main/cap-iacs-base.ttl> , 
         								 #foaf: , 
         								 <http://www.opengis.net/ont/geosparql> ;
-        owl:versionIRI   "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-beneficiery/3.0" ;
+        owl:versionIRI   <http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-beneficiery/3.0> ;
         owl:versionInfo  "3.0" ;
         skos:definition  "-- Name --\r\nSystem to record the identity of each beneficiary\r\n\r\n-- Definition --\r\nPlaceholder package for the Application schema for System to record the identity of each beneficiary.\r\n\r\n-- Description --\r\nThe contents of an «ApplicationSchema» package exported as a GML Application Schema file."@en ;
         dct:creator [ schema:affiliation [ foaf:name "PSNC" ] ;

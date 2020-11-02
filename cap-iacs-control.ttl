@@ -364,7 +364,7 @@ cap-iacs-control:ControlRateGroupRuralDevelopmentMeasureValue
         								 <https://raw.githubusercontent.com/rapw3k/cap-iacs/main/cap-iacs-aid.ttl> , 
         								 <https://raw.githubusercontent.com/rapw3k/cap-iacs/main/cap-iacs-base.ttl> , 
         								 <http://www.opengis.net/ont/geosparql> ;
-        owl:versionIRI   "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/3.0" ;
+        owl:versionIRI   <http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/3.0> ;
         owl:versionInfo  "3.0" ;
         skos:definition  "-- Name --\r\nIntegrated control system\r\n\r\n-- Definition --\r\nThis package is a placeholder for the Application schema of Integrated control system.\r\n\r\n-- Description --\r\nThe contents of an «ApplicationSchema» package exported as a GML Application Schema file."@en ;
         dct:creator [ schema:affiliation [ foaf:name "PSNC" ] ;

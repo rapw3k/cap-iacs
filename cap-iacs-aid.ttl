@@ -594,7 +594,7 @@ cap-iacs-aid:AgriculturalEquivalentPracticeSubtypeValue
         								 <https://raw.githubusercontent.com/rapw3k/cap-iacs/main/cap-iacs-beneficiery.ttl> , 
         								 <https://raw.githubusercontent.com/rapw3k/cap-iacs/main/cap-iacs-parcel.ttl> , 
         								 <https://raw.githubusercontent.com/rapw3k/cap-iacs/main/cap-iacs-base.ttl> ;
-        owl:versionIRI   "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid/3.0" ;
+        owl:versionIRI   <http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid/3.0> ;
         owl:versionInfo  "3.0" ;
         skos:definition  "-- Name --\r\nAid applications and payment claims\r\n\r\n-- Definition --\r\nThis is a placeholder.\r\n\r\n-- Description --\r\nAid applications and payment claims system application schema.The contents of an «ApplicationSchema» package exported as a GML Application Schema file."@en ;
         dct:creator [ schema:affiliation [ foaf:name "PSNC" ] ;

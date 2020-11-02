@@ -577,7 +577,7 @@ cap-iacs-basecode:TestVerdictValue
 <http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-base/code>
         a       owl:Ontology ;
         rdfs:label       "Base types code lists"@en ;
-        owl:versionIRI   "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-base/code/3.0" ;
+        owl:versionIRI   <http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-base/code/3.0> ;
         owl:versionInfo  "3.0" ;
         dct:creator [ schema:affiliation [ foaf:name "PSNC" ] ;
                       rdfs:seeAlso <http://orcid.org/0000-0003-4289-4922> ;

@@ -12,7 +12,7 @@
 <http://lpis.ec.europa.eu/registry/applicationschema/cap-fas>
         a                owl:Ontology ;
         rdfs:label       "Farmer advisory system"@en ;
-        owl:versionIRI   "http://lpis.ec.europa.eu/registry/applicationschema/cap-fas/2.0" ;
+        owl:versionIRI   <http://lpis.ec.europa.eu/registry/applicationschema/cap-fas/2.0> ;
         owl:versionInfo  "2.0" ;
         skos:definition  "-- Name --\r\nFarmer advisory system\r\n\r\n-- Definition --\r\nThis is a placeholder.\r\n\r\n-- Description --\r\nThe contents of an «ApplicationSchema» package exported as a GML Application Schema file."@en ;
         dct:creator [ schema:affiliation [ foaf:name "PSNC" ] ;
