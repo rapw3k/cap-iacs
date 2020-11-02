@@ -85,8 +85,8 @@ cap-iacs-beneficiery:farmerDetailsForOnTheSpotChecks
 <http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-beneficiery>
         a                owl:Ontology ;
         rdfs:label       "System to record the identity of each beneficiary"@en ;
-        owl:imports      <https://raw.githubusercontent.com/rapw3k/cap-iacs/main/cap-iacs-control.ttl> , 
-        								 <https://raw.githubusercontent.com/rapw3k/cap-iacs/main/cap-iacs-aid.ttl> , 
+        owl:imports      #<https://raw.githubusercontent.com/rapw3k/cap-iacs/main/cap-iacs-control.ttl> , 
+        								 #<https://raw.githubusercontent.com/rapw3k/cap-iacs/main/cap-iacs-aid.ttl> , 
         								 <https://raw.githubusercontent.com/rapw3k/cap-iacs/main/cap-iacs-base.ttl> , 
         								 #foaf: , 
         								 <http://www.opengis.net/ont/geosparql> ;

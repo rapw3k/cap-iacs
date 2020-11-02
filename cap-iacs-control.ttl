@@ -361,7 +361,7 @@ cap-iacs-control:ControlRateGroupRuralDevelopmentMeasureValue
         a                owl:Ontology ;
         rdfs:label       "Integrated control system"@en ;
         owl:imports      <https://github.com/HajoRijgersberg/OM/raw/master/om-2.0.rdf> , 
-        								 <https://raw.githubusercontent.com/rapw3k/cap-iacs/main/cap-iacs-aid.ttl> , 
+        								 #<https://raw.githubusercontent.com/rapw3k/cap-iacs/main/cap-iacs-aid.ttl> , 
         								 <https://raw.githubusercontent.com/rapw3k/cap-iacs/main/cap-iacs-base.ttl> , 
         								 <http://www.opengis.net/ont/geosparql> ;
         owl:versionIRI   <http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/3.0> ;

@@ -589,10 +589,10 @@ cap-iacs-aid:AgriculturalEquivalentPracticeSubtypeValue
         a                owl:Ontology ;
         rdfs:label       "Aid applications and payment claims"@en ;
         owl:imports      <https://github.com/HajoRijgersberg/OM/raw/master/om-2.0.rdf> , 
-        								 <https://raw.githubusercontent.com/rapw3k/cap-iacs/main/cap-iacs-control.ttl> , 
+        								 #<https://raw.githubusercontent.com/rapw3k/cap-iacs/main/cap-iacs-control.ttl> , 
         								 <http://www.opengis.net/ont/geosparql> , 
-        								 <https://raw.githubusercontent.com/rapw3k/cap-iacs/main/cap-iacs-beneficiery.ttl> , 
-        								 <https://raw.githubusercontent.com/rapw3k/cap-iacs/main/cap-iacs-parcel.ttl> , 
+        								 #<https://raw.githubusercontent.com/rapw3k/cap-iacs/main/cap-iacs-beneficiery.ttl> , 
+        								 #<https://raw.githubusercontent.com/rapw3k/cap-iacs/main/cap-iacs-parcel.ttl> , 
         								 <https://raw.githubusercontent.com/rapw3k/cap-iacs/main/cap-iacs-base.ttl> ;
         owl:versionIRI   <http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid/3.0> ;
         owl:versionInfo  "3.0" ;
