@@ -8,6 +8,10 @@
 @prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix om:    <http://www.ontology-of-units-of-measure.org/resource/om-2/> .
 @prefix cap-iacs-base: <http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-base#> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix dct:   <http://purl.org/dc/terms/> .
+@prefix schema: <http://schema.org/> .
+
 
 cap-iacs-parcel:lpisLotSize
         a                owl:DatatypeProperty ;
@@ -1554,7 +1558,10 @@ cap-iacs-parcel:AgriculturalAreaTypeValue
 <http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-parcel>
         a                owl:Ontology ;
         rdfs:label       "Identification system for agricultural parcels"@en ;
-        owl:imports      <http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-base> , <https://github.com/HajoRijgersberg/OM/raw/master/om-2.0.rdf> , <http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid> , <http://www.opengis.net/ont/geosparql> ;
+        owl:imports      <https://raw.githubusercontent.com/rapw3k/cap-iacs/main/cap-iacs-base.ttl> , 
+        								 <https://github.com/HajoRijgersberg/OM/raw/master/om-2.0.rdf> , 
+        								 <https://raw.githubusercontent.com/rapw3k/cap-iacs/main/cap-iacs-aid.ttl> , 
+        								 <http://www.opengis.net/ont/geosparql> ;
         owl:versionIRI   "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-parcel/3.0" ;
         owl:versionInfo  "3.0" ;
         skos:definition  "-- Name --\r\nIdentification system for agricultural parcels\r\n\r\n-- Definition --\r\nApplication schema of Identification system for agricultural parcels.\r\n\r\n-- Description --\r\nThe contents of an «ApplicationSchema» package exported as a GML Application Schema file.\r\n\r\nNOTE. This subsystem of IACS is commonly named as Land PArcel Identification System. (LPIS)."@en ;

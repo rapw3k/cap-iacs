@@ -7,6 +7,10 @@
 @prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix cap-iacs-entitlement: <http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-entitlement#> .
 @prefix om:    <http://www.ontology-of-units-of-measure.org/resource/om-2/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix dct:   <http://purl.org/dc/terms/> .
+@prefix schema: <http://schema.org/> .
+
 
 cap-iacs-entitlement:OriginEntitlementObtainValue
         a                owl:Class ;
@@ -17,7 +21,9 @@ cap-iacs-entitlement:OriginEntitlementObtainValue
 <http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-entitlement>
         a                owl:Ontology ;
         rdfs:label       "System for the identification and registration of payment entitlements"@en ;
-        owl:imports      <https://github.com/HajoRijgersberg/OM/raw/master/om-2.0.rdf> , <http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid> , <http://www.opengis.net/ont/geosparql> ;
+        owl:imports      <https://github.com/HajoRijgersberg/OM/raw/master/om-2.0.rdf> , 
+        								 <https://raw.githubusercontent.com/rapw3k/cap-iacs/main/cap-iacs-aid.ttl> , 
+        								 <http://www.opengis.net/ont/geosparql> ;
         owl:versionIRI   "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-entitlement/3.0" ;
         owl:versionInfo  "3.0" ;
         skos:definition  "-- Name --\r\nSystem for the identification and registration of payment entitlements\r\n\r\n-- Definition --\r\nThis package is a placeholder for the Application schema for System for the identification and registration of payment entitlements.\r\n\r\n-- Description --\r\nThe contents of an «ApplicationSchema» package exported as a GML Application Schema file. The system for the identification and registration of payment entitlements shall allow for verification of the entitlements and for cross-checks with the aid applications and the identification system for agricultural parcels. Also shall allow direct and immediate consultation, through the competent authority of the Member State, of the data relating to at least the previous four consecutive calendar years."@en ;

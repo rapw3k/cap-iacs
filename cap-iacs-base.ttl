@@ -7,9 +7,12 @@
 @prefix cap-iacs-beneficiery: <http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-beneficiery#> .
 @prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
 @prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
 @prefix om:    <http://www.ontology-of-units-of-measure.org/resource/om-2/> .
 @prefix cap-iacs-base: <http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-base#> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix dct:   <http://purl.org/dc/terms/> .
+@prefix schema: <http://schema.org/> .
+
 
 cap-iacs-base:everyYearYears
         a                owl:DatatypeProperty ;
@@ -751,7 +754,12 @@ cap-iacs-base:TestVerdictValue
 <http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-base>
         a                owl:Ontology ;
         rdfs:label       "Base types"@en ;
-        owl:imports      <http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid> , foaf: , <http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-parcel> , <http://www.opengis.net/ont/geosparql> , <https://github.com/HajoRijgersberg/OM/raw/master/om-2.0.rdf> , <http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-beneficiery> ;
+        owl:imports      <https://raw.githubusercontent.com/rapw3k/cap-iacs/main/cap-iacs-aid.ttl> , 
+        								 #foaf: , 
+        								 <https://raw.githubusercontent.com/rapw3k/cap-iacs/main/cap-iacs-parcel.ttl> , 
+        								 <http://www.opengis.net/ont/geosparql> , 
+        								 <https://github.com/HajoRijgersberg/OM/raw/master/om-2.0.rdf> , 
+        								 <https://raw.githubusercontent.com/rapw3k/cap-iacs/main/cap-iacs-beneficiery.ttl> ;
         owl:versionIRI   "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-base/3.0" ;
         owl:versionInfo  "3.0" ;
         skos:definition  "-- Name --\r\nBase types \r\n\r\n-- Definition --\r\nApplication schema of the base types used in IACS.\r\n\r\n-- Description --\r\nSchema for base types and models used by multiple application schemas within the IACS model."@en ;

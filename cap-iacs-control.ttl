@@ -8,6 +8,10 @@
 @prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix om:    <http://www.ontology-of-units-of-measure.org/resource/om-2/> .
 @prefix cap-iacs-base: <http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-base#> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix dct:   <http://purl.org/dc/terms/> .
+@prefix schema: <http://schema.org/> .
+
 
 cap-iacs-control:determinedEntitlementArea
         a                owl:DatatypeProperty ;
@@ -356,7 +360,10 @@ cap-iacs-control:ControlRateGroupRuralDevelopmentMeasureValue
 <http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control>
         a                owl:Ontology ;
         rdfs:label       "Integrated control system"@en ;
-        owl:imports      <https://github.com/HajoRijgersberg/OM/raw/master/om-2.0.rdf> , <http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid> , <http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-base> , <http://www.opengis.net/ont/geosparql> ;
+        owl:imports      <https://github.com/HajoRijgersberg/OM/raw/master/om-2.0.rdf> , 
+        								 <https://raw.githubusercontent.com/rapw3k/cap-iacs/main/cap-iacs-aid.ttl> , 
+        								 <https://raw.githubusercontent.com/rapw3k/cap-iacs/main/cap-iacs-base.ttl> , 
+        								 <http://www.opengis.net/ont/geosparql> ;
         owl:versionIRI   "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/3.0" ;
         owl:versionInfo  "3.0" ;
         skos:definition  "-- Name --\r\nIntegrated control system\r\n\r\n-- Definition --\r\nThis package is a placeholder for the Application schema of Integrated control system.\r\n\r\n-- Description --\r\nThe contents of an «ApplicationSchema» package exported as a GML Application Schema file."@en ;

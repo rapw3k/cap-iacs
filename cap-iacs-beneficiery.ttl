@@ -7,8 +7,11 @@
 @prefix cap-iacs-beneficiery: <http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-beneficiery#> .
 @prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
 @prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
 @prefix cap-iacs-base: <http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-base#> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix dct:   <http://purl.org/dc/terms/> .
+@prefix schema: <http://schema.org/> .
+
 
 cap-iacs-beneficiery:farmerBirthDate
         a                owl:DatatypeProperty ;
@@ -82,7 +85,11 @@ cap-iacs-beneficiery:farmerDetailsForOnTheSpotChecks
 <http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-beneficiery>
         a                owl:Ontology ;
         rdfs:label       "System to record the identity of each beneficiary"@en ;
-        owl:imports      <http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control> , <http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid> , <http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-base> , foaf: , <http://www.opengis.net/ont/geosparql> ;
+        owl:imports      <https://raw.githubusercontent.com/rapw3k/cap-iacs/main/cap-iacs-control.ttl> , 
+        								 <https://raw.githubusercontent.com/rapw3k/cap-iacs/main/cap-iacs-aid.ttl> , 
+        								 <https://raw.githubusercontent.com/rapw3k/cap-iacs/main/cap-iacs-base.ttl> , 
+        								 #foaf: , 
+        								 <http://www.opengis.net/ont/geosparql> ;
         owl:versionIRI   "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-beneficiery/3.0" ;
         owl:versionInfo  "3.0" ;
         skos:definition  "-- Name --\r\nSystem to record the identity of each beneficiary\r\n\r\n-- Definition --\r\nPlaceholder package for the Application schema for System to record the identity of each beneficiary.\r\n\r\n-- Description --\r\nThe contents of an «ApplicationSchema» package exported as a GML Application Schema file."@en ;

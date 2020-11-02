@@ -1,0 +1,55 @@
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix gsp:   <http://www.opengis.net/ont/geosparql#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix dct:   <http://purl.org/dc/terms/> .
+@prefix schema: <http://schema.org/> .
+@prefix om:    <http://www.ontology-of-units-of-measure.org/resource/om-2/> .
+@prefix cap-iacs-base: <http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-base#> .
+@prefix cap-iacs-basecode: <http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-base/code#> .
+@prefix cap-iacs-parcel: <http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-parcel#> .
+@prefix cap-iacs-parcelcode: <http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-parcel/code#> .
+@prefix cap-iacs-beneficiery: <http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-beneficiery#> .
+@prefix cap-iacs-beneficierycode: <http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-beneficiery/code#> .
+@prefix cap-iacs-control: <http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#> .
+@prefix cap-iacs-controlcode: <http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#> .
+@prefix cap-iacs-aid: <http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#> .
+@prefix cap-iacs-aidcode: <http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid/code#> .
+@prefix cap-fas: <http://lpis.ec.europa.eu/registry/applicationschema/cap-fas#> .
+@prefix cap-iacs-animal: <http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-animal#> .
+@prefix cap-iacs-entitlement: <http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-entitlement#> .
+@prefix cap-iacs-entitlementcode: <http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-entitlement/code#> .
+
+
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs>
+        a                owl:Ontology ;
+        owl:versionIRI   <http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs/1.0> ;
+        owl:versionInfo  "1.0" ;
+        dct:creator [ schema:affiliation [ foaf:name "PSNC" ] ;
+                      rdfs:seeAlso <http://orcid.org/0000-0003-4289-4922> ;
+                      foaf:name "Raul Palma"
+                    ] ,
+                    [ schema:affiliation [ foaf:name "PSNC" ] ;
+                      foaf:name "Bogusz Janiak"
+                    ] ;
+        owl:imports <https://raw.githubusercontent.com/rapw3k/cap-iacs/main/cap-iacs-base.ttl> , 
+        						<https://raw.githubusercontent.com/rapw3k/cap-iacs/main/cap-iacs-base_codes.ttl> , 
+        						<https://raw.githubusercontent.com/rapw3k/cap-iacs/main/cap-iacs-parcel.ttl> , 
+        						<https://raw.githubusercontent.com/rapw3k/cap-iacs/main/cap-iacs-parcel_codes.ttl> , 
+        						<https://raw.githubusercontent.com/rapw3k/cap-iacs/main/cap-iacs-beneficiery.ttl> , 
+        						<https://raw.githubusercontent.com/rapw3k/cap-iacs/main/cap-iacs-beneficiery_codes.ttl> , 
+        						<https://raw.githubusercontent.com/rapw3k/cap-iacs/main/cap-iacs-control.ttl> , 
+        						<https://raw.githubusercontent.com/rapw3k/cap-iacs/main/cap-iacs-control_codes.ttl> , 
+        						<https://raw.githubusercontent.com/rapw3k/cap-iacs/main/cap-iacs-aid.ttl> , 
+        						<https://raw.githubusercontent.com/rapw3k/cap-iacs/main/cap-iacs-aid_codes.ttl> , 
+        						<https://raw.githubusercontent.com/rapw3k/cap-iacs/main/cap-fas.ttl> , 
+        						<https://raw.githubusercontent.com/rapw3k/cap-iacs/main/cap-iacs-animal.ttl> , 
+        						<https://raw.githubusercontent.com/rapw3k/cap-iacs/main/cap-iacs-entitlement.ttl> , 
+        						<https://raw.githubusercontent.com/rapw3k/cap-iacs/main/cap-iacs-entitlement_codes.ttl> ;
+        dct:title "CAP-IACS main"@en ;
+        dct:description "The CAP-IACS (Common Agriculture Policy - Integrated Administration and Control System) main is a master profile importing all modules of CAP-IACS ontology"@en ;
+        dct:source "JRC IACS application schema. https://doi.org/10.1016/j.landusepol.2016.05.023"@en ;
+        dct:rights "This ontology is distributed under Creative Commons Attribution 4.0 License - http://creativecommons.org/licenses/by/4.0"@en .
