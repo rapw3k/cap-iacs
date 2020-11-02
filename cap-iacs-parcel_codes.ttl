@@ -990,7 +990,7 @@ cap-iacs-parcelcode:SampleSizeValue
         skos:definition  "--Name--\r\nLF hedges and wooded strips\r\n\r\n-- Definition --\r\nEcological focus area type as defined by Art. 46(2) of (EU) R 1307/2013\r\n\r\n-- Description --\r\nLandscape features: Hedges/wooded strips with a width of up to 10 meters [Art. 45(3)(a) of (EU) R No 639/2014]\r\n\r\nNOTE 1: When  such LF are protected under GAEC 7, SMR 2 and SMR 3, MS may specify other width based on national requirements.\r\n\r\nNOTE 2: This LF, when stable in time, need to be identified in the LPIS in view of checking their retention during OTSC. This identification of cross compliance Landscape Features can be done e.g. by alpha-numerical information (or by delineation) associated to the parcel."@en ;
         skos:inScheme    cap-iacs-parcelcode:EcologicalFocusAreaTypeValue .
 
-<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-parcel/code#LotSizeValue/>500000>
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-parcel/code#LotSizeValue/500000+>
         a                cap-iacs-parcel:LotSizeValue ;
         rdfs:label       "More then 500000"@en ;
         skos:definition  "--Name--\r\n-- Definition --\r\nLot size range from 500000 up.\r\n\r\n-- Description --\r\nRange category according to ISO 2859-2:1985."@en ;

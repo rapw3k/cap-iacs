@@ -754,12 +754,12 @@ cap-iacs-base:TestVerdictValue
 <http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-base>
         a                owl:Ontology ;
         rdfs:label       "Base types"@en ;
-        owl:imports      <https://raw.githubusercontent.com/rapw3k/cap-iacs/main/cap-iacs-aid.ttl> , 
+        owl:imports      #<https://raw.githubusercontent.com/rapw3k/cap-iacs/main/cap-iacs-aid.ttl> , 
         								 #foaf: , 
-        								 <https://raw.githubusercontent.com/rapw3k/cap-iacs/main/cap-iacs-parcel.ttl> , 
+        								 #<https://raw.githubusercontent.com/rapw3k/cap-iacs/main/cap-iacs-parcel.ttl> , 
         								 <http://www.opengis.net/ont/geosparql> , 
-        								 <https://github.com/HajoRijgersberg/OM/raw/master/om-2.0.rdf> , 
-        								 <https://raw.githubusercontent.com/rapw3k/cap-iacs/main/cap-iacs-beneficiery.ttl> ;
+        								 <https://github.com/HajoRijgersberg/OM/raw/master/om-2.0.rdf> ; 
+        								 #<https://raw.githubusercontent.com/rapw3k/cap-iacs/main/cap-iacs-beneficiery.ttl> ;
         owl:versionIRI   <http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-base/3.0> ;
         owl:versionInfo  "3.0" ;
         skos:definition  "-- Name --\r\nBase types \r\n\r\n-- Definition --\r\nApplication schema of the base types used in IACS.\r\n\r\n-- Description --\r\nSchema for base types and models used by multiple application schemas within the IACS model."@en ;

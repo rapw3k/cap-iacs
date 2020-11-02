@@ -1209,7 +1209,7 @@ cap-iacs-parcel:LotSizeValue
         a                owl:Class ;
         rdfs:label       "List of possible lot size range values"@en ;
         rdfs:subClassOf  skos:Concept ;
-        owl:oneOf        ( <http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-parcel/code#LotSizeValue/150001to500000> <http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-parcel/code#LotSizeValue/35001to150000> <http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-parcel/code#LotSizeValue/>500000> ) ;
+        owl:oneOf        ( <http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-parcel/code#LotSizeValue/150001to500000> <http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-parcel/code#LotSizeValue/35001to150000> <http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-parcel/code#LotSizeValue/500000+> ) ;
         skos:definition  "--Name--\r\nLot size value\r\n\r\n-- Definition --\r\nList of possible lot size range values. according to ISO 2859-2:1985.\r\n\r\n-- Description --\r\nThe ranges are defined in ISO 2859-2:1985 Sampling procedures for inspection by attributes, Part 2: Sampling plans indexed by limiting quality (LQ) for isolated lot inspection."@en .
 
 cap-iacs-parcel:EtsItemUnderInspection
