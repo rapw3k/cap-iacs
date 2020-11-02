@@ -21,7 +21,7 @@ cap-iacs-entitlement:OriginEntitlementObtainValue
 <http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-entitlement>
         a                owl:Ontology ;
         rdfs:label       "System for the identification and registration of payment entitlements"@en ;
-        owl:imports      <https://github.com/HajoRijgersberg/OM/raw/master/om-2.0.rdf> , 
+        owl:imports      #<https://github.com/HajoRijgersberg/OM/raw/master/om-2.0.rdf> , 
         								 <https://raw.githubusercontent.com/rapw3k/cap-iacs/main/cap-iacs-aid.ttl> , 
         								 <http://www.opengis.net/ont/geosparql> ;
         owl:versionIRI   <http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-entitlement/3.0> ;

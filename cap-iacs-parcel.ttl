@@ -1559,8 +1559,8 @@ cap-iacs-parcel:AgriculturalAreaTypeValue
         a                owl:Ontology ;
         rdfs:label       "Identification system for agricultural parcels"@en ;
         owl:imports      <https://raw.githubusercontent.com/rapw3k/cap-iacs/main/cap-iacs-base.ttl> , 
-        								 <https://github.com/HajoRijgersberg/OM/raw/master/om-2.0.rdf> , 
-        								 <https://raw.githubusercontent.com/rapw3k/cap-iacs/main/cap-iacs-aid.ttl> , 
+        								 #<https://github.com/HajoRijgersberg/OM/raw/master/om-2.0.rdf> , 
+        								 #<https://raw.githubusercontent.com/rapw3k/cap-iacs/main/cap-iacs-aid.ttl> , 
         								 <http://www.opengis.net/ont/geosparql> ;
         owl:versionIRI   <http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-parcel/3.0> ;
         owl:versionInfo  "3.0" ;

@@ -757,8 +757,8 @@ cap-iacs-base:TestVerdictValue
         owl:imports      #<https://raw.githubusercontent.com/rapw3k/cap-iacs/main/cap-iacs-aid.ttl> , 
         								 #foaf: , 
         								 #<https://raw.githubusercontent.com/rapw3k/cap-iacs/main/cap-iacs-parcel.ttl> , 
-        								 <http://www.opengis.net/ont/geosparql> , 
-        								 <https://github.com/HajoRijgersberg/OM/raw/master/om-2.0.rdf> ; 
+        								 <http://www.opengis.net/ont/geosparql> ; 
+        								 #<https://github.com/HajoRijgersberg/OM/raw/master/om-2.0.rdf> 
         								 #<https://raw.githubusercontent.com/rapw3k/cap-iacs/main/cap-iacs-beneficiery.ttl> ;
         owl:versionIRI   <http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-base/3.0> ;
         owl:versionInfo  "3.0" ;
