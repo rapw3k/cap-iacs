@@ -74,3 +74,6 @@ cap-iacs-parcel:MixedParcel
         rdfs:label       "Mixed parcel"@en ;
         rdfs:subClassOf  cap-iacs-parcel:ReferenceParcel ;        
         skos:definition  "Reference Parcel subtype that is not anymore a core element of current IACS model. Mixed parcel type"@en .                        
+        
+cap-iacs-aid:AgriculturalParcel
+				rdfs:subClassOf  cap-iacs-parcel:ReferenceParcel .
