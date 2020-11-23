@@ -8,6 +8,7 @@
 @prefix dct:   <http://purl.org/dc/terms/> .
 @prefix schema: <http://schema.org/> .
 @prefix om:    <http://www.ontology-of-units-of-measure.org/resource/om-2/> .
+@prefix qudt: <http://qudt.org/schema/qudt/> .
 @prefix cap-iacs-base: <http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-base#> .
 @prefix cap-iacs-basecode: <http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-base/code#> .
 @prefix cap-iacs-parcel: <http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-parcel#> .
@@ -22,6 +23,7 @@
 @prefix cap-iacs-animal: <http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-animal#> .
 @prefix cap-iacs-entitlement: <http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-entitlement#> .
 @prefix cap-iacs-entitlementcode: <http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-entitlement/code#> .
+@prefix cap-iacs-parcel-ext: <http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-parcel#> .
 
 
 <http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs>
@@ -48,7 +50,8 @@
         						<https://raw.githubusercontent.com/rapw3k/cap-iacs/main/cap-fas.ttl> , 
         						<https://raw.githubusercontent.com/rapw3k/cap-iacs/main/cap-iacs-animal.ttl> , 
         						<https://raw.githubusercontent.com/rapw3k/cap-iacs/main/cap-iacs-entitlement.ttl> , 
-        						<https://raw.githubusercontent.com/rapw3k/cap-iacs/main/cap-iacs-entitlement_codes.ttl> ;
+        						<https://raw.githubusercontent.com/rapw3k/cap-iacs/main/cap-iacs-entitlement_codes.ttl> ,
+        						<https://raw.githubusercontent.com/rapw3k/cap-iacs/main/cap-iacs-parcel-ext.ttl> ;
         dct:title "CAP-IACS main"@en ;
         dct:description "The CAP-IACS (Common Agriculture Policy - Integrated Administration and Control System) main is a master profile importing all modules of CAP-IACS ontology"@en ;
         dct:source "JRC IACS application schema. https://doi.org/10.1016/j.landusepol.2016.05.023"@en ;

@@ -7,6 +7,7 @@
 @prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
 @prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix om:    <http://www.ontology-of-units-of-measure.org/resource/om-2/> .
+@prefix qudt: <http://qudt.org/schema/qudt/> .
 @prefix cap-iacs-base: <http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-base#> .
 @prefix foaf:  <http://xmlns.com/foaf/0.1/> .
 @prefix dct:   <http://purl.org/dc/terms/> .
@@ -28,7 +29,7 @@ cap-iacs-parcel:homogeneityTypeDocument
 cap-iacs-parcel:ecologicalFocusArea
         a                owl:DatatypeProperty ;
         rdfs:label       "Area of ecological focus area"@en ;
-        rdfs:range       om:Measure ;
+        rdfs:range       qudt:QuantityValue ;
         skos:definition  "--Name--\r\nEcological focus area\r\n\r\n-- Definition --\r\nOfficial area of EFA that can be accounted for fulfilling the obligation detailed in Art. 46(1) of (EU) R No 1307/2013.\r\n\r\n-- Description --\r\nThis is the area value after applying the eventual conversion and weighting factors (DSCG/2014/31).\r\n\r\nNOTE 1: According to DSCG/2014/31 \r\n- Established area: Area resulting from direct field measurement or from delineation using ortho imagery\r\n- Converted area: Virtual area of EFAs obtained when using the conversion factors of Annex II of Regulation (EU) No 639/2014.\r\n- Weighted area: Virtual area of EFAs obtained after multiplying the established area or the converted area by the weighting factor of Annex II of Regulation (EU) No 639/2014.\r\n\r\nNOTE 2: EFA area shall be given in ha."@en .
 
 cap-iacs-parcel:conversionParameterForDeterminationOfEcologicalFocusArea
@@ -246,7 +247,7 @@ cap-iacs-parcel:mtsItemUnderInspectionDetailsForExecutableTestCase
 cap-iacs-parcel:declaredArea
         a                owl:DatatypeProperty ;
         rdfs:label       "Area declared"@en ;
-        rdfs:range       om:Measure ;
+        rdfs:range       qudt:QuantityValue ;
         skos:definition  "--Name--\r\nDeclared area\r\n\r\n-- Definition --\r\nArea declared by the farmer for the given reference parcel for the assessment year.\r\n\r\n--Description--\r\nThe value of declared area is taken from the aid application register of IACS IACS for the assessment year.\r\n\r\nNOTE 1. In our conceptual model this is the value of areaDeclared attribute. \r\n\r\nNOTE 2. The area value shall be given in hectares."@en .
 
 cap-iacs-parcel:numberOfInspectedEfa
@@ -258,7 +259,7 @@ cap-iacs-parcel:numberOfInspectedEfa
 cap-iacs-parcel:totalDeclaredAreaMeasuredItems
         a                owl:DatatypeProperty ;
         rdfs:label       "Total declared area of measured items"@en ;
-        rdfs:range       om:Measure ;
+        rdfs:range       qudt:QuantityValue ;
         skos:definition  "--Name--\r\nTotal declared area of measured items\r\n\r\n--Definition --\r\nTotal declared area of measured items within LPIS sample.\r\n\r\n--Description --\r\nSum of the declared areas recorded in LPIS for measured items."@en .
 
 cap-iacs-parcel:elementName
@@ -311,7 +312,7 @@ cap-iacs-parcel:dataQualityMeasureDescription
 cap-iacs-parcel:totalReferenceAreaMeasuredItems
         a                owl:DatatypeProperty ;
         rdfs:label       "Total reference / recorded area"@en ;
-        rdfs:range       om:Measure ;
+        rdfs:range       qudt:QuantityValue ;
         skos:definition  "--Name--\r\nTotal reference area of measured items\r\n\r\n--Definition --\r\nTotal reference  area of measured items as is recorded in LPIS.\r\n\r\n--Description --\r\nSum of the reference areas recorded in LPIS for each measured item under inspection."@en .
 
 cap-iacs-parcel:numberOfInspectedItems
@@ -335,7 +336,7 @@ cap-iacs-parcel:efaMissclassificationCause
 cap-iacs-parcel:referenceArea
         a                owl:DatatypeProperty ;
         rdfs:label       "Maximum eligable area"@en ;
-        rdfs:range       om:Measure ;
+        rdfs:range       qudt:QuantityValue ;
         skos:definition  "--Name--\r\nReference area\r\n\r\n-- Definition --\r\nValue for the quantification of area as referred to in Art. 5(3) of (EU) R 640/2014.\r\n\r\n-- Description --\r\nOfficially known area of reference  parcel in hectare, which corresponds to the maximum area, for which an application can be made.\r\n\r\nNOTE 1:  Reference area value shall be expressed in hectares.\r\n/* Value of referenceArea shall be given in hectars. */\r\ninv: self.referenceArea.uom.uomSymbol='ha'\r\n\r\nNOTE 2: Reference area equals to MEA under BPS/SAPS [DSCG/2014/33]. For other payments schemes (e.g. voluntary coupled support) other MEA values may apply. Currently Annex I of regulation 1307/2013 define 11 support schema types.\r\n\r\nNOTE 3: When no pro-rata applies , the reference area corresponds to the geometric area within the 2% stability margin.\r\n\r\nNOTE 4:  Area reductions are subject of applying pro-rata system, or applying the  100 sq.m  limit for cumulative area of ineligible features of the same type.\r\n\r\nNOTE 5: It is not necessary to deduct the area of a non agricultural area LC type when it is smaller than 100 sq.m.. However, in course of LPISQA or OTSC, when the cumulative area (per type) of such smaller features is more, the deduction shall be applied.\r\n\r\nNOTE 6: Pro-rata shall be applied to \"clean\", homogenous LC  (E.g. after all ineligible features are excluded)."@en .
 
 cap-iacs-parcel:Contamination
@@ -447,7 +448,7 @@ cap-iacs-parcel:collectiveImplementationCitation
 cap-iacs-parcel:observedArea
         a                owl:DatatypeProperty ;
         rdfs:label       "Area observed BPS/SPS area"@en ;
-        rdfs:range       om:Measure ;
+        rdfs:range       qudt:QuantityValue ;
         skos:definition  "--Name--\r\nObserved area\r\n\r\n-- Definition --\r\nTotality of  the areas of all eligible land cover types within the parcel.\r\n\r\n-- Description --\r\nThis area value comprises the sum of areas of eligible agricultural land  and landscape features contained within the item under inspection. The minimum condition for assigning a value for this attribute is the existence of one eligible agricultural land cover type within the item under inspection.\r\n\r\nNOTE 1: By definition, a stand-alone LF (i.e. LF without agricultural land) does not constitute agricultural land. If a RP does not contain agricultural land, it is a critical defect.\r\n\r\nNOTE 2: The unit of meaurement shall be m2.\r\n/* Value of observedArea shall be given in square meters. */\r\ninv: self.observedArea.uom.uomSymbol='m2'"@en .
 
 cap-iacs-parcel:alias
@@ -635,7 +636,7 @@ cap-iacs-parcel:criticalDefectType
 cap-iacs-parcel:recordedArea
         a                owl:DatatypeProperty ;
         rdfs:label       "Area recorded"@en ;
-        rdfs:range       om:Measure ;
+        rdfs:range       qudt:QuantityValue ;
         skos:definition  "-- Name--\r\nArea recorded.\r\n\r\n-- Definition --\r\nThis is a placeholder only; currently not to be implemented.\r\n\r\n--Description--\r\nArea recorded."@en .
 
 cap-iacs-parcel:mandatedAreaWithinRegion
@@ -958,13 +959,13 @@ cap-iacs-parcel:efaRemedialActionPlan
 cap-iacs-parcel:totalReferenceArea
         a                owl:DatatypeProperty ;
         rdfs:label       "Total reference / recorded area"@en ;
-        rdfs:range       om:Measure ;
+        rdfs:range       qudt:QuantityValue ;
         skos:definition  "--Name--\r\nTotal reference area\r\n\r\n--Definition --\r\nTotal reference area recorded in LPIS.\r\n\r\n--Description --\r\nSum of the reference areas of all RPs in LPIS."@en .
 
 cap-iacs-parcel:convertedArea
         a                owl:DatatypeProperty ;
         rdfs:label       "Area converted"@en ;
-        rdfs:range       om:Measure ;
+        rdfs:range       qudt:QuantityValue ;
         skos:definition  "-- Name--\r\nConverted area \r\n\r\n-- Definition --\r\nThis is a placeholder only; currently not to be implemented."@en .
 
 cap-iacs-parcel:textDescription
@@ -982,7 +983,7 @@ cap-iacs-parcel:ecologicalFocusAreaType
 cap-iacs-parcel:determinedArea
         a                owl:DatatypeProperty ;
         rdfs:label       "Area determined"@en ;
-        rdfs:range       om:Measure ;
+        rdfs:range       qudt:QuantityValue ;
         skos:definition  "--Name--\r\nDetermined area\r\n\r\n-- Description --\r\nArea for which all eligibility criteria have been met.\r\n\r\n-- Description --\r\nArea calculated as product of the surface area and the eventual pro-rata coefficient. When pro-rata is not applied it equals to the surface area  directly taken from the representation geometry (from GM_Surface).\r\n\r\nNOTE: the area value shall be given in square meters.\r\n/* Value of determinedArea shall be given in square meters. */\r\ninv: self.determinedArea.uom.uomSymbol='m2'"@en .
 
 cap-iacs-parcel:conversionFactor
@@ -994,7 +995,7 @@ cap-iacs-parcel:conversionFactor
 cap-iacs-parcel:totalOverestimatedArea
         a                owl:DatatypeProperty ;
         rdfs:label       "Total overestimated area"@en ;
-        rdfs:range       om:Measure ;
+        rdfs:range       qudt:QuantityValue ;
         skos:definition  "--Name--\r\nTotal overestimated area\r\n\r\n--Definition --\r\nTotal area of the items under inspection that have discrepancy equal or more than -3%.\r\n\r\n-- Description\r\nNOTE. Previously it was: parameter of 10102_2 LPIS_RP_MEA_B"@en .
 
 cap-iacs-parcel:ProRataCategoryValue
@@ -1006,13 +1007,13 @@ cap-iacs-parcel:ProRataCategoryValue
 cap-iacs-parcel:weightedArea
         a                owl:DatatypeProperty ;
         rdfs:label       "Area weighted"@en ;
-        rdfs:range       om:Measure ;
+        rdfs:range       qudt:QuantityValue ;
         skos:definition  "-- Name--\r\nWeighted area \r\n\r\n-- Definition --\r\nThis is a placeholder only; currently not to be implemented."@en .
 
 cap-iacs-parcel:landscapeFeatureArea
         a                owl:DatatypeProperty ;
         rdfs:label       "Area of landscape feature"@en ;
-        rdfs:range       om:Measure ;
+        rdfs:range       qudt:QuantityValue ;
         skos:definition  "--Name--\r\nLandscape feature area\r\n\r\n-- Definition --\r\nOfficial area of LF recorded in LPIS.\r\n\r\n--Description--\r\nThis are can be defined by measurement (delineation) or by numeric estimation.\r\n\r\nNOTE: Geometric representation and area  are mandatory when a LF becomes an EFA element."@en .
 
 cap-iacs-parcel:equivalentAecm
@@ -1045,7 +1046,7 @@ cap-iacs-parcel:misclassificationCause
 cap-iacs-parcel:totalUnderestimatedArea
         a                owl:DatatypeProperty ;
         rdfs:label       "Total underestimated area"@en ;
-        rdfs:range       om:Measure ;
+        rdfs:range       qudt:QuantityValue ;
         skos:definition  "--Name--\r\nTotal underestimated area\r\n\r\n--Definition --\r\nTotal area of the items under inspection that have a discrepancy equal or less than 3%.\r\n\r\n-- Description--\r\nNOTE. Previously it was: parameter of 10102_2 LPIS_RP_MEA_B."@en .
 
 cap-iacs-parcel:HomogeneityTypeValue
@@ -1168,7 +1169,7 @@ cap-iacs-parcel:LandscapeFeatureValueType
 cap-iacs-parcel:totalDeclaredArea
         a                owl:DatatypeProperty ;
         rdfs:label       "Total declared LPIS area"@en ;
-        rdfs:range       om:Measure ;
+        rdfs:range       qudt:QuantityValue ;
         skos:definition  "--Name--\r\nTotal declared area\r\n\r\n--Definition --\r\nTotal declared area in LPIS.\r\n\r\n--Description --\r\nSum of the declared areas recorded in LPIS."@en .
 
 cap-iacs-parcel:TechnicalReasonValue
@@ -1257,7 +1258,7 @@ cap-iacs-parcel:EtsItemUnderInspection
 cap-iacs-parcel:conformingItemsArea
         a                owl:DatatypeProperty ;
         rdfs:label       "Conforming sample area"@en ;
-        rdfs:range       om:Measure ;
+        rdfs:range       qudt:QuantityValue ;
         skos:definition  "--Name--\r\nArea of conforming items\r\n\r\n-- Definition --\r\nTotal area of items under inspection found conforming in terms of area values. \r\n\r\n--Description--\r\nSum of the observed area for all conforming items (single and aggregated)."@en .
 
 cap-iacs-parcel:agriculturalAreaDetailsForEcologicalFocusArea
@@ -1583,7 +1584,7 @@ cap-iacs-parcel:numberOfIncompatibleDesign
 cap-iacs-parcel:agriculturalArea
         a                owl:DatatypeProperty ;
         rdfs:label       "Agricultural area"@en ;
-        rdfs:range       om:Measure ;
+        rdfs:range       qudt:QuantityValue ;
         skos:definition  "--Name--\r\nAgricultural area\r\n\r\n-- Definition --\r\nQuantification of agricultural area.\r\n\r\n-- Description --\r\nRegistered area value giving quantification of the area.\r\n\r\nNOTE: The are can be derived from geometric representation of the feature (if exists) or can be other alphanumerical recording [DSCG/2014/33]."@en .
 
 cap-iacs-parcel:agriculturalAreaWithinReferenceParcel

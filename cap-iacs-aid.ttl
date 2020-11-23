@@ -9,6 +9,7 @@
 @prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
 @prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix om:    <http://www.ontology-of-units-of-measure.org/resource/om-2/> .
+@prefix qudt: <http://qudt.org/schema/qudt/> .
 @prefix cap-iacs-base: <http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-base#> .
 @prefix foaf:  <http://xmlns.com/foaf/0.1/> .
 @prefix dct:   <http://purl.org/dc/terms/> .
@@ -54,7 +55,7 @@ cap-iacs-aid:AgriculturalParcel
 cap-iacs-aid:declaredEntitlementArea
         a                owl:DatatypeProperty ;
         rdfs:label       "Entitlements declared"@en ;
-        rdfs:range       om:Measure ;
+        rdfs:range       qudt:QuantityValue ;
         skos:definition  "-- Definition --\r\nEntitlement area declared by one farmer within all holding sites.\r\n-- Description --\r\nAlphanumerical value. Mandatory for SPS only. Subject for enabling of entitlements (Area) on all area declared.\r\nNOTE. declaredEntitlementArea <=declaredArea."@en .
 
 cap-iacs-aid:crop  a     owl:ObjectProperty ;
@@ -217,7 +218,7 @@ cap-iacs-aid:measurementsWithinSurveyDetails
 cap-iacs-aid:requiredEcologicalFocusArea
         a                owl:DatatypeProperty ;
         rdfs:label       "Ecological focus area required"@en ;
-        rdfs:range       om:Measure ;
+        rdfs:range       qudt:QuantityValue ;
         skos:definition  "-- Definition --\r\nTotal ecological focus area required.\r\n-- Description --\r\nTotal ecological focus area required. \r\nNOTE. EFA required is 0,05*arableLand (declared) area."@en .
 
 cap-iacs-aid:ReconvertingObligation
@@ -262,12 +263,12 @@ cap-iacs-aid:EcologicalFocusAreaTypeCollectiveValue
 cap-iacs-aid:ecologicalFocusAreaCollective
         a                owl:DatatypeProperty ;
         rdfs:label       "Total area of ecological focus areas within collective implementation"@en ;
-        rdfs:range       om:Measure ;
+        rdfs:range       qudt:QuantityValue ;
         skos:definition  "-- Definition --\r\nEcological focus area.\r\n-- Description --\r\nTotal area of ecological focus areas within collective implementation."@en .
 
 cap-iacs-aid:advance  a  owl:DatatypeProperty ;
         rdfs:label       "Area calculated"@en ;
-        rdfs:range       om:Measure ;
+        rdfs:range       qudt:QuantityValue ;
         skos:definition  "-- Definition --\r\nArea which is calculated and aid paid to farmer.\r\n-- Description --\r\nArea which is calculated and aid paid to farmer."@en .
 
 cap-iacs-aid:cropGroupAreaRelatedAidSchemaDetailsInAidApplication
@@ -295,7 +296,7 @@ cap-iacs-aid:cropGruopTypeGreening
 cap-iacs-aid:declaredEcologicalFocusArea
         a                owl:DatatypeProperty ;
         rdfs:label       "Ecological focus area declared"@en ;
-        rdfs:range       om:Measure ;
+        rdfs:range       qudt:QuantityValue ;
         skos:definition  "-- Definition --\r\nTotal ecological focus area declared.\r\n-- Description --\r\nTotal ecological focus area declared after all factors are applied. Ecological focus area shall be determined using EFA conversion parameters (when necessary). \r\nNOTE. Sum of EcologicalFocusAreaDetermined.determinedEcologicalFocusArea and EcologicalFocusArea.EcologicalFocusArea (if conversion is not needed) within one application."@en .
 
 cap-iacs-aid:reconversionObligationDetails
@@ -555,7 +556,7 @@ cap-iacs-aid:supportSchemeType
 cap-iacs-aid:declaredArea
         a                owl:DatatypeProperty ;
         rdfs:label       "Area declared"@en ;
-        rdfs:range       om:Measure ;
+        rdfs:range       qudt:QuantityValue ;
         skos:definition  "-- Definition --\r\nArea declared.\r\n-- Description --\r\nAs regards the area-related direct payment, each Member State shall determine the minimum size of agricultural parcels in respect of which an application may be made. However, the minimum size shall not exceed 0,3 ha."@en .
 
 cap-iacs-aid:agriculturalEquivalentPracticeType

@@ -7,6 +7,7 @@
 @prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
 @prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix om:    <http://www.ontology-of-units-of-measure.org/resource/om-2/> .
+@prefix qudt: <http://qudt.org/schema/qudt/> .
 @prefix cap-iacs-base: <http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-base#> .
 @prefix foaf:  <http://xmlns.com/foaf/0.1/> .
 @prefix dct:   <http://purl.org/dc/terms/> .
@@ -16,7 +17,7 @@
 cap-iacs-control:determinedEntitlementArea
         a                owl:DatatypeProperty ;
         rdfs:label       "Entitlements determined"@en ;
-        rdfs:range       om:Measure ;
+        rdfs:range       qudt:QuantityValue ;
         skos:definition  "-- Definition --\r\nEntitlement area determined.\r\n-- Description --\r\nAlphanumerical value. Mandatory for SPS only. Subject for enabling of entitlements (Area) on all area declared."@en .
 
 cap-iacs-control:onTheSpotCheckDate
@@ -236,7 +237,7 @@ cap-iacs-control:onTheSpotCheckDetailsForCrossCheck
 cap-iacs-control:observedPerimeter
         a                owl:DatatypeProperty ;
         rdfs:label       "Perimeter observed after on-the-spot check"@en ;
-        rdfs:range       om:Measure ;
+        rdfs:range       qudt:QuantityValue ;
         skos:definition  "Observed perimeter\r\n\r\nPerimeter observed as results from the on-the-spot check measurement.\r\n\r\nNOTE\r\nArea perimeter calculated based on the coordinates of the boundary points. Polygon (GM_Surface) perimeter (may be used for tolerance calculation)."@en .
 
 cap-iacs-control:nonStructuredEvidenceCitation
@@ -449,7 +450,7 @@ cap-iacs-control:sampleDetailsForOtscItem
 cap-iacs-control:determinedArea
         a                owl:DatatypeProperty ;
         rdfs:label       "Final area determined after all administrative checks"@en ;
-        rdfs:range       om:Measure ;
+        rdfs:range       qudt:QuantityValue ;
         skos:definition  "-- Definition --\r\nFinal area determined after all administrative checks.\r\n-- Description --\r\nIf AdministrativeCheck.determinedArea<>Application.declaredArea Then\r\nAdministrativeCheck.determinedArea = AdministrativeCheck.determinedArea Else\r\nAdministrativeCheck.determinedArea = Application.declaredArea\r\nEndIf"@en .
 
 cap-iacs-control:samplingStrategyDescription
