@@ -1,0 +1,1574 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#"
+     xml:base="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid"
+     xmlns:dc="http://purl.org/dc/elements/1.1/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:foaf="http://xmlns.com/foaf/0.1/"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+     xmlns:terms="http://purl.org/dc/terms/"
+     xmlns:schema="http://schema.org/">
+    <owl:Ontology rdf:about="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid">
+        <owl:versionIRI rdf:resource="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid/3.0"/>
+        <owl:imports rdf:resource="http://www.opengis.net/ont/geosparql"/>
+        <owl:imports rdf:resource="https://raw.githubusercontent.com/rapw3k/cap-iacs/main/cap-iacs-base.ttl"/>
+        <terms:creator rdf:nodeID="genid1"/>
+        <terms:description xml:lang="en">Ontology of the aid applications and payment claims used in IACS, generated from the transformation of the corresponding JRC application schema</terms:description>
+        <terms:rights xml:lang="en">This ontology is distributed under Creative Commons Attribution 4.0 License - http://creativecommons.org/licenses/by/4.0</terms:rights>
+        <terms:source xml:lang="en">JRC IACS application schema. https://doi.org/10.1016/j.landusepol.2016.05.023</terms:source>
+        <terms:title xml:lang="en">JRC IACS - Aid Applications and Payment Claims Ontology</terms:title>
+        <rdfs:label xml:lang="en">Aid applications and payment claims</rdfs:label>
+        <owl:versionInfo>3.0</owl:versionInfo>
+        <skos:definition xml:lang="en">-- Name --
+Aid applications and payment claims
+
+-- Definition --
+This is a placeholder.
+
+-- Description --
+Aid applications and payment claims system application schema.The contents of an «ApplicationSchema» package exported as a GML Application Schema file.</skos:definition>
+    </owl:Ontology>
+    <rdf:Description rdf:nodeID="genid1">
+        <schema:affiliation>
+            <rdf:Description>
+                <foaf:name>PSNC</foaf:name>
+            </rdf:Description>
+        </schema:affiliation>
+        <rdfs:seeAlso rdf:resource="http://orcid.org/0000-0003-4289-4922"/>
+        <foaf:name>Raul Palma</foaf:name>
+    </rdf:Description>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#advance -->
+
+
+    <owl:ObjectProperty rdf:about="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#advance">
+        <rdfs:range rdf:resource="http://qudt.org/schema/qudt/QuantityValue"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#agriculturalEquivalentPracticeSubtype -->
+
+
+    <owl:ObjectProperty rdf:about="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#agriculturalEquivalentPracticeSubtype">
+        <rdfs:range rdf:resource="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#AgriculturalEquivalentPracticeSubtypeValue"/>
+        <rdfs:label xml:lang="en">The type of equivalent agricultural practice</rdfs:label>
+        <skos:definition xml:lang="en">Agricultural equivalent practice type
+
+Subtypes of equivalent agricultural practices in sense of Art.43(3)(a) and (b) of R 1307/2013 .
+
+The values are given in the AgriculturalEquivalentPracticeValue code list.</skos:definition>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#agriculturalEquivalentPracticeType -->
+
+
+    <owl:ObjectProperty rdf:about="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#agriculturalEquivalentPracticeType">
+        <rdfs:range rdf:resource="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#AgriculturalEquivalentPracticeTypeValue"/>
+        <rdfs:label xml:lang="en">Type of equivalent agricultural practice</rdfs:label>
+        <skos:definition xml:lang="en">Agricultural equivalent practice type
+
+Type of equivalent agricultural practice in sense of Art. 43(3) of R 1307/2013.
+
+The values of equivalent practice types are given in the AgriculturalEquivalentPraciceType code list.</skos:definition>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#agriculturalParcelDetailsWithinCropGroupGreening -->
+
+
+    <owl:ObjectProperty rdf:about="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#agriculturalParcelDetailsWithinCropGroupGreening">
+        <rdfs:range rdf:resource="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#CropGroupGreening"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#agriculturalPracticeRequirementType -->
+
+
+    <owl:ObjectProperty rdf:about="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#agriculturalPracticeRequirementType">
+        <rdfs:range rdf:resource="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#AgriculturalPracticeRequirementValue"/>
+        <rdfs:label xml:lang="en">Type of agricultural practice</rdfs:label>
+        <skos:definition xml:lang="en">Agricultural practice requirement type
+
+This property describes the agricultural practices required for minimum activity (Art. 4) and greening, or for exemption from greening according to  Art. (44) and 46 of R (EU) 1307/2013.</skos:definition>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#applicationDetailsForAdministrativeChecks -->
+
+
+    <owl:ObjectProperty rdf:about="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#applicationDetailsForAdministrativeChecks">
+        <rdfs:range rdf:resource="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#AdministrativeCheck"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#applicationDetailsForReconversion -->
+
+
+    <owl:ObjectProperty rdf:about="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#applicationDetailsForReconversion">
+        <rdfs:range rdf:resource="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#ReconvertingObligation"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#applicationDetailsOfOtscItems -->
+
+
+    <owl:ObjectProperty rdf:about="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#applicationDetailsOfOtscItems">
+        <rdfs:range rdf:resource="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#OtscItem"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#applicationsInTheStratum -->
+
+
+    <owl:ObjectProperty rdf:about="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#applicationsInTheStratum">
+        <rdfs:range rdf:resource="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#SamplingStratum"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#collectiveImplementationDetailsForEcologicalFocusAreas -->
+
+
+    <owl:ObjectProperty rdf:about="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#collectiveImplementationDetailsForEcologicalFocusAreas">
+        <rdfs:range rdf:resource="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-parcel#EcologicalFocusArea"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#collectiveImplementationDetailsForHoldingSites -->
+
+
+    <owl:ObjectProperty rdf:about="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#collectiveImplementationDetailsForHoldingSites">
+        <rdfs:range rdf:resource="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-base#Site"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#collectiveImplementationDocument -->
+
+
+    <owl:ObjectProperty rdf:about="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#collectiveImplementationDocument">
+        <rdfs:range rdf:resource="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-base#SupplementaryDocument"/>
+        <rdfs:label xml:lang="en">Non-structured evidence - document, provided with aid application</rdfs:label>
+        <skos:definition xml:lang="en">-- Definition --
+Supplementary document, legal basis contract or designation provided with aid application by farmer.
+-- Description --
+EXAMPLES: description, document, additional measurement data, etc.</skos:definition>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#crop -->
+
+
+    <owl:ObjectProperty rdf:about="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#crop">
+        <rdfs:range rdf:resource="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#CropValue"/>
+        <rdfs:label xml:lang="en">Type of certain crop</rdfs:label>
+        <skos:definition xml:lang="en">-- Definition --
+Type of certain crop.
+-- Description --
+Type of certain (or single) crop. 
+NOTE. If cropGroupTypeGreening = certainCrop, then crop must be defined.</skos:definition>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#cropGroupAreaRelatedAidSchemaDetailsInAidApplication -->
+
+
+    <owl:ObjectProperty rdf:about="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#cropGroupAreaRelatedAidSchemaDetailsInAidApplication">
+        <rdfs:range rdf:resource="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#Application"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#cropGroupGreeningDetailsInAidApplication -->
+
+
+    <owl:ObjectProperty rdf:about="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#cropGroupGreeningDetailsInAidApplication">
+        <rdfs:range rdf:resource="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#Application"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#cropGruopTypeAreaRelatedAidSchema -->
+
+
+    <owl:ObjectProperty rdf:about="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#cropGruopTypeAreaRelatedAidSchema">
+        <rdfs:range rdf:resource="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#CropGroupTypeAreaRelatedSupportSchemaValue"/>
+        <rdfs:label xml:lang="en">Type of certain area related aid schema payment crop group</rdfs:label>
+        <skos:definition xml:lang="en">-- Definition --
+Type of area related aid schema crop group.
+-- Description --
+Type of area related aid schema payment crop group.</skos:definition>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#cropGruopTypeGreening -->
+
+
+    <owl:ObjectProperty rdf:about="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#cropGruopTypeGreening">
+        <rdfs:range rdf:resource="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#CropGroupTypeGreeningValue"/>
+        <rdfs:label xml:lang="en">Type of certain greening crop group</rdfs:label>
+        <skos:definition xml:lang="en">-- Definition --
+Type of greening crop group.
+-- Description --
+Type of greening crop group.</skos:definition>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#crossComplianceRule -->
+
+
+    <owl:ObjectProperty rdf:about="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#crossComplianceRule">
+        <rdfs:range rdf:resource="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-base#CrossComplianceRuleDescription"/>
+        <rdfs:label xml:lang="en">Cross-compliance rule</rdfs:label>
+        <skos:definition xml:lang="en">-- Definition --
+Cross-compliance rule description.
+
+-- Description --
+Cross-compliance rule description. Declared by the farmer.
+
+NOTE. If there is no aid application these rules still are mandatory to observe.</skos:definition>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#crossComplianceRulesForLandscapeFeatures -->
+
+
+    <owl:ObjectProperty rdf:about="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#crossComplianceRulesForLandscapeFeatures">
+        <rdfs:range rdf:resource="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-parcel#LandscapeFeature"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#declaredArea -->
+
+
+    <owl:ObjectProperty rdf:about="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#declaredArea">
+        <rdfs:range rdf:resource="http://qudt.org/schema/qudt/QuantityValue"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#declaredEcologicalFocusArea -->
+
+
+    <owl:ObjectProperty rdf:about="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#declaredEcologicalFocusArea">
+        <rdfs:range rdf:resource="http://qudt.org/schema/qudt/QuantityValue"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#declaredEntitlementArea -->
+
+
+    <owl:ObjectProperty rdf:about="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#declaredEntitlementArea">
+        <rdfs:range rdf:resource="http://qudt.org/schema/qudt/QuantityValue"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#detailsOfAgriculturalParcelsForCrossCompliance -->
+
+
+    <owl:ObjectProperty rdf:about="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#detailsOfAgriculturalParcelsForCrossCompliance">
+        <rdfs:range rdf:resource="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#CrossCompliance"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#detailsOfAgriculturalPracticesForOnTheSpotCheck -->
+
+
+    <owl:ObjectProperty rdf:about="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#detailsOfAgriculturalPracticesForOnTheSpotCheck">
+        <rdfs:range rdf:resource="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#OnTheSpotCheck"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#detailsOfCropGroupAreaRelatedAidSchemaForPayment -->
+
+
+    <owl:ObjectProperty rdf:about="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#detailsOfCropGroupAreaRelatedAidSchemaForPayment">
+        <rdfs:range rdf:resource="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#Payment"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#detailsOfCropGroupGreeningForPayment -->
+
+
+    <owl:ObjectProperty rdf:about="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#detailsOfCropGroupGreeningForPayment">
+        <rdfs:range rdf:resource="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#Payment"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#detailsOfCrossComplianceForOnTheSpotCheck -->
+
+
+    <owl:ObjectProperty rdf:about="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#detailsOfCrossComplianceForOnTheSpotCheck">
+        <rdfs:range rdf:resource="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#OnTheSpotCheck"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#ecologicalFocusAreaCollective -->
+
+
+    <owl:ObjectProperty rdf:about="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#ecologicalFocusAreaCollective">
+        <rdfs:range rdf:resource="http://qudt.org/schema/qudt/QuantityValue"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#ecologicalFocusAreaConvertedWithinApplication -->
+
+
+    <owl:ObjectProperty rdf:about="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#ecologicalFocusAreaConvertedWithinApplication">
+        <rdfs:range rdf:resource="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#Application"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#ecologicalFocusAreaDetailsForConversion -->
+
+
+    <owl:ObjectProperty rdf:about="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#ecologicalFocusAreaDetailsForConversion">
+        <rdfs:range rdf:resource="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-parcel#ConversionParameter"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#ecologicalFocusAreaType -->
+
+
+    <owl:ObjectProperty rdf:about="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#ecologicalFocusAreaType">
+        <rdfs:range rdf:resource="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#EcologicalFocusAreaTypeCollectiveValue"/>
+        <rdfs:label xml:lang="en">Type of ecological focus area for collective implementation</rdfs:label>
+        <skos:definition xml:lang="en">-- Definition --
+Type of ecological focus area for collective implementation.
+-- Description --
+Not all type of ecological focus area are suitable for collective implementation.</skos:definition>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#equivalentAgriculturalPracticeRequirement -->
+
+
+    <owl:ObjectProperty rdf:about="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#equivalentAgriculturalPracticeRequirement">
+        <rdfs:range rdf:resource="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#AgriculturalEquivalentPracticeRequirementValue"/>
+        <rdfs:label xml:lang="en">The subtype of equivalent agricultural practice, requirement</rdfs:label>
+        <skos:definition xml:lang="en">Equivalent agricultural practice requirement
+
+Requirement against the equivalent agricultural practice as detailed in Annex IX of R 1307/2013.
+
+The values of requirements are given in the AgriculturalEquivalentPracticeRequirementValue code list.</skos:definition>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#farmersSurveyFeatureType -->
+
+
+    <owl:ObjectProperty rdf:about="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#farmersSurveyFeatureType">
+        <rdfs:range rdf:resource="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#FarmersSurveyFeatureTypeValue"/>
+        <rdfs:label xml:lang="en">Geometry source</rdfs:label>
+        <skos:definition xml:lang="en">-- Definition --
+Feature type measured by farmer.
+-- Description --
+Feature type measured by farmer.</skos:definition>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#geometry -->
+
+
+    <owl:ObjectProperty rdf:about="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#geometry">
+        <rdfs:range rdf:resource="http://www.opengis.net/ont/geosparql#Geometry"/>
+        <rdfs:label xml:lang="en">Geometry of agricultural area</rdfs:label>
+        <skos:definition xml:lang="en">-- Definition --
+Geometry of agricultural parcel.
+-- Description --
+Representation of the geographical dimension/position of the agricultural parcel.
+NOTE. In case of GM_Point geometry - clementini point should be used.</skos:definition>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#geometrySource -->
+
+
+    <owl:ObjectProperty rdf:about="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#geometrySource">
+        <rdfs:range rdf:resource="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#GeometrySourceValue"/>
+        <rdfs:label xml:lang="en">Geometry source</rdfs:label>
+        <skos:definition xml:lang="en">-- Definition --
+Geometry source.
+-- Description --
+Survey or measurement geometry source.</skos:definition>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#holdindSubmissionInAidApplicationDetails -->
+
+
+    <owl:ObjectProperty rdf:about="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#holdindSubmissionInAidApplicationDetails">
+        <rdfs:range rdf:resource="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-base#Holding"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#measurementsWithinSurveyDetails -->
+
+
+    <owl:ObjectProperty rdf:about="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#measurementsWithinSurveyDetails">
+        <rdfs:range rdf:resource="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#FarmersSurvey"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#metadata -->
+
+
+    <owl:ObjectProperty rdf:about="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#metadata">
+        <rdfs:range rdf:resource="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-base#FeatureLevelMetadata"/>
+        <skos:definition xml:lang="en">Metadata
+
+Feature level metadata of the reconverting obligation. 
+
+NOTE
+This property brings the life cycle and the validity information of reconverting obligation, which also permits to register when the obligation was implemented by the farmer.  As soon as the reconversion happens, the life cycle of he obligation should end.</skos:definition>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#nonStructuredEvidenceCitation -->
+
+
+    <owl:ObjectProperty rdf:about="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#nonStructuredEvidenceCitation">
+        <rdfs:range rdf:resource="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-base#SupplementaryDocumentCitation"/>
+        <rdfs:label xml:lang="en">Non-structured evidence - citation</rdfs:label>
+        <skos:definition xml:lang="en">-- Definition --
+Any citation that supports the application process.
+-- Description --
+URL.</skos:definition>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#nonStructuredEvidenceDocument -->
+
+
+    <owl:ObjectProperty rdf:about="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#nonStructuredEvidenceDocument">
+        <rdfs:range rdf:resource="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-base#SupplementaryDocument"/>
+        <rdfs:label xml:lang="en">Non-structured evidence - document</rdfs:label>
+        <skos:definition xml:lang="en">-- Definition --
+Any record  that supports the application process.
+-- Description --
+EXAMPLES: description, sketch, photo, document, additional measurement data, etc.</skos:definition>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#paymentDetailsForAdministrativeChecks -->
+
+
+    <owl:ObjectProperty rdf:about="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#paymentDetailsForAdministrativeChecks">
+        <rdfs:range rdf:resource="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#AdministrativeCheck"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#paymentDetailsForFarmer -->
+
+
+    <owl:ObjectProperty rdf:about="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#paymentDetailsForFarmer">
+        <rdfs:range rdf:resource="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-beneficiery#Farmer"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#reconversionObliationDetails -->
+
+
+    <owl:ObjectProperty rdf:about="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#reconversionObliationDetails">
+        <rdfs:range rdf:resource="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#OtscItem"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#reconversionObligationDetails -->
+
+
+    <owl:ObjectProperty rdf:about="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#reconversionObligationDetails">
+        <rdfs:range rdf:resource="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#Application"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#requiredEcologicalFocusArea -->
+
+
+    <owl:ObjectProperty rdf:about="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#requiredEcologicalFocusArea">
+        <rdfs:range rdf:resource="http://qudt.org/schema/qudt/QuantityValue"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#specieCode -->
+
+
+    <owl:ObjectProperty rdf:about="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#specieCode">
+        <rdfs:range rdf:resource="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-base#SpecieCodeValue"/>
+        <rdfs:label xml:lang="en">Vegetable or agricultural specie code</rdfs:label>
+        <skos:definition xml:lang="en">-- Definition --
+Vegetable or agricultural specie code.
+-- Description --
+If MS asks Farmer to provide particular specie, then Farmer must provide it in his declaration. 
+NOTE. Common catalogue of varieties of agricultural plant species. Fifth supplement to the 29th complete edition (2011/C 168 A/01).
+NOTE. Common catalogue of varieties of vegetable species. 32nd complete edition (2013/C 312 A/01).
+NOTE. Only when: agriculturalAreaType=arableLand.</skos:definition>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#supportSchemaType -->
+
+
+    <owl:ObjectProperty rdf:about="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#supportSchemaType">
+        <rdfs:range rdf:resource="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-base#SupportSchemeTypeValue"/>
+        <rdfs:label xml:lang="en">Support schema type</rdfs:label>
+        <skos:definition xml:lang="en">-- Definition --
+Support schema type.
+-- Description --
+Support schema types (based on Annex I 1307/2013) used in application.
+NOTE. Currently in this model version only maximum 11 support schemas have data place holders.</skos:definition>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#supportSchemeType -->
+
+
+    <owl:ObjectProperty rdf:about="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#supportSchemeType">
+        <rdfs:range rdf:resource="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-base#SupportSchemeTypeValue"/>
+        <rdfs:label xml:lang="en">Support schema type</rdfs:label>
+        <skos:definition xml:lang="en">-- Definition --
+Support schema type.
+-- Description --
+Support schema types (based on Annex I 1307/2013) used in application.
+NOTE. Currently in this model version only maximum 11 schemas have data place holders.</skos:definition>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#surveyDetailsForMeasurements -->
+
+
+    <owl:ObjectProperty rdf:about="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#surveyDetailsForMeasurements">
+        <rdfs:range rdf:resource="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#FarmersSurvey"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#varietalName -->
+
+
+    <owl:ObjectProperty rdf:about="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#varietalName">
+        <rdfs:range rdf:resource="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-base#VarietalNameValue"/>
+        <rdfs:label xml:lang="en">Varietal name</rdfs:label>
+        <skos:definition xml:lang="en">-- Definition --
+Varietal name.
+-- Description --
+Information referring to the variety within a specie. If MS asks Farmer to provide particular specie variety, then Farmer must provide it in his declaration. Varieties (cultures of any of the different genera defined in the botanical classification of crops) may be provided by maintainers (MS). 
+NOTE. Common catalogue of varieties of agricultural plant species. Fifth supplement to the 29th complete edition (2011/C 168 A/01).
+NOTE. Common catalogue of varieties of vegetable species. 32nd complete edition (2013/C 312 A/01).
+NOTE. Only when: agriculturalAreaType=arableLand.</skos:definition>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#advance -->
+
+
+    <owl:DatatypeProperty rdf:about="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#advance"/>
+    
+
+
+    <!-- http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#agriculturalPracticeId -->
+
+
+    <owl:DatatypeProperty rdf:about="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#agriculturalPracticeId">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label xml:lang="en">Unique thematic ID of agricultural practice</rdfs:label>
+        <skos:definition xml:lang="en">Unique thematic ID of agricultural practice
+
+Thematic identifier at national level, generally the full national code of the agricultural practice.</skos:definition>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#declaredArea -->
+
+
+    <owl:DatatypeProperty rdf:about="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#declaredArea"/>
+    
+
+
+    <!-- http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#declaredEcologicalFocusArea -->
+
+
+    <owl:DatatypeProperty rdf:about="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#declaredEcologicalFocusArea"/>
+    
+
+
+    <!-- http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#declaredEcologicalFocusAreaFeatures -->
+
+
+    <owl:DatatypeProperty rdf:about="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#declaredEcologicalFocusAreaFeatures">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+        <rdfs:label xml:lang="en">Ecological focus area features declared</rdfs:label>
+        <skos:definition xml:lang="en">-- Definition --
+Ecological focus area features declared (or &quot;features in farm&quot;).
+-- Description --
+Ecological focus area features declared.  Ecological focus area features shall be used in order to determine the area of ecological focus area using conversion parameters (when necessary).</skos:definition>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#declaredEntitlementArea -->
+
+
+    <owl:DatatypeProperty rdf:about="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#declaredEntitlementArea"/>
+    
+
+
+    <!-- http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#ecologicalFocusAreaCollective -->
+
+
+    <owl:DatatypeProperty rdf:about="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#ecologicalFocusAreaCollective"/>
+    
+
+
+    <!-- http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#estimatedAccuracy -->
+
+
+    <owl:DatatypeProperty rdf:about="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#estimatedAccuracy">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+        <rdfs:label xml:lang="en">Estimated absolute positional accuracy </rdfs:label>
+        <skos:definition xml:lang="en">-- Definition --
+Estimated absolute positional accuracy.
+-- Description --
+Estimated absolute positional accuracy of the object measured in the used coordinate reference system. Absolute positional accuracy is the mean value of the positional uncertainties for a set of positions, where the positional uncertainties are the distance between a measured position and what is considered as the corresponding true position. This mean value may come from quality measures on a homogeneous population of objects measured or from an estimation based on the knowledge of the production processes and of their accuracy.</skos:definition>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#farmersMeasurementId -->
+
+
+    <owl:DatatypeProperty rdf:about="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#farmersMeasurementId">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label xml:lang="en">Unique thematic ID of farmers survey</rdfs:label>
+        <skos:definition xml:lang="en">-- Definition --
+Unique thematic ID of farmer&apos;s measurement within a survey.
+-- Description --
+Thematic identifier at national level, generally the full national code of the farmer&apos;s  measurement within a survey.
+NOTE. Object (real world phenomena) description. It may be the code of object measured.</skos:definition>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#intoPermanentGrassland -->
+
+
+    <owl:DatatypeProperty rdf:about="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#intoPermanentGrassland">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+        <skos:definition xml:lang="en">Into permanent grassland
+
+Possible value of the reconverting obligation
+
+NOTE
+IntoPermanentGrassland  and the IntoSensitivePermanentGrassland are mutually exclusive values.</skos:definition>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#intoSensitivePermanentGrassland -->
+
+
+    <owl:DatatypeProperty rdf:about="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#intoSensitivePermanentGrassland">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+        <skos:definition xml:lang="en">Into sensitive permanent grassland
+
+Possible values of reconverting obligation.
+
+NOTE
+IntoPermanentGrassland  and the IntoSensitivePermanentGrassland are mutually exclusive values.</skos:definition>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#requiredEcologicalFocusArea -->
+
+
+    <owl:DatatypeProperty rdf:about="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#requiredEcologicalFocusArea"/>
+    
+
+
+    <!-- http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#submissionDate -->
+
+
+    <owl:DatatypeProperty rdf:about="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#submissionDate">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#date"/>
+        <rdfs:label xml:lang="en">Application submission date</rdfs:label>
+        <skos:definition xml:lang="en">Submission date
+
+Date of when the application was submitted.</skos:definition>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#withdrawalDate -->
+
+
+    <owl:DatatypeProperty rdf:about="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#withdrawalDate">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#date"/>
+        <rdfs:label xml:lang="en">Application correction date</rdfs:label>
+        <skos:definition xml:lang="en">Withdrawal date
+
+Where the competent authority has not yet informed the beneficiary of any errors contained in the aid application or payment claim nor announced an on-the-spot check, beneficiaries should be entitled to withdraw their aid applications [Preamble (3)and Art 3(2) of R 809/2014 .</skos:definition>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#AgriculturalEquivalentPracticeRequirementValue -->
+
+
+    <owl:Class rdf:about="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#AgriculturalEquivalentPracticeRequirementValue">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <rdfs:label xml:lang="en">List of agricultural equivalent practices</rdfs:label>
+        <skos:definition xml:lang="en">Agricultural equivalent practice requirement value
+
+List of requirements qualifying agricultural practices as equivalent to the practices beneficial for the climate and the environment descibed in Chapter 3 of R 1307/2013.
+The broad list of equivalent practices are included in Annex IX of R 1307/2013.
+
+The equivalent practices go beyond the relevant mandatory standards established pursuant to Chapter I of Title VI of Regulation (EU) No 1306/2013, which aim to meet objectives relating to soil and water quality, biodiversity, landscape preservation, and climate change mitigation and adaptation. Those certification schemes may include the practices listed in Annex IX to this Regulation, the practices referred to in paragraph 2 of this Article, or a combination of those practices.</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#AgriculturalEquivalentPracticeSubtypeValue -->
+
+
+    <owl:Class rdf:about="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#AgriculturalEquivalentPracticeSubtypeValue">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <rdfs:label xml:lang="en">List of agricultural equivalent subpractices</rdfs:label>
+        <skos:definition xml:lang="en">Agricultural equivalent practice subtype value
+
+Broad categories of agricultural equivalent practices beneficial for the climate and the environment as listed in Annex IX of R 1307/2013.</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#AgriculturalEquivalentPracticeTypeValue -->
+
+
+    <owl:Class rdf:about="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#AgriculturalEquivalentPracticeTypeValue">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <rdfs:label xml:lang="en">List of agricultural equivalent practices requirements</rdfs:label>
+        <skos:definition xml:lang="en">Agricultural Equivalent Practice Type value
+
+Values of equivalent agricultural practice types in sense of Art. 43(3)(a) and (b) of R 1307/2013.</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#AgriculturalParcel -->
+
+
+    <owl:Class rdf:about="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#AgriculturalParcel">
+        <rdfs:subClassOf rdf:resource="http://www.opengis.net/ont/geosparql#Feature"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#detailsOfAgriculturalParcelsForCrossCompliance"/>
+                <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#agriculturalParcelDetailsWithinCropGroupGreening"/>
+                <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#declaredArea"/>
+                <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#geometry"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#specieCode"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#varietalName"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label xml:lang="en">Agricultural parcel</rdfs:label>
+        <skos:definition xml:lang="en">-- Definition --
+Agricultural parcel.
+-- Description --
+Agricultural parcel within agricultural areas (and or reference parcels). Declared by farmer.</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#AgriculturalPractice -->
+
+
+    <owl:Class rdf:about="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#AgriculturalPractice">
+        <rdfs:subClassOf rdf:resource="http://www.opengis.net/ont/geosparql#Feature"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#agriculturalEquivalentPracticeSubtype"/>
+                <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#agriculturalEquivalentPracticeType"/>
+                <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#detailsOfAgriculturalPracticesForOnTheSpotCheck"/>
+                <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#equivalentAgriculturalPracticeRequirement"/>
+                <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#agriculturalPracticeId"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label xml:lang="en">Agricultural Practices</rdfs:label>
+        <skos:definition xml:lang="en">Agricultural Practice
+
+Farmers entitled to a payment under BPS/ SAPS shall observe, on all their eligible hectares within the meaning of Article 32(2) to (5), the agricultural practices beneficial for the climate and the environment.</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#AgriculturalPracticeRequirementValue -->
+
+
+    <owl:Class rdf:about="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#AgriculturalPracticeRequirementValue">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:definition xml:lang="en">Agricultural practice requirement value
+
+List of agricultural practice requirement values as defined in Art. (44) (1), (2),(3) and Art. 46 (4) of R (EU) 1307/2013.</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#AgriculturalPracticeTypeValue -->
+
+
+    <owl:Class rdf:about="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#AgriculturalPracticeTypeValue">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <rdfs:label xml:lang="en">List of agricultural practices</rdfs:label>
+        <skos:definition xml:lang="en">Agricultural practice type value
+
+List agricultural practices beneficial for the climate and the environment as detailed in Chapter 3 of R 1307/2013.</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#Application -->
+
+
+    <owl:Class rdf:about="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#Application">
+        <rdfs:subClassOf rdf:resource="http://www.opengis.net/ont/geosparql#Feature"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#applicationDetailsForAdministrativeChecks"/>
+                <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#applicationsInTheStratum"/>
+                <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#supportSchemeType"/>
+                <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#declaredArea"/>
+                <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#declaredEcologicalFocusArea"/>
+                <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#holdindSubmissionInAidApplicationDetails"/>
+                <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#requiredEcologicalFocusArea"/>
+                <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#applicationDetailsForReconversion"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#applicationDetailsOfOtscItems"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#declaredEntitlementArea"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#submissionDate"/>
+                <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#withdrawalDate"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label xml:lang="en">Application</rdfs:label>
+        <skos:definition xml:lang="en">Application
+
+Documentation of this feature type will be provided in frame of development of the Applications and payment claims application schema.
+
+NOTE
+This feature type is currently a draft.</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#CollectiveImplementation -->
+
+
+    <owl:Class rdf:about="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#CollectiveImplementation">
+        <rdfs:subClassOf rdf:resource="http://www.opengis.net/ont/geosparql#Feature"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#collectiveImplementationDetailsForEcologicalFocusAreas"/>
+                <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#ecologicalFocusAreaCollective"/>
+                <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#ecologicalFocusAreaType"/>
+                <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label xml:lang="en">Collective ecological focus area implementation</rdfs:label>
+        <skos:definition xml:lang="en">-- Definition --
+Collective ecological focus area implementation.
+-- Description --
+Ecological focus area participating in collective implementation.</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#CropGroupAreaRelatedAidSchema -->
+
+
+    <owl:Class rdf:about="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#CropGroupAreaRelatedAidSchema">
+        <rdfs:subClassOf rdf:resource="http://www.opengis.net/ont/geosparql#Feature"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#cropGroupAreaRelatedAidSchemaDetailsInAidApplication"/>
+                <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#cropGruopTypeAreaRelatedAidSchema"/>
+                <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#declaredArea"/>
+                <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#detailsOfCropGroupAreaRelatedAidSchemaForPayment"/>
+                <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label xml:lang="en">Payment crop group area related aid schema</rdfs:label>
+        <skos:definition xml:lang="en">-- Definition --
+Payment crop group area related aid schema.
+-- Description --
+Crop groups (in the context of IACS). Automatically defined and agregated by administration using application entries. This is placeholder for all payment schemas (except &quot;greening&quot;, which have different place holder named CropGroupGreening) and area-related support measures (area-related support measures - in current version of the model not implemented yet).</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#CropGroupGreening -->
+
+
+    <owl:Class rdf:about="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#CropGroupGreening">
+        <rdfs:subClassOf rdf:resource="http://www.opengis.net/ont/geosparql#Feature"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#cropGroupGreeningDetailsInAidApplication"/>
+                <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#cropGruopTypeGreening"/>
+                <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#declaredArea"/>
+                <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#detailsOfCropGroupGreeningForPayment"/>
+                <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#crop"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label xml:lang="en">Payment crop group grreening</rdfs:label>
+        <skos:definition xml:lang="en">-- Definition --
+Crop group greening.
+-- Description --
+Crop groups (in the context of IACS). Auto defined and aggregated by administration from application entries.</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#CropGroupTypeAreaRelatedSupportSchemaValue -->
+
+
+    <owl:Class rdf:about="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#CropGroupTypeAreaRelatedSupportSchemaValue">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <rdfs:label xml:lang="en">List of payment crop groups</rdfs:label>
+        <skos:definition xml:lang="en">-- Definition --
+List of payment crop groups.
+-- Description --
+List of crop groups related with area-related support schemas.</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#CropGroupTypeGreeningValue -->
+
+
+    <owl:Class rdf:about="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#CropGroupTypeGreeningValue">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <rdfs:label xml:lang="en">List of payment crop groups</rdfs:label>
+        <skos:definition xml:lang="en">-- Definition --
+List of payment crop groups.
+-- Description --
+List of crop groups related with greening.</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#CropValue -->
+
+
+    <owl:Class rdf:about="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#CropValue">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <rdfs:label xml:lang="en">List of crops</rdfs:label>
+        <skos:definition xml:lang="en">Crop value
+
+List of  crops in sense of Art. 44(4) of R (EU) 809/2014  that is needed for checking crop diversification.
+
+NOTE
+Required if cropGroupTypeGreening = certainCrop.</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#CrossCompliance -->
+
+
+    <owl:Class rdf:about="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#CrossCompliance">
+        <rdfs:subClassOf rdf:resource="http://www.opengis.net/ont/geosparql#Feature"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#crossComplianceRulesForLandscapeFeatures"/>
+                <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#crossComplianceRule"/>
+                <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#detailsOfCrossComplianceForOnTheSpotCheck"/>
+                <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label xml:lang="en">Cross-compliance</rdfs:label>
+        <skos:definition xml:lang="en">-- Definition --
+Cross-compliance data.
+-- Description --
+Cross-compliance data.</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#EcologicalFocusAreaConverted -->
+
+
+    <owl:Class rdf:about="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#EcologicalFocusAreaConverted">
+        <rdfs:subClassOf rdf:resource="http://www.opengis.net/ont/geosparql#Feature"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#ecologicalFocusAreaConvertedWithinApplication"/>
+                <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#ecologicalFocusAreaDetailsForConversion"/>
+                <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#declaredEcologicalFocusAreaFeatures"/>
+                <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label xml:lang="en">Converted ecological focus area</rdfs:label>
+        <skos:definition xml:lang="en">-- Definition --
+Converted ecological focus area within application.
+-- Description --
+EFA declared in application and converted using conversion parameters.</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#EcologicalFocusAreaTypeCollectiveValue -->
+
+
+    <owl:Class rdf:about="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#EcologicalFocusAreaTypeCollectiveValue">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <rdfs:label xml:lang="en">List of ecological focused areas for collective implementation</rdfs:label>
+        <skos:definition xml:lang="en">-- Definition --
+List of ecological focused areas for collective implementation.
+-- Description --
+List of feature (ecological focus areas) types based on Article 46(3) 1307/2013.</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#FarmersSurvey -->
+
+
+    <owl:Class rdf:about="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#FarmersSurvey">
+        <rdfs:subClassOf rdf:resource="http://www.opengis.net/ont/geosparql#Feature"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#surveyDetailsForMeasurements"/>
+                <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#farmersSurveyFeatureType"/>
+                <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#geometry"/>
+                <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#geometrySource"/>
+                <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#measurementsWithinSurveyDetails"/>
+                <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#farmersMeasurementId"/>
+                <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#estimatedAccuracy"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label xml:lang="en">Surveys of the farmers</rdfs:label>
+        <skos:definition xml:lang="en">-- Definition --
+Survey and measurements.
+-- Description --
+Surveys and (measurements within surveys) of the farmer. Dedicated for upload to different parts of IACS.</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#FarmersSurveyFeatureTypeValue -->
+
+
+    <owl:Class rdf:about="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#FarmersSurveyFeatureTypeValue">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <rdfs:label xml:lang="en">List of feature types</rdfs:label>
+        <skos:definition xml:lang="en">-- Definition --
+List of possible feature types measured and provided by farmer.
+-- Description --
+List of feature types possible to survey / measure by farmer. After these measured features are submitted (during application process) then authority (data custodians) may confirm or reject their reference data update (update based on farmer&apos;s survey and or measurement).
+NOTE. List may be extended or subtracted depending on how MS organizing reference data update process.</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#GeometrySourceValue -->
+
+
+    <owl:Class rdf:about="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#GeometrySourceValue">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <rdfs:label xml:lang="en">List of geometry sources</rdfs:label>
+        <skos:definition xml:lang="en">-- Definition --
+List of geometry sources.
+-- Description --
+List of geometry sources.</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#Payment -->
+
+
+    <owl:Class rdf:about="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#Payment">
+        <rdfs:subClassOf rdf:resource="http://www.opengis.net/ont/geosparql#Feature"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#paymentDetailsForAdministrativeChecks"/>
+                <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#supportSchemaType"/>
+                <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#advance"/>
+                <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#paymentDetailsForFarmer"/>
+                <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#supportSchemaType"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">11</owl:maxCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label xml:lang="en">Payment</rdfs:label>
+        <skos:definition xml:lang="en">-- Definition --
+Payment.
+-- Description --
+One payment, one application, one farmer. Place holder for payment schema specific attributes. Container of variables collected from: application (Declared), controls (Determined) and from RDMBS operators (Calculated).</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#ReconvertingObligation -->
+
+
+    <owl:Class rdf:about="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#ReconvertingObligation">
+        <rdfs:subClassOf rdf:resource="http://www.opengis.net/ont/geosparql#Feature"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#metadata"/>
+                <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#reconversionObligationDetails"/>
+                <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#reconversionObliationDetails"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#intoPermanentGrassland"/>
+                <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#intoSensitivePermanentGrassland"/>
+                <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <skos:definition xml:lang="en">--Name--
+Reconverting obligation
+
+--Definition--
+Obligation to reconvert arable land into PG  according to the provisions of Art. 45(2) of R (EU) 1307/2014
+
+--Description--
+The reconversion obligation compensates the decrease of PG  by more than 5 % compared to a reference ratio to be established by Member States in 2015
+
+NOTE
+The land reconverted shall be considered as permanent grassland as of the first day of reconversion.</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#AdministrativeCheck -->
+
+
+    <owl:Class rdf:about="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#AdministrativeCheck"/>
+    
+
+
+    <!-- http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#OnTheSpotCheck -->
+
+
+    <owl:Class rdf:about="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#OnTheSpotCheck"/>
+    
+
+
+    <!-- http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#OtscItem -->
+
+
+    <owl:Class rdf:about="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#OtscItem"/>
+    
+
+
+    <!-- http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#SamplingStratum -->
+
+
+    <owl:Class rdf:about="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#SamplingStratum"/>
+    
+
+
+    <!-- http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-parcel#ConversionParameter -->
+
+
+    <owl:Class rdf:about="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-parcel#ConversionParameter"/>
+    
+
+
+    <!-- http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-parcel#EcologicalFocusArea -->
+
+
+    <owl:Class rdf:about="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-parcel#EcologicalFocusArea"/>
+    
+
+
+    <!-- http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-parcel#LandscapeFeature -->
+
+
+    <owl:Class rdf:about="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-parcel#LandscapeFeature"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotations
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    <rdf:Description rdf:about="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#advance">
+        <rdfs:label xml:lang="en">Area calculated</rdfs:label>
+        <skos:definition xml:lang="en">-- Definition --
+Area which is calculated and aid paid to farmer.
+-- Description --
+Area which is calculated and aid paid to farmer.</skos:definition>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#declaredArea">
+        <rdfs:label xml:lang="en">Area declared</rdfs:label>
+        <skos:definition xml:lang="en">-- Definition --
+Area declared.
+-- Description --
+As regards the area-related direct payment, each Member State shall determine the minimum size of agricultural parcels in respect of which an application may be made. However, the minimum size shall not exceed 0,3 ha.</skos:definition>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#declaredEcologicalFocusArea">
+        <rdfs:label xml:lang="en">Ecological focus area declared</rdfs:label>
+        <skos:definition xml:lang="en">-- Definition --
+Total ecological focus area declared.
+-- Description --
+Total ecological focus area declared after all factors are applied. Ecological focus area shall be determined using EFA conversion parameters (when necessary). 
+NOTE. Sum of EcologicalFocusAreaDetermined.determinedEcologicalFocusArea and EcologicalFocusArea.EcologicalFocusArea (if conversion is not needed) within one application.</skos:definition>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#declaredEntitlementArea">
+        <rdfs:label xml:lang="en">Entitlements declared</rdfs:label>
+        <skos:definition xml:lang="en">-- Definition --
+Entitlement area declared by one farmer within all holding sites.
+-- Description --
+Alphanumerical value. Mandatory for SPS only. Subject for enabling of entitlements (Area) on all area declared.
+NOTE. declaredEntitlementArea &lt;=declaredArea.</skos:definition>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#ecologicalFocusAreaCollective">
+        <rdfs:label xml:lang="en">Total area of ecological focus areas within collective implementation</rdfs:label>
+        <skos:definition xml:lang="en">-- Definition --
+Ecological focus area.
+-- Description --
+Total area of ecological focus areas within collective implementation.</skos:definition>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#requiredEcologicalFocusArea">
+        <rdfs:label xml:lang="en">Ecological focus area required</rdfs:label>
+        <skos:definition xml:lang="en">-- Definition --
+Total ecological focus area required.
+-- Description --
+Total ecological focus area required. 
+NOTE. EFA required is 0,05*arableLand (declared) area.</skos:definition>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 5.1.18) https://github.com/owlcs/owlapi/ -->
+
+

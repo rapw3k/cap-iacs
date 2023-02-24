@@ -1,0 +1,1683 @@
+[ {
+  "@id" : "_:genid1",
+  "http://schema.org/affiliation" : [ {
+    "@id" : "_:genid2"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#seeAlso" : [ {
+    "@id" : "http://orcid.org/0000-0003-4289-4922"
+  } ],
+  "http://xmlns.com/foaf/0.1/name" : [ {
+    "@value" : "Raul Palma"
+  } ]
+}, {
+  "@id" : "_:genid10",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#cardinality" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+    "@value" : "1"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#agriculturalEquivalentPracticeType"
+  } ]
+}, {
+  "@id" : "_:genid11",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#cardinality" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+    "@value" : "1"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#detailsOfAgriculturalPracticesForOnTheSpotCheck"
+  } ]
+}, {
+  "@id" : "_:genid12",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#cardinality" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+    "@value" : "1"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#equivalentAgriculturalPracticeRequirement"
+  } ]
+}, {
+  "@id" : "_:genid13",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#maxCardinality" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+    "@value" : "1"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#agriculturalPracticeId"
+  } ]
+}, {
+  "@id" : "_:genid14",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#minCardinality" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+    "@value" : "1"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#applicationDetailsForAdministrativeChecks"
+  } ]
+}, {
+  "@id" : "_:genid15",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#minCardinality" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+    "@value" : "1"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#applicationsInTheStratum"
+  } ]
+}, {
+  "@id" : "_:genid16",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#minCardinality" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+    "@value" : "1"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#supportSchemeType"
+  } ]
+}, {
+  "@id" : "_:genid17",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#cardinality" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+    "@value" : "1"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#declaredArea"
+  } ]
+}, {
+  "@id" : "_:genid18",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#cardinality" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+    "@value" : "1"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#declaredEcologicalFocusArea"
+  } ]
+}, {
+  "@id" : "_:genid19",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#cardinality" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+    "@value" : "1"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#holdindSubmissionInAidApplicationDetails"
+  } ]
+}, {
+  "@id" : "_:genid2",
+  "http://xmlns.com/foaf/0.1/name" : [ {
+    "@value" : "PSNC"
+  } ]
+}, {
+  "@id" : "_:genid20",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#cardinality" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+    "@value" : "1"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#requiredEcologicalFocusArea"
+  } ]
+}, {
+  "@id" : "_:genid21",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#maxCardinality" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+    "@value" : "1"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#applicationDetailsForReconversion"
+  } ]
+}, {
+  "@id" : "_:genid22",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#maxCardinality" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+    "@value" : "1"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#applicationDetailsOfOtscItems"
+  } ]
+}, {
+  "@id" : "_:genid23",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#maxCardinality" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+    "@value" : "1"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#declaredEntitlementArea"
+  } ]
+}, {
+  "@id" : "_:genid24",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#cardinality" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+    "@value" : "1"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#submissionDate"
+  } ]
+}, {
+  "@id" : "_:genid25",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#maxCardinality" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+    "@value" : "1"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#withdrawalDate"
+  } ]
+}, {
+  "@id" : "_:genid26",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#minCardinality" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+    "@value" : "1"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#collectiveImplementationDetailsForEcologicalFocusAreas"
+  } ]
+}, {
+  "@id" : "_:genid27",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#cardinality" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+    "@value" : "1"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#ecologicalFocusAreaCollective"
+  } ]
+}, {
+  "@id" : "_:genid28",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#cardinality" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+    "@value" : "1"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#ecologicalFocusAreaType"
+  } ]
+}, {
+  "@id" : "_:genid29",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#cardinality" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+    "@value" : "1"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#cropGroupAreaRelatedAidSchemaDetailsInAidApplication"
+  } ]
+}, {
+  "@id" : "_:genid3",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#minCardinality" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+    "@value" : "1"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#detailsOfAgriculturalParcelsForCrossCompliance"
+  } ]
+}, {
+  "@id" : "_:genid30",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#cardinality" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+    "@value" : "1"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#cropGruopTypeAreaRelatedAidSchema"
+  } ]
+}, {
+  "@id" : "_:genid31",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#cardinality" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+    "@value" : "1"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#declaredArea"
+  } ]
+}, {
+  "@id" : "_:genid32",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#cardinality" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+    "@value" : "1"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#detailsOfCropGroupAreaRelatedAidSchemaForPayment"
+  } ]
+}, {
+  "@id" : "_:genid33",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#cardinality" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+    "@value" : "1"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#cropGroupGreeningDetailsInAidApplication"
+  } ]
+}, {
+  "@id" : "_:genid34",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#cardinality" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+    "@value" : "1"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#cropGruopTypeGreening"
+  } ]
+}, {
+  "@id" : "_:genid35",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#cardinality" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+    "@value" : "1"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#declaredArea"
+  } ]
+}, {
+  "@id" : "_:genid36",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#cardinality" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+    "@value" : "1"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#detailsOfCropGroupGreeningForPayment"
+  } ]
+}, {
+  "@id" : "_:genid37",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#maxCardinality" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+    "@value" : "1"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#crop"
+  } ]
+}, {
+  "@id" : "_:genid38",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#minCardinality" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+    "@value" : "1"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#crossComplianceRulesForLandscapeFeatures"
+  } ]
+}, {
+  "@id" : "_:genid39",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#cardinality" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+    "@value" : "1"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#crossComplianceRule"
+  } ]
+}, {
+  "@id" : "_:genid4",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#cardinality" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+    "@value" : "1"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#agriculturalParcelDetailsWithinCropGroupGreening"
+  } ]
+}, {
+  "@id" : "_:genid40",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#cardinality" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+    "@value" : "1"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#detailsOfCrossComplianceForOnTheSpotCheck"
+  } ]
+}, {
+  "@id" : "_:genid41",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#cardinality" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+    "@value" : "1"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#ecologicalFocusAreaConvertedWithinApplication"
+  } ]
+}, {
+  "@id" : "_:genid42",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#cardinality" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+    "@value" : "1"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#ecologicalFocusAreaDetailsForConversion"
+  } ]
+}, {
+  "@id" : "_:genid43",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#cardinality" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+    "@value" : "1"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#declaredEcologicalFocusAreaFeatures"
+  } ]
+}, {
+  "@id" : "_:genid44",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#minCardinality" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+    "@value" : "1"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#surveyDetailsForMeasurements"
+  } ]
+}, {
+  "@id" : "_:genid45",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#cardinality" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+    "@value" : "1"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#farmersSurveyFeatureType"
+  } ]
+}, {
+  "@id" : "_:genid46",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#cardinality" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+    "@value" : "1"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#geometry"
+  } ]
+}, {
+  "@id" : "_:genid47",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#cardinality" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+    "@value" : "1"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#geometrySource"
+  } ]
+}, {
+  "@id" : "_:genid48",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#cardinality" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+    "@value" : "1"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#measurementsWithinSurveyDetails"
+  } ]
+}, {
+  "@id" : "_:genid49",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#cardinality" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+    "@value" : "1"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#farmersMeasurementId"
+  } ]
+}, {
+  "@id" : "_:genid5",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#cardinality" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+    "@value" : "1"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#declaredArea"
+  } ]
+}, {
+  "@id" : "_:genid50",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#maxCardinality" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+    "@value" : "1"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#estimatedAccuracy"
+  } ]
+}, {
+  "@id" : "_:genid51",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#minCardinality" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+    "@value" : "1"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#paymentDetailsForAdministrativeChecks"
+  } ]
+}, {
+  "@id" : "_:genid52",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#minCardinality" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+    "@value" : "1"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#supportSchemaType"
+  } ]
+}, {
+  "@id" : "_:genid53",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#cardinality" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+    "@value" : "1"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#advance"
+  } ]
+}, {
+  "@id" : "_:genid54",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#cardinality" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+    "@value" : "1"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#paymentDetailsForFarmer"
+  } ]
+}, {
+  "@id" : "_:genid55",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#maxCardinality" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+    "@value" : "11"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#supportSchemaType"
+  } ]
+}, {
+  "@id" : "_:genid56",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#cardinality" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+    "@value" : "1"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#metadata"
+  } ]
+}, {
+  "@id" : "_:genid57",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#cardinality" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+    "@value" : "1"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#reconversionObligationDetails"
+  } ]
+}, {
+  "@id" : "_:genid58",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#maxCardinality" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+    "@value" : "1"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#reconversionObliationDetails"
+  } ]
+}, {
+  "@id" : "_:genid59",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#cardinality" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+    "@value" : "1"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#intoPermanentGrassland"
+  } ]
+}, {
+  "@id" : "_:genid6",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#maxCardinality" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+    "@value" : "1"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#geometry"
+  } ]
+}, {
+  "@id" : "_:genid60",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#cardinality" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+    "@value" : "1"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#intoSensitivePermanentGrassland"
+  } ]
+}, {
+  "@id" : "_:genid7",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#maxCardinality" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+    "@value" : "1"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#specieCode"
+  } ]
+}, {
+  "@id" : "_:genid8",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#maxCardinality" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+    "@value" : "1"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#varietalName"
+  } ]
+}, {
+  "@id" : "_:genid9",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#cardinality" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+    "@value" : "1"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#agriculturalEquivalentPracticeSubtype"
+  } ]
+}, {
+  "@id" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Ontology" ],
+  "http://purl.org/dc/terms/creator" : [ {
+    "@id" : "_:genid1"
+  } ],
+  "http://purl.org/dc/terms/description" : [ {
+    "@language" : "en",
+    "@value" : "Ontology of the aid applications and payment claims used in IACS, generated from the transformation of the corresponding JRC application schema"
+  } ],
+  "http://purl.org/dc/terms/rights" : [ {
+    "@language" : "en",
+    "@value" : "This ontology is distributed under Creative Commons Attribution 4.0 License - http://creativecommons.org/licenses/by/4.0"
+  } ],
+  "http://purl.org/dc/terms/source" : [ {
+    "@language" : "en",
+    "@value" : "JRC IACS application schema. https://doi.org/10.1016/j.landusepol.2016.05.023"
+  } ],
+  "http://purl.org/dc/terms/title" : [ {
+    "@language" : "en",
+    "@value" : "JRC IACS - Aid Applications and Payment Claims Ontology"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Aid applications and payment claims"
+  } ],
+  "http://www.w3.org/2002/07/owl#imports" : [ {
+    "@id" : "http://www.opengis.net/ont/geosparql"
+  }, {
+    "@id" : "https://raw.githubusercontent.com/rapw3k/cap-iacs/main/cap-iacs-base.ttl"
+  } ],
+  "http://www.w3.org/2002/07/owl#versionIRI" : [ {
+    "@id" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid/3.0"
+  } ],
+  "http://www.w3.org/2002/07/owl#versionInfo" : [ {
+    "@value" : "3.0"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "-- Name --\r\nAid applications and payment claims\r\n\r\n-- Definition --\r\nThis is a placeholder.\r\n\r\n-- Description --\r\nAid applications and payment claims system application schema.The contents of an «ApplicationSchema» package exported as a GML Application Schema file."
+  } ]
+}, {
+  "@id" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#AgriculturalEquivalentPracticeRequirementValue",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "List of agricultural equivalent practices"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "Agricultural equivalent practice requirement value\r\n\r\nList of requirements qualifying agricultural practices as equivalent to the practices beneficial for the climate and the environment descibed in Chapter 3 of R 1307/2013.\r\nThe broad list of equivalent practices are included in Annex IX of R 1307/2013.\r\n\r\nThe equivalent practices go beyond the relevant mandatory standards established pursuant to Chapter I of Title VI of Regulation (EU) No 1306/2013, which aim to meet objectives relating to soil and water quality, biodiversity, landscape preservation, and climate change mitigation and adaptation. Those certification schemes may include the practices listed in Annex IX to this Regulation, the practices referred to in paragraph 2 of this Article, or a combination of those practices."
+  } ]
+}, {
+  "@id" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#AgriculturalEquivalentPracticeSubtypeValue",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "List of agricultural equivalent subpractices"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "Agricultural equivalent practice subtype value\r\n\r\nBroad categories of agricultural equivalent practices beneficial for the climate and the environment as listed in Annex IX of R 1307/2013."
+  } ]
+}, {
+  "@id" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#AgriculturalEquivalentPracticeTypeValue",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "List of agricultural equivalent practices requirements"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "Agricultural Equivalent Practice Type value\r\n\r\nValues of equivalent agricultural practice types in sense of Art. 43(3)(a) and (b) of R 1307/2013."
+  } ]
+}, {
+  "@id" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#AgriculturalParcel",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Agricultural parcel"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.opengis.net/ont/geosparql#Feature"
+  }, {
+    "@id" : "_:genid3"
+  }, {
+    "@id" : "_:genid4"
+  }, {
+    "@id" : "_:genid5"
+  }, {
+    "@id" : "_:genid6"
+  }, {
+    "@id" : "_:genid7"
+  }, {
+    "@id" : "_:genid8"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "-- Definition --\r\nAgricultural parcel.\r\n-- Description --\r\nAgricultural parcel within agricultural areas (and or reference parcels). Declared by farmer."
+  } ]
+}, {
+  "@id" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#AgriculturalPractice",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Agricultural Practices"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.opengis.net/ont/geosparql#Feature"
+  }, {
+    "@id" : "_:genid9"
+  }, {
+    "@id" : "_:genid10"
+  }, {
+    "@id" : "_:genid11"
+  }, {
+    "@id" : "_:genid12"
+  }, {
+    "@id" : "_:genid13"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "Agricultural Practice\r\n\r\nFarmers entitled to a payment under BPS/ SAPS shall observe, on all their eligible hectares within the meaning of Article 32(2) to (5), the agricultural practices beneficial for the climate and the environment."
+  } ]
+}, {
+  "@id" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#AgriculturalPracticeRequirementValue",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "Agricultural practice requirement value\r\n\r\nList of agricultural practice requirement values as defined in Art. (44) (1), (2),(3) and Art. 46 (4) of R (EU) 1307/2013."
+  } ]
+}, {
+  "@id" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#AgriculturalPracticeTypeValue",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "List of agricultural practices"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "Agricultural practice type value\r\n\r\nList agricultural practices beneficial for the climate and the environment as detailed in Chapter 3 of R 1307/2013."
+  } ]
+}, {
+  "@id" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#Application",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Application"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.opengis.net/ont/geosparql#Feature"
+  }, {
+    "@id" : "_:genid14"
+  }, {
+    "@id" : "_:genid15"
+  }, {
+    "@id" : "_:genid16"
+  }, {
+    "@id" : "_:genid17"
+  }, {
+    "@id" : "_:genid18"
+  }, {
+    "@id" : "_:genid19"
+  }, {
+    "@id" : "_:genid20"
+  }, {
+    "@id" : "_:genid21"
+  }, {
+    "@id" : "_:genid22"
+  }, {
+    "@id" : "_:genid23"
+  }, {
+    "@id" : "_:genid24"
+  }, {
+    "@id" : "_:genid25"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "Application\r\n\r\nDocumentation of this feature type will be provided in frame of development of the Applications and payment claims application schema.\r\n\r\nNOTE\r\nThis feature type is currently a draft."
+  } ]
+}, {
+  "@id" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#CollectiveImplementation",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Collective ecological focus area implementation"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.opengis.net/ont/geosparql#Feature"
+  }, {
+    "@id" : "_:genid26"
+  }, {
+    "@id" : "_:genid27"
+  }, {
+    "@id" : "_:genid28"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "-- Definition --\r\nCollective ecological focus area implementation.\r\n-- Description --\r\nEcological focus area participating in collective implementation."
+  } ]
+}, {
+  "@id" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#CropGroupAreaRelatedAidSchema",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Payment crop group area related aid schema"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.opengis.net/ont/geosparql#Feature"
+  }, {
+    "@id" : "_:genid29"
+  }, {
+    "@id" : "_:genid30"
+  }, {
+    "@id" : "_:genid31"
+  }, {
+    "@id" : "_:genid32"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "-- Definition --\r\nPayment crop group area related aid schema.\r\n-- Description --\r\nCrop groups (in the context of IACS). Automatically defined and agregated by administration using application entries. This is placeholder for all payment schemas (except \"greening\", which have different place holder named CropGroupGreening) and area-related support measures (area-related support measures - in current version of the model not implemented yet)."
+  } ]
+}, {
+  "@id" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#CropGroupGreening",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Payment crop group grreening"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.opengis.net/ont/geosparql#Feature"
+  }, {
+    "@id" : "_:genid33"
+  }, {
+    "@id" : "_:genid34"
+  }, {
+    "@id" : "_:genid35"
+  }, {
+    "@id" : "_:genid36"
+  }, {
+    "@id" : "_:genid37"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "-- Definition --\r\nCrop group greening.\r\n-- Description --\r\nCrop groups (in the context of IACS). Auto defined and aggregated by administration from application entries."
+  } ]
+}, {
+  "@id" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#CropGroupTypeAreaRelatedSupportSchemaValue",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "List of payment crop groups"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "-- Definition --\r\nList of payment crop groups.\r\n-- Description --\r\nList of crop groups related with area-related support schemas."
+  } ]
+}, {
+  "@id" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#CropGroupTypeGreeningValue",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "List of payment crop groups"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "-- Definition --\r\nList of payment crop groups.\r\n-- Description --\r\nList of crop groups related with greening."
+  } ]
+}, {
+  "@id" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#CropValue",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "List of crops"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "Crop value\r\n\r\nList of  crops in sense of Art. 44(4) of R (EU) 809/2014  that is needed for checking crop diversification.\r\n\r\nNOTE\r\nRequired if cropGroupTypeGreening = certainCrop."
+  } ]
+}, {
+  "@id" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#CrossCompliance",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Cross-compliance"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.opengis.net/ont/geosparql#Feature"
+  }, {
+    "@id" : "_:genid38"
+  }, {
+    "@id" : "_:genid39"
+  }, {
+    "@id" : "_:genid40"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "-- Definition --\r\nCross-compliance data.\r\n-- Description --\r\nCross-compliance data."
+  } ]
+}, {
+  "@id" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#EcologicalFocusAreaConverted",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Converted ecological focus area"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.opengis.net/ont/geosparql#Feature"
+  }, {
+    "@id" : "_:genid41"
+  }, {
+    "@id" : "_:genid42"
+  }, {
+    "@id" : "_:genid43"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "-- Definition --\r\nConverted ecological focus area within application.\r\n-- Description --\r\nEFA declared in application and converted using conversion parameters."
+  } ]
+}, {
+  "@id" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#EcologicalFocusAreaTypeCollectiveValue",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "List of ecological focused areas for collective implementation"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "-- Definition --\r\nList of ecological focused areas for collective implementation.\r\n-- Description --\r\nList of feature (ecological focus areas) types based on Article 46(3) 1307/2013."
+  } ]
+}, {
+  "@id" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#FarmersSurvey",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Surveys of the farmers"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.opengis.net/ont/geosparql#Feature"
+  }, {
+    "@id" : "_:genid44"
+  }, {
+    "@id" : "_:genid45"
+  }, {
+    "@id" : "_:genid46"
+  }, {
+    "@id" : "_:genid47"
+  }, {
+    "@id" : "_:genid48"
+  }, {
+    "@id" : "_:genid49"
+  }, {
+    "@id" : "_:genid50"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "-- Definition --\r\nSurvey and measurements.\r\n-- Description --\r\nSurveys and (measurements within surveys) of the farmer. Dedicated for upload to different parts of IACS."
+  } ]
+}, {
+  "@id" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#FarmersSurveyFeatureTypeValue",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "List of feature types"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "-- Definition --\r\nList of possible feature types measured and provided by farmer.\r\n-- Description --\r\nList of feature types possible to survey / measure by farmer. After these measured features are submitted (during application process) then authority (data custodians) may confirm or reject their reference data update (update based on farmer's survey and or measurement).\r\nNOTE. List may be extended or subtracted depending on how MS organizing reference data update process."
+  } ]
+}, {
+  "@id" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#GeometrySourceValue",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "List of geometry sources"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "-- Definition --\r\nList of geometry sources.\r\n-- Description --\r\nList of geometry sources."
+  } ]
+}, {
+  "@id" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#Payment",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Payment"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.opengis.net/ont/geosparql#Feature"
+  }, {
+    "@id" : "_:genid51"
+  }, {
+    "@id" : "_:genid52"
+  }, {
+    "@id" : "_:genid53"
+  }, {
+    "@id" : "_:genid54"
+  }, {
+    "@id" : "_:genid55"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "-- Definition --\r\nPayment.\r\n-- Description --\r\nOne payment, one application, one farmer. Place holder for payment schema specific attributes. Container of variables collected from: application (Declared), controls (Determined) and from RDMBS operators (Calculated)."
+  } ]
+}, {
+  "@id" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#ReconvertingObligation",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.opengis.net/ont/geosparql#Feature"
+  }, {
+    "@id" : "_:genid56"
+  }, {
+    "@id" : "_:genid57"
+  }, {
+    "@id" : "_:genid58"
+  }, {
+    "@id" : "_:genid59"
+  }, {
+    "@id" : "_:genid60"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "--Name--\r\nReconverting obligation\r\n\r\n--Definition--\r\nObligation to reconvert arable land into PG  according to the provisions of Art. 45(2) of R (EU) 1307/2014\r\n\r\n--Description--\r\nThe reconversion obligation compensates the decrease of PG  by more than 5 % compared to a reference ratio to be established by Member States in 2015\r\n\r\nNOTE\r\nThe land reconverted shall be considered as permanent grassland as of the first day of reconversion."
+  } ]
+}, {
+  "@id" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#advance",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Area calculated"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://qudt.org/schema/qudt/QuantityValue"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "-- Definition --\r\nArea which is calculated and aid paid to farmer.\r\n-- Description --\r\nArea which is calculated and aid paid to farmer."
+  } ]
+}, {
+  "@id" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#agriculturalEquivalentPracticeSubtype",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "The type of equivalent agricultural practice"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#AgriculturalEquivalentPracticeSubtypeValue"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "Agricultural equivalent practice type\r\n\r\nSubtypes of equivalent agricultural practices in sense of Art.43(3)(a) and (b) of R 1307/2013 .\r\n\r\nThe values are given in the AgriculturalEquivalentPracticeValue code list."
+  } ]
+}, {
+  "@id" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#agriculturalEquivalentPracticeType",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Type of equivalent agricultural practice"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#AgriculturalEquivalentPracticeTypeValue"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "Agricultural equivalent practice type\r\n\r\nType of equivalent agricultural practice in sense of Art. 43(3) of R 1307/2013.\r\n\r\nThe values of equivalent practice types are given in the AgriculturalEquivalentPraciceType code list."
+  } ]
+}, {
+  "@id" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#agriculturalParcelDetailsWithinCropGroupGreening",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#CropGroupGreening"
+  } ]
+}, {
+  "@id" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#agriculturalPracticeId",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Unique thematic ID of agricultural practice"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "Unique thematic ID of agricultural practice\r\n\r\nThematic identifier at national level, generally the full national code of the agricultural practice."
+  } ]
+}, {
+  "@id" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#agriculturalPracticeRequirementType",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Type of agricultural practice"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#AgriculturalPracticeRequirementValue"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "Agricultural practice requirement type\r\n\r\nThis property describes the agricultural practices required for minimum activity (Art. 4) and greening, or for exemption from greening according to  Art. (44) and 46 of R (EU) 1307/2013."
+  } ]
+}, {
+  "@id" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#applicationDetailsForAdministrativeChecks",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#AdministrativeCheck"
+  } ]
+}, {
+  "@id" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#applicationDetailsForReconversion",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#ReconvertingObligation"
+  } ]
+}, {
+  "@id" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#applicationDetailsOfOtscItems",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#OtscItem"
+  } ]
+}, {
+  "@id" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#applicationsInTheStratum",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#SamplingStratum"
+  } ]
+}, {
+  "@id" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#collectiveImplementationDetailsForEcologicalFocusAreas",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-parcel#EcologicalFocusArea"
+  } ]
+}, {
+  "@id" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#collectiveImplementationDetailsForHoldingSites",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-base#Site"
+  } ]
+}, {
+  "@id" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#collectiveImplementationDocument",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Non-structured evidence - document, provided with aid application"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-base#SupplementaryDocument"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "-- Definition --\r\nSupplementary document, legal basis contract or designation provided with aid application by farmer.\r\n-- Description --\r\nEXAMPLES: description, document, additional measurement data, etc."
+  } ]
+}, {
+  "@id" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#crop",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Type of certain crop"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#CropValue"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "-- Definition --\r\nType of certain crop.\r\n-- Description --\r\nType of certain (or single) crop. \r\nNOTE. If cropGroupTypeGreening = certainCrop, then crop must be defined."
+  } ]
+}, {
+  "@id" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#cropGroupAreaRelatedAidSchemaDetailsInAidApplication",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#Application"
+  } ]
+}, {
+  "@id" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#cropGroupGreeningDetailsInAidApplication",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#Application"
+  } ]
+}, {
+  "@id" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#cropGruopTypeAreaRelatedAidSchema",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Type of certain area related aid schema payment crop group"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#CropGroupTypeAreaRelatedSupportSchemaValue"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "-- Definition --\r\nType of area related aid schema crop group.\r\n-- Description --\r\nType of area related aid schema payment crop group."
+  } ]
+}, {
+  "@id" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#cropGruopTypeGreening",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Type of certain greening crop group"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#CropGroupTypeGreeningValue"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "-- Definition --\r\nType of greening crop group.\r\n-- Description --\r\nType of greening crop group."
+  } ]
+}, {
+  "@id" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#crossComplianceRule",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Cross-compliance rule"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-base#CrossComplianceRuleDescription"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "-- Definition --\r\nCross-compliance rule description.\r\n\r\n-- Description --\r\nCross-compliance rule description. Declared by the farmer.\r\n\r\nNOTE. If there is no aid application these rules still are mandatory to observe."
+  } ]
+}, {
+  "@id" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#crossComplianceRulesForLandscapeFeatures",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-parcel#LandscapeFeature"
+  } ]
+}, {
+  "@id" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#declaredArea",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Area declared"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://qudt.org/schema/qudt/QuantityValue"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "-- Definition --\r\nArea declared.\r\n-- Description --\r\nAs regards the area-related direct payment, each Member State shall determine the minimum size of agricultural parcels in respect of which an application may be made. However, the minimum size shall not exceed 0,3 ha."
+  } ]
+}, {
+  "@id" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#declaredEcologicalFocusArea",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Ecological focus area declared"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://qudt.org/schema/qudt/QuantityValue"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "-- Definition --\r\nTotal ecological focus area declared.\r\n-- Description --\r\nTotal ecological focus area declared after all factors are applied. Ecological focus area shall be determined using EFA conversion parameters (when necessary). \r\nNOTE. Sum of EcologicalFocusAreaDetermined.determinedEcologicalFocusArea and EcologicalFocusArea.EcologicalFocusArea (if conversion is not needed) within one application."
+  } ]
+}, {
+  "@id" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#declaredEcologicalFocusAreaFeatures",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Ecological focus area features declared"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#integer"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "-- Definition --\r\nEcological focus area features declared (or \"features in farm\").\r\n-- Description --\r\nEcological focus area features declared.  Ecological focus area features shall be used in order to determine the area of ecological focus area using conversion parameters (when necessary)."
+  } ]
+}, {
+  "@id" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#declaredEntitlementArea",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Entitlements declared"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://qudt.org/schema/qudt/QuantityValue"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "-- Definition --\r\nEntitlement area declared by one farmer within all holding sites.\r\n-- Description --\r\nAlphanumerical value. Mandatory for SPS only. Subject for enabling of entitlements (Area) on all area declared.\r\nNOTE. declaredEntitlementArea <=declaredArea."
+  } ]
+}, {
+  "@id" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#detailsOfAgriculturalParcelsForCrossCompliance",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#CrossCompliance"
+  } ]
+}, {
+  "@id" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#detailsOfAgriculturalPracticesForOnTheSpotCheck",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#OnTheSpotCheck"
+  } ]
+}, {
+  "@id" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#detailsOfCropGroupAreaRelatedAidSchemaForPayment",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#Payment"
+  } ]
+}, {
+  "@id" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#detailsOfCropGroupGreeningForPayment",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#Payment"
+  } ]
+}, {
+  "@id" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#detailsOfCrossComplianceForOnTheSpotCheck",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#OnTheSpotCheck"
+  } ]
+}, {
+  "@id" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#ecologicalFocusAreaCollective",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Total area of ecological focus areas within collective implementation"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://qudt.org/schema/qudt/QuantityValue"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "-- Definition --\r\nEcological focus area.\r\n-- Description --\r\nTotal area of ecological focus areas within collective implementation."
+  } ]
+}, {
+  "@id" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#ecologicalFocusAreaConvertedWithinApplication",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#Application"
+  } ]
+}, {
+  "@id" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#ecologicalFocusAreaDetailsForConversion",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-parcel#ConversionParameter"
+  } ]
+}, {
+  "@id" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#ecologicalFocusAreaType",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Type of ecological focus area for collective implementation"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#EcologicalFocusAreaTypeCollectiveValue"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "-- Definition --\r\nType of ecological focus area for collective implementation.\r\n-- Description --\r\nNot all type of ecological focus area are suitable for collective implementation."
+  } ]
+}, {
+  "@id" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#equivalentAgriculturalPracticeRequirement",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "The subtype of equivalent agricultural practice, requirement"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#AgriculturalEquivalentPracticeRequirementValue"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "Equivalent agricultural practice requirement\r\n\r\nRequirement against the equivalent agricultural practice as detailed in Annex IX of R 1307/2013.\r\n\r\nThe values of requirements are given in the AgriculturalEquivalentPracticeRequirementValue code list."
+  } ]
+}, {
+  "@id" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#estimatedAccuracy",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Estimated absolute positional accuracy "
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#double"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "-- Definition --\r\nEstimated absolute positional accuracy.\r\n-- Description --\r\nEstimated absolute positional accuracy of the object measured in the used coordinate reference system. Absolute positional accuracy is the mean value of the positional uncertainties for a set of positions, where the positional uncertainties are the distance between a measured position and what is considered as the corresponding true position. This mean value may come from quality measures on a homogeneous population of objects measured or from an estimation based on the knowledge of the production processes and of their accuracy."
+  } ]
+}, {
+  "@id" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#farmersMeasurementId",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Unique thematic ID of farmers survey"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "-- Definition --\r\nUnique thematic ID of farmer's measurement within a survey.\r\n-- Description --\r\nThematic identifier at national level, generally the full national code of the farmer's  measurement within a survey.\r\nNOTE. Object (real world phenomena) description. It may be the code of object measured."
+  } ]
+}, {
+  "@id" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#farmersSurveyFeatureType",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Geometry source"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#FarmersSurveyFeatureTypeValue"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "-- Definition --\r\nFeature type measured by farmer.\r\n-- Description --\r\nFeature type measured by farmer."
+  } ]
+}, {
+  "@id" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#geometry",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Geometry of agricultural area"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.opengis.net/ont/geosparql#Geometry"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "-- Definition --\r\nGeometry of agricultural parcel.\r\n-- Description --\r\nRepresentation of the geographical dimension/position of the agricultural parcel.\r\nNOTE. In case of GM_Point geometry - clementini point should be used."
+  } ]
+}, {
+  "@id" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#geometrySource",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Geometry source"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#GeometrySourceValue"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "-- Definition --\r\nGeometry source.\r\n-- Description --\r\nSurvey or measurement geometry source."
+  } ]
+}, {
+  "@id" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#holdindSubmissionInAidApplicationDetails",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-base#Holding"
+  } ]
+}, {
+  "@id" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#intoPermanentGrassland",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#boolean"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "Into permanent grassland\r\n\r\nPossible value of the reconverting obligation\r\n\r\nNOTE\r\nIntoPermanentGrassland  and the IntoSensitivePermanentGrassland are mutually exclusive values."
+  } ]
+}, {
+  "@id" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#intoSensitivePermanentGrassland",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#boolean"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "Into sensitive permanent grassland\r\n\r\nPossible values of reconverting obligation.\r\n\r\nNOTE\r\nIntoPermanentGrassland  and the IntoSensitivePermanentGrassland are mutually exclusive values."
+  } ]
+}, {
+  "@id" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#measurementsWithinSurveyDetails",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#FarmersSurvey"
+  } ]
+}, {
+  "@id" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#metadata",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-base#FeatureLevelMetadata"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "Metadata\r\n\r\nFeature level metadata of the reconverting obligation. \r\n\r\nNOTE\r\nThis property brings the life cycle and the validity information of reconverting obligation, which also permits to register when the obligation was implemented by the farmer.  As soon as the reconversion happens, the life cycle of he obligation should end."
+  } ]
+}, {
+  "@id" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#nonStructuredEvidenceCitation",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Non-structured evidence - citation"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-base#SupplementaryDocumentCitation"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "-- Definition --\r\nAny citation that supports the application process.\r\n-- Description --\r\nURL."
+  } ]
+}, {
+  "@id" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#nonStructuredEvidenceDocument",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Non-structured evidence - document"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-base#SupplementaryDocument"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "-- Definition --\r\nAny record  that supports the application process.\r\n-- Description --\r\nEXAMPLES: description, sketch, photo, document, additional measurement data, etc."
+  } ]
+}, {
+  "@id" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#paymentDetailsForAdministrativeChecks",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#AdministrativeCheck"
+  } ]
+}, {
+  "@id" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#paymentDetailsForFarmer",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-beneficiery#Farmer"
+  } ]
+}, {
+  "@id" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#reconversionObliationDetails",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#OtscItem"
+  } ]
+}, {
+  "@id" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#reconversionObligationDetails",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#Application"
+  } ]
+}, {
+  "@id" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#requiredEcologicalFocusArea",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Ecological focus area required"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://qudt.org/schema/qudt/QuantityValue"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "-- Definition --\r\nTotal ecological focus area required.\r\n-- Description --\r\nTotal ecological focus area required. \r\nNOTE. EFA required is 0,05*arableLand (declared) area."
+  } ]
+}, {
+  "@id" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#specieCode",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Vegetable or agricultural specie code"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-base#SpecieCodeValue"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "-- Definition --\r\nVegetable or agricultural specie code.\r\n-- Description --\r\nIf MS asks Farmer to provide particular specie, then Farmer must provide it in his declaration. \r\nNOTE. Common catalogue of varieties of agricultural plant species. Fifth supplement to the 29th complete edition (2011/C 168 A/01).\r\nNOTE. Common catalogue of varieties of vegetable species. 32nd complete edition (2013/C 312 A/01).\r\nNOTE. Only when: agriculturalAreaType=arableLand."
+  } ]
+}, {
+  "@id" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#submissionDate",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Application submission date"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#date"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "Submission date\r\n\r\nDate of when the application was submitted."
+  } ]
+}, {
+  "@id" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#supportSchemaType",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Support schema type"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-base#SupportSchemeTypeValue"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "-- Definition --\r\nSupport schema type.\r\n-- Description --\r\nSupport schema types (based on Annex I 1307/2013) used in application.\r\nNOTE. Currently in this model version only maximum 11 support schemas have data place holders."
+  } ]
+}, {
+  "@id" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#supportSchemeType",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Support schema type"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-base#SupportSchemeTypeValue"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "-- Definition --\r\nSupport schema type.\r\n-- Description --\r\nSupport schema types (based on Annex I 1307/2013) used in application.\r\nNOTE. Currently in this model version only maximum 11 schemas have data place holders."
+  } ]
+}, {
+  "@id" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#surveyDetailsForMeasurements",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#FarmersSurvey"
+  } ]
+}, {
+  "@id" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#varietalName",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Varietal name"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-base#VarietalNameValue"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "-- Definition --\r\nVarietal name.\r\n-- Description --\r\nInformation referring to the variety within a specie. If MS asks Farmer to provide particular specie variety, then Farmer must provide it in his declaration. Varieties (cultures of any of the different genera defined in the botanical classification of crops) may be provided by maintainers (MS). \r\nNOTE. Common catalogue of varieties of agricultural plant species. Fifth supplement to the 29th complete edition (2011/C 168 A/01).\r\nNOTE. Common catalogue of varieties of vegetable species. 32nd complete edition (2013/C 312 A/01).\r\nNOTE. Only when: agriculturalAreaType=arableLand."
+  } ]
+}, {
+  "@id" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#withdrawalDate",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Application correction date"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#date"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "Withdrawal date\r\n\r\nWhere the competent authority has not yet informed the beneficiary of any errors contained in the aid application or payment claim nor announced an on-the-spot check, beneficiaries should be entitled to withdraw their aid applications [Preamble (3)and Art 3(2) of R 809/2014 ."
+  } ]
+}, {
+  "@id" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#AdministrativeCheck",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#OnTheSpotCheck",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#OtscItem",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#SamplingStratum",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-parcel#ConversionParameter",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-parcel#EcologicalFocusArea",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-parcel#LandscapeFeature",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+} ]
