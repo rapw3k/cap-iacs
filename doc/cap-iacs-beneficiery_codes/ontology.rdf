@@ -1,0 +1,239 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-beneficiery/code#"
+     xml:base="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-beneficiery/code"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:foaf="http://xmlns.com/foaf/0.1/"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+     xmlns:terms="http://purl.org/dc/terms/"
+     xmlns:schema="http://schema.org/">
+    <owl:Ontology rdf:about="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-beneficiery/code">
+        <owl:versionIRI rdf:resource="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-base/code/3.0"/>
+        <terms:creator rdf:nodeID="genid1"/>
+        <terms:description xml:lang="en">Ontology of the system to record the identity of each beneficiary code lists used in IACS, generated from the transformation of the corresponding JRC application schema</terms:description>
+        <terms:rights xml:lang="en">This ontology is distributed under Creative Commons Attribution 4.0 License - http://creativecommons.org/licenses/by/4.0</terms:rights>
+        <terms:source xml:lang="en">JRC IACS application schema. https://doi.org/10.1016/j.landusepol.2016.05.023</terms:source>
+        <terms:title xml:lang="en">JRC IACS - System to Record the Identity of Each Beneficiary Code Lists</terms:title>
+        <rdfs:label xml:lang="en">System to record the identity of each beneficiary code lists</rdfs:label>
+        <owl:versionInfo>3.0</owl:versionInfo>
+    </owl:Ontology>
+    <rdf:Description rdf:nodeID="genid1">
+        <schema:affiliation>
+            <rdf:Description>
+                <foaf:name>PSNC</foaf:name>
+            </rdf:Description>
+        </schema:affiliation>
+        <rdfs:seeAlso rdf:resource="http://orcid.org/0000-0003-4289-4922"/>
+        <foaf:name>Raul Palma</foaf:name>
+    </rdf:Description>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://purl.org/dc/terms/creator -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/creator"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/description -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/description"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/isFormatOf -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/isFormatOf"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/rights -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/rights"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/source -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/source"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/title -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/title"/>
+    
+
+
+    <!-- http://schema.org/affiliation -->
+
+
+    <owl:AnnotationProperty rdf:about="http://schema.org/affiliation"/>
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#definition -->
+
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2004/02/skos/core#definition"/>
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#inScheme -->
+
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2004/02/skos/core#inScheme"/>
+    
+
+
+    <!-- http://xmlns.com/foaf/0.1/name -->
+
+
+    <owl:AnnotationProperty rdf:about="http://xmlns.com/foaf/0.1/name"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-beneficiery#FarmerTypeValue -->
+
+
+    <owl:Class rdf:about="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-beneficiery#FarmerTypeValue"/>
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#ConceptScheme -->
+
+
+    <owl:Class rdf:about="http://www.w3.org/2004/02/skos/core#ConceptScheme"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-beneficiery/code#FarmerTypeValue -->
+
+
+    <owl:NamedIndividual rdf:about="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-beneficiery/code#FarmerTypeValue">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#ConceptScheme"/>
+        <terms:isFormatOf rdf:resource="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-beneficiery#FarmerTypeValue"/>
+        <rdfs:label xml:lang="en">List of farmer type values</rdfs:label>
+        <skos:definition xml:lang="en">-- Definition --
+List of farmer type values.
+-- Description --
+List of possible farmer type values based on Actor model (Dynamic Model).</skos:definition>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-beneficiery/code#FarmerTypeValue/farmer -->
+
+
+    <owl:NamedIndividual rdf:about="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-beneficiery/code#FarmerTypeValue/farmer">
+        <rdf:type rdf:resource="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-beneficiery#FarmerTypeValue"/>
+        <rdfs:label xml:lang="en">Farmer</rdfs:label>
+        <skos:definition xml:lang="en">-- Definition --
+Farmer.
+-- Description --
+Item description.
+NOTE 1. Item note.
+EXAMPLE 1. Item example.</skos:definition>
+        <skos:inScheme rdf:resource="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-beneficiery/code#FarmerTypeValue"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-beneficiery/code#FarmerTypeValue/farmerActive -->
+
+
+    <owl:NamedIndividual rdf:about="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-beneficiery/code#FarmerTypeValue/farmerActive">
+        <rdf:type rdf:resource="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-beneficiery#FarmerTypeValue"/>
+        <rdfs:label xml:lang="en">Active farmer</rdfs:label>
+        <skos:definition xml:lang="en">-- Definition --
+Active farmer.
+-- Description --
+Item description.
+NOTE 1. Item note.
+EXAMPLE 1. Item example.</skos:definition>
+        <skos:inScheme rdf:resource="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-beneficiery/code#FarmerTypeValue"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-beneficiery/code#FarmerTypeValue/farmerActiveApplicant -->
+
+
+    <owl:NamedIndividual rdf:about="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-beneficiery/code#FarmerTypeValue/farmerActiveApplicant">
+        <rdf:type rdf:resource="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-beneficiery#FarmerTypeValue"/>
+        <rdfs:label xml:lang="en">Active farmer who is applicant</rdfs:label>
+        <skos:definition xml:lang="en">-- Definition --
+Active farmer who is applicant.
+-- Description --
+Item description.
+NOTE 1. Item note.
+EXAMPLE 1. Item example.</skos:definition>
+        <skos:inScheme rdf:resource="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-beneficiery/code#FarmerTypeValue"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-beneficiery/code#FarmerTypeValue/farmerActiveApplicantBeneficiery -->
+
+
+    <owl:NamedIndividual rdf:about="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-beneficiery/code#FarmerTypeValue/farmerActiveApplicantBeneficiery">
+        <rdf:type rdf:resource="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-beneficiery#FarmerTypeValue"/>
+        <rdfs:label xml:lang="en">Active farmer who is applicant and beneficiery</rdfs:label>
+        <skos:definition xml:lang="en">-- Definition --
+Active farmer who is applicant and beneficiary.
+-- Description --
+Active farmer who is applicant and receiving the aid - beneficiary.</skos:definition>
+        <skos:inScheme rdf:resource="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-beneficiery/code#FarmerTypeValue"/>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 5.1.18) https://github.com/owlcs/owlapi/ -->
+
+
