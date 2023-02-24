@@ -26,7 +26,7 @@ mapPreds = {
 }
 
 widoco_jar = "/opt/widoco/widoco-1.4.15-jar-with-dependencies.jar"
-ont_file = "glosis_main"
+ont_file = "cap-iacs-main"
 templ_file = "template.json"
 
 creators = []
