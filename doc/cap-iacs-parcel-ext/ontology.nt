@@ -1,0 +1,62 @@
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-parcel-ext> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-parcel-ext> <http://www.w3.org/2002/07/owl#versionIRI> <http://lpis.ec.europa.eu/registry/applicationschema/cap-parcel-ext/1.0> .
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-parcel-ext> <http://www.w3.org/2002/07/owl#imports> <https://raw.githubusercontent.com/rapw3k/cap-iacs/main/cap-iacs-parcel.ttl> .
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-parcel-ext> <http://purl.org/dc/terms/creator> <http://lpis.ec.europa.eu/registry/applicationschema/cap-parcel-ext_:genid-nodeid-node1gq1ujd74x3> .
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-parcel-ext> <http://purl.org/dc/terms/creator> _:genid1 .
+_:genid1 <http://xmlns.com/foaf/0.1/name> "Raul Palma" .
+_:genid1 <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://orcid.org/0000-0003-4289-4922> .
+_:genid1 <http://schema.org/affiliation> _:genid2 .
+_:genid2 <http://xmlns.com/foaf/0.1/name> "PSNC" .
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-parcel-ext> <http://purl.org/dc/terms/creator> _:genid3 .
+_:genid3 <http://xmlns.com/foaf/0.1/name> "Bogusz Janiak" .
+_:genid3 <http://schema.org/affiliation> _:genid4 .
+_:genid4 <http://xmlns.com/foaf/0.1/name> "PSNC" .
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-parcel-ext> <http://purl.org/dc/terms/description> "Extension of the identification system for agricultural parcels Ontology used in IACS that includes former Reference Parcel subtypes : CadParcel, AgrParcel, FarBlock, PhyBlock, TopoBlock and MixedParcelType"@en .
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-parcel-ext> <http://purl.org/dc/terms/rights> "This ontology is distributed under Creative Commons Attribution 4.0 License - http://creativecommons.org/licenses/by/4.0"@en .
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-parcel-ext> <http://purl.org/dc/terms/source> "JRC IACS application schema. https://doi.org/10.1016/j.landusepol.2016.05.023"@en .
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-parcel-ext> <http://purl.org/dc/terms/title> "JRC IACS Extension - Extension of the identification System for Agricultural Parcels Ontology"@en .
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-parcel-ext> <http://www.w3.org/2002/07/owl#versionInfo> "1.0" .
+# 
+# 
+# #################################################################
+# #
+# #    Classes
+# #
+# #################################################################
+# 
+# 
+# http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#AgriculturalParcel
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#AgriculturalParcel> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-parcel#ReferenceParcel> .
+# 
+# http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-parcel#CadParcel
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-parcel#CadParcel> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-parcel#CadParcel> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-parcel#ReferenceParcel> .
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-parcel#CadParcel> <http://www.w3.org/2000/01/rdf-schema#label> "Cadastral parcel"@en .
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-parcel#CadParcel> <http://www.w3.org/2004/02/skos/core#definition> "Reference Parcel subtype that is not anymore a core element of current IACS model. Main Features: i) one or more farmers; ii) based on ownership; iii) one or more crop groups"@en .
+# 
+# http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-parcel#FarBlock
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-parcel#FarBlock> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-parcel#FarBlock> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-parcel#ReferenceParcel> .
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-parcel#FarBlock> <http://www.w3.org/2000/01/rdf-schema#label> "Farmer's block"@en .
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-parcel#FarBlock> <http://www.w3.org/2004/02/skos/core#definition> "Reference Parcel subtype that is not anymore a core element of current IACS model. Main Features: i) single farmer; ii) one or more crop groups; iii) no natural boundaries"@en .
+# 
+# http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-parcel#MixedParcel
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-parcel#MixedParcel> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-parcel#MixedParcel> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-parcel#ReferenceParcel> .
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-parcel#MixedParcel> <http://www.w3.org/2000/01/rdf-schema#label> "Mixed parcel"@en .
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-parcel#MixedParcel> <http://www.w3.org/2004/02/skos/core#definition> "Reference Parcel subtype that is not anymore a core element of current IACS model. Mixed parcel type"@en .
+# 
+# http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-parcel#PhyBlock
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-parcel#PhyBlock> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-parcel#PhyBlock> <http://www.w3.org/2002/07/owl#equivalentClass> <http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-parcel#TopoBlock> .
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-parcel#PhyBlock> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-parcel#ReferenceParcel> .
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-parcel#PhyBlock> <http://www.w3.org/2000/01/rdf-schema#label> "Physical block"@en .
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-parcel#PhyBlock> <http://www.w3.org/2004/02/skos/core#definition> "Reference Parcel subtype that is not anymore a core element of current IACS model. Main Features: i) one or more farmers; ii) area bordered by certain features; iii) one or more crop groups"@en .
+# 
+# http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-parcel#TopoBlock
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-parcel#TopoBlock> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-parcel#TopoBlock> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-parcel#ReferenceParcel> .
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-parcel#TopoBlock> <http://www.w3.org/2000/01/rdf-schema#label> "Topographical block"@en .
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-parcel#TopoBlock> <http://www.w3.org/2004/02/skos/core#definition> "Reference Parcel subtype that is not anymore a core element of current IACS model. Main Features: i) one or more farmers; ii) area bordered by certain features; iii) one or more crop groups"@en .
+# 
+# Generated by the OWL API (version 5.1.18) https://github.com/owlcs/owlapi/
