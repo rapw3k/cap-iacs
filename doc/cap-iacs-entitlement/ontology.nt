@@ -1,0 +1,163 @@
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-entitlement> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-entitlement> <http://www.w3.org/2002/07/owl#versionIRI> <http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-entitlement/3.0> .
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-entitlement> <http://www.w3.org/2002/07/owl#imports> <http://www.opengis.net/ont/geosparql> .
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-entitlement> <http://www.w3.org/2002/07/owl#imports> <https://raw.githubusercontent.com/rapw3k/cap-iacs/main/cap-iacs-aid.ttl> .
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-entitlement> <http://purl.org/dc/terms/creator> _:genid1 .
+_:genid1 <http://xmlns.com/foaf/0.1/name> "Raul Palma" .
+_:genid1 <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://orcid.org/0000-0003-4289-4922> .
+_:genid1 <http://schema.org/affiliation> _:genid2 .
+_:genid2 <http://xmlns.com/foaf/0.1/name> "PSNC" .
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-entitlement> <http://purl.org/dc/terms/description> "Ontology of the system for the identification and registration of payment entitlements used in IACS, generated from the transformation of the corresponding JRC application schema"@en .
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-entitlement> <http://purl.org/dc/terms/rights> "This ontology is distributed under Creative Commons Attribution 4.0 License - http://creativecommons.org/licenses/by/4.0"@en .
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-entitlement> <http://purl.org/dc/terms/source> "JRC IACS application schema. https://doi.org/10.1016/j.landusepol.2016.05.023"@en .
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-entitlement> <http://purl.org/dc/terms/title> "JRC IACS - System for the Identification and Registration of Payment Entitlements Ontology"@en .
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-entitlement> <http://www.w3.org/2000/01/rdf-schema#label> "System for the identification and registration of payment entitlements"@en .
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-entitlement> <http://www.w3.org/2002/07/owl#versionInfo> "3.0" .
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-entitlement> <http://www.w3.org/2004/02/skos/core#definition> "-- Name --\r\nSystem for the identification and registration of payment entitlements\r\n\r\n-- Definition --\r\nThis package is a placeholder for the Application schema for System for the identification and registration of payment entitlements.\r\n\r\n-- Description --\r\nThe contents of an «ApplicationSchema» package exported as a GML Application Schema file. The system for the identification and registration of payment entitlements shall allow for verification of the entitlements and for cross-checks with the aid applications and the identification system for agricultural parcels. Also shall allow direct and immediate consultation, through the competent authority of the Member State, of the data relating to at least the previous four consecutive calendar years."@en .
+# 
+# 
+# #################################################################
+# #
+# #    Object Properties
+# #
+# #################################################################
+# 
+# 
+# http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-entitlement#areaValue
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-entitlement#areaValue> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-entitlement#areaValue> <http://www.w3.org/2000/01/rdf-schema#range> <http://qudt.org/schema/qudt/QuantityValue> .
+# 
+# http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-entitlement#entitlementConfirmationDetails
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-entitlement#entitlementConfirmationDetails> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-entitlement#entitlementConfirmationDetails> <http://www.w3.org/2000/01/rdf-schema#range> <http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#Application> .
+# 
+# http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-entitlement#obtainOrigin
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-entitlement#obtainOrigin> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-entitlement#obtainOrigin> <http://www.w3.org/2000/01/rdf-schema#range> <http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-entitlement#OriginEntitlementObtainValue> .
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-entitlement#obtainOrigin> <http://www.w3.org/2000/01/rdf-schema#label> "Entitlement obtain source"@en .
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-entitlement#obtainOrigin> <http://www.w3.org/2004/02/skos/core#definition> "-- Definition --\r\nEntitlement obtain source.\r\n-- Description --\r\nItem description.\r\nNOTE 1. Item note.\r\nEXAMPLE 1. Item example."@en .
+# 
+# http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-entitlement#reserveOrigin
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-entitlement#reserveOrigin> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-entitlement#reserveOrigin> <http://www.w3.org/2000/01/rdf-schema#range> <http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-entitlement#OriginEntitlementReserveValue> .
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-entitlement#reserveOrigin> <http://www.w3.org/2000/01/rdf-schema#label> "Entitlement reserve source"@en .
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-entitlement#reserveOrigin> <http://www.w3.org/2004/02/skos/core#definition> "-- Definition --\r\nEntitlement reserve source.\r\n-- Description --\r\nItem description.\r\nNOTE 1. Item note.\r\nEXAMPLE 1. Item example."@en .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Data properties
+# #
+# #################################################################
+# 
+# 
+# http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-entitlement#areaValue
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-entitlement#areaValue> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+# 
+# http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-entitlement#dateEstablishment
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-entitlement#dateEstablishment> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-entitlement#dateEstablishment> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#date> .
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-entitlement#dateEstablishment> <http://www.w3.org/2000/01/rdf-schema#label> "Date of entitlement establishment"@en .
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-entitlement#dateEstablishment> <http://www.w3.org/2004/02/skos/core#definition> "-- Definition --\r\nDate of entitlement establishment.\r\n-- Description --\r\nDate when entitlement was legally established."@en .
+# 
+# http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-entitlement#dateLastActivation
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-entitlement#dateLastActivation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-entitlement#dateLastActivation> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#date> .
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-entitlement#dateLastActivation> <http://www.w3.org/2000/01/rdf-schema#label> "Date of last activation of entitlement"@en .
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-entitlement#dateLastActivation> <http://www.w3.org/2004/02/skos/core#definition> "-- Definition --\r\nDate of last activation of entitlement.\r\n-- Description --\r\nItem description.\r\nNOTE 1. Item note.\r\nEXAMPLE 1. Item example."@en .
+# 
+# http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-entitlement#entitlementId
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-entitlement#entitlementId> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-entitlement#entitlementId> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-entitlement#entitlementId> <http://www.w3.org/2000/01/rdf-schema#label> "Unique thematic ID of a payment entitlement"@en .
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-entitlement#entitlementId> <http://www.w3.org/2004/02/skos/core#definition> "-- Definition --\r\nUnique thematic ID of a payment entitlement.\r\n-- Description --\r\nThematic identifier at national level, generally the full national code of the payment entitlement."@en .
+# 
+# http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-entitlement#preReformStatus
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-entitlement#preReformStatus> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-entitlement#preReformStatus> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-entitlement#preReformStatus> <http://www.w3.org/2000/01/rdf-schema#label> "Pre-reform status"@en .
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-entitlement#preReformStatus> <http://www.w3.org/2004/02/skos/core#definition> "-- Definition --\r\nPre-reform status.\r\n-- Description --\r\nItem description.\r\nNOTE 1. Item note.\r\nEXAMPLE 1. Item example."@en .
+# 
+# http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-entitlement#regionalRestrictions
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-entitlement#regionalRestrictions> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-entitlement#regionalRestrictions> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-entitlement#regionalRestrictions> <http://www.w3.org/2000/01/rdf-schema#label> "Regional restrictions"@en .
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-entitlement#regionalRestrictions> <http://www.w3.org/2004/02/skos/core#definition> "-- Definition --\r\nRegional restrictions.\r\n-- Description --\r\nItem description.\r\nNOTE 1. Item note.\r\nEXAMPLE 1. Item example."@en .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Classes
+# #
+# #################################################################
+# 
+# 
+# http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-entitlement#Entitlement
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-entitlement#Entitlement> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-entitlement#Entitlement> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.opengis.net/ont/geosparql#Feature> .
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-entitlement#Entitlement> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid3 .
+_:genid3 <http://www.w3.org/2002/07/owl#cardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid3 <http://www.w3.org/2002/07/owl#onProperty> <http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-entitlement#areaValue> .
+_:genid3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-entitlement#Entitlement> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid4 .
+_:genid4 <http://www.w3.org/2002/07/owl#cardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid4 <http://www.w3.org/2002/07/owl#onProperty> <http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-entitlement#obtainOrigin> .
+_:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-entitlement#Entitlement> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid5 .
+_:genid5 <http://www.w3.org/2002/07/owl#cardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid5 <http://www.w3.org/2002/07/owl#onProperty> <http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-entitlement#reserveOrigin> .
+_:genid5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-entitlement#Entitlement> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid6 .
+_:genid6 <http://www.w3.org/2002/07/owl#maxCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid6 <http://www.w3.org/2002/07/owl#onProperty> <http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-entitlement#entitlementConfirmationDetails> .
+_:genid6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-entitlement#Entitlement> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid7 .
+_:genid7 <http://www.w3.org/2002/07/owl#cardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid7 <http://www.w3.org/2002/07/owl#onProperty> <http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-entitlement#dateEstablishment> .
+_:genid7 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-entitlement#Entitlement> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid8 .
+_:genid8 <http://www.w3.org/2002/07/owl#cardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid8 <http://www.w3.org/2002/07/owl#onProperty> <http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-entitlement#entitlementId> .
+_:genid8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-entitlement#Entitlement> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid9 .
+_:genid9 <http://www.w3.org/2002/07/owl#maxCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid9 <http://www.w3.org/2002/07/owl#onProperty> <http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-entitlement#dateLastActivation> .
+_:genid9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-entitlement#Entitlement> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid10 .
+_:genid10 <http://www.w3.org/2002/07/owl#maxCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid10 <http://www.w3.org/2002/07/owl#onProperty> <http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-entitlement#preReformStatus> .
+_:genid10 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-entitlement#Entitlement> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid11 .
+_:genid11 <http://www.w3.org/2002/07/owl#maxCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid11 <http://www.w3.org/2002/07/owl#onProperty> <http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-entitlement#regionalRestrictions> .
+_:genid11 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-entitlement#Entitlement> <http://www.w3.org/2000/01/rdf-schema#label> "Entitlement"@en .
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-entitlement#Entitlement> <http://www.w3.org/2004/02/skos/core#definition> "-- Definition --\r\nPayment entitlements SPS only.\r\n-- Description --\r\nPlaceholder of payment entitlements for MS who use SPS systems only.\r\nNOTE. The system for the identification and registration of payment entitlements provided for in Article 71 of Regulation (EU) 1306/2013 shall be an electronic register at Member State level and shall, in particular with regard to the cross-checks provided for in paragraph 1 of that Article, ensure effective traceability."@en .
+# 
+# http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-entitlement#OriginEntitlementObtainValue
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-entitlement#OriginEntitlementObtainValue> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-entitlement#OriginEntitlementObtainValue> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-entitlement#OriginEntitlementObtainValue> <http://www.w3.org/2000/01/rdf-schema#label> "Obtain origin values"@en .
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-entitlement#OriginEntitlementObtainValue> <http://www.w3.org/2004/02/skos/core#definition> "-- Definition --\r\nEntitlement obtain origin values.\r\n-- Description --\r\nList of possible entitlement obtain sources."@en .
+# 
+# http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-entitlement#OriginEntitlementReserveValue
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-entitlement#OriginEntitlementReserveValue> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-entitlement#OriginEntitlementReserveValue> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-entitlement#OriginEntitlementReserveValue> <http://www.w3.org/2000/01/rdf-schema#label> "Reserve origin values"@en .
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-entitlement#OriginEntitlementReserveValue> <http://www.w3.org/2004/02/skos/core#definition> "-- Definition --\r\nEntitlement reserve origin values.\r\n-- Description --\r\nList of possible entitlement reserve sources."@en .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Annotations
+# #
+# #################################################################
+# 
+# 
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-entitlement#areaValue> <http://www.w3.org/2000/01/rdf-schema#label> "Annual area value"@en .
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-entitlement#areaValue> <http://www.w3.org/2004/02/skos/core#definition> "-- Definition --\r\nAnnual area value.\r\n-- Description --\r\nItem description.\r\nNOTE 1. Item note.\r\nEXAMPLE 1. Item example."@en .
+# 
+# Generated by the OWL API (version 5.1.18) https://github.com/owlcs/owlapi/
