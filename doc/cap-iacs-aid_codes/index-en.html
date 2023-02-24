@@ -1,0 +1,2950 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+ <link rel="stylesheet" href="resources/primer.css" media="screen" />    <link rel="stylesheet" href="resources/rec.css" media="screen" />    <link rel="stylesheet" href="resources/extra.css" media="screen" />    <link rel="stylesheet" href="resources/owl.css" media="screen" />    <title>JRC IACS - Aid Applications and Payment Claims Code Lists</title>
+
+
+<!-- SCHEMA.ORG METADATA -->
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"TechArticle","url":"http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid/code","image":"http://vowl.visualdataweb.org/webvowl/#iri=http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid/code","name":"JRC IACS - Aid Applications and Payment Claims Code Lists", "headline":"This ontology is one of the modules comprising CAP-IACS (Common Agriculture Policy - Integrated Administration and Control System) ontology. The CAP-IACS ontology was developed part of the Open-IACS project, which aims to provide an open platform for the exchange of solutions in the field of Integrated Agricultural Control System (IACS) through the paradigm of connected open data. The ontology has been derived from the derived from the JRC IACS application schema.", "datePublished":"Date of release", "version":"3.0", "license":"https://creativecommons.org/licenses/by/4.0/", "author":[{"@type":"Person","name":"Raul Palma","url":"http://orcid.org/0000-0003-4289-4922"}]}</script>
+
+<script src="resources/jquery.js"></script> 
+<script src="resources/marked.min.js"></script> 
+    <script> 
+function loadHash() {
+  jQuery(".markdown").each(function(el){jQuery(this).after(marked(jQuery(this).text())).remove()});
+	var hash = location.hash;
+	if($(hash).offset()!=null){
+	  $('html, body').animate({scrollTop: $(hash).offset().top}, 0);
+}
+	loadTOC();
+}
+function loadTOC(){
+	//process toc dynamically
+	  var t='<h2>Table of contents</h2><ul>';i = 1;j=0;
+	  jQuery(".list").each(function(){
+		if(jQuery(this).is('h2')){
+			if(j>0){
+				t+='</ul>';
+				j=0;
+			}
+			t+= '<li>'+i+'. <a href=#'+ jQuery(this).attr('id')+'>'+ jQuery(this).ignore("span").text()+'</a></li>';
+			i++;
+		}
+		if(jQuery(this).is('h3')){
+			if(j==0){
+				t+='<ul>';
+			}
+			j++;
+			t+= '<li>'+(i-1)+'.'+j+'. '+'<a href=#'+ jQuery(this).attr('id')+'>'+ jQuery(this).ignore("span").text()+'</a></li>';
+		}
+	  });
+	  t+='</ul>';
+	  $("#toc").html(t); 
+}
+$(function(){
+    loadHash();
+}); $.fn.ignore = function(sel){
+        return this.clone().find(sel||">*").remove().end();
+ }; 
+   </script> 
+  </head> 
+
+<body>
+<div class="container">
+<div class="head">
+<div style="float:right">language <a href="index-en.html"><b>en</b></a> </div>
+<h1>JRC IACS - Aid Applications and Payment Claims Code Lists</h1>
+<h2>Release Date of release</h2>
+
+
+<dl>
+<dt>This version:</dt>
+<dd><a href="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid/code/3.0">http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid/code/3.0</a></dd>
+<dt>Revision:</dt>
+<dd>3.0</dd>
+<dt>Authors:</dt>
+<dd><a href="http://orcid.org/0000-0003-4289-4922">Raul Palma</a>, PSNC</dd>
+
+<dt>Download serialization:</dt><dd><span><a href="ontology.jsonld" target="_blank"><img src="https://img.shields.io/badge/Format-JSON_LD-blue.svg" alt="JSON-LD" /></a> </span><span><a href="ontology.rdf" target="_blank"><img src="https://img.shields.io/badge/Format-RDF/XML-blue.svg" alt="RDF/XML" /></a> </span><span><a href="ontology.nt" target="_blank"><img src="https://img.shields.io/badge/Format-N_Triples-blue.svg" alt="N-Triples" /></a> </span><span><a href="ontology.ttl" target="_blank"><img src="https://img.shields.io/badge/Format-TTL-blue.svg" alt="TTL" /></a> </span></dd><dt>License:</dt><dd><a href="https://creativecommons.org/licenses/by/4.0/" target="_blank"><img src="https://img.shields.io/badge/License-CC_BY_4.0-blue.svg" alt="https://creativecommons.org/licenses/by/4.0/" /></a>
+<a href="https://creativecommons.org/licenses/by/4.0/" rel="license" target="_blank">
+<img src="https://en.wikipedia.org/wiki/Creative_Commons_license#/media/File:CC_BY_icon.svg" style="border-width:0" alt="License" />
+</a>
+<br/></dd><dt>Visualization:</dt><dd><a href="webvowl/index.html#" target="_blank"><img src="https://img.shields.io/badge/Visualize_with-WebVowl-blue.svg" alt="Visualize with WebVowl" /></a></dd>
+<!-- <dt>Evaluation:</dt><dd><a href="OOPSEvaluation/oopsEval.html#" target="_blank"><img src="https://img.shields.io/badge/Evaluate_with-OOPS! (OntOlogy Pitfall Scanner!)-blue.svg" alt="Evaluate with OOPS!" /></a></dd> --></dl>
+
+<a href="provenance/provenance-en.html" target="_blank">Provenance of this page</a><hr/>
+</div>
+<div class="status">
+<div>
+<span>CAP-IACS Ontology Specification Draft</span>
+</div>
+</div>     <div id="abstract"><h2>Abstract</h2><span class="markdown">
+This ontology is one of the modules comprising CAP-IACS (Common Agriculture Policy - Integrated Administration and Control System) ontology. The CAP-IACS ontology was developed part of the Open-IACS project, which aims to provide an open platform for the exchange of solutions in the field of Integrated Agricultural Control System (IACS) through the paradigm of connected open data. The ontology has been derived from the derived from the JRC IACS application schema.</span>
+</div>
+<div id="toc"></div> 
+
+<!--INTRODUCTION SECTION-->
+    <div id="introduction"><h2 id="intro" class="list">Introduction <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+<span class="markdown">
+This is a place holder text for the introduction. The introduction should briefly describe the ontology, its motivation, state of the art and goals.</span>
+</div>
+  
+
+<!--OVERVIEW SECTION-->
+    <div id="overview"><h2 id="overv" class="list">CAP-IACS Ontology: Main module: Overview <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+<span class="markdown">
+This ontology has the following classes and properties.</span>
+<h4>Named Individuals</h4><ul xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" class="hlist">
+   <li>
+      <a href="#CropGroupTypeAreaRelatedSupportSchemaValue/activationOfBpsOrSaps"
+         title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid/code#CropGroupTypeAreaRelatedSupportSchemaValue/activationOfBpsOrSaps">Activation of BPS or SAPS</a>
+   </li>
+   <li>
+      <a href="#EcologicalFocusAreaTypeCollectiveValue/afforestedAreas"
+         title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid/code#EcologicalFocusAreaTypeCollectiveValue/afforestedAreas">Afforested areas</a>
+   </li>
+   <li>
+      <a href="#FarmersSurveyFeatureTypeValue/agriculturalArea"
+         title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid/code#FarmersSurveyFeatureTypeValue/agriculturalArea">Agricultural area</a>
+   </li>
+   <li>
+      <a href="#AgriculturalEquivalentPracticeRequirementValue/specificProductionRegime"
+         title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid/code#AgriculturalEquivalentPracticeRequirementValue/specificProductionRegime">
+         <span>agricultural equivalent practice requirement value/specific production regime</span>
+      </a>
+   </li>
+   <li>
+      <a href="#FarmersSurveyFeatureTypeValue/agriculturalParcel"
+         title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid/code#FarmersSurveyFeatureTypeValue/agriculturalParcel">Agricultural parcel</a>
+   </li>
+   <li>
+      <a href="#AgriculturalPracticeRequirementValue"
+         title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid/code#AgriculturalPracticeRequirementValue">
+         <span>agricultural practice requirement value</span>
+      </a>
+   </li>
+   <li>
+      <a href="#AgriculturalPracticeRequirementValue/50%OfArableNotDeclaredInPreviousYear"
+         title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid/code#AgriculturalPracticeRequirementValue/50%OfArableNotDeclaredInPreviousYear">
+         <span>agricultural practice requirement value/50% of arable not declared in previous year</span>
+      </a>
+   </li>
+   <li>
+      <a href="#AgriculturalPracticeRequirementValue/atLeastThreeCrops"
+         title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid/code#AgriculturalPracticeRequirementValue/atLeastThreeCrops">
+         <span>agricultural practice requirement value/at least three crops</span>
+      </a>
+   </li>
+   <li>
+      <a href="#AgriculturalPracticeRequirementValue/atLeastTwoCrops"
+         title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid/code#AgriculturalPracticeRequirementValue/atLeastTwoCrops">
+         <span>agricultural practice requirement value/at least two crops</span>
+      </a>
+   </li>
+   <li>
+      <a href="#AgriculturalPracticeRequirementValue/atLeast5�a"
+         title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid/code#AgriculturalPracticeRequirementValue/atLeast5%Efa">
+         <span>agricultural practice requirement value/at least5% efa</span>
+      </a>
+   </li>
+   <li>
+      <a href="#AgriculturalPracticeRequirementValue/atLeast7�a"
+         title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid/code#AgriculturalPracticeRequirementValue/atLeast7%Efa">
+         <span>agricultural practice requirement value/at least7% efa</span>
+      </a>
+   </li>
+   <li>
+      <a href="#AgriculturalPracticeRequirementValue/atLeast75%OfArableCoveredByGrassesOrLandLyingFallow"
+         title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid/code#AgriculturalPracticeRequirementValue/atLeast75%OfArableCoveredByGrassesOrLandLyingFallow">
+         <span>agricultural practice requirement value/at least75% of arable covered by grasses or land lying fallow</span>
+      </a>
+   </li>
+   <li>
+      <a href="#AgriculturalPracticeRequirementValue/atLeast75%PermanentGrassland"
+         title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid/code#AgriculturalPracticeRequirementValue/atLeast75%PermanentGrassland">
+         <span>agricultural practice requirement value/at least75% permanent grassland</span>
+      </a>
+   </li>
+   <li>
+      <a href="#AgriculturalPracticeRequirementValue/minimumActivity"
+         title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid/code#AgriculturalPracticeRequirementValue/minimumActivity">
+         <span>agricultural practice requirement value/minimum activity</span>
+      </a>
+   </li>
+   <li>
+      <a href="#AgriculturalPracticeRequirementValue/northOf62ndParallel"
+         title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid/code#AgriculturalPracticeRequirementValue/northOf62ndParallel">
+         <span>agricultural practice requirement value/north of62nd parallel</span>
+      </a>
+   </li>
+   <li>
+      <a href="#AgriculturalPracticeTypeValue/equivalentAgriEnvironmentClimateRegulationCommitment"
+         title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid/code#AgriculturalPracticeTypeValue/equivalentAgriEnvironmentClimateRegulationCommitment">
+         <span>agricultural practice type value/equivalent agri environment climate regulation commitment</span>
+      </a>
+   </li>
+   <li>
+      <a href="#AgriculturalPracticeTypeValue/equivalentNationalOrRegionalCertificationScheme"
+         title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid/code#AgriculturalPracticeTypeValue/equivalentNationalOrRegionalCertificationScheme">
+         <span>agricultural practice type value/equivalent national or regional certification scheme</span>
+      </a>
+   </li>
+   <li>
+      <a href="#CropGroupTypeAreaRelatedSupportSchemaValue/anyOtherAreaRelatedAidSchemeOrSupportMeasure"
+         title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid/code#CropGroupTypeAreaRelatedSupportSchemaValue/anyOtherAreaRelatedAidSchemeOrSupportMeasure">Any other area-related aid scheme or support measure</a>
+   </li>
+   <li>
+      <a href="#CropValue/brassicaceaeSolanaceaeAndCucurbitaceaeCulture"
+         title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid/code#CropValue/brassicaceaeSolanaceaeAndCucurbitaceaeCulture">Brassicaceae, Solanaceae, and Cucurbitaceae culture</a>
+   </li>
+   <li>
+      <a href="#EcologicalFocusAreaTypeCollectiveValue/bufferStrips"
+         title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid/code#EcologicalFocusAreaTypeCollectiveValue/bufferStrips">Buffer strips</a>
+   </li>
+   <li>
+      <a href="#CropGroupTypeGreeningValue/certainCrop"
+         title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid/code#CropGroupTypeGreeningValue/certainCrop">Certain crop</a>
+   </li>
+   <li>
+      <a href="#AgriculturalEquivalentPracticeRequirementValue/atLeast3CropsWithMainCrop<75%"
+         title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid/code#AgriculturalEquivalentPracticeRequirementValue/atLeast3CropsWithMainCrop&lt;75%">Commitments undertaken in accordance with agri-environment-climate</a>
+   </li>
+   <li>
+      <a href="#GeometrySourceValue/confirmedByFarmer"
+         title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid/code#GeometrySourceValue/confirmedByFarmer">Confirmed by farmer</a>
+   </li>
+   <li>
+      <a href="#AgriculturalPracticeTypeValue/cropDiversification"
+         title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid/code#AgriculturalPracticeTypeValue/cropDiversification">Crop diversification</a>
+   </li>
+   <li>
+      <a href="#CropValue/cultureOfAnyOfTheDifferentGenera"
+         title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid/code#CropValue/cultureOfAnyOfTheDifferentGenera">Culture of any of the different genera</a>
+   </li>
+   <li>
+      <a href="#GeometrySourceValue/delineatedByFarmer"
+         title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid/code#GeometrySourceValue/delineatedByFarmer">Delineated by farmer</a>
+   </li>
+   <li>
+      <a href="#CropGroupTypeGreeningValue/ecologicalFocusArea"
+         title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid/code#CropGroupTypeGreeningValue/ecologicalFocusArea">Ecological focus area</a>
+   </li>
+   <li>
+      <a href="#FarmersSurveyFeatureTypeValue/ecologicalFocusArea"
+         title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid/code#FarmersSurveyFeatureTypeValue/ecologicalFocusArea">Ecological focus area</a>
+   </li>
+   <li>
+      <a href="#FarmersSurveyFeatureTypeValue/geospatialApplicationBoundary"
+         title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid/code#FarmersSurveyFeatureTypeValue/geospatialApplicationBoundary">Geospatial application boundary</a>
+   </li>
+   <li>
+      <a href="#CropValue/grassesOrOtherHerbaceousForage"
+         title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid/code#CropValue/grassesOrOtherHerbaceousForage">Grasses or other herbaceous forage</a>
+   </li>
+   <li>
+      <a href="#AgriculturalPracticeTypeValue/havingEcologicalFocusAreaOnTheAgriculturalArea"
+         title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid/code#AgriculturalPracticeTypeValue/havingEcologicalFocusAreaOnTheAgriculturalArea">Having ecological focus area on the agricultural area</a>
+   </li>
+   <li>
+      <a href="#CropValue/landLyingFallow"
+         title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid/code#CropValue/landLyingFallow">Land lying fallow</a>
+   </li>
+   <li>
+      <a href="#EcologicalFocusAreaTypeCollectiveValue/landLyingFallow"
+         title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid/code#EcologicalFocusAreaTypeCollectiveValue/landLyingFallow">Land lying fallow</a>
+   </li>
+   <li>
+      <a href="#EcologicalFocusAreaTypeCollectiveValue/landscapeFeaturesTraditionalStoneWalls"
+         title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid/code#EcologicalFocusAreaTypeCollectiveValue/landscapeFeaturesTraditionalStoneWalls">Landscape features traditional stone walls</a>
+   </li>
+   <li>
+      <a href="#EcologicalFocusAreaTypeCollectiveValue/landscapeFeaturesDitches"
+         title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid/code#EcologicalFocusAreaTypeCollectiveValue/landscapeFeaturesDitches">Landscape features, ditches</a>
+   </li>
+   <li>
+      <a href="#EcologicalFocusAreaTypeCollectiveValue/landscapeFeaturesFieldMargin"
+         title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid/code#EcologicalFocusAreaTypeCollectiveValue/landscapeFeaturesFieldMargin">Landscape features, field margin</a>
+   </li>
+   <li>
+      <a href="#EcologicalFocusAreaTypeCollectiveValue/landscapeFeaturesGroupOfTreesFieldCopses"
+         title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid/code#EcologicalFocusAreaTypeCollectiveValue/landscapeFeaturesGroupOfTreesFieldCopses">Landscape features, group of trees/Field copses</a>
+   </li>
+   <li>
+      <a href="#EcologicalFocusAreaTypeCollectiveValue/landscapeFeaturesIsolatedTree"
+         title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid/code#EcologicalFocusAreaTypeCollectiveValue/landscapeFeaturesIsolatedTree">Landscape features, isolated tree</a>
+   </li>
+   <li>
+      <a href="#EcologicalFocusAreaTypeCollectiveValue/landscapeFeaturesOtherProtectedByGaecSmr"
+         title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid/code#EcologicalFocusAreaTypeCollectiveValue/landscapeFeaturesOtherProtectedByGaecSmr">Landscape features, other features not listed in this code list but protected under GAEC7, SMR 2 or SMR 3</a>
+   </li>
+   <li>
+      <a href="#EcologicalFocusAreaTypeCollectiveValue/landscapeFeaturesPonds"
+         title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid/code#EcologicalFocusAreaTypeCollectiveValue/landscapeFeaturesPonds">Landscape features, ponds</a>
+   </li>
+   <li>
+      <a href="#EcologicalFocusAreaTypeCollectiveValue/landscapeFeaturesTreesInLine"
+         title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid/code#EcologicalFocusAreaTypeCollectiveValue/landscapeFeaturesTreesInLine">Landscape features, trees in line</a>
+   </li>
+   <li>
+      <a href="#EcologicalFocusAreaTypeCollectiveValue/landscapeFeaturesHedgesWoodedStrips"
+         title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid/code#EcologicalFocusAreaTypeCollectiveValue/landscapeFeaturesHedgesWoodedStrips">Landscape features: Hedges/wooded strips</a>
+   </li>
+   <li>
+      <a href="#AgriculturalEquivalentPracticeRequirementValue"
+         title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid/code#AgriculturalEquivalentPracticeRequirementValue">List of agricultural equivalent practices</a>
+   </li>
+   <li>
+      <a href="#AgriculturalEquivalentPracticeTypeValue"
+         title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid/code#AgriculturalEquivalentPracticeTypeValue">List of agricultural equivalent practices requirements</a>
+   </li>
+   <li>
+      <a href="#AgriculturalEquivalentPracticeSubtypeValue"
+         title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid/code#AgriculturalEquivalentPracticeSubtypeValue">List of agricultural equivalent subpractices</a>
+   </li>
+   <li>
+      <a href="#AgriculturalPracticeTypeValue"
+         title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid/code#AgriculturalPracticeTypeValue">List of agricultural practices</a>
+   </li>
+   <li>
+      <a href="#CropValue"
+         title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid/code#CropValue">List of crops</a>
+   </li>
+   <li>
+      <a href="#EcologicalFocusAreaTypeCollectiveValue"
+         title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid/code#EcologicalFocusAreaTypeCollectiveValue">List of ecological focused areas for collective implementation</a>
+   </li>
+   <li>
+      <a href="#FarmersSurveyFeatureTypeValue"
+         title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid/code#FarmersSurveyFeatureTypeValue">List of feature types</a>
+   </li>
+   <li>
+      <a href="#GeometrySourceValue"
+         title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid/code#GeometrySourceValue">List of geometry sources</a>
+   </li>
+   <li>
+      <a href="#CropGroupTypeAreaRelatedSupportSchemaValue"
+         title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid/code#CropGroupTypeAreaRelatedSupportSchemaValue">List of payment crop groups</a>
+   </li>
+   <li>
+      <a href="#CropGroupTypeGreeningValue"
+         title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid/code#CropGroupTypeGreeningValue">List of payment crop groups</a>
+   </li>
+   <li>
+      <a href="#AgriculturalPracticeTypeValue/maintainingExistingPermanentGrassland"
+         title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid/code#AgriculturalPracticeTypeValue/maintainingExistingPermanentGrassland">Maintaining existing permanent grassland</a>
+   </li>
+   <li>
+      <a href="#GeometrySourceValue/measuredByFarmer"
+         title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid/code#GeometrySourceValue/measuredByFarmer">Measured by farmer</a>
+   </li>
+   <li>
+      <a href="#AgriculturalEquivalentPracticeRequirementValue/atLeast4Crops"
+         title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid/code#AgriculturalEquivalentPracticeRequirementValue/atLeast4Crops">National or regional environmental certification schemes</a>
+   </li>
+   <li>
+      <a href="#AgriculturalEquivalentPracticeRequirementValue/beneficialMultiannualSequenceOfCropRotation"
+         title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid/code#AgriculturalEquivalentPracticeRequirementValue/beneficialMultiannualSequenceOfCropRotation">National or regional environmental certification schemes</a>
+   </li>
+   <li>
+      <a href="#AgriculturalEquivalentPracticeRequirementValue/catchCrop"
+         title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid/code#AgriculturalEquivalentPracticeRequirementValue/catchCrop">National or regional environmental certification schemes</a>
+   </li>
+   <li>
+      <a href="#AgriculturalEquivalentPracticeRequirementValue/conversionIntoExtensivelyUsedPg"
+         title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid/code#AgriculturalEquivalentPracticeRequirementValue/conversionIntoExtensivelyUsedPg">National or regional environmental certification schemes</a>
+   </li>
+   <li>
+      <a href="#AgriculturalEquivalentPracticeRequirementValue/ecologicalSetAside"
+         title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid/code#AgriculturalEquivalentPracticeRequirementValue/ecologicalSetAside">National or regional environmental certification schemes</a>
+   </li>
+   <li>
+      <a href="#AgriculturalEquivalentPracticeRequirementValue/fertiliserRegime"
+         title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid/code#AgriculturalEquivalentPracticeRequirementValue/fertiliserRegime">National or regional environmental certification schemes</a>
+   </li>
+   <li>
+      <a href="#AgriculturalEquivalentPracticeRequirementValue/forageOrHayEvacuation"
+         title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid/code#AgriculturalEquivalentPracticeRequirementValue/forageOrHayEvacuation">National or regional environmental certification schemes</a>
+   </li>
+   <li>
+      <a href="#AgriculturalEquivalentPracticeRequirementValue/grassOnArablePeatyOrWetSoil"
+         title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid/code#AgriculturalEquivalentPracticeRequirementValue/grassOnArablePeatyOrWetSoil">National or regional environmental certification schemes</a>
+   </li>
+   <li>
+      <a href="#AgriculturalEquivalentPracticeRequirementValue/highNatureValueBufferZone"
+         title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid/code#AgriculturalEquivalentPracticeRequirementValue/highNatureValueBufferZone">National or regional environmental certification schemes</a>
+   </li>
+   <li>
+      <a href="#AgriculturalEquivalentPracticeRequirementValue/localOrTraditionalGrazingBreeds"
+         title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid/code#AgriculturalEquivalentPracticeRequirementValue/localOrTraditionalGrazingBreeds">National or regional environmental certification schemes</a>
+   </li>
+   <li>
+      <a href="#AgriculturalEquivalentPracticeRequirementValue/managementOfLf"
+         title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid/code#AgriculturalEquivalentPracticeRequirementValue/managementOfLf">National or regional environmental certification schemes</a>
+   </li>
+   <li>
+      <a href="#AgriculturalEquivalentPracticeRequirementValue/moreAppropriateCropSelection"
+         title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid/code#AgriculturalEquivalentPracticeRequirementValue/moreAppropriateCropSelection">National or regional environmental certification schemes</a>
+   </li>
+   <li>
+      <a href="#AgriculturalEquivalentPracticeRequirementValue/pGAndCuttingRegime"
+         title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid/code#AgriculturalEquivalentPracticeRequirementValue/pGAndCuttingRegime">National or regional environmental certification schemes</a>
+   </li>
+   <li>
+      <a href="#AgriculturalEquivalentPracticeRequirementValue/pGAndExtensiveGrazing"
+         title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid/code#AgriculturalEquivalentPracticeRequirementValue/pGAndExtensiveGrazing">National or regional environmental certification schemes</a>
+   </li>
+   <li>
+      <a href="#AgriculturalEquivalentPracticeRequirementValue/pGWithGrassVarietiesOrSeedingRegime"
+         title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid/code#AgriculturalEquivalentPracticeRequirementValue/pGWithGrassVarietiesOrSeedingRegime">National or regional environmental certification schemes</a>
+   </li>
+   <li>
+      <a href="#AgriculturalEquivalentPracticeRequirementValue/pGWithLfAndScrubControl"
+         title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid/code#AgriculturalEquivalentPracticeRequirementValue/pGWithLfAndScrubControl">National or regional environmental certification schemes</a>
+   </li>
+   <li>
+      <a href="#AgriculturalEquivalentPracticeRequirementValue/pesticideRestrictions"
+         title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid/code#AgriculturalEquivalentPracticeRequirementValue/pesticideRestrictions">National or regional environmental certification schemes</a>
+   </li>
+   <li>
+      <a href="#AgriculturalEquivalentPracticeRequirementValue/shepherdingOrMountainPastoralism"
+         title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid/code#AgriculturalEquivalentPracticeRequirementValue/shepherdingOrMountainPastoralism">National or regional environmental certification schemes</a>
+   </li>
+   <li>
+      <a href="#AgriculturalEquivalentPracticeRequirementValue/specificCropVarieties"
+         title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid/code#AgriculturalEquivalentPracticeRequirementValue/specificCropVarieties">National or regional environmental certification schemes</a>
+   </li>
+   <li>
+      <a href="#AgriculturalEquivalentPracticeRequirementValue/steepSlopeManagement"
+         title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid/code#AgriculturalEquivalentPracticeRequirementValue/steepSlopeManagement">National or regional environmental certification schemes</a>
+   </li>
+   <li>
+      <a href="#AgriculturalEquivalentPracticeRequirementValue/uncultivatedBufferStripsAndFieldMargins"
+         title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid/code#AgriculturalEquivalentPracticeRequirementValue/uncultivatedBufferStripsAndFieldMargins">National or regional environmental certification schemes</a>
+   </li>
+   <li>
+      <a href="#AgriculturalEquivalentPracticeRequirementValue/wildlifeAreaManagement"
+         title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid/code#AgriculturalEquivalentPracticeRequirementValue/wildlifeAreaManagement">National or regional environmental certification schemes</a>
+   </li>
+   <li>
+      <a href="#AgriculturalEquivalentPracticeRequirementValue/winterSoilCover"
+         title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid/code#AgriculturalEquivalentPracticeRequirementValue/winterSoilCover">National or regional environmental certification schemes</a>
+   </li>
+   <li>
+      <a href="#CropGroupTypeAreaRelatedSupportSchemaValue/otherUses"
+         title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid/code#CropGroupTypeAreaRelatedSupportSchemaValue/otherUses">Other uses</a>
+   </li>
+   <li>
+      <a href="#CropGroupTypeGreeningValue/permanentGrasslandEnvironmentallySensitive"
+         title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid/code#CropGroupTypeGreeningValue/permanentGrasslandEnvironmentallySensitive">Permanent grassland environmentally sensitive</a>
+   </li>
+   <li>
+      <a href="#CropGroupTypeGreeningValue/permanentGrasslandRemaining"
+         title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid/code#CropGroupTypeGreeningValue/permanentGrasslandRemaining">Permanent grassland remaining</a>
+   </li>
+   <li>
+      <a href="#CropGroupTypeGreeningValue/permanentPastureRemaining"
+         title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid/code#CropGroupTypeGreeningValue/permanentPastureRemaining">Permanent pasture remaining</a>
+   </li>
+   <li>
+      <a href="#AgriculturalEquivalentPracticeSubtypeValue/equivalentToCropDiversification"
+         title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid/code#AgriculturalEquivalentPracticeSubtypeValue/equivalentToCropDiversification">Practices equivalent to crop diversification: Crop diversification</a>
+   </li>
+   <li>
+      <a href="#AgriculturalEquivalentPracticeSubtypeValue/equivalentToMaintenanceOfPermanentGrassland"
+         title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid/code#AgriculturalEquivalentPracticeSubtypeValue/equivalentToMaintenanceOfPermanentGrassland">Practices equivalent to maintenance of permanent grassland: Management of meadows or pastures</a>
+   </li>
+   <li>
+      <a href="#AgriculturalEquivalentPracticeSubtypeValue/equivalentToEcologicalFocusArea"
+         title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid/code#AgriculturalEquivalentPracticeSubtypeValue/equivalentToEcologicalFocusArea">Practices equivalent with ecological focus area</a>
+   </li>
+   <li>
+      <a href="#FarmersSurveyFeatureTypeValue/referenceArea"
+         title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid/code#FarmersSurveyFeatureTypeValue/referenceArea">Reference area</a>
+   </li>
+   <li>
+      <a href="#AgriculturalEquivalentPracticeTypeValue/equivalentNationalOrRegionalCertificationScheme"
+         title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid/code#AgriculturalEquivalentPracticeTypeValue/equivalentNationalOrRegionalCertificationScheme">Requirement: lower maximum thresholds apply</a>
+   </li>
+   <li>
+      <a href="#AgriculturalEquivalentPracticeTypeValue/equivalentAgriEnvironmentClimateRegulationCommitment"
+         title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid/code#AgriculturalEquivalentPracticeTypeValue/equivalentAgriEnvironmentClimateRegulationCommitment">Requirement: there are at least four crops</a>
+   </li>
+</ul><iframe align="center" width="100%" height ="500px" src="webvowl/index.html"></iframe> 
+</div>
+  
+
+<!--DESCRIPTION SECTION-->
+    <div id="description"><h2 id="desc" class="list">CAP-IACS Ontology: Main module: Description <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+<span class="markdown">
+This is a placeholder text for the description of your ontology. The description should include an explanation and a diagram explaining how the classes are related, examples of usage, etc.</span>
+
+</div>
+   
+
+<!--CROSSREF SECTION-->
+   <div id="crossref"><h2 id="crossreference" class="list">Cross-reference for CAP-IACS Ontology: Main module classes, object properties and data properties <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+This section provides details for each class and property defined by CAP-IACS Ontology: Main module.
+<div xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="namedindividuals">
+   <h3 id="namedindividuals" class="list">Named Individuals</h3>
+   <ul class="hlist">
+      <li>
+         <a href="#CropGroupTypeAreaRelatedSupportSchemaValue/activationOfBpsOrSaps"
+            title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid/code#CropGroupTypeAreaRelatedSupportSchemaValue/activationOfBpsOrSaps">Activation of BPS or SAPS</a>
+      </li>
+      <li>
+         <a href="#EcologicalFocusAreaTypeCollectiveValue/afforestedAreas"
+            title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid/code#EcologicalFocusAreaTypeCollectiveValue/afforestedAreas">Afforested areas</a>
+      </li>
+      <li>
+         <a href="#FarmersSurveyFeatureTypeValue/agriculturalArea"
+            title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid/code#FarmersSurveyFeatureTypeValue/agriculturalArea">Agricultural area</a>
+      </li>
+      <li>
+         <a href="#AgriculturalEquivalentPracticeRequirementValue/specificProductionRegime"
+            title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid/code#AgriculturalEquivalentPracticeRequirementValue/specificProductionRegime">
+            <span>agricultural equivalent practice requirement value/specific production regime</span>
+         </a>
+      </li>
+      <li>
+         <a href="#FarmersSurveyFeatureTypeValue/agriculturalParcel"
+            title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid/code#FarmersSurveyFeatureTypeValue/agriculturalParcel">Agricultural parcel</a>
+      </li>
+      <li>
+         <a href="#AgriculturalPracticeRequirementValue"
+            title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid/code#AgriculturalPracticeRequirementValue">
+            <span>agricultural practice requirement value</span>
+         </a>
+      </li>
+      <li>
+         <a href="#AgriculturalPracticeRequirementValue/50%OfArableNotDeclaredInPreviousYear"
+            title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid/code#AgriculturalPracticeRequirementValue/50%OfArableNotDeclaredInPreviousYear">
+            <span>agricultural practice requirement value/50% of arable not declared in previous year</span>
+         </a>
+      </li>
+      <li>
+         <a href="#AgriculturalPracticeRequirementValue/atLeastThreeCrops"
+            title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid/code#AgriculturalPracticeRequirementValue/atLeastThreeCrops">
+            <span>agricultural practice requirement value/at least three crops</span>
+         </a>
+      </li>
+      <li>
+         <a href="#AgriculturalPracticeRequirementValue/atLeastTwoCrops"
+            title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid/code#AgriculturalPracticeRequirementValue/atLeastTwoCrops">
+            <span>agricultural practice requirement value/at least two crops</span>
+         </a>
+      </li>
+      <li>
+         <a href="#AgriculturalPracticeRequirementValue/atLeast5�a"
+            title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid/code#AgriculturalPracticeRequirementValue/atLeast5%Efa">
+            <span>agricultural practice requirement value/at least5% efa</span>
+         </a>
+      </li>
+      <li>
+         <a href="#AgriculturalPracticeRequirementValue/atLeast7�a"
+            title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid/code#AgriculturalPracticeRequirementValue/atLeast7%Efa">
+            <span>agricultural practice requirement value/at least7% efa</span>
+         </a>
+      </li>
+      <li>
+         <a href="#AgriculturalPracticeRequirementValue/atLeast75%OfArableCoveredByGrassesOrLandLyingFallow"
+            title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid/code#AgriculturalPracticeRequirementValue/atLeast75%OfArableCoveredByGrassesOrLandLyingFallow">
+            <span>agricultural practice requirement value/at least75% of arable covered by grasses or land lying fallow</span>
+         </a>
+      </li>
+      <li>
+         <a href="#AgriculturalPracticeRequirementValue/atLeast75%PermanentGrassland"
+            title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid/code#AgriculturalPracticeRequirementValue/atLeast75%PermanentGrassland">
+            <span>agricultural practice requirement value/at least75% permanent grassland</span>
+         </a>
+      </li>
+      <li>
+         <a href="#AgriculturalPracticeRequirementValue/minimumActivity"
+            title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid/code#AgriculturalPracticeRequirementValue/minimumActivity">
+            <span>agricultural practice requirement value/minimum activity</span>
+         </a>
+      </li>
+      <li>
+         <a href="#AgriculturalPracticeRequirementValue/northOf62ndParallel"
+            title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid/code#AgriculturalPracticeRequirementValue/northOf62ndParallel">
+            <span>agricultural practice requirement value/north of62nd parallel</span>
+         </a>
+      </li>
+      <li>
+         <a href="#AgriculturalPracticeTypeValue/equivalentAgriEnvironmentClimateRegulationCommitment"
+            title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid/code#AgriculturalPracticeTypeValue/equivalentAgriEnvironmentClimateRegulationCommitment">
+            <span>agricultural practice type value/equivalent agri environment climate regulation commitment</span>
+         </a>
+      </li>
+      <li>
+         <a href="#AgriculturalPracticeTypeValue/equivalentNationalOrRegionalCertificationScheme"
+            title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid/code#AgriculturalPracticeTypeValue/equivalentNationalOrRegionalCertificationScheme">
+            <span>agricultural practice type value/equivalent national or regional certification scheme</span>
+         </a>
+      </li>
+      <li>
+         <a href="#CropGroupTypeAreaRelatedSupportSchemaValue/anyOtherAreaRelatedAidSchemeOrSupportMeasure"
+            title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid/code#CropGroupTypeAreaRelatedSupportSchemaValue/anyOtherAreaRelatedAidSchemeOrSupportMeasure">Any other area-related aid scheme or support measure</a>
+      </li>
+      <li>
+         <a href="#CropValue/brassicaceaeSolanaceaeAndCucurbitaceaeCulture"
+            title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid/code#CropValue/brassicaceaeSolanaceaeAndCucurbitaceaeCulture">Brassicaceae, Solanaceae, and Cucurbitaceae culture</a>
+      </li>
+      <li>
+         <a href="#EcologicalFocusAreaTypeCollectiveValue/bufferStrips"
+            title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid/code#EcologicalFocusAreaTypeCollectiveValue/bufferStrips">Buffer strips</a>
+      </li>
+      <li>
+         <a href="#CropGroupTypeGreeningValue/certainCrop"
+            title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid/code#CropGroupTypeGreeningValue/certainCrop">Certain crop</a>
+      </li>
+      <li>
+         <a href="#AgriculturalEquivalentPracticeRequirementValue/atLeast3CropsWithMainCrop<75%"
+            title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid/code#AgriculturalEquivalentPracticeRequirementValue/atLeast3CropsWithMainCrop&lt;75%">Commitments undertaken in accordance with agri-environment-climate</a>
+      </li>
+      <li>
+         <a href="#GeometrySourceValue/confirmedByFarmer"
+            title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid/code#GeometrySourceValue/confirmedByFarmer">Confirmed by farmer</a>
+      </li>
+      <li>
+         <a href="#AgriculturalPracticeTypeValue/cropDiversification"
+            title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid/code#AgriculturalPracticeTypeValue/cropDiversification">Crop diversification</a>
+      </li>
+      <li>
+         <a href="#CropValue/cultureOfAnyOfTheDifferentGenera"
+            title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid/code#CropValue/cultureOfAnyOfTheDifferentGenera">Culture of any of the different genera</a>
+      </li>
+      <li>
+         <a href="#GeometrySourceValue/delineatedByFarmer"
+            title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid/code#GeometrySourceValue/delineatedByFarmer">Delineated by farmer</a>
+      </li>
+      <li>
+         <a href="#CropGroupTypeGreeningValue/ecologicalFocusArea"
+            title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid/code#CropGroupTypeGreeningValue/ecologicalFocusArea">Ecological focus area</a>
+      </li>
+      <li>
+         <a href="#FarmersSurveyFeatureTypeValue/ecologicalFocusArea"
+            title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid/code#FarmersSurveyFeatureTypeValue/ecologicalFocusArea">Ecological focus area</a>
+      </li>
+      <li>
+         <a href="#FarmersSurveyFeatureTypeValue/geospatialApplicationBoundary"
+            title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid/code#FarmersSurveyFeatureTypeValue/geospatialApplicationBoundary">Geospatial application boundary</a>
+      </li>
+      <li>
+         <a href="#CropValue/grassesOrOtherHerbaceousForage"
+            title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid/code#CropValue/grassesOrOtherHerbaceousForage">Grasses or other herbaceous forage</a>
+      </li>
+      <li>
+         <a href="#AgriculturalPracticeTypeValue/havingEcologicalFocusAreaOnTheAgriculturalArea"
+            title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid/code#AgriculturalPracticeTypeValue/havingEcologicalFocusAreaOnTheAgriculturalArea">Having ecological focus area on the agricultural area</a>
+      </li>
+      <li>
+         <a href="#CropValue/landLyingFallow"
+            title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid/code#CropValue/landLyingFallow">Land lying fallow</a>
+      </li>
+      <li>
+         <a href="#EcologicalFocusAreaTypeCollectiveValue/landLyingFallow"
+            title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid/code#EcologicalFocusAreaTypeCollectiveValue/landLyingFallow">Land lying fallow</a>
+      </li>
+      <li>
+         <a href="#EcologicalFocusAreaTypeCollectiveValue/landscapeFeaturesTraditionalStoneWalls"
+            title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid/code#EcologicalFocusAreaTypeCollectiveValue/landscapeFeaturesTraditionalStoneWalls">Landscape features traditional stone walls</a>
+      </li>
+      <li>
+         <a href="#EcologicalFocusAreaTypeCollectiveValue/landscapeFeaturesDitches"
+            title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid/code#EcologicalFocusAreaTypeCollectiveValue/landscapeFeaturesDitches">Landscape features, ditches</a>
+      </li>
+      <li>
+         <a href="#EcologicalFocusAreaTypeCollectiveValue/landscapeFeaturesFieldMargin"
+            title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid/code#EcologicalFocusAreaTypeCollectiveValue/landscapeFeaturesFieldMargin">Landscape features, field margin</a>
+      </li>
+      <li>
+         <a href="#EcologicalFocusAreaTypeCollectiveValue/landscapeFeaturesGroupOfTreesFieldCopses"
+            title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid/code#EcologicalFocusAreaTypeCollectiveValue/landscapeFeaturesGroupOfTreesFieldCopses">Landscape features, group of trees/Field copses</a>
+      </li>
+      <li>
+         <a href="#EcologicalFocusAreaTypeCollectiveValue/landscapeFeaturesIsolatedTree"
+            title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid/code#EcologicalFocusAreaTypeCollectiveValue/landscapeFeaturesIsolatedTree">Landscape features, isolated tree</a>
+      </li>
+      <li>
+         <a href="#EcologicalFocusAreaTypeCollectiveValue/landscapeFeaturesOtherProtectedByGaecSmr"
+            title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid/code#EcologicalFocusAreaTypeCollectiveValue/landscapeFeaturesOtherProtectedByGaecSmr">Landscape features, other features not listed in this code list but protected under GAEC7, SMR 2 or SMR 3</a>
+      </li>
+      <li>
+         <a href="#EcologicalFocusAreaTypeCollectiveValue/landscapeFeaturesPonds"
+            title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid/code#EcologicalFocusAreaTypeCollectiveValue/landscapeFeaturesPonds">Landscape features, ponds</a>
+      </li>
+      <li>
+         <a href="#EcologicalFocusAreaTypeCollectiveValue/landscapeFeaturesTreesInLine"
+            title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid/code#EcologicalFocusAreaTypeCollectiveValue/landscapeFeaturesTreesInLine">Landscape features, trees in line</a>
+      </li>
+      <li>
+         <a href="#EcologicalFocusAreaTypeCollectiveValue/landscapeFeaturesHedgesWoodedStrips"
+            title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid/code#EcologicalFocusAreaTypeCollectiveValue/landscapeFeaturesHedgesWoodedStrips">Landscape features: Hedges/wooded strips</a>
+      </li>
+      <li>
+         <a href="#AgriculturalEquivalentPracticeRequirementValue"
+            title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid/code#AgriculturalEquivalentPracticeRequirementValue">List of agricultural equivalent practices</a>
+      </li>
+      <li>
+         <a href="#AgriculturalEquivalentPracticeTypeValue"
+            title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid/code#AgriculturalEquivalentPracticeTypeValue">List of agricultural equivalent practices requirements</a>
+      </li>
+      <li>
+         <a href="#AgriculturalEquivalentPracticeSubtypeValue"
+            title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid/code#AgriculturalEquivalentPracticeSubtypeValue">List of agricultural equivalent subpractices</a>
+      </li>
+      <li>
+         <a href="#AgriculturalPracticeTypeValue"
+            title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid/code#AgriculturalPracticeTypeValue">List of agricultural practices</a>
+      </li>
+      <li>
+         <a href="#CropValue"
+            title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid/code#CropValue">List of crops</a>
+      </li>
+      <li>
+         <a href="#EcologicalFocusAreaTypeCollectiveValue"
+            title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid/code#EcologicalFocusAreaTypeCollectiveValue">List of ecological focused areas for collective implementation</a>
+      </li>
+      <li>
+         <a href="#FarmersSurveyFeatureTypeValue"
+            title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid/code#FarmersSurveyFeatureTypeValue">List of feature types</a>
+      </li>
+      <li>
+         <a href="#GeometrySourceValue"
+            title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid/code#GeometrySourceValue">List of geometry sources</a>
+      </li>
+      <li>
+         <a href="#CropGroupTypeAreaRelatedSupportSchemaValue"
+            title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid/code#CropGroupTypeAreaRelatedSupportSchemaValue">List of payment crop groups</a>
+      </li>
+      <li>
+         <a href="#CropGroupTypeGreeningValue"
+            title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid/code#CropGroupTypeGreeningValue">List of payment crop groups</a>
+      </li>
+      <li>
+         <a href="#AgriculturalPracticeTypeValue/maintainingExistingPermanentGrassland"
+            title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid/code#AgriculturalPracticeTypeValue/maintainingExistingPermanentGrassland">Maintaining existing permanent grassland</a>
+      </li>
+      <li>
+         <a href="#GeometrySourceValue/measuredByFarmer"
+            title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid/code#GeometrySourceValue/measuredByFarmer">Measured by farmer</a>
+      </li>
+      <li>
+         <a href="#AgriculturalEquivalentPracticeRequirementValue/atLeast4Crops"
+            title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid/code#AgriculturalEquivalentPracticeRequirementValue/atLeast4Crops">National or regional environmental certification schemes</a>
+      </li>
+      <li>
+         <a href="#AgriculturalEquivalentPracticeRequirementValue/beneficialMultiannualSequenceOfCropRotation"
+            title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid/code#AgriculturalEquivalentPracticeRequirementValue/beneficialMultiannualSequenceOfCropRotation">National or regional environmental certification schemes</a>
+      </li>
+      <li>
+         <a href="#AgriculturalEquivalentPracticeRequirementValue/catchCrop"
+            title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid/code#AgriculturalEquivalentPracticeRequirementValue/catchCrop">National or regional environmental certification schemes</a>
+      </li>
+      <li>
+         <a href="#AgriculturalEquivalentPracticeRequirementValue/conversionIntoExtensivelyUsedPg"
+            title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid/code#AgriculturalEquivalentPracticeRequirementValue/conversionIntoExtensivelyUsedPg">National or regional environmental certification schemes</a>
+      </li>
+      <li>
+         <a href="#AgriculturalEquivalentPracticeRequirementValue/ecologicalSetAside"
+            title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid/code#AgriculturalEquivalentPracticeRequirementValue/ecologicalSetAside">National or regional environmental certification schemes</a>
+      </li>
+      <li>
+         <a href="#AgriculturalEquivalentPracticeRequirementValue/fertiliserRegime"
+            title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid/code#AgriculturalEquivalentPracticeRequirementValue/fertiliserRegime">National or regional environmental certification schemes</a>
+      </li>
+      <li>
+         <a href="#AgriculturalEquivalentPracticeRequirementValue/forageOrHayEvacuation"
+            title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid/code#AgriculturalEquivalentPracticeRequirementValue/forageOrHayEvacuation">National or regional environmental certification schemes</a>
+      </li>
+      <li>
+         <a href="#AgriculturalEquivalentPracticeRequirementValue/grassOnArablePeatyOrWetSoil"
+            title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid/code#AgriculturalEquivalentPracticeRequirementValue/grassOnArablePeatyOrWetSoil">National or regional environmental certification schemes</a>
+      </li>
+      <li>
+         <a href="#AgriculturalEquivalentPracticeRequirementValue/highNatureValueBufferZone"
+            title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid/code#AgriculturalEquivalentPracticeRequirementValue/highNatureValueBufferZone">National or regional environmental certification schemes</a>
+      </li>
+      <li>
+         <a href="#AgriculturalEquivalentPracticeRequirementValue/localOrTraditionalGrazingBreeds"
+            title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid/code#AgriculturalEquivalentPracticeRequirementValue/localOrTraditionalGrazingBreeds">National or regional environmental certification schemes</a>
+      </li>
+      <li>
+         <a href="#AgriculturalEquivalentPracticeRequirementValue/managementOfLf"
+            title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid/code#AgriculturalEquivalentPracticeRequirementValue/managementOfLf">National or regional environmental certification schemes</a>
+      </li>
+      <li>
+         <a href="#AgriculturalEquivalentPracticeRequirementValue/moreAppropriateCropSelection"
+            title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid/code#AgriculturalEquivalentPracticeRequirementValue/moreAppropriateCropSelection">National or regional environmental certification schemes</a>
+      </li>
+      <li>
+         <a href="#AgriculturalEquivalentPracticeRequirementValue/pGAndCuttingRegime"
+            title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid/code#AgriculturalEquivalentPracticeRequirementValue/pGAndCuttingRegime">National or regional environmental certification schemes</a>
+      </li>
+      <li>
+         <a href="#AgriculturalEquivalentPracticeRequirementValue/pGAndExtensiveGrazing"
+            title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid/code#AgriculturalEquivalentPracticeRequirementValue/pGAndExtensiveGrazing">National or regional environmental certification schemes</a>
+      </li>
+      <li>
+         <a href="#AgriculturalEquivalentPracticeRequirementValue/pGWithGrassVarietiesOrSeedingRegime"
+            title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid/code#AgriculturalEquivalentPracticeRequirementValue/pGWithGrassVarietiesOrSeedingRegime">National or regional environmental certification schemes</a>
+      </li>
+      <li>
+         <a href="#AgriculturalEquivalentPracticeRequirementValue/pGWithLfAndScrubControl"
+            title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid/code#AgriculturalEquivalentPracticeRequirementValue/pGWithLfAndScrubControl">National or regional environmental certification schemes</a>
+      </li>
+      <li>
+         <a href="#AgriculturalEquivalentPracticeRequirementValue/pesticideRestrictions"
+            title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid/code#AgriculturalEquivalentPracticeRequirementValue/pesticideRestrictions">National or regional environmental certification schemes</a>
+      </li>
+      <li>
+         <a href="#AgriculturalEquivalentPracticeRequirementValue/shepherdingOrMountainPastoralism"
+            title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid/code#AgriculturalEquivalentPracticeRequirementValue/shepherdingOrMountainPastoralism">National or regional environmental certification schemes</a>
+      </li>
+      <li>
+         <a href="#AgriculturalEquivalentPracticeRequirementValue/specificCropVarieties"
+            title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid/code#AgriculturalEquivalentPracticeRequirementValue/specificCropVarieties">National or regional environmental certification schemes</a>
+      </li>
+      <li>
+         <a href="#AgriculturalEquivalentPracticeRequirementValue/steepSlopeManagement"
+            title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid/code#AgriculturalEquivalentPracticeRequirementValue/steepSlopeManagement">National or regional environmental certification schemes</a>
+      </li>
+      <li>
+         <a href="#AgriculturalEquivalentPracticeRequirementValue/uncultivatedBufferStripsAndFieldMargins"
+            title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid/code#AgriculturalEquivalentPracticeRequirementValue/uncultivatedBufferStripsAndFieldMargins">National or regional environmental certification schemes</a>
+      </li>
+      <li>
+         <a href="#AgriculturalEquivalentPracticeRequirementValue/wildlifeAreaManagement"
+            title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid/code#AgriculturalEquivalentPracticeRequirementValue/wildlifeAreaManagement">National or regional environmental certification schemes</a>
+      </li>
+      <li>
+         <a href="#AgriculturalEquivalentPracticeRequirementValue/winterSoilCover"
+            title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid/code#AgriculturalEquivalentPracticeRequirementValue/winterSoilCover">National or regional environmental certification schemes</a>
+      </li>
+      <li>
+         <a href="#CropGroupTypeAreaRelatedSupportSchemaValue/otherUses"
+            title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid/code#CropGroupTypeAreaRelatedSupportSchemaValue/otherUses">Other uses</a>
+      </li>
+      <li>
+         <a href="#CropGroupTypeGreeningValue/permanentGrasslandEnvironmentallySensitive"
+            title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid/code#CropGroupTypeGreeningValue/permanentGrasslandEnvironmentallySensitive">Permanent grassland environmentally sensitive</a>
+      </li>
+      <li>
+         <a href="#CropGroupTypeGreeningValue/permanentGrasslandRemaining"
+            title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid/code#CropGroupTypeGreeningValue/permanentGrasslandRemaining">Permanent grassland remaining</a>
+      </li>
+      <li>
+         <a href="#CropGroupTypeGreeningValue/permanentPastureRemaining"
+            title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid/code#CropGroupTypeGreeningValue/permanentPastureRemaining">Permanent pasture remaining</a>
+      </li>
+      <li>
+         <a href="#AgriculturalEquivalentPracticeSubtypeValue/equivalentToCropDiversification"
+            title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid/code#AgriculturalEquivalentPracticeSubtypeValue/equivalentToCropDiversification">Practices equivalent to crop diversification: Crop diversification</a>
+      </li>
+      <li>
+         <a href="#AgriculturalEquivalentPracticeSubtypeValue/equivalentToMaintenanceOfPermanentGrassland"
+            title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid/code#AgriculturalEquivalentPracticeSubtypeValue/equivalentToMaintenanceOfPermanentGrassland">Practices equivalent to maintenance of permanent grassland: Management of meadows or pastures</a>
+      </li>
+      <li>
+         <a href="#AgriculturalEquivalentPracticeSubtypeValue/equivalentToEcologicalFocusArea"
+            title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid/code#AgriculturalEquivalentPracticeSubtypeValue/equivalentToEcologicalFocusArea">Practices equivalent with ecological focus area</a>
+      </li>
+      <li>
+         <a href="#FarmersSurveyFeatureTypeValue/referenceArea"
+            title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid/code#FarmersSurveyFeatureTypeValue/referenceArea">Reference area</a>
+      </li>
+      <li>
+         <a href="#AgriculturalEquivalentPracticeTypeValue/equivalentNationalOrRegionalCertificationScheme"
+            title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid/code#AgriculturalEquivalentPracticeTypeValue/equivalentNationalOrRegionalCertificationScheme">Requirement: lower maximum thresholds apply</a>
+      </li>
+      <li>
+         <a href="#AgriculturalEquivalentPracticeTypeValue/equivalentAgriEnvironmentClimateRegulationCommitment"
+            title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid/code#AgriculturalEquivalentPracticeTypeValue/equivalentAgriEnvironmentClimateRegulationCommitment">Requirement: there are at least four crops</a>
+      </li>
+   </ul>
+   <div class="entity" id="CropGroupTypeAreaRelatedSupportSchemaValue/activationOfBpsOrSaps">
+      <h3>Activation of BPS or SAPS<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid/code#CropGroupTypeAreaRelatedSupportSchemaValue/activationOfBpsOrSaps</p>
+      <div class="comment">
+         <span class="markdown">-- Definition --
+Activation of BPS or SAPS.
+-- Description --
+Areas declared for the purposes of activation of payment entitlements under the basic payment scheme or for the purpose of being granted the single area payment scheme.</span>
+      </div>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#CropGroupTypeAreaRelatedSupportSchemaValue"
+               target="_blank"
+               title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#CropGroupTypeAreaRelatedSupportSchemaValue">crop group type area related support schema value</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="EcologicalFocusAreaTypeCollectiveValue/afforestedAreas">
+      <h3>Afforested areas<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid/code#EcologicalFocusAreaTypeCollectiveValue/afforestedAreas</p>
+      <div class="comment">
+         <span class="markdown">-- Definition --
+Afforested areas.
+-- Description --
+Afforested areas as referred to in Article 32(2)(b)(ii) (per  m2).</span>
+      </div>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#EcologicalFocusAreaTypeCollectiveValue"
+               target="_blank"
+               title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#EcologicalFocusAreaTypeCollectiveValue">ecological focus area type collective value</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="FarmersSurveyFeatureTypeValue/agriculturalArea">
+      <h3>Agricultural area<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid/code#FarmersSurveyFeatureTypeValue/agriculturalArea</p>
+      <div class="comment">
+         <span class="markdown">-- Definition --
+Agricultural area.
+-- Description --
+Agricultural area.</span>
+      </div>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#FarmersSurveyFeatureTypeValue"
+               target="_blank"
+               title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#FarmersSurveyFeatureTypeValue">farmers survey feature type value</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="AgriculturalEquivalentPracticeRequirementValue/specificProductionRegime">
+      <h3>agricultural equivalent practice requirement value/specific production regime<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid/code#AgriculturalEquivalentPracticeRequirementValue/specificProductionRegime</p>
+      <div class="comment">
+         <span class="markdown">Specific production regime
+
+Equivalent practice that may be used for fulfilling the percentage requirements for EFA set in Art. 46(1) of R 1307/2013.
+
+It relates to production on arable land 
+	- with no use of fertiliser (mineral fertiliser and manure) and/or plant protection products,
+	- not irrigated,
+	- not sown with the same crop two years in a row and on a fixed place.</span>
+      </div>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#AgriculturalEquivalentPracticeRequirementValue"
+               target="_blank"
+               title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#AgriculturalEquivalentPracticeRequirementValue">agricultural equivalent practice requirement value</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="FarmersSurveyFeatureTypeValue/agriculturalParcel">
+      <h3>Agricultural parcel<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid/code#FarmersSurveyFeatureTypeValue/agriculturalParcel</p>
+      <div class="comment">
+         <span class="markdown">-- Definition --
+Agricultural parcel.
+-- Description --
+Agricultural parcel.</span>
+      </div>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#FarmersSurveyFeatureTypeValue"
+               target="_blank"
+               title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#FarmersSurveyFeatureTypeValue">farmers survey feature type value</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="AgriculturalPracticeRequirementValue">
+      <h3>agricultural practice requirement value<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid/code#AgriculturalPracticeRequirementValue</p>
+      <div class="comment">
+         <span class="markdown">Agricultural practice requirement value
+
+List of agricultural practice requirement values as defined in Art. (44) (1), (2),(3) and Art. 46 (4) of R (EU) 1307/2013.</span>
+      </div>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="http://www.w3.org/2004/02/skos/core#ConceptScheme"
+               target="_blank"
+               title="http://www.w3.org/2004/02/skos/core#ConceptScheme">concept scheme</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="AgriculturalPracticeRequirementValue/50%OfArableNotDeclaredInPreviousYear">
+      <h3>agricultural practice requirement value/50% of arable not declared in previous year<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid/code#AgriculturalPracticeRequirementValue/50%OfArableNotDeclaredInPreviousYear</p>
+      <div class="comment">
+         <span class="markdown">50% of arable not declared in previous year
+
+According to Art.(3)(c) of R (EU) 1307/2013 beneficiaries do not need to follow crop diversification when
+
+	- more than 50 % of the areas of arable land declared were not declared by the farmer in his aid application of the previous year
+AND
+	- all arable land is being cultivated with a different crop compared to that of the previous calendar year
+
+NOTE
+The second condition shall be verified on the basis of comparison of the geo- spatial aid applications</span>
+      </div>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#AgriculturalPracticeRequirementValue"
+               target="_blank"
+               title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#AgriculturalPracticeRequirementValue">agricultural practice requirement value</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="AgriculturalPracticeRequirementValue/atLeastThreeCrops">
+      <h3>agricultural practice requirement value/at least three crops<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid/code#AgriculturalPracticeRequirementValue/atLeastThreeCrops</p>
+      <div class="comment">
+         <span class="markdown">At least three crops
+
+According to Art. 46(1) second paragraph the value can be assigned when
+	- arable land more than 30 ha
+	- not entirely cultivated with crops under water
+	- main crop shall not cover more than 75 % of arable land
+	- two main crops together shall not cover more than 95 % of arable land.</span>
+      </div>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#AgriculturalPracticeRequirementValue"
+               target="_blank"
+               title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#AgriculturalPracticeRequirementValue">agricultural practice requirement value</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="AgriculturalPracticeRequirementValue/atLeastTwoCrops">
+      <h3>agricultural practice requirement value/at least two crops<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid/code#AgriculturalPracticeRequirementValue/atLeastTwoCrops</p>
+      <div class="comment">
+         <span class="markdown">At least two crops
+
+According to Art. 46(1) first paragraph the value can be assigned when
+	- arable land  is between 10 and 30 ha
+	- not entirely cultivated with crops under water
+	- main crop shall not cover more than 75 % of arable land.</span>
+      </div>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#AgriculturalPracticeRequirementValue"
+               target="_blank"
+               title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#AgriculturalPracticeRequirementValue">agricultural practice requirement value</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="AgriculturalPracticeRequirementValue/atLeast5�a">
+      <h3>agricultural practice requirement value/at least5% efa<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid/code#AgriculturalPracticeRequirementValue/atLeast5%Efa</p>
+      <div class="comment">
+         <span class="markdown">At least 5% EFA
+
+According to Art.(46)(1) when arable land of a holding covers more than 15 hectares at least 5% of EFA shall be implemented.</span>
+      </div>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#AgriculturalPracticeRequirementValue"
+               target="_blank"
+               title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#AgriculturalPracticeRequirementValue">agricultural practice requirement value</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="AgriculturalPracticeRequirementValue/atLeast7�a">
+      <h3>agricultural practice requirement value/at least7% efa<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid/code#AgriculturalPracticeRequirementValue/atLeast7%Efa</p>
+      <div class="comment">
+         <span class="markdown">At least 7% EFA
+
+Increased 7 % of EFA mandatory for holdings with area more than 15 ha.
+
+NOTE
+As this provision is subject to a legislative act of the European Parliament and of the Council this value currently is a placeholder.</span>
+      </div>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#AgriculturalPracticeRequirementValue"
+               target="_blank"
+               title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#AgriculturalPracticeRequirementValue">agricultural practice requirement value</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="AgriculturalPracticeRequirementValue/atLeast75%OfArableCoveredByGrassesOrLandLyingFallow">
+      <h3>agricultural practice requirement value/at least75% of arable covered by grasses or land lying fallow<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid/code#AgriculturalPracticeRequirementValue/atLeast75%OfArableCoveredByGrassesOrLandLyingFallow</p>
+      <div class="comment">
+         <span class="markdown">At 75 % of arable covered by grasses or land lying fallow 
+
+When grasses or other herbaceous forage or land lying fallow cover more than 75 % of the arable land and the remaining area of other uses does not exceed 30 ha, R (EU) 1307/2013 allows the following exemptions:
+	- According to Art. 41(3)(a) crop diversification
+	- According to  Art. 46(4)(a) EFA
+
+
+NOTE 
+For EFA exemption, also cultivation of leguminous crops on more than 75% of the arable land qualifies for the exemption.</span>
+      </div>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#AgriculturalPracticeRequirementValue"
+               target="_blank"
+               title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#AgriculturalPracticeRequirementValue">agricultural practice requirement value</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="AgriculturalPracticeRequirementValue/atLeast75%PermanentGrassland">
+      <h3>agricultural practice requirement value/at least75% permanent grassland<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid/code#AgriculturalPracticeRequirementValue/atLeast75%PermanentGrassland</p>
+      <div class="comment">
+         <span class="markdown">At least 75% permanent grassland
+
+When permanent grassland, other herbaceous forage or crops under water cover more than 75 % of the land and the remaining area of other uses does not exceed 30 ha, R (EU) 1307/2013 allows the following exemptions:
+	- According to Art. 41(3)(b) crop diversification
+	- According to  Art. 46(4)(b) EFA
+
+NOTE 1
+Combination of the above uses is allowed
+
+NOTE 2
+Under water cultivation applies for the significant part of the year or the vegetative cycle.</span>
+      </div>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#AgriculturalPracticeRequirementValue"
+               target="_blank"
+               title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#AgriculturalPracticeRequirementValue">agricultural practice requirement value</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="AgriculturalPracticeRequirementValue/minimumActivity">
+      <h3>agricultural practice requirement value/minimum activity<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid/code#AgriculturalPracticeRequirementValue/minimumActivity</p>
+      <div class="comment">
+         <span class="markdown">Minimum Activity
+
+Minimum activity, defined by Member States, on agricultural areas naturally kept in a state suitable for grazing or cultivation [Art.(4)(1)(iii) of R (EU) 1307/2013].</span>
+      </div>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#AgriculturalPracticeRequirementValue"
+               target="_blank"
+               title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#AgriculturalPracticeRequirementValue">agricultural practice requirement value</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="AgriculturalPracticeRequirementValue/northOf62ndParallel">
+      <h3>agricultural practice requirement value/north of62nd parallel<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid/code#AgriculturalPracticeRequirementValue/northOf62ndParallel</p>
+      <div class="comment">
+         <span class="markdown">North of 62nd parallel
+
+According to Art.(3)(d) of R (EU) 1307/2013 beneficiaries have special crop diversification rules for holdings that are
+	- situated in areas north of 62nd parallel or certain adjacent areas
+AND
+	- arable land of such holdings covers more than 10 hectares, there shall be at least two crops on the arable land
+	-  none of these crops shall cover more than 75 % of the arable land, unless the main crop is grasses or other herbaceous forage, or land lying fallow.</span>
+      </div>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#AgriculturalPracticeRequirementValue"
+               target="_blank"
+               title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#AgriculturalPracticeRequirementValue">agricultural practice requirement value</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="AgriculturalPracticeTypeValue/equivalentAgriEnvironmentClimateRegulationCommitment">
+      <h3>agricultural practice type value/equivalent agri environment climate regulation commitment<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid/code#AgriculturalPracticeTypeValue/equivalentAgriEnvironmentClimateRegulationCommitment</p>
+      <div class="comment">
+         <span class="markdown">Agri-Environment and Climate Regulation Commitment
+
+Equivalent practices that yield an equivalent or higher level of benefit for the climate and the environment [Art. 43(3)(a) of R 1307/2013]. 
+
+The applicable regulations are the following:
+	- Article 39(2) of Regulation (EC) No 1698/2005 (minimum requirements for fertiliser and plant protection product use) 
+	- Article 28(2) of Regulation (EU) No 1305/2013</span>
+      </div>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#AgriculturalPracticeTypeValue"
+               target="_blank"
+               title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#AgriculturalPracticeTypeValue">agricultural practice type value</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="AgriculturalPracticeTypeValue/equivalentNationalOrRegionalCertificationScheme">
+      <h3>agricultural practice type value/equivalent national or regional certification scheme<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid/code#AgriculturalPracticeTypeValue/equivalentNationalOrRegionalCertificationScheme</p>
+      <div class="comment">
+         <span class="markdown">National or regional certification scheme
+
+Equivalent practices that yield an equivalent or higher level of benefit for the climate and the environment [Art. 43(3)(b) of R 1307/2013]. 
+
+The practices are included in Annex IX of this regulation and the AgriculturalEquivalentPracticeTypeValue code list of the Aid applications and payment claims application schema.</span>
+      </div>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#AgriculturalPracticeTypeValue"
+               target="_blank"
+               title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#AgriculturalPracticeTypeValue">agricultural practice type value</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="CropGroupTypeAreaRelatedSupportSchemaValue/anyOtherAreaRelatedAidSchemeOrSupportMeasure">
+      <h3>Any other area-related aid scheme or support measure<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid/code#CropGroupTypeAreaRelatedSupportSchemaValue/anyOtherAreaRelatedAidSchemeOrSupportMeasure</p>
+      <div class="comment">
+         <span class="markdown">-- Definition --
+Any other area-related aid scheme or support measure.
+-- Description --
+A group for each of the areas declared for the purpose of any other area-related aid scheme or support measure, for which a different rate of aid is applicable. 
+NOTE. This is not area-related support measure.</span>
+      </div>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#CropGroupTypeAreaRelatedSupportSchemaValue"
+               target="_blank"
+               title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#CropGroupTypeAreaRelatedSupportSchemaValue">crop group type area related support schema value</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="CropValue/brassicaceaeSolanaceaeAndCucurbitaceaeCulture">
+      <h3>Brassicaceae, Solanaceae, and Cucurbitaceae culture<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid/code#CropValue/brassicaceaeSolanaceaeAndCucurbitaceaeCulture</p>
+      <div class="comment">
+         <span class="markdown">Brassicaceae, Solanaceae and cucurbitaceae culture
+
+A culture of any of the species in the case of Brassicaceae, Solanaceae, and Cucurbitaceae</span>
+      </div>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#CropValue"
+               target="_blank"
+               title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#CropValue">crop value</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="EcologicalFocusAreaTypeCollectiveValue/bufferStrips">
+      <h3>Buffer strips<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid/code#EcologicalFocusAreaTypeCollectiveValue/bufferStrips</p>
+      <div class="comment">
+         <span class="markdown">-- Definition --
+Buffer strips.
+-- Description --
+Buffer strips (per 1m) also 1307. 46.2.d.</span>
+      </div>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#EcologicalFocusAreaTypeCollectiveValue"
+               target="_blank"
+               title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#EcologicalFocusAreaTypeCollectiveValue">ecological focus area type collective value</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="CropGroupTypeGreeningValue/certainCrop">
+      <h3>Certain crop<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid/code#CropGroupTypeGreeningValue/certainCrop</p>
+      <div class="comment">
+         <span class="markdown">-- Definition --
+Certain crop.
+-- Description --
+Each group of areas declared as a certain crop.
+NOTE. a</span>
+      </div>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#CropGroupTypeGreeningValue"
+               target="_blank"
+               title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#CropGroupTypeGreeningValue">crop group type greening value</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="AgriculturalEquivalentPracticeRequirementValue/atLeast3CropsWithMainCrop<75%">
+      <h3>Commitments undertaken in accordance with agri-environment-climate<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid/code#AgriculturalEquivalentPracticeRequirementValue/atLeast3CropsWithMainCrop&lt;75%</p>
+      <div class="comment">
+         <span class="markdown">At least 3 crops with main crop less than 75%
+
+At least three crops, the main crop covering less than the 75 % threshold</span>
+      </div>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#AgriculturalEquivalentPracticeRequirementValue"
+               target="_blank"
+               title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#AgriculturalEquivalentPracticeRequirementValue">agricultural equivalent practice requirement value</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="GeometrySourceValue/confirmedByFarmer">
+      <h3>Confirmed by farmer<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid/code#GeometrySourceValue/confirmedByFarmer</p>
+      <div class="comment">
+         <span class="markdown">-- Definition --
+Confirmed by farmer.
+-- Description --
+Confirmed by farmer using predefined lists of data objects (from IACS).</span>
+      </div>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#GeometrySourceValue"
+               target="_blank"
+               title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#GeometrySourceValue">geometry source value</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="AgriculturalPracticeTypeValue/cropDiversification">
+      <h3>Crop diversification<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid/code#AgriculturalPracticeTypeValue/cropDiversification</p>
+      <div class="comment">
+         <span class="markdown">Crop diversification
+
+Agricultural practices beneficial for the climate and the environment [Art.43(2)(a) of R 1307/2013].</span>
+      </div>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#AgriculturalPracticeTypeValue"
+               target="_blank"
+               title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#AgriculturalPracticeTypeValue">agricultural practice type value</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="CropValue/cultureOfAnyOfTheDifferentGenera">
+      <h3>Culture of any of the different genera<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid/code#CropValue/cultureOfAnyOfTheDifferentGenera</p>
+      <div class="comment">
+         <span class="markdown">Culture of any different genera
+
+A culture of any of the different genera defined in the botanical classification of crops. 
+
+NOTE
+Winter crop and spring crop shall be considered to be distinct crops even if they belong to the same genus.</span>
+      </div>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#CropValue"
+               target="_blank"
+               title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#CropValue">crop value</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="GeometrySourceValue/delineatedByFarmer">
+      <h3>Delineated by farmer<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid/code#GeometrySourceValue/delineatedByFarmer</p>
+      <div class="comment">
+         <span class="markdown">-- Definition --
+Delineated by farmer.
+-- Description --
+Delineated by farmer / interactive entry using official data as a background.</span>
+      </div>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#GeometrySourceValue"
+               target="_blank"
+               title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#GeometrySourceValue">geometry source value</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="CropGroupTypeGreeningValue/ecologicalFocusArea">
+      <h3>Ecological focus area<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid/code#CropGroupTypeGreeningValue/ecologicalFocusArea</p>
+      <div class="comment">
+         <span class="markdown">-- Definition --
+Ecological focus area.
+-- Description --
+Areas declared as ecological focus area.
+NOTE. d</span>
+      </div>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#CropGroupTypeGreeningValue"
+               target="_blank"
+               title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#CropGroupTypeGreeningValue">crop group type greening value</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="FarmersSurveyFeatureTypeValue/ecologicalFocusArea">
+      <h3>Ecological focus area<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid/code#FarmersSurveyFeatureTypeValue/ecologicalFocusArea</p>
+      <div class="comment">
+         <span class="markdown">-- Definition --
+Ecological focus area.
+-- Description --
+Ecological focus area.</span>
+      </div>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#FarmersSurveyFeatureTypeValue"
+               target="_blank"
+               title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#FarmersSurveyFeatureTypeValue">farmers survey feature type value</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="FarmersSurveyFeatureTypeValue/geospatialApplicationBoundary">
+      <h3>Geospatial application boundary<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid/code#FarmersSurveyFeatureTypeValue/geospatialApplicationBoundary</p>
+      <div class="comment">
+         <span class="markdown">-- Definition --
+Geospatial application.
+-- Description --
+Geospatial application boundary.</span>
+      </div>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#FarmersSurveyFeatureTypeValue"
+               target="_blank"
+               title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#FarmersSurveyFeatureTypeValue">farmers survey feature type value</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="CropValue/grassesOrOtherHerbaceousForage">
+      <h3>Grasses or other herbaceous forage<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid/code#CropValue/grassesOrOtherHerbaceousForage</p>
+      <div class="comment">
+         <span class="markdown">Grasses or other herbaceous forage
+
+"Grasses or other herbaceous forage" means all herbaceous plants traditionally found in natural pastures or normally included in mixtures of seeds for pastures or meadows in the Member State, whether or not used for grazing animals. [R 1307/2013 4(1)(i)]</span>
+      </div>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#CropValue"
+               target="_blank"
+               title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#CropValue">crop value</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="AgriculturalPracticeTypeValue/havingEcologicalFocusAreaOnTheAgriculturalArea">
+      <h3>Having ecological focus area on the agricultural area<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid/code#AgriculturalPracticeTypeValue/havingEcologicalFocusAreaOnTheAgriculturalArea</p>
+      <div class="comment">
+         <span class="markdown">Having ecological focus area on the agricultural area
+
+Agricultural practices beneficial for the climate and the environment [Art.43(2)(c) of R 1307/2013].</span>
+      </div>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#AgriculturalPracticeTypeValue"
+               target="_blank"
+               title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#AgriculturalPracticeTypeValue">agricultural practice type value</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="CropValue/landLyingFallow">
+      <h3>Land lying fallow<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid/code#CropValue/landLyingFallow</p>
+      <div class="comment">
+         <span class="markdown">Land laying fallow</span>
+      </div>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#CropValue"
+               target="_blank"
+               title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#CropValue">crop value</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="EcologicalFocusAreaTypeCollectiveValue/landLyingFallow">
+      <h3>Land lying fallow<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid/code#EcologicalFocusAreaTypeCollectiveValue/landLyingFallow</p>
+      <div class="comment">
+         <span class="markdown">-- Definition --
+Land lying fallow.
+-- Description --
+Land lying fallow (per 1m2).</span>
+      </div>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#EcologicalFocusAreaTypeCollectiveValue"
+               target="_blank"
+               title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#EcologicalFocusAreaTypeCollectiveValue">ecological focus area type collective value</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="EcologicalFocusAreaTypeCollectiveValue/landscapeFeaturesTraditionalStoneWalls">
+      <h3>Landscape features traditional stone walls<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid/code#EcologicalFocusAreaTypeCollectiveValue/landscapeFeaturesTraditionalStoneWalls</p>
+      <div class="comment">
+         <span class="markdown">-- Definition --
+Landscape features traditional stone walls.
+-- Description --
+Landscape features: Traditional stone walls (per 1m).</span>
+      </div>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#EcologicalFocusAreaTypeCollectiveValue"
+               target="_blank"
+               title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#EcologicalFocusAreaTypeCollectiveValue">ecological focus area type collective value</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="EcologicalFocusAreaTypeCollectiveValue/landscapeFeaturesDitches">
+      <h3>Landscape features, ditches<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid/code#EcologicalFocusAreaTypeCollectiveValue/landscapeFeaturesDitches</p>
+      <div class="comment">
+         <span class="markdown">-- Definition --
+Landscape features, ditches.
+-- Description --
+Landscape features: Ditches (per 1m).</span>
+      </div>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#EcologicalFocusAreaTypeCollectiveValue"
+               target="_blank"
+               title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#EcologicalFocusAreaTypeCollectiveValue">ecological focus area type collective value</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="EcologicalFocusAreaTypeCollectiveValue/landscapeFeaturesFieldMargin">
+      <h3>Landscape features, field margin<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid/code#EcologicalFocusAreaTypeCollectiveValue/landscapeFeaturesFieldMargin</p>
+      <div class="comment">
+         <span class="markdown">-- Definition --
+Landscape features, field margin.
+-- Description --
+Landscape features: Field margin (per 1m).</span>
+      </div>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#EcologicalFocusAreaTypeCollectiveValue"
+               target="_blank"
+               title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#EcologicalFocusAreaTypeCollectiveValue">ecological focus area type collective value</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="EcologicalFocusAreaTypeCollectiveValue/landscapeFeaturesGroupOfTreesFieldCopses">
+      <h3>Landscape features, group of trees/Field copses<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid/code#EcologicalFocusAreaTypeCollectiveValue/landscapeFeaturesGroupOfTreesFieldCopses</p>
+      <div class="comment">
+         <span class="markdown">-- Definition --
+Landscape features, group of trees/Field copses.
+-- Description --
+Landscape features: Group of trees/Field copses (per 1m2).</span>
+      </div>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#EcologicalFocusAreaTypeCollectiveValue"
+               target="_blank"
+               title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#EcologicalFocusAreaTypeCollectiveValue">ecological focus area type collective value</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="EcologicalFocusAreaTypeCollectiveValue/landscapeFeaturesIsolatedTree">
+      <h3>Landscape features, isolated tree<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid/code#EcologicalFocusAreaTypeCollectiveValue/landscapeFeaturesIsolatedTree</p>
+      <div class="comment">
+         <span class="markdown">-- Definition --
+Landscape features, isolated tree.
+-- Description --
+Landscape features: Isolated tree (per tree).</span>
+      </div>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#EcologicalFocusAreaTypeCollectiveValue"
+               target="_blank"
+               title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#EcologicalFocusAreaTypeCollectiveValue">ecological focus area type collective value</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="EcologicalFocusAreaTypeCollectiveValue/landscapeFeaturesOtherProtectedByGaecSmr">
+      <h3>Landscape features, other features not listed in this code list but protected under GAEC7, SMR 2 or SMR 3<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid/code#EcologicalFocusAreaTypeCollectiveValue/landscapeFeaturesOtherProtectedByGaecSmr</p>
+      <div class="comment">
+         <span class="markdown">-- Definition --
+Landscape features, other features not listed in this code list but protected under GAEC7, SMR 2 or SMR 3.
+-- Description --
+Landscape features: Other features not listed above but protected under GAEC7, SMR 2 or SMR 3 (per 1m2).</span>
+      </div>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#EcologicalFocusAreaTypeCollectiveValue"
+               target="_blank"
+               title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#EcologicalFocusAreaTypeCollectiveValue">ecological focus area type collective value</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="EcologicalFocusAreaTypeCollectiveValue/landscapeFeaturesPonds">
+      <h3>Landscape features, ponds<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid/code#EcologicalFocusAreaTypeCollectiveValue/landscapeFeaturesPonds</p>
+      <div class="comment">
+         <span class="markdown">-- Definition --
+Landscape features, ponds.
+-- Description --
+Landscape features: Ponds (per 1m2).</span>
+      </div>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#EcologicalFocusAreaTypeCollectiveValue"
+               target="_blank"
+               title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#EcologicalFocusAreaTypeCollectiveValue">ecological focus area type collective value</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="EcologicalFocusAreaTypeCollectiveValue/landscapeFeaturesTreesInLine">
+      <h3>Landscape features, trees in line<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid/code#EcologicalFocusAreaTypeCollectiveValue/landscapeFeaturesTreesInLine</p>
+      <div class="comment">
+         <span class="markdown">-- Definition --
+Landscape features, trees in line.
+-- Description --
+Landscape features: Trees in line (per 1m).</span>
+      </div>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#EcologicalFocusAreaTypeCollectiveValue"
+               target="_blank"
+               title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#EcologicalFocusAreaTypeCollectiveValue">ecological focus area type collective value</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="EcologicalFocusAreaTypeCollectiveValue/landscapeFeaturesHedgesWoodedStrips">
+      <h3>Landscape features: Hedges/wooded strips<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid/code#EcologicalFocusAreaTypeCollectiveValue/landscapeFeaturesHedgesWoodedStrips</p>
+      <div class="comment">
+         <span class="markdown">-- Definition --
+Landscape features: Hedges/wooded strips.
+-- Description --
+Landscape features: Hedges/wooded strips (per 1m).</span>
+      </div>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#EcologicalFocusAreaTypeCollectiveValue"
+               target="_blank"
+               title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#EcologicalFocusAreaTypeCollectiveValue">ecological focus area type collective value</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="AgriculturalEquivalentPracticeRequirementValue">
+      <h3>List of agricultural equivalent practices<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid/code#AgriculturalEquivalentPracticeRequirementValue</p>
+      <div class="comment">
+         <span class="markdown">Agricultural equivalent practice requirement value
+
+List of requirements qualifying agricultural practices as equivalent to the practices beneficial for the climate and the environment descibed in Chapter 3 of R 1307/2013.
+The broad list of equivalent practices are included in Annex IX of R 1307/2013.
+
+The equivalent practices go beyond the relevant mandatory standards established pursuant to Chapter I of Title VI of Regulation (EU) No 1306/2013, which aim to meet objectives relating to soil and water quality, biodiversity, landscape preservation, and climate change mitigation and adaptation. Those certification schemes may include the practices listed in Annex IX to this Regulation, the practices referred to in paragraph 2 of this Article, or a combination of those practices.</span>
+      </div>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="http://www.w3.org/2004/02/skos/core#ConceptScheme"
+               target="_blank"
+               title="http://www.w3.org/2004/02/skos/core#ConceptScheme">concept scheme</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="AgriculturalEquivalentPracticeTypeValue">
+      <h3>List of agricultural equivalent practices requirements<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid/code#AgriculturalEquivalentPracticeTypeValue</p>
+      <div class="comment">
+         <span class="markdown">Agricultural Equivalent Practice Type value
+
+Values of equivalent agricultural practice types in sense of Art. 43(3)(a) and (b) of R 1307/2013.</span>
+      </div>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="http://www.w3.org/2004/02/skos/core#ConceptScheme"
+               target="_blank"
+               title="http://www.w3.org/2004/02/skos/core#ConceptScheme">concept scheme</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="AgriculturalEquivalentPracticeSubtypeValue">
+      <h3>List of agricultural equivalent subpractices<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid/code#AgriculturalEquivalentPracticeSubtypeValue</p>
+      <div class="comment">
+         <span class="markdown">Agricultural equivalent practice subtype value
+
+Broad categories of agricultural equivalent practices beneficial for the climate and the environment as listed in Annex IX of R 1307/2013.</span>
+      </div>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="http://www.w3.org/2004/02/skos/core#ConceptScheme"
+               target="_blank"
+               title="http://www.w3.org/2004/02/skos/core#ConceptScheme">concept scheme</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="AgriculturalPracticeTypeValue">
+      <h3>List of agricultural practices<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid/code#AgriculturalPracticeTypeValue</p>
+      <div class="comment">
+         <span class="markdown">Agricultural practice type value
+
+List agricultural practices beneficial for the climate and the environment as detailed in Chapter 3 of R 1307/2013.</span>
+      </div>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="http://www.w3.org/2004/02/skos/core#ConceptScheme"
+               target="_blank"
+               title="http://www.w3.org/2004/02/skos/core#ConceptScheme">concept scheme</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="CropValue">
+      <h3>List of crops<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid/code#CropValue</p>
+      <div class="comment">
+         <span class="markdown">Crop value
+
+List of  crops in sense of Art. 44(4) of R (EU) 809/2014  that is needed for checking crop diversification.
+
+NOTE
+Required if cropGroupTypeGreening = certainCrop.</span>
+      </div>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="http://www.w3.org/2004/02/skos/core#ConceptScheme"
+               target="_blank"
+               title="http://www.w3.org/2004/02/skos/core#ConceptScheme">concept scheme</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="EcologicalFocusAreaTypeCollectiveValue">
+      <h3>List of ecological focused areas for collective implementation<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid/code#EcologicalFocusAreaTypeCollectiveValue</p>
+      <div class="comment">
+         <span class="markdown">-- Definition --
+List of ecological focused areas for collective implementation.
+-- Description --
+List of feature (ecological focus areas) types based on Article 46(3) 1307/2013.</span>
+      </div>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="http://www.w3.org/2004/02/skos/core#ConceptScheme"
+               target="_blank"
+               title="http://www.w3.org/2004/02/skos/core#ConceptScheme">concept scheme</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="FarmersSurveyFeatureTypeValue">
+      <h3>List of feature types<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid/code#FarmersSurveyFeatureTypeValue</p>
+      <div class="comment">
+         <span class="markdown">-- Definition --
+List of possible feature types measured and provided by farmer.
+-- Description --
+List of feature types possible to survey / measure by farmer. After these measured features are submitted (during application process) then authority (data custodians) may confirm or reject their reference data update (update based on farmer's survey and or measurement).
+NOTE. List may be extended or subtracted depending on how MS organizing reference data update process.</span>
+      </div>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="http://www.w3.org/2004/02/skos/core#ConceptScheme"
+               target="_blank"
+               title="http://www.w3.org/2004/02/skos/core#ConceptScheme">concept scheme</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="GeometrySourceValue">
+      <h3>List of geometry sources<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid/code#GeometrySourceValue</p>
+      <div class="comment">
+         <span class="markdown">-- Definition --
+List of geometry sources.
+-- Description --
+List of geometry sources.</span>
+      </div>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="http://www.w3.org/2004/02/skos/core#ConceptScheme"
+               target="_blank"
+               title="http://www.w3.org/2004/02/skos/core#ConceptScheme">concept scheme</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="CropGroupTypeAreaRelatedSupportSchemaValue">
+      <h3>List of payment crop groups<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid/code#CropGroupTypeAreaRelatedSupportSchemaValue</p>
+      <div class="comment">
+         <span class="markdown">-- Definition --
+List of payment crop groups.
+-- Description --
+List of crop groups related with area-related support schemas.</span>
+      </div>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="http://www.w3.org/2004/02/skos/core#ConceptScheme"
+               target="_blank"
+               title="http://www.w3.org/2004/02/skos/core#ConceptScheme">concept scheme</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="CropGroupTypeGreeningValue">
+      <h3>List of payment crop groups<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid/code#CropGroupTypeGreeningValue</p>
+      <div class="comment">
+         <span class="markdown">-- Definition --
+List of payment crop groups.
+-- Description --
+List of crop groups related with greening.</span>
+      </div>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="http://www.w3.org/2004/02/skos/core#ConceptScheme"
+               target="_blank"
+               title="http://www.w3.org/2004/02/skos/core#ConceptScheme">concept scheme</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="AgriculturalPracticeTypeValue/maintainingExistingPermanentGrassland">
+      <h3>Maintaining existing permanent grassland<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid/code#AgriculturalPracticeTypeValue/maintainingExistingPermanentGrassland</p>
+      <div class="comment">
+         <span class="markdown">Maintaining existing permanent grassland
+
+Agricultural practices beneficial for the climate and the environment [Art.43(2)(b) of R 1307/2013].</span>
+      </div>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#AgriculturalPracticeTypeValue"
+               target="_blank"
+               title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#AgriculturalPracticeTypeValue">agricultural practice type value</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="GeometrySourceValue/measuredByFarmer">
+      <h3>Measured by farmer<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid/code#GeometrySourceValue/measuredByFarmer</p>
+      <div class="comment">
+         <span class="markdown">-- Definition --
+Measured by farmer.
+-- Description --
+Measured by farmer / uploaded by farmer.</span>
+      </div>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#GeometrySourceValue"
+               target="_blank"
+               title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#GeometrySourceValue">geometry source value</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="AgriculturalEquivalentPracticeRequirementValue/atLeast4Crops">
+      <h3>National or regional environmental certification schemes<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid/code#AgriculturalEquivalentPracticeRequirementValue/atLeast4Crops</p>
+      <div class="comment">
+         <span class="markdown">At least four crops
+
+At least four crops present on the agricultural area. However, the main crop can cover maximum 75% of the area.
+
+Issue
+This value is listed twice in Annex IX as part of crop diversification and part of crop rotation. Since the conditions are the same and the same practice should not be "sold" twice, this  duplication seems to be redundant.</span>
+      </div>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#AgriculturalEquivalentPracticeRequirementValue"
+               target="_blank"
+               title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#AgriculturalEquivalentPracticeRequirementValue">agricultural equivalent practice requirement value</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="AgriculturalEquivalentPracticeRequirementValue/beneficialMultiannualSequenceOfCropRotation">
+      <h3>National or regional environmental certification schemes<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid/code#AgriculturalEquivalentPracticeRequirementValue/beneficialMultiannualSequenceOfCropRotation</p>
+      <div class="comment">
+         <span class="markdown">Beneficial multi-annual sequence of crop rotation
+
+More environmentally beneficial multi-annual sequence of crops and/or fallow is followed. In addition, three crops have to be present and the share of the main crop cannot exceed 75% of he agricultural area.</span>
+      </div>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#AgriculturalEquivalentPracticeRequirementValue"
+               target="_blank"
+               title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#AgriculturalEquivalentPracticeRequirementValue">agricultural equivalent practice requirement value</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="AgriculturalEquivalentPracticeRequirementValue/catchCrop">
+      <h3>National or regional environmental certification schemes<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid/code#AgriculturalEquivalentPracticeRequirementValue/catchCrop</p>
+      <div class="comment">
+         <span class="markdown">Catch crop
+
+Presence of catch crop.  In addition, three crops have to be present and the share of the main crop cannot exceed 75% of he agricultural area.</span>
+      </div>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#AgriculturalEquivalentPracticeRequirementValue"
+               target="_blank"
+               title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#AgriculturalEquivalentPracticeRequirementValue">agricultural equivalent practice requirement value</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="AgriculturalEquivalentPracticeRequirementValue/conversionIntoExtensivelyUsedPg">
+      <h3>National or regional environmental certification schemes<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid/code#AgriculturalEquivalentPracticeRequirementValue/conversionIntoExtensivelyUsedPg</p>
+      <div class="comment">
+         <span class="markdown">Conversion into extensively used PG
+
+Equivalent practice that may be used for fulfilling the percentage requirements for EFA set in Art. 46(1) of R 1307/2013.
+
+It relates to conversion of arable land into permanent grassland extensively used.</span>
+      </div>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#AgriculturalEquivalentPracticeRequirementValue"
+               target="_blank"
+               title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#AgriculturalEquivalentPracticeRequirementValue">agricultural equivalent practice requirement value</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="AgriculturalEquivalentPracticeRequirementValue/ecologicalSetAside">
+      <h3>National or regional environmental certification schemes<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid/code#AgriculturalEquivalentPracticeRequirementValue/ecologicalSetAside</p>
+      <div class="comment">
+         <span class="markdown">Ecological set aside
+
+Equivalent practice that may be used for fulfilling the percentage requirements for EFA set in Art. 46(1) of R 1307/2013.
+
+NOTE
+The requirement is currently 5% of arable land.</span>
+      </div>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#AgriculturalEquivalentPracticeRequirementValue"
+               target="_blank"
+               title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#AgriculturalEquivalentPracticeRequirementValue">agricultural equivalent practice requirement value</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="AgriculturalEquivalentPracticeRequirementValue/fertiliserRegime">
+      <h3>National or regional environmental certification schemes<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid/code#AgriculturalEquivalentPracticeRequirementValue/fertiliserRegime</p>
+      <div class="comment">
+         <span class="markdown">Fertiliser regime
+
+Maintenance of permanent grassland and following a fertiliser regime.</span>
+      </div>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#AgriculturalEquivalentPracticeRequirementValue"
+               target="_blank"
+               title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#AgriculturalEquivalentPracticeRequirementValue">agricultural equivalent practice requirement value</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="AgriculturalEquivalentPracticeRequirementValue/forageOrHayEvacuation">
+      <h3>National or regional environmental certification schemes<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid/code#AgriculturalEquivalentPracticeRequirementValue/forageOrHayEvacuation</p>
+      <div class="comment">
+         <span class="markdown">Forage or hay evacuation
+
+Maintenance of permanent grassland and evacuation of forage or hay.</span>
+      </div>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#AgriculturalEquivalentPracticeRequirementValue"
+               target="_blank"
+               title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#AgriculturalEquivalentPracticeRequirementValue">agricultural equivalent practice requirement value</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="AgriculturalEquivalentPracticeRequirementValue/grassOnArablePeatyOrWetSoil">
+      <h3>National or regional environmental certification schemes<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid/code#AgriculturalEquivalentPracticeRequirementValue/grassOnArablePeatyOrWetSoil</p>
+      <div class="comment">
+         <span class="markdown">Grass on arable peaty or wet soil
+
+Equivalent practice that may be used for fulfilling the percentage requirements for EFA set in Art. 46(1) of R 1307/2013.
+
+It relates to keeping arable peaty or wet soils under grass (with no use of fertilisers and no use of plant protection products).</span>
+      </div>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#AgriculturalEquivalentPracticeRequirementValue"
+               target="_blank"
+               title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#AgriculturalEquivalentPracticeRequirementValue">agricultural equivalent practice requirement value</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="AgriculturalEquivalentPracticeRequirementValue/highNatureValueBufferZone">
+      <h3>National or regional environmental certification schemes<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid/code#AgriculturalEquivalentPracticeRequirementValue/highNatureValueBufferZone</p>
+      <div class="comment">
+         <span class="markdown">High nature value buffer zone
+
+Equivalent practice that may be used for fulfilling the percentage requirements for EFA set in Art. 46(1) of R 1307/2013.
+
+The buffer zones are created for high nature value areas, Natura 2000 or other biodiversity protection sites, including along hedgerows and water courses.</span>
+      </div>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#AgriculturalEquivalentPracticeRequirementValue"
+               target="_blank"
+               title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#AgriculturalEquivalentPracticeRequirementValue">agricultural equivalent practice requirement value</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="AgriculturalEquivalentPracticeRequirementValue/localOrTraditionalGrazingBreeds">
+      <h3>National or regional environmental certification schemes<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid/code#AgriculturalEquivalentPracticeRequirementValue/localOrTraditionalGrazingBreeds</p>
+      <div class="comment">
+         <span class="markdown">Local or traditional grazing breeds
+
+Maintenance of permanent grassland and using local or traditional breeds for grazing the permanent grassland.</span>
+      </div>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#AgriculturalEquivalentPracticeRequirementValue"
+               target="_blank"
+               title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#AgriculturalEquivalentPracticeRequirementValue">agricultural equivalent practice requirement value</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="AgriculturalEquivalentPracticeRequirementValue/managementOfLf">
+      <h3>National or regional environmental certification schemes<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid/code#AgriculturalEquivalentPracticeRequirementValue/managementOfLf</p>
+      <div class="comment">
+         <span class="markdown">Management of LF
+
+Equivalent practice that may be used for fulfilling the percentage requirements for EFA set in Art. 46(1) of R 1307/2013.
+
+The management includes following rules for pruning, trimming, dates, methods, restoration of landscape features (trees, hedgerows, riparian woody vegetation, stone walls (terraces), ditches, ponds).</span>
+      </div>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#AgriculturalEquivalentPracticeRequirementValue"
+               target="_blank"
+               title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#AgriculturalEquivalentPracticeRequirementValue">agricultural equivalent practice requirement value</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="AgriculturalEquivalentPracticeRequirementValue/moreAppropriateCropSelection">
+      <h3>National or regional environmental certification schemes<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid/code#AgriculturalEquivalentPracticeRequirementValue/moreAppropriateCropSelection</p>
+      <div class="comment">
+         <span class="markdown">More appropriate crop selection
+
+More appropriate selection of crops, such as, for example, leguminous, protein crops, crops not requiring irrigation or pesticide treatments, etc. In addition, three crops have to be present and the share of the main crop cannot exceed 75% of he agricultural area.</span>
+      </div>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#AgriculturalEquivalentPracticeRequirementValue"
+               target="_blank"
+               title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#AgriculturalEquivalentPracticeRequirementValue">agricultural equivalent practice requirement value</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="AgriculturalEquivalentPracticeRequirementValue/pGAndCuttingRegime">
+      <h3>National or regional environmental certification schemes<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid/code#AgriculturalEquivalentPracticeRequirementValue/pGAndCuttingRegime</p>
+      <div class="comment">
+         <span class="markdown">PG and cutting regime
+
+Maintenance of permanent grassland and following cutting regime or appropriate mowing (dates, methods, limits).</span>
+      </div>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#AgriculturalEquivalentPracticeRequirementValue"
+               target="_blank"
+               title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#AgriculturalEquivalentPracticeRequirementValue">agricultural equivalent practice requirement value</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="AgriculturalEquivalentPracticeRequirementValue/pGAndExtensiveGrazing">
+      <h3>National or regional environmental certification schemes<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid/code#AgriculturalEquivalentPracticeRequirementValue/pGAndExtensiveGrazing</p>
+      <div class="comment">
+         <span class="markdown">PG and extensive grazing
+
+Maintenance of permanent grassland and following extensive grazing (timing, maximum stocking density).</span>
+      </div>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#AgriculturalEquivalentPracticeRequirementValue"
+               target="_blank"
+               title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#AgriculturalEquivalentPracticeRequirementValue">agricultural equivalent practice requirement value</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="AgriculturalEquivalentPracticeRequirementValue/pGWithGrassVarietiesOrSeedingRegime">
+      <h3>National or regional environmental certification schemes<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid/code#AgriculturalEquivalentPracticeRequirementValue/pGWithGrassVarietiesOrSeedingRegime</p>
+      <div class="comment">
+         <span class="markdown">PG with grass varieties or seeding regime
+
+Maintenance of permanent grassland  with specified grass varieties and/or seeding regime for renewal depending on the grassland type, with no destruction of high nature value.</span>
+      </div>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#AgriculturalEquivalentPracticeRequirementValue"
+               target="_blank"
+               title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#AgriculturalEquivalentPracticeRequirementValue">agricultural equivalent practice requirement value</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="AgriculturalEquivalentPracticeRequirementValue/pGWithLfAndScrubControl">
+      <h3>National or regional environmental certification schemes<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid/code#AgriculturalEquivalentPracticeRequirementValue/pGWithLfAndScrubControl</p>
+      <div class="comment">
+         <span class="markdown">PG with LF and scrub control
+
+Maintenance of permanent grassland and maintenance of landscape features on permanent grassland and control of scrub.</span>
+      </div>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#AgriculturalEquivalentPracticeRequirementValue"
+               target="_blank"
+               title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#AgriculturalEquivalentPracticeRequirementValue">agricultural equivalent practice requirement value</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="AgriculturalEquivalentPracticeRequirementValue/pesticideRestrictions">
+      <h3>National or regional environmental certification schemes<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid/code#AgriculturalEquivalentPracticeRequirementValue/pesticideRestrictions</p>
+      <div class="comment">
+         <span class="markdown">Pesticide Restrictions
+
+Maintenance of permanent grassland and following pesticide restrictions.</span>
+      </div>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#AgriculturalEquivalentPracticeRequirementValue"
+               target="_blank"
+               title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#AgriculturalEquivalentPracticeRequirementValue">agricultural equivalent practice requirement value</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="AgriculturalEquivalentPracticeRequirementValue/shepherdingOrMountainPastoralism">
+      <h3>National or regional environmental certification schemes<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid/code#AgriculturalEquivalentPracticeRequirementValue/shepherdingOrMountainPastoralism</p>
+      <div class="comment">
+         <span class="markdown">Catch crop
+
+Presence of catch crop.  In addition, three crops have to be present and the share of the main crop cannot exceed 75% of he agricultural area.</span>
+      </div>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#AgriculturalEquivalentPracticeRequirementValue"
+               target="_blank"
+               title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#AgriculturalEquivalentPracticeRequirementValue">agricultural equivalent practice requirement value</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="AgriculturalEquivalentPracticeRequirementValue/specificCropVarieties">
+      <h3>National or regional environmental certification schemes<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid/code#AgriculturalEquivalentPracticeRequirementValue/specificCropVarieties</p>
+      <div class="comment">
+         <span class="markdown">Specific crop varieties
+
+Regional varieties of old, traditional or endangered crop types are included on at least 5 % of the rotated area.  In addition, three crops have to be present and the share of the main crop cannot exceed 75% of he agricultural area.</span>
+      </div>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#AgriculturalEquivalentPracticeRequirementValue"
+               target="_blank"
+               title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#AgriculturalEquivalentPracticeRequirementValue">agricultural equivalent practice requirement value</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="AgriculturalEquivalentPracticeRequirementValue/steepSlopeManagement">
+      <h3>National or regional environmental certification schemes<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid/code#AgriculturalEquivalentPracticeRequirementValue/steepSlopeManagement</p>
+      <div class="comment">
+         <span class="markdown">Steep slope management
+
+Maintenance of permanent grassland and appropriate management for steep slopes.</span>
+      </div>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#AgriculturalEquivalentPracticeRequirementValue"
+               target="_blank"
+               title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#AgriculturalEquivalentPracticeRequirementValue">agricultural equivalent practice requirement value</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="AgriculturalEquivalentPracticeRequirementValue/uncultivatedBufferStripsAndFieldMargins">
+      <h3>National or regional environmental certification schemes<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid/code#AgriculturalEquivalentPracticeRequirementValue/uncultivatedBufferStripsAndFieldMargins</p>
+      <div class="comment">
+         <span class="markdown">Uncultivated buffer strips and field margins
+
+Equivalent practice that may be used for fulfilling the percentage requirements for EFA set in Art. 46(1) of R 1307/2013.
+
+Management of uncultivated buffer strips and field margins. It includes
+	- cutting regime,
+	- local or specified grass varieties and/or seeding regime,
+	- re-seeding with regional varieties,
+	- no use of pesticides,
+	- no disposal of manure and/or mineral fertilisers,
+	- no irrigation, 
+	- no soil sealing.</span>
+      </div>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#AgriculturalEquivalentPracticeRequirementValue"
+               target="_blank"
+               title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#AgriculturalEquivalentPracticeRequirementValue">agricultural equivalent practice requirement value</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="AgriculturalEquivalentPracticeRequirementValue/wildlifeAreaManagement">
+      <h3>National or regional environmental certification schemes<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid/code#AgriculturalEquivalentPracticeRequirementValue/wildlifeAreaManagement</p>
+      <div class="comment">
+         <span class="markdown">Wildlife area management
+
+Equivalent practice that may be used for fulfilling the percentage requirements for EFA set in Art. 46(1) of R 1307/2013.
+
+Borders, in-field strips and patches managed for wildlife or specific fauna. It includes:
+	- herbaceous border,
+	- protection of nests,
+	- wildflower strips,
+	- local seed mix,
+	- unharvested crops.</span>
+      </div>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#AgriculturalEquivalentPracticeRequirementValue"
+               target="_blank"
+               title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#AgriculturalEquivalentPracticeRequirementValue">agricultural equivalent practice requirement value</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="AgriculturalEquivalentPracticeRequirementValue/winterSoilCover">
+      <h3>National or regional environmental certification schemes<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid/code#AgriculturalEquivalentPracticeRequirementValue/winterSoilCover</p>
+      <div class="comment">
+         <span class="markdown">Winter soil cover
+
+Presence of winter soil cover.  In addition, three crops have to be present and the share of the main crop cannot exceed 75% of he agricultural area.</span>
+      </div>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#AgriculturalEquivalentPracticeRequirementValue"
+               target="_blank"
+               title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#AgriculturalEquivalentPracticeRequirementValue">agricultural equivalent practice requirement value</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="CropGroupTypeAreaRelatedSupportSchemaValue/otherUses">
+      <h3>Other uses<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid/code#CropGroupTypeAreaRelatedSupportSchemaValue/otherUses</p>
+      <div class="comment">
+         <span class="markdown">-- Definition --
+Other uses.
+-- Description --
+Areas declared under the heading other uses.</span>
+      </div>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#CropGroupTypeAreaRelatedSupportSchemaValue"
+               target="_blank"
+               title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#CropGroupTypeAreaRelatedSupportSchemaValue">crop group type area related support schema value</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="CropGroupTypeGreeningValue/permanentGrasslandEnvironmentallySensitive">
+      <h3>Permanent grassland environmentally sensitive<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid/code#CropGroupTypeGreeningValue/permanentGrasslandEnvironmentallySensitive</p>
+      <div class="comment">
+         <span class="markdown">--Name--
+Permanent grassland environmentally sensitive
+
+-- Definition --
+Permanent grasslands which are environmentally sensitive in areas covered by Directives 92/43/EEC or 2009/147/EC, including in peat and wetlands situated in these areas.
+
+-- Description --</span>
+      </div>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#CropGroupTypeGreeningValue"
+               target="_blank"
+               title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#CropGroupTypeGreeningValue">crop group type greening value</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="CropGroupTypeGreeningValue/permanentGrasslandRemaining">
+      <h3>Permanent grassland remaining<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid/code#CropGroupTypeGreeningValue/permanentGrasslandRemaining</p>
+      <div class="comment">
+         <span class="markdown">-- Definition --
+Permanent grassland remaining.
+-- Description --
+Remaining areas declared as permanent grassland.
+NOTE. cg</span>
+      </div>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#CropGroupTypeGreeningValue"
+               target="_blank"
+               title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#CropGroupTypeGreeningValue">crop group type greening value</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="CropGroupTypeGreeningValue/permanentPastureRemaining">
+      <h3>Permanent pasture remaining<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid/code#CropGroupTypeGreeningValue/permanentPastureRemaining</p>
+      <div class="comment">
+         <span class="markdown">-- Definition --
+Permanent pasture remaining.
+-- Description --
+Remaining areas declared as permanent pasture.
+NOTE. cp</span>
+      </div>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#CropGroupTypeGreeningValue"
+               target="_blank"
+               title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#CropGroupTypeGreeningValue">crop group type greening value</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="AgriculturalEquivalentPracticeSubtypeValue/equivalentToCropDiversification">
+      <h3>Practices equivalent to crop diversification: Crop diversification<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid/code#AgriculturalEquivalentPracticeSubtypeValue/equivalentToCropDiversification</p>
+      <div class="comment">
+         <span class="markdown">Equivalent to crop diversification
+
+Practices equivalent to crop diversification as listed in I) of Annex IX of R 1307/2013:
+	- crop diversification(with different requirements)
+	- crop rotation
+	- winter soil cover
+	- catch crop</span>
+      </div>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#AgriculturalEquivalentPracticeSubtypeValue"
+               target="_blank"
+               title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#AgriculturalEquivalentPracticeSubtypeValue">agricultural equivalent practice subtype value</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="AgriculturalEquivalentPracticeSubtypeValue/equivalentToMaintenanceOfPermanentGrassland">
+      <h3>Practices equivalent to maintenance of permanent grassland: Management of meadows or pastures<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid/code#AgriculturalEquivalentPracticeSubtypeValue/equivalentToMaintenanceOfPermanentGrassland</p>
+      <div class="comment">
+         <span class="markdown">Equivalent to maintenance of permanent grassland
+
+Practices equivalent to the maintenance of permanent grassland as listed in II) of Annex IX of R 1307/2013:
+	- Management of meadows or pastures
+	- Extensive grazing systems</span>
+      </div>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#AgriculturalEquivalentPracticeSubtypeValue"
+               target="_blank"
+               title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#AgriculturalEquivalentPracticeSubtypeValue">agricultural equivalent practice subtype value</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="AgriculturalEquivalentPracticeSubtypeValue/equivalentToEcologicalFocusArea">
+      <h3>Practices equivalent with ecological focus area<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid/code#AgriculturalEquivalentPracticeSubtypeValue/equivalentToEcologicalFocusArea</p>
+      <div class="comment">
+         <span class="markdown">Equivalent to Ecological Focus Area
+
+Practices equivalent to ecological focus area as listed in  III) of Annex IX of R 1307/2013:
+	- Ecological set aside
+	- Creation of "buffer zones" for high nature value areas
+	-  Management of uncultivated buffer strips, patches and field margins 
+	- Borders, in-field strips and patches managed for wildlife or specific fauna
+	- Management (pruning, trimming, dates, methods, restoration) of landscape features
+	- Keeping arable peaty or wet soils under grass (with no use of fertilisers and no use of plant protection products)
+	- Production on arable land with no use of fertiliser (mineral fertiliser and manure) and/or plant protection products, and not irrigated, not sown with the same crop two years in a row and on a fixed place
+	- Conversion of arable land into permanent grassland extensively used</span>
+      </div>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#AgriculturalEquivalentPracticeSubtypeValue"
+               target="_blank"
+               title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#AgriculturalEquivalentPracticeSubtypeValue">agricultural equivalent practice subtype value</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="FarmersSurveyFeatureTypeValue/referenceArea">
+      <h3>Reference area<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid/code#FarmersSurveyFeatureTypeValue/referenceArea</p>
+      <div class="comment">
+         <span class="markdown">-- Definition --
+Agricultural area.
+-- Description --
+Agricultural area.</span>
+      </div>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#FarmersSurveyFeatureTypeValue"
+               target="_blank"
+               title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#FarmersSurveyFeatureTypeValue">farmers survey feature type value</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="AgriculturalEquivalentPracticeTypeValue/equivalentNationalOrRegionalCertificationScheme">
+      <h3>Requirement: lower maximum thresholds apply<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid/code#AgriculturalEquivalentPracticeTypeValue/equivalentNationalOrRegionalCertificationScheme</p>
+      <div class="comment">
+         <span class="markdown">National or regional certification scheme
+
+Equivalent practices that yield an equivalent or higher level of benefit for the climate and the environment [Art. 43(3)(b) of R 1307/2013]. 
+
+The details of practices together with the related requirements are included in Annex IX of this regulation and the AgriculturalEquivalentPracticeRequirementValue code list.</span>
+      </div>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#AgriculturalEquivalentPracticeTypeValue"
+               target="_blank"
+               title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#AgriculturalEquivalentPracticeTypeValue">agricultural equivalent practice type value</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="AgriculturalEquivalentPracticeTypeValue/equivalentAgriEnvironmentClimateRegulationCommitment">
+      <h3>Requirement: there are at least four crops<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid/code#AgriculturalEquivalentPracticeTypeValue/equivalentAgriEnvironmentClimateRegulationCommitment</p>
+      <div class="comment">
+         <span class="markdown">Agri-Environment and Climate Regulation Commitment
+
+Equivalent practices that yield an equivalent or higher level of benefit for the climate and the environment [Art. 43(3)(a) of R 1307/2013]. 
+
+The applicable regulations are the following:
+	- Article 39(2) of Regulation (EC) No 1698/2005 (minimum requirements for fertiliser and plant protection product use) 
+	- Article 28(2) of Regulation (EU) No 1305/2013</span>
+      </div>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#AgriculturalEquivalentPracticeTypeValue"
+               target="_blank"
+               title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#AgriculturalEquivalentPracticeTypeValue">agricultural equivalent practice type value</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+</div><div id="legend">
+<h2>Legend <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+<div   class="entity">
+<sup class="type-ni" title="Named Individuals">ni</sup>: Named Individuals
+</div>
+</div>
+</div>
+    
+
+<!--REFERENCES SECTION-->
+  <div id="references">
+<h2 id="ref" class="list">References <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+<span class="markdown">
+Add your references here. It is recommended to have them as a list.</span>
+
+</div>
+<div id="acknowledgments">
+<h2 id="ack" class="list">Acknowledgments <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+<p>
+The authors would like to thank <a href="http://www.essepuntato.it/">Silvio Peroni</a> for developing <a href="http://www.essepuntato.it/lode">LODE</a>, a Live OWL Documentation Environment, which is used for representing the Cross Referencing Section of this document and <a href="https://w3id.org/people/dgarijo">Daniel Garijo</a> for developing <a href="https://github.com/dgarijo/Widoco">Widoco</a>, the program used to create the template used in this documentation.</p>
+</div>
+
+
+</div>
+</body>
+</html>
