@@ -1,0 +1,1158 @@
+@prefix : <http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#> .
+
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code> rdf:type owl:Ontology ;
+                                                                             owl:versionIRI <http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-base/code/3.0> ;
+                                                                             <http://purl.org/dc/terms/creator> _:genid1 ;
+                                                                             <http://purl.org/dc/terms/description> "Ontology of the integrated control system code lists used in IACS, generated from the transformation of the corresponding JRC application schema"@en ;
+                                                                             <http://purl.org/dc/terms/rights> "This ontology is distributed under Creative Commons Attribution 4.0 License - http://creativecommons.org/licenses/by/4.0"@en ;
+                                                                             <http://purl.org/dc/terms/source> "JRC IACS application schema. https://doi.org/10.1016/j.landusepol.2016.05.023"@en ;
+                                                                             <http://purl.org/dc/terms/title> "JRC IACS - Integrated Control System Code Lists"@en ;
+                                                                             rdfs:label "Integrated control system code lists"@en ;
+                                                                             owl:versionInfo "3.0" .
+
+_:genid1 <http://schema.org/affiliation> [ <http://xmlns.com/foaf/0.1/name> "PSNC"
+                                          ] ;
+          rdfs:seeAlso <http://orcid.org/0000-0003-4289-4922> ;
+          <http://xmlns.com/foaf/0.1/name> "Raul Palma" .
+
+#################################################################
+#    Annotation properties
+#################################################################
+
+###  http://purl.org/dc/terms/creator
+<http://purl.org/dc/terms/creator> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/description
+<http://purl.org/dc/terms/description> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/isFormatOf
+<http://purl.org/dc/terms/isFormatOf> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/rights
+<http://purl.org/dc/terms/rights> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/source
+<http://purl.org/dc/terms/source> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/title
+<http://purl.org/dc/terms/title> rdf:type owl:AnnotationProperty .
+
+
+###  http://schema.org/affiliation
+<http://schema.org/affiliation> rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#definition
+<http://www.w3.org/2004/02/skos/core#definition> rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#inScheme
+<http://www.w3.org/2004/02/skos/core#inScheme> rdf:type owl:AnnotationProperty .
+
+
+###  http://xmlns.com/foaf/0.1/name
+<http://xmlns.com/foaf/0.1/name> rdf:type owl:AnnotationProperty .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#ControlRateGroupAnimalAidSchemaValue
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#ControlRateGroupAnimalAidSchemaValue> rdf:type owl:Class .
+
+
+###  http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#ControlRateGroupRuralDevelopmentMeasureValue
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#ControlRateGroupRuralDevelopmentMeasureValue> rdf:type owl:Class .
+
+
+###  http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#ControlRateTypeValue
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#ControlRateTypeValue> rdf:type owl:Class .
+
+
+###  http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#CrossCheckTypeValue
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#CrossCheckTypeValue> rdf:type owl:Class .
+
+
+###  http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#InspectorsSurveyObjectTypeValue
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#InspectorsSurveyObjectTypeValue> rdf:type owl:Class .
+
+
+###  http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#OnTheSpotCheckTypeValue
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#OnTheSpotCheckTypeValue> rdf:type owl:Class .
+
+
+###  http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#RiskTypeValue
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#RiskTypeValue> rdf:type owl:Class .
+
+
+###  http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#SampleTypeValue
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#SampleTypeValue> rdf:type owl:Class .
+
+
+###  http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#SamplingStrategyTypeValue
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#SamplingStrategyTypeValue> rdf:type owl:Class .
+
+
+###  http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#SurveyMethodValue
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#SurveyMethodValue> rdf:type owl:Class .
+
+
+###  http://www.w3.org/2004/02/skos/core#ConceptScheme
+<http://www.w3.org/2004/02/skos/core#ConceptScheme> rdf:type owl:Class .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#ControlRateGroupAnimalAidSchemaValue
+:ControlRateGroupAnimalAidSchemaValue rdf:type owl:NamedIndividual ,
+                                               <http://www.w3.org/2004/02/skos/core#ConceptScheme> ;
+                                      <http://purl.org/dc/terms/isFormatOf> <http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#ControlRateGroupAnimalAidSchemaValue> ;
+                                      rdfs:label "List of control rate groups for animal aid schemas"@en ;
+                                      <http://www.w3.org/2004/02/skos/core#definition> """Control Rate Group Animal Aid Scheme Value
+
+List of control rate groups for animal aid schemas.
+
+NOTE
+Currently placeholder only."""@en .
+
+
+###  http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#ControlRateGroupRuralDevelopmentMeasureValue
+:ControlRateGroupRuralDevelopmentMeasureValue rdf:type owl:NamedIndividual ,
+                                                       <http://www.w3.org/2004/02/skos/core#ConceptScheme> ;
+                                              <http://purl.org/dc/terms/isFormatOf> <http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#ControlRateGroupRuralDevelopmentMeasureValue> ;
+                                              rdfs:label "List of control rate groups for rural development measures"@en ;
+                                              <http://www.w3.org/2004/02/skos/core#definition> """Control Rate Group Rural Development Measure Value
+
+List of control rate groups for rural development measures.
+
+NOTE. Currently placeholder only."""@en .
+
+
+###  http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#ControlRateTypeValue
+:ControlRateTypeValue rdf:type owl:NamedIndividual ,
+                               <http://www.w3.org/2004/02/skos/core#ConceptScheme> ;
+                      <http://purl.org/dc/terms/isFormatOf> <http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#ControlRateTypeValue> ;
+                      rdfs:label "List of control rate groups for greening"@en ;
+                      <http://www.w3.org/2004/02/skos/core#definition> """Control rate type value
+
+List of applicable control rate values as prescribed by Art. 30, 31, 36(2) and 36(6) of R 809/2014.
+
+NOTE
+This code list currently does not contain values for rural development measures (Art. 32) and animal aid schemes (Art. 33 of R 809/2014)."""@en .
+
+
+###  http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#CrossCheckTypeValue
+:CrossCheckTypeValue rdf:type owl:NamedIndividual ,
+                              <http://www.w3.org/2004/02/skos/core#ConceptScheme> ;
+                     <http://purl.org/dc/terms/isFormatOf> <http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#CrossCheckTypeValue> ;
+                     rdfs:label "List of on the cross-check types"@en ;
+                     <http://www.w3.org/2004/02/skos/core#definition> """-- Definition --
+List of cross-check types.
+-- Description --
+List of cross-check types."""@en .
+
+
+###  http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#InspectorsSurveyObjectTypeValue
+:InspectorsSurveyObjectTypeValue rdf:type owl:NamedIndividual ,
+                                          <http://www.w3.org/2004/02/skos/core#ConceptScheme> ;
+                                 <http://purl.org/dc/terms/isFormatOf> <http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#InspectorsSurveyObjectTypeValue> ;
+                                 rdfs:label "List of feature types"@en ;
+                                 <http://www.w3.org/2004/02/skos/core#definition> """Inspectors survey type value
+
+List of possible real objects measured by an inspector.
+
+NOTE
+List may be extended or subtracted depending on how MS organizing on-the-spot check process."""@en .
+
+
+###  http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#OnTheSpotCheckTypeValue
+:OnTheSpotCheckTypeValue rdf:type owl:NamedIndividual ,
+                                  <http://www.w3.org/2004/02/skos/core#ConceptScheme> ;
+                         <http://purl.org/dc/terms/isFormatOf> <http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#OnTheSpotCheckTypeValue> ;
+                         rdfs:label "List of on the spot check types"@en ;
+                         <http://www.w3.org/2004/02/skos/core#definition> """On-the-spot check type value
+
+List of on the spot check types. that describe the purpose of the control."""@en .
+
+
+###  http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#RiskTypeValue
+:RiskTypeValue rdf:type owl:NamedIndividual ,
+                        <http://www.w3.org/2004/02/skos/core#ConceptScheme> ;
+               <http://purl.org/dc/terms/isFormatOf> <http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#RiskTypeValue> ;
+               <http://www.w3.org/2004/02/skos/core#definition> """Risk type value
+
+Preamble (33) of R (EU) 809/2014 requires that the competent authority should establish the risk factors targeting the areas where the risk of errors is the highest.
+
+NOTE
+Risk criteria should be assessed and updated on an annual basis taking into account the relevance of each risk criterion, comparing the results of randomly and risk-based selected samples, the specific situation in the Member States and the nature of the non-compliance."""@en .
+
+
+###  http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#SampleTypeValue
+:SampleTypeValue rdf:type owl:NamedIndividual ,
+                          <http://www.w3.org/2004/02/skos/core#ConceptScheme> ;
+                 <http://purl.org/dc/terms/isFormatOf> <http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#SampleTypeValue> ;
+                 <http://www.w3.org/2004/02/skos/core#definition> """Sample Type value
+
+The sample type property shall be attributed to each sampled item (application). One item can be sampled to one or more payment/support schemes. 
+
+NOTE
+The categories of sample type values have to support the traceability of the sampling cascade. This is the reason for distinguishing the initial and the top-up samples for BPS/SAPS."""@en .
+
+
+###  http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#SamplingStrategyTypeValue
+:SamplingStrategyTypeValue rdf:type owl:NamedIndividual ,
+                                    <http://www.w3.org/2004/02/skos/core#ConceptScheme> ;
+                           <http://purl.org/dc/terms/isFormatOf> <http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#SamplingStrategyTypeValue> ;
+                           rdfs:label "List of sampling strategy types"@en ;
+                           <http://www.w3.org/2004/02/skos/core#definition> """Sampling Strategy Type Value
+
+List of sampling strategy types.
+
+In accordance with Preamble (34) of R 809/2014 sampling should comprise a random part in order to obtain a representative error rate and a risk based part for the following Payment/support schemes:
+	- greening payment
+	- animal aid schemes
+	- rural development measure
+
+NOTE 1
+To ensure a relevant and efficient risk analysis, the effectiveness of the risk analysis should be assessed and updated on an annual basis taking into account the relevance of each risk factor, comparing the results of randomly and risk-based selected samples and the specific situation [Preamble (68) and Art. 34(5) of R 809/2014].
+
+NOTE 2
+The sampling method should be selected and documented by the competent authority of the MS/Region. The values of the code list can be extended.
+
+NOTE 3
+The exemplary values of the code list in this application schema are taken from DSCG/2014/32 guideline and best statistical practices."""@en .
+
+
+###  http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#SurveyMethodValue
+:SurveyMethodValue rdf:type owl:NamedIndividual ,
+                            <http://www.w3.org/2004/02/skos/core#ConceptScheme> ;
+                   <http://purl.org/dc/terms/isFormatOf> <http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#SurveyMethodValue> ;
+                   rdfs:label "List of survey types"@en ;
+                   <http://www.w3.org/2004/02/skos/core#definition> """Survey method value
+
+List of survey method types in sense of Art. 74(3) of R 1306/2013."""@en .
+
+
+###  http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#ControlRateGroupAnimalAidSchemaValue/placeholder
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#ControlRateGroupAnimalAidSchemaValue/placeholder> rdf:type owl:NamedIndividual ,
+                                                                                                                                      <http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#ControlRateGroupAnimalAidSchemaValue> ;
+                                                                                                                             rdfs:label "Currently out of scope"@en ;
+                                                                                                                             <http://www.w3.org/2004/02/skos/core#inScheme> :ControlRateGroupAnimalAidSchemaValue .
+
+
+###  http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#ControlRateGroupRuralDevelopmentMeasureValue/placeholder
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#ControlRateGroupRuralDevelopmentMeasureValue/placeholder> rdf:type owl:NamedIndividual ,
+                                                                                                                                              <http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#ControlRateGroupRuralDevelopmentMeasureValue> ;
+                                                                                                                                     rdfs:label "Currently out of scope"@en ;
+                                                                                                                                     <http://www.w3.org/2004/02/skos/core#inScheme> :ControlRateGroupRuralDevelopmentMeasureValue .
+
+
+###  http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#ControlRateTypeValue/100%OfMandarotyReconversionIntoSensitivePermanentGrassland
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#ControlRateTypeValue/100%OfMandarotyReconversionIntoSensitivePermanentGrassland> rdf:type owl:NamedIndividual ,
+                                                                                                                                                                     <http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#ControlRateTypeValue> ;
+                                                                                                                                                            rdfs:label "100 % of all beneficiaries with an obligation to re-convert land into land under permanent grassland, redistributive"@en ;
+                                                                                                                                                            <http://www.w3.org/2004/02/skos/core#definition> """100% of mandatory reconversion into sensitive permanent grassland
+
+In accordance with Art.31(1)(g) of R (EU) 809/2014 100 % of beneficiaries with an obligation to re-convert land into land under permanent grassland shall be controlled."""@en ;
+                                                                                                                                                            <http://www.w3.org/2004/02/skos/core#inScheme> :ControlRateTypeValue .
+
+
+###  http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#ControlRateTypeValue/100%OfTheContiguousStructuresOfAdjacentEfa
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#ControlRateTypeValue/100%OfTheContiguousStructuresOfAdjacentEfa> rdf:type owl:NamedIndividual ,
+                                                                                                                                                     <http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#ControlRateTypeValue> ;
+                                                                                                                                            rdfs:label "100 % of the contiguous structures of adjacent ecological focus areas"@en ;
+                                                                                                                                            <http://www.w3.org/2004/02/skos/core#definition> """100 % of the contiguous structures of adjacent EFA
+
+In sense of Art. 31(1)(f) of R (EU) 809/2014  100 % of the contiguous structures of adjacent ecological focus areas as referred to in Article 46(5) of Regulation (EU) 1307/2013 shall be controlled."""@en ;
+                                                                                                                                            <http://www.w3.org/2004/02/skos/core#inScheme> :ControlRateTypeValue .
+
+
+###  http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#ControlRateTypeValue/atLeast10%OfAreasCoveredBySensitiveGrassland
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#ControlRateTypeValue/atLeast10%OfAreasCoveredBySensitiveGrassland> rdf:type owl:NamedIndividual ,
+                                                                                                                                                       <http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#ControlRateTypeValue> ;
+                                                                                                                                              rdfs:label "At least 5% of all beneficiaries required to observe the agricultural practices having areas covered with permanent grasslands"@en ;
+                                                                                                                                              <http://www.w3.org/2004/02/skos/core#definition> """At least 10% of areas covered by sensitive grassland
+
+Increased control rate (5% normal+5% supplementary) in sense of Art. 31(3) for beneficiaries required to follow greening practices."""@en ;
+                                                                                                                                              <http://www.w3.org/2004/02/skos/core#inScheme> :ControlRateTypeValue .
+
+
+###  http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#ControlRateTypeValue/atLeast10%OfCollectiveImplementation
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#ControlRateTypeValue/atLeast10%OfCollectiveImplementation> rdf:type owl:NamedIndividual ,
+                                                                                                                                               <http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#ControlRateTypeValue> ;
+                                                                                                                                      rdfs:label "At least 5 % of  the  collective implementation"@en ;
+                                                                                                                                      <http://www.w3.org/2004/02/skos/core#definition> """At least 10% of the collective implementation
+
+Increased control rate (5% normal+5% supplementary) in sense of Art. 31(3) for beneficiaries required to follow greening practices."""@en ;
+                                                                                                                                      <http://www.w3.org/2004/02/skos/core#inScheme> :ControlRateTypeValue .
+
+
+###  http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#ControlRateTypeValue/atLeast10%OfFollowingGreeningByUsingEnvironmentalCertificationSchemes
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#ControlRateTypeValue/atLeast10%OfFollowingGreeningByUsingEnvironmentalCertificationSchemes> rdf:type owl:NamedIndividual ,
+                                                                                                                                                                                <http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#ControlRateTypeValue> ;
+                                                                                                                                                                       rdfs:label "At least 5 % of all beneficiaries required to observe the greening practices and using national or regional environmental certification schemes"@en ;
+                                                                                                                                                                       <http://www.w3.org/2004/02/skos/core#definition> """At least 10 % following greening practices by using environmental certification schemes
+
+Increased control rate (5% normal+5% supplementary) in sense of Art. 31(3) for beneficiaries required to follow greening practices."""@en ;
+                                                                                                                                                                       <http://www.w3.org/2004/02/skos/core#inScheme> :ControlRateTypeValue .
+
+
+###  http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#ControlRateTypeValue/atLeast10%OfFollowingGreeningPractices
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#ControlRateTypeValue/atLeast10%OfFollowingGreeningPractices> rdf:type owl:NamedIndividual ,
+                                                                                                                                                 <http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#ControlRateTypeValue> ;
+                                                                                                                                        rdfs:label "At least 5% of all beneficiaries required to observe the agricultural practices having areas covered with permanent grasslands"@en ;
+                                                                                                                                        <http://www.w3.org/2004/02/skos/core#definition> """At least 10% of following greening practices
+
+Increased control rate (5% normal+5% supplementary) in sense of Art. 31(3) of R 809/2014 for beneficiaries required to follow greening practices. 
+
+Where the ecological focus areas are not identified in the identification system for agricultural parcels as referred to in Article 70 of Regulation (EU) No 1306/2013, the control rate laid down in points (a) and (c) to (e) of paragraph 1 shall be supplemented by 5% of all beneficiaries of the respective control sample who are required to have ecological focus area on the agricultural area in accordance with Articles 43 and 46 of Regulation (EU) No 1307/2013."""@en ;
+                                                                                                                                        <http://www.w3.org/2004/02/skos/core#inScheme> :ControlRateTypeValue .
+
+
+###  http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#ControlRateTypeValue/atLeast10%OfRegionalImplementation
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#ControlRateTypeValue/atLeast10%OfRegionalImplementation> rdf:type owl:NamedIndividual ,
+                                                                                                                                             <http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#ControlRateTypeValue> ;
+                                                                                                                                    rdfs:label "At least  5 % of all beneficiaries participating in a regional implementation"@en ;
+                                                                                                                                    <http://www.w3.org/2004/02/skos/core#definition> """At least 10 % of all beneficiaries participating in a regional implementation
+
+Increased control rate (5% normal+5% supplementary) in sense of Art. 31(3) for beneficiaries required to follow greening practices."""@en ;
+                                                                                                                                    <http://www.w3.org/2004/02/skos/core#inScheme> :ControlRateTypeValue .
+
+
+###  http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#ControlRateTypeValue/atLeast20%ForProductionOfHemp
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#ControlRateTypeValue/atLeast20%ForProductionOfHemp> rdf:type owl:NamedIndividual ,
+                                                                                                                                        <http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#ControlRateTypeValue> ;
+                                                                                                                               rdfs:label "At least 5% of all beneficiaries required to observe the agricultural practices having areas covered with permanent grasslands"@en ;
+                                                                                                                               <http://www.w3.org/2004/02/skos/core#definition> """At least 20% for production of hemp
+
+Art. 36(6) of Regulation (EU) 809/2014 allows the reduction of the control rate for production of hemp from 30% to 20% when a MS introduces a prior approval for the cultivation of hemp.
+
+NOTE
+MS shall notify the EC about the rules (or changes in the rules) of the approval system."""@en ;
+                                                                                                                               <http://www.w3.org/2004/02/skos/core#inScheme> :ControlRateTypeValue .
+
+
+###  http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#ControlRateTypeValue/atLeast20%OfMandarotyReconversionIntoPermanentGrassland
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#ControlRateTypeValue/atLeast20%OfMandarotyReconversionIntoPermanentGrassland> rdf:type owl:NamedIndividual ,
+                                                                                                                                                                  <http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#ControlRateTypeValue> ;
+                                                                                                                                                         rdfs:label "100 % of all beneficiaries with an obligation to re-convert land into land under permanent grassland, redistributive"@en ;
+                                                                                                                                                         <http://www.w3.org/2004/02/skos/core#definition> """At least 20% of mandatory reconversion into permanent grassland
+
+In sense of Art. 31(1)(h) of R (EU) 809/2014 20 % of all beneficiaries with an obligation to re-convert land into permanent grassland shall be controlled."""@en ;
+                                                                                                                                                         <http://www.w3.org/2004/02/skos/core#inScheme> :ControlRateTypeValue .
+
+
+###  http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#ControlRateTypeValue/atLeast3%ForRedistributivePayment
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#ControlRateTypeValue/atLeast3%ForRedistributivePayment> rdf:type owl:NamedIndividual ,
+                                                                                                                                            <http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#ControlRateTypeValue> ;
+                                                                                                                                   rdfs:label "At least 5% of all beneficiaries required to observe the agricultural practices having areas covered with permanent grasslands"@en ;
+                                                                                                                                   <http://www.w3.org/2004/02/skos/core#definition> """At least 3% or redistributive payment 
+
+Art. 36(2) of Regulation (EU) 809/2014 allows the reduction of the control rate for redistributive payment from 5% to 3% when the cross checks based on geospatial applications are carried out."""@en ;
+                                                                                                                                   <http://www.w3.org/2004/02/skos/core#inScheme> :ControlRateTypeValue .
+
+
+###  http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#ControlRateTypeValue/atLeast3%ForSmallFarmersScheme
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#ControlRateTypeValue/atLeast3%ForSmallFarmersScheme> rdf:type owl:NamedIndividual ,
+                                                                                                                                         <http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#ControlRateTypeValue> ;
+                                                                                                                                rdfs:label "At least 5% of all beneficiaries required to observe the agricultural practices having areas covered with permanent grasslands"@en ;
+                                                                                                                                <http://www.w3.org/2004/02/skos/core#definition> """At least 3% for small farmer scheme
+
+Art. 36(2) of Regulation (EU) 809/2014 allows the reduction of the control rate for the small farmer scheme  from 5% to 3% when the cross checks based on geospatial applications are carried out."""@en ;
+                                                                                                                                <http://www.w3.org/2004/02/skos/core#inScheme> :ControlRateTypeValue .
+
+
+###  http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#ControlRateTypeValue/atLeast3%OfExemptedFromGreeningPractices
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#ControlRateTypeValue/atLeast3%OfExemptedFromGreeningPractices> rdf:type owl:NamedIndividual ,
+                                                                                                                                                   <http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#ControlRateTypeValue> ;
+                                                                                                                                          rdfs:label "At least 3 % of all beneficiaries qualifying for the greening payment who are exempted from both the crop diversification and the EFA obligations"@en ;
+                                                                                                                                          <http://www.w3.org/2004/02/skos/core#definition> """At least 3% of exempted from greening practices
+
+In sense of Art. 31 (1)(b) at least 3 % of all beneficiaries qualifying for the greening payment who are exempted from both the crop diversification and the EFA obligations shall be controlled.
+
+The exemption is granted when the thresholds referred to in Articles 44 and 46 of Regulation (EU) No 1307/2013 are not met and the obligations referred to in Article 45 of that Regulation are not concerned."""@en ;
+                                                                                                                                          <http://www.w3.org/2004/02/skos/core#inScheme> :ControlRateTypeValue .
+
+
+###  http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#ControlRateTypeValue/atLeast3%ForBps/Saps
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#ControlRateTypeValue/atLeast3%ForBps/Saps> rdf:type owl:NamedIndividual ,
+                                                                                                                               <http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#ControlRateTypeValue> ;
+                                                                                                                      rdfs:label "At least 5% of all beneficiaries required to observe the agricultural practices having areas covered with permanent grasslands"@en ;
+                                                                                                                      <http://www.w3.org/2004/02/skos/core#definition> """At least 3% for BPS or SAPS
+
+Art. 36(2) of Regulation (EU) 809/2014 allows the reduction of the control rate for BPS/SAPS from 5% to 3% when the cross checks based on geospatial applications are carried out."""@en ;
+                                                                                                                      <http://www.w3.org/2004/02/skos/core#inScheme> :ControlRateTypeValue .
+
+
+###  http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#ControlRateTypeValue/atLeast30%ForProductionOfHemp
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#ControlRateTypeValue/atLeast30%ForProductionOfHemp> rdf:type owl:NamedIndividual ,
+                                                                                                                                        <http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#ControlRateTypeValue> ;
+                                                                                                                               rdfs:label "At least 5% of all beneficiaries required to observe the agricultural practices having areas covered with permanent grasslands"@en ;
+                                                                                                                               <http://www.w3.org/2004/02/skos/core#definition> """At least 30% for production of hemp
+
+In sense of Art. 30(g) of Regulation (EU) 809/2014 30% of beneficiaries declaring hemp shall be controlled.
+
+NOTE
+In accordance with art. 32(6) of R (EU) 1307/2013 only those varieties of hemp are eligible that have tetrahydrocannabinol content not exceeding 0,2 %."""@en ;
+                                                                                                                               <http://www.w3.org/2004/02/skos/core#inScheme> :ControlRateTypeValue .
+
+
+###  http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#ControlRateTypeValue/atLeast5%ForAreasWithNaturalConstraints
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#ControlRateTypeValue/atLeast5%ForAreasWithNaturalConstraints> rdf:type owl:NamedIndividual ,
+                                                                                                                                                  <http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#ControlRateTypeValue> ;
+                                                                                                                                         rdfs:label "At least 5% of all beneficiaries required to observe the agricultural practices having areas covered with permanent grasslands"@en ;
+                                                                                                                                         <http://www.w3.org/2004/02/skos/core#definition> """At least 5% for areas with natural constraints 
+
+In sense of Art. 30(c) of Regulation (EU) 809/2014 5% of beneficiaries applying for the payment for areas with natural constraints shall be controlled."""@en ;
+                                                                                                                                         <http://www.w3.org/2004/02/skos/core#inScheme> :ControlRateTypeValue .
+
+
+###  http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#ControlRateTypeValue/atLeast5%ForCropSpecificCottonPayment
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#ControlRateTypeValue/atLeast5%ForCropSpecificCottonPayment> rdf:type owl:NamedIndividual ,
+                                                                                                                                                <http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#ControlRateTypeValue> ;
+                                                                                                                                       rdfs:label "At least 5% of all beneficiaries required to observe the agricultural practices having areas covered with permanent grasslands"@en ;
+                                                                                                                                       <http://www.w3.org/2004/02/skos/core#definition> """At least 5% for crop specific cotton payment
+
+In sense of Art. 30(h) of Regulation (EU) 809/2014 5% of beneficiaries applying for the crop specific payment for cotton shall be controlled."""@en ;
+                                                                                                                                       <http://www.w3.org/2004/02/skos/core#inScheme> :ControlRateTypeValue .
+
+
+###  http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#ControlRateTypeValue/atLeast5%ForRedistributivePayment
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#ControlRateTypeValue/atLeast5%ForRedistributivePayment> rdf:type owl:NamedIndividual ,
+                                                                                                                                            <http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#ControlRateTypeValue> ;
+                                                                                                                                   rdfs:label "At least 5% of all beneficiaries required to observe the agricultural practices having areas covered with permanent grasslands"@en ;
+                                                                                                                                   <http://www.w3.org/2004/02/skos/core#definition> """At least 5% for the redistributive payment
+
+In sense of Art. 30(b) of Regulation (EU) 809/2014 5% of beneficiaries applying for the redistributive payment shall be controlled."""@en ;
+                                                                                                                                   <http://www.w3.org/2004/02/skos/core#inScheme> :ControlRateTypeValue .
+
+
+###  http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#ControlRateTypeValue/atLeast5%ForSmallFarmersScheme
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#ControlRateTypeValue/atLeast5%ForSmallFarmersScheme> rdf:type owl:NamedIndividual ,
+                                                                                                                                         <http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#ControlRateTypeValue> ;
+                                                                                                                                rdfs:label "At least 5% of all beneficiaries required to observe the agricultural practices having areas covered with permanent grasslands"@en ;
+                                                                                                                                <http://www.w3.org/2004/02/skos/core#definition> """At least 5% for the small farmer scheme
+
+In sense of Art. 30(f) of Regulation (EU) 809/2014 5% of beneficiaries applying for the small farmer scheme shall be controlled."""@en ;
+                                                                                                                                <http://www.w3.org/2004/02/skos/core#inScheme> :ControlRateTypeValue .
+
+
+###  http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#ControlRateTypeValue/atLeast5%ForVoluntaryCoupledSupport
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#ControlRateTypeValue/atLeast5%ForVoluntaryCoupledSupport> rdf:type owl:NamedIndividual ,
+                                                                                                                                              <http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#ControlRateTypeValue> ;
+                                                                                                                                     rdfs:label "At least 5% of all beneficiaries required to observe the agricultural practices having areas covered with permanent grasslands"@en ;
+                                                                                                                                     <http://www.w3.org/2004/02/skos/core#definition> """At least 5% for the voluntary coupled support
+
+In sense of Art. 30(e) of Regulation (EU) 809/2014 5% of beneficiaries applying for the voluntary coupled shall be controlled."""@en ;
+                                                                                                                                     <http://www.w3.org/2004/02/skos/core#inScheme> :ControlRateTypeValue .
+
+
+###  http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#ControlRateTypeValue/atLeast5%ForYoungFarmers
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#ControlRateTypeValue/atLeast5%ForYoungFarmers> rdf:type owl:NamedIndividual ,
+                                                                                                                                   <http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#ControlRateTypeValue> ;
+                                                                                                                          rdfs:label "At least 5% of all beneficiaries required to observe the agricultural practices having areas covered with permanent grasslands"@en ;
+                                                                                                                          <http://www.w3.org/2004/02/skos/core#definition> """At least 5% for the young farmers
+
+In sense of Art. 30(d) of Regulation (EU) 809/2014 5% of beneficiaries applying for the young farmer payment shall be controlled."""@en ;
+                                                                                                                          <http://www.w3.org/2004/02/skos/core#inScheme> :ControlRateTypeValue .
+
+
+###  http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#ControlRateTypeValue/atLeast5%OfAreasCoveredBySensitiveGrassland
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#ControlRateTypeValue/atLeast5%OfAreasCoveredBySensitiveGrassland> rdf:type owl:NamedIndividual ,
+                                                                                                                                                      <http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#ControlRateTypeValue> ;
+                                                                                                                                             rdfs:label "At least 5% of all beneficiaries required to observe the agricultural practices having areas covered with permanent grasslands"@en ;
+                                                                                                                                             <http://www.w3.org/2004/02/skos/core#definition> """At least 5% of areas covered by sensitive grassland
+
+The greenling sample in sense of Art. 31(1) of R (EU) 809/2014 shall cover at least 5 % of all beneficiaries having areas covered with permanent grasslands which are environmentally sensitive in areas covered by Council Directive 92/43/EEC[18] or Directive 2009/147/EC of the European Parliament and of the Council[19] and further sensitive areas referred to in Article 45(1) of Regulation (EU) No 1307/2013."""@en ;
+                                                                                                                                             <http://www.w3.org/2004/02/skos/core#inScheme> :ControlRateTypeValue .
+
+
+###  http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#ControlRateTypeValue/atLeast5%OfCollectiveImplementation
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#ControlRateTypeValue/atLeast5%OfCollectiveImplementation> rdf:type owl:NamedIndividual ,
+                                                                                                                                              <http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#ControlRateTypeValue> ;
+                                                                                                                                     rdfs:label "At least 5 % of  the  collective implementation"@en ;
+                                                                                                                                     <http://www.w3.org/2004/02/skos/core#definition> """At least 5 % of the collective implementation
+
+In sensed of Art. 31(1)(e) od R EU) 809/2014 5 % of  the  collective implementation in accordance with Article 46(6) of Regulation (EU) No 1307/2013 shall be controlled."""@en ;
+                                                                                                                                     <http://www.w3.org/2004/02/skos/core#inScheme> :ControlRateTypeValue .
+
+
+###  http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#ControlRateTypeValue/atLeast5%OfFollowingGreeningByUsingEnvironmentalCertificationSchemes
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#ControlRateTypeValue/atLeast5%OfFollowingGreeningByUsingEnvironmentalCertificationSchemes> rdf:type owl:NamedIndividual ,
+                                                                                                                                                                               <http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#ControlRateTypeValue> ;
+                                                                                                                                                                      rdfs:label "At least 5 % of all beneficiaries required to observe the greening practices and using national or regional environmental certification schemes"@en ;
+                                                                                                                                                                      <http://www.w3.org/2004/02/skos/core#definition> """At least 5 % following greening practices by using environmental certification schemes
+
+In sense of Art. 31(1)(c) 5 % of beneficiaries observing greening practices and using national or regional environmental certification schemes as referred to in Article 43(3)(b) of Regulation (EU) No 1307/2013 shall be controlled."""@en ;
+                                                                                                                                                                      <http://www.w3.org/2004/02/skos/core#inScheme> :ControlRateTypeValue .
+
+
+###  http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#ControlRateTypeValue/atLeast5%OfFollowingGreeningPractices
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#ControlRateTypeValue/atLeast5%OfFollowingGreeningPractices> rdf:type owl:NamedIndividual ,
+                                                                                                                                                <http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#ControlRateTypeValue> ;
+                                                                                                                                       rdfs:label "At least 5% of all beneficiaries required to observe the agricultural practices having areas covered with permanent grasslands"@en ;
+                                                                                                                                       <http://www.w3.org/2004/02/skos/core#definition> """At least 5% of following greening practices
+
+In sense of Art. 31(1) 5% of beneficiaries required to follow greening practices shall be controlled."""@en ;
+                                                                                                                                       <http://www.w3.org/2004/02/skos/core#inScheme> :ControlRateTypeValue .
+
+
+###  http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#ControlRateTypeValue/atLeast5%OfRegionalImplementation
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#ControlRateTypeValue/atLeast5%OfRegionalImplementation> rdf:type owl:NamedIndividual ,
+                                                                                                                                            <http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#ControlRateTypeValue> ;
+                                                                                                                                   rdfs:label "At least  5 % of all beneficiaries participating in a regional implementation"@en ;
+                                                                                                                                   <http://www.w3.org/2004/02/skos/core#definition> """At least 5 % of all beneficiaries participating in a regional implementation
+
+In sense of Art.31(1)(d)  of R (EU) 809/2014 5 % of all beneficiaries participating in a regional implementation in accordance with Article 46(5) of Regulation (EU) No 1307/2013 shall be controlled."""@en ;
+                                                                                                                                   <http://www.w3.org/2004/02/skos/core#inScheme> :ControlRateTypeValue .
+
+
+###  http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#ControlRateTypeValue/atLeast5%ForBps/Saps
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#ControlRateTypeValue/atLeast5%ForBps/Saps> rdf:type owl:NamedIndividual ,
+                                                                                                                               <http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#ControlRateTypeValue> ;
+                                                                                                                      rdfs:label "At least 5% of all beneficiaries required to observe the agricultural practices having areas covered with permanent grasslands"@en ;
+                                                                                                                      <http://www.w3.org/2004/02/skos/core#definition> """At least 5% for BPS or SAPS
+
+In sense of Art. 30(a) of Regulation (EU) 809/2014 5% of beneficiaries applying for the basic payment or single area payment scheme shall be controlled.
+
+This control sample shall contain at least 5 % of all beneficiaries declaring mainly agricultural areas which are areas naturally kept in a state suitable for grazing in accordance with Article 10(1) of Delegated Regulation (EU) No 639/2014."""@en ;
+                                                                                                                      <http://www.w3.org/2004/02/skos/core#inScheme> :ControlRateTypeValue .
+
+
+###  http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#CrossCheckTypeValue/betweenAgriculturalParcelsAndReferenceParcels
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#CrossCheckTypeValue/betweenAgriculturalParcelsAndReferenceParcels> rdf:type owl:NamedIndividual ,
+                                                                                                                                                       <http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#CrossCheckTypeValue> ;
+                                                                                                                                              rdfs:label "Between agricultural parcels and reference parcels"@en ;
+                                                                                                                                              <http://www.w3.org/2004/02/skos/core#definition> """-- Definition --
+Between agricultural parcels and reference parcels.
+-- Description --
+Where appropriate, the administrative checks shall include cross-checks: between the agricultural parcels as declared in the single application and/or payment claim and the information as contained in the identification system for 
+agricultural parcels per reference parcel in accordance with Article 5(2) of Regulation (EU) No […] [DA IACS] to verify the eligibility for direct aid scheme and/or rural development support measure of the areas as such.
+NOTE. Where the integrated system provides for geo-spatial aid application forms, the cross-checks shall be carried out as spatial intersection of the digitised area declared with the identification system of agricultural parcels. In 
+addition, cross-checks shall be carried out to prevent double claiming of the same area."""@en ;
+                                                                                                                                              <http://www.w3.org/2004/02/skos/core#inScheme> :CrossCheckTypeValue .
+
+
+###  http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#CrossCheckTypeValue/betweenInterBranchOrganisationsAndTheListOfTheirMembers
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#CrossCheckTypeValue/betweenInterBranchOrganisationsAndTheListOfTheirMembers> rdf:type owl:NamedIndividual ,
+                                                                                                                                                                 <http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#CrossCheckTypeValue> ;
+                                                                                                                                                        rdfs:label "Between inter-branch organisations and the list of their members"@en ;
+                                                                                                                                                        <http://www.w3.org/2004/02/skos/core#definition> """-- Definition --
+Between inter-branch organisations and the list of their members.
+-- Description --
+Where appropriate, the administrative checks shall include cross-checks: the compliance with  the  criteria for the approval of inter-branch organisations and the list of their members shall be verified at least once every 5 years."""@en ;
+                                                                                                                                                        <http://www.w3.org/2004/02/skos/core#inScheme> :CrossCheckTypeValue .
+
+
+###  http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#CrossCheckTypeValue/betweenThePaymentEntitlementsAndTheAreaDetermined
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#CrossCheckTypeValue/betweenThePaymentEntitlementsAndTheAreaDetermined> rdf:type owl:NamedIndividual ,
+                                                                                                                                                           <http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#CrossCheckTypeValue> ;
+                                                                                                                                                  rdfs:label "Between the payment entitlements and the area determined"@en ;
+                                                                                                                                                  <http://www.w3.org/2004/02/skos/core#definition> """-- Definition --
+Between the payment entitlements and the area determined.
+-- Description --
+Where appropriate, the administrative checks shall include cross-checks:between the payment entitlements and the area determined in order to verify that the entitlements are accompanied by at least an equal number of eligible hectares 
+as defined in Article 32(2) to (6) of Regulation (EC) No 1307/2013."""@en ;
+                                                                                                                                                  <http://www.w3.org/2004/02/skos/core#inScheme> :CrossCheckTypeValue .
+
+
+###  http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#CrossCheckTypeValue/toVerifyDeclaredEntitlementsOnDeclaredAgriculturalParcels
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#CrossCheckTypeValue/toVerifyDeclaredEntitlementsOnDeclaredAgriculturalParcels> rdf:type owl:NamedIndividual ,
+                                                                                                                                                                   <http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#CrossCheckTypeValue> ;
+                                                                                                                                                          rdfs:label "Verify declared payment entitlements on declared agricultural parcels"@en ;
+                                                                                                                                                          <http://www.w3.org/2004/02/skos/core#definition> """-- Definition --
+Verify declared payment entitlements on declared agricultural parcels.
+-- Description --
+Where appropriate, the administrative checks shall include cross-checks:o n declared payment entitlements and on declared agricultural parcels, respectively, in order to avoid multiple granting of the same aid or support in respect of 
+the same calendar or claim year and to prevent any undue accumulation of aid granted under area-related aid schemes listed in Annex I to Regulation (EU) No 1307/2013 and Annex VI to Council Regulation (EC) No 73/2009[17], and area-
+related support measures as defined in point (21) of the second subparagraph of Article 2 of Delegated Regulation (EU) No […] [DA IACS]."""@en ;
+                                                                                                                                                          <http://www.w3.org/2004/02/skos/core#inScheme> :CrossCheckTypeValue .
+
+
+###  http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#CrossCheckTypeValue/toVerifyEligibilityForTheAnimalAid
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#CrossCheckTypeValue/toVerifyEligibilityForTheAnimalAid> rdf:type owl:NamedIndividual ,
+                                                                                                                                            <http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#CrossCheckTypeValue> ;
+                                                                                                                                   rdfs:label "Verify eligibility for the animal aid"@en ;
+                                                                                                                                   <http://www.w3.org/2004/02/skos/core#definition> """-- Definition --
+Verify eligibility for the animal aid.
+-- Description --
+Where appropriate, the administrative checks shall include cross-checks: by means of the system for the identification and registration of animals, to verify eligibility for the aid and/or support and to avoid undue multiple granting of 
+the same aid and/or support in respect of the same calendar or claim year."""@en ;
+                                                                                                                                   <http://www.w3.org/2004/02/skos/core#inScheme> :CrossCheckTypeValue .
+
+
+###  http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#CrossCheckTypeValue/toVerifyEligibilityForTheIncreaseOfTheAid
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#CrossCheckTypeValue/toVerifyEligibilityForTheIncreaseOfTheAid> rdf:type owl:NamedIndividual ,
+                                                                                                                                                   <http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#CrossCheckTypeValue> ;
+                                                                                                                                          rdfs:label "Verify eligibility for the increase of the aid"@en ;
+                                                                                                                                          <http://www.w3.org/2004/02/skos/core#definition> """-- Definition --
+Verify eligibility for the increase of the aid.
+-- Description --
+Where appropriate, the administrative checks shall include cross-checks:between the declarations of the beneficiary in the single application to be a member of an approved inter-branch organisation, the information under Article 16(8) 
+of this Regulation and the information transmitted by the approved inter-branch organisations concerned, to verify eligibility for the increase of the aid provided for in Article 60(2) of Regulation (EU) No 1307/2013."""@en ;
+                                                                                                                                          <http://www.w3.org/2004/02/skos/core#inScheme> :CrossCheckTypeValue .
+
+
+###  http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#CrossCheckTypeValue/toVerifyPaymentEntitlements
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#CrossCheckTypeValue/toVerifyPaymentEntitlements> rdf:type owl:NamedIndividual ,
+                                                                                                                                     <http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#CrossCheckTypeValue> ;
+                                                                                                                            rdfs:label "Verify payment entitlements"@en ;
+                                                                                                                            <http://www.w3.org/2004/02/skos/core#definition> """-- Definition --
+Verify payment entitlements.
+-- Description --
+Where appropriate, the administrative checks shall include cross-checks: on the payment entitlements to verify their existence and the eligibility."""@en ;
+                                                                                                                            <http://www.w3.org/2004/02/skos/core#inScheme> :CrossCheckTypeValue .
+
+
+###  http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#InspectorsSurveyObjectTypeValue/agriculturalArea
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#InspectorsSurveyObjectTypeValue/agriculturalArea> rdf:type owl:NamedIndividual ,
+                                                                                                                                      <http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#InspectorsSurveyObjectTypeValue> ;
+                                                                                                                             rdfs:label "Agricultural area"@en ;
+                                                                                                                             <http://www.w3.org/2004/02/skos/core#definition> """Agricultural area
+
+Agricultural area as defined by R (EU) 1307/2013."""@en ;
+                                                                                                                             <http://www.w3.org/2004/02/skos/core#inScheme> :InspectorsSurveyObjectTypeValue .
+
+
+###  http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#InspectorsSurveyObjectTypeValue/agriculturalParcel
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#InspectorsSurveyObjectTypeValue/agriculturalParcel> rdf:type owl:NamedIndividual ,
+                                                                                                                                        <http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#InspectorsSurveyObjectTypeValue> ;
+                                                                                                                               rdfs:label "Agricultural parcel"@en ;
+                                                                                                                               <http://www.w3.org/2004/02/skos/core#definition> """Agricultural parcel
+
+Agricultural parcel as defined by R (EU) 1307/2013."""@en ;
+                                                                                                                               <http://www.w3.org/2004/02/skos/core#inScheme> :InspectorsSurveyObjectTypeValue .
+
+
+###  http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#InspectorsSurveyObjectTypeValue/ecologicalFocusArea
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#InspectorsSurveyObjectTypeValue/ecologicalFocusArea> rdf:type owl:NamedIndividual ,
+                                                                                                                                         <http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#InspectorsSurveyObjectTypeValue> ;
+                                                                                                                                rdfs:label "Ecological focus area"@en ;
+                                                                                                                                <http://www.w3.org/2004/02/skos/core#definition> """Ecological focus area
+
+Ecological focus areas as referred to in Article 46 of R (EU) No1307/2013 and its Delegated Regulation (EU) No 639/2014."""@en ;
+                                                                                                                                <http://www.w3.org/2004/02/skos/core#inScheme> :InspectorsSurveyObjectTypeValue .
+
+
+###  http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#InspectorsSurveyObjectTypeValue/holdingSite
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#InspectorsSurveyObjectTypeValue/holdingSite> rdf:type owl:NamedIndividual ,
+                                                                                                                                 <http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#InspectorsSurveyObjectTypeValue> ;
+                                                                                                                        rdfs:label "Holding site"@en ;
+                                                                                                                        <http://www.w3.org/2004/02/skos/core#definition> """Holding site
+
+Measurement of the whole holding."""@en ;
+                                                                                                                        <http://www.w3.org/2004/02/skos/core#inScheme> :InspectorsSurveyObjectTypeValue .
+
+
+###  http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#InspectorsSurveyObjectTypeValue/referenceParcel
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#InspectorsSurveyObjectTypeValue/referenceParcel> rdf:type owl:NamedIndividual ,
+                                                                                                                                     <http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#InspectorsSurveyObjectTypeValue> ;
+                                                                                                                            rdfs:label "Reference parcel"@en ;
+                                                                                                                            <http://www.w3.org/2004/02/skos/core#definition> """Reference parcel
+
+Reference parcel as defined in R (EU) 1307/2013."""@en ;
+                                                                                                                            <http://www.w3.org/2004/02/skos/core#inScheme> :InspectorsSurveyObjectTypeValue .
+
+
+###  http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#OnTheSpotCheckTypeValue/commitmentsAndObligations
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#OnTheSpotCheckTypeValue/commitmentsAndObligations> rdf:type owl:NamedIndividual ,
+                                                                                                                                       <http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#OnTheSpotCheckTypeValue> ;
+                                                                                                                              rdfs:label "Cross compliance"@en ;
+                                                                                                                              <http://www.w3.org/2004/02/skos/core#definition> """Cross compliance
+
+OTSC in sense of Art. 96(3) of R 1306/2013 and Art. 26(3) of R 809/2014."""@en ;
+                                                                                                                              <http://www.w3.org/2004/02/skos/core#inScheme> :OnTheSpotCheckTypeValue .
+
+
+###  http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#OnTheSpotCheckTypeValue/complianceToEuLaw
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#OnTheSpotCheckTypeValue/complianceToEuLaw> rdf:type owl:NamedIndividual ,
+                                                                                                                               <http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#OnTheSpotCheckTypeValue> ;
+                                                                                                                      rdfs:label "Cross compliance"@en ;
+                                                                                                                      <http://www.w3.org/2004/02/skos/core#definition> """Compliance to EU law
+
+As required by Art. 24(2) of R 809/2014."""@en ;
+                                                                                                                      <http://www.w3.org/2004/02/skos/core#inScheme> :OnTheSpotCheckTypeValue .
+
+
+###  http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#OnTheSpotCheckTypeValue/complianceToNationalLaw
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#OnTheSpotCheckTypeValue/complianceToNationalLaw> rdf:type owl:NamedIndividual ,
+                                                                                                                                     <http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#OnTheSpotCheckTypeValue> ;
+                                                                                                                            rdfs:label "Cross compliance"@en ;
+                                                                                                                            <http://www.w3.org/2004/02/skos/core#definition> """Compliance to national law
+
+As required by Art. 24(2) of R 809/2014."""@en ;
+                                                                                                                            <http://www.w3.org/2004/02/skos/core#inScheme> :OnTheSpotCheckTypeValue .
+
+
+###  http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#OnTheSpotCheckTypeValue/controlArea
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#OnTheSpotCheckTypeValue/controlArea> rdf:type owl:NamedIndividual ,
+                                                                                                                         <http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#OnTheSpotCheckTypeValue> ;
+                                                                                                                rdfs:label "Control area"@en ;
+                                                                                                                <http://www.w3.org/2004/02/skos/core#definition> """Control area
+
+Verification of the declared area values by means of measurements."""@en ;
+                                                                                                                <http://www.w3.org/2004/02/skos/core#inScheme> :OnTheSpotCheckTypeValue .
+
+
+###  http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#OnTheSpotCheckTypeValue/correctnessAndCompletenessOfInformation
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#OnTheSpotCheckTypeValue/correctnessAndCompletenessOfInformation> rdf:type owl:NamedIndividual ,
+                                                                                                                                                     <http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#OnTheSpotCheckTypeValue> ;
+                                                                                                                                            rdfs:label "Cross compliance"@en ;
+                                                                                                                                            <http://www.w3.org/2004/02/skos/core#definition> """Correctness and completeness of the information
+
+As required by Art. 24(1)(a) of R 809/2014."""@en ;
+                                                                                                                                            <http://www.w3.org/2004/02/skos/core#inScheme> :OnTheSpotCheckTypeValue .
+
+
+###  http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#OnTheSpotCheckTypeValue/crossCompliance
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#OnTheSpotCheckTypeValue/crossCompliance> rdf:type owl:NamedIndividual ,
+                                                                                                                             <http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#OnTheSpotCheckTypeValue> ;
+                                                                                                                    rdfs:label "Cross compliance"@en ;
+                                                                                                                    <http://www.w3.org/2004/02/skos/core#definition> """Cross compliance
+
+OTSC in sense of Art. 96(3) of R 1306/2013."""@en ;
+                                                                                                                    <http://www.w3.org/2004/02/skos/core#inScheme> :OnTheSpotCheckTypeValue .
+
+
+###  http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#OnTheSpotCheckTypeValue/crossComplianceStandards
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#OnTheSpotCheckTypeValue/crossComplianceStandards> rdf:type owl:NamedIndividual ,
+                                                                                                                                      <http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#OnTheSpotCheckTypeValue> ;
+                                                                                                                             rdfs:label "Cross compliance"@en ;
+                                                                                                                             <http://www.w3.org/2004/02/skos/core#definition> """Cross compliance standards
+
+As required by Art. 24(1)(c) of R 809/2014."""@en ;
+                                                                                                                             <http://www.w3.org/2004/02/skos/core#inScheme> :OnTheSpotCheckTypeValue .
+
+
+###  http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#OnTheSpotCheckTypeValue/eligibilityCriteria
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#OnTheSpotCheckTypeValue/eligibilityCriteria> rdf:type owl:NamedIndividual ,
+                                                                                                                                 <http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#OnTheSpotCheckTypeValue> ;
+                                                                                                                        rdfs:label "Cross compliance"@en ;
+                                                                                                                        <http://www.w3.org/2004/02/skos/core#definition> """Cross compliance
+
+OTSC in sense of Art. 96(3) of R 1306/2013, Art. 24(1)(b) and 26(3) of R 809/2014."""@en ;
+                                                                                                                        <http://www.w3.org/2004/02/skos/core#inScheme> :OnTheSpotCheckTypeValue .
+
+
+###  http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#OnTheSpotCheckTypeValue/supportingDocuments
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#OnTheSpotCheckTypeValue/supportingDocuments> rdf:type owl:NamedIndividual ,
+                                                                                                                                 <http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#OnTheSpotCheckTypeValue> ;
+                                                                                                                        rdfs:label "Control cross-compliance"@en ;
+                                                                                                                        <http://www.w3.org/2004/02/skos/core#definition> """Supporting Documents
+
+Verification of the existence of the requisite supporting documents [Art. 47(1)(b) of  R 1306/2013]"""@en ;
+                                                                                                                        <http://www.w3.org/2004/02/skos/core#inScheme> :OnTheSpotCheckTypeValue .
+
+
+###  http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#RiskTypeValue/areaOfIntensiveLcOrLuChange
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#RiskTypeValue/areaOfIntensiveLcOrLuChange> rdf:type owl:NamedIndividual ,
+                                                                                                                               <http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#RiskTypeValue> ;
+                                                                                                                      <http://www.w3.org/2004/02/skos/core#definition> """Areas of Intensive LC or LU change
+
+Areas of intensive land cover and land use change may be detected in third party data e.g.
+	- orthoimagery
+	- cadastral maps
+	- road maps
+	- topographic maps
+	- development plans"""@en ;
+                                                                                                                      <http://www.w3.org/2004/02/skos/core#inScheme> :RiskTypeValue .
+
+
+###  http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#RiskTypeValue/eligibilityCriteria
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#RiskTypeValue/eligibilityCriteria> rdf:type owl:NamedIndividual ,
+                                                                                                                       <http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#RiskTypeValue> ;
+                                                                                                              <http://www.w3.org/2004/02/skos/core#definition> """Eligibility Criteria
+
+Member States are also authorised to draw the control sample on the basis of the samples of beneficiaries that are selected for an on-the-spot check as regards eligibility criteria. [Preamble (71) of R 809/2014]."""@en ;
+                                                                                                              <http://www.w3.org/2004/02/skos/core#inScheme> :RiskTypeValue .
+
+
+###  http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#RiskTypeValue/nonParticipationInCertificationScheme
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#RiskTypeValue/nonParticipationInCertificationScheme> rdf:type owl:NamedIndividual ,
+                                                                                                                                         <http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#RiskTypeValue> ;
+                                                                                                                                <http://www.w3.org/2004/02/skos/core#definition> """Non-participation in certification scheme
+
+At risk based sampling MS may consider beneficiary’s participation in a certification system if the scheme in question is relevant for the requirements and standards concerned [Art. 69(1)(b) of R 809/2014]."""@en ;
+                                                                                                                                <http://www.w3.org/2004/02/skos/core#inScheme> :RiskTypeValue .
+
+
+###  http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#RiskTypeValue/nonParticipationInFas
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#RiskTypeValue/nonParticipationInFas> rdf:type owl:NamedIndividual ,
+                                                                                                                         <http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#RiskTypeValue> ;
+                                                                                                                <http://www.w3.org/2004/02/skos/core#definition> """Non participation in FAS
+
+Sampling of OTSC for cross-compliance can be improved by taking into account the risk analysis concerning the beneficiary’s participation in the farm advisory system [Preamble (69) and Art. 69(1)(a) of R 809/2014]."""@en ;
+                                                                                                                <http://www.w3.org/2004/02/skos/core#inScheme> :RiskTypeValue .
+
+
+###  http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#SampleTypeValue/areasWithNaturalConstraints
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#SampleTypeValue/areasWithNaturalConstraints> rdf:type owl:NamedIndividual ,
+                                                                                                                                 <http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#SampleTypeValue> ;
+                                                                                                                        <http://www.w3.org/2004/02/skos/core#definition> """Areas with natural constraints
+
+Item selected for controlling the correctness of payments for areas with natural constraints."""@en ;
+                                                                                                                        <http://www.w3.org/2004/02/skos/core#inScheme> :SampleTypeValue .
+
+
+###  http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#SampleTypeValue/collectiveImplementation
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#SampleTypeValue/collectiveImplementation> rdf:type owl:NamedIndividual ,
+                                                                                                                              <http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#SampleTypeValue> ;
+                                                                                                                     <http://www.w3.org/2004/02/skos/core#definition> """Collective implementation
+
+Items selected for controlling beneficiaries participating in collective implementation of EFA. The composition of the population
+	- 1,0-1,25% selected randomly 
+	- 3,75-4,0% selected on risk base
+
+Issue:
+The purpose of collective implementation (See Art. 46(a) of 1307/2013) and regional implementation (see Art. 46(3) of R 639/2014) is to form contiguous areas of EFA. If so, what is the reason to have separate samples for collective implementation, regional implementation and contiguous EFA?"""@en ;
+                                                                                                                     <http://www.w3.org/2004/02/skos/core#inScheme> :SampleTypeValue .
+
+
+###  http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#SampleTypeValue/contiguousEfa
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#SampleTypeValue/contiguousEfa> rdf:type owl:NamedIndividual ,
+                                                                                                                   <http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#SampleTypeValue> ;
+                                                                                                          <http://www.w3.org/2004/02/skos/core#definition> """Contiguous EFA
+
+Items selected for controlling contiguous EFA
+
+Issue:
+The purpose of collective implementation (See Art. 46(a) of 1307/2013) and regional implementation (see Art. 46(3) of R 639/2014) is to form contiguous areas of EFA. If so, what is the reason to have separate samples for collective implementation, regional implementation and contiguous EFA?"""@en ;
+                                                                                                          <http://www.w3.org/2004/02/skos/core#inScheme> :SampleTypeValue .
+
+
+###  http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#SampleTypeValue/cotton
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#SampleTypeValue/cotton> rdf:type owl:NamedIndividual ,
+                                                                                                            <http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#SampleTypeValue> ;
+                                                                                                   <http://www.w3.org/2004/02/skos/core#definition> """Cotton
+
+Item selected for controlling beneficiaries applying for the specific payment for cotton."""@en ;
+                                                                                                   <http://www.w3.org/2004/02/skos/core#inScheme> :SampleTypeValue .
+
+
+###  http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#SampleTypeValue/exemptedFromGreening
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#SampleTypeValue/exemptedFromGreening> rdf:type owl:NamedIndividual ,
+                                                                                                                          <http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#SampleTypeValue> ;
+                                                                                                                 <http://www.w3.org/2004/02/skos/core#definition> """Exempted from greening
+
+Items selected to control beneficiaries exempted from greening obligations by not meeting the specified thresholds.  They include:
+	- Beneficiaries exempted from crop diversification (Art. 44(3) of R 1307/2013)
+	- Beneficiaries exempted from EFA (Art. 46 (1) of R 307/2013)"""@en ;
+                                                                                                                 <http://www.w3.org/2004/02/skos/core#inScheme> :SampleTypeValue .
+
+
+###  http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#SampleTypeValue/hemp
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#SampleTypeValue/hemp> rdf:type owl:NamedIndividual ,
+                                                                                                          <http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#SampleTypeValue> ;
+                                                                                                 <http://www.w3.org/2004/02/skos/core#definition> """Hemp
+
+Items selected for controlling beneficiaries growing hemp."""@en ;
+                                                                                                 <http://www.w3.org/2004/02/skos/core#inScheme> :SampleTypeValue .
+
+
+###  http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#SampleTypeValue/observingGreening
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#SampleTypeValue/observingGreening> rdf:type owl:NamedIndividual ,
+                                                                                                                       <http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#SampleTypeValue> ;
+                                                                                                              <http://www.w3.org/2004/02/skos/core#definition> """Observing greening
+
+Items selected for controlling beneficiaries observing greening. The composition of the population
+	- 1,0-1,25% selected randomly 
+	- 3,75-4,0% selected on risk base
+The related sample includes items selected for the sensitive grassland sample."""@en ;
+                                                                                                              <http://www.w3.org/2004/02/skos/core#inScheme> :SampleTypeValue .
+
+
+###  http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#SampleTypeValue/reconversionOfPg
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#SampleTypeValue/reconversionOfPg> rdf:type owl:NamedIndividual ,
+                                                                                                                      <http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#SampleTypeValue> ;
+                                                                                                             <http://www.w3.org/2004/02/skos/core#definition> """Reconversion of permanent grassland
+
+Items corresponding to beneficiaries obliged to re-convert agricultural areas in permanent grassland."""@en ;
+                                                                                                             <http://www.w3.org/2004/02/skos/core#inScheme> :SampleTypeValue .
+
+
+###  http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#SampleTypeValue/reconversionOfSensitivePg
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#SampleTypeValue/reconversionOfSensitivePg> rdf:type owl:NamedIndividual ,
+                                                                                                                               <http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#SampleTypeValue> ;
+                                                                                                                      <http://www.w3.org/2004/02/skos/core#definition> """Reconversion of sensitive permanent grassland
+
+Items corresponding to beneficiaries obliged to re-convert agricultural areas in sensitive permanent grassland."""@en ;
+                                                                                                                      <http://www.w3.org/2004/02/skos/core#inScheme> :SampleTypeValue .
+
+
+###  http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#SampleTypeValue/redistributivePayment
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#SampleTypeValue/redistributivePayment> rdf:type owl:NamedIndividual ,
+                                                                                                                           <http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#SampleTypeValue> ;
+                                                                                                                  <http://www.w3.org/2004/02/skos/core#definition> """Redistributive payment
+
+Item selected for controlling beneficiaries applying for redistributive payment."""@en ;
+                                                                                                                  <http://www.w3.org/2004/02/skos/core#inScheme> :SampleTypeValue .
+
+
+###  http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#SampleTypeValue/regionalImplementation
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#SampleTypeValue/regionalImplementation> rdf:type owl:NamedIndividual ,
+                                                                                                                            <http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#SampleTypeValue> ;
+                                                                                                                   <http://www.w3.org/2004/02/skos/core#definition> """Regional implementation
+
+Items selected for controlling beneficiaries participating in regional implementation of EFA. The composition of the population
+	- 1,0-1,25% selected randomly 
+	- 3,75-4,0% selected on risk base
+
+Issue:
+The purpose of collective implementation (See Art. 46(a) of 1307/2013) and regional implementation (see Art. 46(3) of R 639/2014) is to form contiguous areas of EFA. If so, what is the reason to have separate samples for collective implementation, regional implementation and contiguous EFA?"""@en ;
+                                                                                                                   <http://www.w3.org/2004/02/skos/core#inScheme> :SampleTypeValue .
+
+
+###  http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#SampleTypeValue/sensitiveGrassland
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#SampleTypeValue/sensitiveGrassland> rdf:type owl:NamedIndividual ,
+                                                                                                                        <http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#SampleTypeValue> ;
+                                                                                                               <http://www.w3.org/2004/02/skos/core#definition> """Sensitive grassland
+
+Items selected for controlling sensitive grassland. The composition of the population
+	- 1,0-1,25% selected randomly 
+	- 3,75-4,0% selected on risk base
+
+NOTE
+This sample is included in the generic sample of beneficiaries that are mandated to observe greening."""@en ;
+                                                                                                               <http://www.w3.org/2004/02/skos/core#inScheme> :SampleTypeValue .
+
+
+###  http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#SampleTypeValue/smallFarmers
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#SampleTypeValue/smallFarmers> rdf:type owl:NamedIndividual ,
+                                                                                                                  <http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#SampleTypeValue> ;
+                                                                                                         <http://www.w3.org/2004/02/skos/core#definition> """Small farmers
+
+Item selected for controlling beneficiaries participating in the small farmers scheme."""@en ;
+                                                                                                         <http://www.w3.org/2004/02/skos/core#inScheme> :SampleTypeValue .
+
+
+###  http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#SampleTypeValue/voluntaryCoupledSupport
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#SampleTypeValue/voluntaryCoupledSupport> rdf:type owl:NamedIndividual ,
+                                                                                                                             <http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#SampleTypeValue> ;
+                                                                                                                    <http://www.w3.org/2004/02/skos/core#definition> """Voluntary coupled support
+
+Item selected for controlling beneficiaries applying for voluntary coupled support."""@en ;
+                                                                                                                    <http://www.w3.org/2004/02/skos/core#inScheme> :SampleTypeValue .
+
+
+###  http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#SampleTypeValue/youngFarmers
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#SampleTypeValue/youngFarmers> rdf:type owl:NamedIndividual ,
+                                                                                                                  <http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#SampleTypeValue> ;
+                                                                                                         <http://www.w3.org/2004/02/skos/core#definition> """Young farmers
+
+Item selected for controlling beneficiaries applying for young farmer payment."""@en ;
+                                                                                                         <http://www.w3.org/2004/02/skos/core#inScheme> :SampleTypeValue .
+
+
+###  http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#SampleTypeValue/initial1%And1,25%ForBps/Saps
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#SampleTypeValue/initial1%And1,25%ForBps/Saps> rdf:type owl:NamedIndividual ,
+                                                                                                                                  <http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#SampleTypeValue> ;
+                                                                                                                         <http://www.w3.org/2004/02/skos/core#definition> """Initial 1% and 1,25% for BPS/SAPS
+
+It is the initial random sample drawn in sense of Art. 24(2)(a). This sample constitutes the basis of the following further samples:
+	- Random part of the greening samples
+	- Redistributive payment
+	- Areas with natural constraints
+	- Young farmers
+	- Voluntary couples support
+	- Hemp
+	- Cotton"""@en ;
+                                                                                                                         <http://www.w3.org/2004/02/skos/core#inScheme> :SampleTypeValue .
+
+
+###  http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#SampleTypeValue/regional/NationalCertificationScheme
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#SampleTypeValue/regional/NationalCertificationScheme> rdf:type owl:NamedIndividual ,
+                                                                                                                                          <http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#SampleTypeValue> ;
+                                                                                                                                 <http://www.w3.org/2004/02/skos/core#definition> """Regional/national certification scheme
+
+Items selected for controlling greening according to Art.43 (3)(b) of R 1307/2013. The equivalent practices are listed in Annex IX of this regulation and the AgriculturalEquivalentPracticeTypeValue code list of the Aid applications and payment claims application schema."""@en ;
+                                                                                                                                 <http://www.w3.org/2004/02/skos/core#inScheme> :SampleTypeValue .
+
+
+###  http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#SampleTypeValue/topUpForBps/Saps
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#SampleTypeValue/topUpForBps/Saps> rdf:type owl:NamedIndividual ,
+                                                                                                                      <http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#SampleTypeValue> ;
+                                                                                                             <http://www.w3.org/2004/02/skos/core#definition> """Top-up for BPS/SAPS
+
+Randomly selected items to complete the BPS/SAPS population after integrating the items out of the following samples: 
+	- Initial 1,0-2,15% sample for BPS SAPS
+	- Greening samples
+	- Redistributive payment
+	- Areas with natural constraints
+	- Young farmers
+	- Voluntary couples support
+	- Hemp
+	- Cotton"""@en ;
+                                                                                                             <http://www.w3.org/2004/02/skos/core#inScheme> :SampleTypeValue .
+
+
+###  http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#SamplingStrategyTypeValue/clusteredRandomSelection
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#SamplingStrategyTypeValue/clusteredRandomSelection> rdf:type owl:NamedIndividual ,
+                                                                                                                                        <http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#SamplingStrategyTypeValue> ;
+                                                                                                                               <http://www.w3.org/2004/02/skos/core#definition> """Clustered random selection
+
+Cluster sampling is a selection of items that are clustered (e.g. spatially or temporally) within the population.
+
+EXAMPLE
+Geographic cluster of a CwRS zone.
+
+NOTE 1
+The criteria for each cluster has to be registered.
+
+NOTE 2
+The clusters regarded as primary samples by geographic or temporal distribution can be further sampled by a second level of sampling. In that case the method is called multistage sampling."""@en ;
+                                                                                                                               <http://www.w3.org/2004/02/skos/core#inScheme> :SamplingStrategyTypeValue .
+
+
+###  http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#SamplingStrategyTypeValue/multistageSampling
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#SamplingStrategyTypeValue/multistageSampling> rdf:type owl:NamedIndividual ,
+                                                                                                                                  <http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#SamplingStrategyTypeValue> ;
+                                                                                                                         <http://www.w3.org/2004/02/skos/core#definition> """Multistage sampling
+
+Further, secondary sampling of clusters that have been  selected on geographic, or temporal criteria."""@en ;
+                                                                                                                         <http://www.w3.org/2004/02/skos/core#inScheme> :SamplingStrategyTypeValue .
+
+
+###  http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#SamplingStrategyTypeValue/riskBasedCartSelection
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#SamplingStrategyTypeValue/riskBasedCartSelection> rdf:type owl:NamedIndividual ,
+                                                                                                                                      <http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#SamplingStrategyTypeValue> ;
+                                                                                                                             rdfs:label "Risk based sampling strategy"@en ;
+                                                                                                                             <http://www.w3.org/2004/02/skos/core#definition> """Risk based CART selection
+
+A probability proportional risk based method for selecting and grouping items (applications) in risk groups based on a specific criterion (e.g. area not found) [DSCG/2014/32]."""@en ;
+                                                                                                                             <http://www.w3.org/2004/02/skos/core#inScheme> :SamplingStrategyTypeValue .
+
+
+###  http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#SamplingStrategyTypeValue/riskBasedMultiCriteriaSelection
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#SamplingStrategyTypeValue/riskBasedMultiCriteriaSelection> rdf:type owl:NamedIndividual ,
+                                                                                                                                               <http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#SamplingStrategyTypeValue> ;
+                                                                                                                                      rdfs:label "Risk based sampling strategy"@en ;
+                                                                                                                                      <http://www.w3.org/2004/02/skos/core#definition> """Risk based multi-criteria selection
+
+Risk based selection based on multi-criteria analysis.
+Examples of aspects of analysis:
+	- areas of recent land cover / land use change (from third party data)
+	- Landscape
+	- Agronomic conditions
+	- Non-participation in FAS or certification schemes of farmers
+
+NOTE 
+The method is especially applicable for selecting risk based CwRS zones."""@en ;
+                                                                                                                                      <http://www.w3.org/2004/02/skos/core#inScheme> :SamplingStrategyTypeValue .
+
+
+###  http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#SamplingStrategyTypeValue/simpleRandomBasedSelection
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#SamplingStrategyTypeValue/simpleRandomBasedSelection> rdf:type owl:NamedIndividual ,
+                                                                                                                                          <http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#SamplingStrategyTypeValue> ;
+                                                                                                                                 rdfs:label "Random based sampling strategy"@en ;
+                                                                                                                                 <http://www.w3.org/2004/02/skos/core#definition> """Simple random based selection
+
+Selection from the full population of the dossiers through generation of a random key [Section 1.3.2 of DSCG/2014/32].
+
+NOTE 1
+The population has to be homogenous for this method.
+
+NOTE 2
+This method requires waiting until the full population is known."""@en ;
+                                                                                                                                 <http://www.w3.org/2004/02/skos/core#inScheme> :SamplingStrategyTypeValue .
+
+
+###  http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#SamplingStrategyTypeValue/simpleRiskBasedSelection
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#SamplingStrategyTypeValue/simpleRiskBasedSelection> rdf:type owl:NamedIndividual ,
+                                                                                                                                        <http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#SamplingStrategyTypeValue> ;
+                                                                                                                               rdfs:label "Risk based sampling strategy"@en ;
+                                                                                                                               <http://www.w3.org/2004/02/skos/core#definition> """Simple risk based selection
+
+Sampling process based on a single criterion retained to be effective in course of risk analysis. Input data for risk analysis can be taken from OTSC report of the previous year, other subsystems of IACS, third party data, etc.
+
+NOTE 1
+The effectiveness of the criterion has to be proved by comparing the performance results from a random sample and a sample based on the criterion. 
+
+NOTE 2
+The performance criterion has to be documented before  starting the sampling process."""@en ;
+                                                                                                                               <http://www.w3.org/2004/02/skos/core#inScheme> :SamplingStrategyTypeValue .
+
+
+###  http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#SamplingStrategyTypeValue/stratifiedRandomSelection
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#SamplingStrategyTypeValue/stratifiedRandomSelection> rdf:type owl:NamedIndividual ,
+                                                                                                                                         <http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#SamplingStrategyTypeValue> ;
+                                                                                                                                <http://www.w3.org/2004/02/skos/core#definition> """Stratified random selection
+
+Method applicable when the population to be sampled is not homogenous. In order to achieve homogeneity, the population has to be sub-divided into strata based on objective criteria.
+
+NOTE
+The criteria for each stratum has to be registered."""@en ;
+                                                                                                                                <http://www.w3.org/2004/02/skos/core#inScheme> :SamplingStrategyTypeValue .
+
+
+###  http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#SamplingStrategyTypeValue/systematicRandomBasedSelection
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#SamplingStrategyTypeValue/systematicRandomBasedSelection> rdf:type owl:NamedIndividual ,
+                                                                                                                                              <http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#SamplingStrategyTypeValue> ;
+                                                                                                                                     <http://www.w3.org/2004/02/skos/core#definition> """Systematic random selection
+
+Random selection of the first initial item (i.e. application) and taking the rest based on the sequential number (e.g. every 100 application) [Section 1.3.2 of DSCG/2014/32].
+
+NOTE 1
+This method allows to start OTSC before the end of the application period.
+
+NOTE 2
+The sequential number has to be automatically assigned to the applications, or the key (i.e. property or properties) that serve for the basis of selection has to be specified and documented before starting the sampling process.
+
+NOTE 3
+The population has to be homogenous."""@en ;
+                                                                                                                                     <http://www.w3.org/2004/02/skos/core#inScheme> :SamplingStrategyTypeValue .
+
+
+###  http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#SurveyMethodValue/cwrs
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#SurveyMethodValue/cwrs> rdf:type owl:NamedIndividual ,
+                                                                                                            <http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#SurveyMethodValue> ;
+                                                                                                   rdfs:label "CwRS"@en ;
+                                                                                                   <http://www.w3.org/2004/02/skos/core#definition> """CwRS
+
+Control with Remote Sensing (VHR, or HR). [Art. 74(3) of R 1306/2013].
+
+NOTE.
+It includes CAPI."""@en ;
+                                                                                                   <http://www.w3.org/2004/02/skos/core#inScheme> :SurveyMethodValue .
+
+
+###  http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#SurveyMethodValue/fieldMeasurement
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#SurveyMethodValue/fieldMeasurement> rdf:type owl:NamedIndividual ,
+                                                                                                                        <http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#SurveyMethodValue> ;
+                                                                                                               rdfs:label "Field measurement"@en ;
+                                                                                                               <http://www.w3.org/2004/02/skos/core#definition> """Field measurement
+
+Any field measurement including GNSS [Art. 74(3) of R 1306/2013]."""@en ;
+                                                                                                               <http://www.w3.org/2004/02/skos/core#inScheme> :SurveyMethodValue .
+
+
+###  http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#SurveyMethodValue/rapidFieldVisit
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#SurveyMethodValue/rapidFieldVisit> rdf:type owl:NamedIndividual ,
+                                                                                                                       <http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#SurveyMethodValue> ;
+                                                                                                              rdfs:label "Combined field measurement and CwRS"@en ;
+                                                                                                              <http://www.w3.org/2004/02/skos/core#definition> """Rapid field visit
+
+Combined measurement using field (e.g. GNSS)and  Remote Sensing methods.
+
+NOTE 1
+In the event that photo-interpretation of orthoimages (satellite or aerial) do not provide results that would permit definitive conclusions to be drawn to the satisfaction of the competent authority concerning the eligibility or the correct size of the area that is the subject of administrative or on-the-spot checks [Art. 24(4) of R 809/2014].
+
+NOTE 2
+It follows an inconclusive CAPI."""@en ;
+                                                                                                              <http://www.w3.org/2004/02/skos/core#inScheme> :SurveyMethodValue .
+
+
+###  Generated by the OWL API (version 5.1.18) https://github.com/owlcs/owlapi/

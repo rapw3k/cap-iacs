@@ -1,0 +1,2089 @@
+{
+  "_comment" : "Created with OWL2VOWL (version 0.3.5), http://vowl.visualdataweb.org",
+  "header" : {
+    "languages" : [ "en", "undefined" ],
+    "baseIris" : [ "http://www.w3.org/1999/02/22-rdf-syntax-ns", "http://www.w3.org/2000/01/rdf-schema", "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control", "http://www.w3.org/2001/XMLSchema", "http://www.w3.org/2004/02/skos/core" ],
+    "title" : {
+      "en" : "JRC IACS - Integrated Control System Code Lists"
+    },
+    "iri" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code",
+    "version" : "3.0",
+    "author" : [ "_:genid2147483648" ],
+    "description" : {
+      "en" : "Ontology of the integrated control system code lists used in IACS, generated from the transformation of the corresponding JRC application schema"
+    },
+    "labels" : {
+      "en" : "Integrated control system code lists"
+    },
+    "other" : {
+      "creator" : [ {
+        "identifier" : "creator",
+        "language" : "undefined",
+        "value" : "_:genid2147483648",
+        "type" : "label"
+      } ],
+      "rights" : [ {
+        "identifier" : "rights",
+        "language" : "en",
+        "value" : "This ontology is distributed under Creative Commons Attribution 4.0 License - http://creativecommons.org/licenses/by/4.0",
+        "type" : "label"
+      } ],
+      "source" : [ {
+        "identifier" : "source",
+        "language" : "en",
+        "value" : "JRC IACS application schema. https://doi.org/10.1016/j.landusepol.2016.05.023",
+        "type" : "label"
+      } ],
+      "versionInfo" : [ {
+        "identifier" : "versionInfo",
+        "language" : "undefined",
+        "value" : "3.0",
+        "type" : "label"
+      } ],
+      "title" : [ {
+        "identifier" : "title",
+        "language" : "en",
+        "value" : "JRC IACS - Integrated Control System Code Lists",
+        "type" : "label"
+      } ]
+    }
+  },
+  "namespace" : [ ],
+  "class" : [ {
+    "id" : "0",
+    "type" : "owl:Class"
+  }, {
+    "id" : "1",
+    "type" : "owl:Class"
+  }, {
+    "id" : "2",
+    "type" : "owl:Class"
+  }, {
+    "id" : "3",
+    "type" : "owl:Class"
+  }, {
+    "id" : "4",
+    "type" : "owl:Class"
+  }, {
+    "id" : "5",
+    "type" : "owl:Class"
+  }, {
+    "id" : "6",
+    "type" : "owl:Class"
+  }, {
+    "id" : "7",
+    "type" : "owl:Class"
+  }, {
+    "id" : "8",
+    "type" : "owl:Class"
+  }, {
+    "id" : "9",
+    "type" : "owl:Class"
+  }, {
+    "id" : "10",
+    "type" : "owl:Class"
+  } ],
+  "classAttribute" : [ {
+    "iri" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#SurveyMethodValue",
+    "baseIri" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "SurveyMethodValue"
+    },
+    "individuals" : [ {
+      "iri" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#SurveyMethodValue/cwrs",
+      "baseIri" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code",
+      "annotations" : {
+        "inScheme" : [ {
+          "identifier" : "inScheme",
+          "language" : "undefined",
+          "value" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#SurveyMethodValue",
+          "type" : "iri"
+        } ],
+        "definition" : [ {
+          "identifier" : "definition",
+          "language" : "en",
+          "value" : "CwRS\r\n\r\nControl with Remote Sensing (VHR, or HR). [Art. 74(3) of R 1306/2013].\r\n\r\nNOTE.\r\nIt includes CAPI.",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "SurveyMethodValue/cwrs",
+        "en" : "CwRS"
+      }
+    }, {
+      "iri" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#SurveyMethodValue/rapidFieldVisit",
+      "baseIri" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code",
+      "annotations" : {
+        "inScheme" : [ {
+          "identifier" : "inScheme",
+          "language" : "undefined",
+          "value" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#SurveyMethodValue",
+          "type" : "iri"
+        } ],
+        "definition" : [ {
+          "identifier" : "definition",
+          "language" : "en",
+          "value" : "Rapid field visit\r\n\r\nCombined measurement using field (e.g. GNSS)and  Remote Sensing methods.\r\n\r\nNOTE 1\r\nIn the event that photo-interpretation of orthoimages (satellite or aerial) do not provide results that would permit definitive conclusions to be drawn to the satisfaction of the competent authority concerning the eligibility or the correct size of the area that is the subject of administrative or on-the-spot checks [Art. 24(4) of R 809/2014].\r\n\r\nNOTE 2\r\nIt follows an inconclusive CAPI.",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "SurveyMethodValue/rapidFieldVisit",
+        "en" : "Combined field measurement and CwRS"
+      }
+    }, {
+      "iri" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#SurveyMethodValue/fieldMeasurement",
+      "baseIri" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code",
+      "annotations" : {
+        "inScheme" : [ {
+          "identifier" : "inScheme",
+          "language" : "undefined",
+          "value" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#SurveyMethodValue",
+          "type" : "iri"
+        } ],
+        "definition" : [ {
+          "identifier" : "definition",
+          "language" : "en",
+          "value" : "Field measurement\r\n\r\nAny field measurement including GNSS [Art. 74(3) of R 1306/2013].",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "SurveyMethodValue/fieldMeasurement",
+        "en" : "Field measurement"
+      }
+    } ],
+    "attributes" : [ "external" ],
+    "id" : "0"
+  }, {
+    "iri" : "http://www.w3.org/2004/02/skos/core#ConceptScheme",
+    "baseIri" : "http://www.w3.org/2004/02/skos/core",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "ConceptScheme"
+    },
+    "individuals" : [ {
+      "iri" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#RiskTypeValue",
+      "baseIri" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code",
+      "annotations" : {
+        "isFormatOf" : [ {
+          "identifier" : "isFormatOf",
+          "language" : "undefined",
+          "value" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#RiskTypeValue",
+          "type" : "iri"
+        } ],
+        "definition" : [ {
+          "identifier" : "definition",
+          "language" : "en",
+          "value" : "Risk type value\r\n\r\nPreamble (33) of R (EU) 809/2014 requires that the competent authority should establish the risk factors targeting the areas where the risk of errors is the highest.\r\n\r\nNOTE\r\nRisk criteria should be assessed and updated on an annual basis taking into account the relevance of each risk criterion, comparing the results of randomly and risk-based selected samples, the specific situation in the Member States and the nature of the non-compliance.",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "RiskTypeValue"
+      }
+    }, {
+      "iri" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#SamplingStrategyTypeValue",
+      "baseIri" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code",
+      "annotations" : {
+        "isFormatOf" : [ {
+          "identifier" : "isFormatOf",
+          "language" : "undefined",
+          "value" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#SamplingStrategyTypeValue",
+          "type" : "iri"
+        } ],
+        "definition" : [ {
+          "identifier" : "definition",
+          "language" : "en",
+          "value" : "Sampling Strategy Type Value\r\n\r\nList of sampling strategy types.\r\n\r\nIn accordance with Preamble (34) of R 809/2014 sampling should comprise a random part in order to obtain a representative error rate and a risk based part for the following Payment/support schemes:\r\n\t- greening payment\r\n\t- animal aid schemes\r\n\t- rural development measure\r\n\r\nNOTE 1\r\nTo ensure a relevant and efficient risk analysis, the effectiveness of the risk analysis should be assessed and updated on an annual basis taking into account the relevance of each risk factor, comparing the results of randomly and risk-based selected samples and the specific situation [Preamble (68) and Art. 34(5) of R 809/2014].\r\n\r\nNOTE 2\r\nThe sampling method should be selected and documented by the competent authority of the MS/Region. The values of the code list can be extended.\r\n\r\nNOTE 3\r\nThe exemplary values of the code list in this application schema are taken from DSCG/2014/32 guideline and best statistical practices.",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "SamplingStrategyTypeValue",
+        "en" : "List of sampling strategy types"
+      }
+    }, {
+      "iri" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#CrossCheckTypeValue",
+      "baseIri" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code",
+      "annotations" : {
+        "isFormatOf" : [ {
+          "identifier" : "isFormatOf",
+          "language" : "undefined",
+          "value" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#CrossCheckTypeValue",
+          "type" : "iri"
+        } ],
+        "definition" : [ {
+          "identifier" : "definition",
+          "language" : "en",
+          "value" : "-- Definition --\r\nList of cross-check types.\r\n-- Description --\r\nList of cross-check types.",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "CrossCheckTypeValue",
+        "en" : "List of on the cross-check types"
+      }
+    }, {
+      "iri" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#ControlRateGroupRuralDevelopmentMeasureValue",
+      "baseIri" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code",
+      "annotations" : {
+        "isFormatOf" : [ {
+          "identifier" : "isFormatOf",
+          "language" : "undefined",
+          "value" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#ControlRateGroupRuralDevelopmentMeasureValue",
+          "type" : "iri"
+        } ],
+        "definition" : [ {
+          "identifier" : "definition",
+          "language" : "en",
+          "value" : "Control Rate Group Rural Development Measure Value\r\n\r\nList of control rate groups for rural development measures.\r\n\r\nNOTE. Currently placeholder only.",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "ControlRateGroupRuralDevelopmentMeasureValue",
+        "en" : "List of control rate groups for rural development measures"
+      }
+    }, {
+      "iri" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#ControlRateGroupAnimalAidSchemaValue",
+      "baseIri" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code",
+      "annotations" : {
+        "isFormatOf" : [ {
+          "identifier" : "isFormatOf",
+          "language" : "undefined",
+          "value" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#ControlRateGroupAnimalAidSchemaValue",
+          "type" : "iri"
+        } ],
+        "definition" : [ {
+          "identifier" : "definition",
+          "language" : "en",
+          "value" : "Control Rate Group Animal Aid Scheme Value\r\n\r\nList of control rate groups for animal aid schemas.\r\n\r\nNOTE\r\nCurrently placeholder only.",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "ControlRateGroupAnimalAidSchemaValue",
+        "en" : "List of control rate groups for animal aid schemas"
+      }
+    }, {
+      "iri" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#SampleTypeValue",
+      "baseIri" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code",
+      "annotations" : {
+        "isFormatOf" : [ {
+          "identifier" : "isFormatOf",
+          "language" : "undefined",
+          "value" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#SampleTypeValue",
+          "type" : "iri"
+        } ],
+        "definition" : [ {
+          "identifier" : "definition",
+          "language" : "en",
+          "value" : "Sample Type value\r\n\r\nThe sample type property shall be attributed to each sampled item (application). One item can be sampled to one or more payment/support schemes. \r\n\r\nNOTE\r\nThe categories of sample type values have to support the traceability of the sampling cascade. This is the reason for distinguishing the initial and the top-up samples for BPS/SAPS.",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "SampleTypeValue"
+      }
+    }, {
+      "iri" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#ControlRateTypeValue",
+      "baseIri" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code",
+      "annotations" : {
+        "isFormatOf" : [ {
+          "identifier" : "isFormatOf",
+          "language" : "undefined",
+          "value" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#ControlRateTypeValue",
+          "type" : "iri"
+        } ],
+        "definition" : [ {
+          "identifier" : "definition",
+          "language" : "en",
+          "value" : "Control rate type value\r\n\r\nList of applicable control rate values as prescribed by Art. 30, 31, 36(2) and 36(6) of R 809/2014.\r\n\r\nNOTE\r\nThis code list currently does not contain values for rural development measures (Art. 32) and animal aid schemes (Art. 33 of R 809/2014).",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "ControlRateTypeValue",
+        "en" : "List of control rate groups for greening"
+      }
+    }, {
+      "iri" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#SurveyMethodValue",
+      "baseIri" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code",
+      "annotations" : {
+        "isFormatOf" : [ {
+          "identifier" : "isFormatOf",
+          "language" : "undefined",
+          "value" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#SurveyMethodValue",
+          "type" : "iri"
+        } ],
+        "definition" : [ {
+          "identifier" : "definition",
+          "language" : "en",
+          "value" : "Survey method value\r\n\r\nList of survey method types in sense of Art. 74(3) of R 1306/2013.",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "SurveyMethodValue",
+        "en" : "List of survey types"
+      }
+    }, {
+      "iri" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#InspectorsSurveyObjectTypeValue",
+      "baseIri" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code",
+      "annotations" : {
+        "isFormatOf" : [ {
+          "identifier" : "isFormatOf",
+          "language" : "undefined",
+          "value" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#InspectorsSurveyObjectTypeValue",
+          "type" : "iri"
+        } ],
+        "definition" : [ {
+          "identifier" : "definition",
+          "language" : "en",
+          "value" : "Inspectors survey type value\r\n\r\nList of possible real objects measured by an inspector.\r\n\r\nNOTE\r\nList may be extended or subtracted depending on how MS organizing on-the-spot check process.",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "InspectorsSurveyObjectTypeValue",
+        "en" : "List of feature types"
+      }
+    }, {
+      "iri" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#OnTheSpotCheckTypeValue",
+      "baseIri" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code",
+      "annotations" : {
+        "isFormatOf" : [ {
+          "identifier" : "isFormatOf",
+          "language" : "undefined",
+          "value" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#OnTheSpotCheckTypeValue",
+          "type" : "iri"
+        } ],
+        "definition" : [ {
+          "identifier" : "definition",
+          "language" : "en",
+          "value" : "On-the-spot check type value\r\n\r\nList of on the spot check types. that describe the purpose of the control.",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "OnTheSpotCheckTypeValue",
+        "en" : "List of on the spot check types"
+      }
+    } ],
+    "attributes" : [ "external" ],
+    "id" : "1"
+  }, {
+    "iri" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#RiskTypeValue",
+    "baseIri" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "RiskTypeValue"
+    },
+    "individuals" : [ {
+      "iri" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#RiskTypeValue/areaOfIntensiveLcOrLuChange",
+      "baseIri" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code",
+      "annotations" : {
+        "inScheme" : [ {
+          "identifier" : "inScheme",
+          "language" : "undefined",
+          "value" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#RiskTypeValue",
+          "type" : "iri"
+        } ],
+        "definition" : [ {
+          "identifier" : "definition",
+          "language" : "en",
+          "value" : "Areas of Intensive LC or LU change\r\n\r\nAreas of intensive land cover and land use change may be detected in third party data e.g.\r\n\t- orthoimagery\r\n\t- cadastral maps\r\n\t- road maps\r\n\t- topographic maps\r\n\t- development plans",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "RiskTypeValue/areaOfIntensiveLcOrLuChange"
+      }
+    }, {
+      "iri" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#RiskTypeValue/nonParticipationInCertificationScheme",
+      "baseIri" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code",
+      "annotations" : {
+        "inScheme" : [ {
+          "identifier" : "inScheme",
+          "language" : "undefined",
+          "value" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#RiskTypeValue",
+          "type" : "iri"
+        } ],
+        "definition" : [ {
+          "identifier" : "definition",
+          "language" : "en",
+          "value" : "Non-participation in certification scheme\r\n\r\nAt risk based sampling MS may consider beneficiary’s participation in a certification system if the scheme in question is relevant for the requirements and standards concerned [Art. 69(1)(b) of R 809/2014].",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "RiskTypeValue/nonParticipationInCertificationScheme"
+      }
+    }, {
+      "iri" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#RiskTypeValue/eligibilityCriteria",
+      "baseIri" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code",
+      "annotations" : {
+        "inScheme" : [ {
+          "identifier" : "inScheme",
+          "language" : "undefined",
+          "value" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#RiskTypeValue",
+          "type" : "iri"
+        } ],
+        "definition" : [ {
+          "identifier" : "definition",
+          "language" : "en",
+          "value" : "Eligibility Criteria\r\n\r\nMember States are also authorised to draw the control sample on the basis of the samples of beneficiaries that are selected for an on-the-spot check as regards eligibility criteria. [Preamble (71) of R 809/2014].",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "RiskTypeValue/eligibilityCriteria"
+      }
+    }, {
+      "iri" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#RiskTypeValue/nonParticipationInFas",
+      "baseIri" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code",
+      "annotations" : {
+        "inScheme" : [ {
+          "identifier" : "inScheme",
+          "language" : "undefined",
+          "value" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#RiskTypeValue",
+          "type" : "iri"
+        } ],
+        "definition" : [ {
+          "identifier" : "definition",
+          "language" : "en",
+          "value" : "Non participation in FAS\r\n\r\nSampling of OTSC for cross-compliance can be improved by taking into account the risk analysis concerning the beneficiary’s participation in the farm advisory system [Preamble (69) and Art. 69(1)(a) of R 809/2014].",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "RiskTypeValue/nonParticipationInFas"
+      }
+    } ],
+    "attributes" : [ "external" ],
+    "id" : "2"
+  }, {
+    "iri" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#ControlRateGroupRuralDevelopmentMeasureValue",
+    "baseIri" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "ControlRateGroupRuralDevelopmentMeasureValue"
+    },
+    "individuals" : [ {
+      "iri" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#ControlRateGroupRuralDevelopmentMeasureValue/placeholder",
+      "baseIri" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code",
+      "annotations" : {
+        "inScheme" : [ {
+          "identifier" : "inScheme",
+          "language" : "undefined",
+          "value" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#ControlRateGroupRuralDevelopmentMeasureValue",
+          "type" : "iri"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "ControlRateGroupRuralDevelopmentMeasureValue/placeholder",
+        "en" : "Currently out of scope"
+      }
+    } ],
+    "attributes" : [ "external" ],
+    "id" : "3"
+  }, {
+    "iri" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#SampleTypeValue",
+    "baseIri" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "SampleTypeValue"
+    },
+    "individuals" : [ {
+      "iri" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#SampleTypeValue/observingGreening",
+      "baseIri" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code",
+      "annotations" : {
+        "inScheme" : [ {
+          "identifier" : "inScheme",
+          "language" : "undefined",
+          "value" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#SampleTypeValue",
+          "type" : "iri"
+        } ],
+        "definition" : [ {
+          "identifier" : "definition",
+          "language" : "en",
+          "value" : "Observing greening\r\n\r\nItems selected for controlling beneficiaries observing greening. The composition of the population\r\n\t- 1,0-1,25% selected randomly \r\n\t- 3,75-4,0% selected on risk base\r\nThe related sample includes items selected for the sensitive grassland sample.",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "SampleTypeValue/observingGreening"
+      }
+    }, {
+      "iri" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#SampleTypeValue/initial1%And1,25%ForBps/Saps",
+      "baseIri" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code",
+      "annotations" : {
+        "inScheme" : [ {
+          "identifier" : "inScheme",
+          "language" : "undefined",
+          "value" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#SampleTypeValue",
+          "type" : "iri"
+        } ],
+        "definition" : [ {
+          "identifier" : "definition",
+          "language" : "en",
+          "value" : "Initial 1% and 1,25% for BPS/SAPS\r\n\r\nIt is the initial random sample drawn in sense of Art. 24(2)(a). This sample constitutes the basis of the following further samples:\r\n\t- Random part of the greening samples\r\n\t- Redistributive payment\r\n\t- Areas with natural constraints\r\n\t- Young farmers\r\n\t- Voluntary couples support\r\n\t- Hemp\r\n\t- Cotton",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "SampleTypeValue/initial1%And1,25%ForBps/Saps"
+      }
+    }, {
+      "iri" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#SampleTypeValue/hemp",
+      "baseIri" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code",
+      "annotations" : {
+        "inScheme" : [ {
+          "identifier" : "inScheme",
+          "language" : "undefined",
+          "value" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#SampleTypeValue",
+          "type" : "iri"
+        } ],
+        "definition" : [ {
+          "identifier" : "definition",
+          "language" : "en",
+          "value" : "Hemp\r\n\r\nItems selected for controlling beneficiaries growing hemp.",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "SampleTypeValue/hemp"
+      }
+    }, {
+      "iri" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#SampleTypeValue/smallFarmers",
+      "baseIri" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code",
+      "annotations" : {
+        "inScheme" : [ {
+          "identifier" : "inScheme",
+          "language" : "undefined",
+          "value" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#SampleTypeValue",
+          "type" : "iri"
+        } ],
+        "definition" : [ {
+          "identifier" : "definition",
+          "language" : "en",
+          "value" : "Small farmers\r\n\r\nItem selected for controlling beneficiaries participating in the small farmers scheme.",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "SampleTypeValue/smallFarmers"
+      }
+    }, {
+      "iri" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#SampleTypeValue/youngFarmers",
+      "baseIri" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code",
+      "annotations" : {
+        "inScheme" : [ {
+          "identifier" : "inScheme",
+          "language" : "undefined",
+          "value" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#SampleTypeValue",
+          "type" : "iri"
+        } ],
+        "definition" : [ {
+          "identifier" : "definition",
+          "language" : "en",
+          "value" : "Young farmers\r\n\r\nItem selected for controlling beneficiaries applying for young farmer payment.",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "SampleTypeValue/youngFarmers"
+      }
+    }, {
+      "iri" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#SampleTypeValue/regional/NationalCertificationScheme",
+      "baseIri" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code",
+      "annotations" : {
+        "inScheme" : [ {
+          "identifier" : "inScheme",
+          "language" : "undefined",
+          "value" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#SampleTypeValue",
+          "type" : "iri"
+        } ],
+        "definition" : [ {
+          "identifier" : "definition",
+          "language" : "en",
+          "value" : "Regional/national certification scheme\r\n\r\nItems selected for controlling greening according to Art.43 (3)(b) of R 1307/2013. The equivalent practices are listed in Annex IX of this regulation and the AgriculturalEquivalentPracticeTypeValue code list of the Aid applications and payment claims application schema.",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "SampleTypeValue/regional/NationalCertificationScheme"
+      }
+    }, {
+      "iri" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#SampleTypeValue/regionalImplementation",
+      "baseIri" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code",
+      "annotations" : {
+        "inScheme" : [ {
+          "identifier" : "inScheme",
+          "language" : "undefined",
+          "value" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#SampleTypeValue",
+          "type" : "iri"
+        } ],
+        "definition" : [ {
+          "identifier" : "definition",
+          "language" : "en",
+          "value" : "Regional implementation\r\n\r\nItems selected for controlling beneficiaries participating in regional implementation of EFA. The composition of the population\r\n\t- 1,0-1,25% selected randomly \r\n\t- 3,75-4,0% selected on risk base\r\n\r\nIssue:\r\nThe purpose of collective implementation (See Art. 46(a) of 1307/2013) and regional implementation (see Art. 46(3) of R 639/2014) is to form contiguous areas of EFA. If so, what is the reason to have separate samples for collective implementation, regional implementation and contiguous EFA?",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "SampleTypeValue/regionalImplementation"
+      }
+    }, {
+      "iri" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#SampleTypeValue/collectiveImplementation",
+      "baseIri" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code",
+      "annotations" : {
+        "inScheme" : [ {
+          "identifier" : "inScheme",
+          "language" : "undefined",
+          "value" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#SampleTypeValue",
+          "type" : "iri"
+        } ],
+        "definition" : [ {
+          "identifier" : "definition",
+          "language" : "en",
+          "value" : "Collective implementation\r\n\r\nItems selected for controlling beneficiaries participating in collective implementation of EFA. The composition of the population\r\n\t- 1,0-1,25% selected randomly \r\n\t- 3,75-4,0% selected on risk base\r\n\r\nIssue:\r\nThe purpose of collective implementation (See Art. 46(a) of 1307/2013) and regional implementation (see Art. 46(3) of R 639/2014) is to form contiguous areas of EFA. If so, what is the reason to have separate samples for collective implementation, regional implementation and contiguous EFA?",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "SampleTypeValue/collectiveImplementation"
+      }
+    }, {
+      "iri" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#SampleTypeValue/areasWithNaturalConstraints",
+      "baseIri" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code",
+      "annotations" : {
+        "inScheme" : [ {
+          "identifier" : "inScheme",
+          "language" : "undefined",
+          "value" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#SampleTypeValue",
+          "type" : "iri"
+        } ],
+        "definition" : [ {
+          "identifier" : "definition",
+          "language" : "en",
+          "value" : "Areas with natural constraints\r\n\r\nItem selected for controlling the correctness of payments for areas with natural constraints.",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "SampleTypeValue/areasWithNaturalConstraints"
+      }
+    }, {
+      "iri" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#SampleTypeValue/exemptedFromGreening",
+      "baseIri" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code",
+      "annotations" : {
+        "inScheme" : [ {
+          "identifier" : "inScheme",
+          "language" : "undefined",
+          "value" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#SampleTypeValue",
+          "type" : "iri"
+        } ],
+        "definition" : [ {
+          "identifier" : "definition",
+          "language" : "en",
+          "value" : "Exempted from greening\r\n\r\nItems selected to control beneficiaries exempted from greening obligations by not meeting the specified thresholds.  They include:\r\n\t- Beneficiaries exempted from crop diversification (Art. 44(3) of R 1307/2013)\r\n\t- Beneficiaries exempted from EFA (Art. 46 (1) of R 307/2013)",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "SampleTypeValue/exemptedFromGreening"
+      }
+    }, {
+      "iri" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#SampleTypeValue/contiguousEfa",
+      "baseIri" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code",
+      "annotations" : {
+        "inScheme" : [ {
+          "identifier" : "inScheme",
+          "language" : "undefined",
+          "value" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#SampleTypeValue",
+          "type" : "iri"
+        } ],
+        "definition" : [ {
+          "identifier" : "definition",
+          "language" : "en",
+          "value" : "Contiguous EFA\r\n\r\nItems selected for controlling contiguous EFA\r\n\r\nIssue:\r\nThe purpose of collective implementation (See Art. 46(a) of 1307/2013) and regional implementation (see Art. 46(3) of R 639/2014) is to form contiguous areas of EFA. If so, what is the reason to have separate samples for collective implementation, regional implementation and contiguous EFA?",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "SampleTypeValue/contiguousEfa"
+      }
+    }, {
+      "iri" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#SampleTypeValue/sensitiveGrassland",
+      "baseIri" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code",
+      "annotations" : {
+        "inScheme" : [ {
+          "identifier" : "inScheme",
+          "language" : "undefined",
+          "value" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#SampleTypeValue",
+          "type" : "iri"
+        } ],
+        "definition" : [ {
+          "identifier" : "definition",
+          "language" : "en",
+          "value" : "Sensitive grassland\r\n\r\nItems selected for controlling sensitive grassland. The composition of the population\r\n\t- 1,0-1,25% selected randomly \r\n\t- 3,75-4,0% selected on risk base\r\n\r\nNOTE\r\nThis sample is included in the generic sample of beneficiaries that are mandated to observe greening.",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "SampleTypeValue/sensitiveGrassland"
+      }
+    }, {
+      "iri" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#SampleTypeValue/topUpForBps/Saps",
+      "baseIri" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code",
+      "annotations" : {
+        "inScheme" : [ {
+          "identifier" : "inScheme",
+          "language" : "undefined",
+          "value" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#SampleTypeValue",
+          "type" : "iri"
+        } ],
+        "definition" : [ {
+          "identifier" : "definition",
+          "language" : "en",
+          "value" : "Top-up for BPS/SAPS\r\n\r\nRandomly selected items to complete the BPS/SAPS population after integrating the items out of the following samples: \r\n\t- Initial 1,0-2,15% sample for BPS SAPS\r\n\t- Greening samples\r\n\t- Redistributive payment\r\n\t- Areas with natural constraints\r\n\t- Young farmers\r\n\t- Voluntary couples support\r\n\t- Hemp\r\n\t- Cotton",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "SampleTypeValue/topUpForBps/Saps"
+      }
+    }, {
+      "iri" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#SampleTypeValue/voluntaryCoupledSupport",
+      "baseIri" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code",
+      "annotations" : {
+        "inScheme" : [ {
+          "identifier" : "inScheme",
+          "language" : "undefined",
+          "value" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#SampleTypeValue",
+          "type" : "iri"
+        } ],
+        "definition" : [ {
+          "identifier" : "definition",
+          "language" : "en",
+          "value" : "Voluntary coupled support\r\n\r\nItem selected for controlling beneficiaries applying for voluntary coupled support.",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "SampleTypeValue/voluntaryCoupledSupport"
+      }
+    }, {
+      "iri" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#SampleTypeValue/cotton",
+      "baseIri" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code",
+      "annotations" : {
+        "inScheme" : [ {
+          "identifier" : "inScheme",
+          "language" : "undefined",
+          "value" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#SampleTypeValue",
+          "type" : "iri"
+        } ],
+        "definition" : [ {
+          "identifier" : "definition",
+          "language" : "en",
+          "value" : "Cotton\r\n\r\nItem selected for controlling beneficiaries applying for the specific payment for cotton.",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "SampleTypeValue/cotton"
+      }
+    }, {
+      "iri" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#SampleTypeValue/redistributivePayment",
+      "baseIri" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code",
+      "annotations" : {
+        "inScheme" : [ {
+          "identifier" : "inScheme",
+          "language" : "undefined",
+          "value" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#SampleTypeValue",
+          "type" : "iri"
+        } ],
+        "definition" : [ {
+          "identifier" : "definition",
+          "language" : "en",
+          "value" : "Redistributive payment\r\n\r\nItem selected for controlling beneficiaries applying for redistributive payment.",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "SampleTypeValue/redistributivePayment"
+      }
+    }, {
+      "iri" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#SampleTypeValue/reconversionOfSensitivePg",
+      "baseIri" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code",
+      "annotations" : {
+        "inScheme" : [ {
+          "identifier" : "inScheme",
+          "language" : "undefined",
+          "value" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#SampleTypeValue",
+          "type" : "iri"
+        } ],
+        "definition" : [ {
+          "identifier" : "definition",
+          "language" : "en",
+          "value" : "Reconversion of sensitive permanent grassland\r\n\r\nItems corresponding to beneficiaries obliged to re-convert agricultural areas in sensitive permanent grassland.",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "SampleTypeValue/reconversionOfSensitivePg"
+      }
+    }, {
+      "iri" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#SampleTypeValue/reconversionOfPg",
+      "baseIri" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code",
+      "annotations" : {
+        "inScheme" : [ {
+          "identifier" : "inScheme",
+          "language" : "undefined",
+          "value" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#SampleTypeValue",
+          "type" : "iri"
+        } ],
+        "definition" : [ {
+          "identifier" : "definition",
+          "language" : "en",
+          "value" : "Reconversion of permanent grassland\r\n\r\nItems corresponding to beneficiaries obliged to re-convert agricultural areas in permanent grassland.",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "SampleTypeValue/reconversionOfPg"
+      }
+    } ],
+    "attributes" : [ "external" ],
+    "id" : "4"
+  }, {
+    "iri" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#ControlRateGroupAnimalAidSchemaValue",
+    "baseIri" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "ControlRateGroupAnimalAidSchemaValue"
+    },
+    "individuals" : [ {
+      "iri" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#ControlRateGroupAnimalAidSchemaValue/placeholder",
+      "baseIri" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code",
+      "annotations" : {
+        "inScheme" : [ {
+          "identifier" : "inScheme",
+          "language" : "undefined",
+          "value" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#ControlRateGroupAnimalAidSchemaValue",
+          "type" : "iri"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "ControlRateGroupAnimalAidSchemaValue/placeholder",
+        "en" : "Currently out of scope"
+      }
+    } ],
+    "attributes" : [ "external" ],
+    "id" : "5"
+  }, {
+    "iri" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#InspectorsSurveyObjectTypeValue",
+    "baseIri" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "InspectorsSurveyObjectTypeValue"
+    },
+    "individuals" : [ {
+      "iri" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#InspectorsSurveyObjectTypeValue/ecologicalFocusArea",
+      "baseIri" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code",
+      "annotations" : {
+        "inScheme" : [ {
+          "identifier" : "inScheme",
+          "language" : "undefined",
+          "value" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#InspectorsSurveyObjectTypeValue",
+          "type" : "iri"
+        } ],
+        "definition" : [ {
+          "identifier" : "definition",
+          "language" : "en",
+          "value" : "Ecological focus area\r\n\r\nEcological focus areas as referred to in Article 46 of R (EU) No1307/2013 and its Delegated Regulation (EU) No 639/2014.",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "InspectorsSurveyObjectTypeValue/ecologicalFocusArea",
+        "en" : "Ecological focus area"
+      }
+    }, {
+      "iri" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#InspectorsSurveyObjectTypeValue/referenceParcel",
+      "baseIri" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code",
+      "annotations" : {
+        "inScheme" : [ {
+          "identifier" : "inScheme",
+          "language" : "undefined",
+          "value" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#InspectorsSurveyObjectTypeValue",
+          "type" : "iri"
+        } ],
+        "definition" : [ {
+          "identifier" : "definition",
+          "language" : "en",
+          "value" : "Reference parcel\r\n\r\nReference parcel as defined in R (EU) 1307/2013.",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "InspectorsSurveyObjectTypeValue/referenceParcel",
+        "en" : "Reference parcel"
+      }
+    }, {
+      "iri" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#InspectorsSurveyObjectTypeValue/holdingSite",
+      "baseIri" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code",
+      "annotations" : {
+        "inScheme" : [ {
+          "identifier" : "inScheme",
+          "language" : "undefined",
+          "value" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#InspectorsSurveyObjectTypeValue",
+          "type" : "iri"
+        } ],
+        "definition" : [ {
+          "identifier" : "definition",
+          "language" : "en",
+          "value" : "Holding site\r\n\r\nMeasurement of the whole holding.",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "InspectorsSurveyObjectTypeValue/holdingSite",
+        "en" : "Holding site"
+      }
+    }, {
+      "iri" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#InspectorsSurveyObjectTypeValue/agriculturalArea",
+      "baseIri" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code",
+      "annotations" : {
+        "inScheme" : [ {
+          "identifier" : "inScheme",
+          "language" : "undefined",
+          "value" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#InspectorsSurveyObjectTypeValue",
+          "type" : "iri"
+        } ],
+        "definition" : [ {
+          "identifier" : "definition",
+          "language" : "en",
+          "value" : "Agricultural area\r\n\r\nAgricultural area as defined by R (EU) 1307/2013.",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "InspectorsSurveyObjectTypeValue/agriculturalArea",
+        "en" : "Agricultural area"
+      }
+    }, {
+      "iri" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#InspectorsSurveyObjectTypeValue/agriculturalParcel",
+      "baseIri" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code",
+      "annotations" : {
+        "inScheme" : [ {
+          "identifier" : "inScheme",
+          "language" : "undefined",
+          "value" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#InspectorsSurveyObjectTypeValue",
+          "type" : "iri"
+        } ],
+        "definition" : [ {
+          "identifier" : "definition",
+          "language" : "en",
+          "value" : "Agricultural parcel\r\n\r\nAgricultural parcel as defined by R (EU) 1307/2013.",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "InspectorsSurveyObjectTypeValue/agriculturalParcel",
+        "en" : "Agricultural parcel"
+      }
+    } ],
+    "attributes" : [ "external" ],
+    "id" : "6"
+  }, {
+    "iri" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#SamplingStrategyTypeValue",
+    "baseIri" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "SamplingStrategyTypeValue"
+    },
+    "individuals" : [ {
+      "iri" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#SamplingStrategyTypeValue/systematicRandomBasedSelection",
+      "baseIri" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code",
+      "annotations" : {
+        "inScheme" : [ {
+          "identifier" : "inScheme",
+          "language" : "undefined",
+          "value" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#SamplingStrategyTypeValue",
+          "type" : "iri"
+        } ],
+        "definition" : [ {
+          "identifier" : "definition",
+          "language" : "en",
+          "value" : "Systematic random selection\r\n\r\nRandom selection of the first initial item (i.e. application) and taking the rest based on the sequential number (e.g. every 100 application) [Section 1.3.2 of DSCG/2014/32].\r\n\r\nNOTE 1\r\nThis method allows to start OTSC before the end of the application period.\r\n\r\nNOTE 2\r\nThe sequential number has to be automatically assigned to the applications, or the key (i.e. property or properties) that serve for the basis of selection has to be specified and documented before starting the sampling process.\r\n\r\nNOTE 3\r\nThe population has to be homogenous.",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "SamplingStrategyTypeValue/systematicRandomBasedSelection"
+      }
+    }, {
+      "iri" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#SamplingStrategyTypeValue/simpleRandomBasedSelection",
+      "baseIri" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code",
+      "annotations" : {
+        "inScheme" : [ {
+          "identifier" : "inScheme",
+          "language" : "undefined",
+          "value" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#SamplingStrategyTypeValue",
+          "type" : "iri"
+        } ],
+        "definition" : [ {
+          "identifier" : "definition",
+          "language" : "en",
+          "value" : "Simple random based selection\r\n\r\nSelection from the full population of the dossiers through generation of a random key [Section 1.3.2 of DSCG/2014/32].\r\n\r\nNOTE 1\r\nThe population has to be homogenous for this method.\r\n\r\nNOTE 2\r\nThis method requires waiting until the full population is known.",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "SamplingStrategyTypeValue/simpleRandomBasedSelection",
+        "en" : "Random based sampling strategy"
+      }
+    }, {
+      "iri" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#SamplingStrategyTypeValue/stratifiedRandomSelection",
+      "baseIri" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code",
+      "annotations" : {
+        "inScheme" : [ {
+          "identifier" : "inScheme",
+          "language" : "undefined",
+          "value" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#SamplingStrategyTypeValue",
+          "type" : "iri"
+        } ],
+        "definition" : [ {
+          "identifier" : "definition",
+          "language" : "en",
+          "value" : "Stratified random selection\r\n\r\nMethod applicable when the population to be sampled is not homogenous. In order to achieve homogeneity, the population has to be sub-divided into strata based on objective criteria.\r\n\r\nNOTE\r\nThe criteria for each stratum has to be registered.",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "SamplingStrategyTypeValue/stratifiedRandomSelection"
+      }
+    }, {
+      "iri" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#SamplingStrategyTypeValue/multistageSampling",
+      "baseIri" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code",
+      "annotations" : {
+        "inScheme" : [ {
+          "identifier" : "inScheme",
+          "language" : "undefined",
+          "value" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#SamplingStrategyTypeValue",
+          "type" : "iri"
+        } ],
+        "definition" : [ {
+          "identifier" : "definition",
+          "language" : "en",
+          "value" : "Multistage sampling\r\n\r\nFurther, secondary sampling of clusters that have been  selected on geographic, or temporal criteria.",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "SamplingStrategyTypeValue/multistageSampling"
+      }
+    }, {
+      "iri" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#SamplingStrategyTypeValue/riskBasedCartSelection",
+      "baseIri" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code",
+      "annotations" : {
+        "inScheme" : [ {
+          "identifier" : "inScheme",
+          "language" : "undefined",
+          "value" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#SamplingStrategyTypeValue",
+          "type" : "iri"
+        } ],
+        "definition" : [ {
+          "identifier" : "definition",
+          "language" : "en",
+          "value" : "Risk based CART selection\r\n\r\nA probability proportional risk based method for selecting and grouping items (applications) in risk groups based on a specific criterion (e.g. area not found) [DSCG/2014/32].",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "SamplingStrategyTypeValue/riskBasedCartSelection",
+        "en" : "Risk based sampling strategy"
+      }
+    }, {
+      "iri" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#SamplingStrategyTypeValue/riskBasedMultiCriteriaSelection",
+      "baseIri" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code",
+      "annotations" : {
+        "inScheme" : [ {
+          "identifier" : "inScheme",
+          "language" : "undefined",
+          "value" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#SamplingStrategyTypeValue",
+          "type" : "iri"
+        } ],
+        "definition" : [ {
+          "identifier" : "definition",
+          "language" : "en",
+          "value" : "Risk based multi-criteria selection\r\n\r\nRisk based selection based on multi-criteria analysis.\r\nExamples of aspects of analysis:\r\n\t- areas of recent land cover / land use change (from third party data)\r\n\t- Landscape\r\n\t- Agronomic conditions\r\n\t- Non-participation in FAS or certification schemes of farmers\r\n\r\nNOTE \r\nThe method is especially applicable for selecting risk based CwRS zones.",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "SamplingStrategyTypeValue/riskBasedMultiCriteriaSelection",
+        "en" : "Risk based sampling strategy"
+      }
+    }, {
+      "iri" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#SamplingStrategyTypeValue/simpleRiskBasedSelection",
+      "baseIri" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code",
+      "annotations" : {
+        "inScheme" : [ {
+          "identifier" : "inScheme",
+          "language" : "undefined",
+          "value" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#SamplingStrategyTypeValue",
+          "type" : "iri"
+        } ],
+        "definition" : [ {
+          "identifier" : "definition",
+          "language" : "en",
+          "value" : "Simple risk based selection\r\n\r\nSampling process based on a single criterion retained to be effective in course of risk analysis. Input data for risk analysis can be taken from OTSC report of the previous year, other subsystems of IACS, third party data, etc.\r\n\r\nNOTE 1\r\nThe effectiveness of the criterion has to be proved by comparing the performance results from a random sample and a sample based on the criterion. \r\n\r\nNOTE 2\r\nThe performance criterion has to be documented before  starting the sampling process.",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "SamplingStrategyTypeValue/simpleRiskBasedSelection",
+        "en" : "Risk based sampling strategy"
+      }
+    }, {
+      "iri" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#SamplingStrategyTypeValue/clusteredRandomSelection",
+      "baseIri" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code",
+      "annotations" : {
+        "inScheme" : [ {
+          "identifier" : "inScheme",
+          "language" : "undefined",
+          "value" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#SamplingStrategyTypeValue",
+          "type" : "iri"
+        } ],
+        "definition" : [ {
+          "identifier" : "definition",
+          "language" : "en",
+          "value" : "Clustered random selection\r\n\r\nCluster sampling is a selection of items that are clustered (e.g. spatially or temporally) within the population.\r\n\r\nEXAMPLE\r\nGeographic cluster of a CwRS zone.\r\n\r\nNOTE 1\r\nThe criteria for each cluster has to be registered.\r\n\r\nNOTE 2\r\nThe clusters regarded as primary samples by geographic or temporal distribution can be further sampled by a second level of sampling. In that case the method is called multistage sampling.",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "SamplingStrategyTypeValue/clusteredRandomSelection"
+      }
+    } ],
+    "attributes" : [ "external" ],
+    "id" : "7"
+  }, {
+    "iri" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#OnTheSpotCheckTypeValue",
+    "baseIri" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "OnTheSpotCheckTypeValue"
+    },
+    "individuals" : [ {
+      "iri" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#OnTheSpotCheckTypeValue/complianceToNationalLaw",
+      "baseIri" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code",
+      "annotations" : {
+        "inScheme" : [ {
+          "identifier" : "inScheme",
+          "language" : "undefined",
+          "value" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#OnTheSpotCheckTypeValue",
+          "type" : "iri"
+        } ],
+        "definition" : [ {
+          "identifier" : "definition",
+          "language" : "en",
+          "value" : "Compliance to national law\r\n\r\nAs required by Art. 24(2) of R 809/2014.",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "OnTheSpotCheckTypeValue/complianceToNationalLaw",
+        "en" : "Cross compliance"
+      }
+    }, {
+      "iri" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#OnTheSpotCheckTypeValue/controlArea",
+      "baseIri" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code",
+      "annotations" : {
+        "inScheme" : [ {
+          "identifier" : "inScheme",
+          "language" : "undefined",
+          "value" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#OnTheSpotCheckTypeValue",
+          "type" : "iri"
+        } ],
+        "definition" : [ {
+          "identifier" : "definition",
+          "language" : "en",
+          "value" : "Control area\r\n\r\nVerification of the declared area values by means of measurements.",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "OnTheSpotCheckTypeValue/controlArea",
+        "en" : "Control area"
+      }
+    }, {
+      "iri" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#OnTheSpotCheckTypeValue/correctnessAndCompletenessOfInformation",
+      "baseIri" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code",
+      "annotations" : {
+        "inScheme" : [ {
+          "identifier" : "inScheme",
+          "language" : "undefined",
+          "value" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#OnTheSpotCheckTypeValue",
+          "type" : "iri"
+        } ],
+        "definition" : [ {
+          "identifier" : "definition",
+          "language" : "en",
+          "value" : "Correctness and completeness of the information\r\n\r\nAs required by Art. 24(1)(a) of R 809/2014.",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "OnTheSpotCheckTypeValue/correctnessAndCompletenessOfInformation",
+        "en" : "Cross compliance"
+      }
+    }, {
+      "iri" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#OnTheSpotCheckTypeValue/supportingDocuments",
+      "baseIri" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code",
+      "annotations" : {
+        "inScheme" : [ {
+          "identifier" : "inScheme",
+          "language" : "undefined",
+          "value" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#OnTheSpotCheckTypeValue",
+          "type" : "iri"
+        } ],
+        "definition" : [ {
+          "identifier" : "definition",
+          "language" : "en",
+          "value" : "Supporting Documents\r\n\r\nVerification of the existence of the requisite supporting documents [Art. 47(1)(b) of  R 1306/2013]",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "OnTheSpotCheckTypeValue/supportingDocuments",
+        "en" : "Control cross-compliance"
+      }
+    }, {
+      "iri" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#OnTheSpotCheckTypeValue/complianceToEuLaw",
+      "baseIri" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code",
+      "annotations" : {
+        "inScheme" : [ {
+          "identifier" : "inScheme",
+          "language" : "undefined",
+          "value" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#OnTheSpotCheckTypeValue",
+          "type" : "iri"
+        } ],
+        "definition" : [ {
+          "identifier" : "definition",
+          "language" : "en",
+          "value" : "Compliance to EU law\r\n\r\nAs required by Art. 24(2) of R 809/2014.",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "OnTheSpotCheckTypeValue/complianceToEuLaw",
+        "en" : "Cross compliance"
+      }
+    }, {
+      "iri" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#OnTheSpotCheckTypeValue/commitmentsAndObligations",
+      "baseIri" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code",
+      "annotations" : {
+        "inScheme" : [ {
+          "identifier" : "inScheme",
+          "language" : "undefined",
+          "value" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#OnTheSpotCheckTypeValue",
+          "type" : "iri"
+        } ],
+        "definition" : [ {
+          "identifier" : "definition",
+          "language" : "en",
+          "value" : "Cross compliance\r\n\r\nOTSC in sense of Art. 96(3) of R 1306/2013 and Art. 26(3) of R 809/2014.",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "OnTheSpotCheckTypeValue/commitmentsAndObligations",
+        "en" : "Cross compliance"
+      }
+    }, {
+      "iri" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#OnTheSpotCheckTypeValue/crossCompliance",
+      "baseIri" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code",
+      "annotations" : {
+        "inScheme" : [ {
+          "identifier" : "inScheme",
+          "language" : "undefined",
+          "value" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#OnTheSpotCheckTypeValue",
+          "type" : "iri"
+        } ],
+        "definition" : [ {
+          "identifier" : "definition",
+          "language" : "en",
+          "value" : "Cross compliance\r\n\r\nOTSC in sense of Art. 96(3) of R 1306/2013.",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "OnTheSpotCheckTypeValue/crossCompliance",
+        "en" : "Cross compliance"
+      }
+    }, {
+      "iri" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#OnTheSpotCheckTypeValue/eligibilityCriteria",
+      "baseIri" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code",
+      "annotations" : {
+        "inScheme" : [ {
+          "identifier" : "inScheme",
+          "language" : "undefined",
+          "value" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#OnTheSpotCheckTypeValue",
+          "type" : "iri"
+        } ],
+        "definition" : [ {
+          "identifier" : "definition",
+          "language" : "en",
+          "value" : "Cross compliance\r\n\r\nOTSC in sense of Art. 96(3) of R 1306/2013, Art. 24(1)(b) and 26(3) of R 809/2014.",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "OnTheSpotCheckTypeValue/eligibilityCriteria",
+        "en" : "Cross compliance"
+      }
+    }, {
+      "iri" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#OnTheSpotCheckTypeValue/crossComplianceStandards",
+      "baseIri" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code",
+      "annotations" : {
+        "inScheme" : [ {
+          "identifier" : "inScheme",
+          "language" : "undefined",
+          "value" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#OnTheSpotCheckTypeValue",
+          "type" : "iri"
+        } ],
+        "definition" : [ {
+          "identifier" : "definition",
+          "language" : "en",
+          "value" : "Cross compliance standards\r\n\r\nAs required by Art. 24(1)(c) of R 809/2014.",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "OnTheSpotCheckTypeValue/crossComplianceStandards",
+        "en" : "Cross compliance"
+      }
+    } ],
+    "attributes" : [ "external" ],
+    "id" : "8"
+  }, {
+    "iri" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#ControlRateTypeValue",
+    "baseIri" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "ControlRateTypeValue"
+    },
+    "individuals" : [ {
+      "iri" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#ControlRateTypeValue/atLeast10%OfFollowingGreeningByUsingEnvironmentalCertificationSchemes",
+      "baseIri" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code",
+      "annotations" : {
+        "inScheme" : [ {
+          "identifier" : "inScheme",
+          "language" : "undefined",
+          "value" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#ControlRateTypeValue",
+          "type" : "iri"
+        } ],
+        "definition" : [ {
+          "identifier" : "definition",
+          "language" : "en",
+          "value" : "At least 10 % following greening practices by using environmental certification schemes\r\n\r\nIncreased control rate (5% normal+5% supplementary) in sense of Art. 31(3) for beneficiaries required to follow greening practices.",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "ControlRateTypeValue/atLeast10%OfFollowingGreeningByUsingEnvironmentalCertificationSchemes",
+        "en" : "At least 5 % of all beneficiaries required to observe the greening practices and using national or regional environmental certification schemes"
+      }
+    }, {
+      "iri" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#ControlRateTypeValue/atLeast5%ForVoluntaryCoupledSupport",
+      "baseIri" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code",
+      "annotations" : {
+        "inScheme" : [ {
+          "identifier" : "inScheme",
+          "language" : "undefined",
+          "value" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#ControlRateTypeValue",
+          "type" : "iri"
+        } ],
+        "definition" : [ {
+          "identifier" : "definition",
+          "language" : "en",
+          "value" : "At least 5% for the voluntary coupled support\r\n\r\nIn sense of Art. 30(e) of Regulation (EU) 809/2014 5% of beneficiaries applying for the voluntary coupled shall be controlled.",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "ControlRateTypeValue/atLeast5%ForVoluntaryCoupledSupport",
+        "en" : "At least 5% of all beneficiaries required to observe the agricultural practices having areas covered with permanent grasslands"
+      }
+    }, {
+      "iri" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#ControlRateTypeValue/atLeast10%OfRegionalImplementation",
+      "baseIri" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code",
+      "annotations" : {
+        "inScheme" : [ {
+          "identifier" : "inScheme",
+          "language" : "undefined",
+          "value" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#ControlRateTypeValue",
+          "type" : "iri"
+        } ],
+        "definition" : [ {
+          "identifier" : "definition",
+          "language" : "en",
+          "value" : "At least 10 % of all beneficiaries participating in a regional implementation\r\n\r\nIncreased control rate (5% normal+5% supplementary) in sense of Art. 31(3) for beneficiaries required to follow greening practices.",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "ControlRateTypeValue/atLeast10%OfRegionalImplementation",
+        "en" : "At least  5 % of all beneficiaries participating in a regional implementation"
+      }
+    }, {
+      "iri" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#ControlRateTypeValue/100%OfMandarotyReconversionIntoSensitivePermanentGrassland",
+      "baseIri" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code",
+      "annotations" : {
+        "inScheme" : [ {
+          "identifier" : "inScheme",
+          "language" : "undefined",
+          "value" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#ControlRateTypeValue",
+          "type" : "iri"
+        } ],
+        "definition" : [ {
+          "identifier" : "definition",
+          "language" : "en",
+          "value" : "100% of mandatory reconversion into sensitive permanent grassland\r\n\r\nIn accordance with Art.31(1)(g) of R (EU) 809/2014 100 % of beneficiaries with an obligation to re-convert land into land under permanent grassland shall be controlled.",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "ControlRateTypeValue/100%OfMandarotyReconversionIntoSensitivePermanentGrassland",
+        "en" : "100 % of all beneficiaries with an obligation to re-convert land into land under permanent grassland, redistributive"
+      }
+    }, {
+      "iri" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#ControlRateTypeValue/atLeast5%OfCollectiveImplementation",
+      "baseIri" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code",
+      "annotations" : {
+        "inScheme" : [ {
+          "identifier" : "inScheme",
+          "language" : "undefined",
+          "value" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#ControlRateTypeValue",
+          "type" : "iri"
+        } ],
+        "definition" : [ {
+          "identifier" : "definition",
+          "language" : "en",
+          "value" : "At least 5 % of the collective implementation\r\n\r\nIn sensed of Art. 31(1)(e) od R EU) 809/2014 5 % of  the  collective implementation in accordance with Article 46(6) of Regulation (EU) No 1307/2013 shall be controlled.",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "ControlRateTypeValue/atLeast5%OfCollectiveImplementation",
+        "en" : "At least 5 % of  the  collective implementation"
+      }
+    }, {
+      "iri" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#ControlRateTypeValue/atLeast5%ForRedistributivePayment",
+      "baseIri" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code",
+      "annotations" : {
+        "inScheme" : [ {
+          "identifier" : "inScheme",
+          "language" : "undefined",
+          "value" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#ControlRateTypeValue",
+          "type" : "iri"
+        } ],
+        "definition" : [ {
+          "identifier" : "definition",
+          "language" : "en",
+          "value" : "At least 5% for the redistributive payment\r\n\r\nIn sense of Art. 30(b) of Regulation (EU) 809/2014 5% of beneficiaries applying for the redistributive payment shall be controlled.",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "ControlRateTypeValue/atLeast5%ForRedistributivePayment",
+        "en" : "At least 5% of all beneficiaries required to observe the agricultural practices having areas covered with permanent grasslands"
+      }
+    }, {
+      "iri" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#ControlRateTypeValue/atLeast5%ForYoungFarmers",
+      "baseIri" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code",
+      "annotations" : {
+        "inScheme" : [ {
+          "identifier" : "inScheme",
+          "language" : "undefined",
+          "value" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#ControlRateTypeValue",
+          "type" : "iri"
+        } ],
+        "definition" : [ {
+          "identifier" : "definition",
+          "language" : "en",
+          "value" : "At least 5% for the young farmers\r\n\r\nIn sense of Art. 30(d) of Regulation (EU) 809/2014 5% of beneficiaries applying for the young farmer payment shall be controlled.",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "ControlRateTypeValue/atLeast5%ForYoungFarmers",
+        "en" : "At least 5% of all beneficiaries required to observe the agricultural practices having areas covered with permanent grasslands"
+      }
+    }, {
+      "iri" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#ControlRateTypeValue/atLeast3%OfExemptedFromGreeningPractices",
+      "baseIri" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code",
+      "annotations" : {
+        "inScheme" : [ {
+          "identifier" : "inScheme",
+          "language" : "undefined",
+          "value" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#ControlRateTypeValue",
+          "type" : "iri"
+        } ],
+        "definition" : [ {
+          "identifier" : "definition",
+          "language" : "en",
+          "value" : "At least 3% of exempted from greening practices\r\n\r\nIn sense of Art. 31 (1)(b) at least 3 % of all beneficiaries qualifying for the greening payment who are exempted from both the crop diversification and the EFA obligations shall be controlled.\r\n\r\nThe exemption is granted when the thresholds referred to in Articles 44 and 46 of Regulation (EU) No 1307/2013 are not met and the obligations referred to in Article 45 of that Regulation are not concerned.",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "ControlRateTypeValue/atLeast3%OfExemptedFromGreeningPractices",
+        "en" : "At least 3 % of all beneficiaries qualifying for the greening payment who are exempted from both the crop diversification and the EFA obligations"
+      }
+    }, {
+      "iri" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#ControlRateTypeValue/atLeast3%ForRedistributivePayment",
+      "baseIri" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code",
+      "annotations" : {
+        "inScheme" : [ {
+          "identifier" : "inScheme",
+          "language" : "undefined",
+          "value" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#ControlRateTypeValue",
+          "type" : "iri"
+        } ],
+        "definition" : [ {
+          "identifier" : "definition",
+          "language" : "en",
+          "value" : "At least 3% or redistributive payment \r\n\r\nArt. 36(2) of Regulation (EU) 809/2014 allows the reduction of the control rate for redistributive payment from 5% to 3% when the cross checks based on geospatial applications are carried out.",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "ControlRateTypeValue/atLeast3%ForRedistributivePayment",
+        "en" : "At least 5% of all beneficiaries required to observe the agricultural practices having areas covered with permanent grasslands"
+      }
+    }, {
+      "iri" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#ControlRateTypeValue/atLeast10%OfCollectiveImplementation",
+      "baseIri" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code",
+      "annotations" : {
+        "inScheme" : [ {
+          "identifier" : "inScheme",
+          "language" : "undefined",
+          "value" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#ControlRateTypeValue",
+          "type" : "iri"
+        } ],
+        "definition" : [ {
+          "identifier" : "definition",
+          "language" : "en",
+          "value" : "At least 10% of the collective implementation\r\n\r\nIncreased control rate (5% normal+5% supplementary) in sense of Art. 31(3) for beneficiaries required to follow greening practices.",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "ControlRateTypeValue/atLeast10%OfCollectiveImplementation",
+        "en" : "At least 5 % of  the  collective implementation"
+      }
+    }, {
+      "iri" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#ControlRateTypeValue/atLeast10%OfAreasCoveredBySensitiveGrassland",
+      "baseIri" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code",
+      "annotations" : {
+        "inScheme" : [ {
+          "identifier" : "inScheme",
+          "language" : "undefined",
+          "value" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#ControlRateTypeValue",
+          "type" : "iri"
+        } ],
+        "definition" : [ {
+          "identifier" : "definition",
+          "language" : "en",
+          "value" : "At least 10% of areas covered by sensitive grassland\r\n\r\nIncreased control rate (5% normal+5% supplementary) in sense of Art. 31(3) for beneficiaries required to follow greening practices.",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "ControlRateTypeValue/atLeast10%OfAreasCoveredBySensitiveGrassland",
+        "en" : "At least 5% of all beneficiaries required to observe the agricultural practices having areas covered with permanent grasslands"
+      }
+    }, {
+      "iri" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#ControlRateTypeValue/atLeast30%ForProductionOfHemp",
+      "baseIri" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code",
+      "annotations" : {
+        "inScheme" : [ {
+          "identifier" : "inScheme",
+          "language" : "undefined",
+          "value" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#ControlRateTypeValue",
+          "type" : "iri"
+        } ],
+        "definition" : [ {
+          "identifier" : "definition",
+          "language" : "en",
+          "value" : "At least 30% for production of hemp\r\n\r\nIn sense of Art. 30(g) of Regulation (EU) 809/2014 30% of beneficiaries declaring hemp shall be controlled.\r\n\r\nNOTE\r\nIn accordance with art. 32(6) of R (EU) 1307/2013 only those varieties of hemp are eligible that have tetrahydrocannabinol content not exceeding 0,2 %.",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "ControlRateTypeValue/atLeast30%ForProductionOfHemp",
+        "en" : "At least 5% of all beneficiaries required to observe the agricultural practices having areas covered with permanent grasslands"
+      }
+    }, {
+      "iri" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#ControlRateTypeValue/atLeast20%ForProductionOfHemp",
+      "baseIri" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code",
+      "annotations" : {
+        "inScheme" : [ {
+          "identifier" : "inScheme",
+          "language" : "undefined",
+          "value" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#ControlRateTypeValue",
+          "type" : "iri"
+        } ],
+        "definition" : [ {
+          "identifier" : "definition",
+          "language" : "en",
+          "value" : "At least 20% for production of hemp\r\n\r\nArt. 36(6) of Regulation (EU) 809/2014 allows the reduction of the control rate for production of hemp from 30% to 20% when a MS introduces a prior approval for the cultivation of hemp.\r\n\r\nNOTE\r\nMS shall notify the EC about the rules (or changes in the rules) of the approval system.",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "ControlRateTypeValue/atLeast20%ForProductionOfHemp",
+        "en" : "At least 5% of all beneficiaries required to observe the agricultural practices having areas covered with permanent grasslands"
+      }
+    }, {
+      "iri" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#ControlRateTypeValue/atLeast5%OfRegionalImplementation",
+      "baseIri" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code",
+      "annotations" : {
+        "inScheme" : [ {
+          "identifier" : "inScheme",
+          "language" : "undefined",
+          "value" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#ControlRateTypeValue",
+          "type" : "iri"
+        } ],
+        "definition" : [ {
+          "identifier" : "definition",
+          "language" : "en",
+          "value" : "At least 5 % of all beneficiaries participating in a regional implementation\r\n\r\nIn sense of Art.31(1)(d)  of R (EU) 809/2014 5 % of all beneficiaries participating in a regional implementation in accordance with Article 46(5) of Regulation (EU) No 1307/2013 shall be controlled.",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "ControlRateTypeValue/atLeast5%OfRegionalImplementation",
+        "en" : "At least  5 % of all beneficiaries participating in a regional implementation"
+      }
+    }, {
+      "iri" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#ControlRateTypeValue/atLeast5%OfFollowingGreeningPractices",
+      "baseIri" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code",
+      "annotations" : {
+        "inScheme" : [ {
+          "identifier" : "inScheme",
+          "language" : "undefined",
+          "value" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#ControlRateTypeValue",
+          "type" : "iri"
+        } ],
+        "definition" : [ {
+          "identifier" : "definition",
+          "language" : "en",
+          "value" : "At least 5% of following greening practices\r\n\r\nIn sense of Art. 31(1) 5% of beneficiaries required to follow greening practices shall be controlled.",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "ControlRateTypeValue/atLeast5%OfFollowingGreeningPractices",
+        "en" : "At least 5% of all beneficiaries required to observe the agricultural practices having areas covered with permanent grasslands"
+      }
+    }, {
+      "iri" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#ControlRateTypeValue/atLeast5%OfFollowingGreeningByUsingEnvironmentalCertificationSchemes",
+      "baseIri" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code",
+      "annotations" : {
+        "inScheme" : [ {
+          "identifier" : "inScheme",
+          "language" : "undefined",
+          "value" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#ControlRateTypeValue",
+          "type" : "iri"
+        } ],
+        "definition" : [ {
+          "identifier" : "definition",
+          "language" : "en",
+          "value" : "At least 5 % following greening practices by using environmental certification schemes\r\n\r\nIn sense of Art. 31(1)(c) 5 % of beneficiaries observing greening practices and using national or regional environmental certification schemes as referred to in Article 43(3)(b) of Regulation (EU) No 1307/2013 shall be controlled.",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "ControlRateTypeValue/atLeast5%OfFollowingGreeningByUsingEnvironmentalCertificationSchemes",
+        "en" : "At least 5 % of all beneficiaries required to observe the greening practices and using national or regional environmental certification schemes"
+      }
+    }, {
+      "iri" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#ControlRateTypeValue/100%OfTheContiguousStructuresOfAdjacentEfa",
+      "baseIri" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code",
+      "annotations" : {
+        "inScheme" : [ {
+          "identifier" : "inScheme",
+          "language" : "undefined",
+          "value" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#ControlRateTypeValue",
+          "type" : "iri"
+        } ],
+        "definition" : [ {
+          "identifier" : "definition",
+          "language" : "en",
+          "value" : "100 % of the contiguous structures of adjacent EFA\r\n\r\nIn sense of Art. 31(1)(f) of R (EU) 809/2014  100 % of the contiguous structures of adjacent ecological focus areas as referred to in Article 46(5) of Regulation (EU) 1307/2013 shall be controlled.",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "ControlRateTypeValue/100%OfTheContiguousStructuresOfAdjacentEfa",
+        "en" : "100 % of the contiguous structures of adjacent ecological focus areas"
+      }
+    }, {
+      "iri" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#ControlRateTypeValue/atLeast5%ForBps/Saps",
+      "baseIri" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code",
+      "annotations" : {
+        "inScheme" : [ {
+          "identifier" : "inScheme",
+          "language" : "undefined",
+          "value" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#ControlRateTypeValue",
+          "type" : "iri"
+        } ],
+        "definition" : [ {
+          "identifier" : "definition",
+          "language" : "en",
+          "value" : "At least 5% for BPS or SAPS\r\n\r\nIn sense of Art. 30(a) of Regulation (EU) 809/2014 5% of beneficiaries applying for the basic payment or single area payment scheme shall be controlled.\r\n\r\nThis control sample shall contain at least 5 % of all beneficiaries declaring mainly agricultural areas which are areas naturally kept in a state suitable for grazing in accordance with Article 10(1) of Delegated Regulation (EU) No 639/2014.",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "ControlRateTypeValue/atLeast5%ForBps/Saps",
+        "en" : "At least 5% of all beneficiaries required to observe the agricultural practices having areas covered with permanent grasslands"
+      }
+    }, {
+      "iri" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#ControlRateTypeValue/atLeast10%OfFollowingGreeningPractices",
+      "baseIri" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code",
+      "annotations" : {
+        "inScheme" : [ {
+          "identifier" : "inScheme",
+          "language" : "undefined",
+          "value" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#ControlRateTypeValue",
+          "type" : "iri"
+        } ],
+        "definition" : [ {
+          "identifier" : "definition",
+          "language" : "en",
+          "value" : "At least 10% of following greening practices\r\n\r\nIncreased control rate (5% normal+5% supplementary) in sense of Art. 31(3) of R 809/2014 for beneficiaries required to follow greening practices. \r\n\r\nWhere the ecological focus areas are not identified in the identification system for agricultural parcels as referred to in Article 70 of Regulation (EU) No 1306/2013, the control rate laid down in points (a) and (c) to (e) of paragraph 1 shall be supplemented by 5% of all beneficiaries of the respective control sample who are required to have ecological focus area on the agricultural area in accordance with Articles 43 and 46 of Regulation (EU) No 1307/2013.",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "ControlRateTypeValue/atLeast10%OfFollowingGreeningPractices",
+        "en" : "At least 5% of all beneficiaries required to observe the agricultural practices having areas covered with permanent grasslands"
+      }
+    }, {
+      "iri" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#ControlRateTypeValue/atLeast5%ForCropSpecificCottonPayment",
+      "baseIri" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code",
+      "annotations" : {
+        "inScheme" : [ {
+          "identifier" : "inScheme",
+          "language" : "undefined",
+          "value" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#ControlRateTypeValue",
+          "type" : "iri"
+        } ],
+        "definition" : [ {
+          "identifier" : "definition",
+          "language" : "en",
+          "value" : "At least 5% for crop specific cotton payment\r\n\r\nIn sense of Art. 30(h) of Regulation (EU) 809/2014 5% of beneficiaries applying for the crop specific payment for cotton shall be controlled.",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "ControlRateTypeValue/atLeast5%ForCropSpecificCottonPayment",
+        "en" : "At least 5% of all beneficiaries required to observe the agricultural practices having areas covered with permanent grasslands"
+      }
+    }, {
+      "iri" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#ControlRateTypeValue/atLeast3%ForSmallFarmersScheme",
+      "baseIri" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code",
+      "annotations" : {
+        "inScheme" : [ {
+          "identifier" : "inScheme",
+          "language" : "undefined",
+          "value" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#ControlRateTypeValue",
+          "type" : "iri"
+        } ],
+        "definition" : [ {
+          "identifier" : "definition",
+          "language" : "en",
+          "value" : "At least 3% for small farmer scheme\r\n\r\nArt. 36(2) of Regulation (EU) 809/2014 allows the reduction of the control rate for the small farmer scheme  from 5% to 3% when the cross checks based on geospatial applications are carried out.",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "ControlRateTypeValue/atLeast3%ForSmallFarmersScheme",
+        "en" : "At least 5% of all beneficiaries required to observe the agricultural practices having areas covered with permanent grasslands"
+      }
+    }, {
+      "iri" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#ControlRateTypeValue/atLeast3%ForBps/Saps",
+      "baseIri" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code",
+      "annotations" : {
+        "inScheme" : [ {
+          "identifier" : "inScheme",
+          "language" : "undefined",
+          "value" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#ControlRateTypeValue",
+          "type" : "iri"
+        } ],
+        "definition" : [ {
+          "identifier" : "definition",
+          "language" : "en",
+          "value" : "At least 3% for BPS or SAPS\r\n\r\nArt. 36(2) of Regulation (EU) 809/2014 allows the reduction of the control rate for BPS/SAPS from 5% to 3% when the cross checks based on geospatial applications are carried out.",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "ControlRateTypeValue/atLeast3%ForBps/Saps",
+        "en" : "At least 5% of all beneficiaries required to observe the agricultural practices having areas covered with permanent grasslands"
+      }
+    }, {
+      "iri" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#ControlRateTypeValue/atLeast5%ForAreasWithNaturalConstraints",
+      "baseIri" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code",
+      "annotations" : {
+        "inScheme" : [ {
+          "identifier" : "inScheme",
+          "language" : "undefined",
+          "value" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#ControlRateTypeValue",
+          "type" : "iri"
+        } ],
+        "definition" : [ {
+          "identifier" : "definition",
+          "language" : "en",
+          "value" : "At least 5% for areas with natural constraints \r\n\r\nIn sense of Art. 30(c) of Regulation (EU) 809/2014 5% of beneficiaries applying for the payment for areas with natural constraints shall be controlled.",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "ControlRateTypeValue/atLeast5%ForAreasWithNaturalConstraints",
+        "en" : "At least 5% of all beneficiaries required to observe the agricultural practices having areas covered with permanent grasslands"
+      }
+    }, {
+      "iri" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#ControlRateTypeValue/atLeast5%OfAreasCoveredBySensitiveGrassland",
+      "baseIri" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code",
+      "annotations" : {
+        "inScheme" : [ {
+          "identifier" : "inScheme",
+          "language" : "undefined",
+          "value" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#ControlRateTypeValue",
+          "type" : "iri"
+        } ],
+        "definition" : [ {
+          "identifier" : "definition",
+          "language" : "en",
+          "value" : "At least 5% of areas covered by sensitive grassland\r\n\r\nThe greenling sample in sense of Art. 31(1) of R (EU) 809/2014 shall cover at least 5 % of all beneficiaries having areas covered with permanent grasslands which are environmentally sensitive in areas covered by Council Directive 92/43/EEC[18] or Directive 2009/147/EC of the European Parliament and of the Council[19] and further sensitive areas referred to in Article 45(1) of Regulation (EU) No 1307/2013.",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "ControlRateTypeValue/atLeast5%OfAreasCoveredBySensitiveGrassland",
+        "en" : "At least 5% of all beneficiaries required to observe the agricultural practices having areas covered with permanent grasslands"
+      }
+    }, {
+      "iri" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#ControlRateTypeValue/atLeast5%ForSmallFarmersScheme",
+      "baseIri" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code",
+      "annotations" : {
+        "inScheme" : [ {
+          "identifier" : "inScheme",
+          "language" : "undefined",
+          "value" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#ControlRateTypeValue",
+          "type" : "iri"
+        } ],
+        "definition" : [ {
+          "identifier" : "definition",
+          "language" : "en",
+          "value" : "At least 5% for the small farmer scheme\r\n\r\nIn sense of Art. 30(f) of Regulation (EU) 809/2014 5% of beneficiaries applying for the small farmer scheme shall be controlled.",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "ControlRateTypeValue/atLeast5%ForSmallFarmersScheme",
+        "en" : "At least 5% of all beneficiaries required to observe the agricultural practices having areas covered with permanent grasslands"
+      }
+    }, {
+      "iri" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#ControlRateTypeValue/atLeast20%OfMandarotyReconversionIntoPermanentGrassland",
+      "baseIri" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code",
+      "annotations" : {
+        "inScheme" : [ {
+          "identifier" : "inScheme",
+          "language" : "undefined",
+          "value" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#ControlRateTypeValue",
+          "type" : "iri"
+        } ],
+        "definition" : [ {
+          "identifier" : "definition",
+          "language" : "en",
+          "value" : "At least 20% of mandatory reconversion into permanent grassland\r\n\r\nIn sense of Art. 31(1)(h) of R (EU) 809/2014 20 % of all beneficiaries with an obligation to re-convert land into permanent grassland shall be controlled.",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "ControlRateTypeValue/atLeast20%OfMandarotyReconversionIntoPermanentGrassland",
+        "en" : "100 % of all beneficiaries with an obligation to re-convert land into land under permanent grassland, redistributive"
+      }
+    } ],
+    "attributes" : [ "external" ],
+    "id" : "9"
+  }, {
+    "iri" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#CrossCheckTypeValue",
+    "baseIri" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "CrossCheckTypeValue"
+    },
+    "individuals" : [ {
+      "iri" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#CrossCheckTypeValue/toVerifyEligibilityForTheAnimalAid",
+      "baseIri" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code",
+      "annotations" : {
+        "inScheme" : [ {
+          "identifier" : "inScheme",
+          "language" : "undefined",
+          "value" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#CrossCheckTypeValue",
+          "type" : "iri"
+        } ],
+        "definition" : [ {
+          "identifier" : "definition",
+          "language" : "en",
+          "value" : "-- Definition --\r\nVerify eligibility for the animal aid.\r\n-- Description --\r\nWhere appropriate, the administrative checks shall include cross-checks: by means of the system for the identification and registration of animals, to verify eligibility for the aid and/or support and to avoid undue multiple granting of \r\r\nthe same aid and/or support in respect of the same calendar or claim year.",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "CrossCheckTypeValue/toVerifyEligibilityForTheAnimalAid",
+        "en" : "Verify eligibility for the animal aid"
+      }
+    }, {
+      "iri" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#CrossCheckTypeValue/toVerifyPaymentEntitlements",
+      "baseIri" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code",
+      "annotations" : {
+        "inScheme" : [ {
+          "identifier" : "inScheme",
+          "language" : "undefined",
+          "value" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#CrossCheckTypeValue",
+          "type" : "iri"
+        } ],
+        "definition" : [ {
+          "identifier" : "definition",
+          "language" : "en",
+          "value" : "-- Definition --\r\nVerify payment entitlements.\r\n-- Description --\r\nWhere appropriate, the administrative checks shall include cross-checks: on the payment entitlements to verify their existence and the eligibility.",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "CrossCheckTypeValue/toVerifyPaymentEntitlements",
+        "en" : "Verify payment entitlements"
+      }
+    }, {
+      "iri" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#CrossCheckTypeValue/betweenInterBranchOrganisationsAndTheListOfTheirMembers",
+      "baseIri" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code",
+      "annotations" : {
+        "inScheme" : [ {
+          "identifier" : "inScheme",
+          "language" : "undefined",
+          "value" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#CrossCheckTypeValue",
+          "type" : "iri"
+        } ],
+        "definition" : [ {
+          "identifier" : "definition",
+          "language" : "en",
+          "value" : "-- Definition --\r\nBetween inter-branch organisations and the list of their members.\r\n-- Description --\r\nWhere appropriate, the administrative checks shall include cross-checks: the compliance with  the  criteria for the approval of inter-branch organisations and the list of their members shall be verified at least once every 5 years.",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "CrossCheckTypeValue/betweenInterBranchOrganisationsAndTheListOfTheirMembers",
+        "en" : "Between inter-branch organisations and the list of their members"
+      }
+    }, {
+      "iri" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#CrossCheckTypeValue/betweenAgriculturalParcelsAndReferenceParcels",
+      "baseIri" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code",
+      "annotations" : {
+        "inScheme" : [ {
+          "identifier" : "inScheme",
+          "language" : "undefined",
+          "value" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#CrossCheckTypeValue",
+          "type" : "iri"
+        } ],
+        "definition" : [ {
+          "identifier" : "definition",
+          "language" : "en",
+          "value" : "-- Definition --\r\nBetween agricultural parcels and reference parcels.\r\n-- Description --\r\nWhere appropriate, the administrative checks shall include cross-checks: between the agricultural parcels as declared in the single application and/or payment claim and the information as contained in the identification system for \r\r\nagricultural parcels per reference parcel in accordance with Article 5(2) of Regulation (EU) No […] [DA IACS] to verify the eligibility for direct aid scheme and/or rural development support measure of the areas as such.\r\nNOTE. Where the integrated system provides for geo-spatial aid application forms, the cross-checks shall be carried out as spatial intersection of the digitised area declared with the identification system of agricultural parcels. In \r\r\naddition, cross-checks shall be carried out to prevent double claiming of the same area.",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "CrossCheckTypeValue/betweenAgriculturalParcelsAndReferenceParcels",
+        "en" : "Between agricultural parcels and reference parcels"
+      }
+    }, {
+      "iri" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#CrossCheckTypeValue/toVerifyEligibilityForTheIncreaseOfTheAid",
+      "baseIri" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code",
+      "annotations" : {
+        "inScheme" : [ {
+          "identifier" : "inScheme",
+          "language" : "undefined",
+          "value" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#CrossCheckTypeValue",
+          "type" : "iri"
+        } ],
+        "definition" : [ {
+          "identifier" : "definition",
+          "language" : "en",
+          "value" : "-- Definition --\r\nVerify eligibility for the increase of the aid.\r\n-- Description --\r\nWhere appropriate, the administrative checks shall include cross-checks:between the declarations of the beneficiary in the single application to be a member of an approved inter-branch organisation, the information under Article 16(8) \r\r\nof this Regulation and the information transmitted by the approved inter-branch organisations concerned, to verify eligibility for the increase of the aid provided for in Article 60(2) of Regulation (EU) No 1307/2013.",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "CrossCheckTypeValue/toVerifyEligibilityForTheIncreaseOfTheAid",
+        "en" : "Verify eligibility for the increase of the aid"
+      }
+    }, {
+      "iri" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#CrossCheckTypeValue/betweenThePaymentEntitlementsAndTheAreaDetermined",
+      "baseIri" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code",
+      "annotations" : {
+        "inScheme" : [ {
+          "identifier" : "inScheme",
+          "language" : "undefined",
+          "value" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#CrossCheckTypeValue",
+          "type" : "iri"
+        } ],
+        "definition" : [ {
+          "identifier" : "definition",
+          "language" : "en",
+          "value" : "-- Definition --\r\nBetween the payment entitlements and the area determined.\r\n-- Description --\r\nWhere appropriate, the administrative checks shall include cross-checks:between the payment entitlements and the area determined in order to verify that the entitlements are accompanied by at least an equal number of eligible hectares \r\r\nas defined in Article 32(2) to (6) of Regulation (EC) No 1307/2013.",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "CrossCheckTypeValue/betweenThePaymentEntitlementsAndTheAreaDetermined",
+        "en" : "Between the payment entitlements and the area determined"
+      }
+    }, {
+      "iri" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#CrossCheckTypeValue/toVerifyDeclaredEntitlementsOnDeclaredAgriculturalParcels",
+      "baseIri" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code",
+      "annotations" : {
+        "inScheme" : [ {
+          "identifier" : "inScheme",
+          "language" : "undefined",
+          "value" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#CrossCheckTypeValue",
+          "type" : "iri"
+        } ],
+        "definition" : [ {
+          "identifier" : "definition",
+          "language" : "en",
+          "value" : "-- Definition --\r\nVerify declared payment entitlements on declared agricultural parcels.\r\n-- Description --\r\nWhere appropriate, the administrative checks shall include cross-checks:o n declared payment entitlements and on declared agricultural parcels, respectively, in order to avoid multiple granting of the same aid or support in respect of \r\r\nthe same calendar or claim year and to prevent any undue accumulation of aid granted under area-related aid schemes listed in Annex I to Regulation (EU) No 1307/2013 and Annex VI to Council Regulation (EC) No 73/2009[17], and area-\r\r\nrelated support measures as defined in point (21) of the second subparagraph of Article 2 of Delegated Regulation (EU) No […] [DA IACS].",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "CrossCheckTypeValue/toVerifyDeclaredEntitlementsOnDeclaredAgriculturalParcels",
+        "en" : "Verify declared payment entitlements on declared agricultural parcels"
+      }
+    } ],
+    "attributes" : [ "external" ],
+    "id" : "10"
+  } ]
+}
