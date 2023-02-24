@@ -1,0 +1,258 @@
+[ {
+  "@id" : "_:genid1",
+  "http://schema.org/affiliation" : [ {
+    "@id" : "_:genid2"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#seeAlso" : [ {
+    "@id" : "http://orcid.org/0000-0003-4289-4922"
+  } ],
+  "http://xmlns.com/foaf/0.1/name" : [ {
+    "@value" : "Raul Palma"
+  } ]
+}, {
+  "@id" : "_:genid2",
+  "http://xmlns.com/foaf/0.1/name" : [ {
+    "@value" : "PSNC"
+  } ]
+}, {
+  "@id" : "_:genid3",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#minCardinality" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+    "@value" : "2"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-beneficiery#farmerDetailsForCollectiveImplementation"
+  } ]
+}, {
+  "@id" : "_:genid4",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#cardinality" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+    "@value" : "1"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-beneficiery#farmerQualification"
+  } ]
+}, {
+  "@id" : "_:genid5",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#cardinality" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+    "@value" : "1"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-beneficiery#farmerType"
+  } ]
+}, {
+  "@id" : "_:genid6",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#maxCardinality" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+    "@value" : "1"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-beneficiery#farmerDescription"
+  } ]
+}, {
+  "@id" : "_:genid7",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#maxCardinality" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+    "@value" : "10"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-beneficiery#farmerDetailsForCollectiveImplementation"
+  } ]
+}, {
+  "@id" : "_:genid8",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#maxCardinality" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+    "@value" : "1"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-beneficiery#farmerBirthDate"
+  } ]
+}, {
+  "@id" : "_:genid9",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2002/07/owl#oneOf" : [ {
+    "@list" : [ {
+      "@id" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-beneficiery/code#FarmerTypeValue/farmer"
+    }, {
+      "@id" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-beneficiery/code#FarmerTypeValue/farmerActive"
+    }, {
+      "@id" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-beneficiery/code#FarmerTypeValue/farmerActiveApplicant"
+    }, {
+      "@id" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-beneficiery/code#FarmerTypeValue/farmerActiveApplicantBeneficiery"
+    } ]
+  } ]
+}, {
+  "@id" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-beneficiery",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Ontology" ],
+  "http://purl.org/dc/terms/creator" : [ {
+    "@id" : "_:genid1"
+  } ],
+  "http://purl.org/dc/terms/description" : [ {
+    "@language" : "en",
+    "@value" : "Ontology of the system to record the identity of each beneficiary used in IACS, generated from the transformation of the corresponding JRC application schema"
+  } ],
+  "http://purl.org/dc/terms/rights" : [ {
+    "@language" : "en",
+    "@value" : "This ontology is distributed under Creative Commons Attribution 4.0 License - http://creativecommons.org/licenses/by/4.0"
+  } ],
+  "http://purl.org/dc/terms/source" : [ {
+    "@language" : "en",
+    "@value" : "JRC IACS application schema. https://doi.org/10.1016/j.landusepol.2016.05.023"
+  } ],
+  "http://purl.org/dc/terms/title" : [ {
+    "@language" : "en",
+    "@value" : "JRC IACS - System to Record the Identity of Each Beneficiary Ontology"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "System to record the identity of each beneficiary"
+  } ],
+  "http://www.w3.org/2002/07/owl#imports" : [ {
+    "@id" : "http://www.opengis.net/ont/geosparql"
+  }, {
+    "@id" : "https://raw.githubusercontent.com/rapw3k/cap-iacs/main/cap-iacs-base.ttl"
+  } ],
+  "http://www.w3.org/2002/07/owl#versionIRI" : [ {
+    "@id" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-beneficiery/3.0"
+  } ],
+  "http://www.w3.org/2002/07/owl#versionInfo" : [ {
+    "@value" : "3.0"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "-- Name --\r\nSystem to record the identity of each beneficiary\r\n\r\n-- Definition --\r\nPlaceholder package for the Application schema for System to record the identity of each beneficiary.\r\n\r\n-- Description --\r\nThe contents of an «ApplicationSchema» package exported as a GML Application Schema file."
+  } ]
+}, {
+  "@id" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-beneficiery#Farmer",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Farmer"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.opengis.net/ont/geosparql#Feature"
+  }, {
+    "@id" : "_:genid3"
+  }, {
+    "@id" : "_:genid4"
+  }, {
+    "@id" : "_:genid5"
+  }, {
+    "@id" : "_:genid6"
+  }, {
+    "@id" : "_:genid7"
+  }, {
+    "@id" : "_:genid8"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "-- Definition --\r\nFarmer.\r\n-- Description --\r\nFarmer is natural or legal person, or a group of natural or legal persons, regardless of the legal status granted to such group and its members by national law, whose holding is situated within the territorial scope of the Treaties, as defined in Article 52 TEU in conjunction with Articles 349 and 355 TFEU, and who exercises an agricultural activity. 1307/2013 4 (1)(a).\r\nNOTE. Main class of a single system to record the identity of each beneficiary of the support referred to in Article 67(2) who submits an aid application or a payment claim."
+  } ]
+}, {
+  "@id" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-beneficiery#FarmerTypeValue",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "List of farmer type values"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
+  } ],
+  "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
+    "@id" : "_:genid9"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "-- Definition --\r\nList of farmer type values.\r\n-- Description --\r\nList of possible farmer type values based on Actor model (Dynamic Model)."
+  } ]
+}, {
+  "@id" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-beneficiery#farmerBirthDate",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Birth date of farmer"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#date"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "-- Definition --\r\nBirth date of farmer.\r\n-- Description --\r\nThe birth date of a farmer. Required for young farmer scheme."
+  } ]
+}, {
+  "@id" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-beneficiery#farmerDescription",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Farmer address"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://xmlns.com/foaf/0.1/Agent"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "-- Definition --\r\nFarmer description.\r\n-- Description --\r\nDescription of responsible individual or organization (farmer).\r\nNOTE. role = pointOfContact."
+  } ]
+}, {
+  "@id" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-beneficiery#farmerDetailsForCollectiveImplementation",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#CollectiveImplementation"
+  } ]
+}, {
+  "@id" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-beneficiery#farmerDetailsForOnTheSpotChecks",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#OnTheSpotCheck"
+  } ]
+}, {
+  "@id" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-beneficiery#farmerQualification",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Farmer occupational skills and competence"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-base#ConformanceStatementValue"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "-- Definition --\r\nFarmer occupational skills and competence.\r\n-- Description --\r\nFarmer types created based on actor model.The occupational skills and competence  of a farmer. Required for young farmer scheme. Meet / do not meet requirements for competence of a farmer."
+  } ]
+}, {
+  "@id" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-beneficiery#farmerType",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Farmer type"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-beneficiery#FarmerTypeValue"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "-- Definition --\r\nFarmer type.\r\n-- Description --\r\nFarmer types created based on actor model."
+  } ]
+}, {
+  "@id" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-beneficiery/code#FarmerTypeValue/farmer",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ]
+}, {
+  "@id" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-beneficiery/code#FarmerTypeValue/farmerActive",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ]
+}, {
+  "@id" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-beneficiery/code#FarmerTypeValue/farmerActiveApplicant",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ]
+}, {
+  "@id" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-beneficiery/code#FarmerTypeValue/farmerActiveApplicantBeneficiery",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ]
+}, {
+  "@id" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#OnTheSpotCheck",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+} ]
