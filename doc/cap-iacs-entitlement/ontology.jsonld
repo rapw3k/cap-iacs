@@ -1,0 +1,326 @@
+[ {
+  "@id" : "_:genid1",
+  "http://schema.org/affiliation" : [ {
+    "@id" : "_:genid2"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#seeAlso" : [ {
+    "@id" : "http://orcid.org/0000-0003-4289-4922"
+  } ],
+  "http://xmlns.com/foaf/0.1/name" : [ {
+    "@value" : "Raul Palma"
+  } ]
+}, {
+  "@id" : "_:genid10",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#maxCardinality" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+    "@value" : "1"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-entitlement#preReformStatus"
+  } ]
+}, {
+  "@id" : "_:genid11",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#maxCardinality" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+    "@value" : "1"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-entitlement#regionalRestrictions"
+  } ]
+}, {
+  "@id" : "_:genid2",
+  "http://xmlns.com/foaf/0.1/name" : [ {
+    "@value" : "PSNC"
+  } ]
+}, {
+  "@id" : "_:genid3",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#cardinality" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+    "@value" : "1"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-entitlement#areaValue"
+  } ]
+}, {
+  "@id" : "_:genid4",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#cardinality" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+    "@value" : "1"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-entitlement#obtainOrigin"
+  } ]
+}, {
+  "@id" : "_:genid5",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#cardinality" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+    "@value" : "1"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-entitlement#reserveOrigin"
+  } ]
+}, {
+  "@id" : "_:genid6",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#maxCardinality" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+    "@value" : "1"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-entitlement#entitlementConfirmationDetails"
+  } ]
+}, {
+  "@id" : "_:genid7",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#cardinality" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+    "@value" : "1"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-entitlement#dateEstablishment"
+  } ]
+}, {
+  "@id" : "_:genid8",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#cardinality" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+    "@value" : "1"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-entitlement#entitlementId"
+  } ]
+}, {
+  "@id" : "_:genid9",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#maxCardinality" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+    "@value" : "1"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-entitlement#dateLastActivation"
+  } ]
+}, {
+  "@id" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-entitlement",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Ontology" ],
+  "http://purl.org/dc/terms/creator" : [ {
+    "@id" : "_:genid1"
+  } ],
+  "http://purl.org/dc/terms/description" : [ {
+    "@language" : "en",
+    "@value" : "Ontology of the system for the identification and registration of payment entitlements used in IACS, generated from the transformation of the corresponding JRC application schema"
+  } ],
+  "http://purl.org/dc/terms/rights" : [ {
+    "@language" : "en",
+    "@value" : "This ontology is distributed under Creative Commons Attribution 4.0 License - http://creativecommons.org/licenses/by/4.0"
+  } ],
+  "http://purl.org/dc/terms/source" : [ {
+    "@language" : "en",
+    "@value" : "JRC IACS application schema. https://doi.org/10.1016/j.landusepol.2016.05.023"
+  } ],
+  "http://purl.org/dc/terms/title" : [ {
+    "@language" : "en",
+    "@value" : "JRC IACS - System for the Identification and Registration of Payment Entitlements Ontology"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "System for the identification and registration of payment entitlements"
+  } ],
+  "http://www.w3.org/2002/07/owl#imports" : [ {
+    "@id" : "http://www.opengis.net/ont/geosparql"
+  }, {
+    "@id" : "https://raw.githubusercontent.com/rapw3k/cap-iacs/main/cap-iacs-aid.ttl"
+  } ],
+  "http://www.w3.org/2002/07/owl#versionIRI" : [ {
+    "@id" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-entitlement/3.0"
+  } ],
+  "http://www.w3.org/2002/07/owl#versionInfo" : [ {
+    "@value" : "3.0"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "-- Name --\r\nSystem for the identification and registration of payment entitlements\r\n\r\n-- Definition --\r\nThis package is a placeholder for the Application schema for System for the identification and registration of payment entitlements.\r\n\r\n-- Description --\r\nThe contents of an «ApplicationSchema» package exported as a GML Application Schema file. The system for the identification and registration of payment entitlements shall allow for verification of the entitlements and for cross-checks with the aid applications and the identification system for agricultural parcels. Also shall allow direct and immediate consultation, through the competent authority of the Member State, of the data relating to at least the previous four consecutive calendar years."
+  } ]
+}, {
+  "@id" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-entitlement#Entitlement",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Entitlement"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.opengis.net/ont/geosparql#Feature"
+  }, {
+    "@id" : "_:genid3"
+  }, {
+    "@id" : "_:genid4"
+  }, {
+    "@id" : "_:genid5"
+  }, {
+    "@id" : "_:genid6"
+  }, {
+    "@id" : "_:genid7"
+  }, {
+    "@id" : "_:genid8"
+  }, {
+    "@id" : "_:genid9"
+  }, {
+    "@id" : "_:genid10"
+  }, {
+    "@id" : "_:genid11"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "-- Definition --\r\nPayment entitlements SPS only.\r\n-- Description --\r\nPlaceholder of payment entitlements for MS who use SPS systems only.\r\nNOTE. The system for the identification and registration of payment entitlements provided for in Article 71 of Regulation (EU) 1306/2013 shall be an electronic register at Member State level and shall, in particular with regard to the cross-checks provided for in paragraph 1 of that Article, ensure effective traceability."
+  } ]
+}, {
+  "@id" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-entitlement#OriginEntitlementObtainValue",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Obtain origin values"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "-- Definition --\r\nEntitlement obtain origin values.\r\n-- Description --\r\nList of possible entitlement obtain sources."
+  } ]
+}, {
+  "@id" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-entitlement#OriginEntitlementReserveValue",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Reserve origin values"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "-- Definition --\r\nEntitlement reserve origin values.\r\n-- Description --\r\nList of possible entitlement reserve sources."
+  } ]
+}, {
+  "@id" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-entitlement#areaValue",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Annual area value"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://qudt.org/schema/qudt/QuantityValue"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "-- Definition --\r\nAnnual area value.\r\n-- Description --\r\nItem description.\r\nNOTE 1. Item note.\r\nEXAMPLE 1. Item example."
+  } ]
+}, {
+  "@id" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-entitlement#dateEstablishment",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Date of entitlement establishment"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#date"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "-- Definition --\r\nDate of entitlement establishment.\r\n-- Description --\r\nDate when entitlement was legally established."
+  } ]
+}, {
+  "@id" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-entitlement#dateLastActivation",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Date of last activation of entitlement"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#date"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "-- Definition --\r\nDate of last activation of entitlement.\r\n-- Description --\r\nItem description.\r\nNOTE 1. Item note.\r\nEXAMPLE 1. Item example."
+  } ]
+}, {
+  "@id" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-entitlement#entitlementConfirmationDetails",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#Application"
+  } ]
+}, {
+  "@id" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-entitlement#entitlementId",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Unique thematic ID of a payment entitlement"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "-- Definition --\r\nUnique thematic ID of a payment entitlement.\r\n-- Description --\r\nThematic identifier at national level, generally the full national code of the payment entitlement."
+  } ]
+}, {
+  "@id" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-entitlement#obtainOrigin",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Entitlement obtain source"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-entitlement#OriginEntitlementObtainValue"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "-- Definition --\r\nEntitlement obtain source.\r\n-- Description --\r\nItem description.\r\nNOTE 1. Item note.\r\nEXAMPLE 1. Item example."
+  } ]
+}, {
+  "@id" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-entitlement#preReformStatus",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Pre-reform status"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "-- Definition --\r\nPre-reform status.\r\n-- Description --\r\nItem description.\r\nNOTE 1. Item note.\r\nEXAMPLE 1. Item example."
+  } ]
+}, {
+  "@id" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-entitlement#regionalRestrictions",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Regional restrictions"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "-- Definition --\r\nRegional restrictions.\r\n-- Description --\r\nItem description.\r\nNOTE 1. Item note.\r\nEXAMPLE 1. Item example."
+  } ]
+}, {
+  "@id" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-entitlement#reserveOrigin",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Entitlement reserve source"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-entitlement#OriginEntitlementReserveValue"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "-- Definition --\r\nEntitlement reserve source.\r\n-- Description --\r\nItem description.\r\nNOTE 1. Item note.\r\nEXAMPLE 1. Item example."
+  } ]
+} ]

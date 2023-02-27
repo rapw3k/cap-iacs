@@ -1,0 +1,1442 @@
+[ {
+  "@id" : "_:genid1",
+  "http://schema.org/affiliation" : [ {
+    "@id" : "_:genid2"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#seeAlso" : [ {
+    "@id" : "http://orcid.org/0000-0003-4289-4922"
+  } ],
+  "http://xmlns.com/foaf/0.1/name" : [ {
+    "@value" : "Raul Palma"
+  } ]
+}, {
+  "@id" : "_:genid10",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#maxCardinality" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+    "@value" : "1"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#longTermCommitmentsConformance"
+  } ]
+}, {
+  "@id" : "_:genid11",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#cardinality" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+    "@value" : "1"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#conformanceStatement"
+  } ]
+}, {
+  "@id" : "_:genid12",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#cardinality" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+    "@value" : "1"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#crossCheckType"
+  } ]
+}, {
+  "@id" : "_:genid13",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#cardinality" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+    "@value" : "1"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#detailsOfCrossChecksForAdministrativeCheck"
+  } ]
+}, {
+  "@id" : "_:genid14",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#cardinality" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+    "@value" : "1"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#determinedArea"
+  } ]
+}, {
+  "@id" : "_:genid15",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#cardinality" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+    "@value" : "1"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#determinedEntitlementArea"
+  } ]
+}, {
+  "@id" : "_:genid16",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#minCardinality" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+    "@value" : "1"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#surveyDetailsForMeasurements"
+  } ]
+}, {
+  "@id" : "_:genid17",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#cardinality" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+    "@value" : "1"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#geometry"
+  } ]
+}, {
+  "@id" : "_:genid18",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#cardinality" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+    "@value" : "1"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#inspectorsSurveyObjectType"
+  } ]
+}, {
+  "@id" : "_:genid19",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#cardinality" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+    "@value" : "1"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#measurementsWithinSurveyDetails"
+  } ]
+}, {
+  "@id" : "_:genid2",
+  "http://xmlns.com/foaf/0.1/name" : [ {
+    "@value" : "PSNC"
+  } ]
+}, {
+  "@id" : "_:genid20",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#cardinality" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+    "@value" : "1"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#surveyMethodType"
+  } ]
+}, {
+  "@id" : "_:genid21",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#maxCardinality" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+    "@value" : "1"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#observedPerimeter"
+  } ]
+}, {
+  "@id" : "_:genid22",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#cardinality" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+    "@value" : "1"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#inspectorsMeasurementId"
+  } ]
+}, {
+  "@id" : "_:genid23",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#maxCardinality" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+    "@value" : "1"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#estimatedAccuracy"
+  } ]
+}, {
+  "@id" : "_:genid24",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#cardinality" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+    "@value" : "1"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#conformanceStatement"
+  } ]
+}, {
+  "@id" : "_:genid25",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#cardinality" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+    "@value" : "1"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#controlReport"
+  } ]
+}, {
+  "@id" : "_:genid26",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#cardinality" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+    "@value" : "1"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#onTheSpotCheckDetailsForCrossCheck"
+  } ]
+}, {
+  "@id" : "_:genid27",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#minCardinality" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+    "@value" : "1"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#onTheSpotCheckDate"
+  } ]
+}, {
+  "@id" : "_:genid28",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#cardinality" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+    "@value" : "1"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#onTheSpotCheckAnnouncementDate"
+  } ]
+}, {
+  "@id" : "_:genid29",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#cardinality" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+    "@value" : "1"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#reportSent"
+  } ]
+}, {
+  "@id" : "_:genid3",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#minCardinality" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+    "@value" : "1"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#administrativeCheckDetailsForCrossCheck"
+  } ]
+}, {
+  "@id" : "_:genid30",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#minCardinality" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+    "@value" : "1"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#itemDetailsForOnTheSpotChecks"
+  } ]
+}, {
+  "@id" : "_:genid31",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#minCardinality" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+    "@value" : "1"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#sampleDetailsForOtscItem"
+  } ]
+}, {
+  "@id" : "_:genid32",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#cardinality" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+    "@value" : "1"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#detailsOfOtscItems"
+  } ]
+}, {
+  "@id" : "_:genid33",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#cardinality" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+    "@value" : "1"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#itemDetailsForAdministrativeCheck"
+  } ]
+}, {
+  "@id" : "_:genid34",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#maxCardinality" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+    "@value" : "1"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#otscItemDetailsForReconversion"
+  } ]
+}, {
+  "@id" : "_:genid35",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#cardinality" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+    "@value" : "1"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#subjectOfMultipleVisits"
+  } ]
+}, {
+  "@id" : "_:genid36",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#minCardinality" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+    "@value" : "1"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#otscItemDetailsWithinTheSample"
+  } ]
+}, {
+  "@id" : "_:genid37",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#minCardinality" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+    "@value" : "1"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#otscSampleDetailsforStratum"
+  } ]
+}, {
+  "@id" : "_:genid38",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#cardinality" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+    "@value" : "1"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#controlRateType"
+  } ]
+}, {
+  "@id" : "_:genid39",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#cardinality" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+    "@value" : "1"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#metadata"
+  } ]
+}, {
+  "@id" : "_:genid4",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#cardinality" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+    "@value" : "1"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#administrativeCheckDetailsForApplication"
+  } ]
+}, {
+  "@id" : "_:genid40",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#cardinality" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+    "@value" : "1"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#otscReport"
+  } ]
+}, {
+  "@id" : "_:genid41",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#cardinality" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+    "@value" : "1"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#otscSamplingPlan"
+  } ]
+}, {
+  "@id" : "_:genid42",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#cardinality" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+    "@value" : "1"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#minimumSampleSize"
+  } ]
+}, {
+  "@id" : "_:genid43",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#maxCardinality" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+    "@value" : "1"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#maximumRiskBasedSampleSize"
+  } ]
+}, {
+  "@id" : "_:genid44",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#maxCardinality" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+    "@value" : "1"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#minimumRiskBasedSampleSize"
+  } ]
+}, {
+  "@id" : "_:genid45",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#minCardinality" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+    "@value" : "1"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#detailsOfApplications"
+  } ]
+}, {
+  "@id" : "_:genid46",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#minCardinality" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+    "@value" : "1"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#samplingStrategyType"
+  } ]
+}, {
+  "@id" : "_:genid47",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#cardinality" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+    "@value" : "1"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#metadata"
+  } ]
+}, {
+  "@id" : "_:genid48",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#maxCardinality" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+    "@value" : "1"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#samplingStrategyCitation"
+  } ]
+}, {
+  "@id" : "_:genid49",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#maxCardinality" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+    "@value" : "2"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#samplingStrategyType"
+  } ]
+}, {
+  "@id" : "_:genid5",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#cardinality" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+    "@value" : "1"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#determinedArea"
+  } ]
+}, {
+  "@id" : "_:genid50",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#cardinality" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+    "@value" : "1"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#samplingStratumId"
+  } ]
+}, {
+  "@id" : "_:genid51",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#maxCardinality" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+    "@value" : "1"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#samplingStrategyDescription"
+  } ]
+}, {
+  "@id" : "_:genid52",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#maxCardinality" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+    "@value" : "1"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#samplingStratumName"
+  } ]
+}, {
+  "@id" : "_:genid53",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#maxCardinality" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+    "@value" : "2"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#suplementaryControlRate"
+  } ]
+}, {
+  "@id" : "_:genid6",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#cardinality" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+    "@value" : "1"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#eligibilityCriteriaFulfilled"
+  } ]
+}, {
+  "@id" : "_:genid7",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#cardinality" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+    "@value" : "1"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#noDoubleFinancing"
+  } ]
+}, {
+  "@id" : "_:genid8",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#cardinality" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+    "@value" : "1"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#paymentClaimCompletnessStatement"
+  } ]
+}, {
+  "@id" : "_:genid9",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#maxCardinality" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+    "@value" : "1"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#animalSchemeMeasureConformance"
+  } ]
+}, {
+  "@id" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#Application",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#ReconvertingObligation",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Ontology" ],
+  "http://purl.org/dc/terms/creator" : [ {
+    "@id" : "_:genid1"
+  } ],
+  "http://purl.org/dc/terms/description" : [ {
+    "@language" : "en",
+    "@value" : "Ontology of the integrated control system used in IACS, generated from the transformation of the corresponding JRC application schema"
+  } ],
+  "http://purl.org/dc/terms/rights" : [ {
+    "@language" : "en",
+    "@value" : "This ontology is distributed under Creative Commons Attribution 4.0 License - http://creativecommons.org/licenses/by/4.0"
+  } ],
+  "http://purl.org/dc/terms/source" : [ {
+    "@language" : "en",
+    "@value" : "JRC IACS application schema. https://doi.org/10.1016/j.landusepol.2016.05.023"
+  } ],
+  "http://purl.org/dc/terms/title" : [ {
+    "@language" : "en",
+    "@value" : "JRC IACS - Integrated Control System Ontology"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Integrated control system"
+  } ],
+  "http://www.w3.org/2002/07/owl#imports" : [ {
+    "@id" : "http://www.opengis.net/ont/geosparql"
+  }, {
+    "@id" : "https://raw.githubusercontent.com/rapw3k/cap-iacs/main/cap-iacs-base.ttl"
+  } ],
+  "http://www.w3.org/2002/07/owl#versionIRI" : [ {
+    "@id" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/3.0"
+  } ],
+  "http://www.w3.org/2002/07/owl#versionInfo" : [ {
+    "@value" : "3.0"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "-- Name --\r\nIntegrated control system\r\n\r\n-- Definition --\r\nThis package is a placeholder for the Application schema of Integrated control system.\r\n\r\n-- Description --\r\nThe contents of an «ApplicationSchema» package exported as a GML Application Schema file."
+  } ]
+}, {
+  "@id" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#AdministrativeCheck",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "AdministrativeCheck"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.opengis.net/ont/geosparql#Feature"
+  }, {
+    "@id" : "_:genid3"
+  }, {
+    "@id" : "_:genid4"
+  }, {
+    "@id" : "_:genid5"
+  }, {
+    "@id" : "_:genid6"
+  }, {
+    "@id" : "_:genid7"
+  }, {
+    "@id" : "_:genid8"
+  }, {
+    "@id" : "_:genid9"
+  }, {
+    "@id" : "_:genid10"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "-- Definition --\r\nAdministrative check.\r\n-- Description --\r\nAdministrative check of application. All applications are subject to administrative check.\r\n\r\n\r\nExamples of administrative checks:\r\n\t- Advisory services, farm management and farm relief services [Art.(55) of R 8069/2014]\r\n\t- Quality schemes for agricultural products, and foodstuffs [Art.(56) of R 8069/2014]\r\n\t- Farm and business development [Art.(57) of R 8069/2014]\r\n\r\nNOTE\r\nTo simplify the cross-compliance on-the-spot checks and to make better use of existing control capacities, it is possible, when the effectiveness of the checks is at least equal to that achieved when the on-the-spot checks are to be carried out, to replace checks at farm level by administrative checks [Preamble (750) R 809/2014]."
+  } ]
+}, {
+  "@id" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#ControlRateGroupAnimalAidSchemaValue",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "List of control rate groups for animal aid schemas"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "Control Rate Group Animal Aid Scheme Value\r\n\r\nList of control rate groups for animal aid schemas.\r\n\r\nNOTE\r\nCurrently placeholder only."
+  } ]
+}, {
+  "@id" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#ControlRateGroupRuralDevelopmentMeasureValue",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "List of control rate groups for rural development measures"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "Control Rate Group Rural Development Measure Value\r\n\r\nList of control rate groups for rural development measures.\r\n\r\nNOTE. Currently placeholder only."
+  } ]
+}, {
+  "@id" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#ControlRateTypeValue",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "List of control rate groups for greening"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "Control rate type value\r\n\r\nList of applicable control rate values as prescribed by Art. 30, 31, 36(2) and 36(6) of R 809/2014.\r\n\r\nNOTE\r\nThis code list currently does not contain values for rural development measures (Art. 32) and animal aid schemes (Art. 33 of R 809/2014)."
+  } ]
+}, {
+  "@id" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#CrossCheck",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Cross-checks"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.opengis.net/ont/geosparql#Feature"
+  }, {
+    "@id" : "_:genid11"
+  }, {
+    "@id" : "_:genid12"
+  }, {
+    "@id" : "_:genid13"
+  }, {
+    "@id" : "_:genid14"
+  }, {
+    "@id" : "_:genid15"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "-- Definition --\r\nCross-checks.\r\n-- Description --\r\nWhere appropriate, the administrative checks shall include cross-checks."
+  } ]
+}, {
+  "@id" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#CrossCheckTypeValue",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "List of on the cross-check types"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "-- Definition --\r\nList of cross-check types.\r\n-- Description --\r\nList of cross-check types."
+  } ]
+}, {
+  "@id" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#InspectorsSurvey",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Surveys of the inspectors"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.opengis.net/ont/geosparql#Feature"
+  }, {
+    "@id" : "_:genid16"
+  }, {
+    "@id" : "_:genid17"
+  }, {
+    "@id" : "_:genid18"
+  }, {
+    "@id" : "_:genid19"
+  }, {
+    "@id" : "_:genid20"
+  }, {
+    "@id" : "_:genid21"
+  }, {
+    "@id" : "_:genid22"
+  }, {
+    "@id" : "_:genid23"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "Inspectors Survey\r\n\r\nFeature type that stores the properties of inspectors' survey (observations and measurements.)"
+  } ]
+}, {
+  "@id" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#InspectorsSurveyObjectTypeValue",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "List of feature types"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "Inspectors survey type value\r\n\r\nList of possible real objects measured by an inspector.\r\n\r\nNOTE\r\nList may be extended or subtracted depending on how MS organizing on-the-spot check process."
+  } ]
+}, {
+  "@id" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#OnTheSpotCheck",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "On-the-spot check"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.opengis.net/ont/geosparql#Feature"
+  }, {
+    "@id" : "_:genid24"
+  }, {
+    "@id" : "_:genid25"
+  }, {
+    "@id" : "_:genid26"
+  }, {
+    "@id" : "_:genid27"
+  }, {
+    "@id" : "_:genid28"
+  }, {
+    "@id" : "_:genid29"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "On-the-spot check\r\n\r\nChecks organised by a MS/Region supplementing the systematic administrative checks [Art. 59(1) of R 1306/2013].\r\n\r\nNOTE 1\r\nMember States shall organise on-the-spot checks on approved operations using an appropriate sampling basis. Those checks shall, to the extent possible, be carried out before the final payment is made for an operation. \r\n\r\nNOTE 2\r\nThe inspectors undertaking the on-the-spot check shall not have been involved in administrative checks of the same operation.\r\n\r\nNOTE 3\r\nThis feature type does not describe the on-the-spot check carried out by the Commission"
+  } ]
+}, {
+  "@id" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#OnTheSpotCheckTypeValue",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "List of on the spot check types"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "On-the-spot check type value\r\n\r\nList of on the spot check types. that describe the purpose of the control."
+  } ]
+}, {
+  "@id" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#OtscItem",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Sample"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.opengis.net/ont/geosparql#Feature"
+  }, {
+    "@id" : "_:genid30"
+  }, {
+    "@id" : "_:genid31"
+  }, {
+    "@id" : "_:genid32"
+  }, {
+    "@id" : "_:genid33"
+  }, {
+    "@id" : "_:genid34"
+  }, {
+    "@id" : "_:genid35"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "OTSC item\r\n\r\nApplication sampled for on-the-spot check of one or more support or payment scheme.\r\n\r\nNOTE\r\nApplications or applicants found not to be admissible or not eligible for payment at the time of submission or after administrative checks shall not form part of the control population [Art. 34(1) of R (EU) 809/2014]."
+  } ]
+}, {
+  "@id" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#OtscSample",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.opengis.net/ont/geosparql#Feature"
+  }, {
+    "@id" : "_:genid36"
+  }, {
+    "@id" : "_:genid37"
+  }, {
+    "@id" : "_:genid38"
+  }, {
+    "@id" : "_:genid39"
+  }, {
+    "@id" : "_:genid40"
+  }, {
+    "@id" : "_:genid41"
+  }, {
+    "@id" : "_:genid42"
+  }, {
+    "@id" : "_:genid43"
+  }, {
+    "@id" : "_:genid44"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "OTSC sample\r\n\r\nSample from the entire population of applicants drawn by the authority responsible for the on-the-spot checks [Art. 59 (2) of R 1306/2013].\r\n\r\nNOTE 1\r\nIn respect of certain rural development measures the on-the-spot check should cover also non-agricultural land. \r\n\r\nNOTE 2\r\nIn the interests of facilitating the implementation of the integrated system, it should be permitted to limit the actual measurement of the agricultural parcels to a random sample of 50 % of the agricultural parcels declared [Preamble 38 of R 809/2014]."
+  } ]
+}, {
+  "@id" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#RiskTypeValue",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "Risk type value\r\n\r\nPreamble (33) of R (EU) 809/2014 requires that the competent authority should establish the risk factors targeting the areas where the risk of errors is the highest.\r\n\r\nNOTE\r\nRisk criteria should be assessed and updated on an annual basis taking into account the relevance of each risk criterion, comparing the results of randomly and risk-based selected samples, the specific situation in the Member States and the nature of the non-compliance."
+  } ]
+}, {
+  "@id" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#SampleTypeValue",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "Sample Type value\r\n\r\nThe sample type property shall be attributed to each sampled item (application). One item can be sampled to one or more payment/support schemes. \r\n\r\nNOTE\r\nThe categories of sample type values have to support the traceability of the sampling cascade. This is the reason for distinguishing the initial and the top-up samples for BPS/SAPS."
+  } ]
+}, {
+  "@id" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#SamplingStrategyTypeValue",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "List of sampling strategy types"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "Sampling Strategy Type Value\r\n\r\nList of sampling strategy types.\r\n\r\nIn accordance with Preamble (34) of R 809/2014 sampling should comprise a random part in order to obtain a representative error rate and a risk based part for the following Payment/support schemes:\r\n\t- greening payment\r\n\t- animal aid schemes\r\n\t- rural development measure\r\n\r\nNOTE 1\r\nTo ensure a relevant and efficient risk analysis, the effectiveness of the risk analysis should be assessed and updated on an annual basis taking into account the relevance of each risk factor, comparing the results of randomly and risk-based selected samples and the specific situation [Preamble (68) and Art. 34(5) of R 809/2014].\r\n\r\nNOTE 2\r\nThe sampling method should be selected and documented by the competent authority of the MS/Region. The values of the code list can be extended.\r\n\r\nNOTE 3\r\nThe exemplary values of the code list in this application schema are taken from DSCG/2014/32 guideline and best statistical practices."
+  } ]
+}, {
+  "@id" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#SamplingStratum",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.opengis.net/ont/geosparql#Feature"
+  }, {
+    "@id" : "_:genid45"
+  }, {
+    "@id" : "_:genid46"
+  }, {
+    "@id" : "_:genid47"
+  }, {
+    "@id" : "_:genid48"
+  }, {
+    "@id" : "_:genid49"
+  }, {
+    "@id" : "_:genid50"
+  }, {
+    "@id" : "_:genid51"
+  }, {
+    "@id" : "_:genid52"
+  }, {
+    "@id" : "_:genid53"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "Sampling stratum\r\n\r\nThe control sample in respect of the on-the-spot checks of the area-related aid schemes should be made on the basis of a stratified sampling method in order to keep the administrative burden in proportion and the number of beneficiaries to be checked on-the-spot to a reasonable level [Preamble (30) of R  (EU) No 809/2014].\r\n\r\nNOTE 1\r\nSampling stratum can be applied both to random and risk based sampling.\r\n\r\nNOTE 2\r\nControl zones for CwRS can be regarded as strata (data clusters) based on geographic location. Such zones can be selected randomly or based on risk analysis.\r\n\r\nNOTE 3\r\nA sample may consist of one (unique) or more stratum."
+  } ]
+}, {
+  "@id" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#SurveyMethodValue",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "List of survey types"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "Survey method value\r\n\r\nList of survey method types in sense of Art. 74(3) of R 1306/2013."
+  } ]
+}, {
+  "@id" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#administrativeCheckDetailsForApplication",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#Application"
+  } ]
+}, {
+  "@id" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#administrativeCheckDetailsForCrossCheck",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#CrossCheck"
+  } ]
+}, {
+  "@id" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#animalSchemeMeasureConformance",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Evidence received from other services, bodies or organisations to verify the compliance with the eligibility commitments"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-base#ConformanceStatementValue"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "-- Definition --\r\nEvidence received from other services, bodies or organisations to verify the compliance with the eligibility commitments.\r\n-- Description --\r\nIn respect of animal aid schemes and animal-related support measures, Member States may, where appropriate, make use of evidence received from other services, bodies or organisations to verify the compliance with the eligibility criteria, commitments and other obligations, provided that the service, body or organisation in question is operating to a standard sufficient to control such compliance.\r\nNOTE. If conformanceStatementAnimalSchemeMeasure = 1, then nonStructuredEvidenceDocument<>Null and or nonStructuredEvidenceCitation<>Null."
+  } ]
+}, {
+  "@id" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#conformanceStatement",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "On the spot check conformance statement"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-base#ConformanceStatementValue"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "Conformance statement\r\n\r\nVerdict based on the outcome of the on-the-spot check whether the rules, eligibility criteria, commitments and other obligations relating to the conditions for the granting of support have been met.\r\n\r\nOn-the-spot checks shall verify the accuracy of the data declared by the beneficiary against underlying documents. This includes a verification that the payment claims submitted by the beneficiary are supported by accounting or other documents, including, where necessary, a check on the accuracy of the data in the payment claim on the basis of data or commercial documents held by third parties. On-the-spot checks shall verify that the use or intended use of the operation is consistent with the use described in the application for support and for which the support was granted. Except in exceptional circumstances, duly recorded and explained by the competent authorities, on-the-spot checks shall include a visit to the place where the operation is implemented or, if the operation is intangible, to the operation promoter. \r\n\t\r\nEXAMPLE.\r\nAid application or payment claim shall be rejected if the beneficiary or his representative prevents an on-the-spot check from being carried out, except in cases of force majeure or in exceptional circumstances. In this case (if it is not force majeure or exceptional circumstance)"
+  } ]
+}, {
+  "@id" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#controlRateType",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#ControlRateTypeValue"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "Control rate type\r\n\r\nControl rate types as prescribed by Art. 30, 31, 36(2) and 36(6) of R 809/2014."
+  } ]
+}, {
+  "@id" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#controlReport",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Control report document"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-base#SupplementaryDocument"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "Control report\r\n\r\nReport mandated by Art. 59(3) of R 1306/2013.\r\n\r\nArt. 41(1) of R 809/2014 regulates the content of the report for the area based payments:\r\n\t- (a) aid schemes or support measures, the aid applications or payment claims checked;\r\n\t- (b) the persons present;\r\n\t- (c) the agricultural parcels checked, the agricultural parcels measured including, where applicable, the result of the measurements per measured agricultural parcel and the measuring methods used;\r\n\t- (d) where applicable, the results of the measurement of non-agricultural land for which support under rural development measures is being claimed and the measuring methods used;\r\n\t- (e) whether notice of the check was given to the beneficiary and, if so, the period of prior notice;\r\n\t- (f) indications of any specific control measures to be carried out in the context of individual aid schemes or support schemes;\r\n\t- (g) indication of any further control measures carried out;\r\n\t- (h) indication of any non-compliance found that could require cross-notification in view of other aid schemes, support measures and/or cross-compliance;\r\n\t- (i) indication of any non-compliance found that could require follow-up during the following years.\r\n\r\nArt.53(1) of R (EU) 809/2014 regulates the content of the report for livestock OTSC:\r\n\t- (a) the measures and applications or payment claims checked;\r\n\t- (b) the persons present;\r\n\t- (c) whether notice was given to the beneficiary of the visit and, if so, the period of prior notice;\r\n\t- (d) the results of the checks and, where applicable, any particular observations;\r\n\t- (e) any further control measures to be carried out [EN 31.7.2014 Official Journal of the European Union L 227/111].\r\n\r\nNOTE\r\nWhen OTSC is carried out by means of remote sensing Member States are allowed to provide the report only where the check reveals non-compliance [Preamble (41) of R 809/2014] .\r\n\r\nIssue\r\nHow this provision complies with Art. 59(3) of R 1306/2013?"
+  } ]
+}, {
+  "@id" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#crossCheckType",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Cross-check type"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#CrossCheckTypeValue"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "-- Definition --\r\nCross-check type.\r\n-- Description --\r\nCross-check type."
+  } ]
+}, {
+  "@id" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#detailsOfApplications",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#Application"
+  } ]
+}, {
+  "@id" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#detailsOfCrossCheckForOnTheSpotChecks",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#OnTheSpotCheck"
+  } ]
+}, {
+  "@id" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#detailsOfCrossChecksForAdministrativeCheck",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#AdministrativeCheck"
+  } ]
+}, {
+  "@id" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#detailsOfOtscItems",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#Application"
+  } ]
+}, {
+  "@id" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#determinedArea",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Final area determined after all administrative checks"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://qudt.org/schema/qudt/QuantityValue"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "-- Definition --\r\nFinal area determined after all administrative checks.\r\n-- Description --\r\nIf AdministrativeCheck.determinedArea<>Application.declaredArea Then\r\nAdministrativeCheck.determinedArea = AdministrativeCheck.determinedArea Else\r\nAdministrativeCheck.determinedArea = Application.declaredArea\r\nEndIf"
+  } ]
+}, {
+  "@id" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#determinedEntitlementArea",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Entitlements determined"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://qudt.org/schema/qudt/QuantityValue"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "-- Definition --\r\nEntitlement area determined.\r\n-- Description --\r\nAlphanumerical value. Mandatory for SPS only. Subject for enabling of entitlements (Area) on all area declared."
+  } ]
+}, {
+  "@id" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#eligibilityCriteriaFulfilled",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Final entitlement area determined after all administrative checks"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-base#ConformanceStatementValue"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "-- Definition --\r\nFinal entitlement area determined after all administrative checks.\r\n-- Description --\r\nIf AdministrativeCheck.determinedEntitlementArea<>Application.declaredEntitlementArea Then\r\nAdministrativeCheck.determinedEntitlementArea = AdministrativeCheck.determinedEntitlementArea Else\r\nAdministrativeCheck.determinedEntitlementArea = Application.declaredEntitlementArea\r\nEndIf\r\n\r\nNOTE. Mandatory for SPS only. Subject for enabling of entitlements (Area) on all area declared (declaredEntitlementArea <=declaredArea)."
+  } ]
+}, {
+  "@id" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#estimatedAccuracy",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Estimated absolute positional accuracy "
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#double"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "Estimated Positional Accuracy\r\n\r\nEstimated absolute positional accuracy of the object measured in the used coordinate reference system. Absolute positional accuracy is the mean value of the positional uncertainties for a set of positions, where the positional uncertainties are the distance between a measured position and what is considered as the corresponding true position. This mean value may come from quality measures on a homogeneous population of objects measured or from an estimation based on the knowledge of the production processes and of their accuracy."
+  } ]
+}, {
+  "@id" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#geometry",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Geometry of survey and or measurement"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.opengis.net/ont/geosparql#Geometry"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "Geometry\r\n\r\nGeometry of survey and or measurement. It is a representation by coordinates of the geographical dimension/position of the farmer's survey and or measurement (within survey)."
+  } ]
+}, {
+  "@id" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#inspectorsMeasurementId",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Unique thematic ID of inspector's survey"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "Inspectors Measurement ID\r\n\r\nUnique thematic ID of inspectors' measurement within a survey. It is a thematic identifier at national level, generally the full national code of the inspector's measurement within a survey.\r\n\r\nNOTE\r\nObject (real world phenomena) description. It may be the code of object measured."
+  } ]
+}, {
+  "@id" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#inspectorsSurveyObjectType",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Feature type controlled"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#InspectorsSurveyObjectTypeValue"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "Inspectors Survey Object Type Value\r\n\r\nTypes of real world objects observed/measured by inspector."
+  } ]
+}, {
+  "@id" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#itemDetailsForAdministrativeCheck",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#AdministrativeCheck"
+  } ]
+}, {
+  "@id" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#itemDetailsForOnTheSpotChecks",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#OnTheSpotCheck"
+  } ]
+}, {
+  "@id" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#longTermCommitmentsConformance",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "There is compliance with long-term commitments, where appropriate"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-base#ConformanceStatementValue"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "-- Definition --\r\nThere is compliance with long-term commitments, where appropriate.\r\n-- Description --\r\nThe administrative checks referred to in Article 74 of Regulation (EU) No 1306/2013, including cross-checks, shall permit the detection of non-compliances, in particular the automated detection using computerised means. The checks shall cover all elements that are possible and appropriate to control by means of administrative checks. They shall ensure that: there is compliance with long-term commitments, where appropriate."
+  } ]
+}, {
+  "@id" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#maximumRiskBasedSampleSize",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#integer"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "Maximum risk based sample size\r\n\r\nTheoretical maximum population of the sample size selected on risk basis.\r\n\r\nNOTE 1\r\nThis property has to be recorded for green payments only. The risk based population should stay between the indicated minimum and maximum.\r\n\r\nNOTE 2\r\nThe maximum population of the risk based size of a sample has to be calculated as product of the control rate and the associated risk based part.\r\n\r\nEXAMPLE:\r\nFor green payments the maximum risk based part is 80 % out of the 5% control population; i.e. 4% all together."
+  } ]
+}, {
+  "@id" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#measurementsWithinSurveyDetails",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#InspectorsSurvey"
+  } ]
+}, {
+  "@id" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#metadata",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-base#FeatureLevelMetadata"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "Metadata\r\n\r\nFeature level metadata of the sample.\r\n\r\nNOTE 1\r\nThe content of feature level metadata is specified in the Base types application schema.\r\n\r\nNOTE 2\r\nPartial selection of the control sample is possible before the application periods ends. For traceability of such selection, the life cycle information has to be updated at each partial selection.\r\n\r\nUpdate: FeatureLevelMetadata.beginLifespanVersion AND FeatureLevelMetadata.endLifespanVersion"
+  } ]
+}, {
+  "@id" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#minimumRiskBasedSampleSize",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#integer"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "Minimum risk based sample size\r\n\r\nTheoretical minimum population of the sample size selected on risk basis.\r\n\r\nNOTE 1\r\nThis property has to be recorded for green payments only. The risk based population should stay between the indicated minimum and maximum.\r\n\r\nNOTE 2\r\nThe minimum population of the risk based size of a sample has to be calculated as product of the control rate and the associated risk based part.\r\n\r\nEXAMPLE:\r\nFor green payments the minimum risk based part is 75 % out of the 5% control population; i.e. 3,75% all together."
+  } ]
+}, {
+  "@id" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#minimumSampleSize",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#integer"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "Minimum sample size\r\n\r\nPopulation belonging to the sample selected according to the control rate.\r\n\r\nNOTE\r\nWhile the control rate is given in%, the minimum sample size indicates the minimal number of items in the sample. In case of systematic sampling the correctness of the minimum sample size has to be verified at the final deadline for applications."
+  } ]
+}, {
+  "@id" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#noDoubleFinancing",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "There is no double financing through other Union schemes"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-base#ConformanceStatementValue"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "-- Definition --\r\nThere is no double financing through other Union schemes.\r\n-- Description --\r\nThe administrative checks referred to in Article 74 of Regulation (EU) No 1306/2013, including cross-checks, shall permit the detection of non-compliances, in particular the automated detection using computerised means. The checks shall cover all elements that are possible and appropriate to control by means of administrative checks. They shall ensure that: there is no double financing through other Union schemes."
+  } ]
+}, {
+  "@id" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#nonStructuredEvidenceCitation",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Non-structured evidence - citation"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-base#SupplementaryDocumentCitation"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "-- Definition --\r\nAny citation that supports the administrative check.\r\n-- Description --\r\nIn respect of animal aid schemes and animal-related support measures, Member States may, where appropriate, make use of evidence received from other services, bodies or organisations to verify the compliance with the eligibility criteria, commitments and other obligations, provided that the service, body or organisation in question is operating to a standard sufficient to control such compliance.\r\nNOTE. If the aid application or payment claim is complete and submitted within the relevant time-limit and, where applicable, the supporting documents (that prove eligibility) must be submitted."
+  } ]
+}, {
+  "@id" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#nonStructuredEvidenceDocument",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Non-structured evidence - document"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-base#SupplementaryDocument"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "-- Definition --\r\nAny document that supports the administrative check.\r\n-- Description --\r\nIn respect of animal aid schemes and animal-related support measures, Member States may, where appropriate, make use of evidence received from other services, bodies or organisations to verify the compliance with the eligibility criteria, commitments and other obligations, provided that the service, body or organisation in question is operating to a standard sufficient to control such compliance.\r\nNOTE. If the aid application or payment claim is complete and submitted within the relevant time-limit and, where applicable, the supporting documents (that prove eligibility) must be submitted."
+  } ]
+}, {
+  "@id" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#observedPerimeter",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Perimeter observed after on-the-spot check"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://qudt.org/schema/qudt/QuantityValue"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "Observed perimeter\r\n\r\nPerimeter observed as results from the on-the-spot check measurement.\r\n\r\nNOTE\r\nArea perimeter calculated based on the coordinates of the boundary points. Polygon (GM_Surface) perimeter (may be used for tolerance calculation)."
+  } ]
+}, {
+  "@id" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#onTheSpotCheckAnnouncementDate",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "On-the-spot check announcement date"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#dateTime"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "On-the-spot check announcement date.\r\n\r\nDate of when on-the-spot check was announced.\r\n\r\nNOTE 1\r\nImportant timing: not more than 14 days (area related support schemes) and 48 hours for (animal-aid) [Art. 25 of R 809/2014].\r\n\r\nNOTE 2\r\nWhere the competent authority has [...] given notice to the beneficiary of its intention to carry out an on-the-spot check amendments in applications shall not be authorised [Art. 15(3) of R 809/2014]."
+  } ]
+}, {
+  "@id" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#onTheSpotCheckDate",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "On-the-spot check date"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#dateTime"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "On-the-spot check date\r\n\r\nDate of when on-the-spot check was performed.\r\n\r\nNOTE 1\r\nAccording to Art. 59(4) of R 1306/2013 and Art. 26(1) of R 809/2014 when appropriate agricultural aid and rural development support shall be carried out at the same time.\r\n\r\nNOTE 2\r\nOn-the-spot checks should be carried out in the calendar year in which the relevant aid applications and payment claims have been submitted [Preamble (71) of R 809/2014].\r\n\r\nNOTE 3\r\nWhere certain eligibility criteria, commitments and other obligations can only be checked during a specific time period, the on-the-spot checks may require additional visits at a later date [Art. 26(4) of R 809/2014]."
+  } ]
+}, {
+  "@id" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#onTheSpotCheckDetailsForCrossCheck",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#CrossCheck"
+  } ]
+}, {
+  "@id" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#onTheSpotCheckDetailsForInspectors",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#InspectorsSurvey"
+  } ]
+}, {
+  "@id" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#otscItemDetailsForReconversion",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#ReconvertingObligation"
+  } ]
+}, {
+  "@id" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#otscItemDetailsWithinTheSample",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#OtscItem"
+  } ]
+}, {
+  "@id" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#otscReport",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-base#SupplementaryDocument"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "OTSC report\r\n\r\nAccording to Art. 24(3) of R 809/2014 the results of the [...OTSC] shall be assessed to establish whether any problems encountered could in general entail a risk for other similar operations, beneficiaries or other bodies. The assessment shall also identify the causes of such situations, any further examination which may be required and necessary corrective and preventive actions. This analysis is an important input for risk analysis of the next campaign year."
+  } ]
+}, {
+  "@id" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#otscSampleDetailsforStratum",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#SamplingStratum"
+  } ]
+}, {
+  "@id" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#otscSamplingPlan",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-base#SupplementaryDocument"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "OTSC sampling plan\r\n\r\nArt.(72)(2) of R (EU) 1306/2013 requires the MS to draw up a sampling plan of agricultural holdings and/or beneficiaries for the purpose of OTSC."
+  } ]
+}, {
+  "@id" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#paymentClaimCompletnessStatement",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "The aid application or payment claim is complete"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-base#ConformanceStatementValue"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "-- Definition --\r\nThe aid application or payment claim is complete.\r\n-- Description --\r\nThe administrative checks referred to in Article 74 of Regulation (EU) No 1306/2013, including cross-checks, shall permit the detection of non-compliances, in particular the automated detection using computerised means. The checks shall cover all elements that are possible and appropriate to control by means of administrative checks. They shall ensure that: the aid application or payment claim is complete and submitted within the relevant time-limit and, where applicable, that supporting documents have been submitted and that they prove eligibility."
+  } ]
+}, {
+  "@id" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#reportSent",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Type of the on the spot check"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#dateTime"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "Report sent\r\n\r\nIrrespective of the kind of on-the-spot check carried out, the beneficiary should receive a copy of the report if any non-compliance is found [Recital (41) of R (EU) 809/2014]."
+  } ]
+}, {
+  "@id" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#riskType",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#RiskTypeValue"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "Risk type\r\n\r\nType of the risk established by the competent authority for which the application has been selected for on-the-spot check.\r\n\r\nThe competent authority should establish the risk factors targeting the areas where the risk of errors is the highest. To ensure relevant and efficient risk analysis, the effectiveness of the risk criteria should be assessed and updated on an annual basis taking into account the relevance of each risk criterion, comparing the results of randomly and risk-based selected samples, the specific situation in the Member States and the nature of the non-compliance (Preamble (30) of R (EU) No 809/2014)\r\n\r\nNOTE\r\nAccording to Art. 34(6) of Regulation (EU) No 809/2014 the competent authority shall keep records of the reasons for the selection of each beneficiary for an on-the-spot check. The inspector carrying out the on-the-spot check shall be informed accordingly prior to the commencement of the on-the-spot check."
+  } ]
+}, {
+  "@id" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#sampleDetailsForOtscItem",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#OtscSample"
+  } ]
+}, {
+  "@id" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#samplingStrategyCitation",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2002/07/owl#Class"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "Sampling strategy citation\r\n\r\nReference to the description of a well-established sampling strategy/method.\r\n\r\nNOTE\r\nCitation can be void, when detailed description of the method is documented as property of the stratum."
+  } ]
+}, {
+  "@id" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#samplingStrategyDescription",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "Sampling strategy description\r\n\r\nDetailed description of the sampling strategy.\r\n\r\nNOTE\r\nWhen the applied sampling strategy cannot be linked to any source that can be cited, the description has to be provided as property of the stratum."
+  } ]
+}, {
+  "@id" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#samplingStrategyType",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#SamplingStrategyTypeValue"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "Sampling Strategy Type\r\n\r\nRandom or risk based selection in sense of Preamble (68) and Art. 34(5) of R 809/2014.\r\n\r\nSome possible narrower values are listed in the SamplingStrategyTypeValue code list. Specifying narrower categories of risk based and random sampling is justified to provide input for the OTSC report and risk analysis in the next campaign year."
+  } ]
+}, {
+  "@id" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#samplingStratumId",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "Sampling stratum ID\r\n\r\nUnique thematic identifier (full national code) of the sampling stratum."
+  } ]
+}, {
+  "@id" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#samplingStratumName",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "Sampling Stratum Name\r\n\r\nName of the sampling stratum, which can be related to geographic position, control scheme, RS sensor, CwRS zone, etc.\r\n\r\nNOTE\r\nThe usage of this property is not mandatory."
+  } ]
+}, {
+  "@id" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#subjectOfMultipleVisits",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Sampling strategy type"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#boolean"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "Subject of Multiple Visits\r\n\r\nControlling some elements (especially certain types of EFA or agricultural practices) may require multiple visits; i.e. inspections at different periods of the year.\r\n\r\nNOTE\r\nMultiple visit can be also carried out with CwRS, using multitemporal images of the same scene"
+  } ]
+}, {
+  "@id" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#suplementaryControlRate",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#integer"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "Supplementary control rate\r\n\r\nThe control rates prescribed by Art. 30 and Art.31 of Regulation (EU) 809/2014 should be increased in two cases:\r\n\r\n1. In sense of Art. 31(3) of R (EU) 809/2014 when instances of EFA are not included in LPIS, the control rate for the following green payments have to be increased by 5 % for the following beneficiaries:\r\n\t- beneficiaries required to observe greening practices\r\n\t- beneficiaries observing greening by using national/regional certification schemes\r\n\t- beneficiaries participating in collective implementation\r\n\t- beneficiaries participating in regional implementation\r\n\r\n2. In sense of Art. 35 of R(EU) 809/2014  when the OTSC reveal any significant non-compliance in a (part of a) region or a specific aid scheme or support measure."
+  } ]
+}, {
+  "@id" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#surveyDetailsForMeasurements",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#InspectorsSurvey"
+  } ]
+}, {
+  "@id" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#surveyMethodType",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Type of survey"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#SurveyMethodValue"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "Survey method type\r\n\r\nList of survey types in sense of Art. 74(3) of R 1306/2013.\r\nMember States may use remote sensing and field measurements comprising Global Navigation Satellite System (GNSS) techniques as a means of carrying out on-the-spot checks on agricultural parcels."
+  } ]
+} ]

@@ -1,0 +1,58 @@
+{
+  "_comment" : "Created with OWL2VOWL (version 0.3.5), http://vowl.visualdataweb.org",
+  "header" : {
+    "languages" : [ "en", "undefined" ],
+    "baseIris" : [ "http://www.w3.org/1999/02/22-rdf-syntax-ns", "http://www.w3.org/2000/01/rdf-schema", "http://www.w3.org/2001/XMLSchema" ],
+    "title" : {
+      "en" : "JRC IACS - System for Identification and Registration of Animals Ontology"
+    },
+    "iri" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-animal",
+    "version" : "3.0",
+    "author" : [ "_:genid2147483648" ],
+    "description" : {
+      "en" : "Ontology of the system for identification and registration of animals used in IACS, generated from the transformation of the corresponding JRC application schema"
+    },
+    "labels" : {
+      "en" : "System for identification and registration of animals"
+    },
+    "other" : {
+      "creator" : [ {
+        "identifier" : "creator",
+        "language" : "undefined",
+        "value" : "_:genid2147483648",
+        "type" : "label"
+      } ],
+      "rights" : [ {
+        "identifier" : "rights",
+        "language" : "en",
+        "value" : "This ontology is distributed under Creative Commons Attribution 4.0 License - http://creativecommons.org/licenses/by/4.0",
+        "type" : "label"
+      } ],
+      "definition" : [ {
+        "identifier" : "definition",
+        "language" : "en",
+        "value" : "-- Name --\r\nSystem for identification and registration of animals\r\n\r\n-- Definition --\r\nThis package is a placeholder for the Application schema of System for identification and registration of animals.\r\n\r\n-- Description --\r\nThe contents of an «ApplicationSchema» package exported as a GML Application Schema file.",
+        "type" : "label"
+      } ],
+      "source" : [ {
+        "identifier" : "source",
+        "language" : "en",
+        "value" : "JRC IACS application schema. https://doi.org/10.1016/j.landusepol.2016.05.023",
+        "type" : "label"
+      } ],
+      "versionInfo" : [ {
+        "identifier" : "versionInfo",
+        "language" : "undefined",
+        "value" : "3.0",
+        "type" : "label"
+      } ],
+      "title" : [ {
+        "identifier" : "title",
+        "language" : "en",
+        "value" : "JRC IACS - System for Identification and Registration of Animals Ontology",
+        "type" : "label"
+      } ]
+    }
+  },
+  "namespace" : [ ]
+}

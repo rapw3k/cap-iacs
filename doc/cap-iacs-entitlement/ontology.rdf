@@ -1,0 +1,336 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-entitlement#"
+     xml:base="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-entitlement"
+     xmlns:dc="http://purl.org/dc/elements/1.1/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:foaf="http://xmlns.com/foaf/0.1/"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+     xmlns:terms="http://purl.org/dc/terms/"
+     xmlns:schema="http://schema.org/">
+    <owl:Ontology rdf:about="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-entitlement">
+        <owl:versionIRI rdf:resource="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-entitlement/3.0"/>
+        <owl:imports rdf:resource="http://www.opengis.net/ont/geosparql"/>
+        <owl:imports rdf:resource="https://raw.githubusercontent.com/rapw3k/cap-iacs/main/cap-iacs-aid.ttl"/>
+        <terms:creator rdf:nodeID="genid1"/>
+        <terms:description xml:lang="en">Ontology of the system for the identification and registration of payment entitlements used in IACS, generated from the transformation of the corresponding JRC application schema</terms:description>
+        <terms:rights xml:lang="en">This ontology is distributed under Creative Commons Attribution 4.0 License - http://creativecommons.org/licenses/by/4.0</terms:rights>
+        <terms:source xml:lang="en">JRC IACS application schema. https://doi.org/10.1016/j.landusepol.2016.05.023</terms:source>
+        <terms:title xml:lang="en">JRC IACS - System for the Identification and Registration of Payment Entitlements Ontology</terms:title>
+        <rdfs:label xml:lang="en">System for the identification and registration of payment entitlements</rdfs:label>
+        <owl:versionInfo>3.0</owl:versionInfo>
+        <skos:definition xml:lang="en">-- Name --
+System for the identification and registration of payment entitlements
+
+-- Definition --
+This package is a placeholder for the Application schema for System for the identification and registration of payment entitlements.
+
+-- Description --
+The contents of an «ApplicationSchema» package exported as a GML Application Schema file. The system for the identification and registration of payment entitlements shall allow for verification of the entitlements and for cross-checks with the aid applications and the identification system for agricultural parcels. Also shall allow direct and immediate consultation, through the competent authority of the Member State, of the data relating to at least the previous four consecutive calendar years.</skos:definition>
+    </owl:Ontology>
+    <rdf:Description rdf:nodeID="genid1">
+        <schema:affiliation>
+            <rdf:Description>
+                <foaf:name>PSNC</foaf:name>
+            </rdf:Description>
+        </schema:affiliation>
+        <rdfs:seeAlso rdf:resource="http://orcid.org/0000-0003-4289-4922"/>
+        <foaf:name>Raul Palma</foaf:name>
+    </rdf:Description>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-entitlement#areaValue -->
+
+
+    <owl:ObjectProperty rdf:about="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-entitlement#areaValue">
+        <rdfs:range rdf:resource="http://qudt.org/schema/qudt/QuantityValue"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-entitlement#entitlementConfirmationDetails -->
+
+
+    <owl:ObjectProperty rdf:about="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-entitlement#entitlementConfirmationDetails">
+        <rdfs:range rdf:resource="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#Application"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-entitlement#obtainOrigin -->
+
+
+    <owl:ObjectProperty rdf:about="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-entitlement#obtainOrigin">
+        <rdfs:range rdf:resource="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-entitlement#OriginEntitlementObtainValue"/>
+        <rdfs:label xml:lang="en">Entitlement obtain source</rdfs:label>
+        <skos:definition xml:lang="en">-- Definition --
+Entitlement obtain source.
+-- Description --
+Item description.
+NOTE 1. Item note.
+EXAMPLE 1. Item example.</skos:definition>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-entitlement#reserveOrigin -->
+
+
+    <owl:ObjectProperty rdf:about="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-entitlement#reserveOrigin">
+        <rdfs:range rdf:resource="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-entitlement#OriginEntitlementReserveValue"/>
+        <rdfs:label xml:lang="en">Entitlement reserve source</rdfs:label>
+        <skos:definition xml:lang="en">-- Definition --
+Entitlement reserve source.
+-- Description --
+Item description.
+NOTE 1. Item note.
+EXAMPLE 1. Item example.</skos:definition>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-entitlement#areaValue -->
+
+
+    <owl:DatatypeProperty rdf:about="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-entitlement#areaValue"/>
+    
+
+
+    <!-- http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-entitlement#dateEstablishment -->
+
+
+    <owl:DatatypeProperty rdf:about="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-entitlement#dateEstablishment">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#date"/>
+        <rdfs:label xml:lang="en">Date of entitlement establishment</rdfs:label>
+        <skos:definition xml:lang="en">-- Definition --
+Date of entitlement establishment.
+-- Description --
+Date when entitlement was legally established.</skos:definition>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-entitlement#dateLastActivation -->
+
+
+    <owl:DatatypeProperty rdf:about="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-entitlement#dateLastActivation">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#date"/>
+        <rdfs:label xml:lang="en">Date of last activation of entitlement</rdfs:label>
+        <skos:definition xml:lang="en">-- Definition --
+Date of last activation of entitlement.
+-- Description --
+Item description.
+NOTE 1. Item note.
+EXAMPLE 1. Item example.</skos:definition>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-entitlement#entitlementId -->
+
+
+    <owl:DatatypeProperty rdf:about="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-entitlement#entitlementId">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label xml:lang="en">Unique thematic ID of a payment entitlement</rdfs:label>
+        <skos:definition xml:lang="en">-- Definition --
+Unique thematic ID of a payment entitlement.
+-- Description --
+Thematic identifier at national level, generally the full national code of the payment entitlement.</skos:definition>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-entitlement#preReformStatus -->
+
+
+    <owl:DatatypeProperty rdf:about="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-entitlement#preReformStatus">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label xml:lang="en">Pre-reform status</rdfs:label>
+        <skos:definition xml:lang="en">-- Definition --
+Pre-reform status.
+-- Description --
+Item description.
+NOTE 1. Item note.
+EXAMPLE 1. Item example.</skos:definition>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-entitlement#regionalRestrictions -->
+
+
+    <owl:DatatypeProperty rdf:about="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-entitlement#regionalRestrictions">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label xml:lang="en">Regional restrictions</rdfs:label>
+        <skos:definition xml:lang="en">-- Definition --
+Regional restrictions.
+-- Description --
+Item description.
+NOTE 1. Item note.
+EXAMPLE 1. Item example.</skos:definition>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-entitlement#Entitlement -->
+
+
+    <owl:Class rdf:about="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-entitlement#Entitlement">
+        <rdfs:subClassOf rdf:resource="http://www.opengis.net/ont/geosparql#Feature"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-entitlement#areaValue"/>
+                <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-entitlement#obtainOrigin"/>
+                <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-entitlement#reserveOrigin"/>
+                <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-entitlement#entitlementConfirmationDetails"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-entitlement#dateEstablishment"/>
+                <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-entitlement#entitlementId"/>
+                <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-entitlement#dateLastActivation"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-entitlement#preReformStatus"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-entitlement#regionalRestrictions"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label xml:lang="en">Entitlement</rdfs:label>
+        <skos:definition xml:lang="en">-- Definition --
+Payment entitlements SPS only.
+-- Description --
+Placeholder of payment entitlements for MS who use SPS systems only.
+NOTE. The system for the identification and registration of payment entitlements provided for in Article 71 of Regulation (EU) 1306/2013 shall be an electronic register at Member State level and shall, in particular with regard to the cross-checks provided for in paragraph 1 of that Article, ensure effective traceability.</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-entitlement#OriginEntitlementObtainValue -->
+
+
+    <owl:Class rdf:about="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-entitlement#OriginEntitlementObtainValue">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <rdfs:label xml:lang="en">Obtain origin values</rdfs:label>
+        <skos:definition xml:lang="en">-- Definition --
+Entitlement obtain origin values.
+-- Description --
+List of possible entitlement obtain sources.</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-entitlement#OriginEntitlementReserveValue -->
+
+
+    <owl:Class rdf:about="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-entitlement#OriginEntitlementReserveValue">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <rdfs:label xml:lang="en">Reserve origin values</rdfs:label>
+        <skos:definition xml:lang="en">-- Definition --
+Entitlement reserve origin values.
+-- Description --
+List of possible entitlement reserve sources.</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotations
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    <rdf:Description rdf:about="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-entitlement#areaValue">
+        <rdfs:label xml:lang="en">Annual area value</rdfs:label>
+        <skos:definition xml:lang="en">-- Definition --
+Annual area value.
+-- Description --
+Item description.
+NOTE 1. Item note.
+EXAMPLE 1. Item example.</skos:definition>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 5.1.18) https://github.com/owlcs/owlapi/ -->
+
+

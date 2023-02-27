@@ -1,0 +1,3164 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+ <link rel="stylesheet" href="resources/primer.css" media="screen" />    <link rel="stylesheet" href="resources/rec.css" media="screen" />    <link rel="stylesheet" href="resources/extra.css" media="screen" />    <link rel="stylesheet" href="resources/owl.css" media="screen" />    <title>JRC IACS - Integrated Control System Code Lists</title>
+
+
+<!-- SCHEMA.ORG METADATA -->
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"TechArticle","url":"http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code","image":"http://vowl.visualdataweb.org/webvowl/#iri=http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code","name":"JRC IACS - Integrated Control System Code Lists", "headline":"This ontology is one of the modules comprising CAP-IACS (Common Agriculture Policy - Integrated Administration and Control System) ontology. The CAP-IACS ontology was developed part of the Open-IACS project, which aims to provide an open platform for the exchange of solutions in the field of Integrated Agricultural Control System (IACS) through the paradigm of connected open data. The ontology has been derived from the derived from the JRC IACS application schema.", "datePublished":"Date of release", "version":"3.0", "license":"https://creativecommons.org/licenses/by/4.0/", "author":[{"@type":"Person","name":"Raul Palma","url":"http://orcid.org/0000-0003-4289-4922"}]}</script>
+
+<script src="resources/jquery.js"></script> 
+<script src="resources/marked.min.js"></script> 
+    <script> 
+function loadHash() {
+  jQuery(".markdown").each(function(el){jQuery(this).after(marked(jQuery(this).text())).remove()});
+	var hash = location.hash;
+	if($(hash).offset()!=null){
+	  $('html, body').animate({scrollTop: $(hash).offset().top}, 0);
+}
+	loadTOC();
+}
+function loadTOC(){
+	//process toc dynamically
+	  var t='<h2>Table of contents</h2><ul>';i = 1;j=0;
+	  jQuery(".list").each(function(){
+		if(jQuery(this).is('h2')){
+			if(j>0){
+				t+='</ul>';
+				j=0;
+			}
+			t+= '<li>'+i+'. <a href=#'+ jQuery(this).attr('id')+'>'+ jQuery(this).ignore("span").text()+'</a></li>';
+			i++;
+		}
+		if(jQuery(this).is('h3')){
+			if(j==0){
+				t+='<ul>';
+			}
+			j++;
+			t+= '<li>'+(i-1)+'.'+j+'. '+'<a href=#'+ jQuery(this).attr('id')+'>'+ jQuery(this).ignore("span").text()+'</a></li>';
+		}
+	  });
+	  t+='</ul>';
+	  $("#toc").html(t); 
+}
+$(function(){
+    loadHash();
+}); $.fn.ignore = function(sel){
+        return this.clone().find(sel||">*").remove().end();
+ }; 
+   </script> 
+  </head> 
+
+<body>
+<div class="container">
+<div class="head">
+<div style="float:right">language <a href="index-en.html"><b>en</b></a> </div>
+<h1>JRC IACS - Integrated Control System Code Lists</h1>
+<h2>Release Date of release</h2>
+
+
+<dl>
+<dt>This version:</dt>
+<dd><a href="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-base/code/3.0">http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-base/code/3.0</a></dd>
+<dt>Revision:</dt>
+<dd>3.0</dd>
+<dt>Authors:</dt>
+<dd><a href="http://orcid.org/0000-0003-4289-4922">Raul Palma</a>, PSNC</dd>
+
+<dt>Download serialization:</dt><dd><span><a href="ontology.jsonld" target="_blank"><img src="https://img.shields.io/badge/Format-JSON_LD-blue.svg" alt="JSON-LD" /></a> </span><span><a href="ontology.rdf" target="_blank"><img src="https://img.shields.io/badge/Format-RDF/XML-blue.svg" alt="RDF/XML" /></a> </span><span><a href="ontology.nt" target="_blank"><img src="https://img.shields.io/badge/Format-N_Triples-blue.svg" alt="N-Triples" /></a> </span><span><a href="ontology.ttl" target="_blank"><img src="https://img.shields.io/badge/Format-TTL-blue.svg" alt="TTL" /></a> </span></dd><dt>License:</dt><dd><a href="https://creativecommons.org/licenses/by/4.0/" target="_blank"><img src="https://img.shields.io/badge/License-CC_BY_4.0-blue.svg" alt="https://creativecommons.org/licenses/by/4.0/" /></a>
+<a href="https://creativecommons.org/licenses/by/4.0/" rel="license" target="_blank">
+<img src="https://en.wikipedia.org/wiki/Creative_Commons_license#/media/File:CC_BY_icon.svg" style="border-width:0" alt="License" />
+</a>
+<br/></dd><dt>Visualization:</dt><dd><a href="webvowl/index.html#" target="_blank"><img src="https://img.shields.io/badge/Visualize_with-WebVowl-blue.svg" alt="Visualize with WebVowl" /></a></dd>
+<!-- <dt>Evaluation:</dt><dd><a href="OOPSEvaluation/oopsEval.html#" target="_blank"><img src="https://img.shields.io/badge/Evaluate_with-OOPS! (OntOlogy Pitfall Scanner!)-blue.svg" alt="Evaluate with OOPS!" /></a></dd> --></dl>
+
+<a href="provenance/provenance-en.html" target="_blank">Provenance of this page</a><hr/>
+</div>
+<div class="status">
+<div>
+<span>CAP-IACS Ontology Specification Draft</span>
+</div>
+</div>     <div id="abstract"><h2>Abstract</h2><span class="markdown">
+This ontology is one of the modules comprising CAP-IACS (Common Agriculture Policy - Integrated Administration and Control System) ontology. The CAP-IACS ontology was developed part of the Open-IACS project, which aims to provide an open platform for the exchange of solutions in the field of Integrated Agricultural Control System (IACS) through the paradigm of connected open data. The ontology has been derived from the derived from the JRC IACS application schema.</span>
+</div>
+<div id="toc"></div> 
+
+<!--INTRODUCTION SECTION-->
+    <div id="introduction"><h2 id="intro" class="list">Introduction <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+<span class="markdown">
+This is a place holder text for the introduction. The introduction should briefly describe the ontology, its motivation, state of the art and goals.</span>
+</div>
+  
+
+<!--OVERVIEW SECTION-->
+    <div id="overview"><h2 id="overv" class="list">CAP-IACS Ontology: Main module: Overview <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+<span class="markdown">
+This ontology has the following classes and properties.</span>
+<h4>Named Individuals</h4><ul xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" class="hlist">
+   <li>
+      <a href="#ControlRateTypeValue/100%OfMandarotyReconversionIntoSensitivePermanentGrassland"
+         title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#ControlRateTypeValue/100%OfMandarotyReconversionIntoSensitivePermanentGrassland">100 % of all beneficiaries with an obligation to re-convert land into land under permanent grassland, redistributive</a>
+   </li>
+   <li>
+      <a href="#ControlRateTypeValue/atLeast20%OfMandarotyReconversionIntoPermanentGrassland"
+         title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#ControlRateTypeValue/atLeast20%OfMandarotyReconversionIntoPermanentGrassland">100 % of all beneficiaries with an obligation to re-convert land into land under permanent grassland, redistributive</a>
+   </li>
+   <li>
+      <a href="#ControlRateTypeValue/100%OfTheContiguousStructuresOfAdjacentEfa"
+         title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#ControlRateTypeValue/100%OfTheContiguousStructuresOfAdjacentEfa">100 % of the contiguous structures of adjacent ecological focus areas</a>
+   </li>
+   <li>
+      <a href="#InspectorsSurveyObjectTypeValue/agriculturalArea"
+         title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#InspectorsSurveyObjectTypeValue/agriculturalArea">Agricultural area</a>
+   </li>
+   <li>
+      <a href="#InspectorsSurveyObjectTypeValue/agriculturalParcel"
+         title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#InspectorsSurveyObjectTypeValue/agriculturalParcel">Agricultural parcel</a>
+   </li>
+   <li>
+      <a href="#ControlRateTypeValue/atLeast3%OfExemptedFromGreeningPractices"
+         title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#ControlRateTypeValue/atLeast3%OfExemptedFromGreeningPractices">At least 3 % of all beneficiaries qualifying for the greening payment who are exempted from both the crop diversification and the EFA obligations</a>
+   </li>
+   <li>
+      <a href="#ControlRateTypeValue/atLeast10%OfCollectiveImplementation"
+         title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#ControlRateTypeValue/atLeast10%OfCollectiveImplementation">At least 5 % of  the  collective implementation</a>
+   </li>
+   <li>
+      <a href="#ControlRateTypeValue/atLeast5%OfCollectiveImplementation"
+         title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#ControlRateTypeValue/atLeast5%OfCollectiveImplementation">At least 5 % of  the  collective implementation</a>
+   </li>
+   <li>
+      <a href="#ControlRateTypeValue/atLeast10%OfFollowingGreeningByUsingEnvironmentalCertificationSchemes"
+         title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#ControlRateTypeValue/atLeast10%OfFollowingGreeningByUsingEnvironmentalCertificationSchemes">At least 5 % of all beneficiaries required to observe the greening practices and using national or regional environmental certification schemes</a>
+   </li>
+   <li>
+      <a href="#ControlRateTypeValue/atLeast5%OfFollowingGreeningByUsingEnvironmentalCertificationSchemes"
+         title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#ControlRateTypeValue/atLeast5%OfFollowingGreeningByUsingEnvironmentalCertificationSchemes">At least 5 % of all beneficiaries required to observe the greening practices and using national or regional environmental certification schemes</a>
+   </li>
+   <li>
+      <a href="#ControlRateTypeValue/atLeast10%OfAreasCoveredBySensitiveGrassland"
+         title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#ControlRateTypeValue/atLeast10%OfAreasCoveredBySensitiveGrassland">At least 5% of all beneficiaries required to observe the agricultural practices having areas covered with permanent grasslands</a>
+   </li>
+   <li>
+      <a href="#ControlRateTypeValue/atLeast10%OfFollowingGreeningPractices"
+         title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#ControlRateTypeValue/atLeast10%OfFollowingGreeningPractices">At least 5% of all beneficiaries required to observe the agricultural practices having areas covered with permanent grasslands</a>
+   </li>
+   <li>
+      <a href="#ControlRateTypeValue/atLeast20%ForProductionOfHemp"
+         title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#ControlRateTypeValue/atLeast20%ForProductionOfHemp">At least 5% of all beneficiaries required to observe the agricultural practices having areas covered with permanent grasslands</a>
+   </li>
+   <li>
+      <a href="#ControlRateTypeValue/atLeast3%ForRedistributivePayment"
+         title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#ControlRateTypeValue/atLeast3%ForRedistributivePayment">At least 5% of all beneficiaries required to observe the agricultural practices having areas covered with permanent grasslands</a>
+   </li>
+   <li>
+      <a href="#ControlRateTypeValue/atLeast3%ForSmallFarmersScheme"
+         title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#ControlRateTypeValue/atLeast3%ForSmallFarmersScheme">At least 5% of all beneficiaries required to observe the agricultural practices having areas covered with permanent grasslands</a>
+   </li>
+   <li>
+      <a href="#ControlRateTypeValue/atLeast3%ForBps/Saps"
+         title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#ControlRateTypeValue/atLeast3%ForBps/Saps">At least 5% of all beneficiaries required to observe the agricultural practices having areas covered with permanent grasslands</a>
+   </li>
+   <li>
+      <a href="#ControlRateTypeValue/atLeast30%ForProductionOfHemp"
+         title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#ControlRateTypeValue/atLeast30%ForProductionOfHemp">At least 5% of all beneficiaries required to observe the agricultural practices having areas covered with permanent grasslands</a>
+   </li>
+   <li>
+      <a href="#ControlRateTypeValue/atLeast5%ForAreasWithNaturalConstraints"
+         title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#ControlRateTypeValue/atLeast5%ForAreasWithNaturalConstraints">At least 5% of all beneficiaries required to observe the agricultural practices having areas covered with permanent grasslands</a>
+   </li>
+   <li>
+      <a href="#ControlRateTypeValue/atLeast5%ForCropSpecificCottonPayment"
+         title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#ControlRateTypeValue/atLeast5%ForCropSpecificCottonPayment">At least 5% of all beneficiaries required to observe the agricultural practices having areas covered with permanent grasslands</a>
+   </li>
+   <li>
+      <a href="#ControlRateTypeValue/atLeast5%ForRedistributivePayment"
+         title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#ControlRateTypeValue/atLeast5%ForRedistributivePayment">At least 5% of all beneficiaries required to observe the agricultural practices having areas covered with permanent grasslands</a>
+   </li>
+   <li>
+      <a href="#ControlRateTypeValue/atLeast5%ForSmallFarmersScheme"
+         title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#ControlRateTypeValue/atLeast5%ForSmallFarmersScheme">At least 5% of all beneficiaries required to observe the agricultural practices having areas covered with permanent grasslands</a>
+   </li>
+   <li>
+      <a href="#ControlRateTypeValue/atLeast5%ForVoluntaryCoupledSupport"
+         title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#ControlRateTypeValue/atLeast5%ForVoluntaryCoupledSupport">At least 5% of all beneficiaries required to observe the agricultural practices having areas covered with permanent grasslands</a>
+   </li>
+   <li>
+      <a href="#ControlRateTypeValue/atLeast5%ForYoungFarmers"
+         title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#ControlRateTypeValue/atLeast5%ForYoungFarmers">At least 5% of all beneficiaries required to observe the agricultural practices having areas covered with permanent grasslands</a>
+   </li>
+   <li>
+      <a href="#ControlRateTypeValue/atLeast5%OfAreasCoveredBySensitiveGrassland"
+         title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#ControlRateTypeValue/atLeast5%OfAreasCoveredBySensitiveGrassland">At least 5% of all beneficiaries required to observe the agricultural practices having areas covered with permanent grasslands</a>
+   </li>
+   <li>
+      <a href="#ControlRateTypeValue/atLeast5%OfFollowingGreeningPractices"
+         title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#ControlRateTypeValue/atLeast5%OfFollowingGreeningPractices">At least 5% of all beneficiaries required to observe the agricultural practices having areas covered with permanent grasslands</a>
+   </li>
+   <li>
+      <a href="#ControlRateTypeValue/atLeast5%ForBps/Saps"
+         title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#ControlRateTypeValue/atLeast5%ForBps/Saps">At least 5% of all beneficiaries required to observe the agricultural practices having areas covered with permanent grasslands</a>
+   </li>
+   <li>
+      <a href="#ControlRateTypeValue/atLeast10%OfRegionalImplementation"
+         title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#ControlRateTypeValue/atLeast10%OfRegionalImplementation">At least  5 % of all beneficiaries participating in a regional implementation</a>
+   </li>
+   <li>
+      <a href="#ControlRateTypeValue/atLeast5%OfRegionalImplementation"
+         title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#ControlRateTypeValue/atLeast5%OfRegionalImplementation">At least  5 % of all beneficiaries participating in a regional implementation</a>
+   </li>
+   <li>
+      <a href="#CrossCheckTypeValue/betweenAgriculturalParcelsAndReferenceParcels"
+         title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#CrossCheckTypeValue/betweenAgriculturalParcelsAndReferenceParcels">Between agricultural parcels and reference parcels</a>
+   </li>
+   <li>
+      <a href="#CrossCheckTypeValue/betweenInterBranchOrganisationsAndTheListOfTheirMembers"
+         title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#CrossCheckTypeValue/betweenInterBranchOrganisationsAndTheListOfTheirMembers">Between inter-branch organisations and the list of their members</a>
+   </li>
+   <li>
+      <a href="#CrossCheckTypeValue/betweenThePaymentEntitlementsAndTheAreaDetermined"
+         title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#CrossCheckTypeValue/betweenThePaymentEntitlementsAndTheAreaDetermined">Between the payment entitlements and the area determined</a>
+   </li>
+   <li>
+      <a href="#SurveyMethodValue/rapidFieldVisit"
+         title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#SurveyMethodValue/rapidFieldVisit">Combined field measurement and CwRS</a>
+   </li>
+   <li>
+      <a href="#OnTheSpotCheckTypeValue/controlArea"
+         title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#OnTheSpotCheckTypeValue/controlArea">Control area</a>
+   </li>
+   <li>
+      <a href="#OnTheSpotCheckTypeValue/supportingDocuments"
+         title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#OnTheSpotCheckTypeValue/supportingDocuments">Control cross-compliance</a>
+   </li>
+   <li>
+      <a href="#OnTheSpotCheckTypeValue/commitmentsAndObligations"
+         title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#OnTheSpotCheckTypeValue/commitmentsAndObligations">Cross compliance</a>
+   </li>
+   <li>
+      <a href="#OnTheSpotCheckTypeValue/complianceToEuLaw"
+         title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#OnTheSpotCheckTypeValue/complianceToEuLaw">Cross compliance</a>
+   </li>
+   <li>
+      <a href="#OnTheSpotCheckTypeValue/complianceToNationalLaw"
+         title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#OnTheSpotCheckTypeValue/complianceToNationalLaw">Cross compliance</a>
+   </li>
+   <li>
+      <a href="#OnTheSpotCheckTypeValue/correctnessAndCompletenessOfInformation"
+         title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#OnTheSpotCheckTypeValue/correctnessAndCompletenessOfInformation">Cross compliance</a>
+   </li>
+   <li>
+      <a href="#OnTheSpotCheckTypeValue/crossCompliance"
+         title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#OnTheSpotCheckTypeValue/crossCompliance">Cross compliance</a>
+   </li>
+   <li>
+      <a href="#OnTheSpotCheckTypeValue/crossComplianceStandards"
+         title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#OnTheSpotCheckTypeValue/crossComplianceStandards">Cross compliance</a>
+   </li>
+   <li>
+      <a href="#OnTheSpotCheckTypeValue/eligibilityCriteria"
+         title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#OnTheSpotCheckTypeValue/eligibilityCriteria">Cross compliance</a>
+   </li>
+   <li>
+      <a href="#ControlRateGroupAnimalAidSchemaValue/placeholder"
+         title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#ControlRateGroupAnimalAidSchemaValue/placeholder">Currently out of scope</a>
+   </li>
+   <li>
+      <a href="#ControlRateGroupRuralDevelopmentMeasureValue/placeholder"
+         title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#ControlRateGroupRuralDevelopmentMeasureValue/placeholder">Currently out of scope</a>
+   </li>
+   <li>
+      <a href="#SurveyMethodValue/cwrs"
+         title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#SurveyMethodValue/cwrs">CwRS</a>
+   </li>
+   <li>
+      <a href="#InspectorsSurveyObjectTypeValue/ecologicalFocusArea"
+         title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#InspectorsSurveyObjectTypeValue/ecologicalFocusArea">Ecological focus area</a>
+   </li>
+   <li>
+      <a href="#SurveyMethodValue/fieldMeasurement"
+         title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#SurveyMethodValue/fieldMeasurement">Field measurement</a>
+   </li>
+   <li>
+      <a href="#InspectorsSurveyObjectTypeValue/holdingSite"
+         title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#InspectorsSurveyObjectTypeValue/holdingSite">Holding site</a>
+   </li>
+   <li>
+      <a href="#ControlRateGroupAnimalAidSchemaValue"
+         title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#ControlRateGroupAnimalAidSchemaValue">List of control rate groups for animal aid schemas</a>
+   </li>
+   <li>
+      <a href="#ControlRateTypeValue"
+         title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#ControlRateTypeValue">List of control rate groups for greening</a>
+   </li>
+   <li>
+      <a href="#ControlRateGroupRuralDevelopmentMeasureValue"
+         title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#ControlRateGroupRuralDevelopmentMeasureValue">List of control rate groups for rural development measures</a>
+   </li>
+   <li>
+      <a href="#InspectorsSurveyObjectTypeValue"
+         title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#InspectorsSurveyObjectTypeValue">List of feature types</a>
+   </li>
+   <li>
+      <a href="#CrossCheckTypeValue"
+         title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#CrossCheckTypeValue">List of on the cross-check types</a>
+   </li>
+   <li>
+      <a href="#OnTheSpotCheckTypeValue"
+         title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#OnTheSpotCheckTypeValue">List of on the spot check types</a>
+   </li>
+   <li>
+      <a href="#SamplingStrategyTypeValue"
+         title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#SamplingStrategyTypeValue">List of sampling strategy types</a>
+   </li>
+   <li>
+      <a href="#SurveyMethodValue"
+         title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#SurveyMethodValue">List of survey types</a>
+   </li>
+   <li>
+      <a href="#SamplingStrategyTypeValue/simpleRandomBasedSelection"
+         title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#SamplingStrategyTypeValue/simpleRandomBasedSelection">Random based sampling strategy</a>
+   </li>
+   <li>
+      <a href="#InspectorsSurveyObjectTypeValue/referenceParcel"
+         title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#InspectorsSurveyObjectTypeValue/referenceParcel">Reference parcel</a>
+   </li>
+   <li>
+      <a href="#SamplingStrategyTypeValue/riskBasedCartSelection"
+         title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#SamplingStrategyTypeValue/riskBasedCartSelection">Risk based sampling strategy</a>
+   </li>
+   <li>
+      <a href="#SamplingStrategyTypeValue/riskBasedMultiCriteriaSelection"
+         title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#SamplingStrategyTypeValue/riskBasedMultiCriteriaSelection">Risk based sampling strategy</a>
+   </li>
+   <li>
+      <a href="#SamplingStrategyTypeValue/simpleRiskBasedSelection"
+         title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#SamplingStrategyTypeValue/simpleRiskBasedSelection">Risk based sampling strategy</a>
+   </li>
+   <li>
+      <a href="#RiskTypeValue"
+         title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#RiskTypeValue">
+         <span>risk type value</span>
+      </a>
+   </li>
+   <li>
+      <a href="#RiskTypeValue/areaOfIntensiveLcOrLuChange"
+         title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#RiskTypeValue/areaOfIntensiveLcOrLuChange">
+         <span>risk type value/area of intensive lc or lu change</span>
+      </a>
+   </li>
+   <li>
+      <a href="#RiskTypeValue/eligibilityCriteria"
+         title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#RiskTypeValue/eligibilityCriteria">
+         <span>risk type value/eligibility criteria</span>
+      </a>
+   </li>
+   <li>
+      <a href="#RiskTypeValue/nonParticipationInCertificationScheme"
+         title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#RiskTypeValue/nonParticipationInCertificationScheme">
+         <span>risk type value/non participation in certification scheme</span>
+      </a>
+   </li>
+   <li>
+      <a href="#RiskTypeValue/nonParticipationInFas"
+         title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#RiskTypeValue/nonParticipationInFas">
+         <span>risk type value/non participation in fas</span>
+      </a>
+   </li>
+   <li>
+      <a href="#SampleTypeValue"
+         title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#SampleTypeValue">
+         <span>sample type value</span>
+      </a>
+   </li>
+   <li>
+      <a href="#SampleTypeValue/areasWithNaturalConstraints"
+         title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#SampleTypeValue/areasWithNaturalConstraints">
+         <span>sample type value/areas with natural constraints</span>
+      </a>
+   </li>
+   <li>
+      <a href="#SampleTypeValue/collectiveImplementation"
+         title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#SampleTypeValue/collectiveImplementation">
+         <span>sample type value/collective implementation</span>
+      </a>
+   </li>
+   <li>
+      <a href="#SampleTypeValue/contiguousEfa"
+         title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#SampleTypeValue/contiguousEfa">
+         <span>sample type value/contiguous efa</span>
+      </a>
+   </li>
+   <li>
+      <a href="#SampleTypeValue/cotton"
+         title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#SampleTypeValue/cotton">
+         <span>sample type value/cotton</span>
+      </a>
+   </li>
+   <li>
+      <a href="#SampleTypeValue/exemptedFromGreening"
+         title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#SampleTypeValue/exemptedFromGreening">
+         <span>sample type value/exempted from greening</span>
+      </a>
+   </li>
+   <li>
+      <a href="#SampleTypeValue/hemp"
+         title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#SampleTypeValue/hemp">
+         <span>sample type value/hemp</span>
+      </a>
+   </li>
+   <li>
+      <a href="#SampleTypeValue/initial1%And1,25%ForBps/Saps"
+         title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#SampleTypeValue/initial1%And1,25%ForBps/Saps">
+         <span>sample type value/initial1% and1,25% for bps/ saps</span>
+      </a>
+   </li>
+   <li>
+      <a href="#SampleTypeValue/observingGreening"
+         title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#SampleTypeValue/observingGreening">
+         <span>sample type value/observing greening</span>
+      </a>
+   </li>
+   <li>
+      <a href="#SampleTypeValue/reconversionOfPg"
+         title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#SampleTypeValue/reconversionOfPg">
+         <span>sample type value/reconversion of pg</span>
+      </a>
+   </li>
+   <li>
+      <a href="#SampleTypeValue/reconversionOfSensitivePg"
+         title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#SampleTypeValue/reconversionOfSensitivePg">
+         <span>sample type value/reconversion of sensitive pg</span>
+      </a>
+   </li>
+   <li>
+      <a href="#SampleTypeValue/redistributivePayment"
+         title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#SampleTypeValue/redistributivePayment">
+         <span>sample type value/redistributive payment</span>
+      </a>
+   </li>
+   <li>
+      <a href="#SampleTypeValue/regionalImplementation"
+         title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#SampleTypeValue/regionalImplementation">
+         <span>sample type value/regional implementation</span>
+      </a>
+   </li>
+   <li>
+      <a href="#SampleTypeValue/regional/NationalCertificationScheme"
+         title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#SampleTypeValue/regional/NationalCertificationScheme">
+         <span>sample type value/regional/ national certification scheme</span>
+      </a>
+   </li>
+   <li>
+      <a href="#SampleTypeValue/sensitiveGrassland"
+         title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#SampleTypeValue/sensitiveGrassland">
+         <span>sample type value/sensitive grassland</span>
+      </a>
+   </li>
+   <li>
+      <a href="#SampleTypeValue/smallFarmers"
+         title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#SampleTypeValue/smallFarmers">
+         <span>sample type value/small farmers</span>
+      </a>
+   </li>
+   <li>
+      <a href="#SampleTypeValue/topUpForBps/Saps"
+         title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#SampleTypeValue/topUpForBps/Saps">
+         <span>sample type value/top up for bps/ saps</span>
+      </a>
+   </li>
+   <li>
+      <a href="#SampleTypeValue/voluntaryCoupledSupport"
+         title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#SampleTypeValue/voluntaryCoupledSupport">
+         <span>sample type value/voluntary coupled support</span>
+      </a>
+   </li>
+   <li>
+      <a href="#SampleTypeValue/youngFarmers"
+         title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#SampleTypeValue/youngFarmers">
+         <span>sample type value/young farmers</span>
+      </a>
+   </li>
+   <li>
+      <a href="#SamplingStrategyTypeValue/clusteredRandomSelection"
+         title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#SamplingStrategyTypeValue/clusteredRandomSelection">
+         <span>sampling strategy type value/clustered random selection</span>
+      </a>
+   </li>
+   <li>
+      <a href="#SamplingStrategyTypeValue/multistageSampling"
+         title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#SamplingStrategyTypeValue/multistageSampling">
+         <span>sampling strategy type value/multistage sampling</span>
+      </a>
+   </li>
+   <li>
+      <a href="#SamplingStrategyTypeValue/stratifiedRandomSelection"
+         title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#SamplingStrategyTypeValue/stratifiedRandomSelection">
+         <span>sampling strategy type value/stratified random selection</span>
+      </a>
+   </li>
+   <li>
+      <a href="#SamplingStrategyTypeValue/systematicRandomBasedSelection"
+         title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#SamplingStrategyTypeValue/systematicRandomBasedSelection">
+         <span>sampling strategy type value/systematic random based selection</span>
+      </a>
+   </li>
+   <li>
+      <a href="#CrossCheckTypeValue/toVerifyDeclaredEntitlementsOnDeclaredAgriculturalParcels"
+         title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#CrossCheckTypeValue/toVerifyDeclaredEntitlementsOnDeclaredAgriculturalParcels">Verify declared payment entitlements on declared agricultural parcels</a>
+   </li>
+   <li>
+      <a href="#CrossCheckTypeValue/toVerifyEligibilityForTheAnimalAid"
+         title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#CrossCheckTypeValue/toVerifyEligibilityForTheAnimalAid">Verify eligibility for the animal aid</a>
+   </li>
+   <li>
+      <a href="#CrossCheckTypeValue/toVerifyEligibilityForTheIncreaseOfTheAid"
+         title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#CrossCheckTypeValue/toVerifyEligibilityForTheIncreaseOfTheAid">Verify eligibility for the increase of the aid</a>
+   </li>
+   <li>
+      <a href="#CrossCheckTypeValue/toVerifyPaymentEntitlements"
+         title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#CrossCheckTypeValue/toVerifyPaymentEntitlements">Verify payment entitlements</a>
+   </li>
+</ul><iframe align="center" width="100%" height ="500px" src="webvowl/index.html"></iframe> 
+</div>
+  
+
+<!--DESCRIPTION SECTION-->
+    <div id="description"><h2 id="desc" class="list">CAP-IACS Ontology: Main module: Description <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+<span class="markdown">
+This is a placeholder text for the description of your ontology. The description should include an explanation and a diagram explaining how the classes are related, examples of usage, etc.</span>
+
+</div>
+   
+
+<!--CROSSREF SECTION-->
+   <div id="crossref"><h2 id="crossreference" class="list">Cross-reference for CAP-IACS Ontology: Main module classes, object properties and data properties <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+This section provides details for each class and property defined by CAP-IACS Ontology: Main module.
+<div xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="namedindividuals">
+   <h3 id="namedindividuals" class="list">Named Individuals</h3>
+   <ul class="hlist">
+      <li>
+         <a href="#ControlRateTypeValue/100%OfMandarotyReconversionIntoSensitivePermanentGrassland"
+            title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#ControlRateTypeValue/100%OfMandarotyReconversionIntoSensitivePermanentGrassland">100 % of all beneficiaries with an obligation to re-convert land into land under permanent grassland, redistributive</a>
+      </li>
+      <li>
+         <a href="#ControlRateTypeValue/atLeast20%OfMandarotyReconversionIntoPermanentGrassland"
+            title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#ControlRateTypeValue/atLeast20%OfMandarotyReconversionIntoPermanentGrassland">100 % of all beneficiaries with an obligation to re-convert land into land under permanent grassland, redistributive</a>
+      </li>
+      <li>
+         <a href="#ControlRateTypeValue/100%OfTheContiguousStructuresOfAdjacentEfa"
+            title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#ControlRateTypeValue/100%OfTheContiguousStructuresOfAdjacentEfa">100 % of the contiguous structures of adjacent ecological focus areas</a>
+      </li>
+      <li>
+         <a href="#InspectorsSurveyObjectTypeValue/agriculturalArea"
+            title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#InspectorsSurveyObjectTypeValue/agriculturalArea">Agricultural area</a>
+      </li>
+      <li>
+         <a href="#InspectorsSurveyObjectTypeValue/agriculturalParcel"
+            title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#InspectorsSurveyObjectTypeValue/agriculturalParcel">Agricultural parcel</a>
+      </li>
+      <li>
+         <a href="#ControlRateTypeValue/atLeast3%OfExemptedFromGreeningPractices"
+            title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#ControlRateTypeValue/atLeast3%OfExemptedFromGreeningPractices">At least 3 % of all beneficiaries qualifying for the greening payment who are exempted from both the crop diversification and the EFA obligations</a>
+      </li>
+      <li>
+         <a href="#ControlRateTypeValue/atLeast10%OfCollectiveImplementation"
+            title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#ControlRateTypeValue/atLeast10%OfCollectiveImplementation">At least 5 % of  the  collective implementation</a>
+      </li>
+      <li>
+         <a href="#ControlRateTypeValue/atLeast5%OfCollectiveImplementation"
+            title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#ControlRateTypeValue/atLeast5%OfCollectiveImplementation">At least 5 % of  the  collective implementation</a>
+      </li>
+      <li>
+         <a href="#ControlRateTypeValue/atLeast10%OfFollowingGreeningByUsingEnvironmentalCertificationSchemes"
+            title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#ControlRateTypeValue/atLeast10%OfFollowingGreeningByUsingEnvironmentalCertificationSchemes">At least 5 % of all beneficiaries required to observe the greening practices and using national or regional environmental certification schemes</a>
+      </li>
+      <li>
+         <a href="#ControlRateTypeValue/atLeast5%OfFollowingGreeningByUsingEnvironmentalCertificationSchemes"
+            title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#ControlRateTypeValue/atLeast5%OfFollowingGreeningByUsingEnvironmentalCertificationSchemes">At least 5 % of all beneficiaries required to observe the greening practices and using national or regional environmental certification schemes</a>
+      </li>
+      <li>
+         <a href="#ControlRateTypeValue/atLeast10%OfAreasCoveredBySensitiveGrassland"
+            title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#ControlRateTypeValue/atLeast10%OfAreasCoveredBySensitiveGrassland">At least 5% of all beneficiaries required to observe the agricultural practices having areas covered with permanent grasslands</a>
+      </li>
+      <li>
+         <a href="#ControlRateTypeValue/atLeast10%OfFollowingGreeningPractices"
+            title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#ControlRateTypeValue/atLeast10%OfFollowingGreeningPractices">At least 5% of all beneficiaries required to observe the agricultural practices having areas covered with permanent grasslands</a>
+      </li>
+      <li>
+         <a href="#ControlRateTypeValue/atLeast20%ForProductionOfHemp"
+            title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#ControlRateTypeValue/atLeast20%ForProductionOfHemp">At least 5% of all beneficiaries required to observe the agricultural practices having areas covered with permanent grasslands</a>
+      </li>
+      <li>
+         <a href="#ControlRateTypeValue/atLeast3%ForRedistributivePayment"
+            title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#ControlRateTypeValue/atLeast3%ForRedistributivePayment">At least 5% of all beneficiaries required to observe the agricultural practices having areas covered with permanent grasslands</a>
+      </li>
+      <li>
+         <a href="#ControlRateTypeValue/atLeast3%ForSmallFarmersScheme"
+            title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#ControlRateTypeValue/atLeast3%ForSmallFarmersScheme">At least 5% of all beneficiaries required to observe the agricultural practices having areas covered with permanent grasslands</a>
+      </li>
+      <li>
+         <a href="#ControlRateTypeValue/atLeast3%ForBps/Saps"
+            title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#ControlRateTypeValue/atLeast3%ForBps/Saps">At least 5% of all beneficiaries required to observe the agricultural practices having areas covered with permanent grasslands</a>
+      </li>
+      <li>
+         <a href="#ControlRateTypeValue/atLeast30%ForProductionOfHemp"
+            title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#ControlRateTypeValue/atLeast30%ForProductionOfHemp">At least 5% of all beneficiaries required to observe the agricultural practices having areas covered with permanent grasslands</a>
+      </li>
+      <li>
+         <a href="#ControlRateTypeValue/atLeast5%ForAreasWithNaturalConstraints"
+            title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#ControlRateTypeValue/atLeast5%ForAreasWithNaturalConstraints">At least 5% of all beneficiaries required to observe the agricultural practices having areas covered with permanent grasslands</a>
+      </li>
+      <li>
+         <a href="#ControlRateTypeValue/atLeast5%ForCropSpecificCottonPayment"
+            title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#ControlRateTypeValue/atLeast5%ForCropSpecificCottonPayment">At least 5% of all beneficiaries required to observe the agricultural practices having areas covered with permanent grasslands</a>
+      </li>
+      <li>
+         <a href="#ControlRateTypeValue/atLeast5%ForRedistributivePayment"
+            title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#ControlRateTypeValue/atLeast5%ForRedistributivePayment">At least 5% of all beneficiaries required to observe the agricultural practices having areas covered with permanent grasslands</a>
+      </li>
+      <li>
+         <a href="#ControlRateTypeValue/atLeast5%ForSmallFarmersScheme"
+            title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#ControlRateTypeValue/atLeast5%ForSmallFarmersScheme">At least 5% of all beneficiaries required to observe the agricultural practices having areas covered with permanent grasslands</a>
+      </li>
+      <li>
+         <a href="#ControlRateTypeValue/atLeast5%ForVoluntaryCoupledSupport"
+            title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#ControlRateTypeValue/atLeast5%ForVoluntaryCoupledSupport">At least 5% of all beneficiaries required to observe the agricultural practices having areas covered with permanent grasslands</a>
+      </li>
+      <li>
+         <a href="#ControlRateTypeValue/atLeast5%ForYoungFarmers"
+            title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#ControlRateTypeValue/atLeast5%ForYoungFarmers">At least 5% of all beneficiaries required to observe the agricultural practices having areas covered with permanent grasslands</a>
+      </li>
+      <li>
+         <a href="#ControlRateTypeValue/atLeast5%OfAreasCoveredBySensitiveGrassland"
+            title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#ControlRateTypeValue/atLeast5%OfAreasCoveredBySensitiveGrassland">At least 5% of all beneficiaries required to observe the agricultural practices having areas covered with permanent grasslands</a>
+      </li>
+      <li>
+         <a href="#ControlRateTypeValue/atLeast5%OfFollowingGreeningPractices"
+            title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#ControlRateTypeValue/atLeast5%OfFollowingGreeningPractices">At least 5% of all beneficiaries required to observe the agricultural practices having areas covered with permanent grasslands</a>
+      </li>
+      <li>
+         <a href="#ControlRateTypeValue/atLeast5%ForBps/Saps"
+            title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#ControlRateTypeValue/atLeast5%ForBps/Saps">At least 5% of all beneficiaries required to observe the agricultural practices having areas covered with permanent grasslands</a>
+      </li>
+      <li>
+         <a href="#ControlRateTypeValue/atLeast10%OfRegionalImplementation"
+            title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#ControlRateTypeValue/atLeast10%OfRegionalImplementation">At least  5 % of all beneficiaries participating in a regional implementation</a>
+      </li>
+      <li>
+         <a href="#ControlRateTypeValue/atLeast5%OfRegionalImplementation"
+            title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#ControlRateTypeValue/atLeast5%OfRegionalImplementation">At least  5 % of all beneficiaries participating in a regional implementation</a>
+      </li>
+      <li>
+         <a href="#CrossCheckTypeValue/betweenAgriculturalParcelsAndReferenceParcels"
+            title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#CrossCheckTypeValue/betweenAgriculturalParcelsAndReferenceParcels">Between agricultural parcels and reference parcels</a>
+      </li>
+      <li>
+         <a href="#CrossCheckTypeValue/betweenInterBranchOrganisationsAndTheListOfTheirMembers"
+            title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#CrossCheckTypeValue/betweenInterBranchOrganisationsAndTheListOfTheirMembers">Between inter-branch organisations and the list of their members</a>
+      </li>
+      <li>
+         <a href="#CrossCheckTypeValue/betweenThePaymentEntitlementsAndTheAreaDetermined"
+            title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#CrossCheckTypeValue/betweenThePaymentEntitlementsAndTheAreaDetermined">Between the payment entitlements and the area determined</a>
+      </li>
+      <li>
+         <a href="#SurveyMethodValue/rapidFieldVisit"
+            title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#SurveyMethodValue/rapidFieldVisit">Combined field measurement and CwRS</a>
+      </li>
+      <li>
+         <a href="#OnTheSpotCheckTypeValue/controlArea"
+            title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#OnTheSpotCheckTypeValue/controlArea">Control area</a>
+      </li>
+      <li>
+         <a href="#OnTheSpotCheckTypeValue/supportingDocuments"
+            title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#OnTheSpotCheckTypeValue/supportingDocuments">Control cross-compliance</a>
+      </li>
+      <li>
+         <a href="#OnTheSpotCheckTypeValue/commitmentsAndObligations"
+            title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#OnTheSpotCheckTypeValue/commitmentsAndObligations">Cross compliance</a>
+      </li>
+      <li>
+         <a href="#OnTheSpotCheckTypeValue/complianceToEuLaw"
+            title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#OnTheSpotCheckTypeValue/complianceToEuLaw">Cross compliance</a>
+      </li>
+      <li>
+         <a href="#OnTheSpotCheckTypeValue/complianceToNationalLaw"
+            title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#OnTheSpotCheckTypeValue/complianceToNationalLaw">Cross compliance</a>
+      </li>
+      <li>
+         <a href="#OnTheSpotCheckTypeValue/correctnessAndCompletenessOfInformation"
+            title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#OnTheSpotCheckTypeValue/correctnessAndCompletenessOfInformation">Cross compliance</a>
+      </li>
+      <li>
+         <a href="#OnTheSpotCheckTypeValue/crossCompliance"
+            title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#OnTheSpotCheckTypeValue/crossCompliance">Cross compliance</a>
+      </li>
+      <li>
+         <a href="#OnTheSpotCheckTypeValue/crossComplianceStandards"
+            title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#OnTheSpotCheckTypeValue/crossComplianceStandards">Cross compliance</a>
+      </li>
+      <li>
+         <a href="#OnTheSpotCheckTypeValue/eligibilityCriteria"
+            title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#OnTheSpotCheckTypeValue/eligibilityCriteria">Cross compliance</a>
+      </li>
+      <li>
+         <a href="#ControlRateGroupAnimalAidSchemaValue/placeholder"
+            title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#ControlRateGroupAnimalAidSchemaValue/placeholder">Currently out of scope</a>
+      </li>
+      <li>
+         <a href="#ControlRateGroupRuralDevelopmentMeasureValue/placeholder"
+            title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#ControlRateGroupRuralDevelopmentMeasureValue/placeholder">Currently out of scope</a>
+      </li>
+      <li>
+         <a href="#SurveyMethodValue/cwrs"
+            title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#SurveyMethodValue/cwrs">CwRS</a>
+      </li>
+      <li>
+         <a href="#InspectorsSurveyObjectTypeValue/ecologicalFocusArea"
+            title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#InspectorsSurveyObjectTypeValue/ecologicalFocusArea">Ecological focus area</a>
+      </li>
+      <li>
+         <a href="#SurveyMethodValue/fieldMeasurement"
+            title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#SurveyMethodValue/fieldMeasurement">Field measurement</a>
+      </li>
+      <li>
+         <a href="#InspectorsSurveyObjectTypeValue/holdingSite"
+            title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#InspectorsSurveyObjectTypeValue/holdingSite">Holding site</a>
+      </li>
+      <li>
+         <a href="#ControlRateGroupAnimalAidSchemaValue"
+            title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#ControlRateGroupAnimalAidSchemaValue">List of control rate groups for animal aid schemas</a>
+      </li>
+      <li>
+         <a href="#ControlRateTypeValue"
+            title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#ControlRateTypeValue">List of control rate groups for greening</a>
+      </li>
+      <li>
+         <a href="#ControlRateGroupRuralDevelopmentMeasureValue"
+            title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#ControlRateGroupRuralDevelopmentMeasureValue">List of control rate groups for rural development measures</a>
+      </li>
+      <li>
+         <a href="#InspectorsSurveyObjectTypeValue"
+            title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#InspectorsSurveyObjectTypeValue">List of feature types</a>
+      </li>
+      <li>
+         <a href="#CrossCheckTypeValue"
+            title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#CrossCheckTypeValue">List of on the cross-check types</a>
+      </li>
+      <li>
+         <a href="#OnTheSpotCheckTypeValue"
+            title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#OnTheSpotCheckTypeValue">List of on the spot check types</a>
+      </li>
+      <li>
+         <a href="#SamplingStrategyTypeValue"
+            title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#SamplingStrategyTypeValue">List of sampling strategy types</a>
+      </li>
+      <li>
+         <a href="#SurveyMethodValue"
+            title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#SurveyMethodValue">List of survey types</a>
+      </li>
+      <li>
+         <a href="#SamplingStrategyTypeValue/simpleRandomBasedSelection"
+            title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#SamplingStrategyTypeValue/simpleRandomBasedSelection">Random based sampling strategy</a>
+      </li>
+      <li>
+         <a href="#InspectorsSurveyObjectTypeValue/referenceParcel"
+            title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#InspectorsSurveyObjectTypeValue/referenceParcel">Reference parcel</a>
+      </li>
+      <li>
+         <a href="#SamplingStrategyTypeValue/riskBasedCartSelection"
+            title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#SamplingStrategyTypeValue/riskBasedCartSelection">Risk based sampling strategy</a>
+      </li>
+      <li>
+         <a href="#SamplingStrategyTypeValue/riskBasedMultiCriteriaSelection"
+            title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#SamplingStrategyTypeValue/riskBasedMultiCriteriaSelection">Risk based sampling strategy</a>
+      </li>
+      <li>
+         <a href="#SamplingStrategyTypeValue/simpleRiskBasedSelection"
+            title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#SamplingStrategyTypeValue/simpleRiskBasedSelection">Risk based sampling strategy</a>
+      </li>
+      <li>
+         <a href="#RiskTypeValue"
+            title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#RiskTypeValue">
+            <span>risk type value</span>
+         </a>
+      </li>
+      <li>
+         <a href="#RiskTypeValue/areaOfIntensiveLcOrLuChange"
+            title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#RiskTypeValue/areaOfIntensiveLcOrLuChange">
+            <span>risk type value/area of intensive lc or lu change</span>
+         </a>
+      </li>
+      <li>
+         <a href="#RiskTypeValue/eligibilityCriteria"
+            title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#RiskTypeValue/eligibilityCriteria">
+            <span>risk type value/eligibility criteria</span>
+         </a>
+      </li>
+      <li>
+         <a href="#RiskTypeValue/nonParticipationInCertificationScheme"
+            title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#RiskTypeValue/nonParticipationInCertificationScheme">
+            <span>risk type value/non participation in certification scheme</span>
+         </a>
+      </li>
+      <li>
+         <a href="#RiskTypeValue/nonParticipationInFas"
+            title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#RiskTypeValue/nonParticipationInFas">
+            <span>risk type value/non participation in fas</span>
+         </a>
+      </li>
+      <li>
+         <a href="#SampleTypeValue"
+            title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#SampleTypeValue">
+            <span>sample type value</span>
+         </a>
+      </li>
+      <li>
+         <a href="#SampleTypeValue/areasWithNaturalConstraints"
+            title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#SampleTypeValue/areasWithNaturalConstraints">
+            <span>sample type value/areas with natural constraints</span>
+         </a>
+      </li>
+      <li>
+         <a href="#SampleTypeValue/collectiveImplementation"
+            title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#SampleTypeValue/collectiveImplementation">
+            <span>sample type value/collective implementation</span>
+         </a>
+      </li>
+      <li>
+         <a href="#SampleTypeValue/contiguousEfa"
+            title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#SampleTypeValue/contiguousEfa">
+            <span>sample type value/contiguous efa</span>
+         </a>
+      </li>
+      <li>
+         <a href="#SampleTypeValue/cotton"
+            title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#SampleTypeValue/cotton">
+            <span>sample type value/cotton</span>
+         </a>
+      </li>
+      <li>
+         <a href="#SampleTypeValue/exemptedFromGreening"
+            title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#SampleTypeValue/exemptedFromGreening">
+            <span>sample type value/exempted from greening</span>
+         </a>
+      </li>
+      <li>
+         <a href="#SampleTypeValue/hemp"
+            title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#SampleTypeValue/hemp">
+            <span>sample type value/hemp</span>
+         </a>
+      </li>
+      <li>
+         <a href="#SampleTypeValue/initial1%And1,25%ForBps/Saps"
+            title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#SampleTypeValue/initial1%And1,25%ForBps/Saps">
+            <span>sample type value/initial1% and1,25% for bps/ saps</span>
+         </a>
+      </li>
+      <li>
+         <a href="#SampleTypeValue/observingGreening"
+            title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#SampleTypeValue/observingGreening">
+            <span>sample type value/observing greening</span>
+         </a>
+      </li>
+      <li>
+         <a href="#SampleTypeValue/reconversionOfPg"
+            title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#SampleTypeValue/reconversionOfPg">
+            <span>sample type value/reconversion of pg</span>
+         </a>
+      </li>
+      <li>
+         <a href="#SampleTypeValue/reconversionOfSensitivePg"
+            title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#SampleTypeValue/reconversionOfSensitivePg">
+            <span>sample type value/reconversion of sensitive pg</span>
+         </a>
+      </li>
+      <li>
+         <a href="#SampleTypeValue/redistributivePayment"
+            title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#SampleTypeValue/redistributivePayment">
+            <span>sample type value/redistributive payment</span>
+         </a>
+      </li>
+      <li>
+         <a href="#SampleTypeValue/regionalImplementation"
+            title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#SampleTypeValue/regionalImplementation">
+            <span>sample type value/regional implementation</span>
+         </a>
+      </li>
+      <li>
+         <a href="#SampleTypeValue/regional/NationalCertificationScheme"
+            title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#SampleTypeValue/regional/NationalCertificationScheme">
+            <span>sample type value/regional/ national certification scheme</span>
+         </a>
+      </li>
+      <li>
+         <a href="#SampleTypeValue/sensitiveGrassland"
+            title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#SampleTypeValue/sensitiveGrassland">
+            <span>sample type value/sensitive grassland</span>
+         </a>
+      </li>
+      <li>
+         <a href="#SampleTypeValue/smallFarmers"
+            title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#SampleTypeValue/smallFarmers">
+            <span>sample type value/small farmers</span>
+         </a>
+      </li>
+      <li>
+         <a href="#SampleTypeValue/topUpForBps/Saps"
+            title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#SampleTypeValue/topUpForBps/Saps">
+            <span>sample type value/top up for bps/ saps</span>
+         </a>
+      </li>
+      <li>
+         <a href="#SampleTypeValue/voluntaryCoupledSupport"
+            title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#SampleTypeValue/voluntaryCoupledSupport">
+            <span>sample type value/voluntary coupled support</span>
+         </a>
+      </li>
+      <li>
+         <a href="#SampleTypeValue/youngFarmers"
+            title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#SampleTypeValue/youngFarmers">
+            <span>sample type value/young farmers</span>
+         </a>
+      </li>
+      <li>
+         <a href="#SamplingStrategyTypeValue/clusteredRandomSelection"
+            title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#SamplingStrategyTypeValue/clusteredRandomSelection">
+            <span>sampling strategy type value/clustered random selection</span>
+         </a>
+      </li>
+      <li>
+         <a href="#SamplingStrategyTypeValue/multistageSampling"
+            title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#SamplingStrategyTypeValue/multistageSampling">
+            <span>sampling strategy type value/multistage sampling</span>
+         </a>
+      </li>
+      <li>
+         <a href="#SamplingStrategyTypeValue/stratifiedRandomSelection"
+            title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#SamplingStrategyTypeValue/stratifiedRandomSelection">
+            <span>sampling strategy type value/stratified random selection</span>
+         </a>
+      </li>
+      <li>
+         <a href="#SamplingStrategyTypeValue/systematicRandomBasedSelection"
+            title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#SamplingStrategyTypeValue/systematicRandomBasedSelection">
+            <span>sampling strategy type value/systematic random based selection</span>
+         </a>
+      </li>
+      <li>
+         <a href="#CrossCheckTypeValue/toVerifyDeclaredEntitlementsOnDeclaredAgriculturalParcels"
+            title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#CrossCheckTypeValue/toVerifyDeclaredEntitlementsOnDeclaredAgriculturalParcels">Verify declared payment entitlements on declared agricultural parcels</a>
+      </li>
+      <li>
+         <a href="#CrossCheckTypeValue/toVerifyEligibilityForTheAnimalAid"
+            title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#CrossCheckTypeValue/toVerifyEligibilityForTheAnimalAid">Verify eligibility for the animal aid</a>
+      </li>
+      <li>
+         <a href="#CrossCheckTypeValue/toVerifyEligibilityForTheIncreaseOfTheAid"
+            title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#CrossCheckTypeValue/toVerifyEligibilityForTheIncreaseOfTheAid">Verify eligibility for the increase of the aid</a>
+      </li>
+      <li>
+         <a href="#CrossCheckTypeValue/toVerifyPaymentEntitlements"
+            title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#CrossCheckTypeValue/toVerifyPaymentEntitlements">Verify payment entitlements</a>
+      </li>
+   </ul>
+   <div class="entity" id="ControlRateTypeValue/100%OfMandarotyReconversionIntoSensitivePermanentGrassland">
+      <h3>100 % of all beneficiaries with an obligation to re-convert land into land under permanent grassland, redistributive<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#ControlRateTypeValue/100%OfMandarotyReconversionIntoSensitivePermanentGrassland</p>
+      <div class="comment">
+         <span class="markdown">100% of mandatory reconversion into sensitive permanent grassland
+
+In accordance with Art.31(1)(g) of R (EU) 809/2014 100 % of beneficiaries with an obligation to re-convert land into land under permanent grassland shall be controlled.</span>
+      </div>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#ControlRateTypeValue"
+               target="_blank"
+               title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#ControlRateTypeValue">control rate type value</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="ControlRateTypeValue/atLeast20%OfMandarotyReconversionIntoPermanentGrassland">
+      <h3>100 % of all beneficiaries with an obligation to re-convert land into land under permanent grassland, redistributive<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#ControlRateTypeValue/atLeast20%OfMandarotyReconversionIntoPermanentGrassland</p>
+      <div class="comment">
+         <span class="markdown">At least 20% of mandatory reconversion into permanent grassland
+
+In sense of Art. 31(1)(h) of R (EU) 809/2014 20 % of all beneficiaries with an obligation to re-convert land into permanent grassland shall be controlled.</span>
+      </div>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#ControlRateTypeValue"
+               target="_blank"
+               title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#ControlRateTypeValue">control rate type value</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="ControlRateTypeValue/100%OfTheContiguousStructuresOfAdjacentEfa">
+      <h3>100 % of the contiguous structures of adjacent ecological focus areas<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#ControlRateTypeValue/100%OfTheContiguousStructuresOfAdjacentEfa</p>
+      <div class="comment">
+         <span class="markdown">100 % of the contiguous structures of adjacent EFA
+
+In sense of Art. 31(1)(f) of R (EU) 809/2014  100 % of the contiguous structures of adjacent ecological focus areas as referred to in Article 46(5) of Regulation (EU) 1307/2013 shall be controlled.</span>
+      </div>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#ControlRateTypeValue"
+               target="_blank"
+               title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#ControlRateTypeValue">control rate type value</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="InspectorsSurveyObjectTypeValue/agriculturalArea">
+      <h3>Agricultural area<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#InspectorsSurveyObjectTypeValue/agriculturalArea</p>
+      <div class="comment">
+         <span class="markdown">Agricultural area
+
+Agricultural area as defined by R (EU) 1307/2013.</span>
+      </div>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#InspectorsSurveyObjectTypeValue"
+               target="_blank"
+               title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#InspectorsSurveyObjectTypeValue">inspectors survey object type value</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="InspectorsSurveyObjectTypeValue/agriculturalParcel">
+      <h3>Agricultural parcel<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#InspectorsSurveyObjectTypeValue/agriculturalParcel</p>
+      <div class="comment">
+         <span class="markdown">Agricultural parcel
+
+Agricultural parcel as defined by R (EU) 1307/2013.</span>
+      </div>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#InspectorsSurveyObjectTypeValue"
+               target="_blank"
+               title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#InspectorsSurveyObjectTypeValue">inspectors survey object type value</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="ControlRateTypeValue/atLeast3%OfExemptedFromGreeningPractices">
+      <h3>At least 3 % of all beneficiaries qualifying for the greening payment who are exempted from both the crop diversification and the EFA obligations<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#ControlRateTypeValue/atLeast3%OfExemptedFromGreeningPractices</p>
+      <div class="comment">
+         <span class="markdown">At least 3% of exempted from greening practices
+
+In sense of Art. 31 (1)(b) at least 3 % of all beneficiaries qualifying for the greening payment who are exempted from both the crop diversification and the EFA obligations shall be controlled.
+
+The exemption is granted when the thresholds referred to in Articles 44 and 46 of Regulation (EU) No 1307/2013 are not met and the obligations referred to in Article 45 of that Regulation are not concerned.</span>
+      </div>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#ControlRateTypeValue"
+               target="_blank"
+               title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#ControlRateTypeValue">control rate type value</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="ControlRateTypeValue/atLeast10%OfCollectiveImplementation">
+      <h3>At least 5 % of  the  collective implementation<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#ControlRateTypeValue/atLeast10%OfCollectiveImplementation</p>
+      <div class="comment">
+         <span class="markdown">At least 10% of the collective implementation
+
+Increased control rate (5% normal+5% supplementary) in sense of Art. 31(3) for beneficiaries required to follow greening practices.</span>
+      </div>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#ControlRateTypeValue"
+               target="_blank"
+               title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#ControlRateTypeValue">control rate type value</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="ControlRateTypeValue/atLeast5%OfCollectiveImplementation">
+      <h3>At least 5 % of  the  collective implementation<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#ControlRateTypeValue/atLeast5%OfCollectiveImplementation</p>
+      <div class="comment">
+         <span class="markdown">At least 5 % of the collective implementation
+
+In sensed of Art. 31(1)(e) od R EU) 809/2014 5 % of  the  collective implementation in accordance with Article 46(6) of Regulation (EU) No 1307/2013 shall be controlled.</span>
+      </div>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#ControlRateTypeValue"
+               target="_blank"
+               title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#ControlRateTypeValue">control rate type value</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="ControlRateTypeValue/atLeast10%OfFollowingGreeningByUsingEnvironmentalCertificationSchemes">
+      <h3>At least 5 % of all beneficiaries required to observe the greening practices and using national or regional environmental certification schemes<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#ControlRateTypeValue/atLeast10%OfFollowingGreeningByUsingEnvironmentalCertificationSchemes</p>
+      <div class="comment">
+         <span class="markdown">At least 10 % following greening practices by using environmental certification schemes
+
+Increased control rate (5% normal+5% supplementary) in sense of Art. 31(3) for beneficiaries required to follow greening practices.</span>
+      </div>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#ControlRateTypeValue"
+               target="_blank"
+               title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#ControlRateTypeValue">control rate type value</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="ControlRateTypeValue/atLeast5%OfFollowingGreeningByUsingEnvironmentalCertificationSchemes">
+      <h3>At least 5 % of all beneficiaries required to observe the greening practices and using national or regional environmental certification schemes<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#ControlRateTypeValue/atLeast5%OfFollowingGreeningByUsingEnvironmentalCertificationSchemes</p>
+      <div class="comment">
+         <span class="markdown">At least 5 % following greening practices by using environmental certification schemes
+
+In sense of Art. 31(1)(c) 5 % of beneficiaries observing greening practices and using national or regional environmental certification schemes as referred to in Article 43(3)(b) of Regulation (EU) No 1307/2013 shall be controlled.</span>
+      </div>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#ControlRateTypeValue"
+               target="_blank"
+               title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#ControlRateTypeValue">control rate type value</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="ControlRateTypeValue/atLeast10%OfAreasCoveredBySensitiveGrassland">
+      <h3>At least 5% of all beneficiaries required to observe the agricultural practices having areas covered with permanent grasslands<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#ControlRateTypeValue/atLeast10%OfAreasCoveredBySensitiveGrassland</p>
+      <div class="comment">
+         <span class="markdown">At least 10% of areas covered by sensitive grassland
+
+Increased control rate (5% normal+5% supplementary) in sense of Art. 31(3) for beneficiaries required to follow greening practices.</span>
+      </div>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#ControlRateTypeValue"
+               target="_blank"
+               title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#ControlRateTypeValue">control rate type value</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="ControlRateTypeValue/atLeast10%OfFollowingGreeningPractices">
+      <h3>At least 5% of all beneficiaries required to observe the agricultural practices having areas covered with permanent grasslands<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#ControlRateTypeValue/atLeast10%OfFollowingGreeningPractices</p>
+      <div class="comment">
+         <span class="markdown">At least 10% of following greening practices
+
+Increased control rate (5% normal+5% supplementary) in sense of Art. 31(3) of R 809/2014 for beneficiaries required to follow greening practices. 
+
+Where the ecological focus areas are not identified in the identification system for agricultural parcels as referred to in Article 70 of Regulation (EU) No 1306/2013, the control rate laid down in points (a) and (c) to (e) of paragraph 1 shall be supplemented by 5% of all beneficiaries of the respective control sample who are required to have ecological focus area on the agricultural area in accordance with Articles 43 and 46 of Regulation (EU) No 1307/2013.</span>
+      </div>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#ControlRateTypeValue"
+               target="_blank"
+               title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#ControlRateTypeValue">control rate type value</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="ControlRateTypeValue/atLeast20%ForProductionOfHemp">
+      <h3>At least 5% of all beneficiaries required to observe the agricultural practices having areas covered with permanent grasslands<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#ControlRateTypeValue/atLeast20%ForProductionOfHemp</p>
+      <div class="comment">
+         <span class="markdown">At least 20% for production of hemp
+
+Art. 36(6) of Regulation (EU) 809/2014 allows the reduction of the control rate for production of hemp from 30% to 20% when a MS introduces a prior approval for the cultivation of hemp.
+
+NOTE
+MS shall notify the EC about the rules (or changes in the rules) of the approval system.</span>
+      </div>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#ControlRateTypeValue"
+               target="_blank"
+               title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#ControlRateTypeValue">control rate type value</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="ControlRateTypeValue/atLeast3%ForRedistributivePayment">
+      <h3>At least 5% of all beneficiaries required to observe the agricultural practices having areas covered with permanent grasslands<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#ControlRateTypeValue/atLeast3%ForRedistributivePayment</p>
+      <div class="comment">
+         <span class="markdown">At least 3% or redistributive payment 
+
+Art. 36(2) of Regulation (EU) 809/2014 allows the reduction of the control rate for redistributive payment from 5% to 3% when the cross checks based on geospatial applications are carried out.</span>
+      </div>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#ControlRateTypeValue"
+               target="_blank"
+               title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#ControlRateTypeValue">control rate type value</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="ControlRateTypeValue/atLeast3%ForSmallFarmersScheme">
+      <h3>At least 5% of all beneficiaries required to observe the agricultural practices having areas covered with permanent grasslands<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#ControlRateTypeValue/atLeast3%ForSmallFarmersScheme</p>
+      <div class="comment">
+         <span class="markdown">At least 3% for small farmer scheme
+
+Art. 36(2) of Regulation (EU) 809/2014 allows the reduction of the control rate for the small farmer scheme  from 5% to 3% when the cross checks based on geospatial applications are carried out.</span>
+      </div>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#ControlRateTypeValue"
+               target="_blank"
+               title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#ControlRateTypeValue">control rate type value</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="ControlRateTypeValue/atLeast3%ForBps/Saps">
+      <h3>At least 5% of all beneficiaries required to observe the agricultural practices having areas covered with permanent grasslands<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#ControlRateTypeValue/atLeast3%ForBps/Saps</p>
+      <div class="comment">
+         <span class="markdown">At least 3% for BPS or SAPS
+
+Art. 36(2) of Regulation (EU) 809/2014 allows the reduction of the control rate for BPS/SAPS from 5% to 3% when the cross checks based on geospatial applications are carried out.</span>
+      </div>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#ControlRateTypeValue"
+               target="_blank"
+               title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#ControlRateTypeValue">control rate type value</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="ControlRateTypeValue/atLeast30%ForProductionOfHemp">
+      <h3>At least 5% of all beneficiaries required to observe the agricultural practices having areas covered with permanent grasslands<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#ControlRateTypeValue/atLeast30%ForProductionOfHemp</p>
+      <div class="comment">
+         <span class="markdown">At least 30% for production of hemp
+
+In sense of Art. 30(g) of Regulation (EU) 809/2014 30% of beneficiaries declaring hemp shall be controlled.
+
+NOTE
+In accordance with art. 32(6) of R (EU) 1307/2013 only those varieties of hemp are eligible that have tetrahydrocannabinol content not exceeding 0,2 %.</span>
+      </div>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#ControlRateTypeValue"
+               target="_blank"
+               title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#ControlRateTypeValue">control rate type value</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="ControlRateTypeValue/atLeast5%ForAreasWithNaturalConstraints">
+      <h3>At least 5% of all beneficiaries required to observe the agricultural practices having areas covered with permanent grasslands<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#ControlRateTypeValue/atLeast5%ForAreasWithNaturalConstraints</p>
+      <div class="comment">
+         <span class="markdown">At least 5% for areas with natural constraints 
+
+In sense of Art. 30(c) of Regulation (EU) 809/2014 5% of beneficiaries applying for the payment for areas with natural constraints shall be controlled.</span>
+      </div>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#ControlRateTypeValue"
+               target="_blank"
+               title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#ControlRateTypeValue">control rate type value</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="ControlRateTypeValue/atLeast5%ForCropSpecificCottonPayment">
+      <h3>At least 5% of all beneficiaries required to observe the agricultural practices having areas covered with permanent grasslands<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#ControlRateTypeValue/atLeast5%ForCropSpecificCottonPayment</p>
+      <div class="comment">
+         <span class="markdown">At least 5% for crop specific cotton payment
+
+In sense of Art. 30(h) of Regulation (EU) 809/2014 5% of beneficiaries applying for the crop specific payment for cotton shall be controlled.</span>
+      </div>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#ControlRateTypeValue"
+               target="_blank"
+               title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#ControlRateTypeValue">control rate type value</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="ControlRateTypeValue/atLeast5%ForRedistributivePayment">
+      <h3>At least 5% of all beneficiaries required to observe the agricultural practices having areas covered with permanent grasslands<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#ControlRateTypeValue/atLeast5%ForRedistributivePayment</p>
+      <div class="comment">
+         <span class="markdown">At least 5% for the redistributive payment
+
+In sense of Art. 30(b) of Regulation (EU) 809/2014 5% of beneficiaries applying for the redistributive payment shall be controlled.</span>
+      </div>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#ControlRateTypeValue"
+               target="_blank"
+               title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#ControlRateTypeValue">control rate type value</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="ControlRateTypeValue/atLeast5%ForSmallFarmersScheme">
+      <h3>At least 5% of all beneficiaries required to observe the agricultural practices having areas covered with permanent grasslands<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#ControlRateTypeValue/atLeast5%ForSmallFarmersScheme</p>
+      <div class="comment">
+         <span class="markdown">At least 5% for the small farmer scheme
+
+In sense of Art. 30(f) of Regulation (EU) 809/2014 5% of beneficiaries applying for the small farmer scheme shall be controlled.</span>
+      </div>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#ControlRateTypeValue"
+               target="_blank"
+               title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#ControlRateTypeValue">control rate type value</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="ControlRateTypeValue/atLeast5%ForVoluntaryCoupledSupport">
+      <h3>At least 5% of all beneficiaries required to observe the agricultural practices having areas covered with permanent grasslands<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#ControlRateTypeValue/atLeast5%ForVoluntaryCoupledSupport</p>
+      <div class="comment">
+         <span class="markdown">At least 5% for the voluntary coupled support
+
+In sense of Art. 30(e) of Regulation (EU) 809/2014 5% of beneficiaries applying for the voluntary coupled shall be controlled.</span>
+      </div>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#ControlRateTypeValue"
+               target="_blank"
+               title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#ControlRateTypeValue">control rate type value</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="ControlRateTypeValue/atLeast5%ForYoungFarmers">
+      <h3>At least 5% of all beneficiaries required to observe the agricultural practices having areas covered with permanent grasslands<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#ControlRateTypeValue/atLeast5%ForYoungFarmers</p>
+      <div class="comment">
+         <span class="markdown">At least 5% for the young farmers
+
+In sense of Art. 30(d) of Regulation (EU) 809/2014 5% of beneficiaries applying for the young farmer payment shall be controlled.</span>
+      </div>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#ControlRateTypeValue"
+               target="_blank"
+               title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#ControlRateTypeValue">control rate type value</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="ControlRateTypeValue/atLeast5%OfAreasCoveredBySensitiveGrassland">
+      <h3>At least 5% of all beneficiaries required to observe the agricultural practices having areas covered with permanent grasslands<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#ControlRateTypeValue/atLeast5%OfAreasCoveredBySensitiveGrassland</p>
+      <div class="comment">
+         <span class="markdown">At least 5% of areas covered by sensitive grassland
+
+The greenling sample in sense of Art. 31(1) of R (EU) 809/2014 shall cover at least 5 % of all beneficiaries having areas covered with permanent grasslands which are environmentally sensitive in areas covered by Council Directive 92/43/EEC[18] or Directive 2009/147/EC of the European Parliament and of the Council[19] and further sensitive areas referred to in Article 45(1) of Regulation (EU) No 1307/2013.</span>
+      </div>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#ControlRateTypeValue"
+               target="_blank"
+               title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#ControlRateTypeValue">control rate type value</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="ControlRateTypeValue/atLeast5%OfFollowingGreeningPractices">
+      <h3>At least 5% of all beneficiaries required to observe the agricultural practices having areas covered with permanent grasslands<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#ControlRateTypeValue/atLeast5%OfFollowingGreeningPractices</p>
+      <div class="comment">
+         <span class="markdown">At least 5% of following greening practices
+
+In sense of Art. 31(1) 5% of beneficiaries required to follow greening practices shall be controlled.</span>
+      </div>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#ControlRateTypeValue"
+               target="_blank"
+               title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#ControlRateTypeValue">control rate type value</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="ControlRateTypeValue/atLeast5%ForBps/Saps">
+      <h3>At least 5% of all beneficiaries required to observe the agricultural practices having areas covered with permanent grasslands<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#ControlRateTypeValue/atLeast5%ForBps/Saps</p>
+      <div class="comment">
+         <span class="markdown">At least 5% for BPS or SAPS
+
+In sense of Art. 30(a) of Regulation (EU) 809/2014 5% of beneficiaries applying for the basic payment or single area payment scheme shall be controlled.
+
+This control sample shall contain at least 5 % of all beneficiaries declaring mainly agricultural areas which are areas naturally kept in a state suitable for grazing in accordance with Article 10(1) of Delegated Regulation (EU) No 639/2014.</span>
+      </div>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#ControlRateTypeValue"
+               target="_blank"
+               title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#ControlRateTypeValue">control rate type value</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="ControlRateTypeValue/atLeast10%OfRegionalImplementation">
+      <h3>At least  5 % of all beneficiaries participating in a regional implementation<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#ControlRateTypeValue/atLeast10%OfRegionalImplementation</p>
+      <div class="comment">
+         <span class="markdown">At least 10 % of all beneficiaries participating in a regional implementation
+
+Increased control rate (5% normal+5% supplementary) in sense of Art. 31(3) for beneficiaries required to follow greening practices.</span>
+      </div>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#ControlRateTypeValue"
+               target="_blank"
+               title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#ControlRateTypeValue">control rate type value</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="ControlRateTypeValue/atLeast5%OfRegionalImplementation">
+      <h3>At least  5 % of all beneficiaries participating in a regional implementation<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#ControlRateTypeValue/atLeast5%OfRegionalImplementation</p>
+      <div class="comment">
+         <span class="markdown">At least 5 % of all beneficiaries participating in a regional implementation
+
+In sense of Art.31(1)(d)  of R (EU) 809/2014 5 % of all beneficiaries participating in a regional implementation in accordance with Article 46(5) of Regulation (EU) No 1307/2013 shall be controlled.</span>
+      </div>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#ControlRateTypeValue"
+               target="_blank"
+               title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#ControlRateTypeValue">control rate type value</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="CrossCheckTypeValue/betweenAgriculturalParcelsAndReferenceParcels">
+      <h3>Between agricultural parcels and reference parcels<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#CrossCheckTypeValue/betweenAgriculturalParcelsAndReferenceParcels</p>
+      <div class="comment">
+         <span class="markdown">-- Definition --
+Between agricultural parcels and reference parcels.
+-- Description --
+Where appropriate, the administrative checks shall include cross-checks: between the agricultural parcels as declared in the single application and/or payment claim and the information as contained in the identification system for 
+
+agricultural parcels per reference parcel in accordance with Article 5(2) of Regulation (EU) No […] [DA IACS] to verify the eligibility for direct aid scheme and/or rural development support measure of the areas as such.
+NOTE. Where the integrated system provides for geo-spatial aid application forms, the cross-checks shall be carried out as spatial intersection of the digitised area declared with the identification system of agricultural parcels. In 
+
+addition, cross-checks shall be carried out to prevent double claiming of the same area.</span>
+      </div>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#CrossCheckTypeValue"
+               target="_blank"
+               title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#CrossCheckTypeValue">cross check type value</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="CrossCheckTypeValue/betweenInterBranchOrganisationsAndTheListOfTheirMembers">
+      <h3>Between inter-branch organisations and the list of their members<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#CrossCheckTypeValue/betweenInterBranchOrganisationsAndTheListOfTheirMembers</p>
+      <div class="comment">
+         <span class="markdown">-- Definition --
+Between inter-branch organisations and the list of their members.
+-- Description --
+Where appropriate, the administrative checks shall include cross-checks: the compliance with  the  criteria for the approval of inter-branch organisations and the list of their members shall be verified at least once every 5 years.</span>
+      </div>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#CrossCheckTypeValue"
+               target="_blank"
+               title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#CrossCheckTypeValue">cross check type value</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="CrossCheckTypeValue/betweenThePaymentEntitlementsAndTheAreaDetermined">
+      <h3>Between the payment entitlements and the area determined<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#CrossCheckTypeValue/betweenThePaymentEntitlementsAndTheAreaDetermined</p>
+      <div class="comment">
+         <span class="markdown">-- Definition --
+Between the payment entitlements and the area determined.
+-- Description --
+Where appropriate, the administrative checks shall include cross-checks:between the payment entitlements and the area determined in order to verify that the entitlements are accompanied by at least an equal number of eligible hectares 
+
+as defined in Article 32(2) to (6) of Regulation (EC) No 1307/2013.</span>
+      </div>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#CrossCheckTypeValue"
+               target="_blank"
+               title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#CrossCheckTypeValue">cross check type value</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="SurveyMethodValue/rapidFieldVisit">
+      <h3>Combined field measurement and CwRS<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#SurveyMethodValue/rapidFieldVisit</p>
+      <div class="comment">
+         <span class="markdown">Rapid field visit
+
+Combined measurement using field (e.g. GNSS)and  Remote Sensing methods.
+
+NOTE 1
+In the event that photo-interpretation of orthoimages (satellite or aerial) do not provide results that would permit definitive conclusions to be drawn to the satisfaction of the competent authority concerning the eligibility or the correct size of the area that is the subject of administrative or on-the-spot checks [Art. 24(4) of R 809/2014].
+
+NOTE 2
+It follows an inconclusive CAPI.</span>
+      </div>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#SurveyMethodValue"
+               target="_blank"
+               title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#SurveyMethodValue">survey method value</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="OnTheSpotCheckTypeValue/controlArea">
+      <h3>Control area<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#OnTheSpotCheckTypeValue/controlArea</p>
+      <div class="comment">
+         <span class="markdown">Control area
+
+Verification of the declared area values by means of measurements.</span>
+      </div>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#OnTheSpotCheckTypeValue"
+               target="_blank"
+               title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#OnTheSpotCheckTypeValue">on the spot check type value</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="OnTheSpotCheckTypeValue/supportingDocuments">
+      <h3>Control cross-compliance<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#OnTheSpotCheckTypeValue/supportingDocuments</p>
+      <div class="comment">
+         <span class="markdown">Supporting Documents
+
+Verification of the existence of the requisite supporting documents [Art. 47(1)(b) of  R 1306/2013]</span>
+      </div>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#OnTheSpotCheckTypeValue"
+               target="_blank"
+               title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#OnTheSpotCheckTypeValue">on the spot check type value</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="OnTheSpotCheckTypeValue/commitmentsAndObligations">
+      <h3>Cross compliance<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#OnTheSpotCheckTypeValue/commitmentsAndObligations</p>
+      <div class="comment">
+         <span class="markdown">Cross compliance
+
+OTSC in sense of Art. 96(3) of R 1306/2013 and Art. 26(3) of R 809/2014.</span>
+      </div>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#OnTheSpotCheckTypeValue"
+               target="_blank"
+               title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#OnTheSpotCheckTypeValue">on the spot check type value</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="OnTheSpotCheckTypeValue/complianceToEuLaw">
+      <h3>Cross compliance<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#OnTheSpotCheckTypeValue/complianceToEuLaw</p>
+      <div class="comment">
+         <span class="markdown">Compliance to EU law
+
+As required by Art. 24(2) of R 809/2014.</span>
+      </div>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#OnTheSpotCheckTypeValue"
+               target="_blank"
+               title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#OnTheSpotCheckTypeValue">on the spot check type value</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="OnTheSpotCheckTypeValue/complianceToNationalLaw">
+      <h3>Cross compliance<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#OnTheSpotCheckTypeValue/complianceToNationalLaw</p>
+      <div class="comment">
+         <span class="markdown">Compliance to national law
+
+As required by Art. 24(2) of R 809/2014.</span>
+      </div>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#OnTheSpotCheckTypeValue"
+               target="_blank"
+               title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#OnTheSpotCheckTypeValue">on the spot check type value</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="OnTheSpotCheckTypeValue/correctnessAndCompletenessOfInformation">
+      <h3>Cross compliance<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#OnTheSpotCheckTypeValue/correctnessAndCompletenessOfInformation</p>
+      <div class="comment">
+         <span class="markdown">Correctness and completeness of the information
+
+As required by Art. 24(1)(a) of R 809/2014.</span>
+      </div>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#OnTheSpotCheckTypeValue"
+               target="_blank"
+               title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#OnTheSpotCheckTypeValue">on the spot check type value</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="OnTheSpotCheckTypeValue/crossCompliance">
+      <h3>Cross compliance<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#OnTheSpotCheckTypeValue/crossCompliance</p>
+      <div class="comment">
+         <span class="markdown">Cross compliance
+
+OTSC in sense of Art. 96(3) of R 1306/2013.</span>
+      </div>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#OnTheSpotCheckTypeValue"
+               target="_blank"
+               title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#OnTheSpotCheckTypeValue">on the spot check type value</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="OnTheSpotCheckTypeValue/crossComplianceStandards">
+      <h3>Cross compliance<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#OnTheSpotCheckTypeValue/crossComplianceStandards</p>
+      <div class="comment">
+         <span class="markdown">Cross compliance standards
+
+As required by Art. 24(1)(c) of R 809/2014.</span>
+      </div>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#OnTheSpotCheckTypeValue"
+               target="_blank"
+               title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#OnTheSpotCheckTypeValue">on the spot check type value</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="OnTheSpotCheckTypeValue/eligibilityCriteria">
+      <h3>Cross compliance<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#OnTheSpotCheckTypeValue/eligibilityCriteria</p>
+      <div class="comment">
+         <span class="markdown">Cross compliance
+
+OTSC in sense of Art. 96(3) of R 1306/2013, Art. 24(1)(b) and 26(3) of R 809/2014.</span>
+      </div>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#OnTheSpotCheckTypeValue"
+               target="_blank"
+               title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#OnTheSpotCheckTypeValue">on the spot check type value</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="ControlRateGroupAnimalAidSchemaValue/placeholder">
+      <h3>Currently out of scope<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#ControlRateGroupAnimalAidSchemaValue/placeholder</p>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#ControlRateGroupAnimalAidSchemaValue"
+               target="_blank"
+               title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#ControlRateGroupAnimalAidSchemaValue">control rate group animal aid schema value</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="ControlRateGroupRuralDevelopmentMeasureValue/placeholder">
+      <h3>Currently out of scope<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#ControlRateGroupRuralDevelopmentMeasureValue/placeholder</p>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#ControlRateGroupRuralDevelopmentMeasureValue"
+               target="_blank"
+               title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#ControlRateGroupRuralDevelopmentMeasureValue">control rate group rural development measure value</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="SurveyMethodValue/cwrs">
+      <h3>CwRS<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#SurveyMethodValue/cwrs</p>
+      <div class="comment">
+         <span class="markdown">CwRS
+
+Control with Remote Sensing (VHR, or HR). [Art. 74(3) of R 1306/2013].
+
+NOTE.
+It includes CAPI.</span>
+      </div>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#SurveyMethodValue"
+               target="_blank"
+               title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#SurveyMethodValue">survey method value</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="InspectorsSurveyObjectTypeValue/ecologicalFocusArea">
+      <h3>Ecological focus area<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#InspectorsSurveyObjectTypeValue/ecologicalFocusArea</p>
+      <div class="comment">
+         <span class="markdown">Ecological focus area
+
+Ecological focus areas as referred to in Article 46 of R (EU) No1307/2013 and its Delegated Regulation (EU) No 639/2014.</span>
+      </div>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#InspectorsSurveyObjectTypeValue"
+               target="_blank"
+               title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#InspectorsSurveyObjectTypeValue">inspectors survey object type value</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="SurveyMethodValue/fieldMeasurement">
+      <h3>Field measurement<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#SurveyMethodValue/fieldMeasurement</p>
+      <div class="comment">
+         <span class="markdown">Field measurement
+
+Any field measurement including GNSS [Art. 74(3) of R 1306/2013].</span>
+      </div>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#SurveyMethodValue"
+               target="_blank"
+               title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#SurveyMethodValue">survey method value</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="InspectorsSurveyObjectTypeValue/holdingSite">
+      <h3>Holding site<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#InspectorsSurveyObjectTypeValue/holdingSite</p>
+      <div class="comment">
+         <span class="markdown">Holding site
+
+Measurement of the whole holding.</span>
+      </div>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#InspectorsSurveyObjectTypeValue"
+               target="_blank"
+               title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#InspectorsSurveyObjectTypeValue">inspectors survey object type value</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="ControlRateGroupAnimalAidSchemaValue">
+      <h3>List of control rate groups for animal aid schemas<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#ControlRateGroupAnimalAidSchemaValue</p>
+      <div class="comment">
+         <span class="markdown">Control Rate Group Animal Aid Scheme Value
+
+List of control rate groups for animal aid schemas.
+
+NOTE
+Currently placeholder only.</span>
+      </div>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="http://www.w3.org/2004/02/skos/core#ConceptScheme"
+               target="_blank"
+               title="http://www.w3.org/2004/02/skos/core#ConceptScheme">concept scheme</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="ControlRateTypeValue">
+      <h3>List of control rate groups for greening<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#ControlRateTypeValue</p>
+      <div class="comment">
+         <span class="markdown">Control rate type value
+
+List of applicable control rate values as prescribed by Art. 30, 31, 36(2) and 36(6) of R 809/2014.
+
+NOTE
+This code list currently does not contain values for rural development measures (Art. 32) and animal aid schemes (Art. 33 of R 809/2014).</span>
+      </div>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="http://www.w3.org/2004/02/skos/core#ConceptScheme"
+               target="_blank"
+               title="http://www.w3.org/2004/02/skos/core#ConceptScheme">concept scheme</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="ControlRateGroupRuralDevelopmentMeasureValue">
+      <h3>List of control rate groups for rural development measures<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#ControlRateGroupRuralDevelopmentMeasureValue</p>
+      <div class="comment">
+         <span class="markdown">Control Rate Group Rural Development Measure Value
+
+List of control rate groups for rural development measures.
+
+NOTE. Currently placeholder only.</span>
+      </div>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="http://www.w3.org/2004/02/skos/core#ConceptScheme"
+               target="_blank"
+               title="http://www.w3.org/2004/02/skos/core#ConceptScheme">concept scheme</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="InspectorsSurveyObjectTypeValue">
+      <h3>List of feature types<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#InspectorsSurveyObjectTypeValue</p>
+      <div class="comment">
+         <span class="markdown">Inspectors survey type value
+
+List of possible real objects measured by an inspector.
+
+NOTE
+List may be extended or subtracted depending on how MS organizing on-the-spot check process.</span>
+      </div>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="http://www.w3.org/2004/02/skos/core#ConceptScheme"
+               target="_blank"
+               title="http://www.w3.org/2004/02/skos/core#ConceptScheme">concept scheme</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="CrossCheckTypeValue">
+      <h3>List of on the cross-check types<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#CrossCheckTypeValue</p>
+      <div class="comment">
+         <span class="markdown">-- Definition --
+List of cross-check types.
+-- Description --
+List of cross-check types.</span>
+      </div>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="http://www.w3.org/2004/02/skos/core#ConceptScheme"
+               target="_blank"
+               title="http://www.w3.org/2004/02/skos/core#ConceptScheme">concept scheme</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="OnTheSpotCheckTypeValue">
+      <h3>List of on the spot check types<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#OnTheSpotCheckTypeValue</p>
+      <div class="comment">
+         <span class="markdown">On-the-spot check type value
+
+List of on the spot check types. that describe the purpose of the control.</span>
+      </div>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="http://www.w3.org/2004/02/skos/core#ConceptScheme"
+               target="_blank"
+               title="http://www.w3.org/2004/02/skos/core#ConceptScheme">concept scheme</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="SamplingStrategyTypeValue">
+      <h3>List of sampling strategy types<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#SamplingStrategyTypeValue</p>
+      <div class="comment">
+         <span class="markdown">Sampling Strategy Type Value
+
+List of sampling strategy types.
+
+In accordance with Preamble (34) of R 809/2014 sampling should comprise a random part in order to obtain a representative error rate and a risk based part for the following Payment/support schemes:
+	- greening payment
+	- animal aid schemes
+	- rural development measure
+
+NOTE 1
+To ensure a relevant and efficient risk analysis, the effectiveness of the risk analysis should be assessed and updated on an annual basis taking into account the relevance of each risk factor, comparing the results of randomly and risk-based selected samples and the specific situation [Preamble (68) and Art. 34(5) of R 809/2014].
+
+NOTE 2
+The sampling method should be selected and documented by the competent authority of the MS/Region. The values of the code list can be extended.
+
+NOTE 3
+The exemplary values of the code list in this application schema are taken from DSCG/2014/32 guideline and best statistical practices.</span>
+      </div>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="http://www.w3.org/2004/02/skos/core#ConceptScheme"
+               target="_blank"
+               title="http://www.w3.org/2004/02/skos/core#ConceptScheme">concept scheme</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="SurveyMethodValue">
+      <h3>List of survey types<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#SurveyMethodValue</p>
+      <div class="comment">
+         <span class="markdown">Survey method value
+
+List of survey method types in sense of Art. 74(3) of R 1306/2013.</span>
+      </div>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="http://www.w3.org/2004/02/skos/core#ConceptScheme"
+               target="_blank"
+               title="http://www.w3.org/2004/02/skos/core#ConceptScheme">concept scheme</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="SamplingStrategyTypeValue/simpleRandomBasedSelection">
+      <h3>Random based sampling strategy<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#SamplingStrategyTypeValue/simpleRandomBasedSelection</p>
+      <div class="comment">
+         <span class="markdown">Simple random based selection
+
+Selection from the full population of the dossiers through generation of a random key [Section 1.3.2 of DSCG/2014/32].
+
+NOTE 1
+The population has to be homogenous for this method.
+
+NOTE 2
+This method requires waiting until the full population is known.</span>
+      </div>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#SamplingStrategyTypeValue"
+               target="_blank"
+               title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#SamplingStrategyTypeValue">sampling strategy type value</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="InspectorsSurveyObjectTypeValue/referenceParcel">
+      <h3>Reference parcel<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#InspectorsSurveyObjectTypeValue/referenceParcel</p>
+      <div class="comment">
+         <span class="markdown">Reference parcel
+
+Reference parcel as defined in R (EU) 1307/2013.</span>
+      </div>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#InspectorsSurveyObjectTypeValue"
+               target="_blank"
+               title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#InspectorsSurveyObjectTypeValue">inspectors survey object type value</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="SamplingStrategyTypeValue/riskBasedCartSelection">
+      <h3>Risk based sampling strategy<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#SamplingStrategyTypeValue/riskBasedCartSelection</p>
+      <div class="comment">
+         <span class="markdown">Risk based CART selection
+
+A probability proportional risk based method for selecting and grouping items (applications) in risk groups based on a specific criterion (e.g. area not found) [DSCG/2014/32].</span>
+      </div>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#SamplingStrategyTypeValue"
+               target="_blank"
+               title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#SamplingStrategyTypeValue">sampling strategy type value</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="SamplingStrategyTypeValue/riskBasedMultiCriteriaSelection">
+      <h3>Risk based sampling strategy<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#SamplingStrategyTypeValue/riskBasedMultiCriteriaSelection</p>
+      <div class="comment">
+         <span class="markdown">Risk based multi-criteria selection
+
+Risk based selection based on multi-criteria analysis.
+Examples of aspects of analysis:
+	- areas of recent land cover / land use change (from third party data)
+	- Landscape
+	- Agronomic conditions
+	- Non-participation in FAS or certification schemes of farmers
+
+NOTE 
+The method is especially applicable for selecting risk based CwRS zones.</span>
+      </div>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#SamplingStrategyTypeValue"
+               target="_blank"
+               title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#SamplingStrategyTypeValue">sampling strategy type value</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="SamplingStrategyTypeValue/simpleRiskBasedSelection">
+      <h3>Risk based sampling strategy<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#SamplingStrategyTypeValue/simpleRiskBasedSelection</p>
+      <div class="comment">
+         <span class="markdown">Simple risk based selection
+
+Sampling process based on a single criterion retained to be effective in course of risk analysis. Input data for risk analysis can be taken from OTSC report of the previous year, other subsystems of IACS, third party data, etc.
+
+NOTE 1
+The effectiveness of the criterion has to be proved by comparing the performance results from a random sample and a sample based on the criterion. 
+
+NOTE 2
+The performance criterion has to be documented before  starting the sampling process.</span>
+      </div>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#SamplingStrategyTypeValue"
+               target="_blank"
+               title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#SamplingStrategyTypeValue">sampling strategy type value</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="RiskTypeValue">
+      <h3>risk type value<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#RiskTypeValue</p>
+      <div class="comment">
+         <span class="markdown">Risk type value
+
+Preamble (33) of R (EU) 809/2014 requires that the competent authority should establish the risk factors targeting the areas where the risk of errors is the highest.
+
+NOTE
+Risk criteria should be assessed and updated on an annual basis taking into account the relevance of each risk criterion, comparing the results of randomly and risk-based selected samples, the specific situation in the Member States and the nature of the non-compliance.</span>
+      </div>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="http://www.w3.org/2004/02/skos/core#ConceptScheme"
+               target="_blank"
+               title="http://www.w3.org/2004/02/skos/core#ConceptScheme">concept scheme</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="RiskTypeValue/areaOfIntensiveLcOrLuChange">
+      <h3>risk type value/area of intensive lc or lu change<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#RiskTypeValue/areaOfIntensiveLcOrLuChange</p>
+      <div class="comment">
+         <span class="markdown">Areas of Intensive LC or LU change
+
+Areas of intensive land cover and land use change may be detected in third party data e.g.
+	- orthoimagery
+	- cadastral maps
+	- road maps
+	- topographic maps
+	- development plans</span>
+      </div>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#RiskTypeValue"
+               target="_blank"
+               title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#RiskTypeValue">risk type value</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="RiskTypeValue/eligibilityCriteria">
+      <h3>risk type value/eligibility criteria<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#RiskTypeValue/eligibilityCriteria</p>
+      <div class="comment">
+         <span class="markdown">Eligibility Criteria
+
+Member States are also authorised to draw the control sample on the basis of the samples of beneficiaries that are selected for an on-the-spot check as regards eligibility criteria. [Preamble (71) of R 809/2014].</span>
+      </div>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#RiskTypeValue"
+               target="_blank"
+               title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#RiskTypeValue">risk type value</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="RiskTypeValue/nonParticipationInCertificationScheme">
+      <h3>risk type value/non participation in certification scheme<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#RiskTypeValue/nonParticipationInCertificationScheme</p>
+      <div class="comment">
+         <span class="markdown">Non-participation in certification scheme
+
+At risk based sampling MS may consider beneficiary’s participation in a certification system if the scheme in question is relevant for the requirements and standards concerned [Art. 69(1)(b) of R 809/2014].</span>
+      </div>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#RiskTypeValue"
+               target="_blank"
+               title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#RiskTypeValue">risk type value</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="RiskTypeValue/nonParticipationInFas">
+      <h3>risk type value/non participation in fas<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#RiskTypeValue/nonParticipationInFas</p>
+      <div class="comment">
+         <span class="markdown">Non participation in FAS
+
+Sampling of OTSC for cross-compliance can be improved by taking into account the risk analysis concerning the beneficiary’s participation in the farm advisory system [Preamble (69) and Art. 69(1)(a) of R 809/2014].</span>
+      </div>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#RiskTypeValue"
+               target="_blank"
+               title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#RiskTypeValue">risk type value</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="SampleTypeValue">
+      <h3>sample type value<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#SampleTypeValue</p>
+      <div class="comment">
+         <span class="markdown">Sample Type value
+
+The sample type property shall be attributed to each sampled item (application). One item can be sampled to one or more payment/support schemes. 
+
+NOTE
+The categories of sample type values have to support the traceability of the sampling cascade. This is the reason for distinguishing the initial and the top-up samples for BPS/SAPS.</span>
+      </div>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="http://www.w3.org/2004/02/skos/core#ConceptScheme"
+               target="_blank"
+               title="http://www.w3.org/2004/02/skos/core#ConceptScheme">concept scheme</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="SampleTypeValue/areasWithNaturalConstraints">
+      <h3>sample type value/areas with natural constraints<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#SampleTypeValue/areasWithNaturalConstraints</p>
+      <div class="comment">
+         <span class="markdown">Areas with natural constraints
+
+Item selected for controlling the correctness of payments for areas with natural constraints.</span>
+      </div>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#SampleTypeValue"
+               target="_blank"
+               title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#SampleTypeValue">sample type value</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="SampleTypeValue/collectiveImplementation">
+      <h3>sample type value/collective implementation<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#SampleTypeValue/collectiveImplementation</p>
+      <div class="comment">
+         <span class="markdown">Collective implementation
+
+Items selected for controlling beneficiaries participating in collective implementation of EFA. The composition of the population
+	- 1,0-1,25% selected randomly 
+	- 3,75-4,0% selected on risk base
+
+Issue:
+The purpose of collective implementation (See Art. 46(a) of 1307/2013) and regional implementation (see Art. 46(3) of R 639/2014) is to form contiguous areas of EFA. If so, what is the reason to have separate samples for collective implementation, regional implementation and contiguous EFA?</span>
+      </div>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#SampleTypeValue"
+               target="_blank"
+               title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#SampleTypeValue">sample type value</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="SampleTypeValue/contiguousEfa">
+      <h3>sample type value/contiguous efa<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#SampleTypeValue/contiguousEfa</p>
+      <div class="comment">
+         <span class="markdown">Contiguous EFA
+
+Items selected for controlling contiguous EFA
+
+Issue:
+The purpose of collective implementation (See Art. 46(a) of 1307/2013) and regional implementation (see Art. 46(3) of R 639/2014) is to form contiguous areas of EFA. If so, what is the reason to have separate samples for collective implementation, regional implementation and contiguous EFA?</span>
+      </div>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#SampleTypeValue"
+               target="_blank"
+               title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#SampleTypeValue">sample type value</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="SampleTypeValue/cotton">
+      <h3>sample type value/cotton<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#SampleTypeValue/cotton</p>
+      <div class="comment">
+         <span class="markdown">Cotton
+
+Item selected for controlling beneficiaries applying for the specific payment for cotton.</span>
+      </div>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#SampleTypeValue"
+               target="_blank"
+               title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#SampleTypeValue">sample type value</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="SampleTypeValue/exemptedFromGreening">
+      <h3>sample type value/exempted from greening<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#SampleTypeValue/exemptedFromGreening</p>
+      <div class="comment">
+         <span class="markdown">Exempted from greening
+
+Items selected to control beneficiaries exempted from greening obligations by not meeting the specified thresholds.  They include:
+	- Beneficiaries exempted from crop diversification (Art. 44(3) of R 1307/2013)
+	- Beneficiaries exempted from EFA (Art. 46 (1) of R 307/2013)</span>
+      </div>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#SampleTypeValue"
+               target="_blank"
+               title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#SampleTypeValue">sample type value</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="SampleTypeValue/hemp">
+      <h3>sample type value/hemp<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#SampleTypeValue/hemp</p>
+      <div class="comment">
+         <span class="markdown">Hemp
+
+Items selected for controlling beneficiaries growing hemp.</span>
+      </div>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#SampleTypeValue"
+               target="_blank"
+               title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#SampleTypeValue">sample type value</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="SampleTypeValue/initial1%And1,25%ForBps/Saps">
+      <h3>sample type value/initial1% and1,25% for bps/ saps<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#SampleTypeValue/initial1%And1,25%ForBps/Saps</p>
+      <div class="comment">
+         <span class="markdown">Initial 1% and 1,25% for BPS/SAPS
+
+It is the initial random sample drawn in sense of Art. 24(2)(a). This sample constitutes the basis of the following further samples:
+	- Random part of the greening samples
+	- Redistributive payment
+	- Areas with natural constraints
+	- Young farmers
+	- Voluntary couples support
+	- Hemp
+	- Cotton</span>
+      </div>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#SampleTypeValue"
+               target="_blank"
+               title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#SampleTypeValue">sample type value</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="SampleTypeValue/observingGreening">
+      <h3>sample type value/observing greening<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#SampleTypeValue/observingGreening</p>
+      <div class="comment">
+         <span class="markdown">Observing greening
+
+Items selected for controlling beneficiaries observing greening. The composition of the population
+	- 1,0-1,25% selected randomly 
+	- 3,75-4,0% selected on risk base
+The related sample includes items selected for the sensitive grassland sample.</span>
+      </div>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#SampleTypeValue"
+               target="_blank"
+               title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#SampleTypeValue">sample type value</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="SampleTypeValue/reconversionOfPg">
+      <h3>sample type value/reconversion of pg<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#SampleTypeValue/reconversionOfPg</p>
+      <div class="comment">
+         <span class="markdown">Reconversion of permanent grassland
+
+Items corresponding to beneficiaries obliged to re-convert agricultural areas in permanent grassland.</span>
+      </div>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#SampleTypeValue"
+               target="_blank"
+               title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#SampleTypeValue">sample type value</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="SampleTypeValue/reconversionOfSensitivePg">
+      <h3>sample type value/reconversion of sensitive pg<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#SampleTypeValue/reconversionOfSensitivePg</p>
+      <div class="comment">
+         <span class="markdown">Reconversion of sensitive permanent grassland
+
+Items corresponding to beneficiaries obliged to re-convert agricultural areas in sensitive permanent grassland.</span>
+      </div>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#SampleTypeValue"
+               target="_blank"
+               title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#SampleTypeValue">sample type value</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="SampleTypeValue/redistributivePayment">
+      <h3>sample type value/redistributive payment<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#SampleTypeValue/redistributivePayment</p>
+      <div class="comment">
+         <span class="markdown">Redistributive payment
+
+Item selected for controlling beneficiaries applying for redistributive payment.</span>
+      </div>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#SampleTypeValue"
+               target="_blank"
+               title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#SampleTypeValue">sample type value</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="SampleTypeValue/regionalImplementation">
+      <h3>sample type value/regional implementation<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#SampleTypeValue/regionalImplementation</p>
+      <div class="comment">
+         <span class="markdown">Regional implementation
+
+Items selected for controlling beneficiaries participating in regional implementation of EFA. The composition of the population
+	- 1,0-1,25% selected randomly 
+	- 3,75-4,0% selected on risk base
+
+Issue:
+The purpose of collective implementation (See Art. 46(a) of 1307/2013) and regional implementation (see Art. 46(3) of R 639/2014) is to form contiguous areas of EFA. If so, what is the reason to have separate samples for collective implementation, regional implementation and contiguous EFA?</span>
+      </div>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#SampleTypeValue"
+               target="_blank"
+               title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#SampleTypeValue">sample type value</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="SampleTypeValue/regional/NationalCertificationScheme">
+      <h3>sample type value/regional/ national certification scheme<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#SampleTypeValue/regional/NationalCertificationScheme</p>
+      <div class="comment">
+         <span class="markdown">Regional/national certification scheme
+
+Items selected for controlling greening according to Art.43 (3)(b) of R 1307/2013. The equivalent practices are listed in Annex IX of this regulation and the AgriculturalEquivalentPracticeTypeValue code list of the Aid applications and payment claims application schema.</span>
+      </div>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#SampleTypeValue"
+               target="_blank"
+               title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#SampleTypeValue">sample type value</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="SampleTypeValue/sensitiveGrassland">
+      <h3>sample type value/sensitive grassland<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#SampleTypeValue/sensitiveGrassland</p>
+      <div class="comment">
+         <span class="markdown">Sensitive grassland
+
+Items selected for controlling sensitive grassland. The composition of the population
+	- 1,0-1,25% selected randomly 
+	- 3,75-4,0% selected on risk base
+
+NOTE
+This sample is included in the generic sample of beneficiaries that are mandated to observe greening.</span>
+      </div>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#SampleTypeValue"
+               target="_blank"
+               title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#SampleTypeValue">sample type value</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="SampleTypeValue/smallFarmers">
+      <h3>sample type value/small farmers<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#SampleTypeValue/smallFarmers</p>
+      <div class="comment">
+         <span class="markdown">Small farmers
+
+Item selected for controlling beneficiaries participating in the small farmers scheme.</span>
+      </div>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#SampleTypeValue"
+               target="_blank"
+               title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#SampleTypeValue">sample type value</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="SampleTypeValue/topUpForBps/Saps">
+      <h3>sample type value/top up for bps/ saps<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#SampleTypeValue/topUpForBps/Saps</p>
+      <div class="comment">
+         <span class="markdown">Top-up for BPS/SAPS
+
+Randomly selected items to complete the BPS/SAPS population after integrating the items out of the following samples: 
+	- Initial 1,0-2,15% sample for BPS SAPS
+	- Greening samples
+	- Redistributive payment
+	- Areas with natural constraints
+	- Young farmers
+	- Voluntary couples support
+	- Hemp
+	- Cotton</span>
+      </div>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#SampleTypeValue"
+               target="_blank"
+               title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#SampleTypeValue">sample type value</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="SampleTypeValue/voluntaryCoupledSupport">
+      <h3>sample type value/voluntary coupled support<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#SampleTypeValue/voluntaryCoupledSupport</p>
+      <div class="comment">
+         <span class="markdown">Voluntary coupled support
+
+Item selected for controlling beneficiaries applying for voluntary coupled support.</span>
+      </div>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#SampleTypeValue"
+               target="_blank"
+               title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#SampleTypeValue">sample type value</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="SampleTypeValue/youngFarmers">
+      <h3>sample type value/young farmers<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#SampleTypeValue/youngFarmers</p>
+      <div class="comment">
+         <span class="markdown">Young farmers
+
+Item selected for controlling beneficiaries applying for young farmer payment.</span>
+      </div>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#SampleTypeValue"
+               target="_blank"
+               title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#SampleTypeValue">sample type value</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="SamplingStrategyTypeValue/clusteredRandomSelection">
+      <h3>sampling strategy type value/clustered random selection<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#SamplingStrategyTypeValue/clusteredRandomSelection</p>
+      <div class="comment">
+         <span class="markdown">Clustered random selection
+
+Cluster sampling is a selection of items that are clustered (e.g. spatially or temporally) within the population.
+
+EXAMPLE
+Geographic cluster of a CwRS zone.
+
+NOTE 1
+The criteria for each cluster has to be registered.
+
+NOTE 2
+The clusters regarded as primary samples by geographic or temporal distribution can be further sampled by a second level of sampling. In that case the method is called multistage sampling.</span>
+      </div>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#SamplingStrategyTypeValue"
+               target="_blank"
+               title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#SamplingStrategyTypeValue">sampling strategy type value</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="SamplingStrategyTypeValue/multistageSampling">
+      <h3>sampling strategy type value/multistage sampling<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#SamplingStrategyTypeValue/multistageSampling</p>
+      <div class="comment">
+         <span class="markdown">Multistage sampling
+
+Further, secondary sampling of clusters that have been  selected on geographic, or temporal criteria.</span>
+      </div>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#SamplingStrategyTypeValue"
+               target="_blank"
+               title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#SamplingStrategyTypeValue">sampling strategy type value</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="SamplingStrategyTypeValue/stratifiedRandomSelection">
+      <h3>sampling strategy type value/stratified random selection<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#SamplingStrategyTypeValue/stratifiedRandomSelection</p>
+      <div class="comment">
+         <span class="markdown">Stratified random selection
+
+Method applicable when the population to be sampled is not homogenous. In order to achieve homogeneity, the population has to be sub-divided into strata based on objective criteria.
+
+NOTE
+The criteria for each stratum has to be registered.</span>
+      </div>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#SamplingStrategyTypeValue"
+               target="_blank"
+               title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#SamplingStrategyTypeValue">sampling strategy type value</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="SamplingStrategyTypeValue/systematicRandomBasedSelection">
+      <h3>sampling strategy type value/systematic random based selection<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#SamplingStrategyTypeValue/systematicRandomBasedSelection</p>
+      <div class="comment">
+         <span class="markdown">Systematic random selection
+
+Random selection of the first initial item (i.e. application) and taking the rest based on the sequential number (e.g. every 100 application) [Section 1.3.2 of DSCG/2014/32].
+
+NOTE 1
+This method allows to start OTSC before the end of the application period.
+
+NOTE 2
+The sequential number has to be automatically assigned to the applications, or the key (i.e. property or properties) that serve for the basis of selection has to be specified and documented before starting the sampling process.
+
+NOTE 3
+The population has to be homogenous.</span>
+      </div>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#SamplingStrategyTypeValue"
+               target="_blank"
+               title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#SamplingStrategyTypeValue">sampling strategy type value</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="CrossCheckTypeValue/toVerifyDeclaredEntitlementsOnDeclaredAgriculturalParcels">
+      <h3>Verify declared payment entitlements on declared agricultural parcels<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#CrossCheckTypeValue/toVerifyDeclaredEntitlementsOnDeclaredAgriculturalParcels</p>
+      <div class="comment">
+         <span class="markdown">-- Definition --
+Verify declared payment entitlements on declared agricultural parcels.
+-- Description --
+Where appropriate, the administrative checks shall include cross-checks:o n declared payment entitlements and on declared agricultural parcels, respectively, in order to avoid multiple granting of the same aid or support in respect of 
+
+the same calendar or claim year and to prevent any undue accumulation of aid granted under area-related aid schemes listed in Annex I to Regulation (EU) No 1307/2013 and Annex VI to Council Regulation (EC) No 73/2009[17], and area-
+
+related support measures as defined in point (21) of the second subparagraph of Article 2 of Delegated Regulation (EU) No […] [DA IACS].</span>
+      </div>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#CrossCheckTypeValue"
+               target="_blank"
+               title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#CrossCheckTypeValue">cross check type value</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="CrossCheckTypeValue/toVerifyEligibilityForTheAnimalAid">
+      <h3>Verify eligibility for the animal aid<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#CrossCheckTypeValue/toVerifyEligibilityForTheAnimalAid</p>
+      <div class="comment">
+         <span class="markdown">-- Definition --
+Verify eligibility for the animal aid.
+-- Description --
+Where appropriate, the administrative checks shall include cross-checks: by means of the system for the identification and registration of animals, to verify eligibility for the aid and/or support and to avoid undue multiple granting of 
+
+the same aid and/or support in respect of the same calendar or claim year.</span>
+      </div>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#CrossCheckTypeValue"
+               target="_blank"
+               title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#CrossCheckTypeValue">cross check type value</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="CrossCheckTypeValue/toVerifyEligibilityForTheIncreaseOfTheAid">
+      <h3>Verify eligibility for the increase of the aid<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#CrossCheckTypeValue/toVerifyEligibilityForTheIncreaseOfTheAid</p>
+      <div class="comment">
+         <span class="markdown">-- Definition --
+Verify eligibility for the increase of the aid.
+-- Description --
+Where appropriate, the administrative checks shall include cross-checks:between the declarations of the beneficiary in the single application to be a member of an approved inter-branch organisation, the information under Article 16(8) 
+
+of this Regulation and the information transmitted by the approved inter-branch organisations concerned, to verify eligibility for the increase of the aid provided for in Article 60(2) of Regulation (EU) No 1307/2013.</span>
+      </div>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#CrossCheckTypeValue"
+               target="_blank"
+               title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#CrossCheckTypeValue">cross check type value</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="CrossCheckTypeValue/toVerifyPaymentEntitlements">
+      <h3>Verify payment entitlements<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#CrossCheckTypeValue/toVerifyPaymentEntitlements</p>
+      <div class="comment">
+         <span class="markdown">-- Definition --
+Verify payment entitlements.
+-- Description --
+Where appropriate, the administrative checks shall include cross-checks: on the payment entitlements to verify their existence and the eligibility.</span>
+      </div>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#CrossCheckTypeValue"
+               target="_blank"
+               title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#CrossCheckTypeValue">cross check type value</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+</div><div id="legend">
+<h2>Legend <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+<div   class="entity">
+<sup class="type-ni" title="Named Individuals">ni</sup>: Named Individuals
+</div>
+</div>
+</div>
+    
+
+<!--REFERENCES SECTION-->
+  <div id="references">
+<h2 id="ref" class="list">References <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+<span class="markdown">
+Add your references here. It is recommended to have them as a list.</span>
+
+</div>
+<div id="acknowledgments">
+<h2 id="ack" class="list">Acknowledgments <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+<p>
+The authors would like to thank <a href="http://www.essepuntato.it/">Silvio Peroni</a> for developing <a href="http://www.essepuntato.it/lode">LODE</a>, a Live OWL Documentation Environment, which is used for representing the Cross Referencing Section of this document and <a href="https://w3id.org/people/dgarijo">Daniel Garijo</a> for developing <a href="https://github.com/dgarijo/Widoco">Widoco</a>, the program used to create the template used in this documentation.</p>
+</div>
+
+
+</div>
+</body>
+</html>

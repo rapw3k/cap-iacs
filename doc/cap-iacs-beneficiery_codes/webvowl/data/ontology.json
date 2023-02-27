@@ -1,0 +1,185 @@
+{
+  "_comment" : "Created with OWL2VOWL (version 0.3.5), http://vowl.visualdataweb.org",
+  "header" : {
+    "languages" : [ "en", "undefined" ],
+    "baseIris" : [ "http://www.w3.org/1999/02/22-rdf-syntax-ns", "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-beneficiery", "http://www.w3.org/2000/01/rdf-schema", "http://www.w3.org/2001/XMLSchema", "http://www.w3.org/2004/02/skos/core" ],
+    "title" : {
+      "en" : "JRC IACS - System to Record the Identity of Each Beneficiary Code Lists"
+    },
+    "iri" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-beneficiery/code",
+    "version" : "3.0",
+    "author" : [ "_:genid2147483648" ],
+    "description" : {
+      "en" : "Ontology of the system to record the identity of each beneficiary code lists used in IACS, generated from the transformation of the corresponding JRC application schema"
+    },
+    "labels" : {
+      "en" : "System to record the identity of each beneficiary code lists"
+    },
+    "other" : {
+      "creator" : [ {
+        "identifier" : "creator",
+        "language" : "undefined",
+        "value" : "_:genid2147483648",
+        "type" : "label"
+      } ],
+      "rights" : [ {
+        "identifier" : "rights",
+        "language" : "en",
+        "value" : "This ontology is distributed under Creative Commons Attribution 4.0 License - http://creativecommons.org/licenses/by/4.0",
+        "type" : "label"
+      } ],
+      "source" : [ {
+        "identifier" : "source",
+        "language" : "en",
+        "value" : "JRC IACS application schema. https://doi.org/10.1016/j.landusepol.2016.05.023",
+        "type" : "label"
+      } ],
+      "versionInfo" : [ {
+        "identifier" : "versionInfo",
+        "language" : "undefined",
+        "value" : "3.0",
+        "type" : "label"
+      } ],
+      "title" : [ {
+        "identifier" : "title",
+        "language" : "en",
+        "value" : "JRC IACS - System to Record the Identity of Each Beneficiary Code Lists",
+        "type" : "label"
+      } ]
+    }
+  },
+  "namespace" : [ ],
+  "class" : [ {
+    "id" : "0",
+    "type" : "owl:Class"
+  }, {
+    "id" : "1",
+    "type" : "owl:Class"
+  } ],
+  "classAttribute" : [ {
+    "iri" : "http://www.w3.org/2004/02/skos/core#ConceptScheme",
+    "baseIri" : "http://www.w3.org/2004/02/skos/core",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "ConceptScheme"
+    },
+    "individuals" : [ {
+      "iri" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-beneficiery/code#FarmerTypeValue",
+      "baseIri" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-beneficiery/code",
+      "annotations" : {
+        "isFormatOf" : [ {
+          "identifier" : "isFormatOf",
+          "language" : "undefined",
+          "value" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-beneficiery#FarmerTypeValue",
+          "type" : "iri"
+        } ],
+        "definition" : [ {
+          "identifier" : "definition",
+          "language" : "en",
+          "value" : "-- Definition --\r\nList of farmer type values.\r\n-- Description --\r\nList of possible farmer type values based on Actor model (Dynamic Model).",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "FarmerTypeValue",
+        "en" : "List of farmer type values"
+      }
+    } ],
+    "attributes" : [ "external" ],
+    "id" : "0"
+  }, {
+    "iri" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-beneficiery#FarmerTypeValue",
+    "baseIri" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-beneficiery",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "FarmerTypeValue"
+    },
+    "individuals" : [ {
+      "iri" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-beneficiery/code#FarmerTypeValue/farmerActive",
+      "baseIri" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-beneficiery/code",
+      "annotations" : {
+        "inScheme" : [ {
+          "identifier" : "inScheme",
+          "language" : "undefined",
+          "value" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-beneficiery/code#FarmerTypeValue",
+          "type" : "iri"
+        } ],
+        "definition" : [ {
+          "identifier" : "definition",
+          "language" : "en",
+          "value" : "-- Definition --\r\nActive farmer.\r\n-- Description --\r\nItem description.\r\nNOTE 1. Item note.\r\nEXAMPLE 1. Item example.",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "FarmerTypeValue/farmerActive",
+        "en" : "Active farmer"
+      }
+    }, {
+      "iri" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-beneficiery/code#FarmerTypeValue/farmerActiveApplicantBeneficiery",
+      "baseIri" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-beneficiery/code",
+      "annotations" : {
+        "inScheme" : [ {
+          "identifier" : "inScheme",
+          "language" : "undefined",
+          "value" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-beneficiery/code#FarmerTypeValue",
+          "type" : "iri"
+        } ],
+        "definition" : [ {
+          "identifier" : "definition",
+          "language" : "en",
+          "value" : "-- Definition --\r\nActive farmer who is applicant and beneficiary.\r\n-- Description --\r\nActive farmer who is applicant and receiving the aid - beneficiary.",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "FarmerTypeValue/farmerActiveApplicantBeneficiery",
+        "en" : "Active farmer who is applicant and beneficiery"
+      }
+    }, {
+      "iri" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-beneficiery/code#FarmerTypeValue/farmerActiveApplicant",
+      "baseIri" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-beneficiery/code",
+      "annotations" : {
+        "inScheme" : [ {
+          "identifier" : "inScheme",
+          "language" : "undefined",
+          "value" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-beneficiery/code#FarmerTypeValue",
+          "type" : "iri"
+        } ],
+        "definition" : [ {
+          "identifier" : "definition",
+          "language" : "en",
+          "value" : "-- Definition --\r\nActive farmer who is applicant.\r\n-- Description --\r\nItem description.\r\nNOTE 1. Item note.\r\nEXAMPLE 1. Item example.",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "FarmerTypeValue/farmerActiveApplicant",
+        "en" : "Active farmer who is applicant"
+      }
+    }, {
+      "iri" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-beneficiery/code#FarmerTypeValue/farmer",
+      "baseIri" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-beneficiery/code",
+      "annotations" : {
+        "inScheme" : [ {
+          "identifier" : "inScheme",
+          "language" : "undefined",
+          "value" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-beneficiery/code#FarmerTypeValue",
+          "type" : "iri"
+        } ],
+        "definition" : [ {
+          "identifier" : "definition",
+          "language" : "en",
+          "value" : "-- Definition --\r\nFarmer.\r\n-- Description --\r\nItem description.\r\nNOTE 1. Item note.\r\nEXAMPLE 1. Item example.",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "FarmerTypeValue/farmer",
+        "en" : "Farmer"
+      }
+    } ],
+    "attributes" : [ "external" ],
+    "id" : "1"
+  } ]
+}

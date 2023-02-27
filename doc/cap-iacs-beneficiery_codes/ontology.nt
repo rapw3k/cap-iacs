@@ -1,0 +1,112 @@
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-beneficiery/code> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-beneficiery/code> <http://www.w3.org/2002/07/owl#versionIRI> <http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-base/code/3.0> .
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-beneficiery/code> <http://purl.org/dc/terms/creator> _:genid1 .
+_:genid1 <http://xmlns.com/foaf/0.1/name> "Raul Palma" .
+_:genid1 <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://orcid.org/0000-0003-4289-4922> .
+_:genid1 <http://schema.org/affiliation> _:genid2 .
+_:genid2 <http://xmlns.com/foaf/0.1/name> "PSNC" .
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-beneficiery/code> <http://purl.org/dc/terms/description> "Ontology of the system to record the identity of each beneficiary code lists used in IACS, generated from the transformation of the corresponding JRC application schema"@en .
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-beneficiery/code> <http://purl.org/dc/terms/rights> "This ontology is distributed under Creative Commons Attribution 4.0 License - http://creativecommons.org/licenses/by/4.0"@en .
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-beneficiery/code> <http://purl.org/dc/terms/source> "JRC IACS application schema. https://doi.org/10.1016/j.landusepol.2016.05.023"@en .
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-beneficiery/code> <http://purl.org/dc/terms/title> "JRC IACS - System to Record the Identity of Each Beneficiary Code Lists"@en .
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-beneficiery/code> <http://www.w3.org/2000/01/rdf-schema#label> "System to record the identity of each beneficiary code lists"@en .
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-beneficiery/code> <http://www.w3.org/2002/07/owl#versionInfo> "3.0" .
+# 
+# 
+# #################################################################
+# #
+# #    Annotation properties
+# #
+# #################################################################
+# 
+# 
+# http://purl.org/dc/terms/creator
+<http://purl.org/dc/terms/creator> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/description
+<http://purl.org/dc/terms/description> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/isFormatOf
+<http://purl.org/dc/terms/isFormatOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/rights
+<http://purl.org/dc/terms/rights> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/source
+<http://purl.org/dc/terms/source> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/title
+<http://purl.org/dc/terms/title> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://schema.org/affiliation
+<http://schema.org/affiliation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://www.w3.org/2004/02/skos/core#definition
+<http://www.w3.org/2004/02/skos/core#definition> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://www.w3.org/2004/02/skos/core#inScheme
+<http://www.w3.org/2004/02/skos/core#inScheme> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://xmlns.com/foaf/0.1/name
+<http://xmlns.com/foaf/0.1/name> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Classes
+# #
+# #################################################################
+# 
+# 
+# http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-beneficiery#FarmerTypeValue
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-beneficiery#FarmerTypeValue> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# http://www.w3.org/2004/02/skos/core#ConceptScheme
+<http://www.w3.org/2004/02/skos/core#ConceptScheme> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Individuals
+# #
+# #################################################################
+# 
+# 
+# http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-beneficiery/code#FarmerTypeValue
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-beneficiery/code#FarmerTypeValue> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-beneficiery/code#FarmerTypeValue> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#ConceptScheme> .
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-beneficiery/code#FarmerTypeValue> <http://purl.org/dc/terms/isFormatOf> <http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-beneficiery#FarmerTypeValue> .
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-beneficiery/code#FarmerTypeValue> <http://www.w3.org/2000/01/rdf-schema#label> "List of farmer type values"@en .
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-beneficiery/code#FarmerTypeValue> <http://www.w3.org/2004/02/skos/core#definition> "-- Definition --\r\nList of farmer type values.\r\n-- Description --\r\nList of possible farmer type values based on Actor model (Dynamic Model)."@en .
+# 
+# http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-beneficiery/code#FarmerTypeValue/farmer
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-beneficiery/code#FarmerTypeValue/farmer> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-beneficiery/code#FarmerTypeValue/farmer> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-beneficiery#FarmerTypeValue> .
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-beneficiery/code#FarmerTypeValue/farmer> <http://www.w3.org/2000/01/rdf-schema#label> "Farmer"@en .
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-beneficiery/code#FarmerTypeValue/farmer> <http://www.w3.org/2004/02/skos/core#definition> "-- Definition --\r\nFarmer.\r\n-- Description --\r\nItem description.\r\nNOTE 1. Item note.\r\nEXAMPLE 1. Item example."@en .
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-beneficiery/code#FarmerTypeValue/farmer> <http://www.w3.org/2004/02/skos/core#inScheme> <http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-beneficiery/code#FarmerTypeValue> .
+# 
+# http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-beneficiery/code#FarmerTypeValue/farmerActive
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-beneficiery/code#FarmerTypeValue/farmerActive> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-beneficiery/code#FarmerTypeValue/farmerActive> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-beneficiery#FarmerTypeValue> .
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-beneficiery/code#FarmerTypeValue/farmerActive> <http://www.w3.org/2000/01/rdf-schema#label> "Active farmer"@en .
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-beneficiery/code#FarmerTypeValue/farmerActive> <http://www.w3.org/2004/02/skos/core#definition> "-- Definition --\r\nActive farmer.\r\n-- Description --\r\nItem description.\r\nNOTE 1. Item note.\r\nEXAMPLE 1. Item example."@en .
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-beneficiery/code#FarmerTypeValue/farmerActive> <http://www.w3.org/2004/02/skos/core#inScheme> <http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-beneficiery/code#FarmerTypeValue> .
+# 
+# http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-beneficiery/code#FarmerTypeValue/farmerActiveApplicant
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-beneficiery/code#FarmerTypeValue/farmerActiveApplicant> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-beneficiery/code#FarmerTypeValue/farmerActiveApplicant> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-beneficiery#FarmerTypeValue> .
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-beneficiery/code#FarmerTypeValue/farmerActiveApplicant> <http://www.w3.org/2000/01/rdf-schema#label> "Active farmer who is applicant"@en .
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-beneficiery/code#FarmerTypeValue/farmerActiveApplicant> <http://www.w3.org/2004/02/skos/core#definition> "-- Definition --\r\nActive farmer who is applicant.\r\n-- Description --\r\nItem description.\r\nNOTE 1. Item note.\r\nEXAMPLE 1. Item example."@en .
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-beneficiery/code#FarmerTypeValue/farmerActiveApplicant> <http://www.w3.org/2004/02/skos/core#inScheme> <http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-beneficiery/code#FarmerTypeValue> .
+# 
+# http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-beneficiery/code#FarmerTypeValue/farmerActiveApplicantBeneficiery
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-beneficiery/code#FarmerTypeValue/farmerActiveApplicantBeneficiery> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-beneficiery/code#FarmerTypeValue/farmerActiveApplicantBeneficiery> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-beneficiery#FarmerTypeValue> .
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-beneficiery/code#FarmerTypeValue/farmerActiveApplicantBeneficiery> <http://www.w3.org/2000/01/rdf-schema#label> "Active farmer who is applicant and beneficiery"@en .
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-beneficiery/code#FarmerTypeValue/farmerActiveApplicantBeneficiery> <http://www.w3.org/2004/02/skos/core#definition> "-- Definition --\r\nActive farmer who is applicant and beneficiary.\r\n-- Description --\r\nActive farmer who is applicant and receiving the aid - beneficiary."@en .
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-beneficiery/code#FarmerTypeValue/farmerActiveApplicantBeneficiery> <http://www.w3.org/2004/02/skos/core#inScheme> <http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-beneficiery/code#FarmerTypeValue> .
+# 
+# Generated by the OWL API (version 5.1.18) https://github.com/owlcs/owlapi/

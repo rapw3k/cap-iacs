@@ -1,0 +1,2024 @@
+{
+  "_comment" : "Created with OWL2VOWL (version 0.3.5), http://vowl.visualdataweb.org",
+  "header" : {
+    "languages" : [ "en", "undefined" ],
+    "baseIris" : [ "http://www.w3.org/1999/02/22-rdf-syntax-ns", "http://www.w3.org/2000/01/rdf-schema", "http://www.w3.org/2001/XMLSchema", "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid", "http://www.w3.org/2004/02/skos/core" ],
+    "title" : {
+      "en" : "JRC IACS - Aid Applications and Payment Claims Code Lists"
+    },
+    "iri" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid/code",
+    "version" : "3.0",
+    "author" : [ "_:genid2147483649" ],
+    "description" : {
+      "en" : "Ontology of the aid applications and payment claims code lists used in IACS, generated from the transformation of the corresponding JRC application schema"
+    },
+    "labels" : {
+      "en" : "Aid applications and payment claims code lists"
+    },
+    "other" : {
+      "creator" : [ {
+        "identifier" : "creator",
+        "language" : "undefined",
+        "value" : "_:genid2147483649",
+        "type" : "label"
+      } ],
+      "rights" : [ {
+        "identifier" : "rights",
+        "language" : "en",
+        "value" : "This ontology is distributed under Creative Commons Attribution 4.0 License - http://creativecommons.org/licenses/by/4.0",
+        "type" : "label"
+      } ],
+      "versionInfo" : [ {
+        "identifier" : "versionInfo",
+        "language" : "undefined",
+        "value" : "3.0",
+        "type" : "label"
+      } ],
+      "source" : [ {
+        "identifier" : "source",
+        "language" : "en",
+        "value" : "JRC IACS application schema. https://doi.org/10.1016/j.landusepol.2016.05.023",
+        "type" : "label"
+      } ],
+      "title" : [ {
+        "identifier" : "title",
+        "language" : "en",
+        "value" : "JRC IACS - Aid Applications and Payment Claims Code Lists",
+        "type" : "label"
+      } ]
+    }
+  },
+  "namespace" : [ ],
+  "class" : [ {
+    "id" : "0",
+    "type" : "owl:Class"
+  }, {
+    "id" : "1",
+    "type" : "owl:Class"
+  }, {
+    "id" : "2",
+    "type" : "owl:Class"
+  }, {
+    "id" : "3",
+    "type" : "owl:Class"
+  }, {
+    "id" : "4",
+    "type" : "owl:Class"
+  }, {
+    "id" : "5",
+    "type" : "owl:Class"
+  }, {
+    "id" : "6",
+    "type" : "owl:Class"
+  }, {
+    "id" : "7",
+    "type" : "owl:Class"
+  }, {
+    "id" : "8",
+    "type" : "owl:Class"
+  }, {
+    "id" : "9",
+    "type" : "owl:Class"
+  }, {
+    "id" : "10",
+    "type" : "owl:Class"
+  }, {
+    "id" : "11",
+    "type" : "owl:Class"
+  } ],
+  "classAttribute" : [ {
+    "iri" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#CropValue",
+    "baseIri" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "CropValue"
+    },
+    "individuals" : [ {
+      "iri" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid/code#CropValue/cultureOfAnyOfTheDifferentGenera",
+      "baseIri" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid/code",
+      "annotations" : {
+        "inScheme" : [ {
+          "identifier" : "inScheme",
+          "language" : "undefined",
+          "value" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid/code#CropValue",
+          "type" : "iri"
+        } ],
+        "definition" : [ {
+          "identifier" : "definition",
+          "language" : "en",
+          "value" : "Culture of any different genera\r\n\r\nA culture of any of the different genera defined in the botanical classification of crops. \r\n\r\nNOTE\r\nWinter crop and spring crop shall be considered to be distinct crops even if they belong to the same genus.",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "CropValue/cultureOfAnyOfTheDifferentGenera",
+        "en" : "Culture of any of the different genera"
+      }
+    }, {
+      "iri" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid/code#CropValue/landLyingFallow",
+      "baseIri" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid/code",
+      "annotations" : {
+        "inScheme" : [ {
+          "identifier" : "inScheme",
+          "language" : "undefined",
+          "value" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid/code#CropValue",
+          "type" : "iri"
+        } ],
+        "definition" : [ {
+          "identifier" : "definition",
+          "language" : "en",
+          "value" : "Land laying fallow",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "CropValue/landLyingFallow",
+        "en" : "Land lying fallow"
+      }
+    }, {
+      "iri" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid/code#CropValue/grassesOrOtherHerbaceousForage",
+      "baseIri" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid/code",
+      "annotations" : {
+        "inScheme" : [ {
+          "identifier" : "inScheme",
+          "language" : "undefined",
+          "value" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid/code#CropValue",
+          "type" : "iri"
+        } ],
+        "definition" : [ {
+          "identifier" : "definition",
+          "language" : "en",
+          "value" : "Grasses or other herbaceous forage\r\n\r\n\"Grasses or other herbaceous forage\" means all herbaceous plants traditionally found in natural pastures or normally included in mixtures of seeds for pastures or meadows in the Member State, whether or not used for grazing animals. [R 1307/2013 4(1)(i)]",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "CropValue/grassesOrOtherHerbaceousForage",
+        "en" : "Grasses or other herbaceous forage"
+      }
+    }, {
+      "iri" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid/code#CropValue/brassicaceaeSolanaceaeAndCucurbitaceaeCulture",
+      "baseIri" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid/code",
+      "annotations" : {
+        "inScheme" : [ {
+          "identifier" : "inScheme",
+          "language" : "undefined",
+          "value" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid/code#CropValue",
+          "type" : "iri"
+        } ],
+        "definition" : [ {
+          "identifier" : "definition",
+          "language" : "en",
+          "value" : "Brassicaceae, Solanaceae and cucurbitaceae culture\r\n\r\nA culture of any of the species in the case of Brassicaceae, Solanaceae, and Cucurbitaceae",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "CropValue/brassicaceaeSolanaceaeAndCucurbitaceaeCulture",
+        "en" : "Brassicaceae, Solanaceae, and Cucurbitaceae culture"
+      }
+    } ],
+    "attributes" : [ "external" ],
+    "id" : "0"
+  }, {
+    "iri" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#AgriculturalEquivalentPracticeRequirementValue",
+    "baseIri" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "AgriculturalEquivalentPracticeRequirementValue"
+    },
+    "individuals" : [ {
+      "iri" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid/code#AgriculturalEquivalentPracticeRequirementValue/pGAndCuttingRegime",
+      "baseIri" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid/code",
+      "annotations" : {
+        "inScheme" : [ {
+          "identifier" : "inScheme",
+          "language" : "undefined",
+          "value" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid/code#AgriculturalEquivalentPracticeRequirementValue",
+          "type" : "iri"
+        } ],
+        "definition" : [ {
+          "identifier" : "definition",
+          "language" : "en",
+          "value" : "PG and cutting regime\r\n\r\nMaintenance of permanent grassland and following cutting regime or appropriate mowing (dates, methods, limits).",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "AgriculturalEquivalentPracticeRequirementValue/pGAndCuttingRegime",
+        "en" : "National or regional environmental certification schemes"
+      }
+    }, {
+      "iri" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid/code#AgriculturalEquivalentPracticeRequirementValue/fertiliserRegime",
+      "baseIri" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid/code",
+      "annotations" : {
+        "inScheme" : [ {
+          "identifier" : "inScheme",
+          "language" : "undefined",
+          "value" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid/code#AgriculturalEquivalentPracticeRequirementValue",
+          "type" : "iri"
+        } ],
+        "definition" : [ {
+          "identifier" : "definition",
+          "language" : "en",
+          "value" : "Fertiliser regime\r\n\r\nMaintenance of permanent grassland and following a fertiliser regime.",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "AgriculturalEquivalentPracticeRequirementValue/fertiliserRegime",
+        "en" : "National or regional environmental certification schemes"
+      }
+    }, {
+      "iri" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid/code#AgriculturalEquivalentPracticeRequirementValue/steepSlopeManagement",
+      "baseIri" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid/code",
+      "annotations" : {
+        "inScheme" : [ {
+          "identifier" : "inScheme",
+          "language" : "undefined",
+          "value" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid/code#AgriculturalEquivalentPracticeRequirementValue",
+          "type" : "iri"
+        } ],
+        "definition" : [ {
+          "identifier" : "definition",
+          "language" : "en",
+          "value" : "Steep slope management\r\n\r\nMaintenance of permanent grassland and appropriate management for steep slopes.",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "AgriculturalEquivalentPracticeRequirementValue/steepSlopeManagement",
+        "en" : "National or regional environmental certification schemes"
+      }
+    }, {
+      "iri" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid/code#AgriculturalEquivalentPracticeRequirementValue/shepherdingOrMountainPastoralism",
+      "baseIri" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid/code",
+      "annotations" : {
+        "inScheme" : [ {
+          "identifier" : "inScheme",
+          "language" : "undefined",
+          "value" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid/code#AgriculturalEquivalentPracticeRequirementValue",
+          "type" : "iri"
+        } ],
+        "definition" : [ {
+          "identifier" : "definition",
+          "language" : "en",
+          "value" : "Catch crop\r\n\r\nPresence of catch crop.  In addition, three crops have to be present and the share of the main crop cannot exceed 75% of he agricultural area.",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "AgriculturalEquivalentPracticeRequirementValue/shepherdingOrMountainPastoralism",
+        "en" : "National or regional environmental certification schemes"
+      }
+    }, {
+      "iri" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid/code#AgriculturalEquivalentPracticeRequirementValue/beneficialMultiannualSequenceOfCropRotation",
+      "baseIri" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid/code",
+      "annotations" : {
+        "inScheme" : [ {
+          "identifier" : "inScheme",
+          "language" : "undefined",
+          "value" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid/code#AgriculturalEquivalentPracticeRequirementValue",
+          "type" : "iri"
+        } ],
+        "definition" : [ {
+          "identifier" : "definition",
+          "language" : "en",
+          "value" : "Beneficial multi-annual sequence of crop rotation\r\n\r\nMore environmentally beneficial multi-annual sequence of crops and/or fallow is followed. In addition, three crops have to be present and the share of the main crop cannot exceed 75% of he agricultural area.",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "AgriculturalEquivalentPracticeRequirementValue/beneficialMultiannualSequenceOfCropRotation",
+        "en" : "National or regional environmental certification schemes"
+      }
+    }, {
+      "iri" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid/code#AgriculturalEquivalentPracticeRequirementValue/localOrTraditionalGrazingBreeds",
+      "baseIri" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid/code",
+      "annotations" : {
+        "inScheme" : [ {
+          "identifier" : "inScheme",
+          "language" : "undefined",
+          "value" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid/code#AgriculturalEquivalentPracticeRequirementValue",
+          "type" : "iri"
+        } ],
+        "definition" : [ {
+          "identifier" : "definition",
+          "language" : "en",
+          "value" : "Local or traditional grazing breeds\r\n\r\nMaintenance of permanent grassland and using local or traditional breeds for grazing the permanent grassland.",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "AgriculturalEquivalentPracticeRequirementValue/localOrTraditionalGrazingBreeds",
+        "en" : "National or regional environmental certification schemes"
+      }
+    }, {
+      "iri" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid/code#AgriculturalEquivalentPracticeRequirementValue/atLeast4Crops",
+      "baseIri" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid/code",
+      "annotations" : {
+        "inScheme" : [ {
+          "identifier" : "inScheme",
+          "language" : "undefined",
+          "value" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid/code#AgriculturalEquivalentPracticeRequirementValue",
+          "type" : "iri"
+        } ],
+        "definition" : [ {
+          "identifier" : "definition",
+          "language" : "en",
+          "value" : "At least four crops\r\n\r\nAt least four crops present on the agricultural area. However, the main crop can cover maximum 75% of the area.\r\n\r\nIssue\r\nThis value is listed twice in Annex IX as part of crop diversification and part of crop rotation. Since the conditions are the same and the same practice should not be \"sold\" twice, this  duplication seems to be redundant.",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "AgriculturalEquivalentPracticeRequirementValue/atLeast4Crops",
+        "en" : "National or regional environmental certification schemes"
+      }
+    }, {
+      "iri" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid/code#AgriculturalEquivalentPracticeRequirementValue/specificCropVarieties",
+      "baseIri" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid/code",
+      "annotations" : {
+        "inScheme" : [ {
+          "identifier" : "inScheme",
+          "language" : "undefined",
+          "value" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid/code#AgriculturalEquivalentPracticeRequirementValue",
+          "type" : "iri"
+        } ],
+        "definition" : [ {
+          "identifier" : "definition",
+          "language" : "en",
+          "value" : "Specific crop varieties\r\n\r\nRegional varieties of old, traditional or endangered crop types are included on at least 5 % of the rotated area.  In addition, three crops have to be present and the share of the main crop cannot exceed 75% of he agricultural area.",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "AgriculturalEquivalentPracticeRequirementValue/specificCropVarieties",
+        "en" : "National or regional environmental certification schemes"
+      }
+    }, {
+      "iri" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid/code#AgriculturalEquivalentPracticeRequirementValue/ecologicalSetAside",
+      "baseIri" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid/code",
+      "annotations" : {
+        "inScheme" : [ {
+          "identifier" : "inScheme",
+          "language" : "undefined",
+          "value" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid/code#AgriculturalEquivalentPracticeRequirementValue",
+          "type" : "iri"
+        } ],
+        "definition" : [ {
+          "identifier" : "definition",
+          "language" : "en",
+          "value" : "Ecological set aside\r\n\r\nEquivalent practice that may be used for fulfilling the percentage requirements for EFA set in Art. 46(1) of R 1307/2013.\r\n\r\nNOTE\r\nThe requirement is currently 5% of arable land.",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "AgriculturalEquivalentPracticeRequirementValue/ecologicalSetAside",
+        "en" : "National or regional environmental certification schemes"
+      }
+    }, {
+      "iri" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid/code#AgriculturalEquivalentPracticeRequirementValue/wildlifeAreaManagement",
+      "baseIri" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid/code",
+      "annotations" : {
+        "inScheme" : [ {
+          "identifier" : "inScheme",
+          "language" : "undefined",
+          "value" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid/code#AgriculturalEquivalentPracticeRequirementValue",
+          "type" : "iri"
+        } ],
+        "definition" : [ {
+          "identifier" : "definition",
+          "language" : "en",
+          "value" : "Wildlife area management\r\n\r\nEquivalent practice that may be used for fulfilling the percentage requirements for EFA set in Art. 46(1) of R 1307/2013.\r\n\r\nBorders, in-field strips and patches managed for wildlife or specific fauna. It includes:\r\n\t- herbaceous border,\r\n\t- protection of nests,\r\n\t- wildflower strips,\r\n\t- local seed mix,\r\n\t- unharvested crops.",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "AgriculturalEquivalentPracticeRequirementValue/wildlifeAreaManagement",
+        "en" : "National or regional environmental certification schemes"
+      }
+    }, {
+      "iri" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid/code#AgriculturalEquivalentPracticeRequirementValue/uncultivatedBufferStripsAndFieldMargins",
+      "baseIri" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid/code",
+      "annotations" : {
+        "inScheme" : [ {
+          "identifier" : "inScheme",
+          "language" : "undefined",
+          "value" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid/code#AgriculturalEquivalentPracticeRequirementValue",
+          "type" : "iri"
+        } ],
+        "definition" : [ {
+          "identifier" : "definition",
+          "language" : "en",
+          "value" : "Uncultivated buffer strips and field margins\r\n\r\nEquivalent practice that may be used for fulfilling the percentage requirements for EFA set in Art. 46(1) of R 1307/2013.\r\n\r\nManagement of uncultivated buffer strips and field margins. It includes\r\n\t- cutting regime,\r\n\t- local or specified grass varieties and/or seeding regime,\r\n\t- re-seeding with regional varieties,\r\n\t- no use of pesticides,\r\n\t- no disposal of manure and/or mineral fertilisers,\r\n\t- no irrigation, \r\n\t- no soil sealing.",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "AgriculturalEquivalentPracticeRequirementValue/uncultivatedBufferStripsAndFieldMargins",
+        "en" : "National or regional environmental certification schemes"
+      }
+    }, {
+      "iri" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid/code#AgriculturalEquivalentPracticeRequirementValue/atLeast3CropsWithMainCrop<75%",
+      "baseIri" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid/code",
+      "annotations" : {
+        "inScheme" : [ {
+          "identifier" : "inScheme",
+          "language" : "undefined",
+          "value" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid/code#AgriculturalEquivalentPracticeRequirementValue",
+          "type" : "iri"
+        } ],
+        "definition" : [ {
+          "identifier" : "definition",
+          "language" : "en",
+          "value" : "At least 3 crops with main crop less than 75%\r\n\r\nAt least three crops, the main crop covering less than the 75 % threshold",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "AgriculturalEquivalentPracticeRequirementValue/atLeast3CropsWithMainCrop<75%",
+        "en" : "Commitments undertaken in accordance with agri-environment-climate"
+      }
+    }, {
+      "iri" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid/code#AgriculturalEquivalentPracticeRequirementValue/forageOrHayEvacuation",
+      "baseIri" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid/code",
+      "annotations" : {
+        "inScheme" : [ {
+          "identifier" : "inScheme",
+          "language" : "undefined",
+          "value" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid/code#AgriculturalEquivalentPracticeRequirementValue",
+          "type" : "iri"
+        } ],
+        "definition" : [ {
+          "identifier" : "definition",
+          "language" : "en",
+          "value" : "Forage or hay evacuation\r\n\r\nMaintenance of permanent grassland and evacuation of forage or hay.",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "AgriculturalEquivalentPracticeRequirementValue/forageOrHayEvacuation",
+        "en" : "National or regional environmental certification schemes"
+      }
+    }, {
+      "iri" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid/code#AgriculturalEquivalentPracticeRequirementValue/managementOfLf",
+      "baseIri" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid/code",
+      "annotations" : {
+        "inScheme" : [ {
+          "identifier" : "inScheme",
+          "language" : "undefined",
+          "value" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid/code#AgriculturalEquivalentPracticeRequirementValue",
+          "type" : "iri"
+        } ],
+        "definition" : [ {
+          "identifier" : "definition",
+          "language" : "en",
+          "value" : "Management of LF\r\n\r\nEquivalent practice that may be used for fulfilling the percentage requirements for EFA set in Art. 46(1) of R 1307/2013.\r\n\r\nThe management includes following rules for pruning, trimming, dates, methods, restoration of landscape features (trees, hedgerows, riparian woody vegetation, stone walls (terraces), ditches, ponds).",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "AgriculturalEquivalentPracticeRequirementValue/managementOfLf",
+        "en" : "National or regional environmental certification schemes"
+      }
+    }, {
+      "iri" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid/code#AgriculturalEquivalentPracticeRequirementValue/highNatureValueBufferZone",
+      "baseIri" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid/code",
+      "annotations" : {
+        "inScheme" : [ {
+          "identifier" : "inScheme",
+          "language" : "undefined",
+          "value" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid/code#AgriculturalEquivalentPracticeRequirementValue",
+          "type" : "iri"
+        } ],
+        "definition" : [ {
+          "identifier" : "definition",
+          "language" : "en",
+          "value" : "High nature value buffer zone\r\n\r\nEquivalent practice that may be used for fulfilling the percentage requirements for EFA set in Art. 46(1) of R 1307/2013.\r\n\r\nThe buffer zones are created for high nature value areas, Natura 2000 or other biodiversity protection sites, including along hedgerows and water courses.",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "AgriculturalEquivalentPracticeRequirementValue/highNatureValueBufferZone",
+        "en" : "National or regional environmental certification schemes"
+      }
+    }, {
+      "iri" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid/code#AgriculturalEquivalentPracticeRequirementValue/winterSoilCover",
+      "baseIri" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid/code",
+      "annotations" : {
+        "inScheme" : [ {
+          "identifier" : "inScheme",
+          "language" : "undefined",
+          "value" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid/code#AgriculturalEquivalentPracticeRequirementValue",
+          "type" : "iri"
+        } ],
+        "definition" : [ {
+          "identifier" : "definition",
+          "language" : "en",
+          "value" : "Winter soil cover\r\n\r\nPresence of winter soil cover.  In addition, three crops have to be present and the share of the main crop cannot exceed 75% of he agricultural area.",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "AgriculturalEquivalentPracticeRequirementValue/winterSoilCover",
+        "en" : "National or regional environmental certification schemes"
+      }
+    }, {
+      "iri" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid/code#AgriculturalEquivalentPracticeRequirementValue/pesticideRestrictions",
+      "baseIri" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid/code",
+      "annotations" : {
+        "inScheme" : [ {
+          "identifier" : "inScheme",
+          "language" : "undefined",
+          "value" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid/code#AgriculturalEquivalentPracticeRequirementValue",
+          "type" : "iri"
+        } ],
+        "definition" : [ {
+          "identifier" : "definition",
+          "language" : "en",
+          "value" : "Pesticide Restrictions\r\n\r\nMaintenance of permanent grassland and following pesticide restrictions.",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "AgriculturalEquivalentPracticeRequirementValue/pesticideRestrictions",
+        "en" : "National or regional environmental certification schemes"
+      }
+    }, {
+      "iri" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid/code#AgriculturalEquivalentPracticeRequirementValue/pGAndExtensiveGrazing",
+      "baseIri" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid/code",
+      "annotations" : {
+        "inScheme" : [ {
+          "identifier" : "inScheme",
+          "language" : "undefined",
+          "value" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid/code#AgriculturalEquivalentPracticeRequirementValue",
+          "type" : "iri"
+        } ],
+        "definition" : [ {
+          "identifier" : "definition",
+          "language" : "en",
+          "value" : "PG and extensive grazing\r\n\r\nMaintenance of permanent grassland and following extensive grazing (timing, maximum stocking density).",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "AgriculturalEquivalentPracticeRequirementValue/pGAndExtensiveGrazing",
+        "en" : "National or regional environmental certification schemes"
+      }
+    }, {
+      "iri" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid/code#AgriculturalEquivalentPracticeRequirementValue/pGWithLfAndScrubControl",
+      "baseIri" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid/code",
+      "annotations" : {
+        "inScheme" : [ {
+          "identifier" : "inScheme",
+          "language" : "undefined",
+          "value" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid/code#AgriculturalEquivalentPracticeRequirementValue",
+          "type" : "iri"
+        } ],
+        "definition" : [ {
+          "identifier" : "definition",
+          "language" : "en",
+          "value" : "PG with LF and scrub control\r\n\r\nMaintenance of permanent grassland and maintenance of landscape features on permanent grassland and control of scrub.",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "AgriculturalEquivalentPracticeRequirementValue/pGWithLfAndScrubControl",
+        "en" : "National or regional environmental certification schemes"
+      }
+    }, {
+      "iri" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid/code#AgriculturalEquivalentPracticeRequirementValue/pGWithGrassVarietiesOrSeedingRegime",
+      "baseIri" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid/code",
+      "annotations" : {
+        "inScheme" : [ {
+          "identifier" : "inScheme",
+          "language" : "undefined",
+          "value" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid/code#AgriculturalEquivalentPracticeRequirementValue",
+          "type" : "iri"
+        } ],
+        "definition" : [ {
+          "identifier" : "definition",
+          "language" : "en",
+          "value" : "PG with grass varieties or seeding regime\r\n\r\nMaintenance of permanent grassland  with specified grass varieties and/or seeding regime for renewal depending on the grassland type, with no destruction of high nature value.",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "AgriculturalEquivalentPracticeRequirementValue/pGWithGrassVarietiesOrSeedingRegime",
+        "en" : "National or regional environmental certification schemes"
+      }
+    }, {
+      "iri" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid/code#AgriculturalEquivalentPracticeRequirementValue/catchCrop",
+      "baseIri" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid/code",
+      "annotations" : {
+        "inScheme" : [ {
+          "identifier" : "inScheme",
+          "language" : "undefined",
+          "value" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid/code#AgriculturalEquivalentPracticeRequirementValue",
+          "type" : "iri"
+        } ],
+        "definition" : [ {
+          "identifier" : "definition",
+          "language" : "en",
+          "value" : "Catch crop\r\n\r\nPresence of catch crop.  In addition, three crops have to be present and the share of the main crop cannot exceed 75% of he agricultural area.",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "AgriculturalEquivalentPracticeRequirementValue/catchCrop",
+        "en" : "National or regional environmental certification schemes"
+      }
+    }, {
+      "iri" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid/code#AgriculturalEquivalentPracticeRequirementValue/specificProductionRegime",
+      "baseIri" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid/code",
+      "annotations" : {
+        "inScheme" : [ {
+          "identifier" : "inScheme",
+          "language" : "undefined",
+          "value" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid/code#AgriculturalEquivalentPracticeRequirementValue",
+          "type" : "iri"
+        } ],
+        "definition" : [ {
+          "identifier" : "definition",
+          "language" : "en",
+          "value" : "Specific production regime\r\n\r\nEquivalent practice that may be used for fulfilling the percentage requirements for EFA set in Art. 46(1) of R 1307/2013.\r\n\r\nIt relates to production on arable land \r\n\t- with no use of fertiliser (mineral fertiliser and manure) and/or plant protection products,\r\n\t- not irrigated,\r\n\t- not sown with the same crop two years in a row and on a fixed place.",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "AgriculturalEquivalentPracticeRequirementValue/specificProductionRegime"
+      }
+    }, {
+      "iri" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid/code#AgriculturalEquivalentPracticeRequirementValue/conversionIntoExtensivelyUsedPg",
+      "baseIri" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid/code",
+      "annotations" : {
+        "inScheme" : [ {
+          "identifier" : "inScheme",
+          "language" : "undefined",
+          "value" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid/code#AgriculturalEquivalentPracticeRequirementValue",
+          "type" : "iri"
+        } ],
+        "definition" : [ {
+          "identifier" : "definition",
+          "language" : "en",
+          "value" : "Conversion into extensively used PG\r\n\r\nEquivalent practice that may be used for fulfilling the percentage requirements for EFA set in Art. 46(1) of R 1307/2013.\r\n\r\nIt relates to conversion of arable land into permanent grassland extensively used.",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "AgriculturalEquivalentPracticeRequirementValue/conversionIntoExtensivelyUsedPg",
+        "en" : "National or regional environmental certification schemes"
+      }
+    }, {
+      "iri" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid/code#AgriculturalEquivalentPracticeRequirementValue/grassOnArablePeatyOrWetSoil",
+      "baseIri" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid/code",
+      "annotations" : {
+        "inScheme" : [ {
+          "identifier" : "inScheme",
+          "language" : "undefined",
+          "value" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid/code#AgriculturalEquivalentPracticeRequirementValue",
+          "type" : "iri"
+        } ],
+        "definition" : [ {
+          "identifier" : "definition",
+          "language" : "en",
+          "value" : "Grass on arable peaty or wet soil\r\n\r\nEquivalent practice that may be used for fulfilling the percentage requirements for EFA set in Art. 46(1) of R 1307/2013.\r\n\r\nIt relates to keeping arable peaty or wet soils under grass (with no use of fertilisers and no use of plant protection products).",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "AgriculturalEquivalentPracticeRequirementValue/grassOnArablePeatyOrWetSoil",
+        "en" : "National or regional environmental certification schemes"
+      }
+    }, {
+      "iri" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid/code#AgriculturalEquivalentPracticeRequirementValue/moreAppropriateCropSelection",
+      "baseIri" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid/code",
+      "annotations" : {
+        "inScheme" : [ {
+          "identifier" : "inScheme",
+          "language" : "undefined",
+          "value" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid/code#AgriculturalEquivalentPracticeRequirementValue",
+          "type" : "iri"
+        } ],
+        "definition" : [ {
+          "identifier" : "definition",
+          "language" : "en",
+          "value" : "More appropriate crop selection\r\n\r\nMore appropriate selection of crops, such as, for example, leguminous, protein crops, crops not requiring irrigation or pesticide treatments, etc. In addition, three crops have to be present and the share of the main crop cannot exceed 75% of he agricultural area.",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "AgriculturalEquivalentPracticeRequirementValue/moreAppropriateCropSelection",
+        "en" : "National or regional environmental certification schemes"
+      }
+    } ],
+    "attributes" : [ "external" ],
+    "id" : "1"
+  }, {
+    "iri" : "http://www.w3.org/2004/02/skos/core#ConceptScheme",
+    "baseIri" : "http://www.w3.org/2004/02/skos/core",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "ConceptScheme"
+    },
+    "individuals" : [ {
+      "iri" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid/code#EcologicalFocusAreaTypeCollectiveValue",
+      "baseIri" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid/code",
+      "annotations" : {
+        "isFormatOf" : [ {
+          "identifier" : "isFormatOf",
+          "language" : "undefined",
+          "value" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#EcologicalFocusAreaTypeCollectiveValue",
+          "type" : "iri"
+        } ],
+        "definition" : [ {
+          "identifier" : "definition",
+          "language" : "en",
+          "value" : "-- Definition --\r\nList of ecological focused areas for collective implementation.\r\n-- Description --\r\nList of feature (ecological focus areas) types based on Article 46(3) 1307/2013.",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "EcologicalFocusAreaTypeCollectiveValue",
+        "en" : "List of ecological focused areas for collective implementation"
+      }
+    }, {
+      "iri" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid/code#AgriculturalEquivalentPracticeTypeValue",
+      "baseIri" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid/code",
+      "annotations" : {
+        "isFormatOf" : [ {
+          "identifier" : "isFormatOf",
+          "language" : "undefined",
+          "value" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#AgriculturalEquivalentPracticeTypeValue",
+          "type" : "iri"
+        } ],
+        "definition" : [ {
+          "identifier" : "definition",
+          "language" : "en",
+          "value" : "Agricultural Equivalent Practice Type value\r\n\r\nValues of equivalent agricultural practice types in sense of Art. 43(3)(a) and (b) of R 1307/2013.",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "AgriculturalEquivalentPracticeTypeValue",
+        "en" : "List of agricultural equivalent practices requirements"
+      }
+    }, {
+      "iri" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid/code#CropGroupTypeAreaRelatedSupportSchemaValue",
+      "baseIri" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid/code",
+      "annotations" : {
+        "isFormatOf" : [ {
+          "identifier" : "isFormatOf",
+          "language" : "undefined",
+          "value" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#CropGroupTypeAreaRelatedSupportSchemaValue",
+          "type" : "iri"
+        } ],
+        "definition" : [ {
+          "identifier" : "definition",
+          "language" : "en",
+          "value" : "-- Definition --\r\nList of payment crop groups.\r\n-- Description --\r\nList of crop groups related with area-related support schemas.",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "CropGroupTypeAreaRelatedSupportSchemaValue",
+        "en" : "List of payment crop groups"
+      }
+    }, {
+      "iri" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid/code#AgriculturalPracticeTypeValue",
+      "baseIri" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid/code",
+      "annotations" : {
+        "isFormatOf" : [ {
+          "identifier" : "isFormatOf",
+          "language" : "undefined",
+          "value" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#AgriculturalPracticeTypeValue",
+          "type" : "iri"
+        } ],
+        "definition" : [ {
+          "identifier" : "definition",
+          "language" : "en",
+          "value" : "Agricultural practice type value\r\n\r\nList agricultural practices beneficial for the climate and the environment as detailed in Chapter 3 of R 1307/2013.",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "AgriculturalPracticeTypeValue",
+        "en" : "List of agricultural practices"
+      }
+    }, {
+      "iri" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid/code#AgriculturalEquivalentPracticeRequirementValue",
+      "baseIri" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid/code",
+      "annotations" : {
+        "isFormatOf" : [ {
+          "identifier" : "isFormatOf",
+          "language" : "undefined",
+          "value" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#AgriculturalEquivalentPracticeRequirementValue",
+          "type" : "iri"
+        } ],
+        "definition" : [ {
+          "identifier" : "definition",
+          "language" : "en",
+          "value" : "Agricultural equivalent practice requirement value\r\n\r\nList of requirements qualifying agricultural practices as equivalent to the practices beneficial for the climate and the environment descibed in Chapter 3 of R 1307/2013.\r\nThe broad list of equivalent practices are included in Annex IX of R 1307/2013.\r\n\r\nThe equivalent practices go beyond the relevant mandatory standards established pursuant to Chapter I of Title VI of Regulation (EU) No 1306/2013, which aim to meet objectives relating to soil and water quality, biodiversity, landscape preservation, and climate change mitigation and adaptation. Those certification schemes may include the practices listed in Annex IX to this Regulation, the practices referred to in paragraph 2 of this Article, or a combination of those practices.",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "AgriculturalEquivalentPracticeRequirementValue",
+        "en" : "List of agricultural equivalent practices"
+      }
+    }, {
+      "iri" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid/code#CropValue",
+      "baseIri" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid/code",
+      "annotations" : {
+        "isFormatOf" : [ {
+          "identifier" : "isFormatOf",
+          "language" : "undefined",
+          "value" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#CropValue",
+          "type" : "iri"
+        } ],
+        "definition" : [ {
+          "identifier" : "definition",
+          "language" : "en",
+          "value" : "Crop value\r\n\r\nList of  crops in sense of Art. 44(4) of R (EU) 809/2014  that is needed for checking crop diversification.\r\n\r\nNOTE\r\nRequired if cropGroupTypeGreening = certainCrop.",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "CropValue",
+        "en" : "List of crops"
+      }
+    }, {
+      "iri" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid/code#CropGroupTypeGreeningValue",
+      "baseIri" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid/code",
+      "annotations" : {
+        "isFormatOf" : [ {
+          "identifier" : "isFormatOf",
+          "language" : "undefined",
+          "value" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#CropGroupTypeGreeningValue",
+          "type" : "iri"
+        } ],
+        "definition" : [ {
+          "identifier" : "definition",
+          "language" : "en",
+          "value" : "-- Definition --\r\nList of payment crop groups.\r\n-- Description --\r\nList of crop groups related with greening.",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "CropGroupTypeGreeningValue",
+        "en" : "List of payment crop groups"
+      }
+    }, {
+      "iri" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid/code#GeometrySourceValue",
+      "baseIri" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid/code",
+      "annotations" : {
+        "isFormatOf" : [ {
+          "identifier" : "isFormatOf",
+          "language" : "undefined",
+          "value" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#GeometrySourceValue",
+          "type" : "iri"
+        } ],
+        "definition" : [ {
+          "identifier" : "definition",
+          "language" : "en",
+          "value" : "-- Definition --\r\nList of geometry sources.\r\n-- Description --\r\nList of geometry sources.",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "GeometrySourceValue",
+        "en" : "List of geometry sources"
+      }
+    }, {
+      "iri" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid/code#AgriculturalPracticeRequirementValue",
+      "baseIri" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid/code",
+      "annotations" : {
+        "isFormatOf" : [ {
+          "identifier" : "isFormatOf",
+          "language" : "undefined",
+          "value" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#AgriculturalPracticeRequirementValue",
+          "type" : "iri"
+        } ],
+        "definition" : [ {
+          "identifier" : "definition",
+          "language" : "en",
+          "value" : "Agricultural practice requirement value\r\n\r\nList of agricultural practice requirement values as defined in Art. (44) (1), (2),(3) and Art. 46 (4) of R (EU) 1307/2013.",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "AgriculturalPracticeRequirementValue"
+      }
+    }, {
+      "iri" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid/code#AgriculturalEquivalentPracticeSubtypeValue",
+      "baseIri" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid/code",
+      "annotations" : {
+        "isFormatOf" : [ {
+          "identifier" : "isFormatOf",
+          "language" : "undefined",
+          "value" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#AgriculturalEquivalentPracticeSubtypeValue",
+          "type" : "iri"
+        } ],
+        "definition" : [ {
+          "identifier" : "definition",
+          "language" : "en",
+          "value" : "Agricultural equivalent practice subtype value\r\n\r\nBroad categories of agricultural equivalent practices beneficial for the climate and the environment as listed in Annex IX of R 1307/2013.",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "AgriculturalEquivalentPracticeSubtypeValue",
+        "en" : "List of agricultural equivalent subpractices"
+      }
+    }, {
+      "iri" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid/code#FarmersSurveyFeatureTypeValue",
+      "baseIri" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid/code",
+      "annotations" : {
+        "isFormatOf" : [ {
+          "identifier" : "isFormatOf",
+          "language" : "undefined",
+          "value" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#FarmersSurveyFeatureTypeValue",
+          "type" : "iri"
+        } ],
+        "definition" : [ {
+          "identifier" : "definition",
+          "language" : "en",
+          "value" : "-- Definition --\r\nList of possible feature types measured and provided by farmer.\r\n-- Description --\r\nList of feature types possible to survey / measure by farmer. After these measured features are submitted (during application process) then authority (data custodians) may confirm or reject their reference data update (update based on farmer's survey and or measurement).\r\nNOTE. List may be extended or subtracted depending on how MS organizing reference data update process.",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "FarmersSurveyFeatureTypeValue",
+        "en" : "List of feature types"
+      }
+    } ],
+    "attributes" : [ "external" ],
+    "id" : "2"
+  }, {
+    "iri" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#EcologicalFocusAreaTypeCollectiveValue",
+    "baseIri" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "EcologicalFocusAreaTypeCollectiveValue"
+    },
+    "individuals" : [ {
+      "iri" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid/code#EcologicalFocusAreaTypeCollectiveValue/landscapeFeaturesOtherProtectedByGaecSmr",
+      "baseIri" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid/code",
+      "annotations" : {
+        "inScheme" : [ {
+          "identifier" : "inScheme",
+          "language" : "undefined",
+          "value" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid/code#EcologicalFocusAreaTypeCollectiveValue",
+          "type" : "iri"
+        } ],
+        "definition" : [ {
+          "identifier" : "definition",
+          "language" : "en",
+          "value" : "-- Definition --\r\nLandscape features, other features not listed in this code list but protected under GAEC7, SMR 2 or SMR 3.\r\n-- Description --\r\nLandscape features: Other features not listed above but protected under GAEC7, SMR 2 or SMR 3 (per 1m2).",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "EcologicalFocusAreaTypeCollectiveValue/landscapeFeaturesOtherProtectedByGaecSmr",
+        "en" : "Landscape features, other features not listed in this code list but protected under GAEC7, SMR 2 or SMR 3"
+      }
+    }, {
+      "iri" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid/code#EcologicalFocusAreaTypeCollectiveValue/afforestedAreas",
+      "baseIri" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid/code",
+      "annotations" : {
+        "inScheme" : [ {
+          "identifier" : "inScheme",
+          "language" : "undefined",
+          "value" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid/code#EcologicalFocusAreaTypeCollectiveValue",
+          "type" : "iri"
+        } ],
+        "definition" : [ {
+          "identifier" : "definition",
+          "language" : "en",
+          "value" : "-- Definition --\r\nAfforested areas.\r\n-- Description --\r\nAfforested areas as referred to in Article 32(2)(b)(ii) (per  m2).",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "EcologicalFocusAreaTypeCollectiveValue/afforestedAreas",
+        "en" : "Afforested areas"
+      }
+    }, {
+      "iri" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid/code#EcologicalFocusAreaTypeCollectiveValue/landscapeFeaturesPonds",
+      "baseIri" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid/code",
+      "annotations" : {
+        "inScheme" : [ {
+          "identifier" : "inScheme",
+          "language" : "undefined",
+          "value" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid/code#EcologicalFocusAreaTypeCollectiveValue",
+          "type" : "iri"
+        } ],
+        "definition" : [ {
+          "identifier" : "definition",
+          "language" : "en",
+          "value" : "-- Definition --\r\nLandscape features, ponds.\r\n-- Description --\r\nLandscape features: Ponds (per 1m2).",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "EcologicalFocusAreaTypeCollectiveValue/landscapeFeaturesPonds",
+        "en" : "Landscape features, ponds"
+      }
+    }, {
+      "iri" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid/code#EcologicalFocusAreaTypeCollectiveValue/bufferStrips",
+      "baseIri" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid/code",
+      "annotations" : {
+        "inScheme" : [ {
+          "identifier" : "inScheme",
+          "language" : "undefined",
+          "value" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid/code#EcologicalFocusAreaTypeCollectiveValue",
+          "type" : "iri"
+        } ],
+        "definition" : [ {
+          "identifier" : "definition",
+          "language" : "en",
+          "value" : "-- Definition --\r\nBuffer strips.\r\n-- Description --\r\nBuffer strips (per 1m) also 1307. 46.2.d.",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "EcologicalFocusAreaTypeCollectiveValue/bufferStrips",
+        "en" : "Buffer strips"
+      }
+    }, {
+      "iri" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid/code#EcologicalFocusAreaTypeCollectiveValue/landscapeFeaturesHedgesWoodedStrips",
+      "baseIri" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid/code",
+      "annotations" : {
+        "inScheme" : [ {
+          "identifier" : "inScheme",
+          "language" : "undefined",
+          "value" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid/code#EcologicalFocusAreaTypeCollectiveValue",
+          "type" : "iri"
+        } ],
+        "definition" : [ {
+          "identifier" : "definition",
+          "language" : "en",
+          "value" : "-- Definition --\r\nLandscape features: Hedges/wooded strips.\r\n-- Description --\r\nLandscape features: Hedges/wooded strips (per 1m).",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "EcologicalFocusAreaTypeCollectiveValue/landscapeFeaturesHedgesWoodedStrips",
+        "en" : "Landscape features: Hedges/wooded strips"
+      }
+    }, {
+      "iri" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid/code#EcologicalFocusAreaTypeCollectiveValue/landscapeFeaturesGroupOfTreesFieldCopses",
+      "baseIri" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid/code",
+      "annotations" : {
+        "inScheme" : [ {
+          "identifier" : "inScheme",
+          "language" : "undefined",
+          "value" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid/code#EcologicalFocusAreaTypeCollectiveValue",
+          "type" : "iri"
+        } ],
+        "definition" : [ {
+          "identifier" : "definition",
+          "language" : "en",
+          "value" : "-- Definition --\r\nLandscape features, group of trees/Field copses.\r\n-- Description --\r\nLandscape features: Group of trees/Field copses (per 1m2).",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "EcologicalFocusAreaTypeCollectiveValue/landscapeFeaturesGroupOfTreesFieldCopses",
+        "en" : "Landscape features, group of trees/Field copses"
+      }
+    }, {
+      "iri" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid/code#EcologicalFocusAreaTypeCollectiveValue/landscapeFeaturesTraditionalStoneWalls",
+      "baseIri" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid/code",
+      "annotations" : {
+        "inScheme" : [ {
+          "identifier" : "inScheme",
+          "language" : "undefined",
+          "value" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid/code#EcologicalFocusAreaTypeCollectiveValue",
+          "type" : "iri"
+        } ],
+        "definition" : [ {
+          "identifier" : "definition",
+          "language" : "en",
+          "value" : "-- Definition --\r\nLandscape features traditional stone walls.\r\n-- Description --\r\nLandscape features: Traditional stone walls (per 1m).",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "EcologicalFocusAreaTypeCollectiveValue/landscapeFeaturesTraditionalStoneWalls",
+        "en" : "Landscape features traditional stone walls"
+      }
+    }, {
+      "iri" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid/code#EcologicalFocusAreaTypeCollectiveValue/landLyingFallow",
+      "baseIri" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid/code",
+      "annotations" : {
+        "inScheme" : [ {
+          "identifier" : "inScheme",
+          "language" : "undefined",
+          "value" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid/code#EcologicalFocusAreaTypeCollectiveValue",
+          "type" : "iri"
+        } ],
+        "definition" : [ {
+          "identifier" : "definition",
+          "language" : "en",
+          "value" : "-- Definition --\r\nLand lying fallow.\r\n-- Description --\r\nLand lying fallow (per 1m2).",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "EcologicalFocusAreaTypeCollectiveValue/landLyingFallow",
+        "en" : "Land lying fallow"
+      }
+    }, {
+      "iri" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid/code#EcologicalFocusAreaTypeCollectiveValue/landscapeFeaturesFieldMargin",
+      "baseIri" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid/code",
+      "annotations" : {
+        "inScheme" : [ {
+          "identifier" : "inScheme",
+          "language" : "undefined",
+          "value" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid/code#EcologicalFocusAreaTypeCollectiveValue",
+          "type" : "iri"
+        } ],
+        "definition" : [ {
+          "identifier" : "definition",
+          "language" : "en",
+          "value" : "-- Definition --\r\nLandscape features, field margin.\r\n-- Description --\r\nLandscape features: Field margin (per 1m).",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "EcologicalFocusAreaTypeCollectiveValue/landscapeFeaturesFieldMargin",
+        "en" : "Landscape features, field margin"
+      }
+    }, {
+      "iri" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid/code#EcologicalFocusAreaTypeCollectiveValue/landscapeFeaturesIsolatedTree",
+      "baseIri" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid/code",
+      "annotations" : {
+        "inScheme" : [ {
+          "identifier" : "inScheme",
+          "language" : "undefined",
+          "value" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid/code#EcologicalFocusAreaTypeCollectiveValue",
+          "type" : "iri"
+        } ],
+        "definition" : [ {
+          "identifier" : "definition",
+          "language" : "en",
+          "value" : "-- Definition --\r\nLandscape features, isolated tree.\r\n-- Description --\r\nLandscape features: Isolated tree (per tree).",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "EcologicalFocusAreaTypeCollectiveValue/landscapeFeaturesIsolatedTree",
+        "en" : "Landscape features, isolated tree"
+      }
+    }, {
+      "iri" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid/code#EcologicalFocusAreaTypeCollectiveValue/landscapeFeaturesTreesInLine",
+      "baseIri" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid/code",
+      "annotations" : {
+        "inScheme" : [ {
+          "identifier" : "inScheme",
+          "language" : "undefined",
+          "value" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid/code#EcologicalFocusAreaTypeCollectiveValue",
+          "type" : "iri"
+        } ],
+        "definition" : [ {
+          "identifier" : "definition",
+          "language" : "en",
+          "value" : "-- Definition --\r\nLandscape features, trees in line.\r\n-- Description --\r\nLandscape features: Trees in line (per 1m).",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "EcologicalFocusAreaTypeCollectiveValue/landscapeFeaturesTreesInLine",
+        "en" : "Landscape features, trees in line"
+      }
+    }, {
+      "iri" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid/code#EcologicalFocusAreaTypeCollectiveValue/landscapeFeaturesDitches",
+      "baseIri" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid/code",
+      "annotations" : {
+        "inScheme" : [ {
+          "identifier" : "inScheme",
+          "language" : "undefined",
+          "value" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid/code#EcologicalFocusAreaTypeCollectiveValue",
+          "type" : "iri"
+        } ],
+        "definition" : [ {
+          "identifier" : "definition",
+          "language" : "en",
+          "value" : "-- Definition --\r\nLandscape features, ditches.\r\n-- Description --\r\nLandscape features: Ditches (per 1m).",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "EcologicalFocusAreaTypeCollectiveValue/landscapeFeaturesDitches",
+        "en" : "Landscape features, ditches"
+      }
+    } ],
+    "attributes" : [ "external" ],
+    "id" : "3"
+  }, {
+    "iri" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#GeometrySourceValue",
+    "baseIri" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "GeometrySourceValue"
+    },
+    "individuals" : [ {
+      "iri" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid/code#GeometrySourceValue/confirmedByFarmer",
+      "baseIri" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid/code",
+      "annotations" : {
+        "inScheme" : [ {
+          "identifier" : "inScheme",
+          "language" : "undefined",
+          "value" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid/code#GeometrySourceValue",
+          "type" : "iri"
+        } ],
+        "definition" : [ {
+          "identifier" : "definition",
+          "language" : "en",
+          "value" : "-- Definition --\r\nConfirmed by farmer.\r\n-- Description --\r\nConfirmed by farmer using predefined lists of data objects (from IACS).",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "GeometrySourceValue/confirmedByFarmer",
+        "en" : "Confirmed by farmer"
+      }
+    }, {
+      "iri" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid/code#GeometrySourceValue/delineatedByFarmer",
+      "baseIri" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid/code",
+      "annotations" : {
+        "inScheme" : [ {
+          "identifier" : "inScheme",
+          "language" : "undefined",
+          "value" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid/code#GeometrySourceValue",
+          "type" : "iri"
+        } ],
+        "definition" : [ {
+          "identifier" : "definition",
+          "language" : "en",
+          "value" : "-- Definition --\r\nDelineated by farmer.\r\n-- Description --\r\nDelineated by farmer / interactive entry using official data as a background.",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "GeometrySourceValue/delineatedByFarmer",
+        "en" : "Delineated by farmer"
+      }
+    }, {
+      "iri" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid/code#GeometrySourceValue/measuredByFarmer",
+      "baseIri" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid/code",
+      "annotations" : {
+        "inScheme" : [ {
+          "identifier" : "inScheme",
+          "language" : "undefined",
+          "value" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid/code#GeometrySourceValue",
+          "type" : "iri"
+        } ],
+        "definition" : [ {
+          "identifier" : "definition",
+          "language" : "en",
+          "value" : "-- Definition --\r\nMeasured by farmer.\r\n-- Description --\r\nMeasured by farmer / uploaded by farmer.",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "GeometrySourceValue/measuredByFarmer",
+        "en" : "Measured by farmer"
+      }
+    } ],
+    "attributes" : [ "external" ],
+    "id" : "4"
+  }, {
+    "iri" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#FarmersSurveyFeatureTypeValue",
+    "baseIri" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "FarmersSurveyFeatureTypeValue"
+    },
+    "individuals" : [ {
+      "iri" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid/code#FarmersSurveyFeatureTypeValue/ecologicalFocusArea",
+      "baseIri" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid/code",
+      "annotations" : {
+        "inScheme" : [ {
+          "identifier" : "inScheme",
+          "language" : "undefined",
+          "value" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid/code#FarmersSurveyFeatureTypeValue",
+          "type" : "iri"
+        } ],
+        "definition" : [ {
+          "identifier" : "definition",
+          "language" : "en",
+          "value" : "-- Definition --\r\nEcological focus area.\r\n-- Description --\r\nEcological focus area.",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "FarmersSurveyFeatureTypeValue/ecologicalFocusArea",
+        "en" : "Ecological focus area"
+      }
+    }, {
+      "iri" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid/code#FarmersSurveyFeatureTypeValue/agriculturalArea",
+      "baseIri" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid/code",
+      "annotations" : {
+        "inScheme" : [ {
+          "identifier" : "inScheme",
+          "language" : "undefined",
+          "value" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid/code#FarmersSurveyFeatureTypeValue",
+          "type" : "iri"
+        } ],
+        "definition" : [ {
+          "identifier" : "definition",
+          "language" : "en",
+          "value" : "-- Definition --\r\nAgricultural area.\r\n-- Description --\r\nAgricultural area.",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "FarmersSurveyFeatureTypeValue/agriculturalArea",
+        "en" : "Agricultural area"
+      }
+    }, {
+      "iri" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid/code#FarmersSurveyFeatureTypeValue/geospatialApplicationBoundary",
+      "baseIri" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid/code",
+      "annotations" : {
+        "inScheme" : [ {
+          "identifier" : "inScheme",
+          "language" : "undefined",
+          "value" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid/code#FarmersSurveyFeatureTypeValue",
+          "type" : "iri"
+        } ],
+        "definition" : [ {
+          "identifier" : "definition",
+          "language" : "en",
+          "value" : "-- Definition --\r\nGeospatial application.\r\n-- Description --\r\nGeospatial application boundary.",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "FarmersSurveyFeatureTypeValue/geospatialApplicationBoundary",
+        "en" : "Geospatial application boundary"
+      }
+    }, {
+      "iri" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid/code#FarmersSurveyFeatureTypeValue/agriculturalParcel",
+      "baseIri" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid/code",
+      "annotations" : {
+        "inScheme" : [ {
+          "identifier" : "inScheme",
+          "language" : "undefined",
+          "value" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid/code#FarmersSurveyFeatureTypeValue",
+          "type" : "iri"
+        } ],
+        "definition" : [ {
+          "identifier" : "definition",
+          "language" : "en",
+          "value" : "-- Definition --\r\nAgricultural parcel.\r\n-- Description --\r\nAgricultural parcel.",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "FarmersSurveyFeatureTypeValue/agriculturalParcel",
+        "en" : "Agricultural parcel"
+      }
+    }, {
+      "iri" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid/code#FarmersSurveyFeatureTypeValue/referenceArea",
+      "baseIri" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid/code",
+      "annotations" : {
+        "inScheme" : [ {
+          "identifier" : "inScheme",
+          "language" : "undefined",
+          "value" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid/code#FarmersSurveyFeatureTypeValue",
+          "type" : "iri"
+        } ],
+        "definition" : [ {
+          "identifier" : "definition",
+          "language" : "en",
+          "value" : "-- Definition --\r\nAgricultural area.\r\n-- Description --\r\nAgricultural area.",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "FarmersSurveyFeatureTypeValue/referenceArea",
+        "en" : "Reference area"
+      }
+    } ],
+    "attributes" : [ "external" ],
+    "id" : "5"
+  }, {
+    "iri" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#AgriculturalPracticeTypeValue",
+    "baseIri" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "AgriculturalPracticeTypeValue"
+    },
+    "individuals" : [ {
+      "iri" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid/code#AgriculturalPracticeTypeValue/equivalentAgriEnvironmentClimateRegulationCommitment",
+      "baseIri" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid/code",
+      "annotations" : {
+        "inScheme" : [ {
+          "identifier" : "inScheme",
+          "language" : "undefined",
+          "value" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid/code#AgriculturalPracticeTypeValue",
+          "type" : "iri"
+        } ],
+        "definition" : [ {
+          "identifier" : "definition",
+          "language" : "en",
+          "value" : "Agri-Environment and Climate Regulation Commitment\r\n\r\nEquivalent practices that yield an equivalent or higher level of benefit for the climate and the environment [Art. 43(3)(a) of R 1307/2013]. \r\n\r\nThe applicable regulations are the following:\r\n\t- Article 39(2) of Regulation (EC) No 1698/2005 (minimum requirements for fertiliser and plant protection product use) \r\n\t- Article 28(2) of Regulation (EU) No 1305/2013",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "AgriculturalPracticeTypeValue/equivalentAgriEnvironmentClimateRegulationCommitment"
+      }
+    }, {
+      "iri" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid/code#AgriculturalPracticeTypeValue/equivalentNationalOrRegionalCertificationScheme",
+      "baseIri" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid/code",
+      "annotations" : {
+        "inScheme" : [ {
+          "identifier" : "inScheme",
+          "language" : "undefined",
+          "value" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid/code#AgriculturalPracticeTypeValue",
+          "type" : "iri"
+        } ],
+        "definition" : [ {
+          "identifier" : "definition",
+          "language" : "en",
+          "value" : "National or regional certification scheme\r\n\r\nEquivalent practices that yield an equivalent or higher level of benefit for the climate and the environment [Art. 43(3)(b) of R 1307/2013]. \r\n\r\nThe practices are included in Annex IX of this regulation and the AgriculturalEquivalentPracticeTypeValue code list of the Aid applications and payment claims application schema.",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "AgriculturalPracticeTypeValue/equivalentNationalOrRegionalCertificationScheme"
+      }
+    }, {
+      "iri" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid/code#AgriculturalPracticeTypeValue/maintainingExistingPermanentGrassland",
+      "baseIri" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid/code",
+      "annotations" : {
+        "inScheme" : [ {
+          "identifier" : "inScheme",
+          "language" : "undefined",
+          "value" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid/code#AgriculturalPracticeTypeValue",
+          "type" : "iri"
+        } ],
+        "definition" : [ {
+          "identifier" : "definition",
+          "language" : "en",
+          "value" : "Maintaining existing permanent grassland\r\n\r\nAgricultural practices beneficial for the climate and the environment [Art.43(2)(b) of R 1307/2013].",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "AgriculturalPracticeTypeValue/maintainingExistingPermanentGrassland",
+        "en" : "Maintaining existing permanent grassland"
+      }
+    }, {
+      "iri" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid/code#AgriculturalPracticeTypeValue/cropDiversification",
+      "baseIri" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid/code",
+      "annotations" : {
+        "inScheme" : [ {
+          "identifier" : "inScheme",
+          "language" : "undefined",
+          "value" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid/code#AgriculturalPracticeTypeValue",
+          "type" : "iri"
+        } ],
+        "definition" : [ {
+          "identifier" : "definition",
+          "language" : "en",
+          "value" : "Crop diversification\r\n\r\nAgricultural practices beneficial for the climate and the environment [Art.43(2)(a) of R 1307/2013].",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "AgriculturalPracticeTypeValue/cropDiversification",
+        "en" : "Crop diversification"
+      }
+    }, {
+      "iri" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid/code#AgriculturalPracticeTypeValue/havingEcologicalFocusAreaOnTheAgriculturalArea",
+      "baseIri" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid/code",
+      "annotations" : {
+        "inScheme" : [ {
+          "identifier" : "inScheme",
+          "language" : "undefined",
+          "value" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid/code#AgriculturalPracticeTypeValue",
+          "type" : "iri"
+        } ],
+        "definition" : [ {
+          "identifier" : "definition",
+          "language" : "en",
+          "value" : "Having ecological focus area on the agricultural area\r\n\r\nAgricultural practices beneficial for the climate and the environment [Art.43(2)(c) of R 1307/2013].",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "AgriculturalPracticeTypeValue/havingEcologicalFocusAreaOnTheAgriculturalArea",
+        "en" : "Having ecological focus area on the agricultural area"
+      }
+    } ],
+    "attributes" : [ "external" ],
+    "id" : "6"
+  }, {
+    "iri" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#AgriculturalEquivalentPracticeTypeValue",
+    "baseIri" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "AgriculturalEquivalentPracticeTypeValue"
+    },
+    "individuals" : [ {
+      "iri" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid/code#AgriculturalEquivalentPracticeTypeValue/equivalentNationalOrRegionalCertificationScheme",
+      "baseIri" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid/code",
+      "annotations" : {
+        "inScheme" : [ {
+          "identifier" : "inScheme",
+          "language" : "undefined",
+          "value" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid/code#AgriculturalEquivalentPracticeTypeValue",
+          "type" : "iri"
+        } ],
+        "definition" : [ {
+          "identifier" : "definition",
+          "language" : "en",
+          "value" : "National or regional certification scheme\r\n\r\nEquivalent practices that yield an equivalent or higher level of benefit for the climate and the environment [Art. 43(3)(b) of R 1307/2013]. \r\n\r\nThe details of practices together with the related requirements are included in Annex IX of this regulation and the AgriculturalEquivalentPracticeRequirementValue code list.",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "AgriculturalEquivalentPracticeTypeValue/equivalentNationalOrRegionalCertificationScheme",
+        "en" : "Requirement: lower maximum thresholds apply"
+      }
+    }, {
+      "iri" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid/code#AgriculturalEquivalentPracticeTypeValue/equivalentAgriEnvironmentClimateRegulationCommitment",
+      "baseIri" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid/code",
+      "annotations" : {
+        "inScheme" : [ {
+          "identifier" : "inScheme",
+          "language" : "undefined",
+          "value" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid/code#AgriculturalEquivalentPracticeTypeValue",
+          "type" : "iri"
+        } ],
+        "definition" : [ {
+          "identifier" : "definition",
+          "language" : "en",
+          "value" : "Agri-Environment and Climate Regulation Commitment\r\n\r\nEquivalent practices that yield an equivalent or higher level of benefit for the climate and the environment [Art. 43(3)(a) of R 1307/2013]. \r\n\r\nThe applicable regulations are the following:\r\n\t- Article 39(2) of Regulation (EC) No 1698/2005 (minimum requirements for fertiliser and plant protection product use) \r\n\t- Article 28(2) of Regulation (EU) No 1305/2013",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "AgriculturalEquivalentPracticeTypeValue/equivalentAgriEnvironmentClimateRegulationCommitment",
+        "en" : "Requirement: there are at least four crops"
+      }
+    } ],
+    "attributes" : [ "external" ],
+    "id" : "7"
+  }, {
+    "iri" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#CropGroupTypeGreeningValue",
+    "baseIri" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "CropGroupTypeGreeningValue"
+    },
+    "individuals" : [ {
+      "iri" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid/code#CropGroupTypeGreeningValue/ecologicalFocusArea",
+      "baseIri" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid/code",
+      "annotations" : {
+        "inScheme" : [ {
+          "identifier" : "inScheme",
+          "language" : "undefined",
+          "value" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid/code#CropGroupTypeGreeningValue",
+          "type" : "iri"
+        } ],
+        "definition" : [ {
+          "identifier" : "definition",
+          "language" : "en",
+          "value" : "-- Definition --\r\nEcological focus area.\r\n-- Description --\r\nAreas declared as ecological focus area.\r\nNOTE. d",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "CropGroupTypeGreeningValue/ecologicalFocusArea",
+        "en" : "Ecological focus area"
+      }
+    }, {
+      "iri" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid/code#CropGroupTypeGreeningValue/permanentPastureRemaining",
+      "baseIri" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid/code",
+      "annotations" : {
+        "inScheme" : [ {
+          "identifier" : "inScheme",
+          "language" : "undefined",
+          "value" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid/code#CropGroupTypeGreeningValue",
+          "type" : "iri"
+        } ],
+        "definition" : [ {
+          "identifier" : "definition",
+          "language" : "en",
+          "value" : "-- Definition --\r\nPermanent pasture remaining.\r\n-- Description --\r\nRemaining areas declared as permanent pasture.\r\nNOTE. cp",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "CropGroupTypeGreeningValue/permanentPastureRemaining",
+        "en" : "Permanent pasture remaining"
+      }
+    }, {
+      "iri" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid/code#CropGroupTypeGreeningValue/permanentGrasslandEnvironmentallySensitive",
+      "baseIri" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid/code",
+      "annotations" : {
+        "inScheme" : [ {
+          "identifier" : "inScheme",
+          "language" : "undefined",
+          "value" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid/code#CropGroupTypeGreeningValue",
+          "type" : "iri"
+        } ],
+        "definition" : [ {
+          "identifier" : "definition",
+          "language" : "en",
+          "value" : "--Name--\r\nPermanent grassland environmentally sensitive\r\n\r\n-- Definition --\r\nPermanent grasslands which are environmentally sensitive in areas covered by Directives 92/43/EEC or 2009/147/EC, including in peat and wetlands situated in these areas.\r\n\r\n-- Description --",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "CropGroupTypeGreeningValue/permanentGrasslandEnvironmentallySensitive",
+        "en" : "Permanent grassland environmentally sensitive"
+      }
+    }, {
+      "iri" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid/code#CropGroupTypeGreeningValue/permanentGrasslandRemaining",
+      "baseIri" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid/code",
+      "annotations" : {
+        "inScheme" : [ {
+          "identifier" : "inScheme",
+          "language" : "undefined",
+          "value" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid/code#CropGroupTypeGreeningValue",
+          "type" : "iri"
+        } ],
+        "definition" : [ {
+          "identifier" : "definition",
+          "language" : "en",
+          "value" : "-- Definition --\r\nPermanent grassland remaining.\r\n-- Description --\r\nRemaining areas declared as permanent grassland.\r\nNOTE. cg",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "CropGroupTypeGreeningValue/permanentGrasslandRemaining",
+        "en" : "Permanent grassland remaining"
+      }
+    }, {
+      "iri" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid/code#CropGroupTypeGreeningValue/certainCrop",
+      "baseIri" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid/code",
+      "annotations" : {
+        "inScheme" : [ {
+          "identifier" : "inScheme",
+          "language" : "undefined",
+          "value" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid/code#CropGroupTypeGreeningValue",
+          "type" : "iri"
+        } ],
+        "definition" : [ {
+          "identifier" : "definition",
+          "language" : "en",
+          "value" : "-- Definition --\r\nCertain crop.\r\n-- Description --\r\nEach group of areas declared as a certain crop.\r\nNOTE. a",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "CropGroupTypeGreeningValue/certainCrop",
+        "en" : "Certain crop"
+      }
+    } ],
+    "attributes" : [ "external" ],
+    "id" : "8"
+  }, {
+    "iri" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#AgriculturalPracticeRequirementValue",
+    "baseIri" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "AgriculturalPracticeRequirementValue"
+    },
+    "individuals" : [ {
+      "iri" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid/code#AgriculturalPracticeRequirementValue/atLeast75%OfArableCoveredByGrassesOrLandLyingFallow",
+      "baseIri" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid/code",
+      "annotations" : {
+        "inScheme" : [ {
+          "identifier" : "inScheme",
+          "language" : "undefined",
+          "value" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid/code#AgriculturalPracticeRequirementValue",
+          "type" : "iri"
+        } ],
+        "definition" : [ {
+          "identifier" : "definition",
+          "language" : "en",
+          "value" : "At 75 % of arable covered by grasses or land lying fallow \r\n\r\nWhen grasses or other herbaceous forage or land lying fallow cover more than 75 % of the arable land and the remaining area of other uses does not exceed 30 ha, R (EU) 1307/2013 allows the following exemptions:\r\n\t- According to Art. 41(3)(a) crop diversification\r\n\t- According to  Art. 46(4)(a) EFA\r\n\r\n\r\nNOTE \r\nFor EFA exemption, also cultivation of leguminous crops on more than 75% of the arable land qualifies for the exemption.",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "AgriculturalPracticeRequirementValue/atLeast75%OfArableCoveredByGrassesOrLandLyingFallow"
+      }
+    }, {
+      "iri" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid/code#AgriculturalPracticeRequirementValue/atLeast5%Efa",
+      "baseIri" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid/code",
+      "annotations" : {
+        "inScheme" : [ {
+          "identifier" : "inScheme",
+          "language" : "undefined",
+          "value" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid/code#AgriculturalPracticeRequirementValue",
+          "type" : "iri"
+        } ],
+        "definition" : [ {
+          "identifier" : "definition",
+          "language" : "en",
+          "value" : "At least 5% EFA\r\n\r\nAccording to Art.(46)(1) when arable land of a holding covers more than 15 hectares at least 5% of EFA shall be implemented.",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "AgriculturalPracticeRequirementValue/atLeast5%Efa"
+      }
+    }, {
+      "iri" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid/code#AgriculturalPracticeRequirementValue/atLeast7%Efa",
+      "baseIri" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid/code",
+      "annotations" : {
+        "inScheme" : [ {
+          "identifier" : "inScheme",
+          "language" : "undefined",
+          "value" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid/code#AgriculturalPracticeRequirementValue",
+          "type" : "iri"
+        } ],
+        "definition" : [ {
+          "identifier" : "definition",
+          "language" : "en",
+          "value" : "At least 7% EFA\r\n\r\nIncreased 7 % of EFA mandatory for holdings with area more than 15 ha.\r\n\r\nNOTE\r\nAs this provision is subject to a legislative act of the European Parliament and of the Council this value currently is a placeholder.",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "AgriculturalPracticeRequirementValue/atLeast7%Efa"
+      }
+    }, {
+      "iri" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid/code#AgriculturalPracticeRequirementValue/minimumActivity",
+      "baseIri" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid/code",
+      "annotations" : {
+        "inScheme" : [ {
+          "identifier" : "inScheme",
+          "language" : "undefined",
+          "value" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid/code#AgriculturalPracticeRequirementValue",
+          "type" : "iri"
+        } ],
+        "definition" : [ {
+          "identifier" : "definition",
+          "language" : "en",
+          "value" : "Minimum Activity\r\n\r\nMinimum activity, defined by Member States, on agricultural areas naturally kept in a state suitable for grazing or cultivation [Art.(4)(1)(iii) of R (EU) 1307/2013].",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "AgriculturalPracticeRequirementValue/minimumActivity"
+      }
+    }, {
+      "iri" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid/code#AgriculturalPracticeRequirementValue/atLeastThreeCrops",
+      "baseIri" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid/code",
+      "annotations" : {
+        "inScheme" : [ {
+          "identifier" : "inScheme",
+          "language" : "undefined",
+          "value" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid/code#AgriculturalPracticeRequirementValue",
+          "type" : "iri"
+        } ],
+        "definition" : [ {
+          "identifier" : "definition",
+          "language" : "en",
+          "value" : "At least three crops\r\n\r\nAccording to Art. 46(1) second paragraph the value can be assigned when\r\n\t- arable land more than 30 ha\r\n\t- not entirely cultivated with crops under water\r\n\t- main crop shall not cover more than 75 % of arable land\r\n\t- two main crops together shall not cover more than 95 % of arable land.",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "AgriculturalPracticeRequirementValue/atLeastThreeCrops"
+      }
+    }, {
+      "iri" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid/code#AgriculturalPracticeRequirementValue/atLeast75%PermanentGrassland",
+      "baseIri" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid/code",
+      "annotations" : {
+        "inScheme" : [ {
+          "identifier" : "inScheme",
+          "language" : "undefined",
+          "value" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid/code#AgriculturalPracticeRequirementValue",
+          "type" : "iri"
+        } ],
+        "definition" : [ {
+          "identifier" : "definition",
+          "language" : "en",
+          "value" : "At least 75% permanent grassland\r\n\r\nWhen permanent grassland, other herbaceous forage or crops under water cover more than 75 % of the land and the remaining area of other uses does not exceed 30 ha, R (EU) 1307/2013 allows the following exemptions:\r\n\t- According to Art. 41(3)(b) crop diversification\r\n\t- According to  Art. 46(4)(b) EFA\r\n\r\nNOTE 1\r\nCombination of the above uses is allowed\r\n\r\nNOTE 2\r\nUnder water cultivation applies for the significant part of the year or the vegetative cycle.",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "AgriculturalPracticeRequirementValue/atLeast75%PermanentGrassland"
+      }
+    }, {
+      "iri" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid/code#AgriculturalPracticeRequirementValue/atLeastTwoCrops",
+      "baseIri" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid/code",
+      "annotations" : {
+        "inScheme" : [ {
+          "identifier" : "inScheme",
+          "language" : "undefined",
+          "value" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid/code#AgriculturalPracticeRequirementValue",
+          "type" : "iri"
+        } ],
+        "definition" : [ {
+          "identifier" : "definition",
+          "language" : "en",
+          "value" : "At least two crops\r\n\r\nAccording to Art. 46(1) first paragraph the value can be assigned when\r\n\t- arable land  is between 10 and 30 ha\r\n\t- not entirely cultivated with crops under water\r\n\t- main crop shall not cover more than 75 % of arable land.",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "AgriculturalPracticeRequirementValue/atLeastTwoCrops"
+      }
+    }, {
+      "iri" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid/code#AgriculturalPracticeRequirementValue/50%OfArableNotDeclaredInPreviousYear",
+      "baseIri" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid/code",
+      "annotations" : {
+        "inScheme" : [ {
+          "identifier" : "inScheme",
+          "language" : "undefined",
+          "value" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid/code#AgriculturalPracticeRequirementValue",
+          "type" : "iri"
+        } ],
+        "definition" : [ {
+          "identifier" : "definition",
+          "language" : "en",
+          "value" : "50% of arable not declared in previous year\r\n\r\nAccording to Art.(3)(c) of R (EU) 1307/2013 beneficiaries do not need to follow crop diversification when\r\n\r\n\t- more than 50 % of the areas of arable land declared were not declared by the farmer in his aid application of the previous year\r\nAND\r\n\t- all arable land is being cultivated with a different crop compared to that of the previous calendar year\r\n\r\nNOTE\r\nThe second condition shall be verified on the basis of comparison of the geo- spatial aid applications",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "AgriculturalPracticeRequirementValue/50%OfArableNotDeclaredInPreviousYear"
+      }
+    }, {
+      "iri" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid/code#AgriculturalPracticeRequirementValue/northOf62ndParallel",
+      "baseIri" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid/code",
+      "annotations" : {
+        "inScheme" : [ {
+          "identifier" : "inScheme",
+          "language" : "undefined",
+          "value" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid/code#AgriculturalPracticeRequirementValue",
+          "type" : "iri"
+        } ],
+        "definition" : [ {
+          "identifier" : "definition",
+          "language" : "en",
+          "value" : "North of 62nd parallel\r\n\r\nAccording to Art.(3)(d) of R (EU) 1307/2013 beneficiaries have special crop diversification rules for holdings that are\r\n\t- situated in areas north of 62nd parallel or certain adjacent areas\r\nAND\r\n\t- arable land of such holdings covers more than 10 hectares, there shall be at least two crops on the arable land\r\n\t-  none of these crops shall cover more than 75 % of the arable land, unless the main crop is grasses or other herbaceous forage, or land lying fallow.",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "AgriculturalPracticeRequirementValue/northOf62ndParallel"
+      }
+    } ],
+    "attributes" : [ "external" ],
+    "id" : "9"
+  }, {
+    "iri" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#CropGroupTypeAreaRelatedSupportSchemaValue",
+    "baseIri" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "CropGroupTypeAreaRelatedSupportSchemaValue"
+    },
+    "individuals" : [ {
+      "iri" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid/code#CropGroupTypeAreaRelatedSupportSchemaValue/anyOtherAreaRelatedAidSchemeOrSupportMeasure",
+      "baseIri" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid/code",
+      "annotations" : {
+        "inScheme" : [ {
+          "identifier" : "inScheme",
+          "language" : "undefined",
+          "value" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid/code#CropGroupTypeAreaRelatedSupportSchemaValue",
+          "type" : "iri"
+        } ],
+        "definition" : [ {
+          "identifier" : "definition",
+          "language" : "en",
+          "value" : "-- Definition --\r\nAny other area-related aid scheme or support measure.\r\n-- Description --\r\nA group for each of the areas declared for the purpose of any other area-related aid scheme or support measure, for which a different rate of aid is applicable. \r\nNOTE. This is not area-related support measure.",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "CropGroupTypeAreaRelatedSupportSchemaValue/anyOtherAreaRelatedAidSchemeOrSupportMeasure",
+        "en" : "Any other area-related aid scheme or support measure"
+      }
+    }, {
+      "iri" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid/code#CropGroupTypeAreaRelatedSupportSchemaValue/activationOfBpsOrSaps",
+      "baseIri" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid/code",
+      "annotations" : {
+        "inScheme" : [ {
+          "identifier" : "inScheme",
+          "language" : "undefined",
+          "value" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid/code#CropGroupTypeAreaRelatedSupportSchemaValue",
+          "type" : "iri"
+        } ],
+        "definition" : [ {
+          "identifier" : "definition",
+          "language" : "en",
+          "value" : "-- Definition --\r\nActivation of BPS or SAPS.\r\n-- Description --\r\nAreas declared for the purposes of activation of payment entitlements under the basic payment scheme or for the purpose of being granted the single area payment scheme.",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "CropGroupTypeAreaRelatedSupportSchemaValue/activationOfBpsOrSaps",
+        "en" : "Activation of BPS or SAPS"
+      }
+    }, {
+      "iri" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid/code#CropGroupTypeAreaRelatedSupportSchemaValue/otherUses",
+      "baseIri" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid/code",
+      "annotations" : {
+        "inScheme" : [ {
+          "identifier" : "inScheme",
+          "language" : "undefined",
+          "value" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid/code#CropGroupTypeAreaRelatedSupportSchemaValue",
+          "type" : "iri"
+        } ],
+        "definition" : [ {
+          "identifier" : "definition",
+          "language" : "en",
+          "value" : "-- Definition --\r\nOther uses.\r\n-- Description --\r\nAreas declared under the heading other uses.",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "CropGroupTypeAreaRelatedSupportSchemaValue/otherUses",
+        "en" : "Other uses"
+      }
+    } ],
+    "attributes" : [ "external" ],
+    "id" : "10"
+  }, {
+    "iri" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#AgriculturalEquivalentPracticeSubtypeValue",
+    "baseIri" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "AgriculturalEquivalentPracticeSubtypeValue"
+    },
+    "individuals" : [ {
+      "iri" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid/code#AgriculturalEquivalentPracticeSubtypeValue/equivalentToEcologicalFocusArea",
+      "baseIri" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid/code",
+      "annotations" : {
+        "inScheme" : [ {
+          "identifier" : "inScheme",
+          "language" : "undefined",
+          "value" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid/code#AgriculturalEquivalentPracticeSubtypeValue",
+          "type" : "iri"
+        } ],
+        "definition" : [ {
+          "identifier" : "definition",
+          "language" : "en",
+          "value" : "Equivalent to Ecological Focus Area\r\n\r\nPractices equivalent to ecological focus area as listed in  III) of Annex IX of R 1307/2013:\r\n\t- Ecological set aside\r\n\t- Creation of \"buffer zones\" for high nature value areas\r\n\t-  Management of uncultivated buffer strips, patches and field margins \r\n\t- Borders, in-field strips and patches managed for wildlife or specific fauna\r\n\t- Management (pruning, trimming, dates, methods, restoration) of landscape features\r\n\t- Keeping arable peaty or wet soils under grass (with no use of fertilisers and no use of plant protection products)\r\n\t- Production on arable land with no use of fertiliser (mineral fertiliser and manure) and/or plant protection products, and not irrigated, not sown with the same crop two years in a row and on a fixed place\r\n\t- Conversion of arable land into permanent grassland extensively used",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "AgriculturalEquivalentPracticeSubtypeValue/equivalentToEcologicalFocusArea",
+        "en" : "Practices equivalent with ecological focus area"
+      }
+    }, {
+      "iri" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid/code#AgriculturalEquivalentPracticeSubtypeValue/equivalentToMaintenanceOfPermanentGrassland",
+      "baseIri" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid/code",
+      "annotations" : {
+        "inScheme" : [ {
+          "identifier" : "inScheme",
+          "language" : "undefined",
+          "value" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid/code#AgriculturalEquivalentPracticeSubtypeValue",
+          "type" : "iri"
+        } ],
+        "definition" : [ {
+          "identifier" : "definition",
+          "language" : "en",
+          "value" : "Equivalent to maintenance of permanent grassland\r\n\r\nPractices equivalent to the maintenance of permanent grassland as listed in II) of Annex IX of R 1307/2013:\r\n\t- Management of meadows or pastures\r\n\t- Extensive grazing systems",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "AgriculturalEquivalentPracticeSubtypeValue/equivalentToMaintenanceOfPermanentGrassland",
+        "en" : "Practices equivalent to maintenance of permanent grassland: Management of meadows or pastures"
+      }
+    }, {
+      "iri" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid/code#AgriculturalEquivalentPracticeSubtypeValue/equivalentToCropDiversification",
+      "baseIri" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid/code",
+      "annotations" : {
+        "inScheme" : [ {
+          "identifier" : "inScheme",
+          "language" : "undefined",
+          "value" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid/code#AgriculturalEquivalentPracticeSubtypeValue",
+          "type" : "iri"
+        } ],
+        "definition" : [ {
+          "identifier" : "definition",
+          "language" : "en",
+          "value" : "Equivalent to crop diversification\r\n\r\nPractices equivalent to crop diversification as listed in I) of Annex IX of R 1307/2013:\r\n\t- crop diversification(with different requirements)\r\n\t- crop rotation\r\n\t- winter soil cover\r\n\t- catch crop",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "AgriculturalEquivalentPracticeSubtypeValue/equivalentToCropDiversification",
+        "en" : "Practices equivalent to crop diversification: Crop diversification"
+      }
+    } ],
+    "attributes" : [ "external" ],
+    "id" : "11"
+  } ]
+}

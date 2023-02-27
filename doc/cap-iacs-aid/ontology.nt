@@ -1,0 +1,757 @@
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid> <http://www.w3.org/2002/07/owl#versionIRI> <http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid/3.0> .
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid> <http://www.w3.org/2002/07/owl#imports> <http://www.opengis.net/ont/geosparql> .
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid> <http://www.w3.org/2002/07/owl#imports> <https://raw.githubusercontent.com/rapw3k/cap-iacs/main/cap-iacs-base.ttl> .
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid> <http://purl.org/dc/terms/creator> _:genid1 .
+_:genid1 <http://xmlns.com/foaf/0.1/name> "Raul Palma" .
+_:genid1 <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://orcid.org/0000-0003-4289-4922> .
+_:genid1 <http://schema.org/affiliation> _:genid2 .
+_:genid2 <http://xmlns.com/foaf/0.1/name> "PSNC" .
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid> <http://purl.org/dc/terms/description> "Ontology of the aid applications and payment claims used in IACS, generated from the transformation of the corresponding JRC application schema"@en .
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid> <http://purl.org/dc/terms/rights> "This ontology is distributed under Creative Commons Attribution 4.0 License - http://creativecommons.org/licenses/by/4.0"@en .
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid> <http://purl.org/dc/terms/source> "JRC IACS application schema. https://doi.org/10.1016/j.landusepol.2016.05.023"@en .
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid> <http://purl.org/dc/terms/title> "JRC IACS - Aid Applications and Payment Claims Ontology"@en .
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid> <http://www.w3.org/2000/01/rdf-schema#label> "Aid applications and payment claims"@en .
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid> <http://www.w3.org/2002/07/owl#versionInfo> "3.0" .
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid> <http://www.w3.org/2004/02/skos/core#definition> "-- Name --\r\nAid applications and payment claims\r\n\r\n-- Definition --\r\nThis is a placeholder.\r\n\r\n-- Description --\r\nAid applications and payment claims system application schema.The contents of an «ApplicationSchema» package exported as a GML Application Schema file."@en .
+# 
+# 
+# #################################################################
+# #
+# #    Object Properties
+# #
+# #################################################################
+# 
+# 
+# http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#advance
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#advance> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#advance> <http://www.w3.org/2000/01/rdf-schema#range> <http://qudt.org/schema/qudt/QuantityValue> .
+# 
+# http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#agriculturalEquivalentPracticeSubtype
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#agriculturalEquivalentPracticeSubtype> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#agriculturalEquivalentPracticeSubtype> <http://www.w3.org/2000/01/rdf-schema#range> <http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#AgriculturalEquivalentPracticeSubtypeValue> .
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#agriculturalEquivalentPracticeSubtype> <http://www.w3.org/2000/01/rdf-schema#label> "The type of equivalent agricultural practice"@en .
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#agriculturalEquivalentPracticeSubtype> <http://www.w3.org/2004/02/skos/core#definition> "Agricultural equivalent practice type\r\n\r\nSubtypes of equivalent agricultural practices in sense of Art.43(3)(a) and (b) of R 1307/2013 .\r\n\r\nThe values are given in the AgriculturalEquivalentPracticeValue code list."@en .
+# 
+# http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#agriculturalEquivalentPracticeType
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#agriculturalEquivalentPracticeType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#agriculturalEquivalentPracticeType> <http://www.w3.org/2000/01/rdf-schema#range> <http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#AgriculturalEquivalentPracticeTypeValue> .
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#agriculturalEquivalentPracticeType> <http://www.w3.org/2000/01/rdf-schema#label> "Type of equivalent agricultural practice"@en .
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#agriculturalEquivalentPracticeType> <http://www.w3.org/2004/02/skos/core#definition> "Agricultural equivalent practice type\r\n\r\nType of equivalent agricultural practice in sense of Art. 43(3) of R 1307/2013.\r\n\r\nThe values of equivalent practice types are given in the AgriculturalEquivalentPraciceType code list."@en .
+# 
+# http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#agriculturalParcelDetailsWithinCropGroupGreening
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#agriculturalParcelDetailsWithinCropGroupGreening> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#agriculturalParcelDetailsWithinCropGroupGreening> <http://www.w3.org/2000/01/rdf-schema#range> <http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#CropGroupGreening> .
+# 
+# http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#agriculturalPracticeRequirementType
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#agriculturalPracticeRequirementType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#agriculturalPracticeRequirementType> <http://www.w3.org/2000/01/rdf-schema#range> <http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#AgriculturalPracticeRequirementValue> .
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#agriculturalPracticeRequirementType> <http://www.w3.org/2000/01/rdf-schema#label> "Type of agricultural practice"@en .
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#agriculturalPracticeRequirementType> <http://www.w3.org/2004/02/skos/core#definition> "Agricultural practice requirement type\r\n\r\nThis property describes the agricultural practices required for minimum activity (Art. 4) and greening, or for exemption from greening according to  Art. (44) and 46 of R (EU) 1307/2013."@en .
+# 
+# http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#applicationDetailsForAdministrativeChecks
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#applicationDetailsForAdministrativeChecks> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#applicationDetailsForAdministrativeChecks> <http://www.w3.org/2000/01/rdf-schema#range> <http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#AdministrativeCheck> .
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#AdministrativeCheck> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#applicationDetailsForReconversion
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#applicationDetailsForReconversion> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#applicationDetailsForReconversion> <http://www.w3.org/2000/01/rdf-schema#range> <http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#ReconvertingObligation> .
+# 
+# http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#applicationDetailsOfOtscItems
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#applicationDetailsOfOtscItems> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#applicationDetailsOfOtscItems> <http://www.w3.org/2000/01/rdf-schema#range> <http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#OtscItem> .
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#OtscItem> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#applicationsInTheStratum
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#applicationsInTheStratum> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#applicationsInTheStratum> <http://www.w3.org/2000/01/rdf-schema#range> <http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#SamplingStratum> .
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#SamplingStratum> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#collectiveImplementationDetailsForEcologicalFocusAreas
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#collectiveImplementationDetailsForEcologicalFocusAreas> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#collectiveImplementationDetailsForEcologicalFocusAreas> <http://www.w3.org/2000/01/rdf-schema#range> <http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-parcel#EcologicalFocusArea> .
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-parcel#EcologicalFocusArea> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#collectiveImplementationDetailsForHoldingSites
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#collectiveImplementationDetailsForHoldingSites> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#collectiveImplementationDetailsForHoldingSites> <http://www.w3.org/2000/01/rdf-schema#range> <http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-base#Site> .
+# 
+# http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#collectiveImplementationDocument
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#collectiveImplementationDocument> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#collectiveImplementationDocument> <http://www.w3.org/2000/01/rdf-schema#range> <http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-base#SupplementaryDocument> .
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#collectiveImplementationDocument> <http://www.w3.org/2000/01/rdf-schema#label> "Non-structured evidence - document, provided with aid application"@en .
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#collectiveImplementationDocument> <http://www.w3.org/2004/02/skos/core#definition> "-- Definition --\r\nSupplementary document, legal basis contract or designation provided with aid application by farmer.\r\n-- Description --\r\nEXAMPLES: description, document, additional measurement data, etc."@en .
+# 
+# http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#crop
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#crop> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#crop> <http://www.w3.org/2000/01/rdf-schema#range> <http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#CropValue> .
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#crop> <http://www.w3.org/2000/01/rdf-schema#label> "Type of certain crop"@en .
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#crop> <http://www.w3.org/2004/02/skos/core#definition> "-- Definition --\r\nType of certain crop.\r\n-- Description --\r\nType of certain (or single) crop. \r\nNOTE. If cropGroupTypeGreening = certainCrop, then crop must be defined."@en .
+# 
+# http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#cropGroupAreaRelatedAidSchemaDetailsInAidApplication
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#cropGroupAreaRelatedAidSchemaDetailsInAidApplication> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#cropGroupAreaRelatedAidSchemaDetailsInAidApplication> <http://www.w3.org/2000/01/rdf-schema#range> <http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#Application> .
+# 
+# http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#cropGroupGreeningDetailsInAidApplication
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#cropGroupGreeningDetailsInAidApplication> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#cropGroupGreeningDetailsInAidApplication> <http://www.w3.org/2000/01/rdf-schema#range> <http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#Application> .
+# 
+# http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#cropGruopTypeAreaRelatedAidSchema
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#cropGruopTypeAreaRelatedAidSchema> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#cropGruopTypeAreaRelatedAidSchema> <http://www.w3.org/2000/01/rdf-schema#range> <http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#CropGroupTypeAreaRelatedSupportSchemaValue> .
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#cropGruopTypeAreaRelatedAidSchema> <http://www.w3.org/2000/01/rdf-schema#label> "Type of certain area related aid schema payment crop group"@en .
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#cropGruopTypeAreaRelatedAidSchema> <http://www.w3.org/2004/02/skos/core#definition> "-- Definition --\r\nType of area related aid schema crop group.\r\n-- Description --\r\nType of area related aid schema payment crop group."@en .
+# 
+# http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#cropGruopTypeGreening
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#cropGruopTypeGreening> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#cropGruopTypeGreening> <http://www.w3.org/2000/01/rdf-schema#range> <http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#CropGroupTypeGreeningValue> .
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#cropGruopTypeGreening> <http://www.w3.org/2000/01/rdf-schema#label> "Type of certain greening crop group"@en .
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#cropGruopTypeGreening> <http://www.w3.org/2004/02/skos/core#definition> "-- Definition --\r\nType of greening crop group.\r\n-- Description --\r\nType of greening crop group."@en .
+# 
+# http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#crossComplianceRule
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#crossComplianceRule> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#crossComplianceRule> <http://www.w3.org/2000/01/rdf-schema#range> <http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-base#CrossComplianceRuleDescription> .
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#crossComplianceRule> <http://www.w3.org/2000/01/rdf-schema#label> "Cross-compliance rule"@en .
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#crossComplianceRule> <http://www.w3.org/2004/02/skos/core#definition> "-- Definition --\r\nCross-compliance rule description.\r\n\r\n-- Description --\r\nCross-compliance rule description. Declared by the farmer.\r\n\r\nNOTE. If there is no aid application these rules still are mandatory to observe."@en .
+# 
+# http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#crossComplianceRulesForLandscapeFeatures
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#crossComplianceRulesForLandscapeFeatures> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#crossComplianceRulesForLandscapeFeatures> <http://www.w3.org/2000/01/rdf-schema#range> <http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-parcel#LandscapeFeature> .
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-parcel#LandscapeFeature> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#declaredArea
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#declaredArea> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#declaredArea> <http://www.w3.org/2000/01/rdf-schema#range> <http://qudt.org/schema/qudt/QuantityValue> .
+# 
+# http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#declaredEcologicalFocusArea
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#declaredEcologicalFocusArea> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#declaredEcologicalFocusArea> <http://www.w3.org/2000/01/rdf-schema#range> <http://qudt.org/schema/qudt/QuantityValue> .
+# 
+# http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#declaredEntitlementArea
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#declaredEntitlementArea> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#declaredEntitlementArea> <http://www.w3.org/2000/01/rdf-schema#range> <http://qudt.org/schema/qudt/QuantityValue> .
+# 
+# http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#detailsOfAgriculturalParcelsForCrossCompliance
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#detailsOfAgriculturalParcelsForCrossCompliance> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#detailsOfAgriculturalParcelsForCrossCompliance> <http://www.w3.org/2000/01/rdf-schema#range> <http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#CrossCompliance> .
+# 
+# http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#detailsOfAgriculturalPracticesForOnTheSpotCheck
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#detailsOfAgriculturalPracticesForOnTheSpotCheck> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#detailsOfAgriculturalPracticesForOnTheSpotCheck> <http://www.w3.org/2000/01/rdf-schema#range> <http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#OnTheSpotCheck> .
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#OnTheSpotCheck> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#detailsOfCropGroupAreaRelatedAidSchemaForPayment
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#detailsOfCropGroupAreaRelatedAidSchemaForPayment> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#detailsOfCropGroupAreaRelatedAidSchemaForPayment> <http://www.w3.org/2000/01/rdf-schema#range> <http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#Payment> .
+# 
+# http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#detailsOfCropGroupGreeningForPayment
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#detailsOfCropGroupGreeningForPayment> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#detailsOfCropGroupGreeningForPayment> <http://www.w3.org/2000/01/rdf-schema#range> <http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#Payment> .
+# 
+# http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#detailsOfCrossComplianceForOnTheSpotCheck
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#detailsOfCrossComplianceForOnTheSpotCheck> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#detailsOfCrossComplianceForOnTheSpotCheck> <http://www.w3.org/2000/01/rdf-schema#range> <http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#OnTheSpotCheck> .
+# 
+# http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#ecologicalFocusAreaCollective
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#ecologicalFocusAreaCollective> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#ecologicalFocusAreaCollective> <http://www.w3.org/2000/01/rdf-schema#range> <http://qudt.org/schema/qudt/QuantityValue> .
+# 
+# http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#ecologicalFocusAreaConvertedWithinApplication
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#ecologicalFocusAreaConvertedWithinApplication> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#ecologicalFocusAreaConvertedWithinApplication> <http://www.w3.org/2000/01/rdf-schema#range> <http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#Application> .
+# 
+# http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#ecologicalFocusAreaDetailsForConversion
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#ecologicalFocusAreaDetailsForConversion> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#ecologicalFocusAreaDetailsForConversion> <http://www.w3.org/2000/01/rdf-schema#range> <http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-parcel#ConversionParameter> .
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-parcel#ConversionParameter> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#ecologicalFocusAreaType
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#ecologicalFocusAreaType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#ecologicalFocusAreaType> <http://www.w3.org/2000/01/rdf-schema#range> <http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#EcologicalFocusAreaTypeCollectiveValue> .
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#ecologicalFocusAreaType> <http://www.w3.org/2000/01/rdf-schema#label> "Type of ecological focus area for collective implementation"@en .
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#ecologicalFocusAreaType> <http://www.w3.org/2004/02/skos/core#definition> "-- Definition --\r\nType of ecological focus area for collective implementation.\r\n-- Description --\r\nNot all type of ecological focus area are suitable for collective implementation."@en .
+# 
+# http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#equivalentAgriculturalPracticeRequirement
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#equivalentAgriculturalPracticeRequirement> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#equivalentAgriculturalPracticeRequirement> <http://www.w3.org/2000/01/rdf-schema#range> <http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#AgriculturalEquivalentPracticeRequirementValue> .
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#equivalentAgriculturalPracticeRequirement> <http://www.w3.org/2000/01/rdf-schema#label> "The subtype of equivalent agricultural practice, requirement"@en .
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#equivalentAgriculturalPracticeRequirement> <http://www.w3.org/2004/02/skos/core#definition> "Equivalent agricultural practice requirement\r\n\r\nRequirement against the equivalent agricultural practice as detailed in Annex IX of R 1307/2013.\r\n\r\nThe values of requirements are given in the AgriculturalEquivalentPracticeRequirementValue code list."@en .
+# 
+# http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#farmersSurveyFeatureType
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#farmersSurveyFeatureType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#farmersSurveyFeatureType> <http://www.w3.org/2000/01/rdf-schema#range> <http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#FarmersSurveyFeatureTypeValue> .
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#farmersSurveyFeatureType> <http://www.w3.org/2000/01/rdf-schema#label> "Geometry source"@en .
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#farmersSurveyFeatureType> <http://www.w3.org/2004/02/skos/core#definition> "-- Definition --\r\nFeature type measured by farmer.\r\n-- Description --\r\nFeature type measured by farmer."@en .
+# 
+# http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#geometry
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#geometry> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#geometry> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.opengis.net/ont/geosparql#Geometry> .
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#geometry> <http://www.w3.org/2000/01/rdf-schema#label> "Geometry of agricultural area"@en .
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#geometry> <http://www.w3.org/2004/02/skos/core#definition> "-- Definition --\r\nGeometry of agricultural parcel.\r\n-- Description --\r\nRepresentation of the geographical dimension/position of the agricultural parcel.\r\nNOTE. In case of GM_Point geometry - clementini point should be used."@en .
+# 
+# http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#geometrySource
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#geometrySource> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#geometrySource> <http://www.w3.org/2000/01/rdf-schema#range> <http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#GeometrySourceValue> .
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#geometrySource> <http://www.w3.org/2000/01/rdf-schema#label> "Geometry source"@en .
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#geometrySource> <http://www.w3.org/2004/02/skos/core#definition> "-- Definition --\r\nGeometry source.\r\n-- Description --\r\nSurvey or measurement geometry source."@en .
+# 
+# http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#holdindSubmissionInAidApplicationDetails
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#holdindSubmissionInAidApplicationDetails> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#holdindSubmissionInAidApplicationDetails> <http://www.w3.org/2000/01/rdf-schema#range> <http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-base#Holding> .
+# 
+# http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#measurementsWithinSurveyDetails
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#measurementsWithinSurveyDetails> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#measurementsWithinSurveyDetails> <http://www.w3.org/2000/01/rdf-schema#range> <http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#FarmersSurvey> .
+# 
+# http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#metadata
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#metadata> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#metadata> <http://www.w3.org/2000/01/rdf-schema#range> <http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-base#FeatureLevelMetadata> .
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#metadata> <http://www.w3.org/2004/02/skos/core#definition> "Metadata\r\n\r\nFeature level metadata of the reconverting obligation. \r\n\r\nNOTE\r\nThis property brings the life cycle and the validity information of reconverting obligation, which also permits to register when the obligation was implemented by the farmer.  As soon as the reconversion happens, the life cycle of he obligation should end."@en .
+# 
+# http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#nonStructuredEvidenceCitation
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#nonStructuredEvidenceCitation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#nonStructuredEvidenceCitation> <http://www.w3.org/2000/01/rdf-schema#range> <http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-base#SupplementaryDocumentCitation> .
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#nonStructuredEvidenceCitation> <http://www.w3.org/2000/01/rdf-schema#label> "Non-structured evidence - citation"@en .
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#nonStructuredEvidenceCitation> <http://www.w3.org/2004/02/skos/core#definition> "-- Definition --\r\nAny citation that supports the application process.\r\n-- Description --\r\nURL."@en .
+# 
+# http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#nonStructuredEvidenceDocument
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#nonStructuredEvidenceDocument> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#nonStructuredEvidenceDocument> <http://www.w3.org/2000/01/rdf-schema#range> <http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-base#SupplementaryDocument> .
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#nonStructuredEvidenceDocument> <http://www.w3.org/2000/01/rdf-schema#label> "Non-structured evidence - document"@en .
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#nonStructuredEvidenceDocument> <http://www.w3.org/2004/02/skos/core#definition> "-- Definition --\r\nAny record  that supports the application process.\r\n-- Description --\r\nEXAMPLES: description, sketch, photo, document, additional measurement data, etc."@en .
+# 
+# http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#paymentDetailsForAdministrativeChecks
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#paymentDetailsForAdministrativeChecks> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#paymentDetailsForAdministrativeChecks> <http://www.w3.org/2000/01/rdf-schema#range> <http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#AdministrativeCheck> .
+# 
+# http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#paymentDetailsForFarmer
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#paymentDetailsForFarmer> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#paymentDetailsForFarmer> <http://www.w3.org/2000/01/rdf-schema#range> <http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-beneficiery#Farmer> .
+# 
+# http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#reconversionObliationDetails
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#reconversionObliationDetails> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#reconversionObliationDetails> <http://www.w3.org/2000/01/rdf-schema#range> <http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#OtscItem> .
+# 
+# http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#reconversionObligationDetails
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#reconversionObligationDetails> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#reconversionObligationDetails> <http://www.w3.org/2000/01/rdf-schema#range> <http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#Application> .
+# 
+# http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#requiredEcologicalFocusArea
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#requiredEcologicalFocusArea> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#requiredEcologicalFocusArea> <http://www.w3.org/2000/01/rdf-schema#range> <http://qudt.org/schema/qudt/QuantityValue> .
+# 
+# http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#specieCode
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#specieCode> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#specieCode> <http://www.w3.org/2000/01/rdf-schema#range> <http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-base#SpecieCodeValue> .
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#specieCode> <http://www.w3.org/2000/01/rdf-schema#label> "Vegetable or agricultural specie code"@en .
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#specieCode> <http://www.w3.org/2004/02/skos/core#definition> "-- Definition --\r\nVegetable or agricultural specie code.\r\n-- Description --\r\nIf MS asks Farmer to provide particular specie, then Farmer must provide it in his declaration. \r\nNOTE. Common catalogue of varieties of agricultural plant species. Fifth supplement to the 29th complete edition (2011/C 168 A/01).\r\nNOTE. Common catalogue of varieties of vegetable species. 32nd complete edition (2013/C 312 A/01).\r\nNOTE. Only when: agriculturalAreaType=arableLand."@en .
+# 
+# http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#supportSchemaType
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#supportSchemaType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#supportSchemaType> <http://www.w3.org/2000/01/rdf-schema#range> <http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-base#SupportSchemeTypeValue> .
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#supportSchemaType> <http://www.w3.org/2000/01/rdf-schema#label> "Support schema type"@en .
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#supportSchemaType> <http://www.w3.org/2004/02/skos/core#definition> "-- Definition --\r\nSupport schema type.\r\n-- Description --\r\nSupport schema types (based on Annex I 1307/2013) used in application.\r\nNOTE. Currently in this model version only maximum 11 support schemas have data place holders."@en .
+# 
+# http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#supportSchemeType
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#supportSchemeType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#supportSchemeType> <http://www.w3.org/2000/01/rdf-schema#range> <http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-base#SupportSchemeTypeValue> .
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#supportSchemeType> <http://www.w3.org/2000/01/rdf-schema#label> "Support schema type"@en .
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#supportSchemeType> <http://www.w3.org/2004/02/skos/core#definition> "-- Definition --\r\nSupport schema type.\r\n-- Description --\r\nSupport schema types (based on Annex I 1307/2013) used in application.\r\nNOTE. Currently in this model version only maximum 11 schemas have data place holders."@en .
+# 
+# http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#surveyDetailsForMeasurements
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#surveyDetailsForMeasurements> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#surveyDetailsForMeasurements> <http://www.w3.org/2000/01/rdf-schema#range> <http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#FarmersSurvey> .
+# 
+# http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#varietalName
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#varietalName> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#varietalName> <http://www.w3.org/2000/01/rdf-schema#range> <http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-base#VarietalNameValue> .
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#varietalName> <http://www.w3.org/2000/01/rdf-schema#label> "Varietal name"@en .
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#varietalName> <http://www.w3.org/2004/02/skos/core#definition> "-- Definition --\r\nVarietal name.\r\n-- Description --\r\nInformation referring to the variety within a specie. If MS asks Farmer to provide particular specie variety, then Farmer must provide it in his declaration. Varieties (cultures of any of the different genera defined in the botanical classification of crops) may be provided by maintainers (MS). \r\nNOTE. Common catalogue of varieties of agricultural plant species. Fifth supplement to the 29th complete edition (2011/C 168 A/01).\r\nNOTE. Common catalogue of varieties of vegetable species. 32nd complete edition (2013/C 312 A/01).\r\nNOTE. Only when: agriculturalAreaType=arableLand."@en .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Data properties
+# #
+# #################################################################
+# 
+# 
+# http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#advance
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#advance> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+# 
+# http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#agriculturalPracticeId
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#agriculturalPracticeId> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#agriculturalPracticeId> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#agriculturalPracticeId> <http://www.w3.org/2000/01/rdf-schema#label> "Unique thematic ID of agricultural practice"@en .
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#agriculturalPracticeId> <http://www.w3.org/2004/02/skos/core#definition> "Unique thematic ID of agricultural practice\r\n\r\nThematic identifier at national level, generally the full national code of the agricultural practice."@en .
+# 
+# http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#declaredArea
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#declaredArea> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+# 
+# http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#declaredEcologicalFocusArea
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#declaredEcologicalFocusArea> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+# 
+# http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#declaredEcologicalFocusAreaFeatures
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#declaredEcologicalFocusAreaFeatures> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#declaredEcologicalFocusAreaFeatures> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#integer> .
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#declaredEcologicalFocusAreaFeatures> <http://www.w3.org/2000/01/rdf-schema#label> "Ecological focus area features declared"@en .
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#declaredEcologicalFocusAreaFeatures> <http://www.w3.org/2004/02/skos/core#definition> "-- Definition --\r\nEcological focus area features declared (or \"features in farm\").\r\n-- Description --\r\nEcological focus area features declared.  Ecological focus area features shall be used in order to determine the area of ecological focus area using conversion parameters (when necessary)."@en .
+# 
+# http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#declaredEntitlementArea
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#declaredEntitlementArea> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+# 
+# http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#ecologicalFocusAreaCollective
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#ecologicalFocusAreaCollective> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+# 
+# http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#estimatedAccuracy
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#estimatedAccuracy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#estimatedAccuracy> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#double> .
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#estimatedAccuracy> <http://www.w3.org/2000/01/rdf-schema#label> "Estimated absolute positional accuracy "@en .
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#estimatedAccuracy> <http://www.w3.org/2004/02/skos/core#definition> "-- Definition --\r\nEstimated absolute positional accuracy.\r\n-- Description --\r\nEstimated absolute positional accuracy of the object measured in the used coordinate reference system. Absolute positional accuracy is the mean value of the positional uncertainties for a set of positions, where the positional uncertainties are the distance between a measured position and what is considered as the corresponding true position. This mean value may come from quality measures on a homogeneous population of objects measured or from an estimation based on the knowledge of the production processes and of their accuracy."@en .
+# 
+# http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#farmersMeasurementId
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#farmersMeasurementId> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#farmersMeasurementId> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#farmersMeasurementId> <http://www.w3.org/2000/01/rdf-schema#label> "Unique thematic ID of farmers survey"@en .
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#farmersMeasurementId> <http://www.w3.org/2004/02/skos/core#definition> "-- Definition --\r\nUnique thematic ID of farmer's measurement within a survey.\r\n-- Description --\r\nThematic identifier at national level, generally the full national code of the farmer's  measurement within a survey.\r\nNOTE. Object (real world phenomena) description. It may be the code of object measured."@en .
+# 
+# http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#intoPermanentGrassland
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#intoPermanentGrassland> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#intoPermanentGrassland> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#boolean> .
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#intoPermanentGrassland> <http://www.w3.org/2004/02/skos/core#definition> "Into permanent grassland\r\n\r\nPossible value of the reconverting obligation\r\n\r\nNOTE\r\nIntoPermanentGrassland  and the IntoSensitivePermanentGrassland are mutually exclusive values."@en .
+# 
+# http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#intoSensitivePermanentGrassland
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#intoSensitivePermanentGrassland> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#intoSensitivePermanentGrassland> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#boolean> .
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#intoSensitivePermanentGrassland> <http://www.w3.org/2004/02/skos/core#definition> "Into sensitive permanent grassland\r\n\r\nPossible values of reconverting obligation.\r\n\r\nNOTE\r\nIntoPermanentGrassland  and the IntoSensitivePermanentGrassland are mutually exclusive values."@en .
+# 
+# http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#requiredEcologicalFocusArea
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#requiredEcologicalFocusArea> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+# 
+# http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#submissionDate
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#submissionDate> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#submissionDate> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#date> .
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#submissionDate> <http://www.w3.org/2000/01/rdf-schema#label> "Application submission date"@en .
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#submissionDate> <http://www.w3.org/2004/02/skos/core#definition> "Submission date\r\n\r\nDate of when the application was submitted."@en .
+# 
+# http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#withdrawalDate
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#withdrawalDate> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#withdrawalDate> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#date> .
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#withdrawalDate> <http://www.w3.org/2000/01/rdf-schema#label> "Application correction date"@en .
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#withdrawalDate> <http://www.w3.org/2004/02/skos/core#definition> "Withdrawal date\r\n\r\nWhere the competent authority has not yet informed the beneficiary of any errors contained in the aid application or payment claim nor announced an on-the-spot check, beneficiaries should be entitled to withdraw their aid applications [Preamble (3)and Art 3(2) of R 809/2014 ."@en .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Classes
+# #
+# #################################################################
+# 
+# 
+# http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#AgriculturalEquivalentPracticeRequirementValue
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#AgriculturalEquivalentPracticeRequirementValue> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#AgriculturalEquivalentPracticeRequirementValue> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#AgriculturalEquivalentPracticeRequirementValue> <http://www.w3.org/2000/01/rdf-schema#label> "List of agricultural equivalent practices"@en .
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#AgriculturalEquivalentPracticeRequirementValue> <http://www.w3.org/2004/02/skos/core#definition> "Agricultural equivalent practice requirement value\r\n\r\nList of requirements qualifying agricultural practices as equivalent to the practices beneficial for the climate and the environment descibed in Chapter 3 of R 1307/2013.\r\nThe broad list of equivalent practices are included in Annex IX of R 1307/2013.\r\n\r\nThe equivalent practices go beyond the relevant mandatory standards established pursuant to Chapter I of Title VI of Regulation (EU) No 1306/2013, which aim to meet objectives relating to soil and water quality, biodiversity, landscape preservation, and climate change mitigation and adaptation. Those certification schemes may include the practices listed in Annex IX to this Regulation, the practices referred to in paragraph 2 of this Article, or a combination of those practices."@en .
+# 
+# http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#AgriculturalEquivalentPracticeSubtypeValue
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#AgriculturalEquivalentPracticeSubtypeValue> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#AgriculturalEquivalentPracticeSubtypeValue> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#AgriculturalEquivalentPracticeSubtypeValue> <http://www.w3.org/2000/01/rdf-schema#label> "List of agricultural equivalent subpractices"@en .
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#AgriculturalEquivalentPracticeSubtypeValue> <http://www.w3.org/2004/02/skos/core#definition> "Agricultural equivalent practice subtype value\r\n\r\nBroad categories of agricultural equivalent practices beneficial for the climate and the environment as listed in Annex IX of R 1307/2013."@en .
+# 
+# http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#AgriculturalEquivalentPracticeTypeValue
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#AgriculturalEquivalentPracticeTypeValue> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#AgriculturalEquivalentPracticeTypeValue> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#AgriculturalEquivalentPracticeTypeValue> <http://www.w3.org/2000/01/rdf-schema#label> "List of agricultural equivalent practices requirements"@en .
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#AgriculturalEquivalentPracticeTypeValue> <http://www.w3.org/2004/02/skos/core#definition> "Agricultural Equivalent Practice Type value\r\n\r\nValues of equivalent agricultural practice types in sense of Art. 43(3)(a) and (b) of R 1307/2013."@en .
+# 
+# http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#AgriculturalParcel
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#AgriculturalParcel> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#AgriculturalParcel> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.opengis.net/ont/geosparql#Feature> .
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#AgriculturalParcel> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid3 .
+_:genid3 <http://www.w3.org/2002/07/owl#minCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid3 <http://www.w3.org/2002/07/owl#onProperty> <http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#detailsOfAgriculturalParcelsForCrossCompliance> .
+_:genid3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#AgriculturalParcel> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid4 .
+_:genid4 <http://www.w3.org/2002/07/owl#cardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid4 <http://www.w3.org/2002/07/owl#onProperty> <http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#agriculturalParcelDetailsWithinCropGroupGreening> .
+_:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#AgriculturalParcel> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid5 .
+_:genid5 <http://www.w3.org/2002/07/owl#cardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid5 <http://www.w3.org/2002/07/owl#onProperty> <http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#declaredArea> .
+_:genid5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#AgriculturalParcel> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid6 .
+_:genid6 <http://www.w3.org/2002/07/owl#maxCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid6 <http://www.w3.org/2002/07/owl#onProperty> <http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#geometry> .
+_:genid6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#AgriculturalParcel> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid7 .
+_:genid7 <http://www.w3.org/2002/07/owl#maxCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid7 <http://www.w3.org/2002/07/owl#onProperty> <http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#specieCode> .
+_:genid7 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#AgriculturalParcel> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid8 .
+_:genid8 <http://www.w3.org/2002/07/owl#maxCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid8 <http://www.w3.org/2002/07/owl#onProperty> <http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#varietalName> .
+_:genid8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#AgriculturalParcel> <http://www.w3.org/2000/01/rdf-schema#label> "Agricultural parcel"@en .
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#AgriculturalParcel> <http://www.w3.org/2004/02/skos/core#definition> "-- Definition --\r\nAgricultural parcel.\r\n-- Description --\r\nAgricultural parcel within agricultural areas (and or reference parcels). Declared by farmer."@en .
+# 
+# http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#AgriculturalPractice
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#AgriculturalPractice> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#AgriculturalPractice> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.opengis.net/ont/geosparql#Feature> .
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#AgriculturalPractice> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid9 .
+_:genid9 <http://www.w3.org/2002/07/owl#cardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid9 <http://www.w3.org/2002/07/owl#onProperty> <http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#agriculturalEquivalentPracticeSubtype> .
+_:genid9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#AgriculturalPractice> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid10 .
+_:genid10 <http://www.w3.org/2002/07/owl#cardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid10 <http://www.w3.org/2002/07/owl#onProperty> <http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#agriculturalEquivalentPracticeType> .
+_:genid10 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#AgriculturalPractice> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid11 .
+_:genid11 <http://www.w3.org/2002/07/owl#cardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid11 <http://www.w3.org/2002/07/owl#onProperty> <http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#detailsOfAgriculturalPracticesForOnTheSpotCheck> .
+_:genid11 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#AgriculturalPractice> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid12 .
+_:genid12 <http://www.w3.org/2002/07/owl#cardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid12 <http://www.w3.org/2002/07/owl#onProperty> <http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#equivalentAgriculturalPracticeRequirement> .
+_:genid12 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#AgriculturalPractice> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid13 .
+_:genid13 <http://www.w3.org/2002/07/owl#maxCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid13 <http://www.w3.org/2002/07/owl#onProperty> <http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#agriculturalPracticeId> .
+_:genid13 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#AgriculturalPractice> <http://www.w3.org/2000/01/rdf-schema#label> "Agricultural Practices"@en .
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#AgriculturalPractice> <http://www.w3.org/2004/02/skos/core#definition> "Agricultural Practice\r\n\r\nFarmers entitled to a payment under BPS/ SAPS shall observe, on all their eligible hectares within the meaning of Article 32(2) to (5), the agricultural practices beneficial for the climate and the environment."@en .
+# 
+# http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#AgriculturalPracticeRequirementValue
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#AgriculturalPracticeRequirementValue> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#AgriculturalPracticeRequirementValue> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#AgriculturalPracticeRequirementValue> <http://www.w3.org/2004/02/skos/core#definition> "Agricultural practice requirement value\r\n\r\nList of agricultural practice requirement values as defined in Art. (44) (1), (2),(3) and Art. 46 (4) of R (EU) 1307/2013."@en .
+# 
+# http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#AgriculturalPracticeTypeValue
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#AgriculturalPracticeTypeValue> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#AgriculturalPracticeTypeValue> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#AgriculturalPracticeTypeValue> <http://www.w3.org/2000/01/rdf-schema#label> "List of agricultural practices"@en .
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#AgriculturalPracticeTypeValue> <http://www.w3.org/2004/02/skos/core#definition> "Agricultural practice type value\r\n\r\nList agricultural practices beneficial for the climate and the environment as detailed in Chapter 3 of R 1307/2013."@en .
+# 
+# http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#Application
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#Application> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#Application> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.opengis.net/ont/geosparql#Feature> .
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#Application> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid14 .
+_:genid14 <http://www.w3.org/2002/07/owl#minCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid14 <http://www.w3.org/2002/07/owl#onProperty> <http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#applicationDetailsForAdministrativeChecks> .
+_:genid14 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#Application> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid15 .
+_:genid15 <http://www.w3.org/2002/07/owl#minCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid15 <http://www.w3.org/2002/07/owl#onProperty> <http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#applicationsInTheStratum> .
+_:genid15 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#Application> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid16 .
+_:genid16 <http://www.w3.org/2002/07/owl#minCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid16 <http://www.w3.org/2002/07/owl#onProperty> <http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#supportSchemeType> .
+_:genid16 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#Application> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid17 .
+_:genid17 <http://www.w3.org/2002/07/owl#cardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid17 <http://www.w3.org/2002/07/owl#onProperty> <http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#declaredArea> .
+_:genid17 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#Application> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid18 .
+_:genid18 <http://www.w3.org/2002/07/owl#cardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid18 <http://www.w3.org/2002/07/owl#onProperty> <http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#declaredEcologicalFocusArea> .
+_:genid18 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#Application> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid19 .
+_:genid19 <http://www.w3.org/2002/07/owl#cardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid19 <http://www.w3.org/2002/07/owl#onProperty> <http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#holdindSubmissionInAidApplicationDetails> .
+_:genid19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#Application> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid20 .
+_:genid20 <http://www.w3.org/2002/07/owl#cardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid20 <http://www.w3.org/2002/07/owl#onProperty> <http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#requiredEcologicalFocusArea> .
+_:genid20 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#Application> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid21 .
+_:genid21 <http://www.w3.org/2002/07/owl#maxCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid21 <http://www.w3.org/2002/07/owl#onProperty> <http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#applicationDetailsForReconversion> .
+_:genid21 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#Application> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid22 .
+_:genid22 <http://www.w3.org/2002/07/owl#maxCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid22 <http://www.w3.org/2002/07/owl#onProperty> <http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#applicationDetailsOfOtscItems> .
+_:genid22 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#Application> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid23 .
+_:genid23 <http://www.w3.org/2002/07/owl#maxCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid23 <http://www.w3.org/2002/07/owl#onProperty> <http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#declaredEntitlementArea> .
+_:genid23 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#Application> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid24 .
+_:genid24 <http://www.w3.org/2002/07/owl#cardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid24 <http://www.w3.org/2002/07/owl#onProperty> <http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#submissionDate> .
+_:genid24 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#Application> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid25 .
+_:genid25 <http://www.w3.org/2002/07/owl#maxCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid25 <http://www.w3.org/2002/07/owl#onProperty> <http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#withdrawalDate> .
+_:genid25 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#Application> <http://www.w3.org/2000/01/rdf-schema#label> "Application"@en .
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#Application> <http://www.w3.org/2004/02/skos/core#definition> "Application\r\n\r\nDocumentation of this feature type will be provided in frame of development of the Applications and payment claims application schema.\r\n\r\nNOTE\r\nThis feature type is currently a draft."@en .
+# 
+# http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#CollectiveImplementation
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#CollectiveImplementation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#CollectiveImplementation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.opengis.net/ont/geosparql#Feature> .
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#CollectiveImplementation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid26 .
+_:genid26 <http://www.w3.org/2002/07/owl#minCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid26 <http://www.w3.org/2002/07/owl#onProperty> <http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#collectiveImplementationDetailsForEcologicalFocusAreas> .
+_:genid26 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#CollectiveImplementation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid27 .
+_:genid27 <http://www.w3.org/2002/07/owl#cardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid27 <http://www.w3.org/2002/07/owl#onProperty> <http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#ecologicalFocusAreaCollective> .
+_:genid27 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#CollectiveImplementation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid28 .
+_:genid28 <http://www.w3.org/2002/07/owl#cardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid28 <http://www.w3.org/2002/07/owl#onProperty> <http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#ecologicalFocusAreaType> .
+_:genid28 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#CollectiveImplementation> <http://www.w3.org/2000/01/rdf-schema#label> "Collective ecological focus area implementation"@en .
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#CollectiveImplementation> <http://www.w3.org/2004/02/skos/core#definition> "-- Definition --\r\nCollective ecological focus area implementation.\r\n-- Description --\r\nEcological focus area participating in collective implementation."@en .
+# 
+# http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#CropGroupAreaRelatedAidSchema
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#CropGroupAreaRelatedAidSchema> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#CropGroupAreaRelatedAidSchema> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.opengis.net/ont/geosparql#Feature> .
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#CropGroupAreaRelatedAidSchema> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid29 .
+_:genid29 <http://www.w3.org/2002/07/owl#cardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid29 <http://www.w3.org/2002/07/owl#onProperty> <http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#cropGroupAreaRelatedAidSchemaDetailsInAidApplication> .
+_:genid29 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#CropGroupAreaRelatedAidSchema> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid30 .
+_:genid30 <http://www.w3.org/2002/07/owl#cardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid30 <http://www.w3.org/2002/07/owl#onProperty> <http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#cropGruopTypeAreaRelatedAidSchema> .
+_:genid30 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#CropGroupAreaRelatedAidSchema> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid31 .
+_:genid31 <http://www.w3.org/2002/07/owl#cardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid31 <http://www.w3.org/2002/07/owl#onProperty> <http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#declaredArea> .
+_:genid31 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#CropGroupAreaRelatedAidSchema> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid32 .
+_:genid32 <http://www.w3.org/2002/07/owl#cardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid32 <http://www.w3.org/2002/07/owl#onProperty> <http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#detailsOfCropGroupAreaRelatedAidSchemaForPayment> .
+_:genid32 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#CropGroupAreaRelatedAidSchema> <http://www.w3.org/2000/01/rdf-schema#label> "Payment crop group area related aid schema"@en .
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#CropGroupAreaRelatedAidSchema> <http://www.w3.org/2004/02/skos/core#definition> "-- Definition --\r\nPayment crop group area related aid schema.\r\n-- Description --\r\nCrop groups (in the context of IACS). Automatically defined and agregated by administration using application entries. This is placeholder for all payment schemas (except \"greening\", which have different place holder named CropGroupGreening) and area-related support measures (area-related support measures - in current version of the model not implemented yet)."@en .
+# 
+# http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#CropGroupGreening
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#CropGroupGreening> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#CropGroupGreening> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.opengis.net/ont/geosparql#Feature> .
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#CropGroupGreening> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid33 .
+_:genid33 <http://www.w3.org/2002/07/owl#cardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid33 <http://www.w3.org/2002/07/owl#onProperty> <http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#cropGroupGreeningDetailsInAidApplication> .
+_:genid33 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#CropGroupGreening> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid34 .
+_:genid34 <http://www.w3.org/2002/07/owl#cardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid34 <http://www.w3.org/2002/07/owl#onProperty> <http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#cropGruopTypeGreening> .
+_:genid34 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#CropGroupGreening> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid35 .
+_:genid35 <http://www.w3.org/2002/07/owl#cardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid35 <http://www.w3.org/2002/07/owl#onProperty> <http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#declaredArea> .
+_:genid35 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#CropGroupGreening> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid36 .
+_:genid36 <http://www.w3.org/2002/07/owl#cardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid36 <http://www.w3.org/2002/07/owl#onProperty> <http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#detailsOfCropGroupGreeningForPayment> .
+_:genid36 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#CropGroupGreening> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid37 .
+_:genid37 <http://www.w3.org/2002/07/owl#maxCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid37 <http://www.w3.org/2002/07/owl#onProperty> <http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#crop> .
+_:genid37 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#CropGroupGreening> <http://www.w3.org/2000/01/rdf-schema#label> "Payment crop group grreening"@en .
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#CropGroupGreening> <http://www.w3.org/2004/02/skos/core#definition> "-- Definition --\r\nCrop group greening.\r\n-- Description --\r\nCrop groups (in the context of IACS). Auto defined and aggregated by administration from application entries."@en .
+# 
+# http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#CropGroupTypeAreaRelatedSupportSchemaValue
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#CropGroupTypeAreaRelatedSupportSchemaValue> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#CropGroupTypeAreaRelatedSupportSchemaValue> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#CropGroupTypeAreaRelatedSupportSchemaValue> <http://www.w3.org/2000/01/rdf-schema#label> "List of payment crop groups"@en .
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#CropGroupTypeAreaRelatedSupportSchemaValue> <http://www.w3.org/2004/02/skos/core#definition> "-- Definition --\r\nList of payment crop groups.\r\n-- Description --\r\nList of crop groups related with area-related support schemas."@en .
+# 
+# http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#CropGroupTypeGreeningValue
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#CropGroupTypeGreeningValue> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#CropGroupTypeGreeningValue> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#CropGroupTypeGreeningValue> <http://www.w3.org/2000/01/rdf-schema#label> "List of payment crop groups"@en .
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#CropGroupTypeGreeningValue> <http://www.w3.org/2004/02/skos/core#definition> "-- Definition --\r\nList of payment crop groups.\r\n-- Description --\r\nList of crop groups related with greening."@en .
+# 
+# http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#CropValue
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#CropValue> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#CropValue> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#CropValue> <http://www.w3.org/2000/01/rdf-schema#label> "List of crops"@en .
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#CropValue> <http://www.w3.org/2004/02/skos/core#definition> "Crop value\r\n\r\nList of  crops in sense of Art. 44(4) of R (EU) 809/2014  that is needed for checking crop diversification.\r\n\r\nNOTE\r\nRequired if cropGroupTypeGreening = certainCrop."@en .
+# 
+# http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#CrossCompliance
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#CrossCompliance> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#CrossCompliance> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.opengis.net/ont/geosparql#Feature> .
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#CrossCompliance> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid38 .
+_:genid38 <http://www.w3.org/2002/07/owl#minCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid38 <http://www.w3.org/2002/07/owl#onProperty> <http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#crossComplianceRulesForLandscapeFeatures> .
+_:genid38 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#CrossCompliance> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid39 .
+_:genid39 <http://www.w3.org/2002/07/owl#cardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid39 <http://www.w3.org/2002/07/owl#onProperty> <http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#crossComplianceRule> .
+_:genid39 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#CrossCompliance> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid40 .
+_:genid40 <http://www.w3.org/2002/07/owl#cardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid40 <http://www.w3.org/2002/07/owl#onProperty> <http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#detailsOfCrossComplianceForOnTheSpotCheck> .
+_:genid40 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#CrossCompliance> <http://www.w3.org/2000/01/rdf-schema#label> "Cross-compliance"@en .
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#CrossCompliance> <http://www.w3.org/2004/02/skos/core#definition> "-- Definition --\r\nCross-compliance data.\r\n-- Description --\r\nCross-compliance data."@en .
+# 
+# http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#EcologicalFocusAreaConverted
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#EcologicalFocusAreaConverted> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#EcologicalFocusAreaConverted> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.opengis.net/ont/geosparql#Feature> .
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#EcologicalFocusAreaConverted> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid41 .
+_:genid41 <http://www.w3.org/2002/07/owl#cardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid41 <http://www.w3.org/2002/07/owl#onProperty> <http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#ecologicalFocusAreaConvertedWithinApplication> .
+_:genid41 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#EcologicalFocusAreaConverted> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid42 .
+_:genid42 <http://www.w3.org/2002/07/owl#cardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid42 <http://www.w3.org/2002/07/owl#onProperty> <http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#ecologicalFocusAreaDetailsForConversion> .
+_:genid42 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#EcologicalFocusAreaConverted> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid43 .
+_:genid43 <http://www.w3.org/2002/07/owl#cardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid43 <http://www.w3.org/2002/07/owl#onProperty> <http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#declaredEcologicalFocusAreaFeatures> .
+_:genid43 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#EcologicalFocusAreaConverted> <http://www.w3.org/2000/01/rdf-schema#label> "Converted ecological focus area"@en .
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#EcologicalFocusAreaConverted> <http://www.w3.org/2004/02/skos/core#definition> "-- Definition --\r\nConverted ecological focus area within application.\r\n-- Description --\r\nEFA declared in application and converted using conversion parameters."@en .
+# 
+# http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#EcologicalFocusAreaTypeCollectiveValue
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#EcologicalFocusAreaTypeCollectiveValue> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#EcologicalFocusAreaTypeCollectiveValue> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#EcologicalFocusAreaTypeCollectiveValue> <http://www.w3.org/2000/01/rdf-schema#label> "List of ecological focused areas for collective implementation"@en .
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#EcologicalFocusAreaTypeCollectiveValue> <http://www.w3.org/2004/02/skos/core#definition> "-- Definition --\r\nList of ecological focused areas for collective implementation.\r\n-- Description --\r\nList of feature (ecological focus areas) types based on Article 46(3) 1307/2013."@en .
+# 
+# http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#FarmersSurvey
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#FarmersSurvey> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#FarmersSurvey> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.opengis.net/ont/geosparql#Feature> .
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#FarmersSurvey> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid44 .
+_:genid44 <http://www.w3.org/2002/07/owl#minCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid44 <http://www.w3.org/2002/07/owl#onProperty> <http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#surveyDetailsForMeasurements> .
+_:genid44 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#FarmersSurvey> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid45 .
+_:genid45 <http://www.w3.org/2002/07/owl#cardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid45 <http://www.w3.org/2002/07/owl#onProperty> <http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#farmersSurveyFeatureType> .
+_:genid45 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#FarmersSurvey> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid46 .
+_:genid46 <http://www.w3.org/2002/07/owl#cardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid46 <http://www.w3.org/2002/07/owl#onProperty> <http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#geometry> .
+_:genid46 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#FarmersSurvey> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid47 .
+_:genid47 <http://www.w3.org/2002/07/owl#cardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid47 <http://www.w3.org/2002/07/owl#onProperty> <http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#geometrySource> .
+_:genid47 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#FarmersSurvey> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid48 .
+_:genid48 <http://www.w3.org/2002/07/owl#cardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid48 <http://www.w3.org/2002/07/owl#onProperty> <http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#measurementsWithinSurveyDetails> .
+_:genid48 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#FarmersSurvey> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid49 .
+_:genid49 <http://www.w3.org/2002/07/owl#cardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid49 <http://www.w3.org/2002/07/owl#onProperty> <http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#farmersMeasurementId> .
+_:genid49 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#FarmersSurvey> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid50 .
+_:genid50 <http://www.w3.org/2002/07/owl#maxCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid50 <http://www.w3.org/2002/07/owl#onProperty> <http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#estimatedAccuracy> .
+_:genid50 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#FarmersSurvey> <http://www.w3.org/2000/01/rdf-schema#label> "Surveys of the farmers"@en .
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#FarmersSurvey> <http://www.w3.org/2004/02/skos/core#definition> "-- Definition --\r\nSurvey and measurements.\r\n-- Description --\r\nSurveys and (measurements within surveys) of the farmer. Dedicated for upload to different parts of IACS."@en .
+# 
+# http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#FarmersSurveyFeatureTypeValue
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#FarmersSurveyFeatureTypeValue> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#FarmersSurveyFeatureTypeValue> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#FarmersSurveyFeatureTypeValue> <http://www.w3.org/2000/01/rdf-schema#label> "List of feature types"@en .
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#FarmersSurveyFeatureTypeValue> <http://www.w3.org/2004/02/skos/core#definition> "-- Definition --\r\nList of possible feature types measured and provided by farmer.\r\n-- Description --\r\nList of feature types possible to survey / measure by farmer. After these measured features are submitted (during application process) then authority (data custodians) may confirm or reject their reference data update (update based on farmer's survey and or measurement).\r\nNOTE. List may be extended or subtracted depending on how MS organizing reference data update process."@en .
+# 
+# http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#GeometrySourceValue
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#GeometrySourceValue> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#GeometrySourceValue> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#GeometrySourceValue> <http://www.w3.org/2000/01/rdf-schema#label> "List of geometry sources"@en .
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#GeometrySourceValue> <http://www.w3.org/2004/02/skos/core#definition> "-- Definition --\r\nList of geometry sources.\r\n-- Description --\r\nList of geometry sources."@en .
+# 
+# http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#Payment
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#Payment> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#Payment> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.opengis.net/ont/geosparql#Feature> .
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#Payment> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid51 .
+_:genid51 <http://www.w3.org/2002/07/owl#minCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid51 <http://www.w3.org/2002/07/owl#onProperty> <http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#paymentDetailsForAdministrativeChecks> .
+_:genid51 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#Payment> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid52 .
+_:genid52 <http://www.w3.org/2002/07/owl#minCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid52 <http://www.w3.org/2002/07/owl#onProperty> <http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#supportSchemaType> .
+_:genid52 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#Payment> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid53 .
+_:genid53 <http://www.w3.org/2002/07/owl#cardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid53 <http://www.w3.org/2002/07/owl#onProperty> <http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#advance> .
+_:genid53 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#Payment> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid54 .
+_:genid54 <http://www.w3.org/2002/07/owl#cardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid54 <http://www.w3.org/2002/07/owl#onProperty> <http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#paymentDetailsForFarmer> .
+_:genid54 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#Payment> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid55 .
+_:genid55 <http://www.w3.org/2002/07/owl#maxCardinality> "11"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid55 <http://www.w3.org/2002/07/owl#onProperty> <http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#supportSchemaType> .
+_:genid55 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#Payment> <http://www.w3.org/2000/01/rdf-schema#label> "Payment"@en .
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#Payment> <http://www.w3.org/2004/02/skos/core#definition> "-- Definition --\r\nPayment.\r\n-- Description --\r\nOne payment, one application, one farmer. Place holder for payment schema specific attributes. Container of variables collected from: application (Declared), controls (Determined) and from RDMBS operators (Calculated)."@en .
+# 
+# http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#ReconvertingObligation
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#ReconvertingObligation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#ReconvertingObligation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.opengis.net/ont/geosparql#Feature> .
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#ReconvertingObligation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid56 .
+_:genid56 <http://www.w3.org/2002/07/owl#cardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid56 <http://www.w3.org/2002/07/owl#onProperty> <http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#metadata> .
+_:genid56 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#ReconvertingObligation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid57 .
+_:genid57 <http://www.w3.org/2002/07/owl#cardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid57 <http://www.w3.org/2002/07/owl#onProperty> <http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#reconversionObligationDetails> .
+_:genid57 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#ReconvertingObligation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid58 .
+_:genid58 <http://www.w3.org/2002/07/owl#maxCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid58 <http://www.w3.org/2002/07/owl#onProperty> <http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#reconversionObliationDetails> .
+_:genid58 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#ReconvertingObligation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid59 .
+_:genid59 <http://www.w3.org/2002/07/owl#cardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid59 <http://www.w3.org/2002/07/owl#onProperty> <http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#intoPermanentGrassland> .
+_:genid59 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#ReconvertingObligation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid60 .
+_:genid60 <http://www.w3.org/2002/07/owl#cardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid60 <http://www.w3.org/2002/07/owl#onProperty> <http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#intoSensitivePermanentGrassland> .
+_:genid60 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#ReconvertingObligation> <http://www.w3.org/2004/02/skos/core#definition> "--Name--\r\nReconverting obligation\r\n\r\n--Definition--\r\nObligation to reconvert arable land into PG  according to the provisions of Art. 45(2) of R (EU) 1307/2014\r\n\r\n--Description--\r\nThe reconversion obligation compensates the decrease of PG  by more than 5 % compared to a reference ratio to be established by Member States in 2015\r\n\r\nNOTE\r\nThe land reconverted shall be considered as permanent grassland as of the first day of reconversion."@en .
+# 
+# http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#AdministrativeCheck
+# 
+# http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#OnTheSpotCheck
+# 
+# http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#OtscItem
+# 
+# http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#SamplingStratum
+# 
+# http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-parcel#ConversionParameter
+# 
+# http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-parcel#EcologicalFocusArea
+# 
+# http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-parcel#LandscapeFeature
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Annotations
+# #
+# #################################################################
+# 
+# 
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#advance> <http://www.w3.org/2000/01/rdf-schema#label> "Area calculated"@en .
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#advance> <http://www.w3.org/2004/02/skos/core#definition> "-- Definition --\r\nArea which is calculated and aid paid to farmer.\r\n-- Description --\r\nArea which is calculated and aid paid to farmer."@en .
+# 
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#declaredArea> <http://www.w3.org/2000/01/rdf-schema#label> "Area declared"@en .
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#declaredArea> <http://www.w3.org/2004/02/skos/core#definition> "-- Definition --\r\nArea declared.\r\n-- Description --\r\nAs regards the area-related direct payment, each Member State shall determine the minimum size of agricultural parcels in respect of which an application may be made. However, the minimum size shall not exceed 0,3 ha."@en .
+# 
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#declaredEcologicalFocusArea> <http://www.w3.org/2000/01/rdf-schema#label> "Ecological focus area declared"@en .
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#declaredEcologicalFocusArea> <http://www.w3.org/2004/02/skos/core#definition> "-- Definition --\r\nTotal ecological focus area declared.\r\n-- Description --\r\nTotal ecological focus area declared after all factors are applied. Ecological focus area shall be determined using EFA conversion parameters (when necessary). \r\nNOTE. Sum of EcologicalFocusAreaDetermined.determinedEcologicalFocusArea and EcologicalFocusArea.EcologicalFocusArea (if conversion is not needed) within one application."@en .
+# 
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#declaredEntitlementArea> <http://www.w3.org/2000/01/rdf-schema#label> "Entitlements declared"@en .
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#declaredEntitlementArea> <http://www.w3.org/2004/02/skos/core#definition> "-- Definition --\r\nEntitlement area declared by one farmer within all holding sites.\r\n-- Description --\r\nAlphanumerical value. Mandatory for SPS only. Subject for enabling of entitlements (Area) on all area declared.\r\nNOTE. declaredEntitlementArea <=declaredArea."@en .
+# 
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#ecologicalFocusAreaCollective> <http://www.w3.org/2000/01/rdf-schema#label> "Total area of ecological focus areas within collective implementation"@en .
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#ecologicalFocusAreaCollective> <http://www.w3.org/2004/02/skos/core#definition> "-- Definition --\r\nEcological focus area.\r\n-- Description --\r\nTotal area of ecological focus areas within collective implementation."@en .
+# 
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#requiredEcologicalFocusArea> <http://www.w3.org/2000/01/rdf-schema#label> "Ecological focus area required"@en .
+<http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#requiredEcologicalFocusArea> <http://www.w3.org/2004/02/skos/core#definition> "-- Definition --\r\nTotal ecological focus area required.\r\n-- Description --\r\nTotal ecological focus area required. \r\nNOTE. EFA required is 0,05*arableLand (declared) area."@en .
+# 
+# Generated by the OWL API (version 5.1.18) https://github.com/owlcs/owlapi/

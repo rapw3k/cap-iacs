@@ -1,0 +1,2605 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+ <link rel="stylesheet" href="resources/primer.css" media="screen" />    <link rel="stylesheet" href="resources/rec.css" media="screen" />    <link rel="stylesheet" href="resources/extra.css" media="screen" />    <link rel="stylesheet" href="resources/owl.css" media="screen" />    <title>JRC IACS - Integrated Control System Ontology</title>
+
+
+<!-- SCHEMA.ORG METADATA -->
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"TechArticle","url":"http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control","image":"http://vowl.visualdataweb.org/webvowl/#iri=http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control","name":"JRC IACS - Integrated Control System Ontology", "headline":"This ontology is one of the modules comprising CAP-IACS (Common Agriculture Policy - Integrated Administration and Control System) ontology. The CAP-IACS ontology was developed part of the Open-IACS project, which aims to provide an open platform for the exchange of solutions in the field of Integrated Agricultural Control System (IACS) through the paradigm of connected open data. The ontology has been derived from the derived from the JRC IACS application schema.", "datePublished":"Date of release", "version":"3.0", "license":"https://creativecommons.org/licenses/by/4.0/", "author":[{"@type":"Person","name":"Raul Palma","url":"http://orcid.org/0000-0003-4289-4922"}]}</script>
+
+<script src="resources/jquery.js"></script> 
+<script src="resources/marked.min.js"></script> 
+    <script> 
+function loadHash() {
+  jQuery(".markdown").each(function(el){jQuery(this).after(marked(jQuery(this).text())).remove()});
+	var hash = location.hash;
+	if($(hash).offset()!=null){
+	  $('html, body').animate({scrollTop: $(hash).offset().top}, 0);
+}
+	loadTOC();
+}
+function loadTOC(){
+	//process toc dynamically
+	  var t='<h2>Table of contents</h2><ul>';i = 1;j=0;
+	  jQuery(".list").each(function(){
+		if(jQuery(this).is('h2')){
+			if(j>0){
+				t+='</ul>';
+				j=0;
+			}
+			t+= '<li>'+i+'. <a href=#'+ jQuery(this).attr('id')+'>'+ jQuery(this).ignore("span").text()+'</a></li>';
+			i++;
+		}
+		if(jQuery(this).is('h3')){
+			if(j==0){
+				t+='<ul>';
+			}
+			j++;
+			t+= '<li>'+(i-1)+'.'+j+'. '+'<a href=#'+ jQuery(this).attr('id')+'>'+ jQuery(this).ignore("span").text()+'</a></li>';
+		}
+	  });
+	  t+='</ul>';
+	  $("#toc").html(t); 
+}
+$(function(){
+    loadHash();
+}); $.fn.ignore = function(sel){
+        return this.clone().find(sel||">*").remove().end();
+ }; 
+   </script> 
+  </head> 
+
+<body>
+<div class="container">
+<div class="head">
+<div style="float:right">language <a href="index-en.html"><b>en</b></a> </div>
+<h1>JRC IACS - Integrated Control System Ontology</h1>
+<h2>Release Date of release</h2>
+
+
+<dl>
+<dt>This version:</dt>
+<dd><a href="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/3.0">http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/3.0</a></dd>
+<dt>Revision:</dt>
+<dd>3.0</dd>
+<dt>Authors:</dt>
+<dd><a href="http://orcid.org/0000-0003-4289-4922">Raul Palma</a>, PSNC</dd>
+
+<dt>Imported Ontologies:</dt>
+<dd><a href="https://raw.githubusercontent.com/rapw3k/cap-iacs/main/cap-iacs-base.ttl">https://raw.githubusercontent.com/rapw3k/cap-iacs/main/cap-iacs-base.ttl</a></dd><dd><a href="http://www.opengis.net/ont/geosparql">http://www.opengis.net/ont/geosparql</a></dd>
+
+<dt>Download serialization:</dt><dd><span><a href="ontology.jsonld" target="_blank"><img src="https://img.shields.io/badge/Format-JSON_LD-blue.svg" alt="JSON-LD" /></a> </span><span><a href="ontology.rdf" target="_blank"><img src="https://img.shields.io/badge/Format-RDF/XML-blue.svg" alt="RDF/XML" /></a> </span><span><a href="ontology.nt" target="_blank"><img src="https://img.shields.io/badge/Format-N_Triples-blue.svg" alt="N-Triples" /></a> </span><span><a href="ontology.ttl" target="_blank"><img src="https://img.shields.io/badge/Format-TTL-blue.svg" alt="TTL" /></a> </span></dd><dt>License:</dt><dd><a href="https://creativecommons.org/licenses/by/4.0/" target="_blank"><img src="https://img.shields.io/badge/License-CC_BY_4.0-blue.svg" alt="https://creativecommons.org/licenses/by/4.0/" /></a>
+<a href="https://creativecommons.org/licenses/by/4.0/" rel="license" target="_blank">
+<img src="https://en.wikipedia.org/wiki/Creative_Commons_license#/media/File:CC_BY_icon.svg" style="border-width:0" alt="License" />
+</a>
+<br/></dd><dt>Visualization:</dt><dd><a href="webvowl/index.html#" target="_blank"><img src="https://img.shields.io/badge/Visualize_with-WebVowl-blue.svg" alt="Visualize with WebVowl" /></a></dd>
+<!-- <dt>Evaluation:</dt><dd><a href="OOPSEvaluation/oopsEval.html#" target="_blank"><img src="https://img.shields.io/badge/Evaluate_with-OOPS! (OntOlogy Pitfall Scanner!)-blue.svg" alt="Evaluate with OOPS!" /></a></dd> --></dl>
+
+<a href="provenance/provenance-en.html" target="_blank">Provenance of this page</a><hr/>
+</div>
+<div class="status">
+<div>
+<span>CAP-IACS Ontology Specification Draft</span>
+</div>
+</div>     <div id="abstract"><h2>Abstract</h2><span class="markdown">
+This ontology is one of the modules comprising CAP-IACS (Common Agriculture Policy - Integrated Administration and Control System) ontology. The CAP-IACS ontology was developed part of the Open-IACS project, which aims to provide an open platform for the exchange of solutions in the field of Integrated Agricultural Control System (IACS) through the paradigm of connected open data. The ontology has been derived from the derived from the JRC IACS application schema.</span>
+</div>
+<div id="toc"></div> 
+
+<!--INTRODUCTION SECTION-->
+    <div id="introduction"><h2 id="intro" class="list">Introduction <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+<span class="markdown">
+This is a place holder text for the introduction. The introduction should briefly describe the ontology, its motivation, state of the art and goals.</span>
+</div>
+  
+
+<!--OVERVIEW SECTION-->
+    <div id="overview"><h2 id="overv" class="list">CAP-IACS Ontology: Main module: Overview <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+<span class="markdown">
+This ontology has the following classes and properties.</span>
+<h4>Classes</h4>
+<ul xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" class="hlist">
+   <li>
+      <a href="#AdministrativeCheck"
+         title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#AdministrativeCheck">AdministrativeCheck</a>
+   </li>
+   <li>
+      <a href="#CrossCheck"
+         title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#CrossCheck">Cross-checks</a>
+   </li>
+   <li>
+      <a href="#ControlRateGroupAnimalAidSchemaValue"
+         title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#ControlRateGroupAnimalAidSchemaValue">List of control rate groups for animal aid schemas</a>
+   </li>
+   <li>
+      <a href="#ControlRateTypeValue"
+         title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#ControlRateTypeValue">List of control rate groups for greening</a>
+   </li>
+   <li>
+      <a href="#ControlRateGroupRuralDevelopmentMeasureValue"
+         title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#ControlRateGroupRuralDevelopmentMeasureValue">List of control rate groups for rural development measures</a>
+   </li>
+   <li>
+      <a href="#InspectorsSurveyObjectTypeValue"
+         title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#InspectorsSurveyObjectTypeValue">List of feature types</a>
+   </li>
+   <li>
+      <a href="#CrossCheckTypeValue"
+         title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#CrossCheckTypeValue">List of on the cross-check types</a>
+   </li>
+   <li>
+      <a href="#OnTheSpotCheckTypeValue"
+         title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#OnTheSpotCheckTypeValue">List of on the spot check types</a>
+   </li>
+   <li>
+      <a href="#SamplingStrategyTypeValue"
+         title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#SamplingStrategyTypeValue">List of sampling strategy types</a>
+   </li>
+   <li>
+      <a href="#SurveyMethodValue"
+         title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#SurveyMethodValue">List of survey types</a>
+   </li>
+   <li>
+      <a href="#OnTheSpotCheck"
+         title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#OnTheSpotCheck">On-the-spot check</a>
+   </li>
+   <li>
+      <a href="#OtscSample"
+         title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#OtscSample">
+         <span>otsc sample</span>
+      </a>
+   </li>
+   <li>
+      <a href="#RiskTypeValue"
+         title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#RiskTypeValue">
+         <span>risk type value</span>
+      </a>
+   </li>
+   <li>
+      <a href="#OtscItem"
+         title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#OtscItem">Sample</a>
+   </li>
+   <li>
+      <a href="#SampleTypeValue"
+         title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#SampleTypeValue">
+         <span>sample type value</span>
+      </a>
+   </li>
+   <li>
+      <a href="#SamplingStratum"
+         title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#SamplingStratum">
+         <span>sampling stratum</span>
+      </a>
+   </li>
+   <li>
+      <a href="#InspectorsSurvey"
+         title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#InspectorsSurvey">Surveys of the inspectors</a>
+   </li>
+</ul><h4>Object Properties</h4><ul xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" class="hlist">
+   <li>
+      <a href="#administrativeCheckDetailsForApplication"
+         title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#administrativeCheckDetailsForApplication">
+         <span>administrative check details for application</span>
+      </a>
+   </li>
+   <li>
+      <a href="#administrativeCheckDetailsForCrossCheck"
+         title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#administrativeCheckDetailsForCrossCheck">
+         <span>administrative check details for cross check</span>
+      </a>
+   </li>
+   <li>
+      <a href="#controlRateType"
+         title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#controlRateType">
+         <span>control rate type</span>
+      </a>
+   </li>
+   <li>
+      <a href="#controlReport"
+         title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#controlReport">Control report document</a>
+   </li>
+   <li>
+      <a href="#crossCheckType"
+         title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#crossCheckType">Cross-check type</a>
+   </li>
+   <li>
+      <a href="#detailsOfApplications"
+         title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#detailsOfApplications">
+         <span>details of applications</span>
+      </a>
+   </li>
+   <li>
+      <a href="#detailsOfCrossCheckForOnTheSpotChecks"
+         title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#detailsOfCrossCheckForOnTheSpotChecks">
+         <span>details of cross check for on the spot checks</span>
+      </a>
+   </li>
+   <li>
+      <a href="#detailsOfCrossChecksForAdministrativeCheck"
+         title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#detailsOfCrossChecksForAdministrativeCheck">
+         <span>details of cross checks for administrative check</span>
+      </a>
+   </li>
+   <li>
+      <a href="#detailsOfOtscItems"
+         title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#detailsOfOtscItems">
+         <span>details of otsc items</span>
+      </a>
+   </li>
+   <li>
+      <a href="#determinedEntitlementArea"
+         title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#determinedEntitlementArea">
+         <span>Entitlements determined</span>
+      </a>
+   </li>
+   <li>
+      <a href="#animalSchemeMeasureConformance"
+         title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#animalSchemeMeasureConformance">Evidence received from other services, bodies or organisations to verify the compliance with the eligibility commitments</a>
+   </li>
+   <li>
+      <a href="#inspectorsSurveyObjectType"
+         title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#inspectorsSurveyObjectType">Feature type controlled</a>
+   </li>
+   <li>
+      <a href="#determinedArea"
+         title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#determinedArea">
+         <span>Final area determined after all administrative checks</span>
+      </a>
+   </li>
+   <li>
+      <a href="#eligibilityCriteriaFulfilled"
+         title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#eligibilityCriteriaFulfilled">Final entitlement area determined after all administrative checks</a>
+   </li>
+   <li>
+      <a href="#geometry"
+         title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#geometry">Geometry of survey and or measurement</a>
+   </li>
+   <li>
+      <a href="#itemDetailsForAdministrativeCheck"
+         title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#itemDetailsForAdministrativeCheck">
+         <span>item details for administrative check</span>
+      </a>
+   </li>
+   <li>
+      <a href="#itemDetailsForOnTheSpotChecks"
+         title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#itemDetailsForOnTheSpotChecks">
+         <span>item details for on the spot checks</span>
+      </a>
+   </li>
+   <li>
+      <a href="#measurementsWithinSurveyDetails"
+         title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#measurementsWithinSurveyDetails">
+         <span>measurements within survey details</span>
+      </a>
+   </li>
+   <li>
+      <a href="#metadata"
+         title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#metadata">
+         <span>metadata</span>
+      </a>
+   </li>
+   <li>
+      <a href="#nonStructuredEvidenceCitation"
+         title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#nonStructuredEvidenceCitation">Non-structured evidence - citation</a>
+   </li>
+   <li>
+      <a href="#nonStructuredEvidenceDocument"
+         title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#nonStructuredEvidenceDocument">Non-structured evidence - document</a>
+   </li>
+   <li>
+      <a href="#conformanceStatement"
+         title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#conformanceStatement">On the spot check conformance statement</a>
+   </li>
+   <li>
+      <a href="#onTheSpotCheckDetailsForCrossCheck"
+         title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#onTheSpotCheckDetailsForCrossCheck">
+         <span>on the spot check details for cross check</span>
+      </a>
+   </li>
+   <li>
+      <a href="#onTheSpotCheckDetailsForInspectors"
+         title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#onTheSpotCheckDetailsForInspectors">
+         <span>on the spot check details for inspectors</span>
+      </a>
+   </li>
+   <li>
+      <a href="#otscItemDetailsForReconversion"
+         title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#otscItemDetailsForReconversion">
+         <span>otsc item details for reconversion</span>
+      </a>
+   </li>
+   <li>
+      <a href="#otscItemDetailsWithinTheSample"
+         title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#otscItemDetailsWithinTheSample">
+         <span>otsc item details within the sample</span>
+      </a>
+   </li>
+   <li>
+      <a href="#otscReport"
+         title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#otscReport">
+         <span>otsc report</span>
+      </a>
+   </li>
+   <li>
+      <a href="#otscSampleDetailsforStratum"
+         title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#otscSampleDetailsforStratum">
+         <span>otsc sample detailsfor stratum</span>
+      </a>
+   </li>
+   <li>
+      <a href="#otscSamplingPlan"
+         title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#otscSamplingPlan">
+         <span>otsc sampling plan</span>
+      </a>
+   </li>
+   <li>
+      <a href="#observedPerimeter"
+         title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#observedPerimeter">
+         <span>Perimeter observed after on-the-spot check</span>
+      </a>
+   </li>
+   <li>
+      <a href="#riskType"
+         title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#riskType">
+         <span>risk type</span>
+      </a>
+   </li>
+   <li>
+      <a href="#sampleDetailsForOtscItem"
+         title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#sampleDetailsForOtscItem">
+         <span>sample details for otsc item</span>
+      </a>
+   </li>
+   <li>
+      <a href="#samplingStrategyCitation"
+         title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#samplingStrategyCitation">
+         <span>sampling strategy citation</span>
+      </a>
+   </li>
+   <li>
+      <a href="#samplingStrategyType"
+         title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#samplingStrategyType">
+         <span>sampling strategy type</span>
+      </a>
+   </li>
+   <li>
+      <a href="#surveyDetailsForMeasurements"
+         title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#surveyDetailsForMeasurements">
+         <span>survey details for measurements</span>
+      </a>
+   </li>
+   <li>
+      <a href="#paymentClaimCompletnessStatement"
+         title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#paymentClaimCompletnessStatement">The aid application or payment claim is complete</a>
+   </li>
+   <li>
+      <a href="#longTermCommitmentsConformance"
+         title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#longTermCommitmentsConformance">There is compliance with long-term commitments, where appropriate</a>
+   </li>
+   <li>
+      <a href="#noDoubleFinancing"
+         title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#noDoubleFinancing">There is no double financing through other Union schemes</a>
+   </li>
+   <li>
+      <a href="#surveyMethodType"
+         title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#surveyMethodType">Type of survey</a>
+   </li>
+</ul><h4>Data Properties</h4><ul xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" class="hlist">
+   <li>
+      <a href="#estimatedAccuracy"
+         title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#estimatedAccuracy">Estimated absolute positional accuracy </a>
+   </li>
+   <li>
+      <a href="#maximumRiskBasedSampleSize"
+         title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#maximumRiskBasedSampleSize">
+         <span>maximum risk based sample size</span>
+      </a>
+   </li>
+   <li>
+      <a href="#minimumRiskBasedSampleSize"
+         title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#minimumRiskBasedSampleSize">
+         <span>minimum risk based sample size</span>
+      </a>
+   </li>
+   <li>
+      <a href="#minimumSampleSize"
+         title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#minimumSampleSize">
+         <span>minimum sample size</span>
+      </a>
+   </li>
+   <li>
+      <a href="#onTheSpotCheckAnnouncementDate"
+         title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#onTheSpotCheckAnnouncementDate">On-the-spot check announcement date</a>
+   </li>
+   <li>
+      <a href="#onTheSpotCheckDate"
+         title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#onTheSpotCheckDate">On-the-spot check date</a>
+   </li>
+   <li>
+      <a href="#samplingStrategyDescription"
+         title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#samplingStrategyDescription">
+         <span>sampling strategy description</span>
+      </a>
+   </li>
+   <li>
+      <a href="#subjectOfMultipleVisits"
+         title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#subjectOfMultipleVisits">Sampling strategy type</a>
+   </li>
+   <li>
+      <a href="#samplingStratumId"
+         title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#samplingStratumId">
+         <span>sampling stratum id</span>
+      </a>
+   </li>
+   <li>
+      <a href="#samplingStratumName"
+         title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#samplingStratumName">
+         <span>sampling stratum name</span>
+      </a>
+   </li>
+   <li>
+      <a href="#suplementaryControlRate"
+         title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#suplementaryControlRate">
+         <span>suplementary control rate</span>
+      </a>
+   </li>
+   <li>
+      <a href="#reportSent"
+         title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#reportSent">Type of the on the spot check</a>
+   </li>
+   <li>
+      <a href="#inspectorsMeasurementId"
+         title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#inspectorsMeasurementId">Unique thematic ID of inspector's survey</a>
+   </li>
+</ul><iframe align="center" width="100%" height ="500px" src="webvowl/index.html"></iframe> 
+</div>
+  
+
+<!--DESCRIPTION SECTION-->
+    <div id="description"><h2 id="desc" class="list">CAP-IACS Ontology: Main module: Description <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+<span class="markdown">
+This is a placeholder text for the description of your ontology. The description should include an explanation and a diagram explaining how the classes are related, examples of usage, etc.</span>
+
+</div>
+   
+
+<!--CROSSREF SECTION-->
+   <div id="crossref"><h2 id="crossreference" class="list">Cross-reference for CAP-IACS Ontology: Main module classes, object properties and data properties <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+This section provides details for each class and property defined by CAP-IACS Ontology: Main module.
+<div xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="classes">
+   <h3 id="classes-headline" class="list">Classes</h3>
+   <ul class="hlist">
+      <li>
+         <a href="#AdministrativeCheck"
+            title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#AdministrativeCheck">AdministrativeCheck</a>
+      </li>
+      <li>
+         <a href="#CrossCheck"
+            title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#CrossCheck">Cross-checks</a>
+      </li>
+      <li>
+         <a href="#ControlRateGroupAnimalAidSchemaValue"
+            title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#ControlRateGroupAnimalAidSchemaValue">List of control rate groups for animal aid schemas</a>
+      </li>
+      <li>
+         <a href="#ControlRateTypeValue"
+            title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#ControlRateTypeValue">List of control rate groups for greening</a>
+      </li>
+      <li>
+         <a href="#ControlRateGroupRuralDevelopmentMeasureValue"
+            title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#ControlRateGroupRuralDevelopmentMeasureValue">List of control rate groups for rural development measures</a>
+      </li>
+      <li>
+         <a href="#InspectorsSurveyObjectTypeValue"
+            title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#InspectorsSurveyObjectTypeValue">List of feature types</a>
+      </li>
+      <li>
+         <a href="#CrossCheckTypeValue"
+            title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#CrossCheckTypeValue">List of on the cross-check types</a>
+      </li>
+      <li>
+         <a href="#OnTheSpotCheckTypeValue"
+            title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#OnTheSpotCheckTypeValue">List of on the spot check types</a>
+      </li>
+      <li>
+         <a href="#SamplingStrategyTypeValue"
+            title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#SamplingStrategyTypeValue">List of sampling strategy types</a>
+      </li>
+      <li>
+         <a href="#SurveyMethodValue"
+            title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#SurveyMethodValue">List of survey types</a>
+      </li>
+      <li>
+         <a href="#OnTheSpotCheck"
+            title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#OnTheSpotCheck">On-the-spot check</a>
+      </li>
+      <li>
+         <a href="#OtscSample"
+            title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#OtscSample">
+            <span>otsc sample</span>
+         </a>
+      </li>
+      <li>
+         <a href="#RiskTypeValue"
+            title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#RiskTypeValue">
+            <span>risk type value</span>
+         </a>
+      </li>
+      <li>
+         <a href="#OtscItem"
+            title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#OtscItem">Sample</a>
+      </li>
+      <li>
+         <a href="#SampleTypeValue"
+            title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#SampleTypeValue">
+            <span>sample type value</span>
+         </a>
+      </li>
+      <li>
+         <a href="#SamplingStratum"
+            title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#SamplingStratum">
+            <span>sampling stratum</span>
+         </a>
+      </li>
+      <li>
+         <a href="#InspectorsSurvey"
+            title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#InspectorsSurvey">Surveys of the inspectors</a>
+      </li>
+   </ul>
+   <div class="entity" id="AdministrativeCheck">
+      <h3>AdministrativeCheck<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#AdministrativeCheck</p>
+      <div class="comment">
+         <span class="markdown">-- Definition --
+Administrative check.
+-- Description --
+Administrative check of application. All applications are subject to administrative check.
+
+
+Examples of administrative checks:
+	- Advisory services, farm management and farm relief services [Art.(55) of R 8069/2014]
+	- Quality schemes for agricultural products, and foodstuffs [Art.(56) of R 8069/2014]
+	- Farm and business development [Art.(57) of R 8069/2014]
+
+NOTE
+To simplify the cross-compliance on-the-spot checks and to make better use of existing control capacities, it is possible, when the effectiveness of the checks is at least equal to that achieved when the on-the-spot checks are to be carried out, to replace checks at farm level by administrative checks [Preamble (750) R 809/2014].</span>
+      </div>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="http://www.opengis.net/ont/geosparql#Feature"
+               target="_blank"
+               title="http://www.opengis.net/ont/geosparql#Feature">feature</a>
+         </dd>
+         <dt>is in range of</dt>
+         <dd>
+            <a href="#detailsOfCrossChecksForAdministrativeCheck"
+               title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#detailsOfCrossChecksForAdministrativeCheck">details of cross checks for administrative check</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#itemDetailsForAdministrativeCheck"
+               title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#itemDetailsForAdministrativeCheck">item details for administrative check</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="CrossCheck">
+      <h3>Cross-checks<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#CrossCheck</p>
+      <div class="comment">
+         <span class="markdown">-- Definition --
+Cross-checks.
+-- Description --
+Where appropriate, the administrative checks shall include cross-checks.</span>
+      </div>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="http://www.opengis.net/ont/geosparql#Feature"
+               target="_blank"
+               title="http://www.opengis.net/ont/geosparql#Feature">feature</a>
+         </dd>
+         <dt>is in range of</dt>
+         <dd>
+            <a href="#administrativeCheckDetailsForCrossCheck"
+               title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#administrativeCheckDetailsForCrossCheck">administrative check details for cross check</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#onTheSpotCheckDetailsForCrossCheck"
+               title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#onTheSpotCheckDetailsForCrossCheck">on the spot check details for cross check</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="ControlRateGroupAnimalAidSchemaValue">
+      <h3>List of control rate groups for animal aid schemas<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#ControlRateGroupAnimalAidSchemaValue</p>
+      <div class="comment">
+         <span class="markdown">Control Rate Group Animal Aid Scheme Value
+
+List of control rate groups for animal aid schemas.
+
+NOTE
+Currently placeholder only.</span>
+      </div>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="http://www.w3.org/2004/02/skos/core#Concept"
+               target="_blank"
+               title="http://www.w3.org/2004/02/skos/core#Concept">concept</a>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="ControlRateTypeValue">
+      <h3>List of control rate groups for greening<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#ControlRateTypeValue</p>
+      <div class="comment">
+         <span class="markdown">Control rate type value
+
+List of applicable control rate values as prescribed by Art. 30, 31, 36(2) and 36(6) of R 809/2014.
+
+NOTE
+This code list currently does not contain values for rural development measures (Art. 32) and animal aid schemes (Art. 33 of R 809/2014).</span>
+      </div>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="http://www.w3.org/2004/02/skos/core#Concept"
+               target="_blank"
+               title="http://www.w3.org/2004/02/skos/core#Concept">concept</a>
+         </dd>
+         <dt>is in range of</dt>
+         <dd>
+            <a href="#controlRateType"
+               title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#controlRateType">control rate type</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="ControlRateGroupRuralDevelopmentMeasureValue">
+      <h3>List of control rate groups for rural development measures<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#ControlRateGroupRuralDevelopmentMeasureValue</p>
+      <div class="comment">
+         <span class="markdown">Control Rate Group Rural Development Measure Value
+
+List of control rate groups for rural development measures.
+
+NOTE. Currently placeholder only.</span>
+      </div>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="http://www.w3.org/2004/02/skos/core#Concept"
+               target="_blank"
+               title="http://www.w3.org/2004/02/skos/core#Concept">concept</a>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="InspectorsSurveyObjectTypeValue">
+      <h3>List of feature types<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#InspectorsSurveyObjectTypeValue</p>
+      <div class="comment">
+         <span class="markdown">Inspectors survey type value
+
+List of possible real objects measured by an inspector.
+
+NOTE
+List may be extended or subtracted depending on how MS organizing on-the-spot check process.</span>
+      </div>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="http://www.w3.org/2004/02/skos/core#Concept"
+               target="_blank"
+               title="http://www.w3.org/2004/02/skos/core#Concept">concept</a>
+         </dd>
+         <dt>is in range of</dt>
+         <dd>
+            <a href="#inspectorsSurveyObjectType"
+               title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#inspectorsSurveyObjectType">Feature type controlled</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="CrossCheckTypeValue">
+      <h3>List of on the cross-check types<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#CrossCheckTypeValue</p>
+      <div class="comment">
+         <span class="markdown">-- Definition --
+List of cross-check types.
+-- Description --
+List of cross-check types.</span>
+      </div>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="http://www.w3.org/2004/02/skos/core#Concept"
+               target="_blank"
+               title="http://www.w3.org/2004/02/skos/core#Concept">concept</a>
+         </dd>
+         <dt>is in range of</dt>
+         <dd>
+            <a href="#crossCheckType"
+               title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#crossCheckType">Cross-check type</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="OnTheSpotCheckTypeValue">
+      <h3>List of on the spot check types<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#OnTheSpotCheckTypeValue</p>
+      <div class="comment">
+         <span class="markdown">On-the-spot check type value
+
+List of on the spot check types. that describe the purpose of the control.</span>
+      </div>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="http://www.w3.org/2004/02/skos/core#Concept"
+               target="_blank"
+               title="http://www.w3.org/2004/02/skos/core#Concept">concept</a>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="SamplingStrategyTypeValue">
+      <h3>List of sampling strategy types<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#SamplingStrategyTypeValue</p>
+      <div class="comment">
+         <span class="markdown">Sampling Strategy Type Value
+
+List of sampling strategy types.
+
+In accordance with Preamble (34) of R 809/2014 sampling should comprise a random part in order to obtain a representative error rate and a risk based part for the following Payment/support schemes:
+	- greening payment
+	- animal aid schemes
+	- rural development measure
+
+NOTE 1
+To ensure a relevant and efficient risk analysis, the effectiveness of the risk analysis should be assessed and updated on an annual basis taking into account the relevance of each risk factor, comparing the results of randomly and risk-based selected samples and the specific situation [Preamble (68) and Art. 34(5) of R 809/2014].
+
+NOTE 2
+The sampling method should be selected and documented by the competent authority of the MS/Region. The values of the code list can be extended.
+
+NOTE 3
+The exemplary values of the code list in this application schema are taken from DSCG/2014/32 guideline and best statistical practices.</span>
+      </div>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="http://www.w3.org/2004/02/skos/core#Concept"
+               target="_blank"
+               title="http://www.w3.org/2004/02/skos/core#Concept">concept</a>
+         </dd>
+         <dt>is in range of</dt>
+         <dd>
+            <a href="#samplingStrategyType"
+               title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#samplingStrategyType">sampling strategy type</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="SurveyMethodValue">
+      <h3>List of survey types<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#SurveyMethodValue</p>
+      <div class="comment">
+         <span class="markdown">Survey method value
+
+List of survey method types in sense of Art. 74(3) of R 1306/2013.</span>
+      </div>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="http://www.w3.org/2004/02/skos/core#Concept"
+               target="_blank"
+               title="http://www.w3.org/2004/02/skos/core#Concept">concept</a>
+         </dd>
+         <dt>is in range of</dt>
+         <dd>
+            <a href="#surveyMethodType"
+               title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#surveyMethodType">Type of survey</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="OnTheSpotCheck">
+      <h3>On-the-spot check<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#OnTheSpotCheck</p>
+      <div class="comment">
+         <span class="markdown">On-the-spot check
+
+Checks organised by a MS/Region supplementing the systematic administrative checks [Art. 59(1) of R 1306/2013].
+
+NOTE 1
+Member States shall organise on-the-spot checks on approved operations using an appropriate sampling basis. Those checks shall, to the extent possible, be carried out before the final payment is made for an operation. 
+
+NOTE 2
+The inspectors undertaking the on-the-spot check shall not have been involved in administrative checks of the same operation.
+
+NOTE 3
+This feature type does not describe the on-the-spot check carried out by the Commission</span>
+      </div>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="http://www.opengis.net/ont/geosparql#Feature"
+               target="_blank"
+               title="http://www.opengis.net/ont/geosparql#Feature">feature</a>
+         </dd>
+         <dt>is in range of</dt>
+         <dd>
+            <a href="#detailsOfCrossCheckForOnTheSpotChecks"
+               title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#detailsOfCrossCheckForOnTheSpotChecks">details of cross check for on the spot checks</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#itemDetailsForOnTheSpotChecks"
+               title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#itemDetailsForOnTheSpotChecks">item details for on the spot checks</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="OtscSample">
+      <h3>otsc sample<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#OtscSample</p>
+      <div class="comment">
+         <span class="markdown">OTSC sample
+
+Sample from the entire population of applicants drawn by the authority responsible for the on-the-spot checks [Art. 59 (2) of R 1306/2013].
+
+NOTE 1
+In respect of certain rural development measures the on-the-spot check should cover also non-agricultural land. 
+
+NOTE 2
+In the interests of facilitating the implementation of the integrated system, it should be permitted to limit the actual measurement of the agricultural parcels to a random sample of 50 % of the agricultural parcels declared [Preamble 38 of R 809/2014].</span>
+      </div>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="http://www.opengis.net/ont/geosparql#Feature"
+               target="_blank"
+               title="http://www.opengis.net/ont/geosparql#Feature">feature</a>
+         </dd>
+         <dt>is in range of</dt>
+         <dd>
+            <a href="#sampleDetailsForOtscItem"
+               title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#sampleDetailsForOtscItem">sample details for otsc item</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="RiskTypeValue">
+      <h3>risk type value<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#RiskTypeValue</p>
+      <div class="comment">
+         <span class="markdown">Risk type value
+
+Preamble (33) of R (EU) 809/2014 requires that the competent authority should establish the risk factors targeting the areas where the risk of errors is the highest.
+
+NOTE
+Risk criteria should be assessed and updated on an annual basis taking into account the relevance of each risk criterion, comparing the results of randomly and risk-based selected samples, the specific situation in the Member States and the nature of the non-compliance.</span>
+      </div>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="http://www.w3.org/2004/02/skos/core#Concept"
+               target="_blank"
+               title="http://www.w3.org/2004/02/skos/core#Concept">concept</a>
+         </dd>
+         <dt>is in range of</dt>
+         <dd>
+            <a href="#riskType"
+               title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#riskType">risk type</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="OtscItem">
+      <h3>Sample<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#OtscItem</p>
+      <div class="comment">
+         <span class="markdown">OTSC item
+
+Application sampled for on-the-spot check of one or more support or payment scheme.
+
+NOTE
+Applications or applicants found not to be admissible or not eligible for payment at the time of submission or after administrative checks shall not form part of the control population [Art. 34(1) of R (EU) 809/2014].</span>
+      </div>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="http://www.opengis.net/ont/geosparql#Feature"
+               target="_blank"
+               title="http://www.opengis.net/ont/geosparql#Feature">feature</a>
+         </dd>
+         <dt>is in range of</dt>
+         <dd>
+            <a href="#otscItemDetailsWithinTheSample"
+               title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#otscItemDetailsWithinTheSample">otsc item details within the sample</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="SampleTypeValue">
+      <h3>sample type value<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#SampleTypeValue</p>
+      <div class="comment">
+         <span class="markdown">Sample Type value
+
+The sample type property shall be attributed to each sampled item (application). One item can be sampled to one or more payment/support schemes. 
+
+NOTE
+The categories of sample type values have to support the traceability of the sampling cascade. This is the reason for distinguishing the initial and the top-up samples for BPS/SAPS.</span>
+      </div>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="http://www.w3.org/2004/02/skos/core#Concept"
+               target="_blank"
+               title="http://www.w3.org/2004/02/skos/core#Concept">concept</a>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="SamplingStratum">
+      <h3>sampling stratum<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#SamplingStratum</p>
+      <div class="comment">
+         <span class="markdown">Sampling stratum
+
+The control sample in respect of the on-the-spot checks of the area-related aid schemes should be made on the basis of a stratified sampling method in order to keep the administrative burden in proportion and the number of beneficiaries to be checked on-the-spot to a reasonable level [Preamble (30) of R  (EU) No 809/2014].
+
+NOTE 1
+Sampling stratum can be applied both to random and risk based sampling.
+
+NOTE 2
+Control zones for CwRS can be regarded as strata (data clusters) based on geographic location. Such zones can be selected randomly or based on risk analysis.
+
+NOTE 3
+A sample may consist of one (unique) or more stratum.</span>
+      </div>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="http://www.opengis.net/ont/geosparql#Feature"
+               target="_blank"
+               title="http://www.opengis.net/ont/geosparql#Feature">feature</a>
+         </dd>
+         <dt>is in range of</dt>
+         <dd>
+            <a href="#otscSampleDetailsforStratum"
+               title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#otscSampleDetailsforStratum">otsc sample detailsfor stratum</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="InspectorsSurvey">
+      <h3>Surveys of the inspectors<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#InspectorsSurvey</p>
+      <div class="comment">
+         <span class="markdown">Inspectors Survey
+
+Feature type that stores the properties of inspectors' survey (observations and measurements.)</span>
+      </div>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="http://www.opengis.net/ont/geosparql#Feature"
+               target="_blank"
+               title="http://www.opengis.net/ont/geosparql#Feature">feature</a>
+         </dd>
+         <dt>is in range of</dt>
+         <dd>
+            <a href="#measurementsWithinSurveyDetails"
+               title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#measurementsWithinSurveyDetails">measurements within survey details</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#onTheSpotCheckDetailsForInspectors"
+               title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#onTheSpotCheckDetailsForInspectors">on the spot check details for inspectors</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#surveyDetailsForMeasurements"
+               title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#surveyDetailsForMeasurements">survey details for measurements</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+      </dl>
+   </div>
+</div><div xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="objectproperties">
+   <h3 id="properties" class="list">Object Properties</h3>
+   <ul class="hlist">
+      <li>
+         <a href="#administrativeCheckDetailsForApplication"
+            title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#administrativeCheckDetailsForApplication">
+            <span>administrative check details for application</span>
+         </a>
+      </li>
+      <li>
+         <a href="#administrativeCheckDetailsForCrossCheck"
+            title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#administrativeCheckDetailsForCrossCheck">
+            <span>administrative check details for cross check</span>
+         </a>
+      </li>
+      <li>
+         <a href="#controlRateType"
+            title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#controlRateType">
+            <span>control rate type</span>
+         </a>
+      </li>
+      <li>
+         <a href="#controlReport"
+            title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#controlReport">Control report document</a>
+      </li>
+      <li>
+         <a href="#crossCheckType"
+            title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#crossCheckType">Cross-check type</a>
+      </li>
+      <li>
+         <a href="#detailsOfApplications"
+            title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#detailsOfApplications">
+            <span>details of applications</span>
+         </a>
+      </li>
+      <li>
+         <a href="#detailsOfCrossCheckForOnTheSpotChecks"
+            title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#detailsOfCrossCheckForOnTheSpotChecks">
+            <span>details of cross check for on the spot checks</span>
+         </a>
+      </li>
+      <li>
+         <a href="#detailsOfCrossChecksForAdministrativeCheck"
+            title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#detailsOfCrossChecksForAdministrativeCheck">
+            <span>details of cross checks for administrative check</span>
+         </a>
+      </li>
+      <li>
+         <a href="#detailsOfOtscItems"
+            title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#detailsOfOtscItems">
+            <span>details of otsc items</span>
+         </a>
+      </li>
+      <li>
+         <a href="#determinedEntitlementArea"
+            title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#determinedEntitlementArea">
+            <span>Entitlements determined</span>
+         </a>
+      </li>
+      <li>
+         <a href="#animalSchemeMeasureConformance"
+            title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#animalSchemeMeasureConformance">Evidence received from other services, bodies or organisations to verify the compliance with the eligibility commitments</a>
+      </li>
+      <li>
+         <a href="#inspectorsSurveyObjectType"
+            title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#inspectorsSurveyObjectType">Feature type controlled</a>
+      </li>
+      <li>
+         <a href="#determinedArea"
+            title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#determinedArea">
+            <span>Final area determined after all administrative checks</span>
+         </a>
+      </li>
+      <li>
+         <a href="#eligibilityCriteriaFulfilled"
+            title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#eligibilityCriteriaFulfilled">Final entitlement area determined after all administrative checks</a>
+      </li>
+      <li>
+         <a href="#geometry"
+            title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#geometry">Geometry of survey and or measurement</a>
+      </li>
+      <li>
+         <a href="#itemDetailsForAdministrativeCheck"
+            title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#itemDetailsForAdministrativeCheck">
+            <span>item details for administrative check</span>
+         </a>
+      </li>
+      <li>
+         <a href="#itemDetailsForOnTheSpotChecks"
+            title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#itemDetailsForOnTheSpotChecks">
+            <span>item details for on the spot checks</span>
+         </a>
+      </li>
+      <li>
+         <a href="#measurementsWithinSurveyDetails"
+            title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#measurementsWithinSurveyDetails">
+            <span>measurements within survey details</span>
+         </a>
+      </li>
+      <li>
+         <a href="#metadata"
+            title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#metadata">
+            <span>metadata</span>
+         </a>
+      </li>
+      <li>
+         <a href="#nonStructuredEvidenceCitation"
+            title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#nonStructuredEvidenceCitation">Non-structured evidence - citation</a>
+      </li>
+      <li>
+         <a href="#nonStructuredEvidenceDocument"
+            title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#nonStructuredEvidenceDocument">Non-structured evidence - document</a>
+      </li>
+      <li>
+         <a href="#conformanceStatement"
+            title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#conformanceStatement">On the spot check conformance statement</a>
+      </li>
+      <li>
+         <a href="#onTheSpotCheckDetailsForCrossCheck"
+            title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#onTheSpotCheckDetailsForCrossCheck">
+            <span>on the spot check details for cross check</span>
+         </a>
+      </li>
+      <li>
+         <a href="#onTheSpotCheckDetailsForInspectors"
+            title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#onTheSpotCheckDetailsForInspectors">
+            <span>on the spot check details for inspectors</span>
+         </a>
+      </li>
+      <li>
+         <a href="#otscItemDetailsForReconversion"
+            title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#otscItemDetailsForReconversion">
+            <span>otsc item details for reconversion</span>
+         </a>
+      </li>
+      <li>
+         <a href="#otscItemDetailsWithinTheSample"
+            title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#otscItemDetailsWithinTheSample">
+            <span>otsc item details within the sample</span>
+         </a>
+      </li>
+      <li>
+         <a href="#otscReport"
+            title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#otscReport">
+            <span>otsc report</span>
+         </a>
+      </li>
+      <li>
+         <a href="#otscSampleDetailsforStratum"
+            title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#otscSampleDetailsforStratum">
+            <span>otsc sample detailsfor stratum</span>
+         </a>
+      </li>
+      <li>
+         <a href="#otscSamplingPlan"
+            title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#otscSamplingPlan">
+            <span>otsc sampling plan</span>
+         </a>
+      </li>
+      <li>
+         <a href="#observedPerimeter"
+            title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#observedPerimeter">
+            <span>Perimeter observed after on-the-spot check</span>
+         </a>
+      </li>
+      <li>
+         <a href="#riskType"
+            title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#riskType">
+            <span>risk type</span>
+         </a>
+      </li>
+      <li>
+         <a href="#sampleDetailsForOtscItem"
+            title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#sampleDetailsForOtscItem">
+            <span>sample details for otsc item</span>
+         </a>
+      </li>
+      <li>
+         <a href="#samplingStrategyCitation"
+            title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#samplingStrategyCitation">
+            <span>sampling strategy citation</span>
+         </a>
+      </li>
+      <li>
+         <a href="#samplingStrategyType"
+            title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#samplingStrategyType">
+            <span>sampling strategy type</span>
+         </a>
+      </li>
+      <li>
+         <a href="#surveyDetailsForMeasurements"
+            title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#surveyDetailsForMeasurements">
+            <span>survey details for measurements</span>
+         </a>
+      </li>
+      <li>
+         <a href="#paymentClaimCompletnessStatement"
+            title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#paymentClaimCompletnessStatement">The aid application or payment claim is complete</a>
+      </li>
+      <li>
+         <a href="#longTermCommitmentsConformance"
+            title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#longTermCommitmentsConformance">There is compliance with long-term commitments, where appropriate</a>
+      </li>
+      <li>
+         <a href="#noDoubleFinancing"
+            title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#noDoubleFinancing">There is no double financing through other Union schemes</a>
+      </li>
+      <li>
+         <a href="#surveyMethodType"
+            title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#surveyMethodType">Type of survey</a>
+      </li>
+   </ul>
+   <div class="entity" id="administrativeCheckDetailsForApplication">
+      <h3>administrative check details for application<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#administrativeCheckDetailsForApplication</p>
+      <div class="description">
+         <dl>
+            <dt>has range</dt>
+            <dd>
+               <a href="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#Application"
+                  target="_blank"
+                  title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#Application">application</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="administrativeCheckDetailsForCrossCheck">
+      <h3>administrative check details for cross check<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#administrativeCheckDetailsForCrossCheck</p>
+      <div class="description">
+         <dl>
+            <dt>has range</dt>
+            <dd>
+               <a href="#CrossCheck"
+                  title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#CrossCheck">Cross-checks</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="controlRateType">
+      <h3>control rate type<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#controlRateType</p>
+      <div class="comment">
+         <span class="markdown">Control rate type
+
+Control rate types as prescribed by Art. 30, 31, 36(2) and 36(6) of R 809/2014.</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has range</dt>
+            <dd>
+               <a href="#ControlRateTypeValue"
+                  title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#ControlRateTypeValue">List of control rate groups for greening</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="controlReport">
+      <h3>Control report document<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#controlReport</p>
+      <div class="comment">
+         <span class="markdown">Control report
+
+Report mandated by Art. 59(3) of R 1306/2013.
+
+Art. 41(1) of R 809/2014 regulates the content of the report for the area based payments:
+	- (a) aid schemes or support measures, the aid applications or payment claims checked;
+	- (b) the persons present;
+	- (c) the agricultural parcels checked, the agricultural parcels measured including, where applicable, the result of the measurements per measured agricultural parcel and the measuring methods used;
+	- (d) where applicable, the results of the measurement of non-agricultural land for which support under rural development measures is being claimed and the measuring methods used;
+	- (e) whether notice of the check was given to the beneficiary and, if so, the period of prior notice;
+	- (f) indications of any specific control measures to be carried out in the context of individual aid schemes or support schemes;
+	- (g) indication of any further control measures carried out;
+	- (h) indication of any non-compliance found that could require cross-notification in view of other aid schemes, support measures and/or cross-compliance;
+	- (i) indication of any non-compliance found that could require follow-up during the following years.
+
+Art.53(1) of R (EU) 809/2014 regulates the content of the report for livestock OTSC:
+	- (a) the measures and applications or payment claims checked;
+	- (b) the persons present;
+	- (c) whether notice was given to the beneficiary of the visit and, if so, the period of prior notice;
+	- (d) the results of the checks and, where applicable, any particular observations;
+	- (e) any further control measures to be carried out [EN 31.7.2014 Official Journal of the European Union L 227/111].
+
+NOTE
+When OTSC is carried out by means of remote sensing Member States are allowed to provide the report only where the check reveals non-compliance [Preamble (41) of R 809/2014] .
+
+Issue
+How this provision complies with Art. 59(3) of R 1306/2013?</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has range</dt>
+            <dd>
+               <a href="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-base#SupplementaryDocument"
+                  target="_blank"
+                  title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-base#SupplementaryDocument">supplementary document</a>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="crossCheckType">
+      <h3>Cross-check type<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#crossCheckType</p>
+      <div class="comment">
+         <span class="markdown">-- Definition --
+Cross-check type.
+-- Description --
+Cross-check type.</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has range</dt>
+            <dd>
+               <a href="#CrossCheckTypeValue"
+                  title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#CrossCheckTypeValue">List of on the cross-check types</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="detailsOfApplications">
+      <h3>details of applications<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#detailsOfApplications</p>
+      <div class="description">
+         <dl>
+            <dt>has range</dt>
+            <dd>
+               <a href="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#Application"
+                  target="_blank"
+                  title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#Application">application</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="detailsOfCrossCheckForOnTheSpotChecks">
+      <h3>details of cross check for on the spot checks<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#detailsOfCrossCheckForOnTheSpotChecks</p>
+      <div class="description">
+         <dl>
+            <dt>has range</dt>
+            <dd>
+               <a href="#OnTheSpotCheck"
+                  title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#OnTheSpotCheck">On-the-spot check</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="detailsOfCrossChecksForAdministrativeCheck">
+      <h3>details of cross checks for administrative check<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#detailsOfCrossChecksForAdministrativeCheck</p>
+      <div class="description">
+         <dl>
+            <dt>has range</dt>
+            <dd>
+               <a href="#AdministrativeCheck"
+                  title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#AdministrativeCheck">AdministrativeCheck</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="detailsOfOtscItems">
+      <h3>details of otsc items<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#detailsOfOtscItems</p>
+      <div class="description">
+         <dl>
+            <dt>has range</dt>
+            <dd>
+               <a href="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#Application"
+                  target="_blank"
+                  title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#Application">application</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="determinedEntitlementArea">
+      <h3>Entitlements determined<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#determinedEntitlementArea</p>
+      <div class="description">
+         <dl>
+            <dt>has range</dt>
+            <dd>
+               <a href="http://qudt.org/schema/qudt/QuantityValue"
+                  target="_blank"
+                  title="http://qudt.org/schema/qudt/QuantityValue">quantity value</a>
+            </dd>
+            <dt>is also defined as</dt>
+            <dd>data property</dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="animalSchemeMeasureConformance">
+      <h3>Evidence received from other services, bodies or organisations to verify the compliance with the eligibility commitments<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#animalSchemeMeasureConformance</p>
+      <div class="comment">
+         <span class="markdown">-- Definition --
+Evidence received from other services, bodies or organisations to verify the compliance with the eligibility commitments.
+-- Description --
+In respect of animal aid schemes and animal-related support measures, Member States may, where appropriate, make use of evidence received from other services, bodies or organisations to verify the compliance with the eligibility criteria, commitments and other obligations, provided that the service, body or organisation in question is operating to a standard sufficient to control such compliance.
+NOTE. If conformanceStatementAnimalSchemeMeasure = 1, then nonStructuredEvidenceDocument&lt;&gt;Null and or nonStructuredEvidenceCitation&lt;&gt;Null.</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has range</dt>
+            <dd>
+               <a href="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-base#ConformanceStatementValue"
+                  target="_blank"
+                  title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-base#ConformanceStatementValue">conformance statement value</a>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="inspectorsSurveyObjectType">
+      <h3>Feature type controlled<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#inspectorsSurveyObjectType</p>
+      <div class="comment">
+         <span class="markdown">Inspectors Survey Object Type Value
+
+Types of real world objects observed/measured by inspector.</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has range</dt>
+            <dd>
+               <a href="#InspectorsSurveyObjectTypeValue"
+                  title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#InspectorsSurveyObjectTypeValue">List of feature types</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="determinedArea">
+      <h3>Final area determined after all administrative checks<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#determinedArea</p>
+      <div class="description">
+         <dl>
+            <dt>has range</dt>
+            <dd>
+               <a href="http://qudt.org/schema/qudt/QuantityValue"
+                  target="_blank"
+                  title="http://qudt.org/schema/qudt/QuantityValue">quantity value</a>
+            </dd>
+            <dt>is also defined as</dt>
+            <dd>data property</dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="eligibilityCriteriaFulfilled">
+      <h3>Final entitlement area determined after all administrative checks<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#eligibilityCriteriaFulfilled</p>
+      <div class="comment">
+         <span class="markdown">-- Definition --
+Final entitlement area determined after all administrative checks.
+-- Description --
+If AdministrativeCheck.determinedEntitlementArea&lt;&gt;Application.declaredEntitlementArea Then
+AdministrativeCheck.determinedEntitlementArea = AdministrativeCheck.determinedEntitlementArea Else
+AdministrativeCheck.determinedEntitlementArea = Application.declaredEntitlementArea
+EndIf
+
+NOTE. Mandatory for SPS only. Subject for enabling of entitlements (Area) on all area declared (declaredEntitlementArea &lt;=declaredArea).</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has range</dt>
+            <dd>
+               <a href="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-base#ConformanceStatementValue"
+                  target="_blank"
+                  title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-base#ConformanceStatementValue">conformance statement value</a>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="geometry">
+      <h3>Geometry of survey and or measurement<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#geometry</p>
+      <div class="comment">
+         <span class="markdown">Geometry
+
+Geometry of survey and or measurement. It is a representation by coordinates of the geographical dimension/position of the farmer's survey and or measurement (within survey).</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has range</dt>
+            <dd>
+               <a href="http://www.opengis.net/ont/geosparql#Geometry"
+                  target="_blank"
+                  title="http://www.opengis.net/ont/geosparql#Geometry">geometry</a>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="itemDetailsForAdministrativeCheck">
+      <h3>item details for administrative check<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#itemDetailsForAdministrativeCheck</p>
+      <div class="description">
+         <dl>
+            <dt>has range</dt>
+            <dd>
+               <a href="#AdministrativeCheck"
+                  title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#AdministrativeCheck">AdministrativeCheck</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="itemDetailsForOnTheSpotChecks">
+      <h3>item details for on the spot checks<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#itemDetailsForOnTheSpotChecks</p>
+      <div class="description">
+         <dl>
+            <dt>has range</dt>
+            <dd>
+               <a href="#OnTheSpotCheck"
+                  title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#OnTheSpotCheck">On-the-spot check</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="measurementsWithinSurveyDetails">
+      <h3>measurements within survey details<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#measurementsWithinSurveyDetails</p>
+      <div class="description">
+         <dl>
+            <dt>has range</dt>
+            <dd>
+               <a href="#InspectorsSurvey"
+                  title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#InspectorsSurvey">Surveys of the inspectors</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="metadata">
+      <h3>metadata<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#metadata</p>
+      <div class="comment">
+         <span class="markdown">Metadata
+
+Feature level metadata of the sample.
+
+NOTE 1
+The content of feature level metadata is specified in the Base types application schema.
+
+NOTE 2
+Partial selection of the control sample is possible before the application periods ends. For traceability of such selection, the life cycle information has to be updated at each partial selection.
+
+Update: FeatureLevelMetadata.beginLifespanVersion AND FeatureLevelMetadata.endLifespanVersion</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has range</dt>
+            <dd>
+               <a href="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-base#FeatureLevelMetadata"
+                  target="_blank"
+                  title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-base#FeatureLevelMetadata">feature level metadata</a>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="nonStructuredEvidenceCitation">
+      <h3>Non-structured evidence - citation<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#nonStructuredEvidenceCitation</p>
+      <div class="comment">
+         <span class="markdown">-- Definition --
+Any citation that supports the administrative check.
+-- Description --
+In respect of animal aid schemes and animal-related support measures, Member States may, where appropriate, make use of evidence received from other services, bodies or organisations to verify the compliance with the eligibility criteria, commitments and other obligations, provided that the service, body or organisation in question is operating to a standard sufficient to control such compliance.
+NOTE. If the aid application or payment claim is complete and submitted within the relevant time-limit and, where applicable, the supporting documents (that prove eligibility) must be submitted.</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has range</dt>
+            <dd>
+               <a href="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-base#SupplementaryDocumentCitation"
+                  target="_blank"
+                  title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-base#SupplementaryDocumentCitation">supplementary document citation</a>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="nonStructuredEvidenceDocument">
+      <h3>Non-structured evidence - document<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#nonStructuredEvidenceDocument</p>
+      <div class="comment">
+         <span class="markdown">-- Definition --
+Any document that supports the administrative check.
+-- Description --
+In respect of animal aid schemes and animal-related support measures, Member States may, where appropriate, make use of evidence received from other services, bodies or organisations to verify the compliance with the eligibility criteria, commitments and other obligations, provided that the service, body or organisation in question is operating to a standard sufficient to control such compliance.
+NOTE. If the aid application or payment claim is complete and submitted within the relevant time-limit and, where applicable, the supporting documents (that prove eligibility) must be submitted.</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has range</dt>
+            <dd>
+               <a href="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-base#SupplementaryDocument"
+                  target="_blank"
+                  title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-base#SupplementaryDocument">supplementary document</a>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="conformanceStatement">
+      <h3>On the spot check conformance statement<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#conformanceStatement</p>
+      <div class="comment">
+         <span class="markdown">Conformance statement
+
+Verdict based on the outcome of the on-the-spot check whether the rules, eligibility criteria, commitments and other obligations relating to the conditions for the granting of support have been met.
+
+On-the-spot checks shall verify the accuracy of the data declared by the beneficiary against underlying documents. This includes a verification that the payment claims submitted by the beneficiary are supported by accounting or other documents, including, where necessary, a check on the accuracy of the data in the payment claim on the basis of data or commercial documents held by third parties. On-the-spot checks shall verify that the use or intended use of the operation is consistent with the use described in the application for support and for which the support was granted. Except in exceptional circumstances, duly recorded and explained by the competent authorities, on-the-spot checks shall include a visit to the place where the operation is implemented or, if the operation is intangible, to the operation promoter. 
+	
+EXAMPLE.
+Aid application or payment claim shall be rejected if the beneficiary or his representative prevents an on-the-spot check from being carried out, except in cases of force majeure or in exceptional circumstances. In this case (if it is not force majeure or exceptional circumstance)</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has range</dt>
+            <dd>
+               <a href="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-base#ConformanceStatementValue"
+                  target="_blank"
+                  title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-base#ConformanceStatementValue">conformance statement value</a>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="onTheSpotCheckDetailsForCrossCheck">
+      <h3>on the spot check details for cross check<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#onTheSpotCheckDetailsForCrossCheck</p>
+      <div class="description">
+         <dl>
+            <dt>has range</dt>
+            <dd>
+               <a href="#CrossCheck"
+                  title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#CrossCheck">Cross-checks</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="onTheSpotCheckDetailsForInspectors">
+      <h3>on the spot check details for inspectors<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#onTheSpotCheckDetailsForInspectors</p>
+      <div class="description">
+         <dl>
+            <dt>has range</dt>
+            <dd>
+               <a href="#InspectorsSurvey"
+                  title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#InspectorsSurvey">Surveys of the inspectors</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="otscItemDetailsForReconversion">
+      <h3>otsc item details for reconversion<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#otscItemDetailsForReconversion</p>
+      <div class="description">
+         <dl>
+            <dt>has range</dt>
+            <dd>
+               <a href="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#ReconvertingObligation"
+                  target="_blank"
+                  title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#ReconvertingObligation">reconverting obligation</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="otscItemDetailsWithinTheSample">
+      <h3>otsc item details within the sample<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#otscItemDetailsWithinTheSample</p>
+      <div class="description">
+         <dl>
+            <dt>has range</dt>
+            <dd>
+               <a href="#OtscItem"
+                  title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#OtscItem">Sample</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="otscReport">
+      <h3>otsc report<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#otscReport</p>
+      <div class="comment">
+         <span class="markdown">OTSC report
+
+According to Art. 24(3) of R 809/2014 the results of the [...OTSC] shall be assessed to establish whether any problems encountered could in general entail a risk for other similar operations, beneficiaries or other bodies. The assessment shall also identify the causes of such situations, any further examination which may be required and necessary corrective and preventive actions. This analysis is an important input for risk analysis of the next campaign year.</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has range</dt>
+            <dd>
+               <a href="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-base#SupplementaryDocument"
+                  target="_blank"
+                  title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-base#SupplementaryDocument">supplementary document</a>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="otscSampleDetailsforStratum">
+      <h3>otsc sample detailsfor stratum<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#otscSampleDetailsforStratum</p>
+      <div class="description">
+         <dl>
+            <dt>has range</dt>
+            <dd>
+               <a href="#SamplingStratum"
+                  title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#SamplingStratum">sampling stratum</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="otscSamplingPlan">
+      <h3>otsc sampling plan<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#otscSamplingPlan</p>
+      <div class="comment">
+         <span class="markdown">OTSC sampling plan
+
+Art.(72)(2) of R (EU) 1306/2013 requires the MS to draw up a sampling plan of agricultural holdings and/or beneficiaries for the purpose of OTSC.</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has range</dt>
+            <dd>
+               <a href="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-base#SupplementaryDocument"
+                  target="_blank"
+                  title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-base#SupplementaryDocument">supplementary document</a>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="observedPerimeter">
+      <h3>Perimeter observed after on-the-spot check<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#observedPerimeter</p>
+      <div class="description">
+         <dl>
+            <dt>has range</dt>
+            <dd>
+               <a href="http://qudt.org/schema/qudt/QuantityValue"
+                  target="_blank"
+                  title="http://qudt.org/schema/qudt/QuantityValue">quantity value</a>
+            </dd>
+            <dt>is also defined as</dt>
+            <dd>data property</dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="riskType">
+      <h3>risk type<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#riskType</p>
+      <div class="comment">
+         <span class="markdown">Risk type
+
+Type of the risk established by the competent authority for which the application has been selected for on-the-spot check.
+
+The competent authority should establish the risk factors targeting the areas where the risk of errors is the highest. To ensure relevant and efficient risk analysis, the effectiveness of the risk criteria should be assessed and updated on an annual basis taking into account the relevance of each risk criterion, comparing the results of randomly and risk-based selected samples, the specific situation in the Member States and the nature of the non-compliance (Preamble (30) of R (EU) No 809/2014)
+
+NOTE
+According to Art. 34(6) of Regulation (EU) No 809/2014 the competent authority shall keep records of the reasons for the selection of each beneficiary for an on-the-spot check. The inspector carrying out the on-the-spot check shall be informed accordingly prior to the commencement of the on-the-spot check.</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has range</dt>
+            <dd>
+               <a href="#RiskTypeValue"
+                  title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#RiskTypeValue">risk type value</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="sampleDetailsForOtscItem">
+      <h3>sample details for otsc item<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#sampleDetailsForOtscItem</p>
+      <div class="description">
+         <dl>
+            <dt>has range</dt>
+            <dd>
+               <a href="#OtscSample"
+                  title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#OtscSample">otsc sample</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="samplingStrategyCitation">
+      <h3>sampling strategy citation<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#samplingStrategyCitation</p>
+      <div class="comment">
+         <span class="markdown">Sampling strategy citation
+
+Reference to the description of a well-established sampling strategy/method.
+
+NOTE
+Citation can be void, when detailed description of the method is documented as property of the stratum.</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has range</dt>
+            <dd>
+               <a href="http://www.w3.org/2002/07/owl#Class"
+                  target="_blank"
+                  title="http://www.w3.org/2002/07/owl#Class">class</a>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="samplingStrategyType">
+      <h3>sampling strategy type<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#samplingStrategyType</p>
+      <div class="comment">
+         <span class="markdown">Sampling Strategy Type
+
+Random or risk based selection in sense of Preamble (68) and Art. 34(5) of R 809/2014.
+
+Some possible narrower values are listed in the SamplingStrategyTypeValue code list. Specifying narrower categories of risk based and random sampling is justified to provide input for the OTSC report and risk analysis in the next campaign year.</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has range</dt>
+            <dd>
+               <a href="#SamplingStrategyTypeValue"
+                  title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#SamplingStrategyTypeValue">List of sampling strategy types</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="surveyDetailsForMeasurements">
+      <h3>survey details for measurements<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#surveyDetailsForMeasurements</p>
+      <div class="description">
+         <dl>
+            <dt>has range</dt>
+            <dd>
+               <a href="#InspectorsSurvey"
+                  title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#InspectorsSurvey">Surveys of the inspectors</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="paymentClaimCompletnessStatement">
+      <h3>The aid application or payment claim is complete<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#paymentClaimCompletnessStatement</p>
+      <div class="comment">
+         <span class="markdown">-- Definition --
+The aid application or payment claim is complete.
+-- Description --
+The administrative checks referred to in Article 74 of Regulation (EU) No 1306/2013, including cross-checks, shall permit the detection of non-compliances, in particular the automated detection using computerised means. The checks shall cover all elements that are possible and appropriate to control by means of administrative checks. They shall ensure that: the aid application or payment claim is complete and submitted within the relevant time-limit and, where applicable, that supporting documents have been submitted and that they prove eligibility.</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has range</dt>
+            <dd>
+               <a href="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-base#ConformanceStatementValue"
+                  target="_blank"
+                  title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-base#ConformanceStatementValue">conformance statement value</a>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="longTermCommitmentsConformance">
+      <h3>There is compliance with long-term commitments, where appropriate<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#longTermCommitmentsConformance</p>
+      <div class="comment">
+         <span class="markdown">-- Definition --
+There is compliance with long-term commitments, where appropriate.
+-- Description --
+The administrative checks referred to in Article 74 of Regulation (EU) No 1306/2013, including cross-checks, shall permit the detection of non-compliances, in particular the automated detection using computerised means. The checks shall cover all elements that are possible and appropriate to control by means of administrative checks. They shall ensure that: there is compliance with long-term commitments, where appropriate.</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has range</dt>
+            <dd>
+               <a href="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-base#ConformanceStatementValue"
+                  target="_blank"
+                  title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-base#ConformanceStatementValue">conformance statement value</a>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="noDoubleFinancing">
+      <h3>There is no double financing through other Union schemes<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#noDoubleFinancing</p>
+      <div class="comment">
+         <span class="markdown">-- Definition --
+There is no double financing through other Union schemes.
+-- Description --
+The administrative checks referred to in Article 74 of Regulation (EU) No 1306/2013, including cross-checks, shall permit the detection of non-compliances, in particular the automated detection using computerised means. The checks shall cover all elements that are possible and appropriate to control by means of administrative checks. They shall ensure that: there is no double financing through other Union schemes.</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has range</dt>
+            <dd>
+               <a href="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-base#ConformanceStatementValue"
+                  target="_blank"
+                  title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-base#ConformanceStatementValue">conformance statement value</a>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="surveyMethodType">
+      <h3>Type of survey<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#surveyMethodType</p>
+      <div class="comment">
+         <span class="markdown">Survey method type
+
+List of survey types in sense of Art. 74(3) of R 1306/2013.
+Member States may use remote sensing and field measurements comprising Global Navigation Satellite System (GNSS) techniques as a means of carrying out on-the-spot checks on agricultural parcels.</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has range</dt>
+            <dd>
+               <a href="#SurveyMethodValue"
+                  title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#SurveyMethodValue">List of survey types</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+</div><div xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="dataproperties">
+   <h3 id="dataproperties-headline" class="list">Data Properties</h3>
+   <ul class="hlist">
+      <li>
+         <a href="#estimatedAccuracy"
+            title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#estimatedAccuracy">Estimated absolute positional accuracy </a>
+      </li>
+      <li>
+         <a href="#maximumRiskBasedSampleSize"
+            title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#maximumRiskBasedSampleSize">
+            <span>maximum risk based sample size</span>
+         </a>
+      </li>
+      <li>
+         <a href="#minimumRiskBasedSampleSize"
+            title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#minimumRiskBasedSampleSize">
+            <span>minimum risk based sample size</span>
+         </a>
+      </li>
+      <li>
+         <a href="#minimumSampleSize"
+            title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#minimumSampleSize">
+            <span>minimum sample size</span>
+         </a>
+      </li>
+      <li>
+         <a href="#onTheSpotCheckAnnouncementDate"
+            title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#onTheSpotCheckAnnouncementDate">On-the-spot check announcement date</a>
+      </li>
+      <li>
+         <a href="#onTheSpotCheckDate"
+            title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#onTheSpotCheckDate">On-the-spot check date</a>
+      </li>
+      <li>
+         <a href="#samplingStrategyDescription"
+            title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#samplingStrategyDescription">
+            <span>sampling strategy description</span>
+         </a>
+      </li>
+      <li>
+         <a href="#subjectOfMultipleVisits"
+            title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#subjectOfMultipleVisits">Sampling strategy type</a>
+      </li>
+      <li>
+         <a href="#samplingStratumId"
+            title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#samplingStratumId">
+            <span>sampling stratum id</span>
+         </a>
+      </li>
+      <li>
+         <a href="#samplingStratumName"
+            title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#samplingStratumName">
+            <span>sampling stratum name</span>
+         </a>
+      </li>
+      <li>
+         <a href="#suplementaryControlRate"
+            title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#suplementaryControlRate">
+            <span>suplementary control rate</span>
+         </a>
+      </li>
+      <li>
+         <a href="#reportSent"
+            title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#reportSent">Type of the on the spot check</a>
+      </li>
+      <li>
+         <a href="#inspectorsMeasurementId"
+            title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#inspectorsMeasurementId">Unique thematic ID of inspector's survey</a>
+      </li>
+   </ul>
+   <div class="entity" id="estimatedAccuracy">
+      <h3>Estimated absolute positional accuracy <sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#estimatedAccuracy</p>
+      <div class="comment">
+         <span class="markdown">Estimated Positional Accuracy
+
+Estimated absolute positional accuracy of the object measured in the used coordinate reference system. Absolute positional accuracy is the mean value of the positional uncertainties for a set of positions, where the positional uncertainties are the distance between a measured position and what is considered as the corresponding true position. This mean value may come from quality measures on a homogeneous population of objects measured or from an estimation based on the knowledge of the production processes and of their accuracy.</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has range</dt>
+            <dd>
+               <a href="http://www.w3.org/2001/XMLSchema#double"
+                  target="_blank"
+                  title="http://www.w3.org/2001/XMLSchema#double">double</a>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="maximumRiskBasedSampleSize">
+      <h3>maximum risk based sample size<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#maximumRiskBasedSampleSize</p>
+      <div class="comment">
+         <span class="markdown">Maximum risk based sample size
+
+Theoretical maximum population of the sample size selected on risk basis.
+
+NOTE 1
+This property has to be recorded for green payments only. The risk based population should stay between the indicated minimum and maximum.
+
+NOTE 2
+The maximum population of the risk based size of a sample has to be calculated as product of the control rate and the associated risk based part.
+
+EXAMPLE:
+For green payments the maximum risk based part is 80 % out of the 5% control population; i.e. 4% all together.</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has range</dt>
+            <dd>
+               <a href="http://www.w3.org/2001/XMLSchema#integer"
+                  target="_blank"
+                  title="http://www.w3.org/2001/XMLSchema#integer">integer</a>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="minimumRiskBasedSampleSize">
+      <h3>minimum risk based sample size<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#minimumRiskBasedSampleSize</p>
+      <div class="comment">
+         <span class="markdown">Minimum risk based sample size
+
+Theoretical minimum population of the sample size selected on risk basis.
+
+NOTE 1
+This property has to be recorded for green payments only. The risk based population should stay between the indicated minimum and maximum.
+
+NOTE 2
+The minimum population of the risk based size of a sample has to be calculated as product of the control rate and the associated risk based part.
+
+EXAMPLE:
+For green payments the minimum risk based part is 75 % out of the 5% control population; i.e. 3,75% all together.</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has range</dt>
+            <dd>
+               <a href="http://www.w3.org/2001/XMLSchema#integer"
+                  target="_blank"
+                  title="http://www.w3.org/2001/XMLSchema#integer">integer</a>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="minimumSampleSize">
+      <h3>minimum sample size<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#minimumSampleSize</p>
+      <div class="comment">
+         <span class="markdown">Minimum sample size
+
+Population belonging to the sample selected according to the control rate.
+
+NOTE
+While the control rate is given in%, the minimum sample size indicates the minimal number of items in the sample. In case of systematic sampling the correctness of the minimum sample size has to be verified at the final deadline for applications.</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has range</dt>
+            <dd>
+               <a href="http://www.w3.org/2001/XMLSchema#integer"
+                  target="_blank"
+                  title="http://www.w3.org/2001/XMLSchema#integer">integer</a>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="onTheSpotCheckAnnouncementDate">
+      <h3>On-the-spot check announcement date<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#onTheSpotCheckAnnouncementDate</p>
+      <div class="comment">
+         <span class="markdown">On-the-spot check announcement date.
+
+Date of when on-the-spot check was announced.
+
+NOTE 1
+Important timing: not more than 14 days (area related support schemes) and 48 hours for (animal-aid) [Art. 25 of R 809/2014].
+
+NOTE 2
+Where the competent authority has [...] given notice to the beneficiary of its intention to carry out an on-the-spot check amendments in applications shall not be authorised [Art. 15(3) of R 809/2014].</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has range</dt>
+            <dd>
+               <a href="http://www.w3.org/2001/XMLSchema#dateTime"
+                  target="_blank"
+                  title="http://www.w3.org/2001/XMLSchema#dateTime">date time</a>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="onTheSpotCheckDate">
+      <h3>On-the-spot check date<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#onTheSpotCheckDate</p>
+      <div class="comment">
+         <span class="markdown">On-the-spot check date
+
+Date of when on-the-spot check was performed.
+
+NOTE 1
+According to Art. 59(4) of R 1306/2013 and Art. 26(1) of R 809/2014 when appropriate agricultural aid and rural development support shall be carried out at the same time.
+
+NOTE 2
+On-the-spot checks should be carried out in the calendar year in which the relevant aid applications and payment claims have been submitted [Preamble (71) of R 809/2014].
+
+NOTE 3
+Where certain eligibility criteria, commitments and other obligations can only be checked during a specific time period, the on-the-spot checks may require additional visits at a later date [Art. 26(4) of R 809/2014].</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has range</dt>
+            <dd>
+               <a href="http://www.w3.org/2001/XMLSchema#dateTime"
+                  target="_blank"
+                  title="http://www.w3.org/2001/XMLSchema#dateTime">date time</a>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="samplingStrategyDescription">
+      <h3>sampling strategy description<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#samplingStrategyDescription</p>
+      <div class="comment">
+         <span class="markdown">Sampling strategy description
+
+Detailed description of the sampling strategy.
+
+NOTE
+When the applied sampling strategy cannot be linked to any source that can be cited, the description has to be provided as property of the stratum.</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has range</dt>
+            <dd>
+               <a href="http://www.w3.org/2001/XMLSchema#string"
+                  target="_blank"
+                  title="http://www.w3.org/2001/XMLSchema#string">string</a>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="subjectOfMultipleVisits">
+      <h3>Sampling strategy type<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#subjectOfMultipleVisits</p>
+      <div class="comment">
+         <span class="markdown">Subject of Multiple Visits
+
+Controlling some elements (especially certain types of EFA or agricultural practices) may require multiple visits; i.e. inspections at different periods of the year.
+
+NOTE
+Multiple visit can be also carried out with CwRS, using multitemporal images of the same scene</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has range</dt>
+            <dd>
+               <a href="http://www.w3.org/2001/XMLSchema#boolean"
+                  target="_blank"
+                  title="http://www.w3.org/2001/XMLSchema#boolean">boolean</a>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="samplingStratumId">
+      <h3>sampling stratum id<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#samplingStratumId</p>
+      <div class="comment">
+         <span class="markdown">Sampling stratum ID
+
+Unique thematic identifier (full national code) of the sampling stratum.</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has range</dt>
+            <dd>
+               <a href="http://www.w3.org/2001/XMLSchema#string"
+                  target="_blank"
+                  title="http://www.w3.org/2001/XMLSchema#string">string</a>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="samplingStratumName">
+      <h3>sampling stratum name<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#samplingStratumName</p>
+      <div class="comment">
+         <span class="markdown">Sampling Stratum Name
+
+Name of the sampling stratum, which can be related to geographic position, control scheme, RS sensor, CwRS zone, etc.
+
+NOTE
+The usage of this property is not mandatory.</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has range</dt>
+            <dd>
+               <a href="http://www.w3.org/2001/XMLSchema#string"
+                  target="_blank"
+                  title="http://www.w3.org/2001/XMLSchema#string">string</a>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="suplementaryControlRate">
+      <h3>suplementary control rate<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#suplementaryControlRate</p>
+      <div class="comment">
+         <span class="markdown">Supplementary control rate
+
+The control rates prescribed by Art. 30 and Art.31 of Regulation (EU) 809/2014 should be increased in two cases:
+
+1. In sense of Art. 31(3) of R (EU) 809/2014 when instances of EFA are not included in LPIS, the control rate for the following green payments have to be increased by 5 % for the following beneficiaries:
+	- beneficiaries required to observe greening practices
+	- beneficiaries observing greening by using national/regional certification schemes
+	- beneficiaries participating in collective implementation
+	- beneficiaries participating in regional implementation
+
+2. In sense of Art. 35 of R(EU) 809/2014  when the OTSC reveal any significant non-compliance in a (part of a) region or a specific aid scheme or support measure.</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has range</dt>
+            <dd>
+               <a href="http://www.w3.org/2001/XMLSchema#integer"
+                  target="_blank"
+                  title="http://www.w3.org/2001/XMLSchema#integer">integer</a>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="reportSent">
+      <h3>Type of the on the spot check<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#reportSent</p>
+      <div class="comment">
+         <span class="markdown">Report sent
+
+Irrespective of the kind of on-the-spot check carried out, the beneficiary should receive a copy of the report if any non-compliance is found [Recital (41) of R (EU) 809/2014].</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has range</dt>
+            <dd>
+               <a href="http://www.w3.org/2001/XMLSchema#dateTime"
+                  target="_blank"
+                  title="http://www.w3.org/2001/XMLSchema#dateTime">date time</a>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="inspectorsMeasurementId">
+      <h3>Unique thematic ID of inspector's survey<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#inspectorsMeasurementId</p>
+      <div class="comment">
+         <span class="markdown">Inspectors Measurement ID
+
+Unique thematic ID of inspectors' measurement within a survey. It is a thematic identifier at national level, generally the full national code of the inspector's measurement within a survey.
+
+NOTE
+Object (real world phenomena) description. It may be the code of object measured.</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has range</dt>
+            <dd>
+               <a href="http://www.w3.org/2001/XMLSchema#string"
+                  target="_blank"
+                  title="http://www.w3.org/2001/XMLSchema#string">string</a>
+            </dd>
+         </dl>
+      </div>
+   </div>
+</div><div id="legend">
+<h2>Legend <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+<div   class="entity">
+<sup class="type-c" title="Classes">c</sup>: Classes <br/>
+<sup class="type-op" title="Object Properties">op</sup>: Object Properties <br/>
+<sup class="type-dp" title="Data Properties">dp</sup>: Data Properties <br/>
+</div>
+</div>
+</div>
+    
+
+<!--REFERENCES SECTION-->
+  <div id="references">
+<h2 id="ref" class="list">References <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+<span class="markdown">
+Add your references here. It is recommended to have them as a list.</span>
+
+</div>
+<div id="acknowledgments">
+<h2 id="ack" class="list">Acknowledgments <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+<p>
+The authors would like to thank <a href="http://www.essepuntato.it/">Silvio Peroni</a> for developing <a href="http://www.essepuntato.it/lode">LODE</a>, a Live OWL Documentation Environment, which is used for representing the Cross Referencing Section of this document and <a href="https://w3id.org/people/dgarijo">Daniel Garijo</a> for developing <a href="https://github.com/dgarijo/Widoco">Widoco</a>, the program used to create the template used in this documentation.</p>
+</div>
+
+
+</div>
+</body>
+</html>

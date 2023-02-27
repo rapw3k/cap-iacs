@@ -1,0 +1,1457 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#"
+     xml:base="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control"
+     xmlns:dc="http://purl.org/dc/elements/1.1/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:foaf="http://xmlns.com/foaf/0.1/"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+     xmlns:terms="http://purl.org/dc/terms/"
+     xmlns:schema="http://schema.org/">
+    <owl:Ontology rdf:about="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control">
+        <owl:versionIRI rdf:resource="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/3.0"/>
+        <owl:imports rdf:resource="http://www.opengis.net/ont/geosparql"/>
+        <owl:imports rdf:resource="https://raw.githubusercontent.com/rapw3k/cap-iacs/main/cap-iacs-base.ttl"/>
+        <terms:creator rdf:nodeID="genid1"/>
+        <terms:description xml:lang="en">Ontology of the integrated control system used in IACS, generated from the transformation of the corresponding JRC application schema</terms:description>
+        <terms:rights xml:lang="en">This ontology is distributed under Creative Commons Attribution 4.0 License - http://creativecommons.org/licenses/by/4.0</terms:rights>
+        <terms:source xml:lang="en">JRC IACS application schema. https://doi.org/10.1016/j.landusepol.2016.05.023</terms:source>
+        <terms:title xml:lang="en">JRC IACS - Integrated Control System Ontology</terms:title>
+        <rdfs:label xml:lang="en">Integrated control system</rdfs:label>
+        <owl:versionInfo>3.0</owl:versionInfo>
+        <skos:definition xml:lang="en">-- Name --
+Integrated control system
+
+-- Definition --
+This package is a placeholder for the Application schema of Integrated control system.
+
+-- Description --
+The contents of an «ApplicationSchema» package exported as a GML Application Schema file.</skos:definition>
+    </owl:Ontology>
+    <rdf:Description rdf:nodeID="genid1">
+        <schema:affiliation>
+            <rdf:Description>
+                <foaf:name>PSNC</foaf:name>
+            </rdf:Description>
+        </schema:affiliation>
+        <rdfs:seeAlso rdf:resource="http://orcid.org/0000-0003-4289-4922"/>
+        <foaf:name>Raul Palma</foaf:name>
+    </rdf:Description>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#administrativeCheckDetailsForApplication -->
+
+
+    <owl:ObjectProperty rdf:about="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#administrativeCheckDetailsForApplication">
+        <rdfs:range rdf:resource="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#Application"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#administrativeCheckDetailsForCrossCheck -->
+
+
+    <owl:ObjectProperty rdf:about="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#administrativeCheckDetailsForCrossCheck">
+        <rdfs:range rdf:resource="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#CrossCheck"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#animalSchemeMeasureConformance -->
+
+
+    <owl:ObjectProperty rdf:about="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#animalSchemeMeasureConformance">
+        <rdfs:range rdf:resource="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-base#ConformanceStatementValue"/>
+        <rdfs:label xml:lang="en">Evidence received from other services, bodies or organisations to verify the compliance with the eligibility commitments</rdfs:label>
+        <skos:definition xml:lang="en">-- Definition --
+Evidence received from other services, bodies or organisations to verify the compliance with the eligibility commitments.
+-- Description --
+In respect of animal aid schemes and animal-related support measures, Member States may, where appropriate, make use of evidence received from other services, bodies or organisations to verify the compliance with the eligibility criteria, commitments and other obligations, provided that the service, body or organisation in question is operating to a standard sufficient to control such compliance.
+NOTE. If conformanceStatementAnimalSchemeMeasure = 1, then nonStructuredEvidenceDocument&lt;&gt;Null and or nonStructuredEvidenceCitation&lt;&gt;Null.</skos:definition>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#conformanceStatement -->
+
+
+    <owl:ObjectProperty rdf:about="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#conformanceStatement">
+        <rdfs:range rdf:resource="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-base#ConformanceStatementValue"/>
+        <rdfs:label xml:lang="en">On the spot check conformance statement</rdfs:label>
+        <skos:definition xml:lang="en">Conformance statement
+
+Verdict based on the outcome of the on-the-spot check whether the rules, eligibility criteria, commitments and other obligations relating to the conditions for the granting of support have been met.
+
+On-the-spot checks shall verify the accuracy of the data declared by the beneficiary against underlying documents. This includes a verification that the payment claims submitted by the beneficiary are supported by accounting or other documents, including, where necessary, a check on the accuracy of the data in the payment claim on the basis of data or commercial documents held by third parties. On-the-spot checks shall verify that the use or intended use of the operation is consistent with the use described in the application for support and for which the support was granted. Except in exceptional circumstances, duly recorded and explained by the competent authorities, on-the-spot checks shall include a visit to the place where the operation is implemented or, if the operation is intangible, to the operation promoter. 
+	
+EXAMPLE.
+Aid application or payment claim shall be rejected if the beneficiary or his representative prevents an on-the-spot check from being carried out, except in cases of force majeure or in exceptional circumstances. In this case (if it is not force majeure or exceptional circumstance)</skos:definition>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#controlRateType -->
+
+
+    <owl:ObjectProperty rdf:about="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#controlRateType">
+        <rdfs:range rdf:resource="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#ControlRateTypeValue"/>
+        <skos:definition xml:lang="en">Control rate type
+
+Control rate types as prescribed by Art. 30, 31, 36(2) and 36(6) of R 809/2014.</skos:definition>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#controlReport -->
+
+
+    <owl:ObjectProperty rdf:about="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#controlReport">
+        <rdfs:range rdf:resource="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-base#SupplementaryDocument"/>
+        <rdfs:label xml:lang="en">Control report document</rdfs:label>
+        <skos:definition xml:lang="en">Control report
+
+Report mandated by Art. 59(3) of R 1306/2013.
+
+Art. 41(1) of R 809/2014 regulates the content of the report for the area based payments:
+	- (a) aid schemes or support measures, the aid applications or payment claims checked;
+	- (b) the persons present;
+	- (c) the agricultural parcels checked, the agricultural parcels measured including, where applicable, the result of the measurements per measured agricultural parcel and the measuring methods used;
+	- (d) where applicable, the results of the measurement of non-agricultural land for which support under rural development measures is being claimed and the measuring methods used;
+	- (e) whether notice of the check was given to the beneficiary and, if so, the period of prior notice;
+	- (f) indications of any specific control measures to be carried out in the context of individual aid schemes or support schemes;
+	- (g) indication of any further control measures carried out;
+	- (h) indication of any non-compliance found that could require cross-notification in view of other aid schemes, support measures and/or cross-compliance;
+	- (i) indication of any non-compliance found that could require follow-up during the following years.
+
+Art.53(1) of R (EU) 809/2014 regulates the content of the report for livestock OTSC:
+	- (a) the measures and applications or payment claims checked;
+	- (b) the persons present;
+	- (c) whether notice was given to the beneficiary of the visit and, if so, the period of prior notice;
+	- (d) the results of the checks and, where applicable, any particular observations;
+	- (e) any further control measures to be carried out [EN 31.7.2014 Official Journal of the European Union L 227/111].
+
+NOTE
+When OTSC is carried out by means of remote sensing Member States are allowed to provide the report only where the check reveals non-compliance [Preamble (41) of R 809/2014] .
+
+Issue
+How this provision complies with Art. 59(3) of R 1306/2013?</skos:definition>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#crossCheckType -->
+
+
+    <owl:ObjectProperty rdf:about="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#crossCheckType">
+        <rdfs:range rdf:resource="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#CrossCheckTypeValue"/>
+        <rdfs:label xml:lang="en">Cross-check type</rdfs:label>
+        <skos:definition xml:lang="en">-- Definition --
+Cross-check type.
+-- Description --
+Cross-check type.</skos:definition>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#detailsOfApplications -->
+
+
+    <owl:ObjectProperty rdf:about="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#detailsOfApplications">
+        <rdfs:range rdf:resource="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#Application"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#detailsOfCrossCheckForOnTheSpotChecks -->
+
+
+    <owl:ObjectProperty rdf:about="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#detailsOfCrossCheckForOnTheSpotChecks">
+        <rdfs:range rdf:resource="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#OnTheSpotCheck"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#detailsOfCrossChecksForAdministrativeCheck -->
+
+
+    <owl:ObjectProperty rdf:about="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#detailsOfCrossChecksForAdministrativeCheck">
+        <rdfs:range rdf:resource="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#AdministrativeCheck"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#detailsOfOtscItems -->
+
+
+    <owl:ObjectProperty rdf:about="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#detailsOfOtscItems">
+        <rdfs:range rdf:resource="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#Application"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#determinedArea -->
+
+
+    <owl:ObjectProperty rdf:about="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#determinedArea">
+        <rdfs:range rdf:resource="http://qudt.org/schema/qudt/QuantityValue"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#determinedEntitlementArea -->
+
+
+    <owl:ObjectProperty rdf:about="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#determinedEntitlementArea">
+        <rdfs:range rdf:resource="http://qudt.org/schema/qudt/QuantityValue"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#eligibilityCriteriaFulfilled -->
+
+
+    <owl:ObjectProperty rdf:about="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#eligibilityCriteriaFulfilled">
+        <rdfs:range rdf:resource="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-base#ConformanceStatementValue"/>
+        <rdfs:label xml:lang="en">Final entitlement area determined after all administrative checks</rdfs:label>
+        <skos:definition xml:lang="en">-- Definition --
+Final entitlement area determined after all administrative checks.
+-- Description --
+If AdministrativeCheck.determinedEntitlementArea&lt;&gt;Application.declaredEntitlementArea Then
+AdministrativeCheck.determinedEntitlementArea = AdministrativeCheck.determinedEntitlementArea Else
+AdministrativeCheck.determinedEntitlementArea = Application.declaredEntitlementArea
+EndIf
+
+NOTE. Mandatory for SPS only. Subject for enabling of entitlements (Area) on all area declared (declaredEntitlementArea &lt;=declaredArea).</skos:definition>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#geometry -->
+
+
+    <owl:ObjectProperty rdf:about="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#geometry">
+        <rdfs:range rdf:resource="http://www.opengis.net/ont/geosparql#Geometry"/>
+        <rdfs:label xml:lang="en">Geometry of survey and or measurement</rdfs:label>
+        <skos:definition xml:lang="en">Geometry
+
+Geometry of survey and or measurement. It is a representation by coordinates of the geographical dimension/position of the farmer&apos;s survey and or measurement (within survey).</skos:definition>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#inspectorsSurveyObjectType -->
+
+
+    <owl:ObjectProperty rdf:about="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#inspectorsSurveyObjectType">
+        <rdfs:range rdf:resource="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#InspectorsSurveyObjectTypeValue"/>
+        <rdfs:label xml:lang="en">Feature type controlled</rdfs:label>
+        <skos:definition xml:lang="en">Inspectors Survey Object Type Value
+
+Types of real world objects observed/measured by inspector.</skos:definition>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#itemDetailsForAdministrativeCheck -->
+
+
+    <owl:ObjectProperty rdf:about="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#itemDetailsForAdministrativeCheck">
+        <rdfs:range rdf:resource="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#AdministrativeCheck"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#itemDetailsForOnTheSpotChecks -->
+
+
+    <owl:ObjectProperty rdf:about="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#itemDetailsForOnTheSpotChecks">
+        <rdfs:range rdf:resource="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#OnTheSpotCheck"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#longTermCommitmentsConformance -->
+
+
+    <owl:ObjectProperty rdf:about="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#longTermCommitmentsConformance">
+        <rdfs:range rdf:resource="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-base#ConformanceStatementValue"/>
+        <rdfs:label xml:lang="en">There is compliance with long-term commitments, where appropriate</rdfs:label>
+        <skos:definition xml:lang="en">-- Definition --
+There is compliance with long-term commitments, where appropriate.
+-- Description --
+The administrative checks referred to in Article 74 of Regulation (EU) No 1306/2013, including cross-checks, shall permit the detection of non-compliances, in particular the automated detection using computerised means. The checks shall cover all elements that are possible and appropriate to control by means of administrative checks. They shall ensure that: there is compliance with long-term commitments, where appropriate.</skos:definition>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#measurementsWithinSurveyDetails -->
+
+
+    <owl:ObjectProperty rdf:about="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#measurementsWithinSurveyDetails">
+        <rdfs:range rdf:resource="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#InspectorsSurvey"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#metadata -->
+
+
+    <owl:ObjectProperty rdf:about="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#metadata">
+        <rdfs:range rdf:resource="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-base#FeatureLevelMetadata"/>
+        <skos:definition xml:lang="en">Metadata
+
+Feature level metadata of the sample.
+
+NOTE 1
+The content of feature level metadata is specified in the Base types application schema.
+
+NOTE 2
+Partial selection of the control sample is possible before the application periods ends. For traceability of such selection, the life cycle information has to be updated at each partial selection.
+
+Update: FeatureLevelMetadata.beginLifespanVersion AND FeatureLevelMetadata.endLifespanVersion</skos:definition>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#noDoubleFinancing -->
+
+
+    <owl:ObjectProperty rdf:about="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#noDoubleFinancing">
+        <rdfs:range rdf:resource="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-base#ConformanceStatementValue"/>
+        <rdfs:label xml:lang="en">There is no double financing through other Union schemes</rdfs:label>
+        <skos:definition xml:lang="en">-- Definition --
+There is no double financing through other Union schemes.
+-- Description --
+The administrative checks referred to in Article 74 of Regulation (EU) No 1306/2013, including cross-checks, shall permit the detection of non-compliances, in particular the automated detection using computerised means. The checks shall cover all elements that are possible and appropriate to control by means of administrative checks. They shall ensure that: there is no double financing through other Union schemes.</skos:definition>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#nonStructuredEvidenceCitation -->
+
+
+    <owl:ObjectProperty rdf:about="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#nonStructuredEvidenceCitation">
+        <rdfs:range rdf:resource="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-base#SupplementaryDocumentCitation"/>
+        <rdfs:label xml:lang="en">Non-structured evidence - citation</rdfs:label>
+        <skos:definition xml:lang="en">-- Definition --
+Any citation that supports the administrative check.
+-- Description --
+In respect of animal aid schemes and animal-related support measures, Member States may, where appropriate, make use of evidence received from other services, bodies or organisations to verify the compliance with the eligibility criteria, commitments and other obligations, provided that the service, body or organisation in question is operating to a standard sufficient to control such compliance.
+NOTE. If the aid application or payment claim is complete and submitted within the relevant time-limit and, where applicable, the supporting documents (that prove eligibility) must be submitted.</skos:definition>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#nonStructuredEvidenceDocument -->
+
+
+    <owl:ObjectProperty rdf:about="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#nonStructuredEvidenceDocument">
+        <rdfs:range rdf:resource="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-base#SupplementaryDocument"/>
+        <rdfs:label xml:lang="en">Non-structured evidence - document</rdfs:label>
+        <skos:definition xml:lang="en">-- Definition --
+Any document that supports the administrative check.
+-- Description --
+In respect of animal aid schemes and animal-related support measures, Member States may, where appropriate, make use of evidence received from other services, bodies or organisations to verify the compliance with the eligibility criteria, commitments and other obligations, provided that the service, body or organisation in question is operating to a standard sufficient to control such compliance.
+NOTE. If the aid application or payment claim is complete and submitted within the relevant time-limit and, where applicable, the supporting documents (that prove eligibility) must be submitted.</skos:definition>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#observedPerimeter -->
+
+
+    <owl:ObjectProperty rdf:about="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#observedPerimeter">
+        <rdfs:range rdf:resource="http://qudt.org/schema/qudt/QuantityValue"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#onTheSpotCheckDetailsForCrossCheck -->
+
+
+    <owl:ObjectProperty rdf:about="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#onTheSpotCheckDetailsForCrossCheck">
+        <rdfs:range rdf:resource="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#CrossCheck"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#onTheSpotCheckDetailsForInspectors -->
+
+
+    <owl:ObjectProperty rdf:about="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#onTheSpotCheckDetailsForInspectors">
+        <rdfs:range rdf:resource="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#InspectorsSurvey"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#otscItemDetailsForReconversion -->
+
+
+    <owl:ObjectProperty rdf:about="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#otscItemDetailsForReconversion">
+        <rdfs:range rdf:resource="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#ReconvertingObligation"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#otscItemDetailsWithinTheSample -->
+
+
+    <owl:ObjectProperty rdf:about="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#otscItemDetailsWithinTheSample">
+        <rdfs:range rdf:resource="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#OtscItem"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#otscReport -->
+
+
+    <owl:ObjectProperty rdf:about="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#otscReport">
+        <rdfs:range rdf:resource="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-base#SupplementaryDocument"/>
+        <skos:definition xml:lang="en">OTSC report
+
+According to Art. 24(3) of R 809/2014 the results of the [...OTSC] shall be assessed to establish whether any problems encountered could in general entail a risk for other similar operations, beneficiaries or other bodies. The assessment shall also identify the causes of such situations, any further examination which may be required and necessary corrective and preventive actions. This analysis is an important input for risk analysis of the next campaign year.</skos:definition>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#otscSampleDetailsforStratum -->
+
+
+    <owl:ObjectProperty rdf:about="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#otscSampleDetailsforStratum">
+        <rdfs:range rdf:resource="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#SamplingStratum"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#otscSamplingPlan -->
+
+
+    <owl:ObjectProperty rdf:about="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#otscSamplingPlan">
+        <rdfs:range rdf:resource="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-base#SupplementaryDocument"/>
+        <skos:definition xml:lang="en">OTSC sampling plan
+
+Art.(72)(2) of R (EU) 1306/2013 requires the MS to draw up a sampling plan of agricultural holdings and/or beneficiaries for the purpose of OTSC.</skos:definition>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#paymentClaimCompletnessStatement -->
+
+
+    <owl:ObjectProperty rdf:about="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#paymentClaimCompletnessStatement">
+        <rdfs:range rdf:resource="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-base#ConformanceStatementValue"/>
+        <rdfs:label xml:lang="en">The aid application or payment claim is complete</rdfs:label>
+        <skos:definition xml:lang="en">-- Definition --
+The aid application or payment claim is complete.
+-- Description --
+The administrative checks referred to in Article 74 of Regulation (EU) No 1306/2013, including cross-checks, shall permit the detection of non-compliances, in particular the automated detection using computerised means. The checks shall cover all elements that are possible and appropriate to control by means of administrative checks. They shall ensure that: the aid application or payment claim is complete and submitted within the relevant time-limit and, where applicable, that supporting documents have been submitted and that they prove eligibility.</skos:definition>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#riskType -->
+
+
+    <owl:ObjectProperty rdf:about="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#riskType">
+        <rdfs:range rdf:resource="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#RiskTypeValue"/>
+        <skos:definition xml:lang="en">Risk type
+
+Type of the risk established by the competent authority for which the application has been selected for on-the-spot check.
+
+The competent authority should establish the risk factors targeting the areas where the risk of errors is the highest. To ensure relevant and efficient risk analysis, the effectiveness of the risk criteria should be assessed and updated on an annual basis taking into account the relevance of each risk criterion, comparing the results of randomly and risk-based selected samples, the specific situation in the Member States and the nature of the non-compliance (Preamble (30) of R (EU) No 809/2014)
+
+NOTE
+According to Art. 34(6) of Regulation (EU) No 809/2014 the competent authority shall keep records of the reasons for the selection of each beneficiary for an on-the-spot check. The inspector carrying out the on-the-spot check shall be informed accordingly prior to the commencement of the on-the-spot check.</skos:definition>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#sampleDetailsForOtscItem -->
+
+
+    <owl:ObjectProperty rdf:about="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#sampleDetailsForOtscItem">
+        <rdfs:range rdf:resource="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#OtscSample"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#samplingStrategyCitation -->
+
+
+    <owl:ObjectProperty rdf:about="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#samplingStrategyCitation">
+        <rdfs:range rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+        <skos:definition xml:lang="en">Sampling strategy citation
+
+Reference to the description of a well-established sampling strategy/method.
+
+NOTE
+Citation can be void, when detailed description of the method is documented as property of the stratum.</skos:definition>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#samplingStrategyType -->
+
+
+    <owl:ObjectProperty rdf:about="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#samplingStrategyType">
+        <rdfs:range rdf:resource="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#SamplingStrategyTypeValue"/>
+        <skos:definition xml:lang="en">Sampling Strategy Type
+
+Random or risk based selection in sense of Preamble (68) and Art. 34(5) of R 809/2014.
+
+Some possible narrower values are listed in the SamplingStrategyTypeValue code list. Specifying narrower categories of risk based and random sampling is justified to provide input for the OTSC report and risk analysis in the next campaign year.</skos:definition>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#surveyDetailsForMeasurements -->
+
+
+    <owl:ObjectProperty rdf:about="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#surveyDetailsForMeasurements">
+        <rdfs:range rdf:resource="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#InspectorsSurvey"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#surveyMethodType -->
+
+
+    <owl:ObjectProperty rdf:about="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#surveyMethodType">
+        <rdfs:range rdf:resource="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#SurveyMethodValue"/>
+        <rdfs:label xml:lang="en">Type of survey</rdfs:label>
+        <skos:definition xml:lang="en">Survey method type
+
+List of survey types in sense of Art. 74(3) of R 1306/2013.
+Member States may use remote sensing and field measurements comprising Global Navigation Satellite System (GNSS) techniques as a means of carrying out on-the-spot checks on agricultural parcels.</skos:definition>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#determinedArea -->
+
+
+    <owl:DatatypeProperty rdf:about="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#determinedArea"/>
+    
+
+
+    <!-- http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#determinedEntitlementArea -->
+
+
+    <owl:DatatypeProperty rdf:about="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#determinedEntitlementArea"/>
+    
+
+
+    <!-- http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#estimatedAccuracy -->
+
+
+    <owl:DatatypeProperty rdf:about="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#estimatedAccuracy">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+        <rdfs:label xml:lang="en">Estimated absolute positional accuracy </rdfs:label>
+        <skos:definition xml:lang="en">Estimated Positional Accuracy
+
+Estimated absolute positional accuracy of the object measured in the used coordinate reference system. Absolute positional accuracy is the mean value of the positional uncertainties for a set of positions, where the positional uncertainties are the distance between a measured position and what is considered as the corresponding true position. This mean value may come from quality measures on a homogeneous population of objects measured or from an estimation based on the knowledge of the production processes and of their accuracy.</skos:definition>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#inspectorsMeasurementId -->
+
+
+    <owl:DatatypeProperty rdf:about="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#inspectorsMeasurementId">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label xml:lang="en">Unique thematic ID of inspector&apos;s survey</rdfs:label>
+        <skos:definition xml:lang="en">Inspectors Measurement ID
+
+Unique thematic ID of inspectors&apos; measurement within a survey. It is a thematic identifier at national level, generally the full national code of the inspector&apos;s measurement within a survey.
+
+NOTE
+Object (real world phenomena) description. It may be the code of object measured.</skos:definition>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#maximumRiskBasedSampleSize -->
+
+
+    <owl:DatatypeProperty rdf:about="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#maximumRiskBasedSampleSize">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+        <skos:definition xml:lang="en">Maximum risk based sample size
+
+Theoretical maximum population of the sample size selected on risk basis.
+
+NOTE 1
+This property has to be recorded for green payments only. The risk based population should stay between the indicated minimum and maximum.
+
+NOTE 2
+The maximum population of the risk based size of a sample has to be calculated as product of the control rate and the associated risk based part.
+
+EXAMPLE:
+For green payments the maximum risk based part is 80 % out of the 5% control population; i.e. 4% all together.</skos:definition>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#minimumRiskBasedSampleSize -->
+
+
+    <owl:DatatypeProperty rdf:about="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#minimumRiskBasedSampleSize">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+        <skos:definition xml:lang="en">Minimum risk based sample size
+
+Theoretical minimum population of the sample size selected on risk basis.
+
+NOTE 1
+This property has to be recorded for green payments only. The risk based population should stay between the indicated minimum and maximum.
+
+NOTE 2
+The minimum population of the risk based size of a sample has to be calculated as product of the control rate and the associated risk based part.
+
+EXAMPLE:
+For green payments the minimum risk based part is 75 % out of the 5% control population; i.e. 3,75% all together.</skos:definition>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#minimumSampleSize -->
+
+
+    <owl:DatatypeProperty rdf:about="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#minimumSampleSize">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+        <skos:definition xml:lang="en">Minimum sample size
+
+Population belonging to the sample selected according to the control rate.
+
+NOTE
+While the control rate is given in%, the minimum sample size indicates the minimal number of items in the sample. In case of systematic sampling the correctness of the minimum sample size has to be verified at the final deadline for applications.</skos:definition>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#observedPerimeter -->
+
+
+    <owl:DatatypeProperty rdf:about="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#observedPerimeter"/>
+    
+
+
+    <!-- http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#onTheSpotCheckAnnouncementDate -->
+
+
+    <owl:DatatypeProperty rdf:about="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#onTheSpotCheckAnnouncementDate">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+        <rdfs:label xml:lang="en">On-the-spot check announcement date</rdfs:label>
+        <skos:definition xml:lang="en">On-the-spot check announcement date.
+
+Date of when on-the-spot check was announced.
+
+NOTE 1
+Important timing: not more than 14 days (area related support schemes) and 48 hours for (animal-aid) [Art. 25 of R 809/2014].
+
+NOTE 2
+Where the competent authority has [...] given notice to the beneficiary of its intention to carry out an on-the-spot check amendments in applications shall not be authorised [Art. 15(3) of R 809/2014].</skos:definition>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#onTheSpotCheckDate -->
+
+
+    <owl:DatatypeProperty rdf:about="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#onTheSpotCheckDate">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+        <rdfs:label xml:lang="en">On-the-spot check date</rdfs:label>
+        <skos:definition xml:lang="en">On-the-spot check date
+
+Date of when on-the-spot check was performed.
+
+NOTE 1
+According to Art. 59(4) of R 1306/2013 and Art. 26(1) of R 809/2014 when appropriate agricultural aid and rural development support shall be carried out at the same time.
+
+NOTE 2
+On-the-spot checks should be carried out in the calendar year in which the relevant aid applications and payment claims have been submitted [Preamble (71) of R 809/2014].
+
+NOTE 3
+Where certain eligibility criteria, commitments and other obligations can only be checked during a specific time period, the on-the-spot checks may require additional visits at a later date [Art. 26(4) of R 809/2014].</skos:definition>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#reportSent -->
+
+
+    <owl:DatatypeProperty rdf:about="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#reportSent">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+        <rdfs:label xml:lang="en">Type of the on the spot check</rdfs:label>
+        <skos:definition xml:lang="en">Report sent
+
+Irrespective of the kind of on-the-spot check carried out, the beneficiary should receive a copy of the report if any non-compliance is found [Recital (41) of R (EU) 809/2014].</skos:definition>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#samplingStrategyDescription -->
+
+
+    <owl:DatatypeProperty rdf:about="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#samplingStrategyDescription">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <skos:definition xml:lang="en">Sampling strategy description
+
+Detailed description of the sampling strategy.
+
+NOTE
+When the applied sampling strategy cannot be linked to any source that can be cited, the description has to be provided as property of the stratum.</skos:definition>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#samplingStratumId -->
+
+
+    <owl:DatatypeProperty rdf:about="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#samplingStratumId">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <skos:definition xml:lang="en">Sampling stratum ID
+
+Unique thematic identifier (full national code) of the sampling stratum.</skos:definition>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#samplingStratumName -->
+
+
+    <owl:DatatypeProperty rdf:about="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#samplingStratumName">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <skos:definition xml:lang="en">Sampling Stratum Name
+
+Name of the sampling stratum, which can be related to geographic position, control scheme, RS sensor, CwRS zone, etc.
+
+NOTE
+The usage of this property is not mandatory.</skos:definition>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#subjectOfMultipleVisits -->
+
+
+    <owl:DatatypeProperty rdf:about="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#subjectOfMultipleVisits">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+        <rdfs:label xml:lang="en">Sampling strategy type</rdfs:label>
+        <skos:definition xml:lang="en">Subject of Multiple Visits
+
+Controlling some elements (especially certain types of EFA or agricultural practices) may require multiple visits; i.e. inspections at different periods of the year.
+
+NOTE
+Multiple visit can be also carried out with CwRS, using multitemporal images of the same scene</skos:definition>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#suplementaryControlRate -->
+
+
+    <owl:DatatypeProperty rdf:about="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#suplementaryControlRate">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+        <skos:definition xml:lang="en">Supplementary control rate
+
+The control rates prescribed by Art. 30 and Art.31 of Regulation (EU) 809/2014 should be increased in two cases:
+
+1. In sense of Art. 31(3) of R (EU) 809/2014 when instances of EFA are not included in LPIS, the control rate for the following green payments have to be increased by 5 % for the following beneficiaries:
+	- beneficiaries required to observe greening practices
+	- beneficiaries observing greening by using national/regional certification schemes
+	- beneficiaries participating in collective implementation
+	- beneficiaries participating in regional implementation
+
+2. In sense of Art. 35 of R(EU) 809/2014  when the OTSC reveal any significant non-compliance in a (part of a) region or a specific aid scheme or support measure.</skos:definition>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#Application -->
+
+
+    <owl:Class rdf:about="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#Application"/>
+    
+
+
+    <!-- http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#ReconvertingObligation -->
+
+
+    <owl:Class rdf:about="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-aid#ReconvertingObligation"/>
+    
+
+
+    <!-- http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#AdministrativeCheck -->
+
+
+    <owl:Class rdf:about="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#AdministrativeCheck">
+        <rdfs:subClassOf rdf:resource="http://www.opengis.net/ont/geosparql#Feature"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#administrativeCheckDetailsForCrossCheck"/>
+                <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#administrativeCheckDetailsForApplication"/>
+                <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#determinedArea"/>
+                <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#eligibilityCriteriaFulfilled"/>
+                <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#noDoubleFinancing"/>
+                <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#paymentClaimCompletnessStatement"/>
+                <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#animalSchemeMeasureConformance"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#longTermCommitmentsConformance"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label xml:lang="en">AdministrativeCheck</rdfs:label>
+        <skos:definition xml:lang="en">-- Definition --
+Administrative check.
+-- Description --
+Administrative check of application. All applications are subject to administrative check.
+
+
+Examples of administrative checks:
+	- Advisory services, farm management and farm relief services [Art.(55) of R 8069/2014]
+	- Quality schemes for agricultural products, and foodstuffs [Art.(56) of R 8069/2014]
+	- Farm and business development [Art.(57) of R 8069/2014]
+
+NOTE
+To simplify the cross-compliance on-the-spot checks and to make better use of existing control capacities, it is possible, when the effectiveness of the checks is at least equal to that achieved when the on-the-spot checks are to be carried out, to replace checks at farm level by administrative checks [Preamble (750) R 809/2014].</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#ControlRateGroupAnimalAidSchemaValue -->
+
+
+    <owl:Class rdf:about="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#ControlRateGroupAnimalAidSchemaValue">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <rdfs:label xml:lang="en">List of control rate groups for animal aid schemas</rdfs:label>
+        <skos:definition xml:lang="en">Control Rate Group Animal Aid Scheme Value
+
+List of control rate groups for animal aid schemas.
+
+NOTE
+Currently placeholder only.</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#ControlRateGroupRuralDevelopmentMeasureValue -->
+
+
+    <owl:Class rdf:about="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#ControlRateGroupRuralDevelopmentMeasureValue">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <rdfs:label xml:lang="en">List of control rate groups for rural development measures</rdfs:label>
+        <skos:definition xml:lang="en">Control Rate Group Rural Development Measure Value
+
+List of control rate groups for rural development measures.
+
+NOTE. Currently placeholder only.</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#ControlRateTypeValue -->
+
+
+    <owl:Class rdf:about="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#ControlRateTypeValue">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <rdfs:label xml:lang="en">List of control rate groups for greening</rdfs:label>
+        <skos:definition xml:lang="en">Control rate type value
+
+List of applicable control rate values as prescribed by Art. 30, 31, 36(2) and 36(6) of R 809/2014.
+
+NOTE
+This code list currently does not contain values for rural development measures (Art. 32) and animal aid schemes (Art. 33 of R 809/2014).</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#CrossCheck -->
+
+
+    <owl:Class rdf:about="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#CrossCheck">
+        <rdfs:subClassOf rdf:resource="http://www.opengis.net/ont/geosparql#Feature"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#conformanceStatement"/>
+                <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#crossCheckType"/>
+                <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#detailsOfCrossChecksForAdministrativeCheck"/>
+                <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#determinedArea"/>
+                <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#determinedEntitlementArea"/>
+                <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label xml:lang="en">Cross-checks</rdfs:label>
+        <skos:definition xml:lang="en">-- Definition --
+Cross-checks.
+-- Description --
+Where appropriate, the administrative checks shall include cross-checks.</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#CrossCheckTypeValue -->
+
+
+    <owl:Class rdf:about="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#CrossCheckTypeValue">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <rdfs:label xml:lang="en">List of on the cross-check types</rdfs:label>
+        <skos:definition xml:lang="en">-- Definition --
+List of cross-check types.
+-- Description --
+List of cross-check types.</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#InspectorsSurvey -->
+
+
+    <owl:Class rdf:about="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#InspectorsSurvey">
+        <rdfs:subClassOf rdf:resource="http://www.opengis.net/ont/geosparql#Feature"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#surveyDetailsForMeasurements"/>
+                <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#geometry"/>
+                <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#inspectorsSurveyObjectType"/>
+                <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#measurementsWithinSurveyDetails"/>
+                <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#surveyMethodType"/>
+                <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#observedPerimeter"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#inspectorsMeasurementId"/>
+                <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#estimatedAccuracy"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label xml:lang="en">Surveys of the inspectors</rdfs:label>
+        <skos:definition xml:lang="en">Inspectors Survey
+
+Feature type that stores the properties of inspectors&apos; survey (observations and measurements.)</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#InspectorsSurveyObjectTypeValue -->
+
+
+    <owl:Class rdf:about="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#InspectorsSurveyObjectTypeValue">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <rdfs:label xml:lang="en">List of feature types</rdfs:label>
+        <skos:definition xml:lang="en">Inspectors survey type value
+
+List of possible real objects measured by an inspector.
+
+NOTE
+List may be extended or subtracted depending on how MS organizing on-the-spot check process.</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#OnTheSpotCheck -->
+
+
+    <owl:Class rdf:about="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#OnTheSpotCheck">
+        <rdfs:subClassOf rdf:resource="http://www.opengis.net/ont/geosparql#Feature"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#conformanceStatement"/>
+                <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#controlReport"/>
+                <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#onTheSpotCheckDetailsForCrossCheck"/>
+                <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#onTheSpotCheckDate"/>
+                <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#onTheSpotCheckAnnouncementDate"/>
+                <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#reportSent"/>
+                <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label xml:lang="en">On-the-spot check</rdfs:label>
+        <skos:definition xml:lang="en">On-the-spot check
+
+Checks organised by a MS/Region supplementing the systematic administrative checks [Art. 59(1) of R 1306/2013].
+
+NOTE 1
+Member States shall organise on-the-spot checks on approved operations using an appropriate sampling basis. Those checks shall, to the extent possible, be carried out before the final payment is made for an operation. 
+
+NOTE 2
+The inspectors undertaking the on-the-spot check shall not have been involved in administrative checks of the same operation.
+
+NOTE 3
+This feature type does not describe the on-the-spot check carried out by the Commission</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#OnTheSpotCheckTypeValue -->
+
+
+    <owl:Class rdf:about="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#OnTheSpotCheckTypeValue">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <rdfs:label xml:lang="en">List of on the spot check types</rdfs:label>
+        <skos:definition xml:lang="en">On-the-spot check type value
+
+List of on the spot check types. that describe the purpose of the control.</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#OtscItem -->
+
+
+    <owl:Class rdf:about="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#OtscItem">
+        <rdfs:subClassOf rdf:resource="http://www.opengis.net/ont/geosparql#Feature"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#itemDetailsForOnTheSpotChecks"/>
+                <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#sampleDetailsForOtscItem"/>
+                <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#detailsOfOtscItems"/>
+                <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#itemDetailsForAdministrativeCheck"/>
+                <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#otscItemDetailsForReconversion"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#subjectOfMultipleVisits"/>
+                <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label xml:lang="en">Sample</rdfs:label>
+        <skos:definition xml:lang="en">OTSC item
+
+Application sampled for on-the-spot check of one or more support or payment scheme.
+
+NOTE
+Applications or applicants found not to be admissible or not eligible for payment at the time of submission or after administrative checks shall not form part of the control population [Art. 34(1) of R (EU) 809/2014].</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#OtscSample -->
+
+
+    <owl:Class rdf:about="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#OtscSample">
+        <rdfs:subClassOf rdf:resource="http://www.opengis.net/ont/geosparql#Feature"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#otscItemDetailsWithinTheSample"/>
+                <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#otscSampleDetailsforStratum"/>
+                <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#controlRateType"/>
+                <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#metadata"/>
+                <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#otscReport"/>
+                <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#otscSamplingPlan"/>
+                <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#minimumSampleSize"/>
+                <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#maximumRiskBasedSampleSize"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#minimumRiskBasedSampleSize"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <skos:definition xml:lang="en">OTSC sample
+
+Sample from the entire population of applicants drawn by the authority responsible for the on-the-spot checks [Art. 59 (2) of R 1306/2013].
+
+NOTE 1
+In respect of certain rural development measures the on-the-spot check should cover also non-agricultural land. 
+
+NOTE 2
+In the interests of facilitating the implementation of the integrated system, it should be permitted to limit the actual measurement of the agricultural parcels to a random sample of 50 % of the agricultural parcels declared [Preamble 38 of R 809/2014].</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#RiskTypeValue -->
+
+
+    <owl:Class rdf:about="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#RiskTypeValue">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:definition xml:lang="en">Risk type value
+
+Preamble (33) of R (EU) 809/2014 requires that the competent authority should establish the risk factors targeting the areas where the risk of errors is the highest.
+
+NOTE
+Risk criteria should be assessed and updated on an annual basis taking into account the relevance of each risk criterion, comparing the results of randomly and risk-based selected samples, the specific situation in the Member States and the nature of the non-compliance.</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#SampleTypeValue -->
+
+
+    <owl:Class rdf:about="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#SampleTypeValue">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:definition xml:lang="en">Sample Type value
+
+The sample type property shall be attributed to each sampled item (application). One item can be sampled to one or more payment/support schemes. 
+
+NOTE
+The categories of sample type values have to support the traceability of the sampling cascade. This is the reason for distinguishing the initial and the top-up samples for BPS/SAPS.</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#SamplingStrategyTypeValue -->
+
+
+    <owl:Class rdf:about="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#SamplingStrategyTypeValue">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <rdfs:label xml:lang="en">List of sampling strategy types</rdfs:label>
+        <skos:definition xml:lang="en">Sampling Strategy Type Value
+
+List of sampling strategy types.
+
+In accordance with Preamble (34) of R 809/2014 sampling should comprise a random part in order to obtain a representative error rate and a risk based part for the following Payment/support schemes:
+	- greening payment
+	- animal aid schemes
+	- rural development measure
+
+NOTE 1
+To ensure a relevant and efficient risk analysis, the effectiveness of the risk analysis should be assessed and updated on an annual basis taking into account the relevance of each risk factor, comparing the results of randomly and risk-based selected samples and the specific situation [Preamble (68) and Art. 34(5) of R 809/2014].
+
+NOTE 2
+The sampling method should be selected and documented by the competent authority of the MS/Region. The values of the code list can be extended.
+
+NOTE 3
+The exemplary values of the code list in this application schema are taken from DSCG/2014/32 guideline and best statistical practices.</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#SamplingStratum -->
+
+
+    <owl:Class rdf:about="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#SamplingStratum">
+        <rdfs:subClassOf rdf:resource="http://www.opengis.net/ont/geosparql#Feature"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#detailsOfApplications"/>
+                <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#samplingStrategyType"/>
+                <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#metadata"/>
+                <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#samplingStrategyCitation"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#samplingStrategyType"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">2</owl:maxCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#samplingStratumId"/>
+                <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#samplingStrategyDescription"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#samplingStratumName"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#suplementaryControlRate"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">2</owl:maxCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <skos:definition xml:lang="en">Sampling stratum
+
+The control sample in respect of the on-the-spot checks of the area-related aid schemes should be made on the basis of a stratified sampling method in order to keep the administrative burden in proportion and the number of beneficiaries to be checked on-the-spot to a reasonable level [Preamble (30) of R  (EU) No 809/2014].
+
+NOTE 1
+Sampling stratum can be applied both to random and risk based sampling.
+
+NOTE 2
+Control zones for CwRS can be regarded as strata (data clusters) based on geographic location. Such zones can be selected randomly or based on risk analysis.
+
+NOTE 3
+A sample may consist of one (unique) or more stratum.</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#SurveyMethodValue -->
+
+
+    <owl:Class rdf:about="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#SurveyMethodValue">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <rdfs:label xml:lang="en">List of survey types</rdfs:label>
+        <skos:definition xml:lang="en">Survey method value
+
+List of survey method types in sense of Art. 74(3) of R 1306/2013.</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotations
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    <rdf:Description rdf:about="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#determinedArea">
+        <rdfs:label xml:lang="en">Final area determined after all administrative checks</rdfs:label>
+        <skos:definition xml:lang="en">-- Definition --
+Final area determined after all administrative checks.
+-- Description --
+If AdministrativeCheck.determinedArea&lt;&gt;Application.declaredArea Then
+AdministrativeCheck.determinedArea = AdministrativeCheck.determinedArea Else
+AdministrativeCheck.determinedArea = Application.declaredArea
+EndIf</skos:definition>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#determinedEntitlementArea">
+        <rdfs:label xml:lang="en">Entitlements determined</rdfs:label>
+        <skos:definition xml:lang="en">-- Definition --
+Entitlement area determined.
+-- Description --
+Alphanumerical value. Mandatory for SPS only. Subject for enabling of entitlements (Area) on all area declared.</skos:definition>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#observedPerimeter">
+        <rdfs:label xml:lang="en">Perimeter observed after on-the-spot check</rdfs:label>
+        <skos:definition xml:lang="en">Observed perimeter
+
+Perimeter observed as results from the on-the-spot check measurement.
+
+NOTE
+Area perimeter calculated based on the coordinates of the boundary points. Polygon (GM_Surface) perimeter (may be used for tolerance calculation).</skos:definition>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 5.1.18) https://github.com/owlcs/owlapi/ -->
+
+

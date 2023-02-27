@@ -25,8 +25,8 @@ mapPreds = {
     "abstract": DCT.abstract
 }
 
-widoco_jar = "/opt/widoco/widoco-1.4.15-jar-with-dependencies.jar"
-ont_file = "glosis_main"
+widoco_jar = "/Users/sam/Downloads/java-11-widoco-1.4.17-jar-with-dependencies.jar"
+ont_file = "cap-iacs-main"
 templ_file = "template.json"
 
 creators = []

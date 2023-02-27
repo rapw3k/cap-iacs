@@ -1,0 +1,58 @@
+{
+  "_comment" : "Created with OWL2VOWL (version 0.3.5), http://vowl.visualdataweb.org",
+  "header" : {
+    "languages" : [ "en", "undefined" ],
+    "baseIris" : [ "http://www.w3.org/1999/02/22-rdf-syntax-ns", "http://www.w3.org/2000/01/rdf-schema", "http://www.w3.org/2001/XMLSchema" ],
+    "title" : {
+      "en" : "JRC IACS - Farmer Advisory System Ontology"
+    },
+    "iri" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-fas",
+    "version" : "2.0",
+    "author" : [ "_:genid2147483649" ],
+    "description" : {
+      "en" : "Ontology of the farmer advisory system used in IACS, generated from the transformation of the corresponding JRC application schema"
+    },
+    "labels" : {
+      "en" : "Farmer advisory system"
+    },
+    "other" : {
+      "creator" : [ {
+        "identifier" : "creator",
+        "language" : "undefined",
+        "value" : "_:genid2147483649",
+        "type" : "label"
+      } ],
+      "rights" : [ {
+        "identifier" : "rights",
+        "language" : "en",
+        "value" : "This ontology is distributed under Creative Commons Attribution 4.0 License - http://creativecommons.org/licenses/by/4.0",
+        "type" : "label"
+      } ],
+      "definition" : [ {
+        "identifier" : "definition",
+        "language" : "en",
+        "value" : "-- Name --\r\nFarmer advisory system\r\n\r\n-- Definition --\r\nThis is a placeholder.\r\n\r\n-- Description --\r\nThe contents of an «ApplicationSchema» package exported as a GML Application Schema file.",
+        "type" : "label"
+      } ],
+      "source" : [ {
+        "identifier" : "source",
+        "language" : "en",
+        "value" : "JRC IACS application schema. https://doi.org/10.1016/j.landusepol.2016.05.023",
+        "type" : "label"
+      } ],
+      "versionInfo" : [ {
+        "identifier" : "versionInfo",
+        "language" : "undefined",
+        "value" : "2.0",
+        "type" : "label"
+      } ],
+      "title" : [ {
+        "identifier" : "title",
+        "language" : "en",
+        "value" : "JRC IACS - Farmer Advisory System Ontology",
+        "type" : "label"
+      } ]
+    }
+  },
+  "namespace" : [ ]
+}
