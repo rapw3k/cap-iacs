@@ -1,67 +1,36 @@
-WiDoco auto-config
-==================
-
-This folder contains the assets necessary to generate the documentation of the
-various ontology modules. Ultimatelly, the documentation is created by WiDoco,
-but some pre-processing is necessary to transform the ontology meta-data into
-WiDoco input config files.
-
-This auto-config programme is necessary since WiDoco is not yet able to deal
-with meta-data vocabularies (VCard, Doublin Core, Schema.org). [An issue](https://github.com/dgarijo/Widoco/issues/285) 
-is currently open on this matter. Once that issue is closed this programme might no
-longer be necessary. 
-
-config
-------
-
-The auto-config programme needs to be awere of the location of the WiDoco `.jar`
-file. This information is set up in the `config` file, an input to the programme.
-This file also stores the location of the WiDoco template, stored in a separate
-file for convinience (`template.json`, see below). 
-
-Before running the programme edit the `config` file, inserting the right path to the
-WiDoco `.jar` in your system. 
+# cap-iacs
+This cap-iacs (Common Agriculture Policy - Integrated Administration and Control System) ontology network was derived semi-automatically
+from the [JRC IACS application schema](https://doi.org/10.1016/j.landusepol.2016.05.023). In particular, the ontology was generated based on the 
+[UML model](https://lpis.jrc.ec.europa.eu/CAP_IACS/index.htm), which was pre-processed and transformed into a Web ontology network using [UML model](https://shapechange.net/transformations/), 
+with a series of rules. The ontology generated was also post-processed to adjust some classes and properties. 
 
 
-template.json
--------------
+## Ontology modules
+* [Main](https://rapw3k.github.io/cap-iacs/cap-iacs-main/index-en.html)
+* [Farmer Advisory System](https://rapw3k.github.io/cap-iacs/cap-fas/index-en.html)
+* [Aid](https://rapw3k.github.io/cap-iacs/cap-iacs-aid/index-en.html)
+* [Aid codelist](https://rapw3k.github.io/cap-iacs/cap-iacs-aid_codes/index-en.html)
+* [System for identification and registration of animals](https://rapw3k.github.io/cap-iacs/cap-iacs-animal/index-en.html)
+* [Base](https://rapw3k.github.io/cap-iacs/cap-iacs-base/index-en.html)
+* [Base Codelist](https://rapw3k.github.io/cap-iacs/cap-iacs-base_codes/index-en.html)
+* [Beneficiery](https://rapw3k.github.io/cap-iacs/cap-iacs-beneficiery/index-en.html)
+* [Beneficiery Codelist](https://rapw3k.github.io/cap-iacs/cap-iacs-beneficiery_codes/index-en.html)
+* [Control](https://rapw3k.github.io/cap-iacs/cap-iacs-control/index-en.html)
+* [Control Codelists](https://rapw3k.github.io/cap-iacs/cap-iacs-control_codes/index-en.html)
+* [Entitlement](https://rapw3k.github.io/cap-iacs/cap-iacs-entitlement/index-en.html)
+* [Entitlement Codelist](https://rapw3k.github.io/cap-iacs/cap-iacs-entitlement_codes/index-en.html)
+* [Agricultural Parcels](https://rapw3k.github.io/cap-iacs/cap-iacs-entitlement_codes/index-en.html)
+* [Agricultural Parcels-Extension](https://rapw3k.github.io/cap-iacs/cap-iacs-parcel/index-en.html)
+* [Agricultural Parcels-Codelist](https://rapw3k.github.io/cap-iacs/cap-iacs-parcel_codes/index-en.html)
 
-Contains a dictionary with various WiDoco options that compose the input config
-file. All the values in this dictionary are replaced with meta-data obtained from the
-ontology file itself, except the following:
-- status
-- licenseURI
-- licenseName
-- licenseIconURL
 
-Updated these items directly in the `template.json` file if you wish to modify them.
+Shield: [![CC BY 4.0][cc-by-shield]][cc-by]
 
-requirements.txt
-----------------
+This work is licensed under a
+[Creative Commons Attribution 4.0 International License][cc-by].
 
-The auto-config programme depends on a few Python libraries enumerated in the
-`requirements.txt` file. A virtual environment is a simple and convinient method
-to set up these libraries:
+[![CC BY 4.0][cc-by-image]][cc-by]
 
-```
-python3 -m venv env
-
-source ./env/bin/activate
-
-pip3 install -r requirements.txt
-```
-
-generateDoc.py
---------------
-
-Creates a config file for an ontology module and runs WiDoco. The HTML outputs
-are stored in a folder with the same name of the ontology module.
-
-The programme takes as single input the name of a module, e.g. `glosis_main`. It
-then opens the corresponding Turtle file in the parent folder As an example to
-create the documentation for the `glosis_common` module:
-
-```
-python3 generateDoc.py glosis_main
-```
-
+[cc-by]: http://creativecommons.org/licenses/by/4.0/
+[cc-by-image]: https://i.creativecommons.org/l/by/4.0/88x31.png
+[cc-by-shield]: https://img.shields.io/badge/License-CC%20BY%204.0-lightgrey.svg
