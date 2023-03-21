@@ -8,9 +8,9 @@
 <!-- SCHEMA.ORG METADATA -->
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"TechArticle","url":"http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control","image":"http://vowl.visualdataweb.org/webvowl/#iri=http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control","name":"JRC IACS - Integrated Control System Ontology", "headline":"This ontology is one of the modules comprising CAP-IACS (Common Agriculture Policy - Integrated Administration and Control System) ontology. The CAP-IACS ontology was developed part of the Open-IACS project, which aims to provide an open platform for the exchange of solutions in the field of Integrated Agricultural Control System (IACS) through the paradigm of connected open data. The ontology has been derived from the derived from the JRC IACS application schema.", "datePublished":"Date of release", "version":"3.0", "license":"https://creativecommons.org/licenses/by/4.0/", "author":[{"@type":"Person","name":"Raul Palma","url":"http://orcid.org/0000-0003-4289-4922"}]}</script>
 
-<script src="resources/jquery.js"></script> 
-<script src="resources/marked.min.js"></script> 
-    <script> 
+<script src="resources/jquery.js"></script>
+<script src="resources/marked.min.js"></script>
+    <script>
 function loadHash() {
   jQuery(".markdown").each(function(el){jQuery(this).after(marked(jQuery(this).text())).remove()});
 	var hash = location.hash;
@@ -40,15 +40,15 @@ function loadTOC(){
 		}
 	  });
 	  t+='</ul>';
-	  $("#toc").html(t); 
+	  $("#toc").html(t);
 }
 $(function(){
     loadHash();
 }); $.fn.ignore = function(sel){
         return this.clone().find(sel||">*").remove().end();
- }; 
-   </script> 
-  </head> 
+ };
+   </script>
+  </head>
 
 <body>
 <div class="container">
@@ -85,17 +85,41 @@ $(function(){
 </div>     <div id="abstract"><h2>Abstract</h2><span class="markdown">
 This ontology is one of the modules comprising CAP-IACS (Common Agriculture Policy - Integrated Administration and Control System) ontology. The CAP-IACS ontology was developed part of the Open-IACS project, which aims to provide an open platform for the exchange of solutions in the field of Integrated Agricultural Control System (IACS) through the paradigm of connected open data. The ontology has been derived from the derived from the JRC IACS application schema.</span>
 </div>
-<div id="toc"></div> 
+<div id="toc"></div>
 
 <!--INTRODUCTION SECTION-->
     <div id="introduction"><h2 id="intro" class="list">Introduction <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
 <span class="markdown">
-This is a place holder text for the introduction. The introduction should briefly describe the ontology, its motivation, state of the art and goals.</span>
+  This CAP-IACS (Common Agriculture Policy - Integrated Administration and Control System) ontology network was derived semi-automatically from the JRC IACS application schema. In particular, the ontology was generated based on the UML model, which was pre-processed and transformed into a Web ontology network using UML model, with a series of rules. The ontology generated was also post-processed to adjust some classes and properties.
+
+  This module is one of the 16 core modules in the CAP-IACS  ontology:
+     <ul>
+        - Main<br>
+        - Farmer Advisory System<br>
+        - Aid<br>
+        - Aid codelist<br>
+        - System for identification and registration of animals<br>
+        - Base<br>
+        - Base Codelist<br>
+        - Beneficierye<br>
+        - Beneficiery Codelist<br>
+        - Control<br>
+        - Control Codelists<br>
+        - Entitlement <br>
+        - Entitlement Codelist <br>
+        - Agricultural Parcels <br>
+        - Agricultural Parcels-Extension <br>
+        - Agricultural Parcels-Codelist <br>
+
+     </ul>
+
+  This module is an ontology of the integrated control system used in IACS, generated from the transformation of the corresponding JRC application schema
+</span>
 </div>
-  
+
 
 <!--OVERVIEW SECTION-->
-    <div id="overview"><h2 id="overv" class="list">CAP-IACS Ontology: Main module: Overview <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+    <div id="overview"><h2 id="overv" class="list">CAP-IACS Ontology: Integrated Control System Module: Overview <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
 <span class="markdown">
 This ontology has the following classes and properties.</span>
 <h4>Classes</h4>
@@ -452,21 +476,21 @@ This ontology has the following classes and properties.</span>
       <a href="#inspectorsMeasurementId"
          title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control#inspectorsMeasurementId">Unique thematic ID of inspector's survey</a>
    </li>
-</ul><iframe align="center" width="100%" height ="500px" src="webvowl/index.html"></iframe> 
+</ul><iframe align="center" width="100%" height ="500px" src="webvowl/index.html"></iframe>
 </div>
-  
+
 
 <!--DESCRIPTION SECTION-->
-    <div id="description"><h2 id="desc" class="list">CAP-IACS Ontology: Main module: Description <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+    <div id="description"><h2 id="desc" class="list">CAP-IACS Ontology: Integrated Control System Module: Description <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
 <span class="markdown">
-This is a placeholder text for the description of your ontology. The description should include an explanation and a diagram explaining how the classes are related, examples of usage, etc.</span>
+This module is an ontology of the integrated control system used in IACS, generated from the transformation of the corresponding JRC application schema</span>
 
 </div>
-   
+
 
 <!--CROSSREF SECTION-->
-   <div id="crossref"><h2 id="crossreference" class="list">Cross-reference for CAP-IACS Ontology: Main module classes, object properties and data properties <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
-This section provides details for each class and property defined by CAP-IACS Ontology: Main module.
+   <div id="crossref"><h2 id="crossreference" class="list">Cross-reference for CAP-IACS Ontology: Integrated Control System Module classes, object properties and data properties <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+This section provides details for each class and property defined by CAP-IACS Ontology: Integrated Control System Module.
 <div xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="classes">
    <h3 id="classes-headline" class="list">Classes</h3>
    <ul class="hlist">
@@ -853,7 +877,7 @@ List of survey method types in sense of Art. 74(3) of R 1306/2013.</span>
 Checks organised by a MS/Region supplementing the systematic administrative checks [Art. 59(1) of R 1306/2013].
 
 NOTE 1
-Member States shall organise on-the-spot checks on approved operations using an appropriate sampling basis. Those checks shall, to the extent possible, be carried out before the final payment is made for an operation. 
+Member States shall organise on-the-spot checks on approved operations using an appropriate sampling basis. Those checks shall, to the extent possible, be carried out before the final payment is made for an operation.
 
 NOTE 2
 The inspectors undertaking the on-the-spot check shall not have been involved in administrative checks of the same operation.
@@ -891,7 +915,7 @@ This feature type does not describe the on-the-spot check carried out by the Com
 Sample from the entire population of applicants drawn by the authority responsible for the on-the-spot checks [Art. 59 (2) of R 1306/2013].
 
 NOTE 1
-In respect of certain rural development measures the on-the-spot check should cover also non-agricultural land. 
+In respect of certain rural development measures the on-the-spot check should cover also non-agricultural land.
 
 NOTE 2
 In the interests of facilitating the implementation of the integrated system, it should be permitted to limit the actual measurement of the agricultural parcels to a random sample of 50 % of the agricultural parcels declared [Preamble 38 of R 809/2014].</span>
@@ -981,7 +1005,7 @@ Applications or applicants found not to be admissible or not eligible for paymen
       <div class="comment">
          <span class="markdown">Sample Type value
 
-The sample type property shall be attributed to each sampled item (application). One item can be sampled to one or more payment/support schemes. 
+The sample type property shall be attributed to each sampled item (application). One item can be sampled to one or more payment/support schemes.
 
 NOTE
 The categories of sample type values have to support the traceability of the sampling cascade. This is the reason for distinguishing the initial and the top-up samples for BPS/SAPS.</span>
@@ -1766,8 +1790,8 @@ NOTE. If the aid application or payment claim is complete and submitted within t
 
 Verdict based on the outcome of the on-the-spot check whether the rules, eligibility criteria, commitments and other obligations relating to the conditions for the granting of support have been met.
 
-On-the-spot checks shall verify the accuracy of the data declared by the beneficiary against underlying documents. This includes a verification that the payment claims submitted by the beneficiary are supported by accounting or other documents, including, where necessary, a check on the accuracy of the data in the payment claim on the basis of data or commercial documents held by third parties. On-the-spot checks shall verify that the use or intended use of the operation is consistent with the use described in the application for support and for which the support was granted. Except in exceptional circumstances, duly recorded and explained by the competent authorities, on-the-spot checks shall include a visit to the place where the operation is implemented or, if the operation is intangible, to the operation promoter. 
-	
+On-the-spot checks shall verify the accuracy of the data declared by the beneficiary against underlying documents. This includes a verification that the payment claims submitted by the beneficiary are supported by accounting or other documents, including, where necessary, a check on the accuracy of the data in the payment claim on the basis of data or commercial documents held by third parties. On-the-spot checks shall verify that the use or intended use of the operation is consistent with the use described in the application for support and for which the support was granted. Except in exceptional circumstances, duly recorded and explained by the competent authorities, on-the-spot checks shall include a visit to the place where the operation is implemented or, if the operation is intangible, to the operation promoter.
+
 EXAMPLE.
 Aid application or payment claim shall be rejected if the beneficiary or his representative prevents an on-the-spot check from being carried out, except in cases of force majeure or in exceptional circumstances. In this case (if it is not force majeure or exceptional circumstance)</span>
       </div>
@@ -2584,13 +2608,13 @@ Object (real world phenomena) description. It may be the code of object measured
 </div>
 </div>
 </div>
-    
 
-<!--REFERENCES SECTION-->
+
+<!--REFERENCES SECTION
   <div id="references">
 <h2 id="ref" class="list">References <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
 <span class="markdown">
-Add your references here. It is recommended to have them as a list.</span>
+Add your references here. It is recommended to have them as a list.</span>-->
 
 </div>
 <div id="acknowledgments">

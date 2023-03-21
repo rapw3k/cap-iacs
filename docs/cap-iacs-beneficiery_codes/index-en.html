@@ -8,9 +8,9 @@
 <!-- SCHEMA.ORG METADATA -->
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"TechArticle","url":"http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-beneficiery/code","image":"http://vowl.visualdataweb.org/webvowl/#iri=http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-beneficiery/code","name":"JRC IACS - System to Record the Identity of Each Beneficiary Code Lists", "headline":"This ontology is one of the modules comprising CAP-IACS (Common Agriculture Policy - Integrated Administration and Control System) ontology. The CAP-IACS ontology was developed part of the Open-IACS project, which aims to provide an open platform for the exchange of solutions in the field of Integrated Agricultural Control System (IACS) through the paradigm of connected open data. The ontology has been derived from the derived from the JRC IACS application schema.", "datePublished":"Date of release", "version":"3.0", "license":"https://creativecommons.org/licenses/by/4.0/", "author":[{"@type":"Person","name":"Raul Palma","url":"http://orcid.org/0000-0003-4289-4922"}]}</script>
 
-<script src="resources/jquery.js"></script> 
-<script src="resources/marked.min.js"></script> 
-    <script> 
+<script src="resources/jquery.js"></script>
+<script src="resources/marked.min.js"></script>
+    <script>
 function loadHash() {
   jQuery(".markdown").each(function(el){jQuery(this).after(marked(jQuery(this).text())).remove()});
 	var hash = location.hash;
@@ -40,15 +40,15 @@ function loadTOC(){
 		}
 	  });
 	  t+='</ul>';
-	  $("#toc").html(t); 
+	  $("#toc").html(t);
 }
 $(function(){
     loadHash();
 }); $.fn.ignore = function(sel){
         return this.clone().find(sel||">*").remove().end();
- }; 
-   </script> 
-  </head> 
+ };
+   </script>
+  </head>
 
 <body>
 <div class="container">
@@ -82,17 +82,41 @@ $(function(){
 </div>     <div id="abstract"><h2>Abstract</h2><span class="markdown">
 This ontology is one of the modules comprising CAP-IACS (Common Agriculture Policy - Integrated Administration and Control System) ontology. The CAP-IACS ontology was developed part of the Open-IACS project, which aims to provide an open platform for the exchange of solutions in the field of Integrated Agricultural Control System (IACS) through the paradigm of connected open data. The ontology has been derived from the derived from the JRC IACS application schema.</span>
 </div>
-<div id="toc"></div> 
+<div id="toc"></div>
 
 <!--INTRODUCTION SECTION-->
     <div id="introduction"><h2 id="intro" class="list">Introduction <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
 <span class="markdown">
-This is a place holder text for the introduction. The introduction should briefly describe the ontology, its motivation, state of the art and goals.</span>
+  This CAP-IACS (Common Agriculture Policy - Integrated Administration and Control System) ontology network was derived semi-automatically from the JRC IACS application schema. In particular, the ontology was generated based on the UML model, which was pre-processed and transformed into a Web ontology network using UML model, with a series of rules. The ontology generated was also post-processed to adjust some classes and properties.
+
+  This module is one of the 16 core modules in the CAP-IACS  ontology:
+     <ul>
+        - Main<br>
+        - Farmer Advisory System<br>
+        - Aid<br>
+        - Aid codelist<br>
+        - System for identification and registration of animals<br>
+        - Base<br>
+        - Base Codelist<br>
+        - Beneficierye<br>
+        - Beneficiery Codelist<br>
+        - Control<br>
+        - Control Codelists<br>
+        - Entitlement <br>
+        - Entitlement Codelist <br>
+        - Agricultural Parcels <br>
+        - Agricultural Parcels-Extension <br>
+        - Agricultural Parcels-Codelist <br>
+
+     </ul>
+
+  This is a codelist Ontology of the system to record the identity of each beneficiary code lists used in IACS, generated from the transformation of the corresponding JRC application schema
+</span>
 </div>
-  
+
 
 <!--OVERVIEW SECTION-->
-    <div id="overview"><h2 id="overv" class="list">CAP-IACS Ontology: Main module: Overview <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+    <div id="overview"><h2 id="overv" class="list">CAP-IACS Ontology: Beneficiery Codelist Module: Overview <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
 <span class="markdown">
 This ontology has the following classes and properties.</span>
 <h4>Named Individuals</h4><ul xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" class="hlist">
@@ -116,21 +140,21 @@ This ontology has the following classes and properties.</span>
       <a href="#FarmerTypeValue"
          title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-beneficiery/code#FarmerTypeValue">List of farmer type values</a>
    </li>
-</ul><iframe align="center" width="100%" height ="500px" src="webvowl/index.html"></iframe> 
+</ul><iframe align="center" width="100%" height ="500px" src="webvowl/index.html"></iframe>
 </div>
-  
+
 
 <!--DESCRIPTION SECTION-->
-    <div id="description"><h2 id="desc" class="list">CAP-IACS Ontology: Main module: Description <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+    <div id="description"><h2 id="desc" class="list">CAP-IACS Ontology: Beneficiery Codelist Module: Description <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
 <span class="markdown">
-This is a placeholder text for the description of your ontology. The description should include an explanation and a diagram explaining how the classes are related, examples of usage, etc.</span>
+This is a codelist Ontology of the system to record the identity of each beneficiary code lists used in IACS, generated from the transformation of the corresponding JRC application schema</span>
 
 </div>
-   
+
 
 <!--CROSSREF SECTION-->
-   <div id="crossref"><h2 id="crossreference" class="list">Cross-reference for CAP-IACS Ontology: Main module classes, object properties and data properties <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
-This section provides details for each class and property defined by CAP-IACS Ontology: Main module.
+   <div id="crossref"><h2 id="crossreference" class="list">Cross-reference for CAP-IACS Ontology: Beneficiery Codelist Module classes, object properties and data properties <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+This section provides details for each class and property defined by CAP-IACS Ontology: Beneficiery Codelist Module.
 <div xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="namedindividuals">
    <h3 id="namedindividuals" class="list">Named Individuals</h3>
    <ul class="hlist">
@@ -283,13 +307,13 @@ List of possible farmer type values based on Actor model (Dynamic Model).</span>
 </div>
 </div>
 </div>
-    
 
-<!--REFERENCES SECTION-->
+
+<!--REFERENCES SECTION
   <div id="references">
 <h2 id="ref" class="list">References <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
 <span class="markdown">
-Add your references here. It is recommended to have them as a list.</span>
+Add your references here. It is recommended to have them as a list.</span>-->
 
 </div>
 <div id="acknowledgments">

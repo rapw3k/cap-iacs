@@ -8,9 +8,9 @@
 <!-- SCHEMA.ORG METADATA -->
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"TechArticle","url":"http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-parcel/code","image":"http://vowl.visualdataweb.org/webvowl/#iri=http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-parcel/code","name":"JRC IACS - Identification System for Agricultural Parcels Code Lists", "headline":"This ontology is one of the modules comprising CAP-IACS (Common Agriculture Policy - Integrated Administration and Control System) ontology. The CAP-IACS ontology was developed part of the Open-IACS project, which aims to provide an open platform for the exchange of solutions in the field of Integrated Agricultural Control System (IACS) through the paradigm of connected open data. The ontology has been derived from the derived from the JRC IACS application schema.", "datePublished":"Date of release", "version":"3.0", "license":"https://creativecommons.org/licenses/by/4.0/", "author":[{"@type":"Person","name":"Raul Palma","url":"http://orcid.org/0000-0003-4289-4922"}]}</script>
 
-<script src="resources/jquery.js"></script> 
-<script src="resources/marked.min.js"></script> 
-    <script> 
+<script src="resources/jquery.js"></script>
+<script src="resources/marked.min.js"></script>
+    <script>
 function loadHash() {
   jQuery(".markdown").each(function(el){jQuery(this).after(marked(jQuery(this).text())).remove()});
 	var hash = location.hash;
@@ -40,15 +40,15 @@ function loadTOC(){
 		}
 	  });
 	  t+='</ul>';
-	  $("#toc").html(t); 
+	  $("#toc").html(t);
 }
 $(function(){
     loadHash();
 }); $.fn.ignore = function(sel){
         return this.clone().find(sel||">*").remove().end();
- }; 
-   </script> 
-  </head> 
+ };
+   </script>
+  </head>
 
 <body>
 <div class="container">
@@ -68,7 +68,7 @@ $(function(){
 
 <dt>Download serialization:</dt><dd><span><a href="ontology.jsonld" target="_blank"><img src="https://img.shields.io/badge/Format-JSON_LD-blue.svg" alt="JSON-LD" /></a> </span><span><a href="ontology.rdf" target="_blank"><img src="https://img.shields.io/badge/Format-RDF/XML-blue.svg" alt="RDF/XML" /></a> </span><span><a href="ontology.nt" target="_blank"><img src="https://img.shields.io/badge/Format-N_Triples-blue.svg" alt="N-Triples" /></a> </span><span><a href="ontology.ttl" target="_blank"><img src="https://img.shields.io/badge/Format-TTL-blue.svg" alt="TTL" /></a> </span></dd><dt>License:</dt><dd><a href="https://creativecommons.org/licenses/by/4.0/" target="_blank"><img src="https://img.shields.io/badge/License-CC_BY_4.0-blue.svg" alt="https://creativecommons.org/licenses/by/4.0/" /></a>
 <a href="https://creativecommons.org/licenses/by/4.0/" rel="license" target="_blank">
-<img src="https://en.wikipedia.org/wiki/Creative_Commons_license#/media/File:CC_BY_icon.svg" style="border-width:0" alt="License" />
+<img src="https://en.wikipedia.org/wiki/Creative_Commons_license#/media/File:CC_BY_icon.svg.png" style="border-width:0" alt="License" />
 </a>
 <br/></dd><dt>Visualization:</dt><dd><a href="webvowl/index.html#" target="_blank"><img src="https://img.shields.io/badge/Visualize_with-WebVowl-blue.svg" alt="Visualize with WebVowl" /></a></dd>
 <!-- <dt>Evaluation:</dt><dd><a href="OOPSEvaluation/oopsEval.html#" target="_blank"><img src="https://img.shields.io/badge/Evaluate_with-OOPS! (OntOlogy Pitfall Scanner!)-blue.svg" alt="Evaluate with OOPS!" /></a></dd> --></dl>
@@ -82,17 +82,41 @@ $(function(){
 </div>     <div id="abstract"><h2>Abstract</h2><span class="markdown">
 This ontology is one of the modules comprising CAP-IACS (Common Agriculture Policy - Integrated Administration and Control System) ontology. The CAP-IACS ontology was developed part of the Open-IACS project, which aims to provide an open platform for the exchange of solutions in the field of Integrated Agricultural Control System (IACS) through the paradigm of connected open data. The ontology has been derived from the derived from the JRC IACS application schema.</span>
 </div>
-<div id="toc"></div> 
+<div id="toc"></div>
 
 <!--INTRODUCTION SECTION-->
     <div id="introduction"><h2 id="intro" class="list">Introduction <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
 <span class="markdown">
-This is a place holder text for the introduction. The introduction should briefly describe the ontology, its motivation, state of the art and goals.</span>
+  This CAP-IACS (Common Agriculture Policy - Integrated Administration and Control System) ontology network was derived semi-automatically from the JRC IACS application schema. In particular, the ontology was generated based on the UML model, which was pre-processed and transformed into a Web ontology network using UML model, with a series of rules. The ontology generated was also post-processed to adjust some classes and properties.
+
+  This module is one of the 16 core modules in the CAP-IACS  ontology:
+     <ul>
+        - Main<br>
+        - Farmer Advisory System<br>
+        - Aid<br>
+        - Aid codelist<br>
+        - System for identification and registration of animals<br>
+        - Base<br>
+        - Base Codelist<br>
+        - Beneficierye<br>
+        - Beneficiery Codelist<br>
+        - Control<br>
+        - Control Codelists<br>
+        - Entitlement <br>
+        - Entitlement Codelist <br>
+        - Agricultural Parcels <br>
+        - Agricultural Parcels-Extension <br>
+        - Agricultural Parcels-Codelist <br>
+
+     </ul>
+
+In particular, this code list contains all the named individuals of the agricultural parcels.
+   </span>
 </div>
-  
+
 
 <!--OVERVIEW SECTION-->
-    <div id="overview"><h2 id="overv" class="list">CAP-IACS Ontology: Main module: Overview <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+    <div id="overview"><h2 id="overv" class="list">CAP-IACS Ontology: Agricultural Parcels Codelist Module: Overview <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
 <span class="markdown">
 This ontology has the following classes and properties.</span>
 <h4>Named Individuals</h4><ul xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" class="hlist">
@@ -824,21 +848,21 @@ This ontology has the following classes and properties.</span>
       <a href="#TestTypeMtsValue/valueType"
          title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-parcel/code#TestTypeMtsValue/valueType">Value type</a>
    </li>
-</ul><iframe align="center" width="100%" height ="500px" src="webvowl/index.html"></iframe> 
+</ul><iframe align="center" width="100%" height ="500px" src="webvowl/index.html"></iframe>
 </div>
-  
+
 
 <!--DESCRIPTION SECTION-->
-    <div id="description"><h2 id="desc" class="list">CAP-IACS Ontology: Main module: Description <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+    <div id="description"><h2 id="desc" class="list">CAP-IACS Ontology: Agricultural Parcels Codelist Module: Description <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
 <span class="markdown">
-This is a placeholder text for the description of your ontology. The description should include an explanation and a diagram explaining how the classes are related, examples of usage, etc.</span>
+This code list contains all the named individuals of the agricultural parcels. This codelist Ontology acts as an identification system for agricultural parcels code lists used in IACS, generated from the transformation of the corresponding JRC application schema.</span>
 
 </div>
-   
+
 
 <!--CROSSREF SECTION-->
-   <div id="crossref"><h2 id="crossreference" class="list">Cross-reference for CAP-IACS Ontology: Main module classes, object properties and data properties <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
-This section provides details for each class and property defined by CAP-IACS Ontology: Main module.
+   <div id="crossref"><h2 id="crossreference" class="list">Cross-reference for CAP-IACS Ontology: Agricultural Parcels Codelist Module classes, object properties and data properties <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+This section provides details for each class and property defined by CAP-IACS Ontology: Agricultural Parcels Codelist Module.
 <div xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="namedindividuals">
    <h3 id="namedindividuals" class="list">Named Individuals</h3>
    <ul class="hlist">
@@ -1914,7 +1938,7 @@ Land cultivated for crop production or areas available for crop production but l
 Area conformance
 
 --Definition --
-Conformance statement based on the value of relative area correctness. 
+Conformance statement based on the value of relative area correctness.
 
 -- Description --
 The conformance thresholds are area dependent:
@@ -2025,7 +2049,7 @@ Areas with catch crops or green cover established by the planting and germinatio
 
 Areas under catch crops or green cover shall include:
 - areas established pursuant to the requirements under SMR 1;
-- other areas  on the condition that they were established by sowing a mixture of crop species or by under-sowing grass in the main crop. 
+- other areas  on the condition that they were established by sowing a mixture of crop species or by under-sowing grass in the main crop.
 
 NOTE: MS shall establish set up specific rules, including the list of mixtures of crop species to be used and the period for the sowing  and may establish additional conditions notably with regard to production methods. The period to be set by Member States shall not extend after 1 October.</span>
       </div>
@@ -2332,7 +2356,7 @@ Combined CAPI and filed survey
 Combined method of inspection using CAPI and field survey.
 
 -- Description --
-The default inspection method is CAPI. In case when the measurement of the item is not feasible, or unambiguous classification of land cover is not possible, field visit shall be performed. Therefore there are three options: 
+The default inspection method is CAPI. In case when the measurement of the item is not feasible, or unambiguous classification of land cover is not possible, field visit shall be performed. Therefore there are three options:
 1. Combined CAPI supported by land cover detection and area measurement in the field,
 2. Combined CAPI supported by land cover detection only in the field,
 3. Combined CAPI supported by area measurement only in the field.
@@ -2391,7 +2415,7 @@ Item contamination conformance
 Conformance statement on the value of contaminations.
 
 -- Description --
-The item is conforming when t is contamination free, or the contaminations found are waivered. 
+The item is conforming when t is contamination free, or the contaminations found are waivered.
 
 Measure identifier: I_CCON
 Name: Item contamination conformance
@@ -2653,7 +2677,7 @@ Data quality Measure value structure
 Structure used for presenting multiple values of DQ results.
 
 --Description--
-A result may consist of multiple values. In such cases, the result shall be structured using the value structure as given in C.3.3 of ISO 19157:2013. 
+A result may consist of multiple values. In such cases, the result shall be structured using the value structure as given in C.3.3 of ISO 19157:2013.
 
 EXAMPLE: The results for misclassification shall be given as a matrix.</span>
       </div>
@@ -2767,7 +2791,7 @@ Data quality measure types applicable to the EFA inspection sample
 This is a placeholder only; currently not to be implemented.
 
 -- Description --
-Data quality measure type list for EFA sample. 
+Data quality measure type list for EFA sample.
 NOTE. Full description of each value must be provided in DQM_Measure.</span>
       </div>
       <dl class="description">
@@ -2854,7 +2878,7 @@ Encoding
 Encoding applicable for data exchange within LPISQA.
 
 -- Description --
-The xml/gml schema should follow the standard specified by DG JRC. 
+The xml/gml schema should follow the standard specified by DG JRC.
 
 NOTE. This is a capability test case.</span>
       </div>
@@ -2907,16 +2931,16 @@ This is the unified code list of all DQM applied at item and sample level.</span
 Extended code list
 
 -- Definition --
-Semantic analysis of the  extended elements of the code lists managed by the authorities of the MS /regions.  
+Semantic analysis of the  extended elements of the code lists managed by the authorities of the MS /regions.
 
 --Description --
-A semantic comparison of the extended code list values have to establish the relation between the extended values and the values included in the LCM. 
+A semantic comparison of the extended code list values have to establish the relation between the extended values and the values included in the LCM.
 When "narrower" extensions are allowed the new values can restrict the semantic meaning of a value within the same code list of the LCM. The mapping between the original and extended value shall be provided.
 When "any" extension is allowed that extended values must avoid semantic clashes with the values already defined in the LCM .
 
 NOTE 1. When "any" extension is allowed, "narrower" code list elements can be introduced too.
 
-NOTE 2. When notification about the extension to the Commission applies, consistency between the schema and the notification shall be preserved. 
+NOTE 2. When notification about the extension to the Commission applies, consistency between the schema and the notification shall be preserved.
 
 NOTE 3. This is a capability test case.</span>
       </div>
@@ -2974,7 +2998,7 @@ Feature type completeness
 Completeness of the eligibility profile  in terms of feature types as compared to the LCM.
 
 -- Description --
-All feature type included in the LCM shall be present in the eligibility profile. No one to one relationship  between the corresponding feature types is required. However, rules for schema mapping shall be unambiguous. 
+All feature type included in the LCM shall be present in the eligibility profile. No one to one relationship  between the corresponding feature types is required. However, rules for schema mapping shall be unambiguous.
 
 NOTE 1. As best practice, EC services recommend the following solutions:
 - one to one mapping between the feature types of the eligibility profile and the LCM
@@ -3068,7 +3092,7 @@ Value Structure: n.a.</span>
 Force majeure
 
 -- Definition --
-Failure to inspect the item of inspection due to force majeure circumstances observed on the item of inspection. 
+Failure to inspect the item of inspection due to force majeure circumstances observed on the item of inspection.
 
 -- Description --
 EXAMPLES of force majeure: flood,  snow cover, fires, landslides, other natural hazards.
@@ -3171,7 +3195,7 @@ NOTE. If the rate of eligibility drops below 50%, a careful analysis of the stan
          <strong>IRI:</strong> http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-parcel/code#ProRataCategoryValue/grassland90</p>
       <div class="comment">
          <span class="markdown">--Name--
-Grassland 90 percent 
+Grassland 90 percent
 
 -- Definition --
 Grassland with 90 percent eligibility.
@@ -3468,7 +3492,7 @@ The completeness of data is not full because of missing items (attributes, value
 Invalid common RP boundary
 
 -- Definition --
-Location of common boundaries that cannot be derived from surrounding land cover / land use elements. [Wikicap] 
+Location of common boundaries that cannot be derived from surrounding land cover / land use elements. [Wikicap]
 
 -- Description --
 NOTE:  This types is applicable for physical and topographic block systems only.</span>
@@ -3608,7 +3632,7 @@ Classification Correctness DQM value
 Data quality measure describing the correctness of classification of the feature type.
 
 -- Description --
-The classification shall be performed according to the types defined in the eligibility profile. This DQM is applicable for evaluating the classification correctness of agricultural land(s) and the landscape feature(s) present in the item under inspection.  
+The classification shall be performed according to the types defined in the eligibility profile. This DQM is applicable for evaluating the classification correctness of agricultural land(s) and the landscape feature(s) present in the item under inspection.
 
 NOTE: This is a new quality measure from ETS v 6.0 on.</span>
       </div>
@@ -4267,7 +4291,7 @@ Landscape feature, group of trees, where trees are connected by overlapping crow
 Group of trees
 
 -- Definition --
-Group of trees in the agricultural area that is traditionally part of good agriculture cropping or utilization practices 
+Group of trees in the agricultural area that is traditionally part of good agriculture cropping or utilization practices
 
 -- Description --
 Group of trees may become an EFA element where trees are connected by overlapping crown cover, and field copses of maximum 0.3 ha in both cases. [Art. 45(3)(d) of (EU) R No 639/2014].</span>
@@ -4507,7 +4531,7 @@ NOTE 2: When this type of LF is protected under GAEC 7, SMR 3, MS may specify ot
 Trees in line
 
 -- Definition --
-Trees in line in the agricultural area that are traditionally part of good agriculture cropping or utilization practices 
+Trees in line in the agricultural area that are traditionally part of good agriculture cropping or utilization practices
 
 -- Description --
 They may become an EFA element when the crown diameter is minimum 4 meters. The space between the crowns shall not exceed 5 meters. [Art. 45(3)(c) of (EU) R No  639/2014].
@@ -4609,9 +4633,9 @@ NOTE 1:  According to DSCG/2014/33  arableLand, permanentCrop and permanetGrassl
 
 NOTE 2:  sensitivePermanetGrassland type to be protected under greening  is required by Art.5(2)(d) of Regulation (EU) No 640/2014.
 
-NOTE 3: This code list can be extended with narrower categories replacing the listed broader code list values. 
+NOTE 3: This code list can be extended with narrower categories replacing the listed broader code list values.
 
- 
+
 
 NOTE 4: For the purposes of ETS MS/Region may use the same code list applied in IACS, or a generalised one. For the purposes of ETS the generalised code list is sufficient.
 When detailed  (crop level) agricultural area types are used, in course of MTS the mapping to the general categories listed in the LCM has to be given.
@@ -5058,7 +5082,7 @@ NOTE. Previously named: 10201 LPIS_RP_MEA</span>
 LPIS area underestimates
 
 -- Definition --
-One-sided probability boundary of the rate if the eligible hectares that indicate underestimation found in respect to the total number of eligible hectares currently recorded in the LPIS . 
+One-sided probability boundary of the rate if the eligible hectares that indicate underestimation found in respect to the total number of eligible hectares currently recorded in the LPIS .
 
 -- Description --
 Technical definition: Upper Interval Boundary
@@ -5153,7 +5177,7 @@ Misclassification matrix
 Misclassification matrix comparing the assignment of LC types registered in LPIS to the LC types observed in course of inspection.
 
 -- Description --
-All land cover types (both agricultural land and landscape feature) enter in the evaluation process. 
+All land cover types (both agricultural land and landscape feature) enter in the evaluation process.
 
 Measure identifier: L_MCM
 Name: LPIS misclassification matrix
@@ -5361,7 +5385,7 @@ Number of currencies of a property (attribute or association).
 
 -- Description --
 Number of occurrences shall be exactly those that is specified in the LCM;
-- 0: no value appears for the property 
+- 0: no value appears for the property
 - 1: only one value can be provided
 -1..*: one or more value may be provided
 
@@ -5493,8 +5517,8 @@ Number of large area non-conformities
 Number of non-conforming inspected items (N2) with area &gt;0,1 ha within the ETS sample.
 
 -- Description --
-Count of items with itemConformance (area)=FALSE value. 
-  
+Count of items with itemConformance (area)=FALSE value.
+
 Measure identifier: L_NANC_B
 Name: Number of area non-conforming items
 Alias: Item area non conformity number
@@ -5528,7 +5552,7 @@ Number of area non-conformities
 Number of area non-conforming inspected items (N1) within the ETS sample.
 
 -- Description --
-Count of items with itemConformance (area)=FALSE value.  
+Count of items with itemConformance (area)=FALSE value.
 
 Measure identifier: L_NANC_A
 Name: Number of area non-conforming items
@@ -5834,7 +5858,7 @@ Conformance statement on the item under inspection.
 
 -- Description --
 The item under inspection is conforming when no associated feature type is misclassified, it is contamination free or the contaminations found are waivered, and it is conforming in terms of area. The values of classificationCorrectness, waivered and areaConformance shall be true.
-NOTE: since the conformance in term of critical defect is evaluated separately, the scope of this measure does not contain critical defects. 
+NOTE: since the conformance in term of critical defect is evaluated separately, the scope of this measure does not contain critical defects.
 
 Measure identifier: I_CON
 Name: Item conformance
@@ -6004,7 +6028,7 @@ Permanent grassland and permanent pasture (together referred to as "permanent gr
 Permanent grassland under established  local practices
 
 -- Definition --
-Permanent grassland under established local practices as referred to in Art.4(1)(h) of R (EU) No 1307/2013. 
+Permanent grassland under established local practices as referred to in Art.4(1)(h) of R (EU) No 1307/2013.
 
 -- Description --
 Land which can be grazed and which forms part of established local practices where grasses and other herbaceous forage are traditionally not predominant in grazing areas.
@@ -6126,7 +6150,7 @@ Item description.</span>
 LPIS area accuracy conformance
 
 -- Definition --
-Assessment of correct quantification of the maximum eligible area according to EU 640/2014 Art. 6.1(a). 
+Assessment of correct quantification of the maximum eligible area according to EU 640/2014 Art. 6.1(a).
 
 -- Description --
 Conformance statement on area quantification. The threshold is +/- 2%.
@@ -6167,7 +6191,7 @@ Achievement of the value of the acceptance number prescribed for the area based 
 
 -- Description --
 Conformance statement whether the number of non-conforming item has exceeded the acceptance number.
-  
+
 Measure identifier: L_ICON
 Name: LPIS item conformance
 Alias: QE2a
@@ -6203,7 +6227,7 @@ Area correctness distribution
 Statistical distribution of relative area correctness values.
 
 -- Description --
-The population of relativeAreaCorrectness values defined for the following intervals: 
+The population of relativeAreaCorrectness values defined for the following intervals:
 - [-50%,&lt;], (-50,-20%], (-20,-12%], (-12,-8%;], (-8,-4%,], (-4,-2%],  (-2, 0%], (0, 2%], (2, 4%], (4, 8%], (8, 12%], (12, 20%], (20, 50%], (&lt;50%]
 
 Measure identifier: L_ACD
@@ -6239,7 +6263,7 @@ NOTE 2: DQM_Measure.DQM_ValueStructure=Sequence (previously was Table).</span>
 LPIS critical defect conformance
 
 -- Definition --
-Achievement of the acceptance number prescribed for critical defects for the given lot. 
+Achievement of the acceptance number prescribed for critical defects for the given lot.
 
 -- Description --
 For conformance the number of critical defects shall not exceed the value of criticalDefectAcceptanceNumber selected in function of the lot size and LQ=2,0.
@@ -6278,7 +6302,7 @@ EFA relative  area correctness
 --Definition --
 This is a placeholder only; currently not to be implemented.
 
-Ratio of the total area  observed  in course of EFA to the sum of EFA areas of  the corresponding  items. 
+Ratio of the total area  observed  in course of EFA to the sum of EFA areas of  the corresponding  items.
 
 -- Description --
 The ratio shall be expressed in percentages.</span>
@@ -6305,7 +6329,7 @@ The ratio shall be expressed in percentages.</span>
 Relative area correctness
 
 -- Definition --
-Ability of the reference area to quantify the area of all eligible land cover types present in the inspected item. 
+Ability of the reference area to quantify the area of all eligible land cover types present in the inspected item.
 
 -- Description --
 Measure identifier: I_RAC
@@ -6371,8 +6395,8 @@ Schema mapping
 -- Definition --
 Definition of mapping rules  from the national / regional eligibility profile to the LCM.
 
--- Description-- 
-The mapping rules shall be defined for all elements (feature types, code lists, enumerations)  rendering the elements of the source schema (eligibility profile) with the corresponding elements of the LCM. 
+-- Description--
+The mapping rules shall be defined for all elements (feature types, code lists, enumerations)  rendering the elements of the source schema (eligibility profile) with the corresponding elements of the LCM.
 
 Each feature type of the national / regional eligibility profile can be mapped to one or more feature types of the LCM. This mapping rule has to be unambiguous.
 
@@ -6439,7 +6463,7 @@ Semi-natural area
 Semi natural area type according to objective criteria
 
 -- Description --
-Natural area types with human impact that further delimits homogeneity. 
+Natural area types with human impact that further delimits homogeneity.
 
 NOTE: the applicable values of semi natural area hall be documented in the eligibility profile of the MS/regions, and have to be described in a document dully cited or inserted in the information system.
 
@@ -6557,7 +6581,7 @@ The classification system shall be described or referred with a citation.
 
 NOTE: the applicable values of soil type shall be documented in the eligibility profile of the MS/regions, or have to be described in a document dully cited or inserted in the information system.
 
-EXAMPLE:  http://inspire.ec.europa.eu/codelist/ 
+EXAMPLE:  http://inspire.ec.europa.eu/codelist/
 INSPIRE code list  registry comprising Soil data theme.</span>
       </div>
       <dl class="description">
@@ -6616,9 +6640,9 @@ Strips of eligible hectares without production
 Ecological focus area type as defined by Art. 46(2) of (EU) R 1307/2013
 
 -- Description --
-Strips of eligible hectares along forest edges without production. 
+Strips of eligible hectares along forest edges without production.
 
-NOTE 1: by way of derogation from the no production requirement, grazing or cutting may be allowed, provided the strip remains distinguishable from adjacent agricultural land. 
+NOTE 1: by way of derogation from the no production requirement, grazing or cutting may be allowed, provided the strip remains distinguishable from adjacent agricultural land.
 
 NOTE 2: width shall be defined by the MS within the limits
 - minimum shall not be below 1 meter
@@ -6678,7 +6702,7 @@ Ecological focus area type as defined by Art. 46(2) of (EU) R 1307/2013
 -- Description --
 Terraces shall be terraces that:
 -are protected under GAEC 7 as referred to in Annex II to Regulation (EU) No 640/2014;
--other terraces established based on criteria defined by MS. 
+-other terraces established based on criteria defined by MS.
 Criteria may include minimum height based on national or regional specificities.</span>
       </div>
       <dl class="description">
@@ -6847,13 +6871,13 @@ NOTE 2. This is a capability test case.</span>
 </div>
 </div>
 </div>
-    
 
-<!--REFERENCES SECTION-->
+
+<!--REFERENCES SECTION
   <div id="references">
 <h2 id="ref" class="list">References <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
 <span class="markdown">
-Add your references here. It is recommended to have them as a list.</span>
+Add your references here. It is recommended to have them as a list.</span>-->
 
 </div>
 <div id="acknowledgments">
