@@ -8,9 +8,9 @@
 <!-- SCHEMA.ORG METADATA -->
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"TechArticle","url":"http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-base","image":"http://vowl.visualdataweb.org/webvowl/#iri=http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-base","name":"JRC IACS - Base Types Ontology", "headline":"This ontology is one of the modules comprising CAP-IACS (Common Agriculture Policy - Integrated Administration and Control System) ontology. The CAP-IACS ontology was developed part of the Open-IACS project, which aims to provide an open platform for the exchange of solutions in the field of Integrated Agricultural Control System (IACS) through the paradigm of connected open data. The ontology has been derived from the derived from the JRC IACS application schema.", "datePublished":"Date of release", "version":"3.0", "license":"https://creativecommons.org/licenses/by/4.0/", "author":[{"@type":"Person","name":"Raul Palma","url":"http://orcid.org/0000-0003-4289-4922"}]}</script>
 
-<script src="resources/jquery.js"></script> 
-<script src="resources/marked.min.js"></script> 
-    <script> 
+<script src="resources/jquery.js"></script>
+<script src="resources/marked.min.js"></script>
+    <script>
 function loadHash() {
   jQuery(".markdown").each(function(el){jQuery(this).after(marked(jQuery(this).text())).remove()});
 	var hash = location.hash;
@@ -40,15 +40,15 @@ function loadTOC(){
 		}
 	  });
 	  t+='</ul>';
-	  $("#toc").html(t); 
+	  $("#toc").html(t);
 }
 $(function(){
     loadHash();
 }); $.fn.ignore = function(sel){
         return this.clone().find(sel||">*").remove().end();
- }; 
-   </script> 
-  </head> 
+ };
+   </script>
+  </head>
 
 <body>
 <div class="container">
@@ -85,17 +85,41 @@ $(function(){
 </div>     <div id="abstract"><h2>Abstract</h2><span class="markdown">
 This ontology is one of the modules comprising CAP-IACS (Common Agriculture Policy - Integrated Administration and Control System) ontology. The CAP-IACS ontology was developed part of the Open-IACS project, which aims to provide an open platform for the exchange of solutions in the field of Integrated Agricultural Control System (IACS) through the paradigm of connected open data. The ontology has been derived from the derived from the JRC IACS application schema.</span>
 </div>
-<div id="toc"></div> 
+<div id="toc"></div>
 
 <!--INTRODUCTION SECTION-->
     <div id="introduction"><h2 id="intro" class="list">Introduction <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
 <span class="markdown">
-This is a place holder text for the introduction. The introduction should briefly describe the ontology, its motivation, state of the art and goals.</span>
+  This CAP-IACS (Common Agriculture Policy - Integrated Administration and Control System) ontology network was derived semi-automatically from the JRC IACS application schema. In particular, the ontology was generated based on the UML model, which was pre-processed and transformed into a Web ontology network using UML model, with a series of rules. The ontology generated was also post-processed to adjust some classes and properties.
+
+  This module is one of the 16 core modules in the CAP-IACS  ontology:
+     <ul>
+        - Main<br>
+        - Farmer Advisory System<br>
+        - Aid<br>
+        - Aid codelist<br>
+        - System for identification and registration of animals<br>
+        - Base<br>
+        - Base Codelist<br>
+        - Beneficiery<br>
+        - Beneficiery Codelist<br>
+        - Control<br>
+        - Control Codelists<br>
+        - Entitlement <br>
+        - Entitlement Codelist <br>
+        - Agricultural Parcels <br>
+        - Agricultural Parcels-Extension <br>
+        - Agricultural Parcels-Codelist <br>
+
+     </ul>
+
+  This module is an ontology of the base types used in IACS, generated from the transformation of the corresponding JRC application schema
+</span>
 </div>
-  
+
 
 <!--OVERVIEW SECTION-->
-    <div id="overview"><h2 id="overv" class="list">CAP-IACS Ontology: Main module: Overview <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+    <div id="overview"><h2 id="overv" class="list">CAP-IACS Ontology: Base Module: Overview <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
 <span class="markdown">
 This ontology has the following classes and properties.</span>
 <h4>Classes</h4>
@@ -956,21 +980,21 @@ This ontology has the following classes and properties.</span>
       <a href="#wednesday"
          title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-base#wednesday">Wednesday</a>
    </li>
-</ul><iframe align="center" width="100%" height ="500px" src="webvowl/index.html"></iframe> 
+</ul><iframe align="center" width="100%" height ="500px" src="webvowl/index.html"></iframe>
 </div>
-  
+
 
 <!--DESCRIPTION SECTION-->
-    <div id="description"><h2 id="desc" class="list">CAP-IACS Ontology: Main module: Description <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+    <div id="description"><h2 id="desc" class="list">CAP-IACS Ontology: Base Module: Description <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
 <span class="markdown">
-This is a placeholder text for the description of your ontology. The description should include an explanation and a diagram explaining how the classes are related, examples of usage, etc.</span>
+This module is an ontology of the base types used in IACS, generated from the transformation of the corresponding JRC application schema</span>
 
 </div>
-   
+
 
 <!--CROSSREF SECTION-->
-   <div id="crossref"><h2 id="crossreference" class="list">Cross-reference for CAP-IACS Ontology: Main module classes, object properties and data properties <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
-This section provides details for each class and property defined by CAP-IACS Ontology: Main module.
+   <div id="crossref"><h2 id="crossreference" class="list">Cross-reference for CAP-IACS Ontology: Base Module classes, object properties and data properties <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+This section provides details for each class and property defined by CAP-IACS Ontology: Base Module.
 <div xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="classes">
    <h3 id="classes-headline" class="list">Classes</h3>
    <ul class="hlist">
@@ -1569,7 +1593,7 @@ NOTE. An executable test is the instantiation of an abstract test case with spec
       <p>
          <strong>IRI:</strong> http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-base#FeatureLevelMetadata</p>
       <div class="comment">
-         <span class="markdown">--Name-- 
+         <span class="markdown">--Name--
 Feature level metadata
 
 -- Definition --
@@ -1612,7 +1636,7 @@ inv: campaignYear &gt;= 2015</span>
          <span class="markdown">-- Definition --
 Holding
 -- Description --
-The holding is whole area and all infrastructures included on it, covering the same or different  "sites", under the control  of an operator to perform agricultural or aquaculture activities. 
+The holding is whole area and all infrastructures included on it, covering the same or different  "sites", under the control  of an operator to perform agricultural or aquaculture activities.
 The units (sites within holding) used for agricultural activities and managed by a farmer situated within the territory of the same Member State. 1307/2013 4(1)(b). Where an agricultural area of a holding is also used for non-agricultural activities, that area shall be considered to be used predominantly for agricultural activities provided that those agricultural activities can be exercised without being significantly hampered by the intensity, nature, duration and timing of the non-agricultural activities 1307/2013 32(3)(a). The total area of the holding consists of the utilised agricultural area (arable land, permanent grassland, permanent crops and kitchen gardens) and other land (unutilised agricultural land, wooded area and other land).</span>
       </div>
       <dl class="description">
@@ -1636,7 +1660,7 @@ The units (sites within holding) used for agricultural activities and managed by
 Implementation conformance statement
 
 --Definition--
-Statement of the options which have been implemented. 
+Statement of the options which have been implemented.
 
 --Description--
 This will allow the implementation to be tested for conformance against the relevant requirements - and against those requirements only.
@@ -2198,7 +2222,7 @@ Payment schema type list may be extended or shortened by MS.</span>
          <strong>IRI:</strong> http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-base#VarietalNameValue</p>
       <div class="comment">
          <span class="markdown">-- Definition --
-List of varietal names within vegetable and agricultural plant species. 
+List of varietal names within vegetable and agricultural plant species.
 -- Desription --
 Common catalogue of varieties of agricultural plant species. Fifth supplement to the 29th complete edition (2011/C 168 A/01).
 Common catalogue of varieties of vegetable species. 32nd complete edition (2013/C 312 A/01).
@@ -2230,16 +2254,16 @@ NOTE. CODE LIST IS NOT FINISHED. ONLY SOME EXAMPLES ARE PROVIDED.</span>
          <strong>IRI:</strong> http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-base#SpecieCodeValue</p>
       <div class="comment">
          <span class="markdown">-- Definition --
-List of vegetable and agricultural plant species (aggregate of a varieties). 
+List of vegetable and agricultural plant species (aggregate of a varieties).
 -- Description --
 A culture of any of the different genera defined in the botanical classification of crops. In this case code list consist of binomial names of species from the taxonomy of Linnaeus (classification for plants).
 NOTE. Common catalogue of varieties of agricultural plant species. Fifth supplement to the 29th complete edition (2011/C 168 A/01)
 List of agricultural species -A
 I. Beet
 II. Fodder plants
-III. Oil and fibre plants    
+III. Oil and fibre plants
 IV. Cereals
-V. Potatoes 
+V. Potatoes
 NOTE. Common catalogue of varieties of vegetable species. 32nd complete edition (2013/C 312 A/01)
 List of vegetable species - H</span>
       </div>
@@ -2636,7 +2660,7 @@ Range of notification recurrence.</span>
          <span class="markdown">-- Definition --
 Site within holding.
 -- Description --
-All land  at a same or distinct geographic location under the management control of a holding covering activities, products and services. This includes all infrastructure, equipment and materials. The geometry of the site  must be a point or a surface. 
+All land  at a same or distinct geographic location under the management control of a holding covering activities, products and services. This includes all infrastructure, equipment and materials. The geometry of the site  must be a point or a surface.
 NOTE. The  site can be represented by a point or by a surface. The site can have only one geometry. Mulitpoint or multisurface is not allowed.</span>
       </div>
       <dl class="description">
@@ -3175,7 +3199,7 @@ The change request may target the application schema of the LCM or the eligibili
 Activity on site.
 -- Description --
 The whole area and all infrastructures included on it, covering the same or different  "sites", under the control  of an operator to perform  agricultural or aquaculture activities. The holding includes one specialisation of ActivityComplex, ie. Activity. the values of ActivityType are expressed conform the classification of the economic activity of the holding, according to the NACE rev. 2.0 coding. Holding is a thematic extension of the generic Class “Activity Complex” shared with other thematic areas describing entities related with Economical Activities (Legal Entity Class – Business).
-NOTE. Accessible at Eurostat repository from URL http://ec.europa.eu/eurostat/ramon/nomenclatures/index.cfm?TargetUrl=LST_CLS_DLD&amp;StrNom=NACE_REV2&amp;StrLanguageCode=EN&amp;StrLayoutCode=HIERARCHIC. 
+NOTE. Accessible at Eurostat repository from URL http://ec.europa.eu/eurostat/ramon/nomenclatures/index.cfm?TargetUrl=LST_CLS_DLD&amp;StrNom=NACE_REV2&amp;StrLanguageCode=EN&amp;StrLayoutCode=HIERARCHIC.
 NOTE. At least one of the function attributes of the Holding spatial object shall be provided using the EconomicActivityNACEValue code list (for the activity attribute of the Function data type).</span>
       </div>
       <div class="description">
@@ -3224,13 +3248,13 @@ Administrative hierarchy level value should be - 6thOrder.</span>
          <strong>IRI:</strong> http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-base#statusOfAnomaly</p>
       <div class="comment">
          <span class="markdown">--Name--
-Status of anomaly 
+Status of anomaly
 
 -- Definition --
 Status of the life -cycle of anomaly defined in terms of the related code list.
 
 -- Description --
-The values of this attributes are taken from the StatusOfAnomaly code list. 
+The values of this attributes are taken from the StatusOfAnomaly code list.
 
 NOTE. This code list is a shortened one as compared to the states listed in the State machine diagram.</span>
       </div>
@@ -3491,7 +3515,7 @@ Notification senders and receivers.</span>
          <span class="markdown">-- Definition --
 Crop item code.
 -- Description --
-"Crop item code" is a "agregate code" when mapped with farmStructureSurveyNumber. 
+"Crop item code" is a "agregate code" when mapped with farmStructureSurveyNumber.
 Eurostat Handbook for Annual Crop Statistics (Regulation 543/2009) (Revision 2013 – Presented in the WPM of the 12).</span>
       </div>
       <div class="description">
@@ -3965,7 +3989,7 @@ The status of a facility with regards to its completion and use.</span>
 Implementation Conformance Statement
 
 --Definition--
-Statement of specification options that have been implemented. 
+Statement of specification options that have been implemented.
 
 --Description--
 The statement provides the testing laboratory with a better understanding of the SUT for use in the conformance assessment process and helps identify the boundaries of the domain testing.</span>
@@ -3993,7 +4017,7 @@ The statement provides the testing laboratory with a better understanding of the
 ICS pro forma
 
 --Definition--
-A questionnaire used as a framework to document SUT capabilities necessary to undertake conformance testing.  
+A questionnaire used as a framework to document SUT capabilities necessary to undertake conformance testing.
 
 -Description--
 -The ICS may be generated using ICS pro forma. An ICS pro forma may be provided by the testing laboratory.</span>
@@ -4077,7 +4101,7 @@ Status of issue
 Status of the life -cycle of issue defined in terms of the related code list.
 
 -- Description --
-The values of this attributes are taken from the StatusOfIssueValue code list. 
+The values of this attributes are taken from the StatusOfIssueValue code list.
 
 NOTE. This code list is shortened compared to the states listed in the State machine diagram.</span>
       </div>
@@ -4464,7 +4488,7 @@ Recurrence of notification.</span>
          <span class="markdown">-- Definition --
 Recurrence.
 -- Description --
-Recurrence of notification. 
+Recurrence of notification.
 NOTE. Only one recurrenceValue may be used for one notification pattern. After particular reccurenceValue is selected - respective notification pattern (daily, weekly, monthly or yearly) must be defined.</span>
       </div>
       <div class="description">
@@ -4688,13 +4712,13 @@ Data selected for resolving an anomaly. It can be one or more dataset, imagery, 
          <strong>IRI:</strong> http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-base#statusType</p>
       <div class="comment">
          <span class="markdown">-- Name--
-Status type 
+Status type
 
 --Definition--
 Information about the life cycle status of the data or feature type.
 
 -- Description --
-Validity/update status of feature / object / schema, values depend on implementation choice. Status types included in the state machine diagram are applicable for new and existing object feature or schema (Dynamic model). 
+Validity/update status of feature / object / schema, values depend on implementation choice. Status types included in the state machine diagram are applicable for new and existing object feature or schema (Dynamic model).
 
 NOTE. Values of this attributes are taken from the StatusValue code list.</span>
       </div>
@@ -5081,7 +5105,7 @@ The types comprise application schema and any element of it as defined in the Af
 Varietal name.
 -- Description --
 Information referring to the variety within a specie.
-Varieties (cultures of any of the different genera defined in the botanical classification of crops) may be provided by maintainers (MS) . 
+Varieties (cultures of any of the different genera defined in the botanical classification of crops) may be provided by maintainers (MS) .
 Common catalogue of varieties of agricultural plant species. Fifth supplement to the 29th complete edition (2011/C 168 A/01).
 Common catalogue of varieties of vegetable species. 32nd complete edition (2013/C 312 A/01).</span>
       </div>
@@ -5710,7 +5734,7 @@ Correspondent as sender.</span>
       <div class="comment">
          <span class="markdown">-- Definition --
 Cross-compliance rule description.
--- Description --. 
+-- Description --.
 Descriptions must be provided by Member States and communicated with EC via notifications.</span>
       </div>
       <div class="description">
@@ -5736,7 +5760,7 @@ Descriptions must be provided by Member States and communicated with EC via noti
 Element depreciation required
 
 -- Definition --
-Depreciation of an element in the application schema is required for resolving the issue. 
+Depreciation of an element in the application schema is required for resolving the issue.
 
 -- Description --
 The possibly affected elements are listed in the AffectedelementTypeValue code list.</span>
@@ -5865,7 +5889,7 @@ Data
 Encoded external data stored in IACS.
 
 -- Description --
-Storage in various formats. 
+Storage in various formats.
 
 NOTE. Generally - BLOB type. Implementation (SW  and/or RDBMS) specific.</span>
       </div>
@@ -5895,7 +5919,7 @@ Format
 Encoding specification of the data
 
 -- Description --
-Format of encoded data. 
+Format of encoded data.
 
 EXAMPLES: *.docx, *.xslx, *.png, *.pdf, *.txt, etc.</span>
       </div>
@@ -6151,7 +6175,7 @@ Item description.</span>
 Element introduction required
 
 -- Definition --
-Introduction of a new element in the application schema is required for resolving the issue. 
+Introduction of a new element in the application schema is required for resolving the issue.
 
 -- Description --
 The possibly affected elements are listed in the AffectedelementTypeValue code list.</span>
@@ -6302,10 +6326,10 @@ Repetitive notification.</span>
       <div class="comment">
          <span class="markdown">-- Definition --
 Notification pattern description.
--- Description --. 
+-- Description --.
 Notification pattern description. Also legal basis of notification pattern can be described.
 EXAMPLE. ETS notification.
-EXAMPLE. Delegated act 1307 Art. 64 (c) (i)   by 15 December of each year, for the claim year concerned:the total number of farmers who have to apply at least one greening obligation referred to in Article 43(2) and (3) of Regulation (EU) No 
+EXAMPLE. Delegated act 1307 Art. 64 (c) (i)   by 15 December of each year, for the claim year concerned:the total number of farmers who have to apply at least one greening obligation referred to in Article 43(2) and (3) of Regulation (EU) No
 1307/2013 and the total number of hectares declared by such farmers.</span>
       </div>
       <div class="description">
@@ -6454,7 +6478,7 @@ Parameter value
 Value of parameter(s) needed to perform the executable test.
 
 -- Description --
-Executable test cases result from the instantiation of specific values for parameters in an abstract test case. Parameters are most frequently used in testing conformity with constraints. 
+Executable test cases result from the instantiation of specific values for parameters in an abstract test case. Parameters are most frequently used in testing conformity with constraints.
 
 EXAMPLE. The width values of LF/EFA elements are parameters to be used in testing conceptual consistency through a constraint.</span>
       </div>
@@ -6849,7 +6873,7 @@ Unique ID affected element.
 -- Description --
 The identifier may be of any type (name of the element, database ID, etc.) that  supports unique identification of the element.
 
-EXAMPLE. 
+EXAMPLE.
 &lt;incoming xmi:idref="EAID_4CA1870F_1938_4237_9B25_80D2CEE94129"/&gt;
 &lt;outgoing xmi:idref="EAID_D2F12725_0118_4ca4_8E4D_FB9FD955C2CB"/&gt;</span>
       </div>
@@ -7097,7 +7121,7 @@ IACS identifier
 Universally unique identifier of object / feature.
 
 -- Description --
-An object identifier (UUID as GlobalID) is a unique object identifier maintained by the responsible body. The identifier is an unique identifier of the object / feature within the IACS system, not an identifier of the real-world phenomenon. GlobalID is not GUID. 
+An object identifier (UUID as GlobalID) is a unique object identifier maintained by the responsible body. The identifier is an unique identifier of the object / feature within the IACS system, not an identifier of the real-world phenomenon. GlobalID is not GUID.
 
 NOTE 1. /* Value of iacsId shall be equal GlobalID (within CAP IACS). */
 inv: self.iacsId.Symbol='GlobalID'
@@ -7149,7 +7173,7 @@ Official date and time when the object / feature has been (will be) in situ or l
          <strong>IRI:</strong> http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-base#validTo</p>
       <div class="comment">
          <span class="markdown">--Name --
-Valid to 
+Valid to
 
 --Definition  --
 Official date and time at which the feature in situ (or legally) ceased (will cease) to be used.</span>
@@ -7198,13 +7222,13 @@ Item description.</span>
 </div>
 </div>
 </div>
-    
 
-<!--REFERENCES SECTION-->
+
+<!--REFERENCES SECTION
   <div id="references">
 <h2 id="ref" class="list">References <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
 <span class="markdown">
-Add your references here. It is recommended to have them as a list.</span>
+Add your references here. It is recommended to have them as a list.</span>-->
 
 </div>
 <div id="acknowledgments">

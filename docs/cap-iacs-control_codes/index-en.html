@@ -8,9 +8,9 @@
 <!-- SCHEMA.ORG METADATA -->
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"TechArticle","url":"http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code","image":"http://vowl.visualdataweb.org/webvowl/#iri=http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code","name":"JRC IACS - Integrated Control System Code Lists", "headline":"This ontology is one of the modules comprising CAP-IACS (Common Agriculture Policy - Integrated Administration and Control System) ontology. The CAP-IACS ontology was developed part of the Open-IACS project, which aims to provide an open platform for the exchange of solutions in the field of Integrated Agricultural Control System (IACS) through the paradigm of connected open data. The ontology has been derived from the derived from the JRC IACS application schema.", "datePublished":"Date of release", "version":"3.0", "license":"https://creativecommons.org/licenses/by/4.0/", "author":[{"@type":"Person","name":"Raul Palma","url":"http://orcid.org/0000-0003-4289-4922"}]}</script>
 
-<script src="resources/jquery.js"></script> 
-<script src="resources/marked.min.js"></script> 
-    <script> 
+<script src="resources/jquery.js"></script>
+<script src="resources/marked.min.js"></script>
+    <script>
 function loadHash() {
   jQuery(".markdown").each(function(el){jQuery(this).after(marked(jQuery(this).text())).remove()});
 	var hash = location.hash;
@@ -40,15 +40,15 @@ function loadTOC(){
 		}
 	  });
 	  t+='</ul>';
-	  $("#toc").html(t); 
+	  $("#toc").html(t);
 }
 $(function(){
     loadHash();
 }); $.fn.ignore = function(sel){
         return this.clone().find(sel||">*").remove().end();
- }; 
-   </script> 
-  </head> 
+ };
+   </script>
+  </head>
 
 <body>
 <div class="container">
@@ -82,17 +82,41 @@ $(function(){
 </div>     <div id="abstract"><h2>Abstract</h2><span class="markdown">
 This ontology is one of the modules comprising CAP-IACS (Common Agriculture Policy - Integrated Administration and Control System) ontology. The CAP-IACS ontology was developed part of the Open-IACS project, which aims to provide an open platform for the exchange of solutions in the field of Integrated Agricultural Control System (IACS) through the paradigm of connected open data. The ontology has been derived from the derived from the JRC IACS application schema.</span>
 </div>
-<div id="toc"></div> 
+<div id="toc"></div>
 
 <!--INTRODUCTION SECTION-->
     <div id="introduction"><h2 id="intro" class="list">Introduction <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
 <span class="markdown">
-This is a place holder text for the introduction. The introduction should briefly describe the ontology, its motivation, state of the art and goals.</span>
+  This CAP-IACS (Common Agriculture Policy - Integrated Administration and Control System) ontology network was derived semi-automatically from the JRC IACS application schema. In particular, the ontology was generated based on the UML model, which was pre-processed and transformed into a Web ontology network using UML model, with a series of rules. The ontology generated was also post-processed to adjust some classes and properties.
+
+  This module is one of the 16 core modules in the CAP-IACS  ontology:
+     <ul>
+        - Main<br>
+        - Farmer Advisory System<br>
+        - Aid<br>
+        - Aid codelist<br>
+        - System for identification and registration of animals<br>
+        - Base<br>
+        - Base Codelist<br>
+        - Beneficierye<br>
+        - Beneficiery Codelist<br>
+        - Control<br>
+        - Control Codelists<br>
+        - Entitlement <br>
+        - Entitlement Codelist <br>
+        - Agricultural Parcels <br>
+        - Agricultural Parcels-Extension <br>
+        - Agricultural Parcels-Codelist <br>
+
+     </ul>
+
+  This module is an ontology of the integrated control system code lists used in IACS, generated from the transformation of the corresponding JRC application schema
+</span>
 </div>
-  
+
 
 <!--OVERVIEW SECTION-->
-    <div id="overview"><h2 id="overv" class="list">CAP-IACS Ontology: Main module: Overview <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+    <div id="overview"><h2 id="overv" class="list">CAP-IACS Ontology: Integrated Control System Code Lists Module: Overview <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
 <span class="markdown">
 This ontology has the following classes and properties.</span>
 <h4>Named Individuals</h4><ul xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" class="hlist">
@@ -520,21 +544,21 @@ This ontology has the following classes and properties.</span>
       <a href="#CrossCheckTypeValue/toVerifyPaymentEntitlements"
          title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#CrossCheckTypeValue/toVerifyPaymentEntitlements">Verify payment entitlements</a>
    </li>
-</ul><iframe align="center" width="100%" height ="500px" src="webvowl/index.html"></iframe> 
+</ul><iframe align="center" width="100%" height ="500px" src="webvowl/index.html"></iframe>
 </div>
-  
+
 
 <!--DESCRIPTION SECTION-->
-    <div id="description"><h2 id="desc" class="list">CAP-IACS Ontology: Main module: Description <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+    <div id="description"><h2 id="desc" class="list">CAP-IACS Ontology: Integrated Control System Code Lists Module: Description <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
 <span class="markdown">
-This is a placeholder text for the description of your ontology. The description should include an explanation and a diagram explaining how the classes are related, examples of usage, etc.</span>
+Ontology of the integrated control system code lists used in IACS, generated from the transformation of the corresponding JRC application schema</span>
 
 </div>
-   
+
 
 <!--CROSSREF SECTION-->
-   <div id="crossref"><h2 id="crossreference" class="list">Cross-reference for CAP-IACS Ontology: Main module classes, object properties and data properties <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
-This section provides details for each class and property defined by CAP-IACS Ontology: Main module.
+   <div id="crossref"><h2 id="crossreference" class="list">Cross-reference for CAP-IACS Ontology: Integrated Control System Code Lists Module classes, object properties and data properties <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+This section provides details for each class and property defined by CAP-IACS Ontology: Integrated Control System Code Lists Module.
 <div xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="namedindividuals">
    <h3 id="namedindividuals" class="list">Named Individuals</h3>
    <ul class="hlist">
@@ -1217,7 +1241,7 @@ Increased control rate (5% normal+5% supplementary) in sense of Art. 31(3) for b
       <div class="comment">
          <span class="markdown">At least 10% of following greening practices
 
-Increased control rate (5% normal+5% supplementary) in sense of Art. 31(3) of R 809/2014 for beneficiaries required to follow greening practices. 
+Increased control rate (5% normal+5% supplementary) in sense of Art. 31(3) of R 809/2014 for beneficiaries required to follow greening practices.
 
 Where the ecological focus areas are not identified in the identification system for agricultural parcels as referred to in Article 70 of Regulation (EU) No 1306/2013, the control rate laid down in points (a) and (c) to (e) of paragraph 1 shall be supplemented by 5% of all beneficiaries of the respective control sample who are required to have ecological focus area on the agricultural area in accordance with Articles 43 and 46 of Regulation (EU) No 1307/2013.</span>
       </div>
@@ -1264,7 +1288,7 @@ MS shall notify the EC about the rules (or changes in the rules) of the approval
       <p>
          <strong>IRI:</strong> http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#ControlRateTypeValue/atLeast3%ForRedistributivePayment</p>
       <div class="comment">
-         <span class="markdown">At least 3% or redistributive payment 
+         <span class="markdown">At least 3% or redistributive payment
 
 Art. 36(2) of Regulation (EU) 809/2014 allows the reduction of the control rate for redistributive payment from 5% to 3% when the cross checks based on geospatial applications are carried out.</span>
       </div>
@@ -1355,7 +1379,7 @@ In accordance with art. 32(6) of R (EU) 1307/2013 only those varieties of hemp a
       <p>
          <strong>IRI:</strong> http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-control/code#ControlRateTypeValue/atLeast5%ForAreasWithNaturalConstraints</p>
       <div class="comment">
-         <span class="markdown">At least 5% for areas with natural constraints 
+         <span class="markdown">At least 5% for areas with natural constraints
 
 In sense of Art. 30(c) of Regulation (EU) 809/2014 5% of beneficiaries applying for the payment for areas with natural constraints shall be controlled.</span>
       </div>
@@ -1602,10 +1626,10 @@ In sense of Art.31(1)(d)  of R (EU) 809/2014 5 % of all beneficiaries participa
          <span class="markdown">-- Definition --
 Between agricultural parcels and reference parcels.
 -- Description --
-Where appropriate, the administrative checks shall include cross-checks: between the agricultural parcels as declared in the single application and/or payment claim and the information as contained in the identification system for 
+Where appropriate, the administrative checks shall include cross-checks: between the agricultural parcels as declared in the single application and/or payment claim and the information as contained in the identification system for
 
 agricultural parcels per reference parcel in accordance with Article 5(2) of Regulation (EU) No […] [DA IACS] to verify the eligibility for direct aid scheme and/or rural development support measure of the areas as such.
-NOTE. Where the integrated system provides for geo-spatial aid application forms, the cross-checks shall be carried out as spatial intersection of the digitised area declared with the identification system of agricultural parcels. In 
+NOTE. Where the integrated system provides for geo-spatial aid application forms, the cross-checks shall be carried out as spatial intersection of the digitised area declared with the identification system of agricultural parcels. In
 
 addition, cross-checks shall be carried out to prevent double claiming of the same area.</span>
       </div>
@@ -1653,7 +1677,7 @@ Where appropriate, the administrative checks shall include cross-checks: the com
          <span class="markdown">-- Definition --
 Between the payment entitlements and the area determined.
 -- Description --
-Where appropriate, the administrative checks shall include cross-checks:between the payment entitlements and the area determined in order to verify that the entitlements are accompanied by at least an equal number of eligible hectares 
+Where appropriate, the administrative checks shall include cross-checks:between the payment entitlements and the area determined in order to verify that the entitlements are accompanied by at least an equal number of eligible hectares
 
 as defined in Article 32(2) to (6) of Regulation (EC) No 1307/2013.</span>
       </div>
@@ -2309,7 +2333,7 @@ Examples of aspects of analysis:
 	- Agronomic conditions
 	- Non-participation in FAS or certification schemes of farmers
 
-NOTE 
+NOTE
 The method is especially applicable for selecting risk based CwRS zones.</span>
       </div>
       <dl class="description">
@@ -2335,7 +2359,7 @@ The method is especially applicable for selecting risk based CwRS zones.</span>
 Sampling process based on a single criterion retained to be effective in course of risk analysis. Input data for risk analysis can be taken from OTSC report of the previous year, other subsystems of IACS, third party data, etc.
 
 NOTE 1
-The effectiveness of the criterion has to be proved by comparing the performance results from a random sample and a sample based on the criterion. 
+The effectiveness of the criterion has to be proved by comparing the performance results from a random sample and a sample based on the criterion.
 
 NOTE 2
 The performance criterion has to be documented before  starting the sampling process.</span>
@@ -2478,7 +2502,7 @@ Sampling of OTSC for cross-compliance can be improved by taking into account the
       <div class="comment">
          <span class="markdown">Sample Type value
 
-The sample type property shall be attributed to each sampled item (application). One item can be sampled to one or more payment/support schemes. 
+The sample type property shall be attributed to each sampled item (application). One item can be sampled to one or more payment/support schemes.
 
 NOTE
 The categories of sample type values have to support the traceability of the sampling cascade. This is the reason for distinguishing the initial and the top-up samples for BPS/SAPS.</span>
@@ -2526,7 +2550,7 @@ Item selected for controlling the correctness of payments for areas with natural
          <span class="markdown">Collective implementation
 
 Items selected for controlling beneficiaries participating in collective implementation of EFA. The composition of the population
-	- 1,0-1,25% selected randomly 
+	- 1,0-1,25% selected randomly
 	- 3,75-4,0% selected on risk base
 
 Issue:
@@ -2675,7 +2699,7 @@ It is the initial random sample drawn in sense of Art. 24(2)(a). This sample con
          <span class="markdown">Observing greening
 
 Items selected for controlling beneficiaries observing greening. The composition of the population
-	- 1,0-1,25% selected randomly 
+	- 1,0-1,25% selected randomly
 	- 3,75-4,0% selected on risk base
 The related sample includes items selected for the sensitive grassland sample.</span>
       </div>
@@ -2766,7 +2790,7 @@ Item selected for controlling beneficiaries applying for redistributive payment.
          <span class="markdown">Regional implementation
 
 Items selected for controlling beneficiaries participating in regional implementation of EFA. The composition of the population
-	- 1,0-1,25% selected randomly 
+	- 1,0-1,25% selected randomly
 	- 3,75-4,0% selected on risk base
 
 Issue:
@@ -2815,7 +2839,7 @@ Items selected for controlling greening according to Art.43 (3)(b) of R 1307/201
          <span class="markdown">Sensitive grassland
 
 Items selected for controlling sensitive grassland. The composition of the population
-	- 1,0-1,25% selected randomly 
+	- 1,0-1,25% selected randomly
 	- 3,75-4,0% selected on risk base
 
 NOTE
@@ -2863,7 +2887,7 @@ Item selected for controlling beneficiaries participating in the small farmers s
       <div class="comment">
          <span class="markdown">Top-up for BPS/SAPS
 
-Randomly selected items to complete the BPS/SAPS population after integrating the items out of the following samples: 
+Randomly selected items to complete the BPS/SAPS population after integrating the items out of the following samples:
 	- Initial 1,0-2,15% sample for BPS SAPS
 	- Greening samples
 	- Redistributive payment
@@ -3047,7 +3071,7 @@ The population has to be homogenous.</span>
          <span class="markdown">-- Definition --
 Verify declared payment entitlements on declared agricultural parcels.
 -- Description --
-Where appropriate, the administrative checks shall include cross-checks:o n declared payment entitlements and on declared agricultural parcels, respectively, in order to avoid multiple granting of the same aid or support in respect of 
+Where appropriate, the administrative checks shall include cross-checks:o n declared payment entitlements and on declared agricultural parcels, respectively, in order to avoid multiple granting of the same aid or support in respect of
 
 the same calendar or claim year and to prevent any undue accumulation of aid granted under area-related aid schemes listed in Annex I to Regulation (EU) No 1307/2013 and Annex VI to Council Regulation (EC) No 73/2009[17], and area-
 
@@ -3074,7 +3098,7 @@ related support measures as defined in point (21) of the second subparagraph of 
          <span class="markdown">-- Definition --
 Verify eligibility for the animal aid.
 -- Description --
-Where appropriate, the administrative checks shall include cross-checks: by means of the system for the identification and registration of animals, to verify eligibility for the aid and/or support and to avoid undue multiple granting of 
+Where appropriate, the administrative checks shall include cross-checks: by means of the system for the identification and registration of animals, to verify eligibility for the aid and/or support and to avoid undue multiple granting of
 
 the same aid and/or support in respect of the same calendar or claim year.</span>
       </div>
@@ -3099,7 +3123,7 @@ the same aid and/or support in respect of the same calendar or claim year.</span
          <span class="markdown">-- Definition --
 Verify eligibility for the increase of the aid.
 -- Description --
-Where appropriate, the administrative checks shall include cross-checks:between the declarations of the beneficiary in the single application to be a member of an approved inter-branch organisation, the information under Article 16(8) 
+Where appropriate, the administrative checks shall include cross-checks:between the declarations of the beneficiary in the single application to be a member of an approved inter-branch organisation, the information under Article 16(8)
 
 of this Regulation and the information transmitted by the approved inter-branch organisations concerned, to verify eligibility for the increase of the aid provided for in Article 60(2) of Regulation (EU) No 1307/2013.</span>
       </div>
@@ -3143,13 +3167,13 @@ Where appropriate, the administrative checks shall include cross-checks: on the 
 </div>
 </div>
 </div>
-    
 
-<!--REFERENCES SECTION-->
+
+<!--REFERENCES SECTION
   <div id="references">
 <h2 id="ref" class="list">References <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
 <span class="markdown">
-Add your references here. It is recommended to have them as a list.</span>
+Add your references here. It is recommended to have them as a list.</span>-->
 
 </div>
 <div id="acknowledgments">

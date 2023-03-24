@@ -8,9 +8,9 @@
 <!-- SCHEMA.ORG METADATA -->
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"TechArticle","url":"http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-base/code","image":"http://vowl.visualdataweb.org/webvowl/#iri=http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-base/code","name":"JRC IACS - Base Types Code Lists", "headline":"This ontology is one of the modules comprising CAP-IACS (Common Agriculture Policy - Integrated Administration and Control System) ontology. The CAP-IACS ontology was developed part of the Open-IACS project, which aims to provide an open platform for the exchange of solutions in the field of Integrated Agricultural Control System (IACS) through the paradigm of connected open data. The ontology has been derived from the derived from the JRC IACS application schema.", "datePublished":"Date of release", "version":"3.0", "license":"https://creativecommons.org/licenses/by/4.0/", "author":[{"@type":"Person","name":"Raul Palma","url":"http://orcid.org/0000-0003-4289-4922"}]}</script>
 
-<script src="resources/jquery.js"></script> 
-<script src="resources/marked.min.js"></script> 
-    <script> 
+<script src="resources/jquery.js"></script>
+<script src="resources/marked.min.js"></script>
+    <script>
 function loadHash() {
   jQuery(".markdown").each(function(el){jQuery(this).after(marked(jQuery(this).text())).remove()});
 	var hash = location.hash;
@@ -40,15 +40,15 @@ function loadTOC(){
 		}
 	  });
 	  t+='</ul>';
-	  $("#toc").html(t); 
+	  $("#toc").html(t);
 }
 $(function(){
     loadHash();
 }); $.fn.ignore = function(sel){
         return this.clone().find(sel||">*").remove().end();
- }; 
-   </script> 
-  </head> 
+ };
+   </script>
+  </head>
 
 <body>
 <div class="container">
@@ -82,17 +82,41 @@ $(function(){
 </div>     <div id="abstract"><h2>Abstract</h2><span class="markdown">
 This ontology is one of the modules comprising CAP-IACS (Common Agriculture Policy - Integrated Administration and Control System) ontology. The CAP-IACS ontology was developed part of the Open-IACS project, which aims to provide an open platform for the exchange of solutions in the field of Integrated Agricultural Control System (IACS) through the paradigm of connected open data. The ontology has been derived from the derived from the JRC IACS application schema.</span>
 </div>
-<div id="toc"></div> 
+<div id="toc"></div>
 
 <!--INTRODUCTION SECTION-->
     <div id="introduction"><h2 id="intro" class="list">Introduction <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
 <span class="markdown">
-This is a place holder text for the introduction. The introduction should briefly describe the ontology, its motivation, state of the art and goals.</span>
+  This CAP-IACS (Common Agriculture Policy - Integrated Administration and Control System) ontology network was derived semi-automatically from the JRC IACS application schema. In particular, the ontology was generated based on the UML model, which was pre-processed and transformed into a Web ontology network using UML model, with a series of rules. The ontology generated was also post-processed to adjust some classes and properties.
+
+  This module is one of the 16 core modules in the CAP-IACS  ontology:
+     <ul>
+        - Main<br>
+        - Farmer Advisory System<br>
+        - Aid<br>
+        - Aid codelist<br>
+        - System for identification and registration of animals<br>
+        - Base<br>
+        - Base Codelist<br>
+        - Beneficiery<br>
+        - Beneficiery Codelist<br>
+        - Control<br>
+        - Control Codelists<br>
+        - Entitlement <br>
+        - Entitlement Codelist <br>
+        - Agricultural Parcels <br>
+        - Agricultural Parcels-Extension <br>
+        - Agricultural Parcels-Codelist <br>
+
+     </ul>
+
+  This module is an ontology of the base types code lists used in IACS, generated from the transformation of the corresponding JRC application schema
+</span>
 </div>
-  
+
 
 <!--OVERVIEW SECTION-->
-    <div id="overview"><h2 id="overv" class="list">CAP-IACS Ontology: Main module: Overview <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+    <div id="overview"><h2 id="overv" class="list">CAP-IACS Ontology: Base Codelist Module: Overview <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
 <span class="markdown">
 This ontology has the following classes and properties.</span>
 <h4>Named Individuals</h4><ul xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" class="hlist">
@@ -2602,21 +2626,21 @@ This ontology has the following classes and properties.</span>
       <a href="#SpecieCodeValue/×TriticosecaleWittmExACamusHybrids"
          title="http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-base/code#SpecieCodeValue/×TriticosecaleWittmExACamusHybrids">×Triticosecale Wittm. ex A. Camus Hybrids</a>
    </li>
-</ul><iframe align="center" width="100%" height ="500px" src="webvowl/index.html"></iframe> 
+</ul><iframe align="center" width="100%" height ="500px" src="webvowl/index.html"></iframe>
 </div>
-  
+
 
 <!--DESCRIPTION SECTION-->
-    <div id="description"><h2 id="desc" class="list">CAP-IACS Ontology: Main module: Description <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+    <div id="description"><h2 id="desc" class="list">CAP-IACS Ontology: Base Codelist Module: Description <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
 <span class="markdown">
-This is a placeholder text for the description of your ontology. The description should include an explanation and a diagram explaining how the classes are related, examples of usage, etc.</span>
+This module is an ontology of the base types code lists used in IACS, generated from the transformation of the corresponding JRC application schema</span>
 
 </div>
-   
+
 
 <!--CROSSREF SECTION-->
-   <div id="crossref"><h2 id="crossreference" class="list">Cross-reference for CAP-IACS Ontology: Main module classes, object properties and data properties <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
-This section provides details for each class and property defined by CAP-IACS Ontology: Main module.
+   <div id="crossref"><h2 id="crossreference" class="list">Cross-reference for CAP-IACS Ontology: Base Codelist Module classes, object properties and data properties <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+This section provides details for each class and property defined by CAP-IACS Ontology: Base Codelist Module.
 <div xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="namedindividuals">
    <h3 id="namedindividuals" class="list">Named Individuals</h3>
    <ul class="hlist">
@@ -6144,7 +6168,7 @@ Automated testing may implement the required tests as a software system using ei
          <span class="markdown">-- Definition --
 Avena nuda L. Small naked oat / Hulless oat.
 -- Description --
-List of agricultural species -A   
+List of agricultural species -A
 IV. Cereals
 NOTE. Initial value: A - 72.</span>
       </div>
@@ -6169,7 +6193,7 @@ NOTE. Initial value: A - 72.</span>
          <span class="markdown">-- Definition --
 Avena sativa L. (including A. byzantina K. Koch) Oat and Red oat.
 -- Description --
-List of agricultural species -A   
+List of agricultural species -A
 IV. Cereals
 NOTE. Initial value: A - 73.</span>
       </div>
@@ -6194,7 +6218,7 @@ NOTE. Initial value: A - 73.</span>
          <span class="markdown">-- Definition --
 Avena strigosa Schreb. L. Black oat / Bristle.
 -- Description --
-List of agricultural species -A   
+List of agricultural species -A
 IV. Cereals
 NOTE. Initial value: A - 74.</span>
       </div>
@@ -9360,7 +9384,7 @@ NOTE. Initial value:SMR3</span>
          <span class="markdown">-- Definition --
 Environment, climate change, good agricultural condition of land  - Landscape, minimum level of maintenance GAEC7.
 -- Description --
-Retention of landscape features, including where appropriate, hedges, ponds, ditches, trees in line, in group or isolated, field margins and terraces, and including a ban on cutting hedges and trees during the bird breeding and rearing season and, as an option, measures for avoiding invasive plant species. 
+Retention of landscape features, including where appropriate, hedges, ponds, ditches, trees in line, in group or isolated, field margins and terraces, and including a ban on cutting hedges and trees during the bird breeding and rearing season and, as an option, measures for avoiding invasive plant species.
 NOTE. Initial value:GAEC7.</span>
       </div>
       <dl class="description">
@@ -9384,7 +9408,7 @@ NOTE. Initial value:GAEC7.</span>
          <span class="markdown">-- Definition --
 Environment, climate change, good agricultural condition of land  - Soil and carbon stock  GAEC4.
 -- Description --
-Minimum soil cover. 
+Minimum soil cover.
 NOTE. Initial value:GAEC4</span>
       </div>
       <dl class="description">
@@ -9408,7 +9432,7 @@ NOTE. Initial value:GAEC4</span>
          <span class="markdown">-- Definition --
 Environment, climate change, good agricultural condition of land  - Soil and carbon stock  GAEC5.
 -- Description --
-Minimum land management reflecting site specific conditions to limit erosion. 
+Minimum land management reflecting site specific conditions to limit erosion.
 NOTE. Initial value:GAEC5</span>
       </div>
       <dl class="description">
@@ -9480,7 +9504,7 @@ NOTE. Initial value:GAEC1</span>
          <span class="markdown">-- Definition --
 Environment, climate change, good agricultural condition of land  - Water GAEC2.
 -- Description --
-Where use of water for irrigation is subject to authorisation, compliance with authorisation procedures. 
+Where use of water for irrigation is subject to authorisation, compliance with authorisation procedures.
 NOTE. Initial value:GAEC2</span>
       </div>
       <dl class="description">
@@ -9504,7 +9528,7 @@ NOTE. Initial value:GAEC2</span>
          <span class="markdown">-- Definition --
 Environment, climate change, good agricultural condition of land  - Water GAEC3.
 -- Description --
-Protection of ground water against pollution: prohibition of direct discharge into groundwater and measures to prevent indirect pollution of groundwater through discharge on the ground and percolation through the soil of dangerous substances, as listed in the Annex to Directive 80/68/EEC in its version in force on the last day of its validity, as far as it relates to agricultural activity. 
+Protection of ground water against pollution: prohibition of direct discharge into groundwater and measures to prevent indirect pollution of groundwater through discharge on the ground and percolation through the soil of dangerous substances, as listed in the Annex to Directive 80/68/EEC in its version in force on the last day of its validity, as far as it relates to agricultural activity.
 NOTE. Initial value:GAEC3</span>
       </div>
       <dl class="description">
@@ -10990,9 +11014,9 @@ NOTE. Initial value:2.01.06.02</span>
          <strong>IRI:</strong> http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-base/code#SpecieCodeValue/hordeumVulgareLBarley2RowBarley</p>
       <div class="comment">
          <span class="markdown">-- Definition --
-Hordeum vulgare L. Barley 2-row barley 
+Hordeum vulgare L. Barley 2-row barley
 -- Description --
-List of agricultural species -A   
+List of agricultural species -A
 IV. Cereals
 NOTE. Initial value: A - 75.1</span>
       </div>
@@ -11017,7 +11041,7 @@ NOTE. Initial value: A - 75.1</span>
          <span class="markdown">-- Definition --
 Hordeum vulgare L. Barley 6-row barley.
 -- Description --
-List of agricultural species -A   
+List of agricultural species -A
 IV. Cereals
 NOTE. Initial value: A - 75.2</span>
       </div>
@@ -12152,7 +12176,7 @@ Payment schema type list may be extended or shortened by MS.</span>
          <strong>IRI:</strong> http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-base/code#VarietalNameValue</p>
       <div class="comment">
          <span class="markdown">-- Definition --
-List of varietal names within vegetable and agricultural plant species. 
+List of varietal names within vegetable and agricultural plant species.
 -- Desription --
 Common catalogue of varieties of agricultural plant species. Fifth supplement to the 29th complete edition (2011/C 168 A/01).
 Common catalogue of varieties of vegetable species. 32nd complete edition (2013/C 312 A/01).
@@ -12179,16 +12203,16 @@ NOTE. CODE LIST IS NOT FINISHED. ONLY SOME EXAMPLES ARE PROVIDED.</span>
          <strong>IRI:</strong> http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-base/code#SpecieCodeValue</p>
       <div class="comment">
          <span class="markdown">-- Definition --
-List of vegetable and agricultural plant species (aggregate of a varieties). 
+List of vegetable and agricultural plant species (aggregate of a varieties).
 -- Description --
 A culture of any of the different genera defined in the botanical classification of crops. In this case code list consist of binomial names of species from the taxonomy of Linnaeus (classification for plants).
 NOTE. Common catalogue of varieties of agricultural plant species. Fifth supplement to the 29th complete edition (2011/C 168 A/01)
 List of agricultural species -A
 I. Beet
 II. Fodder plants
-III. Oil and fibre plants    
+III. Oil and fibre plants
 IV. Cereals
-V. Potatoes 
+V. Potatoes
 NOTE. Common catalogue of varieties of vegetable species. 32nd complete edition (2013/C 312 A/01)
 List of vegetable species - H</span>
       </div>
@@ -12507,7 +12531,7 @@ NOTE. Initial value:C1415</span>
 Mandatory
 
 --Definition--
-Requirement that shall be observed in all cases. 
+Requirement that shall be observed in all cases.
 
 --Description--
 This has to be fulfilled for conformance.</span>
@@ -13360,7 +13384,7 @@ Notifications relating to the  measures related to operations financed by the Fu
 -- Description --
 In addition to the provisions laid down in the sectoral Regulations, Member States shall send to the Commission the information, declarations and documents:  for measures relating to operations financed by the Funds:
 (c)(i) declarations of expenditure, which also act as payment requests, signed by the accredited paying agency or the accredited coordinating body and accompanied by the requisite information;
-(c)(ii) estimates of their financial requirements, with regard to the EAGF and, with regard to the EAFRD, an update of estimated declarations of expenditure which will be submitted during the year and estimated declarations of 
+(c)(ii) estimates of their financial requirements, with regard to the EAGF and, with regard to the EAFRD, an update of estimated declarations of expenditure which will be submitted during the year and estimated declarations of
 expenditure in respect of the following financial year;
 (c)(iii) the management declaration and the annual accounts of the accredited paying agencies;
 (c)(iv) an annual summary of the results of all available audits and checks carried out in accordance with the schedule and detailed provisions laid down in the sector specific rules.
@@ -13511,7 +13535,7 @@ NOTE.104</span>
          <span class="markdown">-- Definition --
 Notifications relating to the implementation of GAEC and FAS.
 -- Description --
-Member States shall inform the Commission in detail of the measures taken to implement the good agricultural and environmental condition referred to in Article 94 and the details of the farm advisory system referred to in Title 
+Member States shall inform the Commission in detail of the measures taken to implement the good agricultural and environmental condition referred to in Article 94 and the details of the farm advisory system referred to in Title
 III.
 NOTE.1012</span>
       </div>
@@ -14235,7 +14259,7 @@ List of possible ordinal number values used for date identification.</span>
          <span class="markdown">-- Definition --
 Oryza sativa L. Rice.
 -- Description --
-List of agricultural species -A   
+List of agricultural species -A
 IV. Cereals
 NOTE. Initial value: A - 76.</span>
       </div>
@@ -14811,7 +14835,7 @@ NOTE. Initial value:2.01.06.08</span>
          <strong>IRI:</strong> http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-base/code#CropItemCodeValue/otherOilSeedCropsNec</p>
       <div class="comment">
          <span class="markdown">-- Definition --
-|||Other oil seed crops n.e.c. 
+|||Other oil seed crops n.e.c.
 -- Description --
 Cereals and main crops - C
 NOTE. Initial value:C1480</span>
@@ -15003,7 +15027,7 @@ NOTE. Initial value:C1884</span>
          <strong>IRI:</strong> http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-base/code#CropItemCodeValue/otherRootCropsNec</p>
       <div class="comment">
          <span class="markdown">-- Definition --
-||Other root crops n.e.c. 
+||Other root crops n.e.c.
 -- Description --
 Cereals and main crops - C
 NOTE. Initial value:C1380</span>
@@ -15246,7 +15270,7 @@ NOTE. Initial value:2.03.01</span>
       <p>
          <strong>IRI:</strong> http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-base/code#SupportSchemeTypeValue/paymentForAgriculturalPracticesBeneficialForTheClimateAndTheEnvironment</p>
       <div class="comment">
-         <span class="markdown">Payment for agricultural practices beneficial for the climate and the environment 
+         <span class="markdown">Payment for agricultural practices beneficial for the climate and the environment
 
 Farmers entitled to a payment under the basic payment scheme or the single area payment scheme shall observe, on all their eligible hectares within the meaning of Article 32(2) to (5), the agricultural practices beneficial for the climate and the environment referred to in paragraph 2 of this Article or the equivalent practices referred to in paragraph 3 of this Article.
 
@@ -15272,7 +15296,7 @@ According to Title III, Chapter 3 of 1307/2013 Regulation  it is a decoupled pay
       <div class="comment">
          <span class="markdown">Payment for areas with natural constraints
 
-Payment to farmers who are entitled to BPS/SAPS and whose holdings are fully or partly situated in areas with natural constraints designated by Member States in accordance with Article 32(1) of Regulation (EU) No 1305/2013. 
+Payment to farmers who are entitled to BPS/SAPS and whose holdings are fully or partly situated in areas with natural constraints designated by Member States in accordance with Article 32(1) of Regulation (EU) No 1305/2013.
 
 NOTE
 Rules in Title III, Chapter 4 of R 1307/2013</span>
@@ -15709,7 +15733,7 @@ NOTE. Initial value: A - 23.</span>
          <span class="markdown">-- Definition --
 Phalaris canariensis L. Canary grass.
 -- Description --
-List of agricultural species -A   
+List of agricultural species -A
 IV. Cereals
 NOTE. Initial value: A - 77.</span>
       </div>
@@ -16881,9 +16905,9 @@ NOTE. Initial value:C1791</span>
 Conditional payment scheme decided by MS to grant an annual payment to farmers who are entitled to a payment under the basic payment scheme or under the single area payment scheme.
 
 Art. 4 of Title III, Chapter 2 of R 1307/2013 sets the calculation method:
-It shall be calculated 
+It shall be calculated
 	- each year by Member States
-	- by multiplying a figure to be set by the Member State, which shall not be higher than 65 % of the national or regional average payment per hectare, by the number of payment entitlements or by the number of eligible hectares. 
+	- by multiplying a figure to be set by the Member State, which shall not be higher than 65 % of the national or regional average payment per hectare, by the number of payment entitlements or by the number of eligible hectares.
 The number of such payment entitlements or hectares shall not exceed a maximum to be set by Member States which shall not be higher than 30 hectares or the average size of agricultural holdings set out in Annex VIII if that average size exceeds 30 hectares in the Member State concerned.
 
 NOTE
@@ -17400,7 +17424,7 @@ NOTE. Initial value: H - 31.</span>
          <span class="markdown">-- Definition --
 Secale cereale L. Rye.
 -- Description --
-List of agricultural species -A   
+List of agricultural species -A
 IV. Cereals
 NOTE. Initial value: A - 78.</span>
       </div>
@@ -17565,7 +17589,7 @@ NOTE. Initial value: A - 70.</span>
       <p>
          <strong>IRI:</strong> http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-base/code#SupportSchemeTypeValue/singleAreaPaymentScheme</p>
       <div class="comment">
-         <span class="markdown">Single area payment scheme 
+         <span class="markdown">Single area payment scheme
 
 Payment scheme based on the single area payment granted on an annual basis for each eligible hectare declared by the farmer in accordance with point (a) of the first subparagraph of Article 72(1) of Regulation (EU) No 1306/2013.
 
@@ -17688,7 +17712,7 @@ NOTE. Initial value: H - 37.8</span>
          <span class="markdown">-- Definition --
 Solanum tuberosum L. Potato.
 -- Description --
-List of agricultural species -A   
+List of agricultural species -A
 V. Potatoes
 NOTE. Initial value: A - 87.</span>
       </div>
@@ -17737,7 +17761,7 @@ NOTE. Initial value:C1211</span>
          <span class="markdown">-- Definition --
 Sorghum bicolor (L.) Moench Sorghum.
 -- Description --
-List of agricultural species -A   
+List of agricultural species -A
 IV. Cereals
 NOTE. Initial value: A - 79.</span>
       </div>
@@ -17762,7 +17786,7 @@ NOTE. Initial value: A - 79.</span>
          <span class="markdown">-- Definition --
 Sorghum bicolor (L.) Moench × Sorghum sudanense (Piper) Stapf. Hybrids resulting from the crossing of Sorghum bicolor and Sorghum sudanense.
 -- Description --
-List of agricultural species -A   
+List of agricultural species -A
 IV. Cereals
 NOTE. Initial value: A - 81.</span>
       </div>
@@ -17787,7 +17811,7 @@ NOTE. Initial value: A - 81.</span>
          <span class="markdown">-- Definition --
 Sorghum sudanense L. Sudan grass.
 -- Description --
-List of agricultural species -A   
+List of agricultural species -A
 IV. Cereals
 NOTE. Initial value: A - 80.</span>
       </div>
@@ -18026,7 +18050,7 @@ NOTE. Initial value:C1152</span>
          <strong>IRI:</strong> http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-base/code#SpecieCodeValue/sspAlternativum</p>
       <div class="comment">
          <span class="markdown">-- Definition --
-Lolium multiflorum Lam. Italian ryegrass (including Westerwold ryegrass) Ssp. alternativum. 
+Lolium multiflorum Lam. Italian ryegrass (including Westerwold ryegrass) Ssp. alternativum.
 -- Description --
 List of agricultural species -A
 II. Fodder plants
@@ -18112,7 +18136,7 @@ Valid
 Status of an object according to the state machine diagram.
 
 -- Description --
-The most current state of the object that shall be used by the users. 
+The most current state of the object that shall be used by the users.
 
 NOTE 1: It is a current object whose life-cycle has not ended.
 FeatureLevelMetadata.endLifespanVersion=Null
@@ -18998,7 +19022,7 @@ NOTE. Initial value:C1212</span>
          <span class="markdown">-- Definition --
 Triticum aestivum L. Wheat.
 -- Description --
-List of agricultural species -A   
+List of agricultural species -A
 IV. Cereals
 NOTE. Initial value: A - 83.</span>
       </div>
@@ -19023,7 +19047,7 @@ NOTE. Initial value: A - 83.</span>
          <span class="markdown">-- Definition --
 Triticum durum Desf. Durum wheat.
 -- Description --
-List of agricultural species -A   
+List of agricultural species -A
 IV. Cereals
 NOTE. Initial value: A - 84.</span>
       </div>
@@ -19048,7 +19072,7 @@ NOTE. Initial value: A - 84.</span>
          <span class="markdown">-- Definition --
 Triticum spelta L. Spelt wheat.
 -- Description --
-List of agricultural species -A   
+List of agricultural species -A
 IV. Cereals
 NOTE. Initial value: A - 85.</span>
       </div>
@@ -19219,7 +19243,7 @@ EXAMPLE 1. Schema element objects are:
 - constraints
 - value types (etc).
 
-EXAMPLE 2. Data objects are specific instances of a feature or data types (e.g. RP, farmer, anomaly, payment. The change may be applied to 
+EXAMPLE 2. Data objects are specific instances of a feature or data types (e.g. RP, farmer, anomaly, payment. The change may be applied to
 - the instance as a whole (depreciation of an obsolete instance or introduction of a new instance),
 - a specific value (attribute) of an instance.
 
@@ -19250,7 +19274,7 @@ Under cross-check
 Status of an object according to the state machine diagram.
 
 -- Description --
-Whenever a transaction in the information system is performed, the system shall be checked for integrity of the schema and the consistency of data. 
+Whenever a transaction in the information system is performed, the system shall be checked for integrity of the schema and the consistency of data.
 
 NOTE 1. Cross checks are also the tools to find further issues/anomalies. When a new upgrade issue/anomaly is found, the "open" value shall be assigned and the full life cycle assessment of the object has to be performed.</span>
       </div>
@@ -19281,7 +19305,7 @@ Status of an object according to the state machine diagram.
 -- Description --
 Preliminary assessment about the impact of the Upgrade issue or the anomaly. This value should be assigned in the phase when
 - supporting evidences are collected  and/or
-- checks for issue/anomaly duplicates are performed.  
+- checks for issue/anomaly duplicates are performed.
 The assessment may conclude that no modification to the existing data is needed, or that the reported change request has to be further processed.</span>
       </div>
       <dl class="description">
@@ -19934,26 +19958,26 @@ NOTE. Initial value:2.04.04</span>
          <span class="markdown">Voluntary coupled support
 
 Member States may grant coupled support to farmers  for
-	- cereals, 
-	- oilseeds, 
-	- protein crops, 
-	- grain legumes, 
-	- flax, 
-	- hemp, 
-	- rice, 
-	- nuts, 
-	- starch potato, 
-	- milk and milk products, 
-	- seeds, 
-	- sheepmeat and goatmeat, 
-	- beef and veal, 
-	- olive oil, 
-	- silkworms, 
-	- dried fodder, 
-	- hops, 
-	- sugar beet, 
-	- cane and chicory, 
-	- fruit and vegetables and 
+	- cereals,
+	- oilseeds,
+	- protein crops,
+	- grain legumes,
+	- flax,
+	- hemp,
+	- rice,
+	- nuts,
+	- starch potato,
+	- milk and milk products,
+	- seeds,
+	- sheepmeat and goatmeat,
+	- beef and veal,
+	- olive oil,
+	- silkworms,
+	- dried fodder,
+	- hops,
+	- sugar beet,
+	- cane and chicory,
+	- fruit and vegetables and
 	- short rotation coppice.
 
 NOTE
@@ -20313,7 +20337,7 @@ NOTE. Initial value:C2371</span>
          <span class="markdown">-- Definition --
 Zea mays L. Maize.
 -- Description --
-List of agricultural species -A   
+List of agricultural species -A
 IV. Cereals
 NOTE. Initial value: A - 86.</span>
       </div>
@@ -20411,7 +20435,7 @@ NOTE. Initial value: A - 19.</span>
          <span class="markdown">-- Definition --
 ×Triticosecale Wittm. ex A. Camus Hybrids resulting from the crossing of a species of the genus Triticum and a species of the genus Secale.
 -- Description --
-List of agricultural species -A   
+List of agricultural species -A
 IV. Cereals
 NOTE. Initial value: A - 82.</span>
       </div>
@@ -20432,13 +20456,13 @@ NOTE. Initial value: A - 82.</span>
 </div>
 </div>
 </div>
-    
 
-<!--REFERENCES SECTION-->
+
+<!--REFERENCES SECTION
   <div id="references">
 <h2 id="ref" class="list">References <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
 <span class="markdown">
-Add your references here. It is recommended to have them as a list.</span>
+Add your references here. It is recommended to have them as a list.</span>-->
 
 </div>
 <div id="acknowledgments">

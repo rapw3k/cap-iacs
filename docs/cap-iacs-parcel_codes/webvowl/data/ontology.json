@@ -838,58 +838,6 @@
     "attributes" : [ "external" ],
     "id" : "3"
   }, {
-    "iri" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-parcel#LimitingQualityValue",
-    "baseIri" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-parcel",
-    "instances" : 0,
-    "label" : {
-      "IRI-based" : "LimitingQualityValue"
-    },
-    "individuals" : [ {
-      "iri" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-parcel/code#LimitingQualityValue/12.50",
-      "baseIri" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-parcel/code",
-      "annotations" : {
-        "inScheme" : [ {
-          "identifier" : "inScheme",
-          "language" : "undefined",
-          "value" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-parcel/code#LimitingQualityValue",
-          "type" : "iri"
-        } ],
-        "definition" : [ {
-          "identifier" : "definition",
-          "language" : "en",
-          "value" : "--Name--\r\n12.50\r\n\r\n-- Definition --\r\nLimiting quality value LQ=12,50.\r\n\r\n-- Description --\r\nValue defined by ISO 2859-2:1985. This value is applicable for all assessments (area and contamination conformity, item conformity) by exclusion of critical defect conformity. It expresses and indexes a quality expectation of 5% error rate or better.",
-          "type" : "label"
-        } ]
-      },
-      "labels" : {
-        "IRI-based" : "LimitingQualityValue/12.50",
-        "en" : "12.50"
-      }
-    }, {
-      "iri" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-parcel/code#LimitingQualityValue/2.00",
-      "baseIri" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-parcel/code",
-      "annotations" : {
-        "inScheme" : [ {
-          "identifier" : "inScheme",
-          "language" : "undefined",
-          "value" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-parcel/code#LimitingQualityValue",
-          "type" : "iri"
-        } ],
-        "definition" : [ {
-          "identifier" : "definition",
-          "language" : "en",
-          "value" : "--Name--\r\n2.00\r\n\r\n-- Definition --\r\nLimiting quality value LQ=2,0\r\n\r\n-- Description --\r\nValue defined by ISO 2859-2:1985. This value is applicable for assessment of critical defects. It expresses and indexes a quality expectation of 1% error rate or better.",
-          "type" : "label"
-        } ]
-      },
-      "labels" : {
-        "IRI-based" : "LimitingQualityValue/2.00",
-        "en" : "2.00"
-      }
-    } ],
-    "attributes" : [ "external" ],
-    "id" : "4"
-  }, {
     "iri" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-parcel#DataQualityMeasureValueStructureValue",
     "baseIri" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-parcel",
     "instances" : 0,
@@ -1024,195 +972,59 @@
       }
     } ],
     "attributes" : [ "external" ],
+    "id" : "4"
+  }, {
+    "iri" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-parcel#LimitingQualityValue",
+    "baseIri" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-parcel",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "LimitingQualityValue"
+    },
+    "individuals" : [ {
+      "iri" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-parcel/code#LimitingQualityValue/12.50",
+      "baseIri" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-parcel/code",
+      "annotations" : {
+        "inScheme" : [ {
+          "identifier" : "inScheme",
+          "language" : "undefined",
+          "value" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-parcel/code#LimitingQualityValue",
+          "type" : "iri"
+        } ],
+        "definition" : [ {
+          "identifier" : "definition",
+          "language" : "en",
+          "value" : "--Name--\r\n12.50\r\n\r\n-- Definition --\r\nLimiting quality value LQ=12,50.\r\n\r\n-- Description --\r\nValue defined by ISO 2859-2:1985. This value is applicable for all assessments (area and contamination conformity, item conformity) by exclusion of critical defect conformity. It expresses and indexes a quality expectation of 5% error rate or better.",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "LimitingQualityValue/12.50",
+        "en" : "12.50"
+      }
+    }, {
+      "iri" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-parcel/code#LimitingQualityValue/2.00",
+      "baseIri" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-parcel/code",
+      "annotations" : {
+        "inScheme" : [ {
+          "identifier" : "inScheme",
+          "language" : "undefined",
+          "value" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-parcel/code#LimitingQualityValue",
+          "type" : "iri"
+        } ],
+        "definition" : [ {
+          "identifier" : "definition",
+          "language" : "en",
+          "value" : "--Name--\r\n2.00\r\n\r\n-- Definition --\r\nLimiting quality value LQ=2,0\r\n\r\n-- Description --\r\nValue defined by ISO 2859-2:1985. This value is applicable for assessment of critical defects. It expresses and indexes a quality expectation of 1% error rate or better.",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "LimitingQualityValue/2.00",
+        "en" : "2.00"
+      }
+    } ],
+    "attributes" : [ "external" ],
     "id" : "5"
-  }, {
-    "iri" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-parcel#DataQualityMeasureTypeIuiEfaValue",
-    "baseIri" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-parcel",
-    "instances" : 0,
-    "label" : {
-      "IRI-based" : "DataQualityMeasureTypeIuiEfaValue"
-    },
-    "individuals" : [ {
-      "iri" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-parcel/code#DataQualityMeasureTypeIuiEfaValue/efaClassificationCorrectness",
-      "baseIri" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-parcel/code",
-      "annotations" : {
-        "inScheme" : [ {
-          "identifier" : "inScheme",
-          "language" : "undefined",
-          "value" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-parcel/code#DataQualityMeasureTypeIuiEfaValue",
-          "type" : "iri"
-        } ],
-        "definition" : [ {
-          "identifier" : "definition",
-          "language" : "en",
-          "value" : "--Name--\r\nEFA classification correctness\r\n\r\n- Definition --\r\nThis is a placeholder only; currently not to be implemented.\r\n\r\nThematic classification correctness. The assignment of an item to a certain class can either be correct or incorrect. [ISO 19157].\r\n\r\n-- Description --\r\nThematic classification correctness applied to the EFA.\r\nNOTE. Must have separate DQM_Measure description.",
-          "type" : "label"
-        } ]
-      },
-      "labels" : {
-        "IRI-based" : "DataQualityMeasureTypeIuiEfaValue/efaClassificationCorrectness",
-        "en" : "EFA classification correctness"
-      }
-    }, {
-      "iri" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-parcel/code#DataQualityMeasureTypeIuiEfaValue/efaRelativeAreaConformance",
-      "baseIri" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-parcel/code",
-      "annotations" : {
-        "inScheme" : [ {
-          "identifier" : "inScheme",
-          "language" : "undefined",
-          "value" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-parcel/code#DataQualityMeasureTypeIuiEfaValue",
-          "type" : "iri"
-        } ],
-        "definition" : [ {
-          "identifier" : "definition",
-          "language" : "en",
-          "value" : "--Name--\r\nEFA relative area correctness\r\n\r\n-- Definition --\r\nThis is a placeholder only; currently not to be implemented.\r\n\r\nConformance statement applicable on the value of relative area correctness.\r\n\r\n-- Description --\r\nThe conformance thresholds are area dependent.\r\nNOTE. Must have separate DQM_Measure description.",
-          "type" : "label"
-        } ]
-      },
-      "labels" : {
-        "IRI-based" : "DataQualityMeasureTypeIuiEfaValue/efaRelativeAreaConformance",
-        "en" : "EFA relative area conformance"
-      }
-    } ],
-    "attributes" : [ "external" ],
-    "id" : "6"
-  }, {
-    "iri" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-parcel#DataQualityMeasureTypeIuiValue",
-    "baseIri" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-parcel",
-    "instances" : 0,
-    "label" : {
-      "IRI-based" : "DataQualityMeasureTypeIuiValue"
-    },
-    "individuals" : [ {
-      "iri" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-parcel/code#DataQualityMeasureTypeIuiValue/areaConformance",
-      "baseIri" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-parcel/code",
-      "annotations" : {
-        "inScheme" : [ {
-          "identifier" : "inScheme",
-          "language" : "undefined",
-          "value" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-parcel/code#DataQualityMeasureTypeIuiValue",
-          "type" : "iri"
-        } ],
-        "definition" : [ {
-          "identifier" : "definition",
-          "language" : "en",
-          "value" : "--Name--\r\nArea conformance\r\n\r\n--Definition --\r\nConformance statement based on the value of relative area correctness. \r\n\r\n-- Description --\r\nThe conformance thresholds are area dependent:\r\n- area >5000 sq.m. : 97,00% - 103,00% conforming;\r\n- 2000 sq.m.<area<5000 sq.m.: 95% - 105% conforming;\r\n- area<2000 sq.m.: 93%-107% conforming.\r\n\r\nMeasure identifier: I_ACON\r\nName: Item area conformance\r\nAlias: Parcel area conformance\r\nElement name: Domain consistency\r\nBasic measure: Error indicator\r\nValue type: Boolean\r\nValue Structure: n.a.\r\n\r\nNOTE. Previously  it was part of RP conformance - code list for conformance level.",
-          "type" : "label"
-        } ]
-      },
-      "labels" : {
-        "IRI-based" : "DataQualityMeasureTypeIuiValue/areaConformance",
-        "en" : "Area conformance"
-      }
-    }, {
-      "iri" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-parcel/code#DataQualityMeasureTypeIuiValue/itemContaminationConformance",
-      "baseIri" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-parcel/code",
-      "annotations" : {
-        "inScheme" : [ {
-          "identifier" : "inScheme",
-          "language" : "undefined",
-          "value" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-parcel/code#DataQualityMeasureTypeIuiValue",
-          "type" : "iri"
-        } ],
-        "definition" : [ {
-          "identifier" : "definition",
-          "language" : "en",
-          "value" : "--Name--\r\nItem contamination conformance\r\n\r\n-- Definition --\r\nConformance statement on the value of contaminations.\r\n\r\n-- Description --\r\nThe item is conforming when t is contamination free, or the contaminations found are waivered. \r\n\r\nMeasure identifier: I_CCON\r\nName: Item contamination conformance\r\nAlias: Parcel contamination conformance\r\nElement name: Domain consistency\r\nBasic measure: Error indicator\r\nValue type: Boolean\r\nValue Structure: n.a.",
-          "type" : "label"
-        } ]
-      },
-      "labels" : {
-        "IRI-based" : "DataQualityMeasureTypeIuiValue/itemContaminationConformance",
-        "en" : "Contamination conformance"
-      }
-    }, {
-      "iri" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-parcel/code#DataQualityMeasureTypeIuiValue/relativeAreaCorrectness",
-      "baseIri" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-parcel/code",
-      "annotations" : {
-        "inScheme" : [ {
-          "identifier" : "inScheme",
-          "language" : "undefined",
-          "value" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-parcel/code#DataQualityMeasureTypeIuiValue",
-          "type" : "iri"
-        } ],
-        "definition" : [ {
-          "identifier" : "definition",
-          "language" : "en",
-          "value" : "--Name--\r\nRelative area correctness\r\n\r\n-- Definition --\r\nAbility of the reference area to quantify the area of all eligible land cover types present in the inspected item. \r\n\r\n-- Description --\r\nMeasure identifier: I_RAC\r\nName: Relative area correctness\r\nAlias: Relative area accuracy\r\nElement name: Relative or internal accuracy\r\nBasic measure: Error rate\r\nValue type: Measure. Result output shall be provided in %.\r\nValue Structure: n.a.\r\n\r\nNOTE. Previously named: 10101 RP_MEA.",
-          "type" : "label"
-        } ]
-      },
-      "labels" : {
-        "IRI-based" : "DataQualityMeasureTypeIuiValue/relativeAreaCorrectness",
-        "en" : "Relative area correctness"
-      }
-    }, {
-      "iri" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-parcel/code#DataQualityMeasureTypeIuiValue/areaDifferenceCorrectness",
-      "baseIri" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-parcel/code",
-      "annotations" : {
-        "inScheme" : [ {
-          "identifier" : "inScheme",
-          "language" : "undefined",
-          "value" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-parcel/code#DataQualityMeasureTypeIuiValue",
-          "type" : "iri"
-        } ],
-        "definition" : [ {
-          "identifier" : "definition",
-          "language" : "en",
-          "value" : "--Name--\r\nArea difference correctness\r\n\r\n-- Definition --\r\nDifference between eligible recorded area and observed area.\r\n\r\n-- Description --\r\nMeasure identifier: I_ADC\r\nName: Area difference correctness\r\nAlias: Area difference accuracy\r\nElement name: Relative  or internal accuracy\r\nValue type: Measure\r\nValue Structure: n.a.\r\n\r\nNOTE 1: This measure is applicable for parcels >10000 sq.m.\r\n\r\nNOTE 2: Previously named: RP conformance (area purity) v2, 10102 RP_CNF.",
-          "type" : "label"
-        } ]
-      },
-      "labels" : {
-        "IRI-based" : "DataQualityMeasureTypeIuiValue/areaDifferenceCorrectness",
-        "en" : "Area difference correctness"
-      }
-    }, {
-      "iri" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-parcel/code#DataQualityMeasureTypeIuiValue/itemCriticalDefectConformance",
-      "baseIri" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-parcel/code",
-      "annotations" : {
-        "inScheme" : [ {
-          "identifier" : "inScheme",
-          "language" : "undefined",
-          "value" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-parcel/code#DataQualityMeasureTypeIuiValue",
-          "type" : "iri"
-        } ],
-        "definition" : [ {
-          "identifier" : "definition",
-          "language" : "en",
-          "value" : "--Name--\r\nCritical defect conformance\r\n\r\n--Definition --\r\nConformance statement based on the detection of critical defect conditions.\r\n\r\n-- Description --\r\nThe item under inspection is conforming when no critical defect occurs (i.e. the multiplicity of the association role from ItemUnderInspection to CriticalDefect is zero).\r\n\r\nMeasure identifier: I_CDCON\r\nName: Item critical defect conformance\r\nAlias: Critical defect conformance\r\nElement name: Domain consistency\r\nValue type: Boolean\r\nValue Structure: n.a.",
-          "type" : "label"
-        } ]
-      },
-      "labels" : {
-        "IRI-based" : "DataQualityMeasureTypeIuiValue/itemCriticalDefectConformance",
-        "en" : "Critical defect conformance"
-      }
-    }, {
-      "iri" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-parcel/code#DataQualityMeasureTypeIuiValue/itemConformance",
-      "baseIri" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-parcel/code",
-      "annotations" : {
-        "inScheme" : [ {
-          "identifier" : "inScheme",
-          "language" : "undefined",
-          "value" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-parcel/code#DataQualityMeasureTypeIuiValue",
-          "type" : "iri"
-        } ],
-        "definition" : [ {
-          "identifier" : "definition",
-          "language" : "en",
-          "value" : "--Name--\r\nItem conformance\r\n\r\n-- Definition --\r\nConformance statement on the item under inspection.\r\n\r\n-- Description --\r\nThe item under inspection is conforming when no associated feature type is misclassified, it is contamination free or the contaminations found are waivered, and it is conforming in terms of area. The values of classificationCorrectness, waivered and areaConformance shall be true.\r\nNOTE: since the conformance in term of critical defect is evaluated separately, the scope of this measure does not contain critical defects. \r\n\r\nMeasure identifier: I_CON\r\nName: Item conformance\r\nAlias: Parcel conformance\r\nElement name: Domain consistency\r\nBasic measure: Error indicator\r\nValue type: Boolean\r\nValue Structure: n.a.",
-          "type" : "label"
-        } ]
-      },
-      "labels" : {
-        "IRI-based" : "DataQualityMeasureTypeIuiValue/itemConformance",
-        "en" : "Parcel conformance"
-      }
-    } ],
-    "attributes" : [ "external" ],
-    "id" : "7"
   }, {
     "iri" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-parcel#AgriculturalAreaTypeValue",
     "baseIri" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-parcel",
@@ -1327,6 +1139,194 @@
       }
     } ],
     "attributes" : [ "external" ],
+    "id" : "6"
+  }, {
+    "iri" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-parcel#DataQualityMeasureTypeIuiEfaValue",
+    "baseIri" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-parcel",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "DataQualityMeasureTypeIuiEfaValue"
+    },
+    "individuals" : [ {
+      "iri" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-parcel/code#DataQualityMeasureTypeIuiEfaValue/efaClassificationCorrectness",
+      "baseIri" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-parcel/code",
+      "annotations" : {
+        "inScheme" : [ {
+          "identifier" : "inScheme",
+          "language" : "undefined",
+          "value" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-parcel/code#DataQualityMeasureTypeIuiEfaValue",
+          "type" : "iri"
+        } ],
+        "definition" : [ {
+          "identifier" : "definition",
+          "language" : "en",
+          "value" : "--Name--\r\nEFA classification correctness\r\n\r\n- Definition --\r\nThis is a placeholder only; currently not to be implemented.\r\n\r\nThematic classification correctness. The assignment of an item to a certain class can either be correct or incorrect. [ISO 19157].\r\n\r\n-- Description --\r\nThematic classification correctness applied to the EFA.\r\nNOTE. Must have separate DQM_Measure description.",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "DataQualityMeasureTypeIuiEfaValue/efaClassificationCorrectness",
+        "en" : "EFA classification correctness"
+      }
+    }, {
+      "iri" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-parcel/code#DataQualityMeasureTypeIuiEfaValue/efaRelativeAreaConformance",
+      "baseIri" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-parcel/code",
+      "annotations" : {
+        "inScheme" : [ {
+          "identifier" : "inScheme",
+          "language" : "undefined",
+          "value" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-parcel/code#DataQualityMeasureTypeIuiEfaValue",
+          "type" : "iri"
+        } ],
+        "definition" : [ {
+          "identifier" : "definition",
+          "language" : "en",
+          "value" : "--Name--\r\nEFA relative area correctness\r\n\r\n-- Definition --\r\nThis is a placeholder only; currently not to be implemented.\r\n\r\nConformance statement applicable on the value of relative area correctness.\r\n\r\n-- Description --\r\nThe conformance thresholds are area dependent.\r\nNOTE. Must have separate DQM_Measure description.",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "DataQualityMeasureTypeIuiEfaValue/efaRelativeAreaConformance",
+        "en" : "EFA relative area conformance"
+      }
+    } ],
+    "attributes" : [ "external" ],
+    "id" : "7"
+  }, {
+    "iri" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-parcel#DataQualityMeasureTypeIuiValue",
+    "baseIri" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-parcel",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "DataQualityMeasureTypeIuiValue"
+    },
+    "individuals" : [ {
+      "iri" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-parcel/code#DataQualityMeasureTypeIuiValue/areaConformance",
+      "baseIri" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-parcel/code",
+      "annotations" : {
+        "inScheme" : [ {
+          "identifier" : "inScheme",
+          "language" : "undefined",
+          "value" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-parcel/code#DataQualityMeasureTypeIuiValue",
+          "type" : "iri"
+        } ],
+        "definition" : [ {
+          "identifier" : "definition",
+          "language" : "en",
+          "value" : "--Name--\r\nArea conformance\r\n\r\n--Definition --\r\nConformance statement based on the value of relative area correctness. \r\n\r\n-- Description --\r\nThe conformance thresholds are area dependent:\r\n- area >5000 sq.m. : 97,00% - 103,00% conforming;\r\n- 2000 sq.m.<area<5000 sq.m.: 95% - 105% conforming;\r\n- area<2000 sq.m.: 93%-107% conforming.\r\n\r\nMeasure identifier: I_ACON\r\nName: Item area conformance\r\nAlias: Parcel area conformance\r\nElement name: Domain consistency\r\nBasic measure: Error indicator\r\nValue type: Boolean\r\nValue Structure: n.a.\r\n\r\nNOTE. Previously  it was part of RP conformance - code list for conformance level.",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "DataQualityMeasureTypeIuiValue/areaConformance",
+        "en" : "Area conformance"
+      }
+    }, {
+      "iri" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-parcel/code#DataQualityMeasureTypeIuiValue/itemContaminationConformance",
+      "baseIri" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-parcel/code",
+      "annotations" : {
+        "inScheme" : [ {
+          "identifier" : "inScheme",
+          "language" : "undefined",
+          "value" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-parcel/code#DataQualityMeasureTypeIuiValue",
+          "type" : "iri"
+        } ],
+        "definition" : [ {
+          "identifier" : "definition",
+          "language" : "en",
+          "value" : "--Name--\r\nItem contamination conformance\r\n\r\n-- Definition --\r\nConformance statement on the value of contaminations.\r\n\r\n-- Description --\r\nThe item is conforming when t is contamination free, or the contaminations found are waivered. \r\n\r\nMeasure identifier: I_CCON\r\nName: Item contamination conformance\r\nAlias: Parcel contamination conformance\r\nElement name: Domain consistency\r\nBasic measure: Error indicator\r\nValue type: Boolean\r\nValue Structure: n.a.",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "DataQualityMeasureTypeIuiValue/itemContaminationConformance",
+        "en" : "Contamination conformance"
+      }
+    }, {
+      "iri" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-parcel/code#DataQualityMeasureTypeIuiValue/relativeAreaCorrectness",
+      "baseIri" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-parcel/code",
+      "annotations" : {
+        "inScheme" : [ {
+          "identifier" : "inScheme",
+          "language" : "undefined",
+          "value" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-parcel/code#DataQualityMeasureTypeIuiValue",
+          "type" : "iri"
+        } ],
+        "definition" : [ {
+          "identifier" : "definition",
+          "language" : "en",
+          "value" : "--Name--\r\nRelative area correctness\r\n\r\n-- Definition --\r\nAbility of the reference area to quantify the area of all eligible land cover types present in the inspected item. \r\n\r\n-- Description --\r\nMeasure identifier: I_RAC\r\nName: Relative area correctness\r\nAlias: Relative area accuracy\r\nElement name: Relative or internal accuracy\r\nBasic measure: Error rate\r\nValue type: Measure. Result output shall be provided in %.\r\nValue Structure: n.a.\r\n\r\nNOTE. Previously named: 10101 RP_MEA.",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "DataQualityMeasureTypeIuiValue/relativeAreaCorrectness",
+        "en" : "Relative area correctness"
+      }
+    }, {
+      "iri" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-parcel/code#DataQualityMeasureTypeIuiValue/itemCriticalDefectConformance",
+      "baseIri" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-parcel/code",
+      "annotations" : {
+        "inScheme" : [ {
+          "identifier" : "inScheme",
+          "language" : "undefined",
+          "value" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-parcel/code#DataQualityMeasureTypeIuiValue",
+          "type" : "iri"
+        } ],
+        "definition" : [ {
+          "identifier" : "definition",
+          "language" : "en",
+          "value" : "--Name--\r\nCritical defect conformance\r\n\r\n--Definition --\r\nConformance statement based on the detection of critical defect conditions.\r\n\r\n-- Description --\r\nThe item under inspection is conforming when no critical defect occurs (i.e. the multiplicity of the association role from ItemUnderInspection to CriticalDefect is zero).\r\n\r\nMeasure identifier: I_CDCON\r\nName: Item critical defect conformance\r\nAlias: Critical defect conformance\r\nElement name: Domain consistency\r\nValue type: Boolean\r\nValue Structure: n.a.",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "DataQualityMeasureTypeIuiValue/itemCriticalDefectConformance",
+        "en" : "Critical defect conformance"
+      }
+    }, {
+      "iri" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-parcel/code#DataQualityMeasureTypeIuiValue/areaDifferenceCorrectness",
+      "baseIri" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-parcel/code",
+      "annotations" : {
+        "inScheme" : [ {
+          "identifier" : "inScheme",
+          "language" : "undefined",
+          "value" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-parcel/code#DataQualityMeasureTypeIuiValue",
+          "type" : "iri"
+        } ],
+        "definition" : [ {
+          "identifier" : "definition",
+          "language" : "en",
+          "value" : "--Name--\r\nArea difference correctness\r\n\r\n-- Definition --\r\nDifference between eligible recorded area and observed area.\r\n\r\n-- Description --\r\nMeasure identifier: I_ADC\r\nName: Area difference correctness\r\nAlias: Area difference accuracy\r\nElement name: Relative  or internal accuracy\r\nValue type: Measure\r\nValue Structure: n.a.\r\n\r\nNOTE 1: This measure is applicable for parcels >10000 sq.m.\r\n\r\nNOTE 2: Previously named: RP conformance (area purity) v2, 10102 RP_CNF.",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "DataQualityMeasureTypeIuiValue/areaDifferenceCorrectness",
+        "en" : "Area difference correctness"
+      }
+    }, {
+      "iri" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-parcel/code#DataQualityMeasureTypeIuiValue/itemConformance",
+      "baseIri" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-parcel/code",
+      "annotations" : {
+        "inScheme" : [ {
+          "identifier" : "inScheme",
+          "language" : "undefined",
+          "value" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-parcel/code#DataQualityMeasureTypeIuiValue",
+          "type" : "iri"
+        } ],
+        "definition" : [ {
+          "identifier" : "definition",
+          "language" : "en",
+          "value" : "--Name--\r\nItem conformance\r\n\r\n-- Definition --\r\nConformance statement on the item under inspection.\r\n\r\n-- Description --\r\nThe item under inspection is conforming when no associated feature type is misclassified, it is contamination free or the contaminations found are waivered, and it is conforming in terms of area. The values of classificationCorrectness, waivered and areaConformance shall be true.\r\nNOTE: since the conformance in term of critical defect is evaluated separately, the scope of this measure does not contain critical defects. \r\n\r\nMeasure identifier: I_CON\r\nName: Item conformance\r\nAlias: Parcel conformance\r\nElement name: Domain consistency\r\nBasic measure: Error indicator\r\nValue type: Boolean\r\nValue Structure: n.a.",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "DataQualityMeasureTypeIuiValue/itemConformance",
+        "en" : "Parcel conformance"
+      }
+    } ],
+    "attributes" : [ "external" ],
     "id" : "8"
   }, {
     "iri" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-parcel#SkippingReasonTypeValue",
@@ -1399,27 +1399,6 @@
         "en" : "Clouds or haze"
       }
     }, {
-      "iri" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-parcel/code#SkippingReasonTypeValue/missingGeometry",
-      "baseIri" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-parcel/code",
-      "annotations" : {
-        "inScheme" : [ {
-          "identifier" : "inScheme",
-          "language" : "undefined",
-          "value" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-parcel/code#SkippingReasonTypeValue",
-          "type" : "iri"
-        } ],
-        "definition" : [ {
-          "identifier" : "definition",
-          "language" : "en",
-          "value" : "--Name--\r\nMissing geometry\r\n\r\n-- Definition --\r\nIncomplete vector dataset that obstructs the inspection process.\r\n\r\n-- Description --\r\nGeometric representation of the item under is not available.\r\n\r\nNOTE: In DTS 5.3 the  value was: parcelGeometryIsNotAvailable. The coresponding\r\nrecommended coded value was T5.",
-          "type" : "label"
-        } ]
-      },
-      "labels" : {
-        "IRI-based" : "SkippingReasonTypeValue/missingGeometry",
-        "en" : "Parcel geometry missing"
-      }
-    }, {
       "iri" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-parcel/code#SkippingReasonTypeValue/missingImageCoverage",
       "baseIri" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-parcel/code",
       "annotations" : {
@@ -1439,6 +1418,27 @@
       "labels" : {
         "IRI-based" : "SkippingReasonTypeValue/missingImageCoverage",
         "en" : "Parcel not covered by image"
+      }
+    }, {
+      "iri" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-parcel/code#SkippingReasonTypeValue/missingGeometry",
+      "baseIri" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-parcel/code",
+      "annotations" : {
+        "inScheme" : [ {
+          "identifier" : "inScheme",
+          "language" : "undefined",
+          "value" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-parcel/code#SkippingReasonTypeValue",
+          "type" : "iri"
+        } ],
+        "definition" : [ {
+          "identifier" : "definition",
+          "language" : "en",
+          "value" : "--Name--\r\nMissing geometry\r\n\r\n-- Definition --\r\nIncomplete vector dataset that obstructs the inspection process.\r\n\r\n-- Description --\r\nGeometric representation of the item under is not available.\r\n\r\nNOTE: In DTS 5.3 the  value was: parcelGeometryIsNotAvailable. The coresponding\r\nrecommended coded value was T5.",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "SkippingReasonTypeValue/missingGeometry",
+        "en" : "Parcel geometry missing"
       }
     }, {
       "iri" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-parcel/code#SkippingReasonTypeValue/forceMajeure",
@@ -2038,27 +2038,6 @@
         "en" : "EFA data quality measure type list"
       }
     }, {
-      "iri" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-parcel/code#DataQualityMeasureTypeIuiEfaValue",
-      "baseIri" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-parcel/code",
-      "annotations" : {
-        "isFormatOf" : [ {
-          "identifier" : "isFormatOf",
-          "language" : "undefined",
-          "value" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-parcel#DataQualityMeasureTypeIuiEfaValue",
-          "type" : "iri"
-        } ],
-        "definition" : [ {
-          "identifier" : "definition",
-          "language" : "en",
-          "value" : "--Name--\r\nData quality measure types applicable to EFA items\r\n\r\n-- Definition --\r\nThis is a placeholder only; currently not to be implemented.\r\n\r\n-- Description --\r\nData quality measure type list for items under inspection.\r\nNOTE. Full description of each value must be provided in DQM_Measure.",
-          "type" : "label"
-        } ]
-      },
-      "labels" : {
-        "IRI-based" : "DataQualityMeasureTypeIuiEfaValue",
-        "en" : "IUI EFA data quality measure type list"
-      }
-    }, {
       "iri" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-parcel/code#AgriculturalAreaTypeValue",
       "baseIri" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-parcel/code",
       "annotations" : {
@@ -2078,6 +2057,27 @@
       "labels" : {
         "IRI-based" : "AgriculturalAreaTypeValue",
         "en" : "List of agricultural area type values"
+      }
+    }, {
+      "iri" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-parcel/code#DataQualityMeasureTypeIuiEfaValue",
+      "baseIri" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-parcel/code",
+      "annotations" : {
+        "isFormatOf" : [ {
+          "identifier" : "isFormatOf",
+          "language" : "undefined",
+          "value" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-parcel#DataQualityMeasureTypeIuiEfaValue",
+          "type" : "iri"
+        } ],
+        "definition" : [ {
+          "identifier" : "definition",
+          "language" : "en",
+          "value" : "--Name--\r\nData quality measure types applicable to EFA items\r\n\r\n-- Definition --\r\nThis is a placeholder only; currently not to be implemented.\r\n\r\n-- Description --\r\nData quality measure type list for items under inspection.\r\nNOTE. Full description of each value must be provided in DQM_Measure.",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "DataQualityMeasureTypeIuiEfaValue",
+        "en" : "IUI EFA data quality measure type list"
       }
     }, {
       "iri" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-parcel/code#LotSizeValue",
@@ -2185,27 +2185,6 @@
         "en" : "DTS data quality measure type list"
       }
     }, {
-      "iri" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-parcel/code#CriticalDefectTypeEfaValue",
-      "baseIri" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-parcel/code",
-      "annotations" : {
-        "isFormatOf" : [ {
-          "identifier" : "isFormatOf",
-          "language" : "undefined",
-          "value" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-parcel#CriticalDefectTypeEfaValue",
-          "type" : "iri"
-        } ],
-        "definition" : [ {
-          "identifier" : "definition",
-          "language" : "en",
-          "value" : "--Name--\r\nEFA critical defect type\r\n\r\n-- Definition --\r\nThis is a placeholder only; currently not to be implemented.\r\n\r\n-- Description --\r\nList of error types leading to obstruction of usability of the item under inspection (critical defect).",
-          "type" : "label"
-        } ]
-      },
-      "labels" : {
-        "IRI-based" : "CriticalDefectTypeEfaValue",
-        "en" : "Critical defect type value"
-      }
-    }, {
       "iri" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-parcel/code#AcceptanceNumberValue",
       "baseIri" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-parcel/code",
       "annotations" : {
@@ -2225,6 +2204,27 @@
       "labels" : {
         "IRI-based" : "AcceptanceNumberValue",
         "en" : "List of possible acceptance values"
+      }
+    }, {
+      "iri" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-parcel/code#CriticalDefectTypeEfaValue",
+      "baseIri" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-parcel/code",
+      "annotations" : {
+        "isFormatOf" : [ {
+          "identifier" : "isFormatOf",
+          "language" : "undefined",
+          "value" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-parcel#CriticalDefectTypeEfaValue",
+          "type" : "iri"
+        } ],
+        "definition" : [ {
+          "identifier" : "definition",
+          "language" : "en",
+          "value" : "--Name--\r\nEFA critical defect type\r\n\r\n-- Definition --\r\nThis is a placeholder only; currently not to be implemented.\r\n\r\n-- Description --\r\nList of error types leading to obstruction of usability of the item under inspection (critical defect).",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "CriticalDefectTypeEfaValue",
+        "en" : "Critical defect type value"
       }
     }, {
       "iri" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-parcel/code#SkippingReasonTypeValue",
@@ -2740,27 +2740,6 @@
         "en" : "Landscape feature, ponds"
       }
     }, {
-      "iri" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-parcel/code#EcologicalFocusAreaTypeValue/areasWithCatchCropsOrGreenCover",
-      "baseIri" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-parcel/code",
-      "annotations" : {
-        "inScheme" : [ {
-          "identifier" : "inScheme",
-          "language" : "undefined",
-          "value" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-parcel/code#EcologicalFocusAreaTypeValue",
-          "type" : "iri"
-        } ],
-        "definition" : [ {
-          "identifier" : "definition",
-          "language" : "en",
-          "value" : "--Name--\r\nAreas with Catch crops or green cover\r\n\r\n-- Definition --\r\nEcological focus area type as defined by Art. 46(2) of (EU) R 1307/2013.\r\n\r\n-- Description --\r\nAreas with catch crops or green cover established by the planting and germination of seeds, subject to the application of weighting factors referred to in paragraph 3 of this Article.\r\n\r\nAreas under catch crops or green cover shall include:\r\n- areas established pursuant to the requirements under SMR 1;\r\n- other areas  on the condition that they were established by sowing a mixture of crop species or by under-sowing grass in the main crop. \r\n\r\nNOTE: MS shall establish set up specific rules, including the list of mixtures of crop species to be used and the period for the sowing  and may establish additional conditions notably with regard to production methods. The period to be set by Member States shall not extend after 1 October.",
-          "type" : "label"
-        } ]
-      },
-      "labels" : {
-        "IRI-based" : "EcologicalFocusAreaTypeValue/areasWithCatchCropsOrGreenCover",
-        "en" : "Areas with catch crops or green cover"
-      }
-    }, {
       "iri" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-parcel/code#EcologicalFocusAreaTypeValue/landscapeFeatureIsolatedTree",
       "baseIri" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-parcel/code",
       "annotations" : {
@@ -2780,6 +2759,27 @@
       "labels" : {
         "IRI-based" : "EcologicalFocusAreaTypeValue/landscapeFeatureIsolatedTree",
         "en" : "Landscape feature, isolated tree"
+      }
+    }, {
+      "iri" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-parcel/code#EcologicalFocusAreaTypeValue/areasWithCatchCropsOrGreenCover",
+      "baseIri" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-parcel/code",
+      "annotations" : {
+        "inScheme" : [ {
+          "identifier" : "inScheme",
+          "language" : "undefined",
+          "value" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-parcel/code#EcologicalFocusAreaTypeValue",
+          "type" : "iri"
+        } ],
+        "definition" : [ {
+          "identifier" : "definition",
+          "language" : "en",
+          "value" : "--Name--\r\nAreas with Catch crops or green cover\r\n\r\n-- Definition --\r\nEcological focus area type as defined by Art. 46(2) of (EU) R 1307/2013.\r\n\r\n-- Description --\r\nAreas with catch crops or green cover established by the planting and germination of seeds, subject to the application of weighting factors referred to in paragraph 3 of this Article.\r\n\r\nAreas under catch crops or green cover shall include:\r\n- areas established pursuant to the requirements under SMR 1;\r\n- other areas  on the condition that they were established by sowing a mixture of crop species or by under-sowing grass in the main crop. \r\n\r\nNOTE: MS shall establish set up specific rules, including the list of mixtures of crop species to be used and the period for the sowing  and may establish additional conditions notably with regard to production methods. The period to be set by Member States shall not extend after 1 October.",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "EcologicalFocusAreaTypeValue/areasWithCatchCropsOrGreenCover",
+        "en" : "Areas with catch crops or green cover"
       }
     }, {
       "iri" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-parcel/code#EcologicalFocusAreaTypeValue/areasWithNitrogenFixingCrops",
@@ -3044,27 +3044,6 @@
         "en" : "Buffer zones for high nature value areas ( Natura 2000 or similar)"
       }
     }, {
-      "iri" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-parcel/code#EcologicalFocusAreaEquivalentPracticeTypeValue/keepingArablePeatyOrWetSoilsUnderGrass",
-      "baseIri" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-parcel/code",
-      "annotations" : {
-        "inScheme" : [ {
-          "identifier" : "inScheme",
-          "language" : "undefined",
-          "value" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-parcel/code#EcologicalFocusAreaEquivalentPracticeTypeValue",
-          "type" : "iri"
-        } ],
-        "definition" : [ {
-          "identifier" : "definition",
-          "language" : "en",
-          "value" : "--Name--\r\nKeeping arable peaty or wet soils under grass\r\n\r\n-- Definition --\r\nValue listed in print III of Annex IX of Regulation (EU) No 1307/2013.\r\n\r\n-- Description --\r\nItem description.",
-          "type" : "label"
-        } ]
-      },
-      "labels" : {
-        "IRI-based" : "EcologicalFocusAreaEquivalentPracticeTypeValue/keepingArablePeatyOrWetSoilsUnderGrass",
-        "en" : "Keeping arable peaty or wet soils under grass"
-      }
-    }, {
       "iri" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-parcel/code#EcologicalFocusAreaEquivalentPracticeTypeValue/productionOnArableLandWithoutFertilizersOrPlantProtection",
       "baseIri" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-parcel/code",
       "annotations" : {
@@ -3086,7 +3065,7 @@
         "en" : "Production on arable land without fertilizers or plant protection products (for 2 years with different crops)"
       }
     }, {
-      "iri" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-parcel/code#EcologicalFocusAreaEquivalentPracticeTypeValue/patchesManagedForWildlifeOrSpecificFauna",
+      "iri" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-parcel/code#EcologicalFocusAreaEquivalentPracticeTypeValue/keepingArablePeatyOrWetSoilsUnderGrass",
       "baseIri" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-parcel/code",
       "annotations" : {
         "inScheme" : [ {
@@ -3098,13 +3077,13 @@
         "definition" : [ {
           "identifier" : "definition",
           "language" : "en",
-          "value" : "--Name--\r\nPatches managed for wildlife or specific fauna\r\n\r\n-- Definition --\r\nValue listed in print III of Annex IX of Regulation (EU) No 1307/2013.\r\n\r\n-- Description --\r\nItem description.",
+          "value" : "--Name--\r\nKeeping arable peaty or wet soils under grass\r\n\r\n-- Definition --\r\nValue listed in print III of Annex IX of Regulation (EU) No 1307/2013.\r\n\r\n-- Description --\r\nItem description.",
           "type" : "label"
         } ]
       },
       "labels" : {
-        "IRI-based" : "EcologicalFocusAreaEquivalentPracticeTypeValue/patchesManagedForWildlifeOrSpecificFauna",
-        "en" : "Patches managed for wildlife or specific fauna"
+        "IRI-based" : "EcologicalFocusAreaEquivalentPracticeTypeValue/keepingArablePeatyOrWetSoilsUnderGrass",
+        "en" : "Keeping arable peaty or wet soils under grass"
       }
     }, {
       "iri" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-parcel/code#EcologicalFocusAreaEquivalentPracticeTypeValue/managementOfLandscapeFeatures",
@@ -3126,6 +3105,27 @@
       "labels" : {
         "IRI-based" : "EcologicalFocusAreaEquivalentPracticeTypeValue/managementOfLandscapeFeatures",
         "en" : "Management of landscape features"
+      }
+    }, {
+      "iri" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-parcel/code#EcologicalFocusAreaEquivalentPracticeTypeValue/patchesManagedForWildlifeOrSpecificFauna",
+      "baseIri" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-parcel/code",
+      "annotations" : {
+        "inScheme" : [ {
+          "identifier" : "inScheme",
+          "language" : "undefined",
+          "value" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-parcel/code#EcologicalFocusAreaEquivalentPracticeTypeValue",
+          "type" : "iri"
+        } ],
+        "definition" : [ {
+          "identifier" : "definition",
+          "language" : "en",
+          "value" : "--Name--\r\nPatches managed for wildlife or specific fauna\r\n\r\n-- Definition --\r\nValue listed in print III of Annex IX of Regulation (EU) No 1307/2013.\r\n\r\n-- Description --\r\nItem description.",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "EcologicalFocusAreaEquivalentPracticeTypeValue/patchesManagedForWildlifeOrSpecificFauna",
+        "en" : "Patches managed for wildlife or specific fauna"
       }
     }, {
       "iri" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-parcel/code#EcologicalFocusAreaEquivalentPracticeTypeValue/ecologicalSetAside",
@@ -3495,27 +3495,6 @@
         "en" : "L_CDCON"
       }
     }, {
-      "iri" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-parcel/code#DataQualityMeasureNameValue/classificationCorrectness",
-      "baseIri" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-parcel/code",
-      "annotations" : {
-        "inScheme" : [ {
-          "identifier" : "inScheme",
-          "language" : "undefined",
-          "value" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-parcel/code#DataQualityMeasureNameValue",
-          "type" : "iri"
-        } ],
-        "definition" : [ {
-          "identifier" : "definition",
-          "language" : "en",
-          "value" : "-- Description --\r\nFor definition and description see the corresponding value in DataQualityMeasureTypeIuiValue code list.",
-          "type" : "label"
-        } ]
-      },
-      "labels" : {
-        "IRI-based" : "DataQualityMeasureNameValue/classificationCorrectness",
-        "en" : "I_CC"
-      }
-    }, {
       "iri" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-parcel/code#DataQualityMeasureNameValue/conformityClass2",
       "baseIri" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-parcel/code",
       "annotations" : {
@@ -3535,6 +3514,27 @@
       "labels" : {
         "IRI-based" : "DataQualityMeasureNameValue/conformityClass2",
         "en" : "L_CLASS2"
+      }
+    }, {
+      "iri" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-parcel/code#DataQualityMeasureNameValue/classificationCorrectness",
+      "baseIri" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-parcel/code",
+      "annotations" : {
+        "inScheme" : [ {
+          "identifier" : "inScheme",
+          "language" : "undefined",
+          "value" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-parcel/code#DataQualityMeasureNameValue",
+          "type" : "iri"
+        } ],
+        "definition" : [ {
+          "identifier" : "definition",
+          "language" : "en",
+          "value" : "-- Description --\r\nFor definition and description see the corresponding value in DataQualityMeasureTypeIuiValue code list.",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "DataQualityMeasureNameValue/classificationCorrectness",
+        "en" : "I_CC"
       }
     }, {
       "iri" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-parcel/code#DataQualityMeasureNameValue/lpisRelativeAreaConformance",
@@ -3600,27 +3600,6 @@
         "en" : "L_APCON"
       }
     }, {
-      "iri" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-parcel/code#DataQualityMeasureNameValue/lpisRelativeAreaCorrectness",
-      "baseIri" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-parcel/code",
-      "annotations" : {
-        "inScheme" : [ {
-          "identifier" : "inScheme",
-          "language" : "undefined",
-          "value" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-parcel/code#DataQualityMeasureNameValue",
-          "type" : "iri"
-        } ],
-        "definition" : [ {
-          "identifier" : "definition",
-          "language" : "en",
-          "value" : "-- Description --\r\nFor definition and description see the corresponding value in DataQualityMeasureTypeEtsValue code list.",
-          "type" : "label"
-        } ]
-      },
-      "labels" : {
-        "IRI-based" : "DataQualityMeasureNameValue/lpisRelativeAreaCorrectness",
-        "en" : "L_RAC"
-      }
-    }, {
       "iri" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-parcel/code#DataQualityMeasureNameValue/misclassificationMatrix",
       "baseIri" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-parcel/code",
       "annotations" : {
@@ -3641,103 +3620,30 @@
         "IRI-based" : "DataQualityMeasureNameValue/misclassificationMatrix",
         "en" : "L_MCM"
       }
+    }, {
+      "iri" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-parcel/code#DataQualityMeasureNameValue/lpisRelativeAreaCorrectness",
+      "baseIri" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-parcel/code",
+      "annotations" : {
+        "inScheme" : [ {
+          "identifier" : "inScheme",
+          "language" : "undefined",
+          "value" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-parcel/code#DataQualityMeasureNameValue",
+          "type" : "iri"
+        } ],
+        "definition" : [ {
+          "identifier" : "definition",
+          "language" : "en",
+          "value" : "-- Description --\r\nFor definition and description see the corresponding value in DataQualityMeasureTypeEtsValue code list.",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "DataQualityMeasureNameValue/lpisRelativeAreaCorrectness",
+        "en" : "L_RAC"
+      }
     } ],
     "attributes" : [ "external" ],
     "id" : "17"
-  }, {
-    "iri" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-parcel#HomogeneityTypeValue",
-    "baseIri" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-parcel",
-    "instances" : 0,
-    "label" : {
-      "IRI-based" : "HomogeneityTypeValue"
-    },
-    "individuals" : [ {
-      "iri" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-parcel/code#HomogeneityTypeValue/naturalArea",
-      "baseIri" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-parcel/code",
-      "annotations" : {
-        "inScheme" : [ {
-          "identifier" : "inScheme",
-          "language" : "undefined",
-          "value" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-parcel/code#HomogeneityTypeValue",
-          "type" : "iri"
-        } ],
-        "definition" : [ {
-          "identifier" : "definition",
-          "language" : "en",
-          "value" : "--Name--\r\nNatural area\r\n\r\n-- Definition --\r\nNatural area type according to objective criteria\r\n\r\n-- Description --\r\nNatural area types shall be defined based on objective criteria, for example:\r\n-bio-geographical regions,\r\n-habitats and biotopes,\r\n-species distribution,\r\n-climate zones,\r\n-homogeneous geology,\r\n-natural risk zones,\r\n-protected sites (Natura 2000),\r\n-river basin management, etc.\r\n\r\nNOTE: the applicable values of natural area hall be documented in the eligibility profile of the MS/regions, and have to be described in a document dully cited or inserted in the information system.\r\n\r\nEXAMPLE:  http://inspire.ec.europa.eu/applicationschema/ provides the list of INSPIRE  data themes (applications schemas) that may be used for selecting homogeneity criteria.",
-          "type" : "label"
-        } ]
-      },
-      "labels" : {
-        "IRI-based" : "HomogeneityTypeValue/naturalArea",
-        "en" : "Natural area"
-      }
-    }, {
-      "iri" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-parcel/code#HomogeneityTypeValue/semiNaturalArea",
-      "baseIri" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-parcel/code",
-      "annotations" : {
-        "inScheme" : [ {
-          "identifier" : "inScheme",
-          "language" : "undefined",
-          "value" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-parcel/code#HomogeneityTypeValue",
-          "type" : "iri"
-        } ],
-        "definition" : [ {
-          "identifier" : "definition",
-          "language" : "en",
-          "value" : "--Name--\r\nSemi-natural area\r\n\r\n-- Definition --\r\nSemi natural area type according to objective criteria\r\n\r\n-- Description --\r\nNatural area types with human impact that further delimits homogeneity. \r\n\r\nNOTE: the applicable values of semi natural area hall be documented in the eligibility profile of the MS/regions, and have to be described in a document dully cited or inserted in the information system.\r\n\r\nEXAMPLE:  http://inspire.ec.europa.eu/applicationschema/ provides the list of INSPIRE  data themes (applications schemas) that may be used for selecting homogeneity criteria.",
-          "type" : "label"
-        } ]
-      },
-      "labels" : {
-        "IRI-based" : "HomogeneityTypeValue/semiNaturalArea",
-        "en" : "Semi-natural area"
-      }
-    }, {
-      "iri" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-parcel/code#HomogeneityTypeValue/elevation",
-      "baseIri" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-parcel/code",
-      "annotations" : {
-        "inScheme" : [ {
-          "identifier" : "inScheme",
-          "language" : "undefined",
-          "value" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-parcel/code#HomogeneityTypeValue",
-          "type" : "iri"
-        } ],
-        "definition" : [ {
-          "identifier" : "definition",
-          "language" : "en",
-          "value" : "--Name--\r\nElevation\r\n\r\n-- Definition --\r\nHomogeneity criteria established on elevation values.\r\n\r\n-- Description --\r\nCriteria that can be derived using digital elevation models for land surface.\r\n\r\nNOTE: the criteria have to be documented in the eligibility profile of the MS/regions, or have to be described in a document dully cited or inserted in the information system.",
-          "type" : "label"
-        } ]
-      },
-      "labels" : {
-        "IRI-based" : "HomogeneityTypeValue/elevation",
-        "en" : "Elevation"
-      }
-    }, {
-      "iri" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-parcel/code#HomogeneityTypeValue/soilType",
-      "baseIri" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-parcel/code",
-      "annotations" : {
-        "inScheme" : [ {
-          "identifier" : "inScheme",
-          "language" : "undefined",
-          "value" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-parcel/code#HomogeneityTypeValue",
-          "type" : "iri"
-        } ],
-        "definition" : [ {
-          "identifier" : "definition",
-          "language" : "en",
-          "value" : "--Name--\r\nSoil type\r\n\r\n-- Definition --\r\nSoil type according to a well-established classification system.\r\n\r\n-- Description --\r\nThe classification system shall be described or referred with a citation.\r\n\r\nNOTE: the applicable values of soil type shall be documented in the eligibility profile of the MS/regions, or have to be described in a document dully cited or inserted in the information system.\r\n\r\nEXAMPLE:  http://inspire.ec.europa.eu/codelist/ \r\nINSPIRE code list  registry comprising Soil data theme.",
-          "type" : "label"
-        } ]
-      },
-      "labels" : {
-        "IRI-based" : "HomogeneityTypeValue/soilType",
-        "en" : "Soil type"
-      }
-    } ],
-    "attributes" : [ "external" ],
-    "id" : "18"
   }, {
     "iri" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-parcel#LotSizeValue",
     "baseIri" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-parcel",
@@ -3807,6 +3713,100 @@
       "labels" : {
         "IRI-based" : "LotSizeValue/500000+",
         "en" : "More then 500000"
+      }
+    } ],
+    "attributes" : [ "external" ],
+    "id" : "18"
+  }, {
+    "iri" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-parcel#HomogeneityTypeValue",
+    "baseIri" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-parcel",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "HomogeneityTypeValue"
+    },
+    "individuals" : [ {
+      "iri" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-parcel/code#HomogeneityTypeValue/naturalArea",
+      "baseIri" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-parcel/code",
+      "annotations" : {
+        "inScheme" : [ {
+          "identifier" : "inScheme",
+          "language" : "undefined",
+          "value" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-parcel/code#HomogeneityTypeValue",
+          "type" : "iri"
+        } ],
+        "definition" : [ {
+          "identifier" : "definition",
+          "language" : "en",
+          "value" : "--Name--\r\nNatural area\r\n\r\n-- Definition --\r\nNatural area type according to objective criteria\r\n\r\n-- Description --\r\nNatural area types shall be defined based on objective criteria, for example:\r\n-bio-geographical regions,\r\n-habitats and biotopes,\r\n-species distribution,\r\n-climate zones,\r\n-homogeneous geology,\r\n-natural risk zones,\r\n-protected sites (Natura 2000),\r\n-river basin management, etc.\r\n\r\nNOTE: the applicable values of natural area hall be documented in the eligibility profile of the MS/regions, and have to be described in a document dully cited or inserted in the information system.\r\n\r\nEXAMPLE:  http://inspire.ec.europa.eu/applicationschema/ provides the list of INSPIRE  data themes (applications schemas) that may be used for selecting homogeneity criteria.",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "HomogeneityTypeValue/naturalArea",
+        "en" : "Natural area"
+      }
+    }, {
+      "iri" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-parcel/code#HomogeneityTypeValue/semiNaturalArea",
+      "baseIri" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-parcel/code",
+      "annotations" : {
+        "inScheme" : [ {
+          "identifier" : "inScheme",
+          "language" : "undefined",
+          "value" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-parcel/code#HomogeneityTypeValue",
+          "type" : "iri"
+        } ],
+        "definition" : [ {
+          "identifier" : "definition",
+          "language" : "en",
+          "value" : "--Name--\r\nSemi-natural area\r\n\r\n-- Definition --\r\nSemi natural area type according to objective criteria\r\n\r\n-- Description --\r\nNatural area types with human impact that further delimits homogeneity. \r\n\r\nNOTE: the applicable values of semi natural area hall be documented in the eligibility profile of the MS/regions, and have to be described in a document dully cited or inserted in the information system.\r\n\r\nEXAMPLE:  http://inspire.ec.europa.eu/applicationschema/ provides the list of INSPIRE  data themes (applications schemas) that may be used for selecting homogeneity criteria.",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "HomogeneityTypeValue/semiNaturalArea",
+        "en" : "Semi-natural area"
+      }
+    }, {
+      "iri" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-parcel/code#HomogeneityTypeValue/soilType",
+      "baseIri" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-parcel/code",
+      "annotations" : {
+        "inScheme" : [ {
+          "identifier" : "inScheme",
+          "language" : "undefined",
+          "value" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-parcel/code#HomogeneityTypeValue",
+          "type" : "iri"
+        } ],
+        "definition" : [ {
+          "identifier" : "definition",
+          "language" : "en",
+          "value" : "--Name--\r\nSoil type\r\n\r\n-- Definition --\r\nSoil type according to a well-established classification system.\r\n\r\n-- Description --\r\nThe classification system shall be described or referred with a citation.\r\n\r\nNOTE: the applicable values of soil type shall be documented in the eligibility profile of the MS/regions, or have to be described in a document dully cited or inserted in the information system.\r\n\r\nEXAMPLE:  http://inspire.ec.europa.eu/codelist/ \r\nINSPIRE code list  registry comprising Soil data theme.",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "HomogeneityTypeValue/soilType",
+        "en" : "Soil type"
+      }
+    }, {
+      "iri" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-parcel/code#HomogeneityTypeValue/elevation",
+      "baseIri" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-parcel/code",
+      "annotations" : {
+        "inScheme" : [ {
+          "identifier" : "inScheme",
+          "language" : "undefined",
+          "value" : "http://lpis.ec.europa.eu/registry/applicationschema/cap-iacs-parcel/code#HomogeneityTypeValue",
+          "type" : "iri"
+        } ],
+        "definition" : [ {
+          "identifier" : "definition",
+          "language" : "en",
+          "value" : "--Name--\r\nElevation\r\n\r\n-- Definition --\r\nHomogeneity criteria established on elevation values.\r\n\r\n-- Description --\r\nCriteria that can be derived using digital elevation models for land surface.\r\n\r\nNOTE: the criteria have to be documented in the eligibility profile of the MS/regions, or have to be described in a document dully cited or inserted in the information system.",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "HomogeneityTypeValue/elevation",
+        "en" : "Elevation"
       }
     } ],
     "attributes" : [ "external" ],
